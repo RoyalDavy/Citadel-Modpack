@@ -1,0 +1,278 @@
+﻿
+## AI decision to start (or join) a wall reclamation war on behalf of NW
+freehold_call_the_banners = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+
+	# Never shown, so it doesn't matter what we write here
+	title = freehold_call_the_banners_title
+	desc = freehold_call_the_banners_desc
+	confirm_text = freehold_call_the_banners_confirm
+	selection_tooltip = freehold_call_the_banners_tooltip
+
+	decision_group_type = major
+
+	#ai_check_interval = 0
+
+	#is_shown = {
+	#	is_ruler = yes
+	#	is_ai = no
+	#	is_at_war = yes
+	#	#highest_held_title_tier >= tier_kingdom
+	#	
+	#}
+	
+	is_shown = {
+		NOT = { has_character_flag =  agot_immersion_bannermen_blocker }
+		has_game_rule = agot_immersion_call_the_banners_broken 
+		OR = { 
+		#		OR = { 
+				any_character_war = {
+								root = { is_leader_in_war = prev }	
+							}
+		#					#OR = { 
+		#					
+		#					
+		#					
+		#								#NOT = {		any_character_war = {
+		#								#	
+		#								#		any_war_participant = { 
+		#								#		#has_title = title:e_the_iron_throne
+		#								#		#is_leader_in_war = prev
+		#								#		highest_held_title_tier > tier_kingdom 
+		#								#		}
+		#								#		
+		#								#		} 
+		#								#		}
+		#							
+		#								any_character_war = {
+		#									
+		#										#any_war_participant = { 
+		#										##has_title = title:e_the_iron_throne
+		#										##is_leader_in_war = prev
+		#										#highest_held_title_tier > tier_kingdom 
+		#										#}
+		#										OR =	{ primary_attacker = {  is_allied_to = root }
+		#													primary_defender = {  is_allied_to = root }
+		#									 }
+		#										
+		#										
+		#										
+		#										}
+		#								
+		#					#}
+		#					any_character_war = {
+		#					AND =		{ 						primary_attacker = {  highest_held_title_tier < tier_kingdom  }
+		#														primary_defender = {  highest_held_title_tier < tier_kingdom }
+		#									 }
+		#									 }
+		#							
+		#					}
+		#					
+		#					
+					highest_held_title_tier >= tier_kingdom 
+				}					
+		#		
+		is_ruler = yes
+		is_ai = no
+		is_at_war = yes
+		#highest_held_title_tier >= tier_kingdom
+		
+		
+	}
+	#cooldown = { months = 3 }
+	# Must be a landed ruler, not a nightswatch, nightswatch must exist, and one of NW de jure lands must be held by a non-vassal wildling
+	is_valid = {
+						#is_ai = no
+						is_at_war = yes
+						#highest_held_title_tier >= tier_kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		#is_at_war = yes
+	}
+
+	effect = {
+		save_scope_as = bannerlord
+		random_court_position_holder = {
+			type = maester_court_position
+			limit = {
+				is_imprisoned = no
+			}
+			save_scope_as = dumbo_maester }
+		
+		
+		
+		scope:bannerlord = {
+            every_character_war = {
+                limit = {
+                    #is_war_leader = scope:recipient
+                    is_participant = scope:bannerlord
+                }
+                if = { # save all the shared wars to the scope, so we can make an option for each of it within event. Allow up to 10.
+                    limit = {
+                        NOT = { exists = scope:joining_war_1 }
+                    }
+                    save_scope_as = joining_war_1
+					primary_attacker = {    save_scope_as = war_leader_attacker_1 }
+					primary_defender = {    save_scope_as = war_leader_defender_1 }	
+							
+							
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        NOT = { exists = scope:joining_war_2 }
+                    }
+                    save_scope_as = joining_war_2
+					primary_attacker = {    save_scope_as = war_leader_attacker_2 }
+					primary_defender = {    save_scope_as = war_leader_defender_2 }	
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        exists = scope:joining_war_2
+                        NOT = { exists = scope:joining_war_3 }
+                    }
+                    save_scope_as = joining_war_3
+					primary_attacker = {    save_scope_as = war_leader_attacker_3 }
+					primary_defender = {    save_scope_as = war_leader_defender_3 }	
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        exists = scope:joining_war_2
+                        exists = scope:joining_war_3
+                        NOT = { exists = scope:joining_war_4 }
+                    }
+                    save_scope_as = joining_war_4
+					primary_attacker = {    save_scope_as = war_leader_attacker_4 }
+					primary_defender = {    save_scope_as = war_leader_defender_4 }	
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        exists = scope:joining_war_2
+                        exists = scope:joining_war_3
+                        exists = scope:joining_war_4
+                        NOT = { exists = scope:joining_war_5 }
+                    }
+                    save_scope_as = joining_war_5
+				primary_attacker = {    save_scope_as = war_leader_attacker_5 }
+				primary_defender = {    save_scope_as = war_leader_defender_5 }	
+										
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        exists = scope:joining_war_2
+                        exists = scope:joining_war_3
+                        exists = scope:joining_war_4
+                        exists = scope:joining_war_5
+                        NOT = { exists = scope:joining_war_6 }
+                    }
+                    save_scope_as = joining_war_6
+					primary_attacker = {    save_scope_as = war_leader_attacker_6 }
+					primary_defender = {    save_scope_as = war_leader_defender_6 }	
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        exists = scope:joining_war_2
+                        exists = scope:joining_war_3
+                        exists = scope:joining_war_4
+                        exists = scope:joining_war_5
+                        exists = scope:joining_war_6
+                        NOT = { exists = scope:joining_war_7 }
+                    }
+                    save_scope_as = joining_war_7
+					primary_attacker = {    save_scope_as = war_leader_attacker_7 }
+					primary_defender = {    save_scope_as = war_leader_defender_7 }	
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        exists = scope:joining_war_2
+                        exists = scope:joining_war_3
+                        exists = scope:joining_war_4
+                        exists = scope:joining_war_5
+                        exists = scope:joining_war_6
+                        exists = scope:joining_war_7
+                        NOT = { exists = scope:joining_war_8 }
+                    }
+                    save_scope_as = joining_war_8
+					primary_attacker = {    save_scope_as = war_leader_attacker_8 }
+					primary_defender = {    save_scope_as = war_leader_defender_8 }	
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        exists = scope:joining_war_2
+                        exists = scope:joining_war_3
+                        exists = scope:joining_war_4
+                        exists = scope:joining_war_5
+                        exists = scope:joining_war_6
+                        exists = scope:joining_war_7
+                        exists = scope:joining_war_8
+                        NOT = { exists = scope:joining_war_9 }
+                    }
+                    save_scope_as = joining_war_9
+					primary_attacker = {    save_scope_as = war_leader_attacker_9 }
+					primary_defender = {    save_scope_as = war_leader_defender_9 }	
+                }
+                else_if = {
+                    limit = {
+                        exists = scope:joining_war_1
+                        exists = scope:joining_war_2
+                        exists = scope:joining_war_3
+                        exists = scope:joining_war_4
+                        exists = scope:joining_war_5
+                        exists = scope:joining_war_6
+                        exists = scope:joining_war_7
+                        exists = scope:joining_war_8
+                        exists = scope:joining_war_9
+                        NOT = { exists = scope:joining_war_10 }
+                    }
+                    save_scope_as = joining_war_10
+					primary_attacker = {    save_scope_as = war_leader_attacker_10 }
+					primary_defender = {    save_scope_as = war_leader_defender_10 }	
+					
+                }
+            }
+        }
+        
+        scope:bannerlord  = {
+			trigger_event = {
+				id = freehold_call_the_banners.0001
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+					
+				
+				
+				
+		
+	}
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+
+		
+	}
+}

@@ -1,0 +1,50 @@
+﻿
+
+on_war_started = {
+	on_actions = {
+	agot_immersion_call_the_banners
+	}
+}
+
+
+agot_immersion_call_the_banners = {
+	effect = {
+
+		if = { limit = { has_game_rule = agot_immersion_call_the_banners_limited }
+				agot_immersion_call_the_banners_effect = yes
+		}
+		else_if = {  limit = { has_game_rule = agot_immersion_call_the_banners_on 
+							   NOT = { has_character_flag =  agot_immersion_bannermen_blocker }
+					 }
+			agot_immersion_call_the_banners_full = yes
+		}
+	}
+}
+		
+
+on_join_war_as_secondary = {
+	on_actions = {
+		agot_immersion_join_war_secondary
+
+	}
+}
+
+
+
+
+agot_immersion_join_war_secondary = {
+	effect = {
+
+		if = { limit = { has_game_rule = agot_immersion_call_the_banners_limited
+						NOT = { has_character_flag =  agot_immersion_bannermen_blocker }
+		}
+				agot_immersion_secondary_effect = yes
+		}
+		else_if = {  limit = { has_game_rule = agot_immersion_call_the_banners_on 
+								NOT = { has_character_flag =  agot_immersion_bannermen_blocker }
+					 }
+					 agot_immersion_call_the_banners_full_secondary = yes
+		
+		}
+	}
+}

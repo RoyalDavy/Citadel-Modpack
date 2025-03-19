@@ -1,0 +1,65 @@
+﻿agot_immersion_commanders = {
+	default = agot_immersion_commanders_extended_family
+
+	agot_immersion_commanders_only_close_family = { }
+	agot_immersion_commanders_extended_family = { }
+	agot_immersion_commanders_house_members = { }
+	agot_immersion_commanders_powerful_vassals = { }
+	agot_immersion_commanders_vassals = { }
+	agot_immersion_commanders_vanilla = { }
+}
+agot_immersion_internal_conflicts = {
+	default = agot_immersion_internal_conflicts_off
+
+	agot_immersion_internal_conflicts_on = { }
+	agot_immersion_internal_conflicts_off = { }
+}
+agot_immersion_illegal_wars = {
+	default = agot_immersion_illegal_wars_off
+
+	agot_immersion_illegal_wars_on = { }
+	agot_immersion_illegal_wars_off = { }
+
+}
+
+agot_immersion_family_titles = {
+	default = agot_immersion_family_titles_off
+
+	agot_immersion_family_titles_on = { }
+	agot_immersion_family_titles_off = { }
+
+}
+
+agot_immersion_call_the_banners = {
+	default = agot_immersion_call_the_banners_off
+
+	agot_immersion_call_the_banners_on = { }
+	agot_immersion_call_the_banners_limited = { }
+	agot_immersion_call_the_banners_off = { }
+
+}
+
+agot_immersion_naval = {
+	default = agot_immersion_naval_off
+
+	agot_immersion_naval_off = { }
+	agot_immersion_naval_on = { }
+
+}
+
+agot_immersion_agot_levies = {
+
+
+    default = agot_immersion_agot_levies_on
+
+	agot_immersion_agot_levies_off = {
+
+	}
+
+	agot_immersion_agot_levies_on = {
+			apply_modifier = player:agot_lore_accurate_levies
+			apply_modifier = ai:agot_lore_accurate_levies
+	}
+
+
+}

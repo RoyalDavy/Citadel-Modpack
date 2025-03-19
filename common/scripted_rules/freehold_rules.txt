@@ -1,0 +1,37 @@
+﻿# Determines who can command troops; filters who shows up in the list
+# Root is the potential commander
+# scope:army_owner is who owns the army to command
+can_command_troops = {
+	#AGOT Modified
+	#can_be_commander_basic_trigger = { ARMY_OWNER = scope:army_owner }
+	OR = {
+		AND = {
+			can_be_commander_basic_trigger = { ARMY_OWNER = scope:army_owner }
+			is_ai = yes
+		}
+		AND = {
+			is_ai = no
+			is_clergy = no
+			age >= 14
+			is_alive = yes
+			is_imprisoned = no
+			NOT = { has_trait = incapable }
+			NOT = { has_trait = blind }
+			NOT = { has_trait = devoted }
+			OR = {
+				NOT = { has_character_flag = cannot_be_knight_and_commander }
+				scope:army_owner = this
+			}
+		}
+	}
+}
+
+# Determines who can command troops; will still show up in the list, with a breakdown explaining why they can't command
+# Root is the potential commander
+# scope:army_owner is who owns the army to command
+can_command_troops_now = {
+	can_be_commander_now_trigger = { ARMY_OWNER = scope:army_owner }
+}
+
+
+

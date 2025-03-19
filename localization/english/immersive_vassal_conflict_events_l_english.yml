@@ -1,0 +1,164 @@
+﻿l_english:
+ ##################################################
+ # 
+ ##
+ immersive_vassal_wars.0001.t:0 "War in [ROOT.Char.GetPrimaryTitle.GetNameNoTier]"
+ immersive_vassal_wars.0001_opening:0 "Word has spread that a war has begun within your realm. [attacker.GetFullName] has raised their banners and is in open conflict against [defender.GetFullName] in the [war.GetName|V]."
+ immersive_vassal_wars.0001_desc:0 "Word has spread that a war has begun within your realm. [attacker.GetFullName] has raised their banners and is in open conflict against [defender.GetFullName] in the [war.GetName|V]."
+ immersive_vassal_wars.0001.a:0 "Send word to [attacker.GetFullName], he must answer for this."
+ immersive_vassal_wars.0001.a.tt:0 "A message will be sent to your vassal demanding he explain why he has broken your peace."
+ immersive_vassal_wars.0001.b:0 "Ignore it."
+ immersive_vassal_wars.0001.b.tt:0 "You turn a blind eye to this unlawful war."
+ immersive_vassal_wars.0001.c:0 "I approve. In fact, lets help him!"
+ immersive_vassal_wars.0001.c.tt:0 "You will join with the attacker."
+ 
+ 
+ 
+ immersive_vassal_wars.0002.t:0 "Test"
+ immersive_vassal_wars.0002_opening:0 "[attacker.GetFullName],"
+ immersive_vassal_wars.0002_desc:0 "I have received word that you've broken my peace and raised an army without my consent. You are hereby commanded to surrender at once or you will face my justice."
+ immersive_vassal_wars.0002.a:0 "Perhaps [lawgiver.GetSheHe] can be swayed by some coin..."
+ immersive_vassal_wars.0002.a.tt:0 "You will offer [lawgiver.GetHerHim] gold in attempt to convince [lawgiver.GetHerHim] to stop his intervention."
+ immersive_vassal_wars.0002.b:0 "You owe me."
+ immersive_vassal_wars.0002.b.tt:0 "I will use my hook to keep them out of this."
+ immersive_vassal_wars.0002.c:0 "My liege, let me explain..."
+ immersive_vassal_wars.0002.c.tt:0 "You will attempt to simply persuade your liege to halt [lawgiver.GetHerHim] intervention."
+ immersive_vassal_wars.0002.d:0 "I must stand down."
+ immersive_vassal_wars.0002.d.tt:0 "You call off the war."
+ 
+ immersive_vassal_wars.0003.t:0 "Test"
+ immersive_vassal_wars.0003_opening:0 "My liege,"
+ immersive_vassal_wars.0003_desc:0 "There is a misunderstanding. I am only performing my duties as your vassal and sworn sword. [defender.GetFullName] is a threat to your rule and I mean to put a stop to [attacker.GetHerHim]."
+ immersive_vassal_wars.0003_desc_gold:0 "\n\nAs a token of my good will, I also offer some gold to help clear this up."
+ immersive_vassal_wars.0003_desc_hook:0 "\n\nDo not forget, you owe me."
+ immersive_vassal_wars.0003.a:0 "Denounce [attacker.GetFullName]"
+ immersive_vassal_wars.0003.a.tt:0 "I charge my loyal vassals to ride to [attacker.GetCurrentLocation.GetTitle.GetNameNoTier], and there bring justice to the false [attacker.GetFullName], and to all those who shared in [attacker.GetHerHis] crimes. I denounce [attacker.GetHerHim], and attaint [attacker.GetHerHim], and strip [attacker.GetHerHim] of all rank and titles, of all lands and incomes and holdings, and do sentence [attacker.GetHerHim] to death. May the gods take pity on [attacker.GetHerHis] soul."
+ immersive_vassal_wars.0003.b:0 "Very well."
+ immersive_vassal_wars.0003.b.tt:0 "You will consent to this offensive war. This may have repercussions amongst the lords of the realm."
+ 
+ immersive_vassal_wars.0004.t:0 "Test"
+ immersive_vassal_wars.0004_opening:0 "To all the lords of [lawgiver.GetPrimaryTitle.GetNameNoTier],"
+ immersive_vassal_wars.0004_vassal:0 "In the name of [true_liege.GetFullNameRegnal],"
+ immersive_vassal_wars.0004_desc:0 "I charge my loyal retainers to ride to [attacker.GetCurrentLocation.GetTitle.GetNameNoTier], and there bring justice to the false [attacker.GetFullName], and to all those who shared in [attacker.GetHerHis] crimes. I denounce [attacker.GetHerHim], and attaint [attacker.GetHerHim], and strip [attacker.GetHerHim] of all rank and titles, of all lands and incomes and holdings, and do sentence [attacker.GetHerHim] to death. May the gods take pity on [attacker.GetHerHis] soul."
+ immersive_vassal_wars.0004.a:0 "This is outrageous."
+ immersive_vassal_wars.0004.a.tt:0 "You have been named a criminal and an enemy of the realm."
+  immersive_vassal_wars.0004.b:0 "Troubling news."
+ immersive_vassal_wars.0004.b.tt:0 "[attacker.GetFullName] have been named a criminal and an enemy of the realm."
+ 
+ immersive_vassal_wars.0005.t:0 "Test"
+ immersive_vassal_wars.0005_opening:0 "[defender.GetFullName],"
+ immersive_vassal_wars.0005_desc:0 "Remain steadfast. I march to defend you as my vassal. We will defeat [attacker.GetFullName] together."
+ immersive_vassal_wars.0005.a:0 "Great news."
+ immersive_vassal_wars.0005.a.tt:0 "Your liege has intervened on your behalf."
+ 
+ immersive_vassal_wars.0006.t:0 "Test"
+ immersive_vassal_wars.0006_opening:0 "To the lords of the realm,"
+ immersive_vassal_wars.0006_desc:0 " I am aware of the reports of violence between House [defender.GetHouse.GetBaseName] and House [attacker.GetHouse.GetBaseName]. Know that I am monitoring the situation and considering my options. "
+ immersive_vassal_wars.0006.a:0 "What does this mean?"
+ immersive_vassal_wars.0006.a.tt:0 "Your liege has chosen to stay neutral during the [war.GetName|V]."
+ 
+ immersive_vassal_wars.0006.b:0 "Excellent."
+ immersive_vassal_wars.0006.b.tt:0 "Your liege has refused to intervene against you."
+ 
+ immersive_vassal_wars.0007.t:0 "Test"
+ immersive_vassal_wars.0007_opening:0 "To the lords of the realm,"
+ immersive_vassal_wars.0007_desc:0 "I give full consent to [attacker.GetFullName] to attack [defender.GetFullName], [defender.GetSheHe] has too long remained unpunished for [defender.GetHerHis] trespasses. My armies shall join [defender.GetHerHis] and we will bring a swift end to this conflict."
+ immersive_vassal_wars.0007.a:0 "..."
+ immersive_vassal_wars.0007.a.tt:0 "[lawgiver.GetFirstNameNicknamed] has joined the war on the side of the attacker."
+ 
+ immersive_vassal_wars.0008.t:0 "Test"
+ immersive_vassal_wars.0008_opening:0 "To [ROOT.Char.GetFullName]"
+ immersive_vassal_wars.0008_desc:0 "I have seen the error in my ways and have ordered my armies to disband."
+ immersive_vassal_wars.0008.a:0 "Great news!"
+ immersive_vassal_wars.0008.a.tt:0 "The attacker has stood down after being commanded by [attacker.GetHerHis] liege."
+ 
+ immersive_vassal_wars.0099.t:0 "I will have justice!"
+ immersive_vassal_wars.0099_opening:0 "To [ROOT.Char.GetFullName]"
+ immersive_vassal_wars.0099_desc:0 "My liege has named me a criminal and called for my head. I have no choice but to fight for my freedom and my life."
+ immersive_vassal_wars.0099.a:0 "[ROOT.Char.GetHouse.GetMotto]"
+ immersive_vassal_wars.0099.a.tt:0 "You and any allies in your war will now switch to fighting against your tyrannical liege."
+ 
+ 
+ internal_conflicts.0001.t:0 "[internal_conflict.GetName|V]"
+ immersive_vassal_wars.0008_opening:0 "Test"
+ internal_conflicts.0001_desc:0 "My vassal, [internal_conflict_defender.GetFullName], is losing in an internal conflict. While it is generally not my place to meddle in the internal affairs of [internal_conflict_defender.GetPrimaryTitle.GetNameNoTier], perhaps my intervention is necessary for the good of the realm. "
+ internal_conflicts.0001.a:0 "[internal_conflict_defender.GetFullName] will have my support!"
+ internal_conflicts.0001.a.tt:0 "You will join as a defender in your vassal's internal war."
+ internal_conflicts.0001.b:0 "It is not my place to interfere."
+ internal_conflicts.0001.b.tt:0 "You will stay out of the internal matters of [internal_conflict_defender.GetPrimaryTitle.GetNameNoTier]."
+ 
+ 
+
+ internal_conflicts.0002_opening:0 "To [ROOT.Char.GetFullName],"
+ internal_conflicts.0002_desc:0 "Your war against [internal_conflict_defender.GetFullName] is over. You will now face the full power of [internal_conflict_liege.GetPrimaryTitle.GetNameNoTier]. Surrender now or be destroyed. \n\n\n [internal_conflict_liege.GetHouse.GetMotto] "
+ internal_conflicts.0002.a:0 "That's not good."
+ internal_conflicts.0002.a.tt:0 "[internal_conflict_liege.GetFullName] has intervend in favor of [internal_conflict_defender.GetFullName]."
+ 
+ internal_conflicts.0003_opening:0 "To [ROOT.Char.GetFullName],"
+ internal_conflicts.0003_desc:0 "I have been monitoring your war with [internal_conflict_attacker.GetFullName] and come to the conclusion that I must intervene. You will now have the full power of [internal_conflict_liege.GetPrimaryTitle.GetNameNoTier] behind you. \n\n [internal_conflict_liege.GetHouse.GetMotto] "
+ internal_conflicts.0003.a:0 "Great news"
+ internal_conflicts.0003.a.tt:0 "[internal_conflict_liege.GetFullName] has intervend in favor of [internal_conflict_defender.GetFullName]."
+ 
+ 
+ agot_immersion_family.0001.t:0 "House [titlegiver.GetHouse.GetBaseName]"
+ agot_immersion_family.0001_desc:0 "It is customary for spare titles to be granted to family members.\n\n My [titlegiver.Custom2('RelationToMe', familymember)], [familymember.GetFirstName], holds no lands of his own. Granting him a title will bring further renown to House [titlegiver.GetHouse.GetBaseName], although I will of course miss the lands and incomes.\n\n If I were to hold onto these titles, I will certainly lose the respect of many in the family."
+ agot_immersion_family.0001.a:0 "I will grant him [title1.GetNameNoTier]."
+ agot_immersion_family.0001.a.tt:0 ""
+ agot_immersion_family.0001.b:0 "He can have [title2.GetNameNoTier]"
+ agot_immersion_family.0001.b.tt:0 "You turn a blind eye to this unlawful war."
+ agot_immersion_family.0001.c:0 "[title3.GetNameNoTier] will do."
+ agot_immersion_family.0001.c.tt:0 "You will join with the attacker."
+  agot_immersion_family.0001.d:0 "[familymember.GetFirstName] will have none of my titles!"
+ agot_immersion_family.0001.d.tt:0 "You will keep your titles for yourself. This will have consequences amongst your family."
+ 
+ greedy_family_opinion:0 "Refused to grant titles to House Members."
+  
+ rule_agot_immersion_commanders:0 "#I;bold AGOT Immersion:#! Commanders"
+ setting_agot_immersion_commanders_only_close_family:0 "Close Family"
+ setting_agot_immersion_commanders_only_close_family_desc:0 "Rulers and their close family will command their house's armies."
+ setting_agot_immersion_commanders_extended_family:0 "Extended Family"
+ setting_agot_immersion_commanders_extended_family_desc:0 "Rulers and their extended family will command their house's armies."
+ setting_agot_immersion_commanders_house_members:0 "House Members Only"
+ setting_agot_immersion_commanders_house_members_desc:0 "Rulers and any member of their house will be eligible to command."
+ setting_agot_immersion_commanders_powerful_vassals:0 "Powerful Vassals"
+ setting_agot_immersion_commanders_powerful_vassals_desc:0 "Rulers will appoint their powerful vassals in addition to members of their house as commanders. (Not Lore Accurate)"
+ setting_agot_immersion_commanders_vassals:0 "Vassals"
+ setting_agot_immersion_commanders_vassals_desc:0 "Rulers will appoint their vassals in addition to members of their house as commanders. (Not Lore Accurate)"
+ setting_agot_immersion_commanders_vanilla:0 "Vanilla"
+ setting_agot_immersion_commanders_vanilla_desc:0 "Rulers will appoint any courtier or vassal as a commander. (Very Lore Inaccurate)"
+ 
+ rule_agot_immersion_internal_conflicts:0 "#I;bold AGOT Immersion:#! Internal Conflicts"
+ setting_agot_immersion_internal_conflicts_on:0 "On"
+ setting_agot_immersion_internal_conflicts_on_desc:0 "Liege will be given the option to intervene in rebellions against its vassals if they are losing.\n #WARNING BETA FEATURE#!"
+ setting_agot_immersion_internal_conflicts_off:0 "Off"
+ setting_agot_immersion_internal_conflicts_off_desc:0 "Liege will not be prompted to join vassal's internal rebellion."
+ 
+  rule_agot_immersion_illegal_wars:0 "#I;bold AGOT Immersion:#! Illegal Wars"
+ setting_agot_immersion_illegal_wars_on:0 "On"
+ setting_agot_immersion_illegal_wars_on_desc:0 "Liege will be prompted to intervene in wars between its direct vassals that they do not approve of.\n #warning BETA FEATURE#!"
+ setting_agot_immersion_illegal_wars_off:0 "Off"
+ setting_agot_immersion_illegal_wars_off_desc:0 "Liege will not be prompted to intervene in conflict between their vassals."
+ 
+rule_agot_immersion_call_the_banners:0 "#I;bold AGOT Immersion:#! Call the Banners"
+setting_agot_immersion_call_the_banners_on:0 "Full"
+setting_agot_immersion_call_the_banners_on_desc:0 "Vassals will be called into their liege's wars. If you are using More Interactive Vassals, please turn this off."
+setting_agot_immersion_call_the_banners_limited:0 "Limited"
+setting_agot_immersion_call_the_banners_limited_desc:0 "Loyalists will directly join their liege's wars. Dutiful Vassals will send their knights and levies. Disloyal vassals will withhold their levies."
+setting_agot_immersion_call_the_banners_off:0 "Off"
+setting_agot_immersion_call_the_banners_off_desc:0 "Vassals will not be called into their liege's wars."
+
+rule_agot_immersion_agot_levies:0 "#I;bold AGOT Immersion:#! Reduced Levies and Garrisons"
+setting_agot_immersion_agot_levies_on:0 "On"
+setting_agot_immersion_agot_levies_on_desc:0 "Levies and Garrison numbers are reduced to account for vassals joining their liege's wars and make manpower more accurate. If you are using the same feature in More Interactive Vassals, please turn this off."
+setting_agot_immersion_agot_levies_off:0 "Off"
+setting_agot_immersion_agot_levies_off_desc:0 "Levies and garrison sizes are unchanged."
+
+rule_agot_immersion_family_titles:0 "#I;bold AGOT Immersion:#! House Titles"
+setting_agot_immersion_family_titles_on:0 "On"
+setting_agot_immersion_family_titles_on_desc:0 "Feudal rulers will be prompted to give extra titles to their family.\n #WARNING BETA FEATURE#!"
+setting_agot_immersion_family_titles_off:0 "Off"
+setting_agot_immersion_family_titles_off_desc:0 "Feudal rulers will not be prompted to give extra titles to their family."
+ 
+ 
+ 
+ 

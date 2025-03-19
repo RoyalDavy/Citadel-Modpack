@@ -1,0 +1,485 @@
+﻿namespace = agot_immersion_call_the_banners
+
+#agot_immersion_call_the_banners.0001 - Player Banner Call
+#agot_immersion_call_the_banners.0002 - Vassal Decides How to Answer Call
+
+agot_immersion_call_the_banners.0001 = {
+	type = character_event
+	title = agot_immersion_call_the_banners.0001.t
+	desc = agot_immersion_call_the_banners.0001.desc
+	theme = war
+	
+	left_portrait= {
+		character = scope:bannerlord
+		animation = personality_callous
+	}
+
+	right_portrait = {
+		character = scope:dumbo_maester
+		animation = throne_room_messenger_3
+	}	
+	   
+    option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_1
+       
+        trigger = {
+            exists = scope:joining_war_1
+			   OR = { 
+				OR = { scope:joining_war_1 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_1 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_1 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_1 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_2
+       
+        trigger = {
+            exists = scope:joining_war_2
+			   OR = { 
+				OR = { scope:joining_war_2 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_2 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_1 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_2 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_3
+       
+        trigger = {
+            exists = scope:joining_war_3
+			   OR = { 
+				OR = { scope:joining_war_3 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_3 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_3 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_3 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_4
+       
+        trigger = {
+            exists = scope:joining_war_4
+			   OR = { 
+				OR = { scope:joining_war_4 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_4 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_4 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_4 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_5
+       
+        trigger = {
+            exists = scope:joining_war_5
+			   OR = { 
+				OR = { scope:joining_war_5 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_5 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_1 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_5 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_6
+       
+        trigger = {
+            exists = scope:joining_war_6
+			   OR = { 
+				OR = { scope:joining_war_6 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_1 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_6 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_6 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_7
+       
+        trigger = {
+            exists = scope:joining_war_7
+			   OR = { 
+				OR = { scope:joining_war_7 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_7 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_7 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_7 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_8
+       
+        trigger = {
+            exists = scope:joining_war_8
+			   OR = { 
+				OR = { scope:joining_war_8 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_8 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_8 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_8 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_1
+       
+        trigger = {
+            exists = scope:joining_war_9
+			   OR = { 
+				OR = { scope:joining_war_9 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_9 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_9 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_9 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = agot_immersion_call_the_banners_optionname_10
+       
+        trigger = {
+            exists = scope:joining_war_10
+			   OR = { 
+				OR = { scope:joining_war_10 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_1 = {
+						
+																any_war_participant = { 
+																#has_title = title:e_the_iron_throne
+																#is_leader_in_war = prev
+																highest_held_title_tier > tier_kingdom 
+																}
+							
+								}
+							}
+									
+					}
+					scope:joining_war_10 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:joining_war_10 = { save_scope_as = bannerlord_war }
+		every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		
+		}
+		
+		
+		
+		
+       
+    
+
+    
+	option = {	
+		name = agot_immersion_call_the_banners_cancelname		#"Cancel"
+		custom_tooltip = agot_immersion_call_the_banners_canceltooltip
+	}	
+}
+
+agot_immersion_call_the_banners.0002 = { # Use comments (like this one!) to put the event name here, this way other scripters can find the event you are working on without knowing the ID.
+	type = character_event
+	title = agot_immersion_call_the_banners.0002.t # Protip: you can use strings and later replace it with loc refs later
+	desc = agot_immersion_call_the_banners.0002.desc # For Sublime users: there is a "find in files" feature that is excellent for digging through loc
+
+	theme = mental_break
+	left_portrait = root
+	trigger = { 
+				is_at_war_with_liege = no
+				any_liege_or_above = { this = scope:bannerlord }
+				NOT = { has_character_flag = { agot_immersion_disloyal_vassal } }
+	}
+	option = { # I will raise my own banners
+		name = agot_immersion_call_the_banners.0002.a
+		trigger = { liege = { is_at_war = yes } }
+		agot_immersion_vassal_join_war_effect = yes
+		
+		ai_chance = {
+					base = 0 # What are the chances of selecting this option over others? (Does not need to be 0 to 100, it can be anything)
+					modifier = {
+						add = 99999 # To remove something you just add a negative number (5 + -10 = -5)
+					agot_immersion_loyalist_vassal_relationship = yes
+					}
+					
+		}
+		
+	}
+	option = { #Send Knights
+		name = agot_immersion_call_the_banners.0002.b
+		agot_immersion_vassal_send_knights_effect = yes
+		if = { limit = { highest_held_title_tier >= tier_kingdom } every_vassal = { trigger_event = agot_immersion_call_the_banners.0002 }
+		}
+		ai_chance = {
+		base = 1 
+		modifier = {
+			add = 1000 # To remove something you just add a negative number (5 + -10 = -5)
+					agot_immersion_dutiful_vassal_relationship = yes
+					}
+						modifier = {
+			add = -9999 # To remove something you just add a negative number (5 + -10 = -5)
+				is_at_war = yes
+					}
+					modifier = {
+			add = -9999 # To remove something you just add a negative number (5 + -10 = -5)
+					has_character_flag = agot_immersion_loyal_vassal
+					}
+					}
+		
+	}
+	option = { #He gets enough of my men
+		name = agot_immersion_call_the_banners.0002.c
+		ai_chance = {
+		base = 100 
+		modifier = {
+			add = 100 # To remove something you just add a negative number (5 + -10 = -5)
+					agot_immersion_dutiful_vassal_relationship = yes
+					}
+			modifier = {
+			add = 100 # To remove something you just add a negative number (5 + -10 = -5)
+					has_character_flag = agot_immersion_loyal_vassal
+					}
+					
+					}
+	}
+		option = { #Disloyal Vasssal
+		name = agot_immersion_call_the_banners.0002.d
+		agot_immersion_disloyal_vassal_effect = yes
+		ai_chance = {
+		base = 0 
+		modifier = {
+			add = 900 # To remove something you just add a negative number (5 + -10 = -5)
+					agot_immersion_disloyal_vassal_relationship = yes
+					}
+					
+					}
+		
+	}
+	
+}

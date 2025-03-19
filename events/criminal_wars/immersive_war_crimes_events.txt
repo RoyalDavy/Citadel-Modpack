@@ -1,0 +1,817 @@
+﻿
+namespace = immersive_vassal_wars
+
+#immersive_vassal_wars.0001 - Initial War Notification
+#immersive_vassal_wars.0002 - Attacker attempts to convince liege to allow the war
+#immersive_vassal_wars.0003 - Liege decides whether to accept the war.
+#immersive_vassal_wars.0004 - Notify Attacker that the liege has refused, denounced you, and raised his banners.
+#immersive_vassal_wars.0005 - Notify Defender that their liege is defending them.
+#immersive_vassal_wars.0006 - Notify Defender/Attacker that their liege has refused to act.
+#immersive_vassal_wars.0007 - Notify Defender that their liege has joined with the attacker.
+#immersive_vassal_wars.0008 - Notify Defender and Liege that the Attacker has agreed to cease hostilities.
+
+
+
+
+### Liege decides how to react
+
+immersive_vassal_wars.0001 = {
+	title = immersive_vassal_wars.0001.t
+	left_portrait = {
+		character = scope:attacker
+		scripted_animation = duel_wield_weapon
+	}
+	right_portrait = {
+		character = scope:defender
+		scripted_animation = duel_wield_weapon
+	}
+	
+	immediate = {
+	
+	scope:defender.liege = { save_scope_as = lawgiver }
+	scope:defender.top_liege = { save_scope_as = true_liege }
+	}
+	
+	
+	override_background = {
+		reference = battlefield
+	}
+	desc = "immersive_vassal_wars.0001_desc"
+	
+	
+	#### Demand answers from your belligerent vassal
+	option = {
+		name =  immersive_vassal_wars.0001.a
+		custom_tooltip =  immersive_vassal_wars.0001.a.tt
+		scope:attacker = { trigger_event = {
+								id = immersive_vassal_wars.0002
+								days = { 5 10 }
+							}   }
+				ai_chance = {
+			base = 1
+			ai_value_modifier = {
+				ai_vengefulness = 0.25
+				ai_boldness = = 0.25
+				ai_honor = 5
+				ai_honor = 5
+				ai_rationality = 0.3
+				ai_energy  = 0.1
+				ai_compassion = 0.3
+			}
+			opinion_modifier = {
+				opinion_target = scope:attacker
+				multiplier = -1
+			}
+			opinion_modifier = {
+				opinion_target = scope:defender
+				multiplier = 1
+			}
+			modifier = {
+			add = 1000 # To remove something you just add a negative number (5 + -10 = -5)
+			OR = {
+						scope:defender = { is_close_or_extended_family_of = root }
+						scope:defender = { is_allied_to = root }
+						scope:defender = { has_relation_best_friend = root }
+						scope:defender = { has_relation_friend = root  }
+						scope:defender = { has_relation_soulmate = root }
+						scope:defender = { has_relation_lover = root }
+						scope:attacker = { has_relation_rival = root }
+						scope:attacker = { has_relation_nemesis = root }
+			
+				}
+			
+		}
+		}
+	
+							
+	}
+	
+	#### I will do nothing.
+	option = {
+		name =  immersive_vassal_wars.0001.b
+		custom_tooltip =  immersive_vassal_wars.0001.b.tt
+		hidden_effect = {
+		scope:defender = {
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = rejected_call_to_defensive_war
+
+					}
+		}
+		scope:defender.liege = {
+		every_vassal = { 
+		
+	
+			
+			add_opinion = {
+			target = scope:attacker
+			modifier = realm_illegal_war_opinion  
+					}
+		
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = liege_abandoned_vassal 
+
+					}
+		
+		trigger_event = immersive_vassal_wars.0006  }
+		}
+		}
+			
+							
+			ai_chance = {
+			base = 1
+			ai_value_modifier = {
+			
+				ai_boldness = -1
+		
+				
+			}
+			opinion_modifier = {
+				opinion_target = scope:attacker
+				multiplier = 1
+			}
+		}
+		
+	}
+	
+	#### I support this move.
+	option = {
+		name =  immersive_vassal_wars.0001.c
+		custom_tooltip =  immersive_vassal_wars.0001.c.tt
+		trigger = { OR = { 
+						scope:attacker = { is_allied_to = root }
+						scope:attacker = { has_relation_best_friend = root }
+						scope:attacker = { has_relation_friend = root  }
+						scope:attacker = { has_relation_soulmate = root }
+						scope:attacker = { has_relation_lover = root }
+						scope:defender = { has_relation_rival = root }
+						scope:defender = { has_relation_nemesis = root }
+						}
+				}			
+		ai_chance = {
+			base = 1
+			ai_value_modifier = {
+				
+				ai_honor = -1
+				
+			}
+			opinion_modifier = {
+				opinion_target = scope:attacker
+				multiplier = 0.10
+			}
+			opinion_modifier = {
+				opinion_target = scope:defender
+				multiplier = -1
+			}
+		}
+		scope:war = { add_attacker = root }
+		hidden_effect = {
+		every_vassal = { 
+		limit = { NOT = { allied_in_war = scope:attacker } }
+			add_opinion = {
+			target = scope:defender.liege
+			modifier = liege_attacked_vassal 
+
+					}
+		
+		trigger_event = {
+								id = immersive_vassal_wars.0007
+								days = { 5 30 }
+							}   }
+							}
+		
+	}
+	
+	
+}
+
+
+
+immersive_vassal_wars.0002 = {
+	type = letter_event
+	sender = scope:defender.liege
+	opening = {
+		desc = "immersive_vassal_wars.0002_opening"
+	}
+	desc = "immersive_vassal_wars.0002_desc"
+	immediate = {
+	scope:defender.liege = { save_scope_as = recipient }
+	scope:attacker = { save_scope_as = actor }
+	
+	}
+
+	#### I will offer gold
+	option = {
+		name =  immersive_vassal_wars.0002.a
+		custom_tooltip =  immersive_vassal_wars.0002.a.tt
+		trigger = { scope:actor.gold >= gift_value }
+		#show_as_unavailable = {
+		#	scope:actor.gold < gift_value
+		#}
+	show_as_tooltip = {	pay_short_term_gold = {
+					gold = gift_value
+					
+					target = scope:defender.liege
+				}
+				}
+		scope:defender.liege = { save_scope_as = bribe_target }
+		scope:defender.liege = { trigger_event = immersive_vassal_wars.0003  }
+		ai_chance = {
+		base = 50 # What are the chances of selecting this option over others? (Does not need to be 0 to 100, it can be anything)
+	
+		
+		modifier = {
+			add = 50 # To remove something you just add a negative number (5 + -10 = -5)
+			NOT = { has_trait = greedy }
+			
+		}
+		
+		
+	}
+	}
+		
+	#### I'll use a hook
+	option = {
+		name =  immersive_vassal_wars.0002.b
+		#custom_tooltip =  immersive_vassal_wars.0002.b.tt
+		trigger = { has_hook = scope:defender.liege }
+		root = {	use_hook = scope:defender.liege }
+		scope:defender.liege = { save_scope_as = hook_target }
+		scope:defender.liege = { trigger_event = immersive_vassal_wars.0003  }
+		
+		
+	ai_chance = {
+		base = 1 # What are the chances of selecting this option over others? (Does not need to be 0 to 100, it can be anything)
+	
+		modifier = {
+			add = 2000 # To remove something you just add a negative number (5 + -10 = -5)
+			has_hook = scope:defender.liege
+		}
+	}
+				
+		
+	}
+	
+	#### I will use my words
+	option = {
+	
+		ai_chance = {
+		base = 25 # What are the chances of selecting this option over others? (Does not need to be 0 to 100, it can be anything)
+	
+		modifier = {
+			add = 50 # To remove something you just add a negative number (5 + -10 = -5)
+			scope:defender.liege.diplomacy < scope:attacker.diplomacy
+		}
+	}
+		name =  immersive_vassal_wars.0002.c
+		custom_tooltip =  immersive_vassal_wars.0002.c.tt
+		duel = {
+			
+			skill = diplomacy
+			target = scope:defender.liege
+			
+			20 = {
+				show_chance = no
+				desc = "You successfully convince them"
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				custom_tooltip = "Your liege does not intervene."
+				
+			
+			scope:defender.liege = { save_scope_as = swayed_liege }
+		
+			}
+			80 = {
+				show_chance = no
+				desc = "They are not convinced by your words"
+				custom_tooltip = "Your liege denounces you and joins forces with your enemy."
+				
+			}
+			
+		}
+		scope:defender.liege = { trigger_event = immersive_vassal_wars.0003  }
+	}
+	
+	#### I will stand down.
+	option = {
+		name =  immersive_vassal_wars.0002.d
+		custom_tooltip =  immersive_vassal_wars.0002.d.tt
+		if = { limit = { exists = scope:war } scope:war = { end_war = white_peace } }
+		
+		scope:defender.liege = { trigger_event = immersive_vassal_wars.0008  }
+		scope:defender = { trigger_event = immersive_vassal_wars.0008  }
+		
+		ai_chance = {
+		base = 1 # What are the chances of selecting this option over others? (Does not need to be 0 to 100, it can be anything)
+	
+		opinion_modifier = {
+				opinion_target = scope:defender.liege
+				multiplier = 1
+			}
+		modifier = {
+			add = 50 # To remove something you just add a negative number (5 + -10 = -5)
+			has_trait = craven
+		}
+		
+		modifier = { 
+					OR = {
+	
+			ai_boldness <= 75
+			
+			ai_honor >= 70
+		
+		AND = {
+			ai_boldness <= 50
+			ai_rationality >= 50
+		}
+		AND = {
+			ai_honor >= 0
+			ai_rationality >= 50
+		}
+	}
+	add = 5000
+		
+					}
+	
+		
+	}
+		
+	}
+	
+	
+	
+}
+
+immersive_vassal_wars.0003 = {
+	type = letter_event
+	sender = scope:attacker
+	opening = {
+		desc = "immersive_vassal_wars.0003_opening"
+	}
+	desc = {
+			desc = immersive_vassal_wars.0003_desc
+			triggered_desc = {
+				trigger = {
+					exists = scope:bribe_target
+				}
+				desc = immersive_vassal_wars.0003_desc_gold
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:hook_target
+				}
+				desc = immersive_vassal_wars.0003_desc_hook
+			}
+			}
+	#desc = "immersive_vassal_wars.0003_desc"
+	
+	
+	
+	#### I am not swayed. Denounce vassal and join the war.
+	option = {
+		trigger = { 
+		OR = { AND = { is_ai = no
+					NOT = { exists = scope:hook_target }
+					}
+				
+		NOR = { exists = scope:hook_target
+							exists = scope:swayed_liege
+		} }
+		}
+		name =  immersive_vassal_wars.0003.a
+		custom_tooltip =  immersive_vassal_wars.0003.a.tt
+		#scope:defender.liege = { trigger_event = immersive_vassal_wars.0003  }
+		
+		
+		scope:war = { add_defender = scope:defender.liege }
+		
+
+		scope:attacker = {
+		create_story = {
+					type = war_criminal_story
+					save_scope_as = war_criminal_story
+				}
+		
+		
+		}
+		
+		
+	hidden_effect = {	
+		scope:defender.liege = {
+				add_opinion = {
+			target = scope:attacker
+			modifier = illegal_war_opinion
+					}
+					
+		}
+		}
+		scope:attacker = { trigger_event = immersive_vassal_wars.0004 }
+		scope:defender = { trigger_event = immersive_vassal_wars.0005 }
+		
+	}
+	
+	#### I accept the bribe.
+	option = {
+		name =  immersive_vassal_wars.0003.b
+		trigger = { exists = scope:bribe_target }
+		custom_tooltip =  immersive_vassal_wars.0003.b.tt
+		
+		hidden_effect = {
+		scope:defender = {
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = rejected_call_to_defensive_war
+
+					}
+		}
+		every_vassal = { limit = { NOT = { this = scope:attacker }
+		NOT = { allied_in_war = scope:attacker } }
+		
+	
+			
+			add_opinion = {
+			target = scope:attacker
+			modifier = realm_illegal_war_opinion  
+					}
+		
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = liege_abandoned_vassal 
+
+					}
+		
+		trigger_event = immersive_vassal_wars.0006  }
+		}
+		
+		scope:attacker = { pay_short_term_gold = {
+					gold = gift_value
+					
+					target = scope:defender.liege
+				}
+				}
+				
+			ai_chance = {
+			base = 1
+			ai_value_modifier = {
+				ai_greed = 2
+				ai_honor = -2
+			
+			}
+			opinion_modifier = {
+				opinion_target = scope:attacker
+				multiplier = -1
+			}
+		}	
+				
+	}
+	
+	option = {
+		name =  immersive_vassal_wars.0003.b
+		trigger = { exists = scope:hook_target }
+		custom_tooltip =  immersive_vassal_wars.0003.b.tt
+			hidden_effect = {
+		every_vassal = { limit = { NOT = { allied_in_war = scope:attacker } }
+			
+			add_opinion = {
+			target = scope:attacker
+			modifier = realm_illegal_war_opinion  
+					}
+		
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = liege_abandoned_vassal 
+
+					}
+		
+		trigger_event = immersive_vassal_wars.0006  }
+		}
+		show_as_tooltip = {	scope:attacker = { use_hook = scope:defender.liege }
+	}
+	}
+	
+	option = {
+		name =  immersive_vassal_wars.0003.b
+		trigger = { OR = { 
+		#is_ai = no
+		
+		exists = scope:swayed_liege }
+			}
+		custom_tooltip =  immersive_vassal_wars.0003.b.tt
+		hidden_effect = {
+		scope:defender = {
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = rejected_call_to_defensive_war
+
+					}
+		}
+		every_vassal = { limit = { NOT = { this = scope:attacker }
+		NOT = { allied_in_war = scope:attacker } }
+			
+			add_opinion = {
+			target = scope:attacker
+			modifier = realm_illegal_war_opinion  
+					}
+		
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = liege_abandoned_vassal 
+
+					}
+		
+		trigger_event = immersive_vassal_wars.0006  }
+		}
+	}
+	option = {
+		name =  immersive_vassal_wars.0003.b
+		trigger = {
+		
+		is_ai = no
+		NOR = {
+		exists = scope:bribe_target
+		exists = scope:hook_target
+		exists = scope:swayed_liege }
+			}
+		custom_tooltip =  immersive_vassal_wars.0003.b.tt
+		hidden_effect = {
+		scope:defender = {
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = rejected_call_to_defensive_war
+
+					}
+		}
+		every_vassal = { limit = { NOT = { this = scope:attacker }
+		NOT = { allied_in_war = scope:attacker } }
+			
+			add_opinion = {
+			target = scope:attacker
+			modifier = realm_illegal_war_opinion  
+					}
+		
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = liege_abandoned_vassal 
+
+					}
+		
+		trigger_event = immersive_vassal_wars.0006  }
+		}
+	}
+	
+
+	
+	
+}
+
+#### Notify the realm the attacker has been denounced.
+
+immersive_vassal_wars.0004 = {
+	type = letter_event
+	sender = scope:defender.liege
+	opening = {
+		desc = "immersive_vassal_wars.0004_opening"
+	}
+	desc = {
+			
+			triggered_desc = {
+				trigger = {
+					scope:defender.liege = { is_independent_ruler = no }
+				}
+				desc = immersive_vassal_wars.0004_vassal
+			}
+			
+			desc = immersive_vassal_wars.0004_desc
+			}
+	
+	
+	
+	#### How dare he!
+	option = {
+		name =  immersive_vassal_wars.0004.a
+		custom_tooltip =  immersive_vassal_wars.0004.a.tt
+		trigger = { this = scope:attacker }
+hidden_effect = {
+		scope:attacker = {
+				add_opinion = {
+			target = scope:defender.liege
+
+					}
+		}
+		}
+		show_as_tooltip = {	scope:war = { add_defender = scope:defender.liege }
+				}
+		
+	}
+	option = {
+		name =  immersive_vassal_wars.0004.b
+		custom_tooltip =  immersive_vassal_wars.0004.b.tt
+		trigger = { NOT = { this = scope:attacker } }
+		show_as_tooltip = {	scope:war = { add_defender = scope:defender.liege }
+				}
+		
+	}
+	
+
+	
+	
+}
+
+
+####Notify Defender that their liege is intervening for them.
+
+immersive_vassal_wars.0005 = {
+	type = letter_event
+	sender = scope:defender.liege
+	opening = {
+		desc = "immersive_vassal_wars.0005_opening"
+	}
+	desc = "immersive_vassal_wars.0005_desc"
+	
+	
+	#### Thank you my lord!
+	option = {
+		name =  immersive_vassal_wars.0005.a
+		custom_tooltip =  immersive_vassal_wars.0005.a.tt
+
+		scope:defender = {
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = contributed_in_war
+
+					}
+		}
+		
+	}
+	
+
+	
+	
+}
+
+
+####Notify Defender that their liege has refused to act.
+
+immersive_vassal_wars.0006 = {
+	type = letter_event
+	sender = scope:defender.liege
+	opening = {
+		desc = "immersive_vassal_wars.0006_opening"
+	}
+	desc = "immersive_vassal_wars.0006_desc"
+	
+	
+	#### This is an outrage!
+	option = {
+		name =  immersive_vassal_wars.0006.a
+		custom_tooltip =  immersive_vassal_wars.0006.a.tt
+
+	
+		
+		
+		
+	}
+	
+
+	
+	
+}
+
+
+####Notify Defender the liege has joined as an ATTACKER
+
+immersive_vassal_wars.0007 = {
+	type = letter_event
+	sender = scope:defender.liege
+	opening = {
+		desc = "immersive_vassal_wars.0007_opening"
+	}
+	desc = "immersive_vassal_wars.0007_desc"
+	
+	
+	#### Well thats not good
+	option = {
+		name =  immersive_vassal_wars.0007.a
+		custom_tooltip =  immersive_vassal_wars.0007.a.tt
+
+		scope:defender = {
+				add_opinion = {
+			target = scope:defender.liege
+			modifier = rejected_call_to_defensive_war
+
+					}
+		}
+		
+	}
+	
+
+	
+	
+}
+
+####Notify Defender and liege the war has been ended due.
+
+immersive_vassal_wars.0008 = {
+	type = letter_event
+	sender = scope:attacker
+	opening = {
+		desc = "immersive_vassal_wars.0008_opening"
+	}
+	desc = "immersive_vassal_wars.0008_desc"
+	
+	
+	#### Well thats not good
+	option = {
+		name =  immersive_vassal_wars.0008.a
+		custom_tooltip =  immersive_vassal_wars.0008.a.tt
+
+		#scope:defender = {
+		#		add_opinion = {
+		#	target = scope:defender.liege
+		#	modifier = rejected_call_to_defensive_war
+		#	years = 10
+		#	opinion = -60
+		#			}
+		#}
+		
+	}
+	
+
+	
+	
+}
+
+
+
+immersive_vassal_wars.0099 = {
+	title = immersive_vassal_wars.0099.t
+	left_portrait = {
+		character = scope:attacker
+		scripted_animation = duel_wield_weapon
+	}
+	right_portrait = {
+		character = scope:defender.liege
+		scripted_animation = duel_wield_weapon
+	}
+	
+	
+	
+	override_background = {
+		reference = battlefield
+	}
+	desc = "immersive_vassal_wars.0099_desc"
+	
+	
+	#### Demand answers from your belligerent vassal
+	option = {
+		name =  immersive_vassal_wars.0099.a
+		custom_tooltip =  immersive_vassal_wars.0099.a.tt
+		scope:vassal_criminal = { 
+		
+		
+		### Fire an Event the next day
+		
+		
+		start_war = {
+				cb = refused_liege_demand_war
+				target = scope:vassal_victim_liege
+			}
+			every_character_war = { limit = { using_cb = refused_liege_demand_war } save_scope_as = tyranny_war }
+		hidden_effect = {
+			every_in_list = {
+							list = criminal_attackers
+							limit = {
+								NOT = { is_at_war_with = scope:attacker }
+							}
+						
+							scope:tyranny_war = { add_attacker = prev }
+						}
+						every_in_list = {
+							list = criminal_defenders
+							limit = {
+								NOT = { is_at_war_with = scope:attacker }
+							}
+						
+							scope:tyranny_war = { add_defender = prev }
+						}
+						
+					every_owned_story = { limit = { story_type = war_criminal_story } end_story = yes }	
+						
+						}
+						}
+			
+	
+							
+	}
+	
+	
+	
+}
+
+
+
+
+

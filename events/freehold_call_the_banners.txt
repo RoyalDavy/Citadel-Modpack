@@ -1,0 +1,2759 @@
+﻿namespace = freehold_call_the_banners
+
+
+freehold_call_the_banners.0001 = {
+	type = character_event
+	title = freehold_call_the_banners
+	desc = freehold_call_the_banners_event_desc
+	theme = war
+	
+	left_portrait= {
+		character = scope:bannerlord
+		animation = personality_callous
+	}
+
+	right_portrait = {
+		character = scope:dumbo_maester
+		animation = throne_room_messenger_3
+	}	
+	   
+    option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_1
+       
+        trigger = {
+            exists = scope:joining_war_1
+			   OR = { 
+				OR = { scope:joining_war_1 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_1 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_1 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_1 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_1 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_1
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_1 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_1 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_1 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_1
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_1 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		 option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_2
+       
+        trigger = {
+            exists = scope:joining_war_2
+			      OR = { 
+				OR = { scope:joining_war_2 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_2 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_2 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}    
+            
+        }
+		
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_2 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_2 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_2
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_2 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_2 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_2 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_2
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_2 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		}
+		
+		
+		
+		}
+		
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_3
+       
+        trigger = {
+            exists = scope:joining_war_3
+			   OR = { 
+				OR = { scope:joining_war_3 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_3 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_3 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_3 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_3 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_3
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_3 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_3 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_3 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_3
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_3 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_4
+       
+        trigger = {
+            exists = scope:joining_war_4
+			   OR = { 
+				OR = { scope:joining_war_4 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_4 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_4 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_4 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_4 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_4
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_4 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_4 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_4 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_4
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_4 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_5
+       
+        trigger = {
+            exists = scope:joining_war_5
+			   OR = { 
+				OR = { scope:joining_war_5 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_5 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_5 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_5 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_5 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_5
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_5 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_5 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_5 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_5
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_5 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_6
+       
+        trigger = {
+            exists = scope:joining_war_6
+			   OR = { 
+				OR = { scope:joining_war_6 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_6 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_6 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_6 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_6 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_6
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_6 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_6 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_6 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_6
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_6 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_7
+       
+        trigger = {
+            exists = scope:joining_war_7
+			   OR = { 
+				OR = { scope:joining_war_7 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_7 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_7 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_7 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_7 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_7
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_7 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_7 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_7 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_7
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_7 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_8
+       
+        trigger = {
+            exists = scope:joining_war_8
+			   OR = { 
+				OR = { scope:joining_war_8 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_8 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_8 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_8 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_8 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_8
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_8 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_8 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_8 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_8
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_8 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_9
+       
+        trigger = {
+            exists = scope:joining_war_9
+			   OR = { 
+				OR = { scope:joining_war_9 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_9 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_9 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_9 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_9 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_9
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_9 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_9 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_9 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_9
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_9 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		
+		option = { # we have to hardcode options, we can not simply add an option per active war or so -.-. So I will hardcode ~ 10 options. I hope up to 10 same wars with the same person should be enough...
+        name = freehold_call_the_banners_optionname_10
+       
+        trigger = {
+            exists = scope:joining_war_10
+			   OR = { 
+				OR = { scope:joining_war_10 = {
+								root = { is_leader_in_war = prev }	
+							}
+							NOT = { scope:joining_war_10 = {
+						
+							any_war_participant = { 
+							#has_title = title:e_the_iron_throne
+							#is_leader_in_war = prev
+							highest_held_title_tier > tier_kingdom 
+							}
+							
+							}
+							}
+									
+							}
+					scope:joining_war_10 = { 
+					
+									OR =	{ primary_attacker = {  is_allied_to = scope:bannerlord }
+											  primary_defender = {  is_allied_to = scope:bannerlord }
+											 }
+											}
+							
+							
+					highest_held_title_tier >= tier_kingdom 
+				}        
+            
+        }
+		scope:bannerlord = {
+		
+			
+		### War 1 Attacker
+		
+		if = {
+						limit = {
+							scope:joining_war_10 = {
+								is_attacker = scope:bannerlord
+								
+							}
+							}
+									
+							
+				every_vassal = { 
+					limit = {
+						NOT = { is_allied_to = scope:war_leader_defender_10 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 60 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 90 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -15 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 70 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 30 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_defender_10
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_10 = { add_attacker = scope:vassaljoiner }
+						
+					}
+					
+					
+					
+					}
+					
+					
+					if = {
+						limit = {
+							scope:joining_war_10 = {
+								is_defender = scope:bannerlord
+								
+							}
+							}
+										
+							
+					
+							
+			### War 1 Defender			
+						
+						
+				every_vassal = { 
+						limit = {
+						NOT = { is_allied_to = scope:war_leader_attacker_10 }
+						is_ai = yes
+						highest_held_title_tier > tier_barony
+						NOT = {
+							is_at_war_with = scope:bannerlord
+						}
+						
+						
+						#### Words are wind, why am I following my liege?
+						OR = {
+							### DREAD
+							AND = {
+									NOT = { ai_boldness >= 50 }
+									scope:bannerlord = { dread >= 80	}
+									}
+								AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= -25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 60	}
+						
+						}
+						AND = {
+						
+							opinion = {
+								target = scope:bannerlord
+								value >= 25 # vassals that like their scope:bannerlord stay loyal
+							}
+						scope:bannerlord = { dread >= 50	}
+						
+						}
+						
+						### OPINION
+						
+						opinion = {
+								target = scope:bannerlord
+								value >= 40 # vassals that generally like their scope:bannerlord stay loyal
+							}
+							
+						### HONOR
+					
+							ai_honor >= 45 # My honor is most important and I have sworn an oath.
+							
+							###I don't like you, but an oath is an oath.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= -50 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 50
+							}
+							### I don't mind you and I honor my oaths.
+							AND = { opinion = {
+								target = scope:bannerlord
+								value >= 0 # vassals that like their scope:bannerlord stay loyal
+							}
+							ai_honor >= 25
+							}
+							
+						### RATIONALITY	
+							
+							AND = { ai_rationality >= 50 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 15 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+							AND = { ai_rationality >= 15 # I have positive relations and I'm rational, I should follow my liege
+										opinion = {
+								target = scope:bannerlord
+								value >= 30 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+					    ### I dislike the opponent	
+							opinion = {
+								target = scope:war_leader_attacker_10
+								value <= -50 # I don't like that guy.
+							}
+						### I am allied to my liege	
+							
+							is_allied_to = scope:bannerlord # allies will most of the time side with scope:bannerlord, unless they really hate them
+							
+						### I am a loyalist	
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+							}
+							
+						}
+					}
+					save_scope_as = vassaljoiner
+					scope:joining_war_10 = { add_defender = scope:vassaljoiner }
+					}
+					
+					
+					
+					}
+		
+		
+		
+		}
+		
+		
+		}
+		
+		
+		
+       
+    
+
+    
+	option = {	
+		name = freehold_call_the_banners_cancelname		#"Cancel"
+		custom_tooltip = freehold_call_the_banners_canceltooltip
+	}	
+}
+

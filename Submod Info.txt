@@ -6,49 +6,51 @@ Fully included in main (generally no need to update): - ALL UPDATED ON 19 MAR 25
 5.  AGOT - Melodies of Ruin
 6.  AGOT Legends Seeds
 7.  AGOT: Battlefield Duel
-8.  AGOT: Minor House Flavour
-9.  AGOT: Minor House Flavour Fix
-10. An AGOT Special World [removed all gfx models, double check the events/scripted effects and see if they are needed or bugged, they also not included]
-11. Blade Mastery
-12. Border Disputes
-13. CTFA + AGOT Compatch
-14. Custom Nickname
-15. Custom Title Form of Address
-16. Dragonpit access: none without permit
-17. Ecsaty's Destroy Titles
-18. Ecsaty's Titular Title Creator Fix
-19. Freeholder's RP Interactions
-20. Lannister Gold - AGOT
-21. Minor House Flavour - REMASTERED PATCH
-22. Pillage
-23. Raised Army CoA
-24. Scrollable Character Interaction Window
-25. Valaddar's AGOT Tweaks
-26. Valyrian Name Lists Expanded - A Submod for CK3AGOT
+8.	AGOT: Immersion [removed naval related files]
+9.  AGOT: Minor House Flavour
+10.  AGOT: Minor House Flavour Fix
+11. An AGOT Special World [removed all gfx models, double check the events/scripted effects and see if they are needed or bugged, they also not included]
+12. Blade Mastery
+13. Border Disputes
+14. CTFA + AGOT Compatch
+15. Custom Nickname
+16. Custom Title Form of Address
+17. Dragonpit access: none without permit
+18. Ecsaty's Destroy Titles
+19. Ecsaty's Titular Title Creator Fix
+20. Freeholder's RP Interactions
+21. Lannister Gold - AGOT
+22. Minor House Flavour - REMASTERED PATCH
+23. Pillage
+24. Raised Army CoA
+25. Scrollable Character Interaction Window
+26. Valaddar's AGOT Tweaks
+27. Valyrian Name Lists Expanded - A Submod for CK3AGOT
 
-Partially included in main:
+Partially included in main: - ALL UPDATED ON 19 MAR 25
 
 2.  AGOT - Armies of Westeros (common: culture; men_at_arms_types)
 3.  Armies of Westeros REMASTERED (common: accolade_types; culture; men_at_arms_types)
+4.  COW-AGOT: 3d Models  & Bigger Castles (common: buildings; script_values)
+5.  AGOT - Holding Art (common: buildings; culture)
+6.	Divine Intervention Cheat Menu (common: character_interaction_categories | gui: button)
 
 1.	AGOT (
-4.  COW-AGOT: 3d Models  & Bigger Castles
-5.  AGOT - Holding Art
-6.  AGOT: Immersion
-7.  Commanders+
-8.  Commanders+ For AGOT
-9.  Divine Intervention Cheat Menu
-10. Divine Intervention AGOT Cheat Menu
 11. More Interactive Vassals
 
 Not included in main branch:
 1.  Submod Core
-2.  AGOT+ [remove CoA changes]
+2.  AGOT+ [remove CoA changes, fix Lannister hair]
 3.  Crowns of Westeros
 4.  Valyrian Steel
 5.  Legacy of the Dragon
 6.  Visible Disfigurement
 7.  Visible Disfigurement - AGOT Compatch
+8. 	Divine Intervention AGOT Cheat Menu
+
+Possibly Incompatible:
+1.  Commanders+
+2.  Commanders+ For AGOT
 
 Add when needed each season:
 1.  AGOT More Bookmarks

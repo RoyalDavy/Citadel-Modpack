@@ -9,54 +9,79 @@ interaction_category_freeholdrp = {
 	desc = "AGOT_FREEHOLD_ACTIONS"
 }
 
+interaction_category_cheat_menu = {
+	index = 1
+	debug_only = yes
+	desc = "CHEAT_ACTIONS"
+}
+
+interaction_category_admin = {
+    index = 2
+    desc = "ADMIN_ACTIONS"
+}
 
 interaction_category_diplomacy = {
-	index = 1
+	index = 3
 	desc = "DIPLOMACY_ACTIONS"
 }
 
 interaction_category_friendly = {
-	index = 2
+	index = 4
 	desc = "FRIENDLY_ACTIONS"
 }
 
 interaction_category_clan = {
-	index = 3
+	index = 5
 	desc = "CLAN_ACTIONS"
 }
 
+interaction_category_laamp =  {
+    index = 6
+    desc = "LAAMP_ACTIONS"
+}
+
 interaction_category_hostile = {
-	index = 4
+	index = 7
 	desc = "HOSTILE_ACTIONS"
 }
 
 interaction_category_diarch = {
-	index = 5
+	index = 8
 	desc = "DIARCH_ACTIONS"
 }
 
 interaction_category_vassal = {
-	index = 6
+	index = 9
 	desc = "VASSAL_ACTIONS"
 }
 
 interaction_category_prison = {
-	index = 7
+	index = 10
 	desc = "IMPRISOMENT_ACTIONS"
 }
 
 interaction_category_religion = {
-	index = 8
+	index = 11
 	desc = "RELIGIOUS_ACTIONS"
 }
 
 interaction_category_uncategorized = {
-	index = 9
+	index = 12
 	default = yes
 	desc = "UNCATEGORIZED_ACTIONS"
 }
 
 interaction_debug_main = {
-	index = 10
+	index = 13
 	desc =  "DEBUG_MAIN"
+}
+
+interaction_debug_admin = {
+    index = 14
+    desc = "interaction_debug_admin"
+}
+
+interaction_category_agot_debug = {
+	index = 15
+	desc = "AGOT_MEGA_WARS_DEBUG_ACTIONS"
 }

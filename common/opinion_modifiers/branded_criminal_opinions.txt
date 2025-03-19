@@ -1,10 +1,75 @@
-﻿branded_criminal_crime = {
-	opinion = -100
+﻿illegal_war_opinion = {
+	opinion = -200
+	decaying = yes
+	years = 15
 	imprisonment_reason = yes
 	execute_reason = yes
-	revoke_title_reason = yes
+	banish_reason = yes
 }
 
-branded_me_opinion  = {
+realm_illegal_war_opinion  = {
+	opinion = -40
+	decaying = yes
+	years = 10
+	imprisonment_reason = yes
+	execute_reason = yes
+	banish_reason = yes
+}
+
+denounced_for_illegal_war_opinion  = {
 	opinion = -100
+}
+
+liege_abandoned_vassal = {
+	opinion = -30
+	years = 15
+	decaying = yes
+	revoke_title_reason = yes
+	imprisonment_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+
+liege_attacked_vassal = {
+	opinion = -60
+	years = 15
+	decaying = yes
+	revoke_title_reason = yes
+	imprisonment_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+
+greedy_family_opinion = {
+	opinion = -50
+	years = 5
+	decaying = yes
+	
+}
+
+agot_immersion_loyal_vassal = {
+	opinion = 30
+	years = 20
+	decaying = yes
+	
+}
+agot_immersion_very_loyal_vassal = {
+	opinion = 50
+	years = 20
+	decaying = yes
+	
+}
+agot_immersion_called_to_war = {
+	opinion = -15
+	years = 5
+	decaying = yes
+	
+}
+agot_immersion_disloyal_vassal = {
+	opinion = -50
+	years = 15
+	decaying = yes
+	imprisonment_reason = yes
+	banish_reason = yes
+	execute_reason = yes
 }

@@ -1,0 +1,86 @@
+﻿### General Effects ###
+
+
+### War Crimes setup ###
+
+illegal_war_setup_effect = {
+	
+
+
+	scope:attacker = {
+			#trigger_event = immersive_vassal_wars.0008
+				create_story = {
+					type = war_criminal_story
+					save_scope_as = war_criminal_story
+				}
+			
+			}
+					
+			scope:war = { every_war_attacker = { add_to_list = attackers } }
+			every_in_list = {
+							list = attackers
+							limit = {
+								 is_vassal_or_below_of = scope:defender.liege 
+							}
+							
+							
+							
+										add_to_variable_list = {
+										name = war_criminals
+										target = scope:war_criminal_story
+														}
+			
+													
+							
+							
+							
+							
+						}
+			
+			
+				scope:war_criminal_story = {
+				
+			
+				set_variable = { name = lawgiver value = scope:illegal_defender}
+				set_variable = { name = illegal_war value = scope:war}
+				
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			#scope:war = { every_war_attacker = { add_to_list = attackers } }
+			#every_in_list = {
+			#				list = attackers
+			#				limit = {
+			#					 is_vassal_or_below_of = scope:defender.liege 
+			#				}
+			#				
+			#				scope:war_criminal_story = { 
+			#				
+			#				add_to_variable_list = {
+			#		name = war_criminals
+			#		target = prev
+			#			}
+			#
+			#							}
+			#				
+			#				
+			#				
+			#				
+			#			}

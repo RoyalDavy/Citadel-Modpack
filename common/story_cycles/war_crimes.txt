@@ -1,0 +1,48 @@
+﻿war_criminal_story = {
+	on_setup = {
+			
+	
+	
+	}
+	on_end = {}
+	on_owner_death = { make_story_owner = story_owner.primary_heir }
+	
+	effect_group = {
+        days = 365
+        # End the story if the decision has expired
+        triggered_effect = {
+            trigger = { 
+			     
+					story_owner = { is_alive = yes
+					NOT = { is_at_war_as_attacker }
+					
+					}
+			
+
+
+			}
+            effect = {
+	
+							story_owner = { trigger_event = immersive_vassal_wars.0008 }
+							end_story = yes
+		
+			 }
+        }	
+      
+      
+    }
+		
+			}
+			
+	
+
+
+
+				
+			
+					
+					
+					
+					
+	
+		

@@ -1,0 +1,143 @@
+﻿
+namespace = internal_conflicts
+
+#internal_conflicts.0001 - Liege decides whether to intervene
+#internal_conflicts.0002 - Notify Attackers
+#internal_conflicts.0003 - Notify Defenders
+
+
+
+
+### Liege decides how to react
+
+internal_conflicts.0001 = {
+	title = internal_conflicts.0001.t
+	left_portrait = {
+		character = scope:internal_conflict_defender
+		scripted_animation = duel_wield_weapon
+	}
+	right_portrait = {
+		character = scope:internal_conflict_attacker
+		scripted_animation = duel_wield_weapon
+	}
+	trigger = { NOT = { is_at_war_with = scope:internal_conflict_defender } }
+	
+	
+	override_background = {
+		reference = battlefield
+	}
+	desc = "internal_conflicts.0001_desc"
+	
+	immediate = {
+	save_scope_as = internal_conflict_liege
+	scope:internal_conflict = {
+	primary_defender = { save_scope_as = internal_conflict_defender }
+	primary_attacker = { save_scope_as = internal_conflict_attacker }
+	}
+	}
+	
+	#### I will defend my vassal
+	option = {
+		name =  internal_conflicts.0001.a
+		custom_tooltip =  internal_conflicts.0001.a.tt
+		
+		scope:internal_conflict = {
+		
+		add_defender = root 
+		every_war_attacker = { limit = { is_at_war_with = root }  trigger_event = internal_conflicts.0002 }
+		every_war_defender = { limit = { is_allied_in_war = root } trigger_event = internal_conflicts.0003 }
+		
+		}
+		
+		
+				ai_chance = {
+			base = 1
+			ai_value_modifier = {
+				ai_vengefulness = 0.25
+				ai_boldness = = 0.25
+				ai_honor = 1.5
+				ai_rationality = 0.3
+				ai_energy  = 0.1
+				ai_compassion = 0.3
+			}
+			opinion_modifier = {
+				opinion_target = scope:internal_conflict_defender
+				multiplier = 1
+			}
+		}
+	
+							
+	}
+	
+	#### I will do nothing.
+	option = {
+		name =  internal_conflicts.0001.b
+		custom_tooltip =  internal_conflicts.0001.b.tt
+		#scope:war = { add_defender = scope:defender.liege }
+		every_vassal = { trigger_event = {
+								id = internal_conflicts.0006
+								days = { 5 10 }
+							}   }
+							
+			ai_chance = {
+			base = 1
+			ai_value_modifier = {
+			
+				ai_boldness = -1
+		
+				
+			}
+			opinion_modifier = {
+				opinion_target = scope:internal_conflict_attacker
+				multiplier = 0.5
+			}
+		}
+		
+	}
+	
+	
+	
+}
+
+
+
+internal_conflicts.0002 = {
+	type = letter_event
+	sender = scope:internal_conflict_liege
+	opening = {
+		desc = "internal_conflicts.0002_opening"
+	}
+	desc = "internal_conflicts.0002_desc"
+	trigger = { exists = scope:internal_conflict_defender }
+
+	#### Oh no!
+	option = {
+		name =  internal_conflicts.0002.a
+		custom_tooltip =  internal_conflicts.0002.a.tt
+		
+	}
+		
+	
+	
+	
+}
+internal_conflicts.0003 = {
+	type = letter_event
+	sender = scope:internal_conflict_liege
+	opening = {
+		desc = "internal_conflicts.0003_opening"
+	}
+	desc = "internal_conflicts.0003_desc"
+
+
+	#### Great News!
+	option = {
+		name =  internal_conflicts.0003.a
+		custom_tooltip =  internal_conflicts.0002.a.tt
+		
+	}
+		
+	
+	
+	
+}

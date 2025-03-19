@@ -1,0 +1,37 @@
+﻿l_english:
+ agot_immersion_call_the_banners_title:0 "#difficulty_hard Call the Banners#!"
+ agot_immersion_call_the_banners_desc:0 "Your bannermen are sworn to fight for you. Send word that it is time for them to honor their vows."
+ agot_immersion_call_the_banners_confirm:0 "Send the ravens"
+ agot_immersion_call_the_banners_tooltip:0 "Everyone inside your realm will be called upon to fight in any active wars. They will accept/decline depending on their opinions and personality."
+ 
+ agot_immersion_call_vassal_to_war_interaction:0 "Call Vassal to War"
+ agot_immersion_call_vassal_to_war_interaction_desc:0 "Your bannermen are sworn to fight for you, command them to raise their banners."
+
+ agot_immersion_call_the_banners.0001.t: "Call the Banners"
+
+ agot_immersion_call_the_banners.0001.desc: ""Call the banners." \n \n "All of them, my lord?\"\n \n "All of them.\"\n"
+
+ 
+ agot_immersion_call_the_banners_cancelname: "It's nothing!"
+ agot_immersion_call_the_banners_canceltooltip: "Call nobody to war"
+ 
+ 
+ agot_immersion_call_the_banners_optionname_1: "Call All Bannermen to War: [joining_war_1.GetName|V]"
+ agot_immersion_call_the_banners_optionname_2: "Call All Bannermen to War: [joining_war_2.GetName|V]"
+ agot_immersion_call_the_banners_optionname_3: "Call All Bannermen to War: [joining_war_3.GetName|V]"
+ agot_immersion_call_the_banners_optionname_4: "Call All Bannermen to War: [joining_war_4.GetName|V]"
+ agot_immersion_call_the_banners_optionname_5: "Call All Bannermen to War: [joining_war_5.GetName|V]"
+ agot_immersion_call_the_banners_optionname_6: "Call All Bannermen to War: [joining_war_6.GetName|V]"
+ agot_immersion_call_the_banners_optionname_7: "Call All Bannermen to War: [joining_war_7.GetName|V]"
+ agot_immersion_call_the_banners_optionname_8: "Call All Bannermen to War: [joining_war_8.GetName|V]"
+ agot_immersion_call_the_banners_optionname_9: "Call All Bannermen to War: [joining_war_9.GetName|V]"
+ agot_immersion_call_the_banners_optionname_10: "Call All Bannermen to War: [joining_war_10.GetName|V]"
+ 
+ 
+  agot_immersion_call_the_banners.0002.t: "[bannerlord_war.GetName|V]"
+
+ agot_immersion_call_the_banners.0002.desc: "[bannerlord.GetFullName] has called the banners and is raising a host to fight in the [bannerlord_war.GetName|V].\n\n I must decide how to respond."
+ agot_immersion_call_the_banners.0002.a: "[bannerlord.GetFullName] will have my full support."
+ agot_immersion_call_the_banners.0002.b: "I will answer the call."
+ agot_immersion_call_the_banners.0002.c: "My levies will support [bannerlord.GetFullName]."
+ agot_immersion_call_the_banners.0002.d: "[bannerlord.GetFirstName] will have none of my men."
