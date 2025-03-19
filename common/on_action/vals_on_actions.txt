@@ -1,0 +1,34 @@
+﻿
+## Add war related opinions
+on_war_started = {
+	on_actions = {
+		vals_on_war_started
+	}
+}
+
+### Add war related opinions
+vals_on_war_started = {
+	trigger = {
+		scope:war = {
+			using_cb = val_reconquest_war
+		}
+	}
+	effect = {
+
+		scope:attacker = {
+			every_vassal = {
+				limit = {
+					highest_held_title_tier = tier_kingdom
+					is_allied_to = scope:attacker
+					opinion = {
+						target = scope:attacker
+						value > 25
+					}
+				}
+				add_attacker = prev 
+			}
+		}
+
+		
+	}
+}

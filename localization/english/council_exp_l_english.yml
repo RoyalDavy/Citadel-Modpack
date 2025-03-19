@@ -1,0 +1,34 @@
+﻿l_english:
+
+ trait_councillor_1:0 "Councillor"
+ trait_councillor_2:0 "Experienced Councillor"
+ trait_councillor_3:0 "Renowned Councillor"
+ 
+ trait_councillor_1_desc:0 "This character was a member of a ruling council.\nA prestigious position, that requires great skills and knowledge."
+ trait_councillor_1_character_desc:0 "[ROOT.Char.GetFirstNameNoTooltip] was a member of a ruling council.\nBut that as far as it goes."
+ trait_councillor_2_character_desc:0 "[ROOT.Char.GetFirstNameNoTooltip] was a member of a ruling council for quite some time, and gained valuable experience.
+ trait_councillor_3_character_desc:0 "[ROOT.Char.GetFirstNameNoTooltip] was a member of a ruling council for a long time.\n[ROOT.Char.GetHerHis|U] skills and knowledge are irreplaceable."
+  
+ trait_track_spouse:0 "Spouse"
+ trait_track_spouse_desc:0 "Although not an actual councillor, the Spouse is a trusted confidant, who can offer support and advice even in the darkest of times."
+
+ trait_track_castellan:0 "Castellan"
+ trait_track_castellan_desc:0 "The Right Hand - the Castellan oversees his liege lord's realm and can speak on his behalf."
+ 
+ trait_track_chancellor:0 "Chancellor"
+ trait_track_chancellor_desc:0 "The Chancellor concerns himself with matters of diplomacy, both external and internal."
+ 
+ trait_track_steward:0 "Steward"
+ trait_track_steward_desc:0 "The Steward manages his liege lord's lands, and contributes to the development of trade and culture."
+ 
+ trait_track_marshal:0 "Marshal"
+ trait_track_marshal_desc:0 "The Marshal oversees the security of the realm, and is the highest-ranking officer in the liege lord's army."
+ 
+ trait_track_spymaster:0 "Spymaster"
+ trait_track_spymaster_desc:0 "The Spymaster oversees the matters intelligence and controls the spy network across the realm, and beyond it."
+ 
+ trait_track_admiral:0 "Admiral"
+ trait_track_admiral_desc:0 "The Admiral oversees both the navy and the merchant fleet, and must be proficient in the art of seafaring."
+ 
+ trait_track_chaplain:0 "Chaplain"
+ trait_track_chaplain_desc:0 "The Chaplain presides over the realm's faith, and can council the liege on other more scholarly matters."

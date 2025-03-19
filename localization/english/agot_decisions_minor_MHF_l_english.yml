@@ -1,0 +1,9 @@
+﻿l_english:
+
+ great_northern_bakeoff_decision:0 "Arrange the Great Northern Bake Off"
+ great_northern_bakeoff_decision_tooltip:0 "I need some decent pasties, send for Poul Woodholly!"
+ great_northern_bakeoff_decision_desc:0 "I feel a great hankering for some pasties and pastries. \n\nI'll send for White Harbor's chief baker, Poul Woodholly, and we'll pitch the great baking tents on the outskirts of the city; just need to clear some of the larger rocks from the fields to fit the tent. \n\nBakers from all across [GetGeographicalRegion('world_westeros_the_north').GetName] will flock to White Harbor. It's high time we arrange the Great Northern Bake Off!"
+ great_northern_bakeoff_decision_confirm:0 "On your marks, get set, BAKE!"
+ great_northern_bakeoff_events.0001.t:0 "The Great Northern Bake Off"
+ great_northern_bakeoff_events.0001.desc:0 "The Bake Off was a roaring success.\n\nBakers from all across [GetGeographicalRegion('world_westeros_the_north').GetName] participated, from [GetTitleByKey('c_last_hearth').GetNameNoTier] to the Neck. They conjured up the finest loaves and tarts; all under the judging stern eyes of renowned local baker, [GetTitleByKey('b_white_harbor').GetNameNoTier]'s own Poul Woodholly. Lord Manderly himself participated as a judge, and tasted every last pasty and pastry. At last a worthy winner was chosen, a #bold STAR BAKER#!.\n\nThis year the title went to a young lad from a small hamlet. The crowd cheered as the winner was presented, and every man, woman and child present shouted:\n\n"#italic DA STAR BAKER IN DA NORF! DA STAR BAKER IN DA NORF!#!"\n\nContent, and with  a full belly, you return to [GetTitleByKey('b_new_castle').GetNameNoTier], already looking forward to the next Great Northern Bake Off."
+ great_northern_bakeoff_events.0001.a:0 "Time to return home..."

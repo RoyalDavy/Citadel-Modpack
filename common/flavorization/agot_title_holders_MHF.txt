@@ -1,0 +1,21 @@
+﻿### Smaller Kingdoms
+king_oldtown = { # King of the High Tower
+	type = character
+	special = holder
+	gender = male
+	tier = kingdom
+	priority = 900
+	only_independent = yes
+	governments = { lp_feudal_government feudal_government }
+	titles = { k_oldtown_mhf }
+}
+queen_oldtown = { # Queen of the High Tower
+	type = character
+	special = holder
+	gender = female
+	tier = kingdom
+	priority = 900
+	only_independent = yes
+	governments = { lp_feudal_government feudal_government }
+	titles = { k_oldtown_mhf }
+}

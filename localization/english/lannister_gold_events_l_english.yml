@@ -1,0 +1,494 @@
+﻿l_english:
+ lannister_gold.0001.t:0 "The Golden Bank of Lannisport"
+ lannister_gold.0001.desc:0 "The golden veins within the Rock are beginning to dwindle, and so the boundless wealth our house has long enjoyed could be at risk. But where one door closes, another opens. We have decided to establish the Golden Bank of Lannisport—a full-fledged banking institution that will secure our family's legacy and financial dominance across Westeros.\n\nOur experience with smaller loans and lending to the crown has laid the groundwork, but this new venture demands expertise beyond our current means. Lacking the financial know-how to launch such an enterprise ourselves, we have resolved to summon the best bankers from across the world to aid us. Of course, as highborn lords, we cannot be seen getting our hands dirty in the day-to-day dealings of the bank; lesser subordinates will be entrusted with its management."
+ lannister_gold.0001.a:0 "Summon the greatest financial minds!"
+ lannister_gold.0001.a_tt:0 "You call for aid to the greatest financiers across the land"
+ 
+ lannister_gold.0002.t:0 "The Architects of Wealth"
+ lannister_gold.0002.desc:0 "With the Golden Bank of Lannisport now established, the time has come to choose those who will guide it to greatness. The finest bankers and merchants from across the known world have arrived at your behest, eager to lend their expertise to this new endeavor. Three distinct groups present themselves, each offering a unique path for the future of the bank.\n\nThe first group hails from Braavos, led by a former member of the Iron Bank. They bring with them a wealth of experience in loan recovery and the ruthless efficiency that made the Iron Bank feared across the world. These seasoned bankers are ready to apply their hard-earned knowledge to ensure that every coin lent by the Golden Bank returns with interest.\n\nThe second group comprises skilled merchants from Lys, experts in handling debt and trade. They have learned from the rise and fall of the Rogare Bank and are determined to avoid the same pitfalls. Their leader, a shrewd trader with a keen eye for opportunity, promises to navigate the treacherous waters of commerce and ensure the bank’s prosperity.\n\nThe third option is to appoint local merchants and lenders from the Westerlands. With deep ties to the artisans and traders of Lannisport, their leader knows the city and its people like no other."
+ lannister_gold.0002.a:0 "We will go for the ruthless Braavosi."
+ lannister_gold.0002.a_tt:0 "You hire the Braavosi Bankers"
+ lannister_gold.0002.b:0 "The Lyseni's experience will come in handy"
+ lannister_gold.0002.b_tt:0 "You hire the Lyseni Bankers"
+ lannister_gold.0002.c:0 "Let's Keep it local"
+ lannister_gold.0002.c_tt:0 "You hire the local experts"
+ 
+ lannister_gold.0003.t:0 "Gold and Scorn"
+ lannister_gold.0003.desc:0 "Whispers echo through the halls of Casterly Rock, as the Golden Bank of Lannisport begins to cast a long shadow over your reputation. The smallfolk murmur, labeling you a mere merchant and usurer, their voices fueled by the discontent of the Faith. The establishment of a bank by a noble house is seen as an affront to the gods, and the High Septon himself is said to be personally outraged.\n\nEven the Iron Throne grows wary, closely monitoring your every move, suspicious of the power your house may be accumulating through this new venture. The foundation of the Golden Bank, intended to cement your legacy, now threatens to unravel the very fabric of your standing among peers, commoners, and the crown alike"
+ lannister_gold.0003.a:0 "Purchasing a royal charter will silence the Throne's doubts."
+ lannister_gold.0003.a_tt:0 "You purchase a charter from the Crown"
+ lannister_gold.0003.b:0 "Bribe the Faith, gold will soothe their righteous indignation."
+ lannister_gold.0003.b_tt:0 "You bribe the Faith"
+ lannister_gold.0003.c:0 "Fund widespread charity, let our generosity be known far and wide."
+ lannister_gold.0003.c_tt:0 "You attempt to improve the Bank's reputation"
+ lannister_gold.0003.d:0 "Our power is built on gold, not their approval."
+ lannister_gold.0003.d_tt:0 "You ignore the rumours"
+ 
+ 
+
+ 
+ ### BORROW FROM THE BURGUERS ###
+ 
+ lannister_gold.0005.t:0 "Merchants Withdraw their support"
+ lannister_gold.0005.desc:0 "The debt owed to the merchants has come due, but the coffers are empty. Unable to fulfill our obligations, the merchants have lost faith in our house and have withdrawn their support. Without their backing, our influence wanes, and the whispers of our financial troubles spread like wildfire. The trust once built on gold is now shattered, leaving us vulnerable and isolated. Until we repay our debts to them, the merchants will not offer us another loan."
+ lannister_gold.0005.a:0 "We must endure the consequences until we can repay them."
+ lannister_gold.0005.a_tt:0 "You failed to pay the merchants back in time and they have now withdrawn their support until we repay them."
+ 
+ 
+ ### Iron Bank Threat ###
+ 
+ lannister_gold.0004.t:0 "A Cold Wind from Braavos"
+ lannister_gold.0004.desc:0 "A delegation from the Iron Bank of Braavos has arrived in Lannisport, their presence as imposing as the reputation they carry. The leader of the envoys, a stern-faced Braavosi clad in somber robes, delivers their message without a hint of hesitation.\n\nThe Iron Bank demands that the Golden Bank of Lannisport cease all operations immediately. They accuse you of overstepping into the domain of the world's most feared financial institution, and warn that refusal will bring dire consequences. The Iron Bank does not threaten idly; their reach is long, and their methods are unforgiving."
+ lannister_gold.0004.a:0 "We have no choice; shut it down."
+ lannister_gold.0004.a_tt:0 "The Iron Bank's power is too great to challenge directly. The Golden Bank must close its doors."
+ lannister_gold.0004.b:0 "Perhaps we can negotiate a compromise."
+ lannister_gold.0004.b_tt:0 "A well-timed compromise might avoid open conflict while keeping some interests intact."
+ lannister_gold.0004.c:0 "We will not be threatened. Send them away!"
+ lannister_gold.0004.c_tt:0 "Braavos may be far, but the shadow of their influence is long."
+ 
+ 
+ 
+ lannister_gold.0006.t:0 "The Golden Bank Shutters Its Doors"
+ lannister_gold.0006.desc:0 "With a heavy heart, you gather your most trusted advisors in the grand hall of Casterly Rock. The opulent surroundings only deepen the bitterness of your decision. You decree that the Golden Bank of Lannisport must be shut down immediately. Messengers are sent to Lannisport, where the bank’s vaults are sealed, its ledgers closed, and its clerks dismissed. The once-bustling halls of the Golden Bank fall silent, a stark reminder of the Iron Bank’s power. Though their wrath has been averted, the closure marks a bitter setback for your house’s ambitions."
+ lannister_gold.0006.a:0 "It is done; the Golden Bank is no more."
+ lannister_gold.0006.a_tt:0 "Sometimes, survival requires sacrifice."
+ 
+ 
+ lannister_gold.0007.t:0 "A Dangerous Negotiation"
+ lannister_gold.0007.desc:0 "Refusing to submit entirely to the Iron Bank’s demands, you opt for negotiation. You summon your finest diplomats and meet with the Braavosi envoys in the shadowy halls of Casterly Rock. Their leader, Xaro Qosori, listens in icy silence as you propose a compromise.\n\nYou suggest either a partnership, a special charter recognizing the Golden Bank’s place under their protection, or even a large single payment to satisfy their immediate concerns. The outcome of this negotiation will determine whether the Iron Bank becomes a partner, or a relentless adversary."
+ lannister_gold.0007.a:0 "Offer a partnership with the Iron Bank."
+ lannister_gold.0007.a_tt:0 "Shared power could prevent open conflict."
+ lannister_gold.0007.b:0 "Make a large payment to buy peace."
+ lannister_gold.0007.b_tt:0 "Gold could buy us time and get the braavosi off our backs."
+ lannister_gold.0007.c:0 "I changed my mind, send them away!"
+ lannister_gold.0007.c_tt:0 "Reaffirm your position as a lord and send the envoys away, standing firm in your decision."
+ 
+ lannister_gold.0008.t:0 "A Pact Forged in Gold"
+ lannister_gold.0008.desc:0 "Against all odds, the envoys of the Iron Bank of Braavos have agreed to your terms. After days of tense negotiations, a deal has been struck. They will allow the Golden Bank of Lannisport to continue its operations, acknowledging its presence in the Seven Kingdoms. In return, they will receive a substantial one-time payment and certain privileges in future banking ventures.\n\nThis agreement will keep the Braavosi bankers content for now, allowing the Golden Bank to flourish without fear of retribution. The ink is barely dry, but the future now seems promising and profitable."
+ lannister_gold.0008.a:0 "We must remain vigilant, the Iron Bank is never truly a friend."
+ lannister_gold.0008.a_tt:0 "We managed to secure peace with the Iron Bank for now, but must remain alert for future threats."
+ 
+ lannister_gold.0009.t:0 "A Pact with Braavos"
+ lannister_gold.0009.desc:0 "After much back-and-forth, the Iron Bank of Braavos has finally agreed to a partnership with the Golden Bank of Lannisport. In exchange for allowing our bank to operate freely, we are to pay the Iron Bank a fixed sum of gold every month.\n\nThough this arrangement feels more like a tribute than a partnership, it will keep the Braavosi bankers at bay, ensuring that their considerable influence remains a distant threat rather than a present danger. The envoys leave with satisfied smiles, and we are left to ponder the price of peace."
+ lannister_gold.0009.a:0 "We can live with this for now, but we must stay vigilant."
+ lannister_gold.0009.a_tt:0 "You accept to pay tribute to the Iron Bank for now in exchange for peace."
+ 
+ lannister_gold.0010.t:0 "The Iron Bank's Wrath"
+ lannister_gold.0010.desc:0 "The envoys from the Iron Bank of Braavos may have left our halls, but their threats linger. Now, we hear whispers of the Iron Bank's plans to bring down the Golden Bank of Lannisport. Braavosi agents have been seen speaking with our rivals, bribing merchants, and spreading rumors to discredit us.\n\nTheir aim is clear: to crush our ambitions and maintain their iron grip on the world of finance. We underestimated their resolve, and now they are moving against us with all the power and influence they command."
+ lannister_gold.0010.a:0 "They're sponsoring a challenger to my title! War is inevitable!"
+ lannister_gold.0010.b:0 "We will survive whatever they throw at us!"
+ lannister_gold.0010.c:0 "We must endure and prevail!"
+ 
+ lannister_gold.0011.t:0 "The Golden Bank Shuts its Doors"
+ lannister_gold.0011.desc:0 "The murmurs of the Faith and whispers of the smallfolk have grown too loud to ignore. The Golden Bank of Lannisport, once a symbol of power and prosperity, has now become a source of scandal and sin. Many claim that a lord dabbling in banking is unbecoming, akin to the acts of merchants and usurers.\n\nWith each passing day, the High Septon’s disapproval grows, and the Iron Bank’s looming presence casts a long shadow over our ambitions. Perhaps it is time to listen to these voices and return to the nobler pursuits befitting our station. By closing the Golden Bank, we could restore our standing and cleanse our reputation in the eyes of the Faith and the realm."
+ lannister_gold.0011.a:0 "Close the Golden Bank and uphold our noble traditions."
+ lannister_gold.0011.a_tt:0 "Shut down the Golden Bank, abandoning the ways of merchants for the respect of the Faith and nobility."
+ 
+ lannister_gold.0012.t:0 "A Shadow from Braavos"
+ lannister_gold.0012.desc:0 "Lately, an uneasy presence seems to lurk in every shadow, eyes watching your every move. Whispers surround you like a fog, feeding your growing paranoia.\n\nIt’s the Iron Bank—it must be. Since the Golden Bank of Lannisport was founded, they’ve been silently watching, waiting for the right moment to strike. Every rustle of paper and creak of the door sets your heart racing, wondering if today is the day they act.\n\nThe Iron Bank of Braavos does not tolerate competition, and you can feel their gaze fixed upon you, cold and calculating."
+ lannister_gold.0012.a:0 "Double the guard."
+ lannister_gold.0012.a_tt:0 "Hire additional guards and increase security around you to deter any would-be intruders."
+ lannister_gold.0012.b:0 "It must have been the wind."
+ lannister_gold.0012.b_tt:0 "There's no need to worry, probably my just my mind playing tricks on me."
+ 
+ lannister_gold.0014.t:0 "A Shadow from Braavos"
+ lannister_gold.0014.desc:0 "Lately, an uneasy presence seems to lurk in every shadow, eyes watching your every move. Whispers surround you like a fog, feeding your growing paranoia.\n\nIt’s the Iron Bank—it must be. Since the Golden Bank of Lannisport was founded, they’ve been silently watching, waiting for the right moment to strike. Every rustle of paper and creak of the door sets your heart racing, wondering if today is the day they act.\n\nThe Iron Bank of Braavos does not tolerate competition, and you can feel their gaze fixed upon you, cold and calculating."
+ lannister_gold.0014.a:0 "Double the guard."
+ lannister_gold.0014.a_tt:0 "Hire additional guards and increase security around you to deter any would-be intruders."
+ lannister_gold.0014.b:0 "Must have been the wind."
+ lannister_gold.0014.b_tt:0 "There's no need to worry, probably just my mind playing tricks on me."
+ 
+ lannister_gold.0015.t:0 "A Shadow from Braavos"
+ lannister_gold.0015.desc:0 "You are jolted awake in the dead of night by the sound of scuffling outside your chamber door. Your guards burst in, dragging a bloodied thug in chains. Clutched in his hand is a finely crafted Essosi dagger, its blade still unsheathed.\n\n"We caught him sneaking toward your chambers, my lord." the guard captain says. The thug, bruised and beaten, shudders as he kneels. "Please, have mercy! I was hired by a foreigner with a strange accent down at the port...” he confesses through bloodied lips. "Paid in gold to slit your throat while you slept." His eyes shift nervously, betraying the fear that grips him.\n\nThe Iron Bank of Braavos immediately comes to mind. Ever since you established the Golden Bank of Lannisport, their agents have been watching. Perhaps this was their first move. Could they have sent this thug to eliminate the competition?"
+ lannister_gold.0015.a:0 "You will forever rot in the dungeons of the Rock!"
+ lannister_gold.0015.a_tt:0 "You throw the assasin in the dungeons until you decide his fate."
+ lannister_gold.0015.b:0 "Kill him. Let Braavos know the price of crossing me."
+ lannister_gold.0015.b_tt:0 "Show the Iron Bank what happens when they send assassins."
+ lannister_gold.0015.c:0 "If he wants to live, he will kill the one who hired him."
+ lannister_gold.0015.c_tt:0 "You send the assasin back to the port to murder his employer in exchange for his life."
+ 
+ lannister_gold.0016.t:0 "A Shadow from Braavos"
+ lannister_gold.0016.desc:0 "You are awakened abruptly in the dead of night, a cold shiver running down your spine. The darkness of your chamber is pierced by the faint gleam of a blade, catching the moonlight through the window.\n\nA shadowy figure looms over your bed, a dagger poised to strike. For a heartbeat, time seems to stand still. The assassin's eyes glint with deadly intent, and you can feel your own heartbeat thundering in your ears. Adrenaline surges through your veins, your mind racing.\n\nThere’s no time to call for help—the choice is yours: flee to save your life, or stand your ground and fight off this silent intruder."
+ lannister_gold.0016.a:0 "This Cannot be it, I need to RUN!"
+ lannister_gold.0016.a_tt:0 "You attempt to run past the assassin and get to the guards."
+ lannister_gold.0016.b:0 "I won't go down without a fight. Come at me!"
+ lannister_gold.0016.b_tt:0 "You attempt to reach for your sword and confront the assassin."
+ 
+ lannister_gold.0017.t:0 "Strange Eyes"
+ lannister_gold.0017.desc:0 "As you make your way back to your alcove after supper, the familiar walls of Casterly Rock offer a comforting sense of security. Just as you are about to ascend the grand staircase, one of your trusted courtiers steps out of the shadows and greets you with a warm smile.\n\nThen, without warning, the courtier’s hand moves faster than you can react. A gleaming dagger appears, and you feel the cold steel pierce your flesh, once, twice, then repeatedly.You try to speak, but no words come out. The pain overwhelms you, spreading like fire, but it’s the coldness that you notice most.\n\nBefore darkness takes over, you catch a glimpse of your attacker's eyes. They are empty, devoid of any recognition or remorse.\n\nAnd then, in your final moments, realization strikes. These eyes... they are not those of your courtier. It’s as if you are looking at a stranger, a faceless being who wears the guise of your trusted companion. Understanding washes over you in your last heartbeat. The Iron Bank and the Faceless Men—they are but two sides of the same coin."
+ lannister_gold.0017.a:0 "All men must die."
+ lannister_gold.0017.a_tt:0 "The Iron Bank finally got you, noone can escape the faceless men."
+ 
+ lannister_gold.0018.t:0 "Clash of Shadows"
+ lannister_gold.0018.desc:0 "The assassin lunges at you with his dagger, his movements quick and deadly. A sharp pain sears through your thigh as the blade finds its mark. Adrenaline surges through your veins, propelling you toward your sword. With a swift, desperate grab, you wield it just in time to counter his next move. Your blade arcs through the air, slicing through his arm. The dagger clatters to the floor.\n\nHe recoils, his face contorted in pain and shock, as he watches the blood spurt from his severed limb. As you raise your sword for the final blow, he collapses, clutching his wounded arm, and pleads for his life.\n\n"Mercy, my lord!" he cries out, his voice shaking. "I was only a tool, hired by a foreign man for a few gold coins. I met him down at the port—please, I didn’t want to do this!""
+ lannister_gold.0018.a:0 "You will rot in the darkest cell of the Rock."
+ lannister_gold.0018.a_tt:0 "You take the assassin prisoner."
+ lannister_gold.0018.b:0 "A dagger in the dark earns a swift death. You shall receive no less, assassin."
+ lannister_gold.0018.b_tt:0 "An assassin deserves no mercy; end his life now."
+ lannister_gold.0018.c:0 "Kill the one who sent you. Fail, and death shall be your mercy."
+ lannister_gold.0018.c_tt:0 "Offer him a chance to redeem himself by eliminating his employer."
+ 
+ lannister_gold.0031.t:0 "A Narrow Escape"
+ lannister_gold.0031.desc:0 "In a heart-stopping moment, you dodge a lethal strike and sprint past the assassin, your shouts summoning the guards. The corridors of your residence reverberate with the clamor of armored feet as help arrives swiftly.\n\nReturning to your chamber with guards flanking you, the room appears untouched except for the chilling night air wafting through an open window—the assassin's escape route. He has vanished without a trace, leaving behind only the lingering threat of his return."
+ lannister_gold.0031.a:0 "We must stay vigilant, watch every shadow."
+ lannister_gold.0031.a_tt:0 "You remain vigilant and prepare for further threats."
+ 
+ lannister_gold.0032.t:0 "The Assassin's Gambit"
+ lannister_gold.0032.desc:0 "Having captured the would-be assassin in a daring confrontation, you now present him with a perilous offer to redeem himself. He listens intently as you outline the plan, his fate hanging on his next actions.\n\n"You will return to the docks," you begin, your voice low and commanding, "bearing my golden ring as proof of my 'death.' Once there, you are to lure your employer into believing you have succeeded and then eliminate him. Search his body for any clues about who else might be involved in this conspiracy. No guards will pursue you, but make no mistake—my eyes will follow your every move."\n\nYou slide a pouch containing ten gold coins across the table—double his initial payment. "Succeed, and upon your return to the Rock, another double awaits you. Fail, and there will be nowhere in the Seven Kingdoms you can hide.""
+ lannister_gold.0032.a:0 "Remember what they say, a Lannister always pays his debts."
+ lannister_gold.0032.a_tt:0 "You deploy the assassin with precise instructions to turn the tables on his employer."
+ 
+ lannister_gold.0033.t:0 "The Assassin's Return"
+ lannister_gold.0033.desc:0 "In the crisp night air, the bloodied assassin returns, victorious, bearing signs of his grim task. His clothes, stained with blood, mark the successful completion of the mission you assigned. Kneeling before you, he presents your golden ring alongside orders from the Iron Bank of Braavos. His target, a Braavosi agent, has been silenced—a message that will reverberate through their ranks.\n\n"My lord, the Braavosi will think twice now," he states, weariness laced with relief in his voice. As you scan the documents, you catch a glimpse of gratitude and possibly loyalty in his eyes. This once mere mercenary now sees you differently, perhaps even as a savior, his thankfulness hinting at newfound allegiance."
+ lannister_gold.0033.a:0 "Your service is rewarded. Go now, free and with gold."
+ lannister_gold.0033.a_tt:0 "Reward his service generously and let him go."
+ lannister_gold.0033.b:0 "You may not be so useless after all. Stay and serve me."
+ lannister_gold.0033.b_tt:0 "Use his gratitude to offer him a place at your side."
+ lannister_gold.0033.c:0 "Thank you, time to die."
+ lannister_gold.0033.c_tt:0 "You execute the assassin to eliminate any potential future threats."
+
+
+
+ #### GOLDEN BANK PETITIONS START ####
+ 
+ 
+### 1 Alchemist ###
+
+ 
+ lannister_gold.0019.t:0 "The Alchemist's Proposal"
+ lannister_gold.0019.desc:0 "An eccentric alchemist from Oldtown, reeking of sulfur and ambition, arrives at the Golden Bank of Lannisport. He claims to have discovered a method to transmute base metals into gold. All he needs is a substantial loan to secure rare ingredients and build his laboratory. The alchemist promises immense wealth and fame for those who invest. Should we trust this mysterious figure with the bank’s gold?"
+ lannister_gold.0019.a:0 "Fund the alchemist's experiments; the potential reward is worth the risk."
+ lannister_gold.0019.a_tt:0 "Grant the alchemist the loan he requests, hoping for a miraculous return."
+ lannister_gold.0019.b:0 "Reject his request; this reeks of charlatanry."
+ lannister_gold.0019.b_tt:0 "Turn the alchemist away, refusing to finance his dubious pursuits."
+ 
+ lannister_gold.0021.t:0 "The Alchemist's Proposal: A Miraculous Success!"
+ lannister_gold.0021.desc:0 "Against all odds, the alchemist’s experiments have borne fruit. Word spreads quickly across Lannisport: gold flows freely from the alchemist's laboratory, where once only base metals stood. True to his promise, the alchemist arrives at the Golden Bank with a hefty repayment of gold coins, each gleaming brighter than the last. His success has brought both wealth and prestige to the Golden Bank, cementing its reputation as a patron of miraculous endeavors."
+ lannister_gold.0021.a:0 "The alchemist has exceeded all expectations!"
+ lannister_gold.0021.a_tt:0 "You gain a large amount of gold and prestige."
+ 
+ lannister_gold.0022.t:0 "The Alchemist's Proposal: A Disastrous Failure!"
+ lannister_gold.0022.desc:0 "Weeks turn into months, and the alchemist's promised gold is nowhere to be seen. The laboratory remains filled with nothing more than smoke and shattered dreams. Rumors spread of explosions, strange lights, and a growing stench from his quarters.\n\nWhen summoned to explain himself, the alchemist stammers through excuses, citing unforeseen complications in his experiments. He has no gold to repay, only empty promises and failed experiments. The time has come to decide his fate."
+ lannister_gold.0022.a:0 "Throw this madman in a cell"
+ lannister_gold.0022.a_tt:0 "Imprison the alchemist for his failure to repay the loan."
+ lannister_gold.0022.b:0 "You will serve me until you debt is repaid in full."
+ lannister_gold.0022.b_tt:0 "You recruit the alchemist to your court."
+
+
+### 2 Shipbuidler ###
+
+
+ lannister_gold.0023.t:0 "Roaring Into the Seas"
+ lannister_gold.0023.desc:0 "A seasoned shipbuilder from the Arbor arrives at the Golden Bank of Lannisport, his hands calloused and his eyes gleaming with determination.He lays out blueprints for a fleet of swift and sturdy ships, capable of dominating the trade routes of the Narrow Sea. With a substantial loan, he promises to build vessels that will bring untold wealth and influence to Lannisport. \n\nThe opportunity seems promising, but is it worth the risk?"
+ lannister_gold.0023.a:0 "Finance the shipbuilder's fleet; the sea holds great fortune."
+ lannister_gold.0023.a_tt:0 "Provide the shipbuilder with the gold he needs, betting on the success of his naval venture."
+ lannister_gold.0023.b:0 "Deny his request; we do not gamble on ships."
+ lannister_gold.0023.b_tt:0 "Refuse to finance the shipbuilder's plan, playing it safe."
+
+ lannister_gold.0025.t:0 "Roaring Into the Seas: A Profitable Success"
+ lannister_gold.0025.desc:0 "The shipbuilder's fleet is a masterpiece of craftsmanship, swift and resilient. The ships have set sail for the bustling ports of Essos, poised to dominate trade routes and bring a wealth of riches to Lannisport. The first returns are already pouring in, with gold flowing into the Golden Bank as the fleet successfully navigates new trading opportunities.\n\nThe investment has proven exceptionally profitable, enhancing both our reputation and our coffers."
+ lannister_gold.0025.a:0 "Lannisport shall enjoy the profits from the new trade routes."
+ lannister_gold.0025.a_tt:0 "Reap the benefits of the successful trade venture as the fleet brings in substantial profits."
+ lannister_gold.0025.b:0 "We should hire the shipbuilder permanently; his expertise is invaluable."
+ lannister_gold.0025.b_tt:0 "Gain a skilled shipbuilder as an advisor and reap the benefits from the successful trade routes."
+ 
+ lannister_gold.0026.t:0 "Roaring Into the Seas: A Catastrophic Failure"
+ lannister_gold.0026.desc:0 "The shipbuilder’s fleet, though grand in ambition, proves to be woefully inadequate. The ships are poorly constructed and prone to leaks, with many failing to make it out of the harbor.\n\nThe shipbuilder returns, unable to repay the loan, leaving us with nothing but a flotilla of failure and financial ruin."
+ lannister_gold.0026.a:0 "Imprison the shipbuilder for his failure."
+ lannister_gold.0026.a_tt:0 "Hold the shipbuilder accountable for the lost fortune, and have him imprisoned."
+ lannister_gold.0026.b:0 "Release him; the losses are enough."
+ lannister_gold.0026.b_tt:0 "Let the shipbuilder go, accepting the loss and moving on."
+ 
+ ### 3 Lannisport Silks ###
+
+ lannister_gold.0027.t:0 "Lannisport Silks"
+ lannister_gold.0027.desc:0 "A famed textile magnate from Lannisport, known for his luxurious and exquisite fabrics, steps into the Golden Bank with an air of confidence.\n\n"My [ROOT.Char.GetLadyLord], Lords and ladies across the realm will clamor for my finest textiles," he proclaims, eyes gleaming with ambition. "All I require is a loan from the esteemed Golden Bank to expand my operations and weave my vision into reality. The demand will be immense, and the returns for both of us will be even greater."\n\nHis proposition is tempting, offering not only substantial profits but also enhancing the bank’s reputation as the true patron of luxury and wealth in the Seven Kingdoms."
+ lannister_gold.0027.a:0 "Approve the loan; his grand vision could boost us both."
+ lannister_gold.0027.a_tt:0 "Loan the money to the textile magnate hoping his venture proves fruitful."
+ lannister_gold.0027.b:0 "Reject the loan; the gamble may be too great."
+ lannister_gold.0027.b_tt:0 "Avoid the risks of investing in a potentially volatile textile market, preserving our resources while missing out on the magnate’s grand vision."
+ 
+ lannister_gold.0029.t:0 "Lannisport Silks Reign Supreme"
+ lannister_gold.0029.desc:0 "The magnate’s ambitious expansion has surpassed even our highest hopes. His opulent textiles, rich in color and unrivaled in quality, have captured the hearts and purses of nobles and merchants alike.\n\nFrom King's Landing to Winterfell, these lavish fabrics have become the new hallmark of luxury and prestige. Our coffers swell with the profits of this golden venture."
+ lannister_gold.0029.a:0 "Celebrate the triumph; revel in the newfound wealth and prestige."
+ lannister_gold.0029.a_tt:0 "Enjoy the fruits of our investment as the magnate’s success boosts our own prestige and profitability."
+ 
+ lannister_gold.0030.t:0 "Silken Ruin: The Magnate’s Fails"
+ lannister_gold.0030.desc:0 "The textile magnate's grand designs fall apart as his once-promising textiles fail to enchant the market. The lavish fabrics, instead of dazzling the elite, are met with indifference, leading to a disastrous flop.\n\nThe investment sours, leaving the magnate in dire financial straits, an in no position to repay us."
+ lannister_gold.0030.a:0 "Imprison the magnate; hold him accountable for the financial disaster."
+ lannister_gold.0030.a_tt:0 "Place [textile_magante.GetName] under arrest for his failed venture and the financial ruin it has caused."
+ lannister_gold.0030.b:0 "Confiscate [textile_magante.GetName]'s property."
+ lannister_gold.0030.b_tt:0 "Seek repayment by confiscating the Magnate's property."
+ 
+ ### 4 The Old Knight ###
+ 
+ lannister_gold.0034.t:0 "The Old Knight's Forge"
+ lannister_gold.0034.desc:0 "Before you stands a once-famed knight of the Westerlands, his armor now traded for the simple garb of a blacksmith. With scars that tell tales of battles from the Iron Islands to the Dornish Marches, he seeks a loan to open a smithy in Lannisport.\n\nHis hands, once used to wield swords, now hope to forge them. "In my days of youth, I defended the realm with steel. Now, let me shape young minds with it," he proposes, his voice echoing the authority of a seasoned commander.\n\nKnown far and wide in the Westerlands, he promises not just to teach smithing but to instill the virtues of knighthood in the next generation. "Every blade I create will carry a story," he declares, his gaze steady and sure."
+ lannister_gold.0034.a:0 "The Golden Bank is honored to support your noble transition."
+ lannister_gold.0034.a_tt:0 "Invest in the knight's smithy, supporting his transition from warrior to mentor."
+ lannister_gold.0034.b:0 "While your legacy as a knight is undoubted, the forge is a different battlefield."
+ lannister_gold.0034.b_tt:0 "Decline the request, skeptical about the profitability of a smithy run by an aging knight."
+
+ lannister_gold.0036.t:0 "The Old Knight's Forge Flourishes"
+ lannister_gold.0036.desc:0 "A year has passed since the Golden Bank granted the loan to the retired knight to open his smithy in Lannisport. Under his skilled hands and watchful eyes, the smithy has not only thrived but become a cornerstone of the community. Young squires and old soldiers alike gather to learn the art of the forge, and his blades are sought after for their unrivaled quality and the honor they carry.\n\nWith pride and a ledger in hand, he returns to the bank, his account in surplus, ready to repay his debt in full."
+ lannister_gold.0036.a:0 "Your debt is cleared. Well done, Sir."
+ lannister_gold.0036.a_tt:0 "Accept Repayment"
+
+ lannister_gold.0037.t:0 "The Old Knight's Forge Struggles"
+ lannister_gold.0037.desc:0 "As the year turns, the retired knight faces the harsh realities of commerce. Despite his best efforts and the high quality of his craft, the smithy has struggled to maintain profitability. Between the competitive market and slow sales, the knight finds himself unable to meet his loan repayment.\n\n With a heavy heart, he approaches the bank, his pride wounded but his resolve firm, seeking leniency or aid to keep his dream—and his forge—alive."
+ lannister_gold.0037.a:0 "We forgive your debt good Sir, your service to the realm is enough."
+ lannister_gold.0037.a_tt:0 "You forgive the Knight's dent owed to the Golden Bank."
+ lannister_gold.0037.b:0 "The terms stand. The smithy is now ours."
+ lannister_gold.0037.b_tt:0 "Take ownership of the smithy due to the failed repayment, as per the loan agreement."
+
+### 5 The Northern Quest ###
+
+ lannister_gold.0038.t:0 "The Northern Quest"
+ lannister_gold.0038.desc:0 "In the opulent chambers of the Golden Bank of Lannisport, a wealthy local enthusiast, known for his vast library and fantastical tales, presents a daring proposition. With a sparkle of adventure in his eyes, he shares ancient maps and texts, claiming to have pinpointed the location of a long-lost treasure left by the First Men, deep beyond the Wall.\n\n"Imagine the glory, not just in gold but in uncovering history itself," he enthuses, his voice brimming with excitement. He seeks a substantial loan to fund an expedition, equipped to brave the untold dangers of the frozen North in pursuit of this legendary cache."
+ lannister_gold.0038.a:0 "We'll finance this historic expedition—may your quest yield treasures of all kinds."
+ lannister_gold.0038.a_tt:0 "Provide the funds, captivated by the potential historical and financial returns."
+ lannister_gold.0038.b:0 "Get this madman out of my halls"
+ lannister_gold.0038.b_tt:0 "You dismiss the explorer."
+
+ lannister_gold.0040.t:0 "The Northern Quest"
+ lannister_gold.0040.desc:0 "A Harsh Return from the North" Description: After many months, the gates of Lannisport open to a weary and diminished caravan. The rich dreamer, now gaunt and weather-beaten, leads his few remaining companions back from their perilous journey. They return empty-handed, having found no trace of the First Men's treasure. His eyes, once filled with the fire of adventure, now reflect the harsh lessons of the wild North.\n\n"We faced blizzards and wildlings, and though we found no gold, the tales of our survival will fill many a mug in the taverns," he reports solemnly to the bank."
+ lannister_gold.0040.a:0 "This expedition was madness from the start."
+ lannister_gold.0040.a_tt:0 "You welcome the caravan back accepting the loss of the investment."
+ lannister_gold.0040.b:0 "You have demonstrated your bravery, I will employ you at court."
+ lannister_gold.0040.b_tt:0 "You hire the explorer and take advantage of his experience gained beyond the wall."
+
+ lannister_gold.0041.t:0 "The Silence of the North"
+ lannister_gold.0041.desc:0 "As the seasons change, the absence of any word from the northern expedition weighs heavily on your mind. With each passing month, hope dwindles, and the reality of the venture's fate becomes a stark contemplation. Alone in your study, you ponder the myriad dangers that lie beyond the Wall—ferocious wildlings, merciless weather, and creatures of legend all loom as possible ends to the dreamer’s journey. The maps and texts he once showed you now seem like portals to a fatal odyssey. The silence speaks louder than any tale of treasure could."
+ lannister_gold.0041.a:0 "A somber reminder of the perilous line between reality and legend."
+ lannister_gold.0041.a_tt:0 "Write off the investment, accepting the loss as part of the risks of such fantastical ventures."
+
+### 6 Lannisport Brew ###
+
+ lannister_gold.0042.t:0 "Lannisport's Finest Brews"
+ lannister_gold.0042.desc:0 "A renowned brewer from Lannisport, known for his craft and innovative ale recipes, steps into the Golden Bank. 'My [ROOT.Char.GetLadyLord], imagine a brew so rich that it becomes the toast of every tavern from here to the Wall,' he says, eyes sparkling with the dream of his brewery's expansion. 'With just a modest investment, we could ferment a legacy that lasts generations. The returns, much like the ale, will be robust and satisfying.' His proposal is enticing, promising not just substantial profits but also a chance to be part of a cultural landmark."
+ lannister_gold.0042.a:0 "Approve the loan; let's brew a new chapter together."
+ lannister_gold.0042.a_tt:0 "Invest in the brewery, expecting it to yield good returns and widespread acclaim."
+ lannister_gold.0042.b:0 "Reject the loan; the market is too uncertain."
+ lannister_gold.0042.b_tt:0 "Decline to invest, avoiding potential pitfalls in a competitive market."
+
+ lannister_gold.0044.t:0 "A Toast to Success"
+ lannister_gold.0044.desc:0 "The brewer's bold venture has frothed over expectations, turning his ale into the most sought-after drink in the realm. Taverns and feasts alike buzz with praises for the Lannisport brew, each batch selling faster than it can be produced. Our coffers brim with the profits of this golden venture."
+ lannister_gold.0044.a:0 "Cheers to our prosperous venture!"
+ lannister_gold.0044.a_tt:0 "Celebrate the success of our investment, as the brewery's fame boosts our profits and prestige."
+
+ lannister_gold.0045.t:0 "Bitter Brew: The Venture Sours"
+ lannister_gold.0045.desc:0 "Despite high hopes, the brewery's new ale fails to whet the appetite of the masses, leading to barrels of unsold stock and bitter debts. The investment turns sour, fermenting nothing but financial woes."
+ lannister_gold.0045.a:0 "Hold the brewer accountable for the flop."
+ lannister_gold.0045.a_tt:0 "Imprison the brewer for the financial disaster caused by the failed venture."
+ lannister_gold.0045.b:0 "Absorb the losses."
+ lannister_gold.0045.b_tt:0 "Write off the failed investment and move on, swallowing the bitter cost."
+ 
+ ### 7 Artisan Ambition ###
+ 
+ lannister_gold.0046.t:0 "The Artisan's Ambition" 
+ lannister_gold.0046.desc:0 "A talented jewelry artisan from Lannisport, known for her intricate designs, seeks a loan from the Golden Bank. 'With the right support, I could elevate our local craftsmanship to new heights,' she explains, presenting a collection of designs that blend traditional Westerosi styles with exotic Essosi influences.\n\nShe promises not only a return on investment but also a chance to boost the prestige of Lannisport's artisans on an international stage."
+ lannister_gold.0046.a:0 "Invest in her vision; enrich our cultural heritage."
+ lannister_gold.0046.a_tt:0 "Provide the loan, expecting her unique designs to captivate buyers and enhance our prestige."
+ lannister_gold.0046.b:0 "Decline; the market for luxury goods is too volatile."
+ lannister_gold.0046.b_tt:0 "Resist the investment, avoiding the fluctuations of the high-end jewelry market."
+
+ lannister_gold.0048.t:0 "Sparkling Success"
+ lannister_gold.0048.desc:0 "The artisan's unique jewelry line captures the imagination of nobles and merchants alike. Her creations become must-have pieces at court, symbolizing both wealth and taste.\n\nThe success brings substantial returns to the bank, confirming the wisdom of our investment."
+ lannister_gold.0048.a:0 "Admire the craftsmanship; celebrate the profits."
+ lannister_gold.0048.a_tt:0 "Revel in the success that has not only enriched us but also brought renown to Lannisport's artisans."
+
+ lannister_gold.0049.t:0 "Gems of Misfortune"
+ lannister_gold.0049.desc:0 "Despite the initial promise, the artisan's new jewelry line fails to maintain interest. Sales plummet as the novelty wears off, and the high production costs quickly turn into losses.\n\nWith her business struggling, she faces the grim reality of not meeting her loan obligations."
+ lannister_gold.0049.a:0 "Demand accountability for the failure."
+ lannister_gold.0049.a_tt:0 "Hold the artisan responsible for the financial losses and consider recovering our funds through legal means."
+ lannister_gold.0049.b:0 "Write off the loss."
+ lannister_gold.0049.b_tt:0 "Accept the financial hit and move on, marking it as a risky venture that didn't pay off."
+ 
+ ### 8 Prosperous Fields of Lannisport  ###
+ 
+ lannister_gold.0050.t:0 "Prosperous Fields of Lannisport"
+ lannister_gold.0050.desc:0 "A distinguished and prosperous farmer, known for his vast fields and innovative farming techniques, seeks a significant loan from the Golden Bank. He plans to expand his operations by acquiring neighboring lands and implementing advanced irrigation systems. 'With your support,' he states, 'we can transform Lannisport into a hub of agricultural abundance that will feed the realm and fill our coffers alike.'\n\nHis proposal, grounded in proven methods and detailed agricultural plans, promises a bountiful return on investment through enhanced crop yields and expanded market reach."
+ lannister_gold.0050.a:0 "Grant the loan; let's cultivate prosperity."
+ lannister_gold.0050.a_tt:0 "Support the farmer’s expansion plans, expecting his proven techniques to yield a rich harvest and substantial profits."
+ lannister_gold.0050.b:0 "Reject the proposal; the investment is too extensive."
+ lannister_gold.0050.b_tt:0 "Decline the funding request, cautious of the extensive capital required and the uncertainties of agricultural expansions."
+ 
+ lannister_gold.0052.t:0 "Harvest of Wealth"
+ lannister_gold.0052.desc:0 "The investment in the farmer's expansion has reaped immense benefits. His new fields are flourishing, producing harvests that exceed expectations. Markets across Lannisport are brimming with produce, and the surplus has opened trade routes that extend even beyond our city's borders.\n\nThe Golden Bank's foresight in backing this agricultural venture has not only profited financially but also solidified our reputation as a catalyst for regional prosperity."
+ lannister_gold.0052.a:0 "Celebrate the bountiful returns."
+ lannister_gold.0052.a_tt:0 "Enjoy the abundant success of our investment, which has boosted both our wealth and our standing in the community."
+
+ lannister_gold.0053.t:0 "Failed Fields"
+ lannister_gold.0053.desc:0 "Despite optimistic projections, the expanded farmlands have failed to produce the expected yields. Unforeseen challenges, from pestilence to poor weather, have diminished the harvests, leaving the ambitious farmer struggling to meet his loan obligations.\n\nHe approaches the bank with a request for patience and additional support, hoping to salvage what remains of his once-promising venture."
+ lannister_gold.0053.a:0 "Hold the farmer accountable for the shortfall."
+ lannister_gold.0053.a_tt:0 "Consider strict measures to manage the financial risk and protect the bank’s interests."
+ lannister_gold.0053.b:0 "Extend leniency and time."
+ lannister_gold.0053.b_tt:0 "Provide additional time for recovery, recognizing the unpredictable nature of farming and its long-term benefits."
+
+### 9 Candlemaker ###
+
+ lannister_gold.0054.t:0 "A Humble Candlemaker's Request"
+ lannister_gold.0054.desc:0 "A modest candlemaker from Lannisport, known for producing simple but reliable candles, comes to the Golden Bank seeking a loan. 'With a bit of help,' he explains, 'I could expand my workshop and supply more candles to the town. Light is always in demand, and with a larger operation, I can provide steady work for others too.'\n\nHis request is straightforward, aiming to improve his business without grand ambitions—just a desire to brighten the nights of Lannisport and support his community."
+ lannister_gold.0054.a:0 "Approve the loan; his plan seems sound."
+ lannister_gold.0054.a_tt:0 "Provide the small loan, expecting a stable return as the candlemaker expands his modest but steady business."
+ lannister_gold.0054.b:0 "Decline the loan; the margins are too thin."
+ lannister_gold.0054.b_tt:0 "Decide against the investment, concerned that the modest profits may not justify the risk."
+
+ lannister_gold.0056.t:0 "A Steady Light in Lannisport"
+ lannister_gold.0056.desc:0 "The candlemaker’s expansion has proven successful. His workshop now produces more candles than ever, meeting the growing demand in Lannisport. His steady hand and reliable product have earned him a reputation as a dependable supplier of light in the city.\n\nThe bank’s investment has paid off modestly but surely, with a small but consistent profit now flowing in."
+ lannister_gold.0056.a:0 "Appreciate the quiet success."
+ lannister_gold.0056.a_tt:0 "Take satisfaction in the steady return, knowing that the candlemaker’s business has provided a stable source of income and light for the city."
+ 
+ lannister_gold.0057.t:0 "Dwindling Flames"
+ lannister_gold.0057.desc:0 "Despite his best efforts, the candlemaker's expansion has struggled. Competition from larger suppliers and unexpected costs have left him unable to repay his loan. His workshop, once a hopeful beacon, now flickers with uncertainty.\n\nThe candlemaker approaches the bank with a heavy heart, asking for leniency as he tries to keep his small business from being extinguished."
+ lannister_gold.0057.a:0 "Demand repayment or seize the workshop."
+ lannister_gold.0057.a_tt:0 "Enforce the terms of the loan, taking control of the business if necessary to recoup the bank’s losses."
+ lannister_gold.0057.b:0 "Offer leniency."
+ lannister_gold.0057.b_tt:0 "Extend more time for repayment, recognizing the candlemaker’s struggles and the value of supporting local craftsmen."
+
+### 10 Fisherman ###
+
+ lannister_gold.0058.t:0 "A Fisherman's Hope"
+ lannister_gold.0058.desc:0 "A seasoned fisherman from Lannisport, who has spent his life casting nets and lines into the sea, approaches the Golden Bank. He seeks a modest loan to repair his aging boat and purchase new nets. 'The sea has provided for me and mine for years,' he says, his voice steady with the confidence of experience, 'but with better equipment, I can bring in larger catches and secure a better future.'\n\nHis request is simple and practical, aiming to improve his livelihood with a few key investments."
+ lannister_gold.0058.a:0 "Approve the loan; his experience speaks for itself."
+ lannister_gold.0058.a_tt:0 "Provide the loan, trusting that the fisherman’s long-standing knowledge of the sea will ensure a steady return on investment."
+ lannister_gold.0058.b:0 "Decline the loan; the risks of the sea are too great."
+ lannister_gold.0058.b_tt:0 "Reject the loan, wary of the unpredictable nature of the sea and the potential for loss."
+
+ lannister_gold.0060.t:0 "A Bountiful Catch"
+ lannister_gold.0060.desc:0 "The fisherman's investment has paid off. With his newly repaired boat and fresh nets, he has been able to bring in larger and more frequent catches. The market in Lannisport enjoys a steady supply of fresh fish, and the fisherman’s name becomes well-known among the city’s vendors.\n\nThe bank sees a modest but reliable profit from this investment, proving that small, practical ventures can yield steady returns."
+ lannister_gold.0060.a:0 "Acknowledge the steady success."
+ lannister_gold.0060.a_tt:0 "Take satisfaction in the consistent return, knowing that the fisherman’s improved equipment has benefited both his livelihood and the bank’s interests."
+
+ lannister_gold.0061.t:0 "Empty Nets"
+ lannister_gold.0061.desc:0 "Despite the loan and new equipment, the fisherman’s fortunes have not improved. A string of bad weather and poor catches has left him struggling to repay his debts. The sea, as ever, is unpredictable, and this time it has turned against him.\n\nThe fisherman approaches the bank, weary and defeated, hoping for some measure of leniency as he faces the possibility of losing everything."
+ lannister_gold.0061.a:0 "Demand repayment or seize the boat."
+ lannister_gold.0061.a_tt:0 "Enforce the loan’s terms strictly, taking the boat as collateral if necessary to recover the bank’s funds."
+ lannister_gold.0061.b:0 "Extend more time."
+ lannister_gold.0061.b_tt:0 "Offer more time for repayment, understanding the hardships faced by those who depend on the sea."
+
+### 11 Stonemason ###
+
+ lannister_gold.0062.t:0 "A Stonemason's Proposal"
+ lannister_gold.0062.desc:0 "A skilled stonemason from Lannisport approaches the Golden Bank with a modest request. His hands, roughened by years of shaping stone, have crafted the very buildings that line the city's streets. 'With a small loan,' he begins, 'I can expand my workshop, take on more apprentices, and take on larger projects. The demand for quality stonework is steady, and with more hands, I can meet it.'\n\nHis request is practical, rooted in the firm belief that hard work and craftsmanship are the foundations of lasting prosperity."
+ lannister_gold.0062.a:0 "Support the stonemason's expansion."
+ lannister_gold.0062.a_tt:0 "Approve the loan, trusting in the stonemason's experience and the consistent demand for quality stonework in the growing city."
+ lannister_gold.0062.b:0 "Decline; the risks of expansion are too great."
+ lannister_gold.0062.b_tt:0 "Reject the loan, wary of the potential challenges in scaling up a workshop in a competitive market."
+
+ lannister_gold.0064.t:0 "Solid Foundations"
+ lannister_gold.0064.desc:0 "The stonemason’s expansion has gone smoothly. His workshop is now busier than ever, with new apprentices learning the trade and larger projects underway. The buildings that rise from his stone are sturdy and well-crafted, a testament to his skill and the reliability of his work.\n\nThe bank’s investment has yielded a steady profit, as the stonemason’s reputation for quality continues to grow."
+ lannister_gold.0064.a:0 "Appreciate the solid returns."
+ lannister_gold.0064.a_tt:0 "Take satisfaction in the consistent success of the investment, knowing that the stonemason’s work has provided stability for both his workshop and the bank’s interests."
+
+ lannister_gold.0065.t:0 "Cracks in the Stone"
+ lannister_gold.0065.desc:0 "Despite his best efforts, the stonemason's expansion has faced unexpected difficulties. Costs have overrun, and the demand for his work has not met expectations, leaving him struggling to repay his loan. His once-thriving workshop now faces the risk of closure, with too many projects left unfinished.\n\nThe stonemason approaches the bank, humbled by the challenges, and asks for leniency as he tries to salvage his business."
+ lannister_gold.0065.a:0 "Demand repayment or seize the workshop."
+ lannister_gold.0065.a_tt:0 "Enforce the terms of the loan, taking control of the workshop if necessary to recoup the bank’s losses."
+ lannister_gold.0065.b:0 "Extend leniency."
+ lannister_gold.0065.b_tt:0 "Provide additional time for repayment, recognizing the stonemason’s struggles and the value of supporting skilled craftsmen."
+ 
+ ### 12 Miller ###
+ 
+ lannister_gold.0066.t:0 "A Miller's Request"
+ lannister_gold.0066.desc:0 "A hardworking miller from Lannisport, whose mill has provided flour for the local bakeries and households for years, comes to the Golden Bank seeking a loan. 'My millstone is worn, and the waterwheel creaks with every turn,' he explains. 'With a little help, I can repair the mill and increase our output. The city is growing, and the demand for flour is higher than ever.'\n\nHis request is straightforward, aimed at maintaining and improving his operations to meet the needs of a bustling city."
+ lannister_gold.0066.a:0 "Approve the loan; a good mill is vital."
+ lannister_gold.0066.a_tt:0 "Support the miller's upgrade plans, trusting in the steady demand for flour to provide a reliable return on investment."
+ lannister_gold.0066.b:0 "Decline the loan; the risks are too high."
+ lannister_gold.0066.b_tt:0 "Decide against the investment, concerned that the mill's age and the unpredictability of repairs may lead to losses."
+
+ lannister_gold.0068.t:0 "Flourishing Mills"
+ lannister_gold.0068.desc:0 "The miller’s upgrades have been a success. With new millstones and a repaired waterwheel, his mill now grinds flour more efficiently than ever before. The city's demand for flour is met with ease, and the miller's reputation as a reliable supplier grows stronger.\n\nThe bank’s investment has yielded a steady profit, as the improved mill ensures a consistent supply of flour to Lannisport."
+ lannister_gold.0068.a:0 "Appreciate the solid returns."
+ lannister_gold.0068.a_tt:0 "Take satisfaction in the steady success of the investment, knowing that the miller's work has provided stability for both his business and the bank’s interests."
+
+ lannister_gold.0069.t:0 "Broken Wheel"
+ lannister_gold.0069.desc:0 "Despite the loan and efforts to repair the mill, the upgrades have not gone as planned. The waterwheel broke shortly after installation, and the new millstone has not performed as expected. The miller struggles to keep up with demand, and his debts to the bank remain unpaid.\n\nThe miller approaches the bank, worn down by his misfortune, hoping for leniency as he tries to salvage his failing business."
+ lannister_gold.0069.a:0 "Demand repayment or seize the mill."
+ lannister_gold.0069.a_tt:0 "Enforce the terms of the loan, taking control of the mill if necessary to recover the bank’s funds."
+ lannister_gold.0069.b:0 "Extend more time."
+ lannister_gold.0069.b_tt:0 "Offer more time for repayment, understanding the challenges of running a mill and the importance of maintaining a steady supply of flour to the city."
+ 
+ ### 13 Merchant ### 
+ 
+ lannister_gold.0070.t:0 "A Merchant's Ambition"
+ lannister_gold.0070.desc:0 "A seasoned merchant from Lannisport, known for his sharp acumen and extensive trading network, seeks a significant loan from the Golden Bank. 'The world of trade is expanding rapidly,' he explains, 'and with additional capital, I can increase my fleet and secure new trade agreements. The potential profits from luxury goods like spices and silk are vast. Together, we can elevate Lannisport's status as a key trading hub and bring considerable wealth to both of us.'\n\nHis proposal is ambitious, aimed at capturing larger market shares and securing Lannisport's place in the thriving world of commerce."
+ lannister_gold.0070.a:0 "Approve the loan; the potential for profit is immense."
+ lannister_gold.0070.a_tt:0 "Invest in the merchant’s expansion, trusting his experience and the lucrative nature of luxury trade to generate significant returns."
+ lannister_gold.0070.b:0 "Decline the loan; the risks are too high."
+ lannister_gold.0070.b_tt:0 "Reject the loan, wary of the uncertainties in global trade and the potential for significant loss."
+
+ lannister_gold.0072.t:0 "A Flourishing Venture"
+ lannister_gold.0072.desc:0 "The merchant’s expansion has exceeded all expectations. His new fleet returns with holds full of exotic goods, filling Lannisport’s markets with luxury items that fetch high prices. His success has not only brought substantial wealth but has also solidified Lannisport’s reputation as a major trading center.\n\nThe bank's investment has paid off handsomely, with significant profits flowing in from the merchant’s thriving ventures."
+ lannister_gold.0072.a:0 "Rejoice in the prosperous outcome."
+ lannister_gold.0072.a_tt:0 "Celebrate the successful investment, which has brought considerable profit to the bank and increased the merchant's influence in the trade network."
+
+ lannister_gold.0073.t:0 "Trade Winds Turned"
+ lannister_gold.0073.desc:0 "The merchant’s ambitious plans have met with misfortune. His ships have been lost to storms and piracy, and the goods that did make it to market failed to turn a profit. The investment has all but vanished, leaving the merchant in financial ruin and the bank with nothing to show for its support.\n\nThe loss is significant, a stark reminder of the unpredictability of the seas and the volatile nature of trade."
+ lannister_gold.0073.a:0 "The loss is unavoidable."
+ lannister_gold.0073.a_tt:0 "Accept the loss, acknowledging that the risks of international trade have resulted in a complete financial failure."
+ lannister_gold.0073.b:0 "Cut ties with the merchant."
+ lannister_gold.0073.b_tt:0 "Sever any further support for the merchant, recognizing that his venture has failed and moving on to more stable opportunities."
+ 
+ ### 14 Shady Individual ###
+ 
+ lannister_gold.0074.t:0 "A Mysterious Request"
+ lannister_gold.0074.desc:0 "A cloaked figure, face partially hidden in shadow, approaches the Golden Bank with a request for a substantial loan. 'I need the gold,' he states flatly, offering no further explanation. When pressed for details, he simply smiles and says, 'My business is my own.' His demeanor is calm, but there is an unsettling edge to his presence.\n\nThe decision is yours: lend to this enigmatic individual with no guarantees or turn him away, uncertain of what you might be missing out on."
+ lannister_gold.0074.a:0 "Approve the loan; trust in the potential gain."
+ lannister_gold.0074.a_tt:0 "Take a risk on the shady individual, hoping that his mysterious venture will yield significant returns."
+ lannister_gold.0074.b:0 "Decline; the risk is too great."
+ lannister_gold.0074.b_tt:0 "Refuse the loan, wary of the potential danger and the lack of transparency."
+
+ lannister_gold.0076.t:0 "An Unexpected Windfall"
+ lannister_gold.0076.desc:0 "Despite the mystery surrounding his intentions, the shady individual has returned with more than what was lent. 'I appreciate your trust,' he says with a wry smile, dropping a heavy sack of coins onto the table. The source of his profits remains unclear, but the bank has profited nonetheless, and your coffers are fuller for it.\n\nWhile the risk paid off this time, the man's true nature remains shrouded in uncertainty."
+ lannister_gold.0076.a:0 "Count the coins and keep an eye on him."
+ lannister_gold.0076.a_tt:0 "Accept the profit, but remain cautious of the mysterious man’s future dealings."
+
+ lannister_gold.0077.t:0 "A Fool's Gamble"
+ lannister_gold.0077.desc:0 "The shady individual has disappeared without a trace, taking your investment with him. Rumors swirl that he was seen boarding a ship bound for distant lands, leaving nothing but unpaid debts behind. Your trust has been betrayed, and the bank is left to absorb the loss.\n\nThe risk proved too great this time, and you are left wondering what exactly you funded—or who you let slip through your fingers."
+ lannister_gold.0077.a:0 "Hunt him down and imprison him."
+ lannister_gold.0077.a_tt:0 "Send agents to track down the man and bring him to justice, ensuring he pays for his deception."
+ lannister_gold.0077.b:0 "Write off the loss."
+ lannister_gold.0077.b_tt:0 "Accept the loss, recognizing the dangers of dealing with such a mysterious figure."
+ 
+ ### 15 Pleasure House ###
+ 
+ lannister_gold.0078.t:0 "An Ambitious Proposal"
+ lannister_gold.0078.desc:0 "A charismatic entrepreneur, with a twinkle of mischief in his eye, approaches the Golden Bank with a bold proposal. 'Lannisport is a city of wealth and indulgence,' he begins smoothly. 'But what it lacks is a proper pleasure house—a place where the finest Lyseni girls could entertain the most distinguished guests. With your backing, I can establish the most renowned establishment in all of Westeros, where lords and merchants alike will flock to spend their coin.'\n\nThe offer is tantalizing, promising high returns, but it comes with a certain moral risk. The choice is yours: invest in this venture or turn away from what could be a lucrative, albeit controversial, opportunity."
+ lannister_gold.0078.a:0 "Approve the loan; the profits could be substantial."
+ lannister_gold.0078.a_tt:0 "Invest in the pleasure house, betting on its potential to draw in wealth from across the realm."
+ lannister_gold.0078.b:0 "Decline the loan; the risk to reputation is too great."
+ lannister_gold.0078.b_tt:0 "Refuse the loan, wary of the potential backlash and moral implications of such a venture."
+
+ lannister_gold.0080.t:0 "A House of Pleasure and Profit"
+ lannister_gold.0080.desc:0 "The entrepreneur's vision has come to life with resounding success. The pleasure house is the talk of Lannisport, attracting patrons from far and wide. The finest Lyseni girls are the jewels of the establishment, and the coin flows freely from the pockets of those seeking luxury and indulgence. Lannisport's reputation as a city of pleasure has been cemented, and the profits are substantial.\n\nThe bank's investment has paid off handsomely, filling your coffers with the fruits of this prosperous, if morally questionable, endeavor."
+ lannister_gold.0080.a:0 "Enjoy the substantial returns."
+ lannister_gold.0080.a_tt:0 "Revel in the significant profits, knowing that the pleasure house has become a lucrative asset to the bank."
+
+ lannister_gold.0081.t:0 "The Fall of a Dream"
+ lannister_gold.0081.desc:0 "Despite the promises of grandeur, the pleasure house has failed to attract the expected clientele. Scandals and rumors have plagued the establishment, driving away the very patrons it was meant to lure. The Lyseni girls have returned home, and the once-promising venture has crumbled, leaving the entrepreneur with nothing but debts and disappointment.\n\nThe bank's investment is lost, a stark reminder of the risks that come with betting on such ventures."
+ lannister_gold.0081.a:0 "Hold him accountable."
+ lannister_gold.0081.a_tt:0 "Imprison the entrepreneur, ensuring he pays for his failure and the loss of your investment."
+ lannister_gold.0081.b:0 "Accept the loss."
+ lannister_gold.0081.b_tt:0 "Write off the loss, understanding that not all ventures are destined for success."
+ 
+ ### 16 Goldmsith ###
+ 
+ lannister_gold.0082.t:0 "A Goldsmith's Ambition"
+ lannister_gold.0082.desc:0 "A master goldsmith from Lannisport, whose reputation for crafting exquisite jewelry has spread far and wide, approaches the Golden Bank with an ambitious request. 'Gold is more than wealth,' he asserts, presenting a selection of his finest works—delicate rings, ornate necklaces, and intricate brooches that gleam with promise. 'With your investment, I can expand my workshop, hire more skilled hands, and create masterpieces that will adorn the nobility of Westeros. The demand for luxury is ever-growing, and I intend to meet it.'\n\nHis proposal is compelling, offering the potential for substantial profits in the high-end market of luxury goods."
+ lannister_gold.0082.a:0 "Fund the expansion; the rewards could be great."
+ lannister_gold.0082.a_tt:0 "Invest in the goldsmith’s workshop, anticipating significant returns from the creation of luxury jewelry for the elite."
+ lannister_gold.0082.b:0 "Decline the request; the risks are too high."
+ lannister_gold.0082.b_tt:0 "Refuse the loan, concerned about the volatile nature of the luxury market and the high cost of materials."
+
+ lannister_gold.0084.t:0 "A Shining Success"
+ lannister_gold.0084.desc:0 "The goldsmith’s expansion has been a triumph. His workshop now hums with activity, producing jewelry that is the envy of the realm. Nobles from across Westeros eagerly commission his work, paying handsomely for pieces that reflect their status and wealth. The bank’s investment has paid off, with profits flowing steadily as the goldsmith’s name becomes synonymous with luxury and craftsmanship.\n\nLannisport’s reputation as a center of fine jewelry is solidified, drawing more wealth and prestige to the city."
+ lannister_gold.0084.a:0 "Revel in the success."
+ lannister_gold.0084.a_tt:0 "Enjoy the significant profits from the investment, knowing that the goldsmith’s success has greatly benefited both his workshop and the bank’s coffers."
+
+ lannister_gold.0085.t:0 "Gilded Dreams Shattered"
+ lannister_gold.0085.desc:0 "The goldsmith’s expansion has turned to ruin. Despite his best efforts, the market for luxury goods has collapsed, and the high cost of gold has drained his resources. Commissions have dried up, and debts have piled high. Faced with insolvency, the goldsmith is unable to repay the loan, leaving the bank with significant losses.\n\nIn a desperate attempt to salvage the situation, you must decide whether to imprison the goldsmith for his failure or confiscate his property to recover some of the losses."
+ lannister_gold.0085.a:0 "Imprison him for his failure."
+ lannister_gold.0085.a_tt:0 "Hold the goldsmith accountable by imprisoning him, ensuring he faces the consequences of his financial mismanagement."
+ lannister_gold.0085.b:0 "Confiscate his property."
+ lannister_gold.0085.b_tt:0 "Seize the goldsmith’s remaining assets and property to mitigate the bank’s losses, ensuring some recovery from the failed venture."

@@ -1,0 +1,75 @@
+﻿
+#Scripted effects relating to Use-Your-Gravitas mod
+
+######################################################################
+# EFFECTS
+######################################################################
+
+@cost_to_appoint_blademaster_1 = 25
+@cost_to_appoint_blademaster_2 = 50
+@cost_to_appoint_blademaster_3 = 100
+
+appoint_blademaster_1 = {
+
+	scope:actor = {
+		send_interface_toast = {
+			type = msg_character_level_increase
+			title = "Blademaster"
+			desc = blademaster_designated
+			left_icon = scope:recipient	
+		}
+		
+		set_variable = {
+			name = court_blademaster
+			value = scope:recipient	
+		}
+
+		remove_short_term_gold = @cost_to_appoint_blademaster_1
+		
+	}
+
+}
+
+appoint_blademaster_2 = {
+
+	scope:actor = {
+		send_interface_toast = {
+			type = msg_character_level_increase
+			title = "Blademaster"
+			desc = blademaster_designated
+			left_icon = scope:recipient	
+		}
+		
+		set_variable = {
+			name = court_blademaster
+			value = scope:recipient	
+		}
+		
+		remove_short_term_gold = @cost_to_appoint_blademaster_2
+
+	}
+
+}
+
+
+appoint_blademaster_3 = {
+
+	scope:actor = {
+		send_interface_toast = {
+			type = msg_character_level_increase
+			title = "Blademaster"
+			desc = blademaster_designated
+			left_icon = scope:recipient	
+		}
+		
+		set_variable = {
+			name = court_blademaster
+			value = scope:recipient	
+		}
+		
+		remove_short_term_gold = @cost_to_appoint_blademaster_3
+
+	}
+
+}
+

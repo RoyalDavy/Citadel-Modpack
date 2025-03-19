@@ -1,0 +1,546 @@
+
+#targaryen legends
+
+young_dragon = {
+	name = legend_daeron_i
+	description = legend_daeron_i_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 2
+		}
+		province_modifier = {
+			stationed_maa_toughness_mult = 0.1
+		}
+	}
+}
+
+the_conqueror = {
+	name = legend_aegon_i
+	description = legend_aegon_i_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 3
+		}
+		province_modifier = {
+			stationed_maa_damage_mult = 0.1
+			stationed_maa_toughness_mult = 0.1
+			tax_mult = 0.05
+		}
+	}
+}
+
+the_conciliator = {
+	name = legend_jaehaerys_i
+	description = legend_jaehaerys_i_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			steward = 1
+			diplomacy = 1
+		}
+		province_modifier = {
+			build_speed = -0.10
+			build_gold_cost = -0.10
+			tax_mult = 0.05
+
+		}
+	}
+}
+
+the_dreamer = {
+	name = legend_daenys_dreamer
+	description = legend_daenys_dreamer_desc
+
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			intrigue = 2
+		}
+	}
+}
+
+black_dragon = {
+	name = legend_daemon_blackfyre
+	description = legend_daemon_blackfyre_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 2
+		}
+		province_modifier = {
+			stationed_maa_damage_mult = 0.1
+			stationed_maa_toughness_mult = 0.1
+		}
+	}
+}
+
+sea_snake = {
+	name = legend_corlys_velaryon
+	description = legend_corlys_velaryon_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_corlys_velaryon_1
+		motivation = legend_corlys_velaryon_2
+		famous_deed = legend_corlys_velaryon_3
+		extra_deed = legend_corlys_velaryon_4
+		conclusion = legend_corlys_velaryon_5
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 2
+			stewardship = 2
+			naval_movement_speed_mult = 0.15
+			embarkation_cost_mult = -0.2
+		}
+		province_modifier = {
+			stationed_maa_damage_mult = 0.1
+			stationed_maa_toughness_mult = 0.1
+			tax_mult = 0.1
+		}
+	}
+}
+
+the_builder = {
+	name = legend_bran_the_builder
+	description = legend_bran_the_builder_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			stewardship = 2
+		}
+		province_modifier = {
+			build_speed = -0.20
+			build_gold_cost = -0.20
+		}
+	}
+}
+
+cregan_stark = {
+	name = legend_cregan_stark
+	description = legend_cregan_stark_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 2
+		}
+		province_modifier = {
+			stationed_maa_toughness_mult = 0.1
+			stationed_maa_damage_mult = 0.1
+			monthly_county_control_growth_add = 0.15
+		}
+
+	}
+}
+
+hungry_wolf = {
+	name = legend_hungry_wolf
+     	description = legend_hungry_wolf_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 2
+		}
+		province_modifier = {
+			monthly_county_control_growth_add = 0.15
+			levy_size = 0.1
+		}
+
+	}
+}
+
+the_clever = {
+	name = legend_the_clever
+	description = legend_the_clever_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			stewardship = 2
+			intrigue = 2
+		}
+		province_modifier = {
+			tax_mult = 0.1
+		}
+
+	}
+}
+
+godsgrief = {
+	name = legend_durran_godsgrief
+	description = legend_durran_godsgrief_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 3
+			stewardship = 2
+		}
+		province_modifier = {
+			build_speed = -0.15
+			build_gold_cost = -0.15
+			defender_holding_advantage = 5
+		}
+
+	}
+}
+
+garth_greenhand = {
+	name = legend_garth_greenhand
+	description = legend_garth_greenhand_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			stewardship = 2
+			fertility = 0.15
+		}
+		promoter_modifier = {
+			fertility = 0.1
+		}
+		county_modifier = {
+			tax_mult = 0.05
+		}
+
+	}
+}
+
+falcon_knight = {
+	name = legend_falcon_knight
+	description = legend_falcon_knight_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 3
+		}
+		province_modifier = {
+			stationed_maa_toughness_mult = 0.1
+			stationed_maa_damage_mult = 0.1
+			monthly_county_control_growth_add = 0.15
+		}
+
+	}
+}
+
+princess_nymeria = {
+	name = legend_princess_nymeria
+	description = legend_princess_nymeria_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 2
+			attraction_opinion = 10
+			character_travel_safety = 10
+		}
+
+	}
+}
+
+red_kings = {
+	name = legend_royce_bolton
+	description = legend_royce_bolton_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 2
+			intrigue = 2
+			men_at_arms_maintenance_per_dread_mult = -0.005
+			dread_gain_mult = 0.2
+		}
+
+	}
+}
+
+tywin_lannister = {
+	name = legend_tywin_lannister
+	description = legend_tywin_lannister_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_tywin_lannister_opening
+		motivation = legend_tywin_lannister_motivation
+		famous_deed = legend_tywin_lannister_deed
+		extra_deed = legend_tywin_lannister_extra_deed
+		conclusion = legend_tywin_lannister_conclusion
+	}
+
+    impact = {
+		owner_modifier = {
+			dread_gain_mult = 0.2
+			hostile_scheme_resistance_add = 20
+		}
+		province_modifier = {
+			monthly_county_control_growth_add = 0.15
+		}
+
+	}
+}
+
+sword_of_the_morning = {
+	name = legend_sword_of_the_morning
+	description = legend_sword_of_the_morning_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_dayne_opening
+		motivation = legend_dayne_motivation
+		famous_deed = legend_dayne_famous_deed
+		extra_deed = legend_chapter_extra_deed_generic
+		conclusion = legend_chapter_conclusion_great_deed
+	}
+
+    impact = {
+		owner_modifier = {
+			prowess = 4
+			martial = 2
+		}
+
+	}
+}
+
+bronze_kings = {
+	name = legend_bronze_kings
+	description = legend_bronze_kings_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			prowess = 2
+			martial = 2
+		}
+
+	}
+}
+
+red_kraken = {
+	name = legend_dalton_greyjoy
+	description = legend_dalton_greyjoy_desc
+
+	properties = {
+		ancestor = character
+		title = landed_title
+	}
+
+	chapters = {
+		opening = legend_chapter_opening_ancestral_glory
+		motivation = legend_chapter_motivation_ancestral_glory
+		famous_deed = legend_chapter_famous_deed_generic
+		extra_deed = legend_chapter_extra_deed_ancestral_glory
+		conclusion = legend_chapter_conclusion_ancestral_glory
+	}
+
+    impact = {
+		owner_modifier = {
+			martial = 2
+			naval_movement_speed_mult = 0.15
+			embarkation_cost_mult = -0.2
+		}
+
+	}
+}

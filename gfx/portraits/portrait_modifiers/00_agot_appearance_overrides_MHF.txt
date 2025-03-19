@@ -1,0 +1,25 @@
+﻿agot_house_eye_lid_dna = {
+	usage = game
+
+	agot_eye_bags_dna = {
+		dna_modifiers = {
+			morph = {
+				gene = gene_bs_eye_lower_lid_size
+				mode = modify
+				value = 1.00
+			}
+			morph = {
+				gene = face_detail_eye_lower_lid_def
+				mode = modify
+				value = 1.00
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_inactive_trait = eye_bags
+			}
+		}
+	}
+}

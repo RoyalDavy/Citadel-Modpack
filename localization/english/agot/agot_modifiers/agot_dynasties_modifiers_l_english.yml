@@ -1,0 +1,174 @@
+﻿l_english:
+
+#Thunder and Iron -DYNASTY MODIFIER-
+ baratheon_heritage_dynasty_modifier:0 "Thunder and Iron"
+ baratheon_heritage_dynasty_modifier_desc:0 "Like thunder before a storm, their anger strikes with fierce and sudden intensity."
+
+#Lion's Ambition -DYNASTY MODIFIER-
+ lannister_heritage_dynasty_modifier:0 "Lion's Ambition"
+ lannister_heritage_dynasty_modifier_desc:0 "Driven by pride and cunning, their hunger for greatness knows no bounds."
+
+#Winter’s Grasp -DYNASTY MODIFIER-
+ stark_heritage_dynasty_modifier:0 "Winter’s Grasp"
+ stark_heritage_dynasty_modifier_desc:0 "Steadfast and resilient, their roots intertwine with winter, enduring hardships with resolve."
+
+#Children of the Twins -DYNASTY MODIFIER-
+ frey_heritage_dynasty_modifier:0 "Children of the Twins"
+ frey_heritage_dynasty_modifier_desc:0 "Cunning and opportunistic, they weave intricate webs of intrigue while nurturing life along their path."
+
+#River's Heart -DYNASTY MODIFIER-
+ tully_heritage_dynasty_modifier:0 "River's Heart"
+ tully_heritage_dynasty_modifier_desc:0 "United by blood, they employ diplomacy to strengthen ties, flowing together like a mighty river."
+
+#Desert's Embrace -DYNASTY MODIFIER-
+ martell_heritage_dynasty_modifier:0 "Desert's Embrace"
+ martell_heritage_dynasty_modifier_desc:0 "Like the desert’s scorching heat, their presence is felt long before it is seen, radiating an aura of undeniable power."
+
+#Feathers of Honor -DYNASTY MODIFIER-
+ arryn_heritage_dynasty_modifier:0 "Feathers of Honor"
+ arryn_heritage_dynasty_modifier_desc:0 "In every decision, they wear their honor like feathers, a testament to their noble lineage."
+
+#Blooming Ambitions -DYNASTY MODIFIER-
+ tyrell_heritage_dynasty_modifier:0 "Blooming Ambitions"
+ tyrell_heritage_dynasty_modifier_desc:0 "In the garden of politics, they sow seeds of cunning, reaping a harvest of influence."
+
+#Carved in Stone -DYNASTY MODIFIER-
+ magnar_heritage_dynasty_modifier:0 "Carved in Stone"
+ magnar_heritage_dynasty_modifier_desc:0 "Their blood runs fierce and proud, bound to the legacy of Skagos."
+
+#Golden Tides -DYNASTY MODIFIER-
+ saan_heritage_dynasty_modifier:0 "Golden Tides"
+ saan_heritage_dynasty_modifier_desc:0 "Driven by the call of the sea, this dynasty skillfully weaves through tides of opportunity"
+
+#Grey King’s Legacy -DYNASTY MODIFIER-
+ greyking_heritage_dynasty_modifier:0 "Grey King’s Legacy"
+ greyking_heritage_dynasty_modifier_desc:0 "Carrying the legacy of the Grey King, their blood ignites a fierce will to conquer and command."
+
+#Anchored in Loyalty -DYNASTY MODIFIER-
+ goodbrother_heritage_dynasty_modifier:0 "Anchored in Loyalty"
+ goodbrother_heritage_dynasty_modifier_desc:0 "Like the anchor in a storm, they provide steadfast support, unyielding in their commitments."
+
+#Kings of Dusk -DYNASTY MODIFIER-
+ darklyn_heritage_dynasty_modifier:0 "Kings of Dusk"
+ darklyn_heritage_dynasty_modifier_desc:0 "From a noble lineage of petty kings, the echoes of this dynasty's knights resonate through the ages."
+
+#Legacy of the Hooded King -DYNASTY MODIFIER-
+ banefort_heritage_dynasty_modifier:0 "Legacy of the Hooded King"
+ banefort_heritage_dynasty_modifier_desc:0 "This dynasty stands at the crossroads of mystery, their fate entwined with the secrets of a dreaded ancestor."
+
+#Guardians of Dawn -DYNASTY MODIFIER-
+ dayne_heritage_dynasty_modifier:0 "Guardians of Dawn"
+ dayne_heritage_dynasty_modifier_desc:0 "This dynasty stands as a beacon of honor, their legacy illuminated by the Sword of the Morning."
+
+#Brave and Unbroken -DYNASTY MODIFIER-
+ mormont_heritage_dynasty_modifier:0 "Brave and Unbroken"
+ mormont_heritage_dynasty_modifier_desc:0 "Steadfast as their heritage, this dynasty stands ready to defend their legacy with unwavering ferocity."
+
+#Lords of Whispers -DYNASTY MODIFIER-
+ crabb_heritage_dynasty_modifier:0 "Lords of Whispers"
+ crabb_heritage_dynasty_modifier_desc:0 "Renowned for their ruthless deeds and fierce independence, this dynasty thrives where the wild and untamed converge."
+
+#Fathers of Prosperity -DYNASTY MODIFIER-
+ manderly_heritage_dynasty_modifier:0 "Fathers of Prosperity"
+ manderly_heritage_dynasty_modifier_desc:0 "With each challenge they overcome, they cultivate the lifeblood of trade and prosperity along their journey."
+
+#Artisans of Pain -DYNASTY MODIFIER-
+ bolton_heritage_dynasty_modifier:0 "Artisans of Pain"
+ bolton_heritage_dynasty_modifier_desc:0 "Flaying is an art intertwined with their roots, and this dynasty is the master of their cruel canvas."
+
+#Giants Among Men -DYNASTY MODIFIER-
+ umber_heritage_dynasty_modifier:0 "Giants Among Men"
+ umber_heritage_dynasty_modifier_desc:0 "This dynasty stands tall, like giants among men, with strength that echoes along their path."
+
+#The Arbor’s Finest -DYNASTY MODIFIER-
+ redwyne_heritage_dynasty_modifier:0 "The Arbor’s Finest"
+ redwyne_heritage_dynasty_modifier_desc:0 "This dynasty stands as a testament to the elegance of The Arbor, where every sip tells a story."
+
+#Heralds of the Past -DYNASTY MODIFIER-
+ thenn_heritage_dynasty_modifier:0 "Heralds of the Past"
+ thenn_heritage_dynasty_modifier_desc:0 "Boasting an unbroken lineage to the First Men, this dynasty wields its ancestral heritage as a crown."
+
+#Ravens of the Old Blood -DYNASTY MODIFIER-
+ blackwood_heritage_dynasty_modifier:0 "Ravens of the Old Blood"
+ blackwood_heritage_dynasty_modifier_desc:0 "Haunted by the ghosts of their past, this dynasty still carries the weight of their family’s history."
+
+#Red Stallion’s Heirs -DYNASTY MODIFIER-
+ bracken_heritage_dynasty_modifier:0 "Red Stallion’s Heirs"
+ bracken_heritage_dynasty_modifier_desc:0 "Each member carries the weight of their family’s legacy, fueling their ambition to rise above the rivalries of the past."
+
+#Loyal Hunters -DYNASTY MODIFIER-
+ reed_heritage_dynasty_modifier:0 "Loyal Hunters"
+ reed_heritage_dynasty_modifier_desc:0 "Adaptable and resourceful, they are elusive and mysterious, often moving in shadows and silence."
+
+#Bronze Kings’ Legacy -DYNASTY MODIFIER-
+ royce_heritage_dynasty_modifier:0 "Bronze Kings’ Legacy"
+ royce_heritage_dynasty_modifier_desc:0 "Noble in name and deed, this dynasty honors the traditions of its illustrious lineage of kings."
+
+#Loyal Beasts -DYNASTY MODIFIER-
+ clegane_heritage_dynasty_modifier:0 "Loyal Beasts"
+ clegane_heritage_dynasty_modifier_desc:0 "Embodied in fierce loyalty, this dynasty is renowned for its unwavering strength and steadfast dedication."
+
+#Blood of Kings -DYNASTY MODIFIER-
+ yronwood_heritage_dynasty_modifier:0 "Blood of Kings"
+ yronwood_heritage_dynasty_modifier_desc:0 "Born of royal lineage, their every move echoes with the weight of crowns once worn."
+
+#Noble Vanguard -DYNASTY MODIFIER-
+ tarly_heritage_dynasty_modifier:0 "Noble Vanguard"
+ tarly_heritage_dynasty_modifier_desc:0 "In every battle, they stand firm, ready to shield their lands and uphold the honor of their blood."
+
+#Steedborne Warriors -DYNASTY MODIFIER-
+ ryswell_heritage_dynasty_modifier:0 "Steedborne Warriors"
+ ryswell_heritage_dynasty_modifier_desc:0 "This dynasty rides with the thunder of hooves and the spirit of the wind, their cavalry unmatched across the fields of battle."
+
+#Pariahs’ Pride -DYNASTY MODIFIER-
+ codd_heritage_dynasty_modifier:0 "Pariahs’ Pride"
+ codd_heritage_dynasty_modifier_desc:0 "Labeled as thieves and incestuous cowards, this dynasty wears the hatred towards them as a badge of honor."
+
+#Warm Welcome -DYNASTY MODIFIER-
+ uller_heritage_dynasty_modifier:0 "Warm Welcome"
+ uller_heritage_dynasty_modifier_desc:0 "Cunning and ruthless, this dynasty thrives on deception, stopping at nothing to annihilate their foes."
+
+#Grove Protectors -DYNASTY MODIFIER-
+ forrester_heritage_dynasty_modifier:0 "Grove Protectors"
+ forrester_heritage_dynasty_modifier_desc:0 "Hard and unbroken, they stand resolute against threats, their strength mirroring the enduring ironwood."
+
+#Gift of the Depths -DYNASTY MODIFIER-
+ borrell_heritage_dynasty_modifier:0 "Gift of the Depths"
+ borrell_heritage_dynasty_modifier_desc:0 "With the ocean’s favor, they uncover strength and wisdom from its profound secrets."
+
+#Dragon's Blood -DYNASTY MODIFIER-
+ targaryen_heritage_dynasty_modifier:0 "Dragon's Blood"
+ targaryen_heritage_dynasty_modifier_desc:0 "With the blood of dragons coursing through their veins, their name is etched into the annals of history.
+
+#Strong Grasp -DYNASTY MODIFIER-
+ celtigar_heritage_dynasty_modifier:0 "Strong Grasp"
+ celtigar_heritage_dynasty_modifier_desc:0 "With an iron grip, this dynasty relentlessly claws for more, even at the expense of its own reputation."
+
+#Tideforged Legacy -DYNASTY MODIFIER-
+ velaryon_heritage_dynasty_modifier:0 "Tideforged Legacy"
+ velaryon_heritage_dynasty_modifier_desc:0 "Masters of the seas and keepers of ancient Valyrian blood, this dynasty sails forth with unmatched pride."
+
+#Golden Veins -DYNASTY MODIFIER-
+ rogare_heritage_dynasty_modifier:0 "Golden Veins"
+ rogare_heritage_dynasty_modifier_desc:0 "Through the golden veins of this dynasty's lineage flows an inexhaustible stream of wealth and influence."
+
+#Blood and Honor -DYNASTY MODIFIER-
+ connington_heritage_dynasty_modifier:0 "Blood and Honor"
+ connington_heritage_dynasty_modifier_desc:0 "Driven by a sense of duty, this dynasty stands resilient, prepared to confront any foe that threatens their honor."
+
+#Sharp Claws -DYNASTY MODIFIER-
+ reyne_heritage_dynasty_modifier:0 "Sharp Claws"
+ reyne_heritage_dynasty_modifier_desc:0 "Proud and defiant, this dynasty embodies the spirit of true lions, unyielding in their ambition."
+
+#Weaver of Fate -DYNASTY MODIFIER-
+ webber_heritage_dynasty_modifier:0 "Weaver of Fate"
+ webber_heritage_dynasty_modifier_desc:0 "Masters of intrigue, this dynasty skillfully spins webs of alliances and ambition, though their cunning is often met with wary eyes."
+
+#Desert Serpents -DYNASTY MODIFIER-
+ wyl_heritage_dynasty_modifier:0 "Desert Serpents"
+ wyl_heritage_dynasty_modifier_desc:0 "Known for treacherous cunning and swift desert strikes, this dynasty’s methods leave a trail of fear, though their dark reputation often stirs resentment."
+
+#Heart of the Oak -DYNASTY MODIFIER-
+ oakheart_heritage_dynasty_modifier:0 "Heart of the Oak"
+ oakheart_heritage_dynasty_modifier_desc:0 "Rooted in strength and honor, this dynasty commands respect and loyalty, though their proud vigilance can make them targets for some."
+

@@ -1,0 +1,568 @@
+﻿
+
+
+#### This decision allows a vassal of the Iron Throne to lend 1000 gold to the King in exchange for interest and a small opinion gain ###
+
+lend_gold_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_gold_lending.dds" 
+	} 
+	decision_group_type = major
+	title = lend_gold_decision_title	
+	desc = lend_gold_decision_desc
+    selection_tooltip = lend_gold_decision_tooltip
+    confirm_text = lend_gold_decision_confirm_text
+	cooldown = { 
+		days = 730
+	}
+	is_shown = {
+		is_vassal_of = title:e_the_iron_throne.holder
+		gold > 600		
+		title:e_the_iron_throne.holder = {
+			gold <= 300 	
+        }
+	}
+	is_valid = {
+		is_vassal_of = title:e_the_iron_throne.holder
+    }	
+
+	cost = {
+		gold = 1000
+	}
+
+	effect = {
+		add_character_modifier = receiving_interest_modifier
+		title:e_the_iron_throne.holder = {
+			add_character_modifier = paying_interest_modifier
+			add_gold = 1000
+			add_opinion = {
+				modifier = lent_gold_modifier
+				target = root
+			}
+		}		
+	}
+
+	ai_check_interval = 0
+}
+
+#### This is a decision to forgo the debt to the Iron Throne
+
+debt_for_hook_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_repay_debt.dds"
+	} 	
+	decision_group_type = admin	
+	title = debt_for_hook_decision_title	
+	desc = debt_for_hook_decision_desc
+    selection_tooltip = debt_for_hook_decision_tooltip
+    confirm_text = debt_for_hook_decision_confirm_text
+	cooldown = { 
+		days = 365
+	}
+	is_shown = {
+		is_vassal_of = title:e_the_iron_throne.holder	
+        has_character_modifier = receiving_interest_modifier
+	}	
+
+	cost = {
+		prestige = 100
+	}
+
+	effect = {
+		remove_character_modifier = receiving_interest_modifier
+		title:e_the_iron_throne.holder = {
+			remove_character_modifier = paying_interest_modifier
+		}
+		root = {
+			add_hook = {
+				type = indebted_hook
+				target = title:e_the_iron_throne.holder
+			}
+		}		
+	}
+
+	ai_check_interval = 0
+}
+
+
+###This decision allows the lender to sell their debt to the Iron Bank, recover their 1000 gold and will put the iron bank after the king, greatly angering him ###
+
+sell_loan_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_sell_loan.dds"
+	} 	
+	decision_group_type = admin		
+	title = sell_loan_decision_title
+	desc = sell_loan_decision_desc
+	selection_tooltip = sell_loan_decision_tooltip
+	confirm_text = sell_loan_decision_confirm_text
+
+	effect = {
+
+		add_gold = 900 #pays back most of the initial face value of loan 
+		title:e_the_iron_throne.holder = {
+			remove_character_modifier = paying_interest_modifier
+			agot_take_first_tier_iron_bank_loan_effect = yes
+	        remove_short_term_gold = 1000
+			add_opinion = {
+				modifier = sold_debt_to_the_iron_bank_modifier
+				target = root
+			}
+		}
+
+		remove_character_modifier = receiving_interest_modifier
+	}
+
+	is_shown = {
+		has_character_modifier = receiving_interest_modifier
+	}
+
+	ai_check_interval = 0 
+}
+
+### This decision allows the lender to get back his original 1000 gold from the King if they have very good relations ###
+
+request_gold_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_repay_debt.dds"
+	} 	
+	decision_group_type = admin	
+	title = request_gold_decision_title
+    desc = request_gold_decision_desc
+	selection_tooltip = request_gold_decision_tooltip
+	confirm_text = request_gold_decision_confirm_text
+
+	effect = {
+
+		add_gold = 1000 #pays back the initial face value of loan 
+		title:e_the_iron_throne.holder = {
+			remove_character_modifier = paying_interest_modifier
+			remove_short_term_gold = 1000
+			add_opinion = {
+				modifier = requested_gold_back_modifier
+				target = root
+			}
+		}
+
+		remove_character_modifier = receiving_interest_modifier
+	}
+
+	is_shown = {
+		has_character_modifier = receiving_interest_modifier
+
+	}
+    is_valid = {
+		has_character_modifier = receiving_interest_modifier
+		title:e_the_iron_throne.holder = {
+			# Check if the holder's opinion of the player is 75 or more
+			opinion = {
+				target = root
+				value >= 75
+			}	
+        }
+	}
+    	
+
+	ai_check_interval = 0 
+}
+
+
+###############################
+### BANKING DECISIONS START ###
+###############################
+
+### Decision to found the Golden Bank of Lannisport ###
+
+found_golden_bank_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_bank_of_lannisport.dds"
+	} 	
+	decision_group_type = major	
+	title = found_golden_bank_title
+    desc = found_golden_bank_decision_desc
+    selection_tooltip = found_golden_bank_decision_selection_tooltip
+    confirm_text = found_golden_bank_decision_confirm_text
+	is_shown = {
+	    is_landed = yes
+		gold > 200
+        has_title = title:k_the_westerlands
+		has_title = title:c_casterly_rock	
+		NOT = {
+			has_global_variable = golden_bank_founded
+		}	
+	}
+	cost = {
+		gold = 1000
+		prestige = 250
+	}
+
+	effect = {		
+		add_character_modifier = golden_bank_head_modifier
+        set_global_variable  = golden_bank_founded  		
+		trigger_event = {
+			id = lannister_gold.0001
+			days = 5
+		}		
+		title:c_lannisport = {
+			add_county_modifier = {
+				modifier = golden_bank_lannisport_modifier
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+
+### Decision to deposit gold into the Bank and start lending to the merchants of Lannisport ###
+
+deposist_gold_bank = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_invest_gold.dds"
+	} 	
+	decision_group_type = admin	
+	title = deposit_gold_decision_title
+	cooldown = { 
+		days = 365
+	}
+    desc = deposit_gold_decision_desc
+    selection_tooltip = deposit_gold_decision_tooltip
+    confirm_text = deposit_gold_decision_confirm_text
+	is_shown = {
+		is_adult = yes
+		OR = {
+		has_character_modifier = golden_bank_head_modifier
+		has_character_modifier = golden_bank_head_II_modifier
+		}
+	}
+	cost = {
+		gold = 500
+	}
+
+	effect = {		
+		add_character_modifier = bank_gold_lending_modifier	
+		title:c_lannisport = {
+			add_county_modifier = {
+				modifier = grand_merchant_loan_modifier
+				years = 10
+			}
+		}		
+	}
+
+	ai_check_interval = 0
+}
+
+### Decision to withdraw gold from the Bank into the treasury of the Rock and stop lending to the merchants of Lannisport ###
+
+withdraw_gold_bank = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_withdraw_gold.dds"
+	} 	
+	decision_group_type = admin	
+	cooldown = { 
+		days = 365
+	}
+	title = withdraw_gold_decision_title
+    desc = withdraw_gold_decision_desc
+    selection_tooltip = withdraw_gold_decision_selection_tooltip
+    confirm_text = withdraw_gold_decision_confirm_text
+	
+	is_shown = {
+		is_adult = yes
+	    is_landed = yes
+	    OR = {
+		has_character_modifier = golden_bank_head_modifier
+		has_character_modifier = golden_bank_head_II_modifier
+		}
+		has_character_modifier = bank_gold_lending_modifier		
+	}	
+	
+	is_valid = {
+		has_character_modifier = bank_gold_lending_modifier
+    }	
+    effect = {
+		remove_character_modifier = bank_gold_lending_modifier
+		add_gold = 500
+    }
+    ai_check_interval = 0
+}
+
+### Decision to expand the bank to King's Landing ###
+
+
+expand_golden_bank_kg_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_expand_kg.dds"
+	} 	
+	decision_group_type = major	
+	title = expand_golden_bank_kg_decision_title
+    desc = expand_golden_bank_kg_decision_desc
+    selection_tooltip = expand_golden_bank_kg_decision_tooltip
+    confirm_text = expand_golden_bank_kg_decision_confirm_text
+	is_shown = {
+		is_adult = yes
+	    is_landed = yes
+		gold > 200
+		OR = {
+		has_character_modifier = golden_bank_head_modifier
+		has_character_modifier = golden_bank_head_II_modifier
+		}
+		NOT = {
+			has_global_variable = golden_bank_kg_expansion
+		}	
+	}
+    is_valid = {
+		title:c_kings_landing.holder = {
+			# Check if the holder's opinion of the player is 50 or more
+			opinion = {
+				target = root
+				value >= 50
+			}	
+        }
+		title:e_the_iron_throne.holder = {
+			# Check if the holder's opinion of the player is 50 or more
+			opinion = {
+				target = root
+				value >= 50
+			}	
+        }
+	}
+	cost = {
+		gold = 2000
+		prestige = 250
+	}
+
+	effect = {		
+		add_character_modifier = golden_bank_kg_branch_modifier
+        set_global_variable  = golden_bank_kg_expansion  				
+		title:c_kings_landing = {
+			add_county_modifier = {
+				modifier = golden_bank_office_modifier
+			}
+		}
+		title:c_kings_landing.holder = {
+			add_gold = 250
+		}		
+	}
+	ai_check_interval = 0
+}
+
+### Decision to expand the bank to Oldtown ###
+
+expand_golden_bank_oldtown_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_expand_oldtown.dds"
+	} 	
+	decision_group_type = major	
+	title = expand_golden_bank_oldtown_decision_title
+    desc = expand_golden_bank_oldtown_decision_desc
+    selection_tooltip = expand_golden_bank_oldtown_decision_tooltip
+    confirm_text = expand_golden_bank_oldtown_decision_confirm_text
+	is_shown = {
+		is_adult = yes
+	    is_landed = yes
+		gold > 200
+		OR = {
+		has_character_modifier = golden_bank_head_modifier
+		has_character_modifier = golden_bank_head_II_modifier
+		}
+		NOT = {
+			has_global_variable = golden_bank_oldtown_expansion
+		}	
+	}
+    is_valid = {
+		title:c_oldtown.holder = {
+			# Check if the holder's opinion of the player is 50 or more
+			opinion = {
+				target = root
+				value >= 50
+			}		
+        }
+	}
+	cost = {
+		gold = 2000
+		prestige = 250
+	}
+
+	effect = {		
+		add_character_modifier = golden_bank_oldtown_branch_modifier
+        set_global_variable  = golden_bank_oldtown_expansion  				
+		title:c_oldtown = {
+			add_county_modifier = {
+				modifier = golden_bank_office_modifier
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+
+
+### Decision to shut down the Golden Bank ###
+
+shut_down_gold_bank_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_withdraw_gold.dds"
+	} 	
+	decision_group_type = admin		
+	title = shut_down_gold_bank_decision_title
+    desc = shut_down_gold_bank_decision_desc
+    selection_tooltip = shut_down_gold_bank_decision_tooltip
+    confirm_text = shut_down_gold_bank_decision_confirm_text
+	
+	is_shown = {
+		is_adult = yes
+	    is_landed = yes
+	    OR = {
+		    has_trait = humble
+		    has_trait = zealous
+		    has_trait = content
+		    has_trait = arrogant
+		}
+		NOT = {
+            has_trait = greedy
+		}
+	    OR = {		
+		    has_character_modifier = golden_bank_head_modifier
+		    has_character_modifier = golden_bank_head_II_modifier
+		}		
+	}	
+	cost = {
+		gold = 150
+	}
+    effect = {	
+		trigger_event = {
+			id = lannister_gold.0011
+			days = 30
+		}	
+		add_piety = 500			
+    }	
+	ai_check_interval = 0
+}
+
+### Decision to take out debt from the Burghers ###
+lg_take_out_loan = {
+	title = lg_take_out_loan_title
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_gold_lending.dds"
+	} 	
+	decision_group_type = admin	
+	ai_goal = no
+	ai_check_interval = 0
+	selection_tooltip = lg_take_out_loan_tooltip
+	desc = lg_take_out_loan_desc
+	confirm_text = lg_take_out_loan_confirm_text
+
+	is_shown = {
+		NOT = {
+			has_character_modifier = lg_delayed_debtor_modifier
+			has_character_flag = lg_took_out_loan
+			has_character_flag = paidloan
+		}
+		
+		OR = {
+		    has_trait = greedy
+		    has_trait = ambitious
+		    has_trait = diligent
+		    has_trait = shrewd 
+		    has_trait = administrator
+		    stewardship >= 16
+		}
+	}
+
+	cost = {
+		prestige = 150
+	}
+
+	effect = {
+		add_gold = 300
+		add_stress = minor_stress_gain
+		add_character_modifier = lg_indebted_to_the_burghers_modifier
+		add_character_flag = { flag = lg_debt_period years = 5 }
+		add_character_flag = { flag = lg_took_out_loan }
+	}
+
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+}
+
+### Decision to Pay Back debt to the merchants ###
+
+lg_repay_debt_decision = {
+	title = lg_repay_debt_title			
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_borrow_from_merchants.dds"
+	} 	
+	decision_group_type = admin	
+	ai_goal = no
+	ai_check_interval = 0
+	selection_tooltip = lg_repay_debt_tooltip
+	desc = lg_repay_debt_desc
+	confirm_text = lg_repay_debt_confirm_text
+
+	is_shown = {
+		OR = {
+			has_character_modifier = lg_indebted_to_the_burghers_modifier
+			has_character_flag = lg_took_out_loan
+			has_character_modifier = lg_delayed_debtor_modifier
+		}
+	}
+	
+
+	cost = {
+		gold = 350
+	}
+
+	effect = {
+		remove_character_flag = lg_debt_period
+		remove_character_flag = lg_took_out_loan
+		add_character_flag = { flag = paidloan years = 5 }
+		remove_character_modifier = lg_delayed_debtor_modifier
+		remove_character_modifier = lg_indebted_to_the_burghers_modifier
+		add_prestige = 50
+	}
+
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+}
+
+
+### Decision to end the Iron Bank Partnership ###
+
+end_iron_bank_partnership_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_sell_loan.dds"
+	} 	
+	decision_group_type = admin	
+	title = end_iron_bank_partnership_decision_title
+    desc = end_iron_bank_partnership_decision_desc
+    selection_tooltip = end_iron_bank_partnership_decision_tootltip
+    confirm_text = end_iron_bank_partnership_decision_confirm_text
+	is_shown = {
+		is_adult = yes
+	    is_landed = yes
+		has_character_modifier = iron_bank_partnership_modifier	
+	}
+	cost = {
+	}
+
+	effect = {		
+		remove_character_modifier = iron_bank_partnership_modifier
+        set_global_variable  = golden_bank_kg_expansion  				
+		trigger_event = {
+			id = lannister_gold.0010
+			days = 5
+		}	
+		add_prestige = 150
+	}
+	ai_check_interval = 0
+}

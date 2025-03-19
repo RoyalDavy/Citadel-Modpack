@@ -1,0 +1,25 @@
+﻿l_english:
+make_flayed_man_armor_decision:0 "Commission a Flayed Man Armour"
+make_flayed_man_armor_decision_desc: "To inspire dread and put fear into the hearts of my enemies, I will commission a new personal armour that embodies our house’s fearsome reputation.\n\nMaster smiths will be called upon to craft this gruesome armour, with grooves and embossed patterns mimicking the flayed skin of our enemies, ensuring that the sight alone will unsettle the staunchest of foes.\n\nThe commission is a task of honor, reserved for those who wield their hammers with as much precision as we Boltons wield our knives. For this is not mere armour; it is a warning made manifest in metal, and a piece destined for the annals of Northern legend. Only in [GetTitleByKey('b_the_dreadfort').GetBaseNameNoTierPossessive] fiery embrace can such a creation be born, steeped in whispered oaths and the legacy of dread." 
+make_flayed_man_armor_t: "The Flayed Man Armour"
+make_flayed_man_armor_decision_tooltip_1: "Commision the Flayed Man Armour, a dreadful suit of dark red steel engraved with sinew patterns."
+make_flayed_man_armor_decision_tooltip_2: "Commision the Flayed Man Armour, a dreadful suit of dark red steel engraved with sinew patterns."
+make_flayed_man_armor_decision_tooltip_4: "You may recieve a Flayed Man Armour [inventory_artifact|E]"
+
+make_flayed_man_armor_decision_confirm: "Send for the smith"
+
+make_flayed_man_armor_0001_c_desc: "In the shadowed halls of [GetTitleByKey('b_the_dreadfort').GetBaseNameNoTierPossessive] armory, the air hangs heavy with the scent of iron and fire. The master smith [smith.GetFirstName] approaches, he carries with him the designs for his new creation: the Flayed Man Armour.\n\n'My lord,' [smith.GetFirstName] says, presenting the detailed sketches.\n'We are prepared to begin the forging of your armour. The plates will be dark red, crafted to resemble the flayed skin of your enemies, a fitting tribute to your house’s legacy.'\n\nExamining the design, your gaze intensifies. 'It is not just armour,' you state, your voice echoing off the walls, 'it is a declaration. Let all who look upon it know fear.'\n\nNodding with a grim satisfaction, the smith replies, 'It will be as you command, my [ROOT.Char.GetLadyLord]. The forges will burn day and night until your armour is shaped to perfection.'"
+
+make_flayed_man_armor_0001_tt: "[smith.GetFirstName] will attempt to craft a Flayed Man Armour to your measure"
+make_flayed_man_armor_0001_b_tt: "You will cancel the commission and your gold will be refunded"
+
+make_flayed_man_armor_0001_a: "Return safely [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('smith'))]..."
+make_flayed_man_armor_0001_b: "Work your craft, [smith.GetName]"
+make_flayed_man_armor_0001_c: "Perhaps now is not the time for this"
+
+make_flayed_man_armor_0002_a_desc: "The grim halls of the [GetTitleByKey('b_the_dreadfort').GetNameNoTier] resonate with the clanging echo of the smithy’s hammer as you descend into the armory. Today, the forges have grown silent; their task completed. In the armory, [smith.GetFirstName] stands ready, the newly forged Flayed Man Armour laid out before him, a terrifying masterpiece of dark red steel fashioned to evoke the horrors of flayed flesh.\n\n'My [ROOT.Char.GetLadyLord]', he begins, his voice steady, 'the armour you commissioned is complete.' He gestures towards the suit, each piece artfully crafted to intertwine dread with protection. 'Its plates have been designed to mirror the flayed skin of your enemies.' The intricate patterns run like rivers of blood across the armour.\n\n'It is not merely armour', you murmur, a cold smile playing upon your lips. 'It is a declaration of our power.'\n\n[smith.GetFirstName] bows, his task complete, leaving you wearing the armour as a second skin.
+make_flayed_man_armor_0002_a: "You've outdone yourself [smith.GetFirstName]."
+
+make_flayed_man_armor_0003_a_desc: "Your heavy steps echo through the deserted armory of [GetTitleByKey('b_the_dreadfort').GetNameNoTier], your arrival marked by a cold, brooding silence. Before you on the workbench lies the unfinished Flayed Man Armour; its dark red steel is rough and unpolished, the sinuous patterns meant to evoke terror are instead crude, botched attempts by a faltering hand.\n\nUpon closer inspection, the armour's chest piece is warped, the greaves are mismatched, and the entire set bears the marks of hurried, fearful craftsmanship. It is clear [smith.GetFirstName] has fled, overwhelmed by the [dread|E] of his task and the consequences of failure.\n\nWith a scornful grimace, you contemplates the abandoned armour, a project undone by the very terror it was meant to embody.\n\n[smith.GetFirstName] will be found, and the price of fear will be exacted in flesh."
+make_flayed_man_armor_0003_a: "This will not be forgotten, 'Our Blades are Sharp'."
+

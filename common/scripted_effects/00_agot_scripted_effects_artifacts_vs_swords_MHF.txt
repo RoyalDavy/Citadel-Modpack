@@ -1,0 +1,256 @@
+﻿agot_create_artifact_vs_silverlight_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	create_artifact = {
+		name = vs_silverlight_name
+		visuals = vs_andal_armingsword_gold_visuals
+		description = vs_silverlight_description
+		type = sword
+		wealth = scope:wealth
+		quality = scope:quality
+		template = vs_generic_andal_template
+		history = {
+			type = created
+			date = 8041.1.1
+			recipient = character:333000653
+			location = province:2950
+		}
+		modifier = vs_silverlight_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact ?= {
+		equip_artifact_to_owner_replace = yes
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = andal_armingsword_gold_artifact
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8041.8.1
+			RECIPIENT = character:Bricker_13
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8042.9.1
+			RECIPIENT = character:Bricker_12
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8079.1.1
+			RECIPIENT = character:Bricker_11
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8095.1.1
+			RECIPIENT = character:Bricker_10
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8135.1.1
+			RECIPIENT = character:Bricker_8
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8168.1.1
+			RECIPIENT = character:Bricker_7
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8190.1.1
+			RECIPIENT = character:Bricker_6
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8217.1.1
+			RECIPIENT = character:Bricker_31
+		}
+	}
+}
+
+agot_create_artifact_vs_weirwood_bow_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	create_artifact = {
+		name = vs_weirwood_bow_name
+		visuals = longbow_MHF
+		description = vs_weirwood_bow_description
+		type = longbow
+		wealth = scope:wealth
+		quality = scope:quality
+		template = vs_generic_andal_template
+		modifier = vs_weirwood_bow_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact ?= {
+		equip_artifact_to_owner_replace = yes
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+	}
+}
+
+agot_create_artifact_vs_crossbow_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	create_artifact = {
+		name = vs_crossbow_name
+		visuals = crossbow
+		description = vs_crossbow_description
+		type = crossbow
+		wealth = scope:wealth
+		quality = scope:quality
+		template = vs_generic_andal_template
+		modifier = vs_crossbow_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact ?= {
+		equip_artifact_to_owner_replace = yes
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+	}
+}
+
+agot_create_artifact_vs_runic_armor_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	create_artifact = {
+		name = vs_runic_armor_name
+		visuals = runic_armor_MHF
+		description = vs_runic_armor_description
+		type = armor_plate
+		wealth = scope:wealth
+		quality = scope:quality
+		template = valyrian_steel_armor_template
+		history = {
+			type = created
+			date = 3838.1.1
+			recipient = character:Royce_11
+			location = province:2455
+		}
+		modifier = vs_runic_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact ?= {
+		equip_artifact_to_owner_replace = yes
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+	}
+}
+
+agot_create_artifact_vs_flayed_man_armor_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	create_artifact = {
+		name = vs_flayed_man_armor_name
+		visuals = flayed_man_armor_MHF
+		description = vs_flayed_man_armor_description
+		type = armor_plate
+		wealth = scope:wealth
+		quality = scope:quality
+		template = valyrian_steel_armor_template
+		modifier = vs_flayed_man_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact ?= {
+		equip_artifact_to_owner_replace = yes
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+	}
+}
+
+agot_create_artifact_vs_warlords_will_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	create_artifact = {
+		name = vs_warlords_will_name
+		visuals = vs_andal_armingsword_gold_visuals
+		description = vs_warlords_will_description
+		type = sword
+		wealth = scope:wealth
+		quality = scope:quality
+		template = vs_generic_andal_template
+		history = {
+			type = created
+			date = 6638.1.1
+			recipient = character:Vance_Wayfarers_Rest_11
+			location = province:2143
+		}
+		modifier = vs_warlords_will_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact ?= {
+		equip_artifact_to_owner_replace = yes
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 6654.1.1
+			RECIPIENT = character:Vance_Wayfarers_Rest_13
+		}
+	}
+}
+
+agot_create_artifact_silver_nugget_effect = {
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_masterwork = yes
+
+	create_artifact = {
+		name = agot_artifact_silver_nugget
+		description = agot_artifact_silver_nugget_desc
+		visuals = silver_nugget_MHF
+		type = miscellaneous
+		modifier = artifact_monthly_minor_prestige_8_modifier
+		save_scope_as = newly_created_artifact
+		wealth = scope:wealth
+		quality = scope:quality
+	}
+}

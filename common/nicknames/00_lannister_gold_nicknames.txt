@@ -1,0 +1,9 @@
+﻿################################
+### LANNISTER GOLD NICKNAMES ###
+################################
+
+#### Golden Bank Nicknames ####
+
+nick_the_golden_lion = {}
+nick_usurer = {}
+nick_goldtouch = {}

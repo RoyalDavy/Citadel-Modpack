@@ -1,0 +1,151 @@
+﻿l_english:
+
+### Lending to the Iron Throne ###
+
+ receiving_interest_modifier:0 "Lending Gold to the Iron Throne"
+ paying_interest_modifier:0 "Indebted"
+ sold_debt_to_the_iron_bank_modifier:0 "Sold Loan to the Iron Bank"
+ requested_gold_back_modifier:0 "Requested Full Loan Payment"
+ lent_gold_modifier:0 "Lent us Gold"
+ 
+ lend_gold_decision_title:0 "Lend gold to the Iron Throne"
+ lend_gold_decision_desc:0 "The Iron Throne is in need of funds to secure its rule over the Seven Kingdoms. Having become one of the richest lords in Westeros, you have the opportunity to lend one thousand gold pieces to the crown, ensuring its stability—and your future prosperity. In return, you will receive a steady interest of 2 gold per month, a modest but reliable income that will add up over time. This investment not only strengthens the realm but also tightens your influence over the crown itself."
+ lend_gold_decision_tooltip:0 "You lend one thousand gold coins to the Iron Throne in exchange for two gold as interest payment per month."
+ lend_gold_decision_confirm_text:0 "For the good of the Realm"
+ 
+ 
+ debt_for_hook_decision_title:0 "Forgive the Iron Throne's Debt"
+ debt_for_hook_decision_desc:0 "The Iron Throne is heavily indebted to you. You can choose to forgo this debt, gaining leverage over the crown in the form of a hook. This act of generosity—or calculated maneuver—could give you significant influence over the realm."
+ debt_for_hook_decision_tooltip:0 "Forgo the Iron Throne's debt in exchange for a hook."
+ debt_for_hook_decision_confirm_text:0 "Gold is Power."
+ 
+ sell_loan_decision_title:0 "Sell the Crown's debt to the Iron Bank"
+ sell_loan_decision_desc:0 "You hold a significant debt from the Iron Throne, a thousand gold pieces that weigh heavily on the crown. The Iron Bank of Braavos, known for its relentless pursuit of payment, offers to buy this debt from you for nine hundred gold. By accepting their offer, you will stop receiving your monthly interest but will regain most of your initial one thousand gold loan.\n\nSelling the debt to the Iron Bank could have unforeseen consequences for the stability of the Iron Throne, as the Braavosi bankers are known to collect their due—by any means necessary. This action will greatly upset the King."
+ sell_loan_decision_tooltip:0 "You sell the debt the Iron Throne owes you, recovering most of the original loan gold but stopping the interest payment received. This action will anger the King."
+ sell_loan_decision_confirm_text:0 "We need the Gold"
+ 
+ request_gold_decision_title:0 "Request Repayment from the Iron Throne"
+ request_gold_decision_desc:0 "The time has come to reclaim the debt you lent to the Iron Throne. Demanding the return of your one thousand gold pieces may place significant strain on the crown, but as the rightful owner of this wealth, you are justified in seeking its return. Given our favorable relationship with the King, we anticipate that he will honor his obligations and repay the full loan amount without delay."
+ request_gold_decision_tooltip:0 "You request the King to pay back the full amount of the original loan. The full amount will be paid without delay."
+ request_gold_decision_confirm_text:0 "We need the gold"
+ 
+ ### Bankers ###
+ 
+ aided_by_braavosi_bankers_modifier:0 "Assited by Braavosi Bankers"
+ aided_by_braavosi_bankers_modifier_desc:0 "This character is aided by a group of Braavosi bankers."
+ aided_by_lyseni_bankers_modifier:0 "Assisted by Lyseni Merchants"
+ aided_by_lyseni_bankers_modifier_desc:0 "This character is aided by a group of Lyseni merchants."
+ aided_by_local_bankers_modifier:0 "Assisted by Lannisport Lenders"
+ aided_by_local_bankers_modifier_desc:0 "This character is aided by a group of Lannisport lenders."
+ 
+ 
+ ### Golden Bank Founding ###
+ 
+ 
+ found_golden_bank_title:0 "Found the Golden Bank of Lannisport"
+ found_golden_bank_decision_desc:0 "As the ruler of Casterly Rock, your wealth is unparalleled in the Seven Kingdoms. By founding a new bank in Lannisport, you can channel this immense fortune into a powerful financial institution, one that could challenge even the Iron Bank of Braavos. This bank will not only safeguard your vast riches but also extend loans to those in need, securing influence far beyond the Westerlands.\n\nAs the gold veins of Casterly Rock dwindle, founding the Golden Bank will secure our house’s legacy as the undisputed lords of wealth and dominion."
+ found_golden_bank_decision_confirm_text:0 "Wealth Commands Respect"
+ found_golden_bank_decision_selection_tooltip:0 "You found a new bank in lannisport"
+ 
+ golden_bank_head_modifier:0 "Head of the Golden Bank of Lannisport"
+ golden_bank_head_modifier_desc:0 "This character leads the Golden Bank of Lannisport, steering its wealth and power."
+ golden_bank_head_II_modifier:0 "Head of the Golden Bank of Lannisport"
+ golden_bank_head_II_modifier_desc:0 "This character leads the Golden Bank of Lannisport, steering its wealth and power."
+ 
+ 
+ golden_bank_lannisport_modifier:0 "Golden Bank of Lannisport"
+ golden_bank_lannisport_modifier_desc:0 "The Golden Bank of Lannisport has its headquarters at this location."
+ golden_bank_merchant_loan_modifier:0 "Great Merchant Loan" 
+ golden_bank_merchant_loan_modifier_desc:0 "This character is receiving interest from a loan to the merchants of Lannisport."
+ golden_bank_kg_branch_modifier:0 "King’s Landing Branch Profits"
+ golden_bank_kg_branch_modifier_desc:0 "This character is receving gold profits and intelligence from the Golden Bank's Branch in King's Landing."
+ golden_bank_oldtown_branch_modifier:0 "Oldtown's Branch Profits"
+ golden_bank_oldtown_branch_modifier_desc:0 "This character is receving gold profits and intelligence from the Golden Bank's Branch in Oldtown."
+ golden_bank_office_modifier:0 "Golden Bank Office"
+ golden_bank_office_modifier_desc:0 "The Golden Bank is present in this location."
+ 
+ ### Golden Bank Operations ###
+ 
+ deposit_gold_decision_title:0 "Invest in the Golden Bank of Lannisport"
+ deposit_gold_decision_desc:0 "We can deposit five hundred gold pieces into the vaults of the Golden Bank, allowing our bankers to extend this wealth as loans to Lannisport’s most distinguished merchant families and celebrated artisans. Renowned for their exquisite goldwork and unique spiced honey wine, these key figures drive the city’s economic brilliance.\n\nBy providing them with this substantial capital, we not only secure a steady income of half a gold in interest each month but also fortify the city’s legendary craftsmanship and thriving trade."
+ deposit_gold_decision_tooltip:0 "Grant five hundred gold to the Lannisport merchants as loan, paying 0.5 gold per month as interest"
+ deposit_gold_decision_confirm_text:0 "Start Lending"
+
+ withdraw_gold_decision_title:0 "Withdraw Gold from the Golden Bank of Lannisport"
+ withdraw_gold_decision_desc:0 "You withdraw five hundred gold pieces from the vaults of the Golden Bank of Lannisport, replenishing your treasury at the cost of future gains. This action will diminish your monthly interest earnings by half a gold, a small price to pay for the immediate wealth now at your disposal."
+ withdraw_gold_decision_selection_tooltip:0 "This decision will grant you on five hundred gold, but will reduce your monthly earned interest by half a gold."
+ withdraw_gold_decision_confirm_text:0 "Transfer the Gold"
+
+ bank_modifier:0 "Bank Effect"
+ bank_gold_lending_modifier:0 "Interest payment from the Golden Bank"
+ bank_gold_lending_modifier_desc:0 "We recive monthly interest patyments from the Lannisport Merchants"
+ 
+ grand_merchant_loan_modifier:0 "Grand Merchant Loan"
+ grand_merchant_loan_modifier_desc:0 "The merchant families of Lannisport are putting the loans granted by the Golden Bank to good use."
+ 
+ ### Golden Bank Expansion ###
+ 
+ expand_golden_bank_kg_decision_title:0 "Expand the Golden Bank to King’s Landing"
+ expand_golden_bank_kg_decision_desc:0 "The Golden Bank of Lannisport has swiftly become a pillar of wealth and influence in the Westerlands. Now, the time has come to extend its reach to the very heart of the realm—King’s Landing. The capital is a city where every coin turns the wheels of the realm. By establishing a branch of the Golden Bank in the capital, we not only secure our house’s dominance over the financial affairs of Westeros but also position ourselves at the center of the kingdom’s power.\n\nWith gold flowing through the streets of King’s Landing, our influence will grow stronger than ever before."
+ expand_golden_bank_kg_decision_tooltip:0 "Expand the Golden Bank’s reach to King’s Landing."
+ expand_golden_bank_kg_decision_confirm_text:0 "Let our gold rule the capital"
+ 
+ expand_golden_bank_oldtown_decision_title:0 "Expand the Golden Bank to Oldtown"
+ expand_golden_bank_oldtown_decision_desc:0 "Oldtown stands as the largest and richest city in the Seven Kingdoms, a beacon of commerce and learning. With the Bank of Oldtown’s influence waning, a prime opportunity arises for us to establish a branch of the Golden Bank. Not only would this secure our financial foothold in the wealthiest corners of the realm, but positioning ourselves near the Citadel could also grant us access to the latest knowledge and secrets whispered within its ancient halls."
+ expand_golden_bank_oldtown_decision_tooltip:0 "Seize the chance to expand the Golden Bank to Oldtown, tapping into its wealth and the wisdom of the Citadel."
+ expand_golden_bank_oldtown_decision_confirm_text:0 "Oldtown will shine with Gold from the Rock"
+ 
+ 
+ ### Shut Down Golden Bank ###
+ 
+ shut_down_gold_bank_decision_title:0 "Shut Down the Golden Bank of Lannisport"
+ shut_down_gold_bank_decision_desc:0 "The Golden Bank of Lannisport has brought immense wealth and influence to our house, but it has also drawn unwanted attention and enemies. Perhaps it is time to let the gold rest and shutter the doors of the bank. By closing the Golden Bank, we reclaim our status as lords of Casterly Rock, free from the burdens of coin counting and the whispers of usury. Let the world remember us as nobles, not merchants."
+ shut_down_gold_bank_decision_tooltip:0 "Shut down the Golden Bank of Lannisport, ending its operations and returning to the path of nobility."
+ shut_down_gold_bank_decision_confirm_text:0 "Our noble blood runs thicker than gold"
+ 
+ 
+ ### Borrowing from the Bhurgers ###
+ lg_take_out_loan_title:0 "Borrow Gold from Local Merchants"
+ lg_take_out_loan_tooltip:0 "You secure a loan from a group of local merchants."
+ lg_take_out_loan_desc:0 "In our time of need, the local merchants have agreed to extend a loan of 300 gold to us. This generous offer will come with a condition: we must repay the loan within 5 years, along with an additional 50 gold in interest. If we fail to meet these terms, we risk losing the support and trust of the merchants, which could have serious economic repercussions for our realm."
+ lg_take_out_loan_confirm_text:0 "We need the Gold"
+ lg_repay_debt_title:0 "Repay the debt with the Local Merchants"
+ lg_repay_debt_tooltip:0 "We will settle our debt with the merchants and honor our commitment."
+ lg_repay_debt_desc:0 "By settling the debt we owe to the local merchants and moneylenders, we will clear our financial obligations and restore our standing with them, paving the way for future borrowing if needed."
+ lg_repay_debt_confirm_text:0 "Debt be gone!"
+ 
+ lg_delayed_debtor_modifier:0 "Delayed Debtor"
+ lg_delayed_debtor_modifier_desc:0 "This character has failed to repay a debt to the local merchants within the agreed timeframe and has lost their economic support."
+ 
+ lg_indebted_to_the_burghers_modifier:0 "Indebted to Local Merchants"
+ lg_indebted_to_the_burghers_modifier_desc:0 "This character is indebted to a group of local merchants."
+ 
+
+### Iron Bank Relations ###
+
+iron_bank_partnership_modifier:0 "Paying Tribute to the Iron Bank"
+iron_bank_partnership_modifier_desc:0 "This character is paying  a share of the Golden Bank of Lannisport profits to the Iron Bank."
+
+end_iron_bank_partnership_decision_title:0 "End our parternship with the Iron Bank"
+end_iron_bank_partnership_decision_desc:0 "The partnership with the Iron Bank of Braavos has been little more than a thinly veiled tribute, a payment to stave off their wrath and protect our banking ambitions from their interference. But the time has come to stand on our own. By ending this arrangement, we assert the independence of the Golden Bank, defying the Iron Bank's monopolistic grip on the world of finance.\n\nThe decision is not without risk, as the Iron Bank is known to be relentless in maintaining its power. However, true wealth and power require taking bold steps."
+end_iron_bank_partnership_decision_tootltip:0 "Terminate the partnership with the Iron Bank of Braavos, ending our tribute payments and challenging their monopoly on banking."
+end_iron_bank_partnership_decision_confirm_text:0 "Break free from Braavosi shadow"
+
+lg_loyal_character_modifier:0 "Loyalty"
+lg_loyal_character_modifier_desc:0 "This character is very loyal to his lord."
+
+## Events Modifiers ###
+
+
+lg_new_trade_ships_modifier:0 "Trade Route to Essos"
+lg_new_trade_ships_modifier_desc:0 "This character is profiting from a maritime trade route to Essos."
+lg_silk_lannisport_modifier:0 "Lannisport Silks"
+lg_silk_lannisport_modifier_desc:0 "The recent expansion of the silk industry in Lannisport is boosting the local economy."
+lg_new_ale_lannisport_modifier:0 "Lannisport Brew"
+lg_new_ale_lannisport_modifier_desc:0 "The recent expansion of the brew industry in Lannisport is boosting the local economy."
+lg_exquisite_jewels_lannisport_modifier:0 "Exquisite Jewels"
+lg_abundant_harvests_lannisport_modifier:0 "Abundant Harvests"
+
+
+north_explorer_character_modifier:0 "Beyond the Wall Veteran"
+north_explorer_character_modifier_desc:0 "Seasoned by a harsh expedition beyond the Wall, this character is battle-hardened and an experienced survivalist."

@@ -1,0 +1,101 @@
+﻿vance_reunion_decision = {
+	ai_check_interval = 0
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	}
+
+	desc = vance_reunion_decision_desc
+
+	major = yes
+
+	selection_tooltip = house_reunion_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Vance
+			NOT = { 
+			has_global_variable = vance_reunion_decision
+		}
+	}
+
+	is_valid = {
+		dynasty = {
+		has_dynasty_perk = vance_legacy_4
+		}
+		has_title = title:d_wayfarers_rest
+		has_title = title:d_atranta
+	}
+
+	effect = {
+		dynasty = { save_scope_as = dynasty }
+		hidden_effect = { set_house = root.house }
+		scope:dynasty = { 
+			every_dynasty_member = {
+				set_house = root.house
+			}
+		}
+		every_held_title = {
+			set_coa = dynasty:dynn_Vance
+		}
+		set_global_variable = vance_reunion_decision
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+flint_reunion_decision = {
+	ai_check_interval = 0
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	}
+
+	desc = flint_reunion_decision_desc
+
+	major = yes
+
+	selection_tooltip = house_reunion_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Flint
+			NOT = { 
+			has_global_variable = flint_reunion_decision
+		}
+	}
+
+	is_valid = {
+		is_dynast = yes
+		dynasty = {
+		has_dynasty_perk = flint_legacy_4
+		}
+		has_title = title:c_breakstone_hill
+		has_title = title:d_crestview
+		has_title = title:d_flints_finger
+	}
+
+	effect = {
+		dynasty = { save_scope_as = dynasty }
+		hidden_effect = { set_house = root.house }
+		scope:dynasty = { 
+			every_dynasty_member = {
+				set_house = root.house
+			}
+		}
+		every_held_title = {
+			set_coa = dynasty:dynn_Flint
+		}
+		set_global_variable = flint_reunion_decision
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

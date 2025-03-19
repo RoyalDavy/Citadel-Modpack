@@ -1,0 +1,147 @@
+﻿# AGOT Disabled
+# AGOT TODO
+
+# Do this for all cultures?
+# Vanilla Example
+
+#scottish_opinion = {
+#	decimals = 0
+#}
+
+#pommeranian_opinion = {
+#	decimals = 0
+#}
+
+#czech_opinion = {
+#	decimals = 0
+#}
+
+#polish_opinion = {
+#	decimals = 0
+#}
+
+#polabian_opinion = {
+#	decimals = 0
+#}
+
+#slovien_opinion = {
+#	decimals = 0
+#}
+
+northman_opinion = {
+	decimals = 0
+}
+
+ironborn_opinion = {
+	decimals = 0
+}
+
+salt_dornish_opinion = {
+	decimals = 0
+}
+
+sand_dornish_opinion = {
+	decimals = 0
+}
+
+stone_dornish_opinion = {
+	decimals = 0
+}
+
+high_valyrian_opinion = {
+	decimals = 0
+}
+
+westerman_opinion = {
+	decimals = 0
+}
+
+braavosi_opinion = {
+	decimals = 0
+}
+
+wolfswood_clansman_opinion = {
+	decimals = 0
+}
+
+hill_clansman_opinion = {
+	decimals = 0
+}
+
+barrowman_opinion = {
+	decimals = 0
+}
+
+shieldman_opinion = {
+	decimals = 0
+}
+
+vineman_opinion = {
+	decimals = 0
+}
+
+honeywiner_opinion = {
+	decimals = 0
+}
+
+marcher_opinion = {
+	decimals = 0
+}
+
+reachman_opinion = {
+	decimals = 0
+}
+
+braavosi_opinion = {
+	decimals = 0
+}
+
+braavosi_opinion = {
+	decimals = 0
+}
+
+skagosi_opinion = {
+	decimals = 0
+}
+
+crannogman_opinion = {
+	decimals = 0
+}
+
+valeman_opinion = {
+	decimals = 0
+}
+
+mountain_clansman_opinion = {
+	decimals = 0
+}
+
+westerosi_valyrian_opinion = {
+	decimals = 0
+}
+
+essosi_valyrian_opinion = {
+	decimals = 0
+}
+
+volantene_opinion = {
+	decimals = 0
+}
+
+lyseni_opinion = {
+	decimals = 0
+}
+
+myrish_opinion = {
+	decimals = 0
+}
+
+pentoshi_opinion = {
+	decimals = 0
+}
+
+sisterman_opinion = { decimals = 0 }
+
+clawman_opinion = { decimals = 0 }
+
+crownlander_opinion = { decimals = 0 }

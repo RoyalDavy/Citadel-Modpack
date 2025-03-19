@@ -1,0 +1,4136 @@
+﻿namespace = agot_squirehood_ongoing
+
+# 0200-0299: ONGOING Squirehood Events (squirehood RP events)
+
+## 0200-0200: (As a squire) Your knight asks you to take care of your knight's horse - PTK +/- 5
+## 0201-0201: (As a squire) Your knight asks you to deliver a message to courtier - PTK +/- 5
+## 0202-0202: (As a squire) You tire of cleaning your knight's sword - PTK +/- 5
+## 0203-0203: (As a squire) You have a poor training session with your knight - PTK +/- 5
+## 0204-0204: (As a squire) You have a good training session with your knight - PTK + 5, freebie event
+## 0205-0205: (As a squire) You overhear your knight's plans for horseback training - PTK +/- 5
+## 0206-0206: (As a squire) You are told to clean your knight's muddy armor - PTK +/- 5
+## 0207-0207: (As a squire) You encounter a lazy/sucky student while training some younger students - PTK +/- 5
+## 0208-0208: (As a squire) Your knight quizzes you on Westerosi Heraldry (1) - PTK +/- 5
+## 0209-0209: (As a squire) Your knight quizzes you on Westerosi Heraldry (2) - PTK +/- 5
+## 0210-0210: (As a squire) Your knight quizzes you on Westerosi Heraldry (3) - PTK +/- 5
+## 0211-0211: (As a squire) You encounter a beggar in the streets. Your knight asks you what to do - PTK +/- 5
+## 0212-0212: (As a squire) While dressing your knight in his armor, you mess up. Blame him for shit armor or admit your error - 5
+## 0213-0213: (As a squire) Several bullies are about to beat up a weaker stablehand. What do you do? - PTK +/- 5
+## 0214-0214: (As a squire) Your knight gives you a simple errand but you think you're above doing it. - PTK +/- 5
+## 0215-0215: (As a squire) After running an errand you have some left over gold from your knight. Act on it. - PTK +/- 5
+## 0216-0216: (As a squire) You have some downtime and decide whether or not to practice what you're knight's taught you - PTK +/- 5
+## 0217-0217: (As a squire) You run a generic (hard) errand for your knight - PTK +/- 5
+
+## 0XXX-0XXX: (As a squire) If your knight is at war, you may ride along with him (assuming same sides/war compat)
+
+
+## 0200-0200: (As a squire) Your knight asks you to take care of your knight's horse - ProgToKnighthood inc or dec by 5
+agot_squirehood_ongoing.0200 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0200.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_trait = cynical
+						has_trait = arrogant
+						has_trait = lazy
+					}
+				}
+				desc = agot_squirehood_ongoing.0200.desc.negative #Negative description, e.g. someone who doesn't want to clean horses.
+			}
+			desc = agot_squirehood_ongoing.0200.desc.generic #Fallback
+		}
+	}
+
+	theme = martial
+
+	override_background = {
+		reference = army_camp
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_horse_care_1_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_horse_care_1_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0200 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. Better to not waste time. Available to everyone.
+	option = {
+		name = agot_squirehood_ongoing.0200.generic
+		custom_tooltip = agot_squirehood_ongoing.0200.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 25
+				has_trait = diligent
+			}
+			modifier = {
+				add = 5
+				has_trait = patient
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 33
+			}
+		}
+	}
+
+	#Negative option 1. You don't want to do it.
+	option = {
+		name = agot_squirehood_ongoing.0200.negative
+		custom_tooltip = agot_squirehood_ongoing.0200.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				has_trait = lazy
+				add = 15
+			}
+			modifier = {
+				has_trait = arrogant
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 25
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 25
+			}
+		}
+	}
+
+	#Negative option 2. You don't want to do it, so you get someone else to do it for you. Available to cynical or deceitful.
+	option = {
+		name = agot_squirehood_ongoing.0200.negative_two
+		trigger = {
+			OR = {
+				has_trait = cynical
+				has_trait = deceitful
+			}
+		}
+		trait = cynical
+		trait = deceitful
+		custom_tooltip = agot_squirehood_ongoing.0200.negative_two.tt
+		if = {
+			limit = {
+				scope:my_knight = {
+					intrigue < decent_skill_rating #If your knight's intrigue is less than a decent rating, you get away with it.
+				}
+			}
+			agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		}
+		else = {
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.0200.negative_two_negative_outcome_toast
+				left_icon = scope:my_knight
+				right_icon = root
+				add_prestige = minor_prestige_gain
+			}
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = -5
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 33
+				OR = {
+					has_trait = cynical
+					has_trait = deceitful
+				}
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 20
+			}
+		}
+	}
+}
+
+## 0201-0201: (As a squire) Your knight asks you to deliver a message to courtier - ProgToKnighthood inc or dec by 5
+agot_squirehood_ongoing.0201 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0201.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_trait = arrogant
+						has_trait = deceitful
+						has_trait = curious
+					}
+				}
+				desc = agot_squirehood_ongoing.0201.desc.negative #Negative description, e.g. someone who doesn't want to do their responsibilities
+			}
+			desc = agot_squirehood_ongoing.0201.desc.generic #Fallback
+		}
+	}
+
+	theme = martial
+
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	lower_left_portrait = {
+		character = scope:courtier
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_message_delivery_1_flag #You can't have have this event recently
+		}
+		root.liege ?= {
+			any_courtier_or_guest = {
+				is_male = yes
+				is_human = yes
+			}
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_message_delivery_1_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		root.liege = {
+			random_courtier_or_guest = {
+				limit = {
+					is_male = yes
+					is_human = yes
+				}
+				save_scope_as = courtier
+			}
+		}
+		#debug_log = "agot_squirehood_ongoing.0201 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. Better to not waste time. Available to everyone.
+	option = {
+		name = agot_squirehood_ongoing.0201.generic
+		custom_tooltip = agot_squirehood_ongoing.0201.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = diligent
+			}
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = patient
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 33
+			}
+		}
+	}
+
+	#Negative option 1. You read it against your knight's wishes, betraying his trust.
+	option = {
+		name = agot_squirehood_ongoing.0201.negative
+		custom_tooltip = agot_squirehood_ongoing.0201.negative.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = -5 MAX_VALUE = -5 }
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = deceitful
+			}
+			modifier = {
+				ai_boldness >= low_positive_boldness
+				add = 33
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 33
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 33
+			}
+		}
+	}
+
+}
+
+## 0202-0202: (As a squire) You clean your knight's sword - PTK +/- 5
+agot_squirehood_ongoing.0202 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0202.t
+	desc = agot_squirehood_ongoing.0202.desc
+
+	theme = martial
+
+	override_background = {
+		reference = armory
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_sword_cleaning_1_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_sword_cleaning_1_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0202 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. Better to not waste time. Available to everyone.
+	option = {
+		name = agot_squirehood_ongoing.0202.generic
+		custom_tooltip = agot_squirehood_ongoing.0202.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				has_trait = diligent
+				add = 33
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 33
+			}
+			modifier = {
+				ai_energy <= low_positive_honor
+				add = 25
+			}
+		}
+	}
+
+	#Negative option. You betray your knight by not doing as he told, then lying to him.
+	option = {
+		name = agot_squirehood_ongoing.0202.negative
+		custom_tooltip = agot_squirehood_ongoing.0202.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 33
+				has_trait = lazy
+			}
+			modifier = {
+				ai_boldness >= low_positive_boldness
+				add = 25
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 33
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 25
+			}
+		}
+	}
+
+}
+
+## 0203-0203: (As a squire) You have a poor training session with your knight - PTK +/- 5
+agot_squirehood_ongoing.0203 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0203.t
+	desc = agot_squirehood_ongoing.0203.desc
+
+	theme = martial
+
+	override_background = {
+		reference = army_camp
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_good_training_session_1_flag #You can't have had the inverse of this event recently
+			has_character_flag = squirehood_bad_training_session_1_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_bad_training_session_1_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0203 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. You do the expected thing and promise to practice tomorrow.
+	option = {
+		name = agot_squirehood_ongoing.0203.generic
+		custom_tooltip = agot_squirehood_ongoing.0203.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 33
+				has_trait = diligent
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 33
+			}
+		}
+	}
+
+	#Negative option. You lash out against your knight.
+	option = {
+		name = agot_squirehood_ongoing.0203.negative
+		custom_tooltip = agot_squirehood_ongoing.0203.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 33
+				has_trait = impatient
+			}
+			modifier = {
+				ai_boldness >= low_positive_boldness
+				add = 25
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 33
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 25
+			}
+		}
+	}
+}
+
+## 0204-0204: (As a squire) You have a good training session with your knight - PTK +5 #Freebie event
+agot_squirehood_ongoing.0204 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0204.t
+	desc = agot_squirehood_ongoing.0204.desc
+
+	theme = martial
+
+	override_background = {
+		reference = army_camp
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = admiration
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_good_training_session_1_flag #You can't have had the inverse of this event recently
+			has_character_flag = squirehood_bad_training_session_1_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_good_training_session_1_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0204 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. It feels good to be recognized!
+	option = {
+		name = agot_squirehood_ongoing.0204.generic
+		custom_tooltip = agot_squirehood_ongoing.0204.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		add_prowess_skill = 1
+	}
+}
+
+## 0205-0205: (As a squire) You overhear your knight's plans for horseback training - PTK +/- 5
+agot_squirehood_ongoing.0205 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0205.t
+	desc = agot_squirehood_ongoing.0205.desc
+
+	theme = martial
+
+	override_background = {
+		reference = army_camp
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		#You are a squire WITH A KNIGHT #AGOT TODO - Create a scripted trigger for this
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_overheard_horse_training_plans_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_overheard_horse_training_plans_flag
+			months = 5
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0205 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. You do the honorable thing and tell the truth.
+	option = {
+		name = agot_squirehood_ongoing.0205.generic
+		custom_tooltip = agot_squirehood_ongoing.0205.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = honest
+			}
+			modifier = {
+				has_trait = just
+				add = 15
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 15
+			}
+		}
+	}
+
+	#Negative option. You do the dishonorable thing and use the information to your advantage.
+	option = {
+		name = agot_squirehood_ongoing.0205.negative
+		custom_tooltip = agot_squirehood_ongoing.0205.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 15
+				has_trait = deceitful
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 10
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 33
+			}
+		}
+	}
+}
+
+## 0206-0206: (As a squire) You are told to clean your knight's muddy armor - PTK +/- 5
+agot_squirehood_ongoing.0206 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0206.t
+	desc = agot_squirehood_ongoing.0206.desc
+
+	theme = martial
+
+	override_background = {
+		reference = armory
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_clean_muddy_armor_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_clean_muddy_armor_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0206 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. You do the expected thing and clean the gear.
+	option = {
+		name = agot_squirehood_ongoing.0206.generic
+		custom_tooltip = agot_squirehood_ongoing.0206.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = diligent
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 25
+			}
+		}
+	}
+
+	#Negative option. You do the dishonorable thing and abuse your position as a squire.
+	option = {
+		name = agot_squirehood_ongoing.0206.negative
+		custom_tooltip = agot_squirehood_ongoing.0206.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = lazy
+			}
+			modifier = { #More likely depending on the following traits
+				add = 5
+				has_trait = arrogant
+			}
+			modifier = {
+				ai_boldness >= low_positive_boldness
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 25
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 15
+			}
+		}
+	}
+}
+
+## 0207-0207: (As a squire) You encounter a lazy/sucky student while training some younger students - PTK +/- 5
+agot_squirehood_ongoing.0207 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0207.t
+	desc = agot_squirehood_ongoing.0207.desc
+
+	theme = martial
+
+	override_background = {
+		reference = army_camp
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	trigger = {
+		#You are a squire WITH A KNIGHT #AGOT TODO - Create a scripted trigger for this
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_training_terrible_students_1_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_training_terrible_students_1_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0207 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option.
+	option = {
+		name = agot_squirehood_ongoing.0207.generic
+		custom_tooltip = agot_squirehood_ongoing.0207.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 15
+				has_trait = patient
+			}
+			modifier = {
+				has_trait = diligent
+				add = 10
+			}
+			modifier = {
+				has_trait = calm
+				add = 5
+			}
+			modifier = {
+				has_trait = authoritative
+				add = 5
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 15
+			}
+			modifier = {
+				ai_honor >= low_positive_honor
+				add = 25
+			}
+		}
+	}
+
+	#Negative option. You do the dishonorable thing and abuse your position as a squire.
+	option = {
+		name = agot_squirehood_ongoing.0207.negative
+		custom_tooltip = agot_squirehood_ongoing.0207.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 33
+			modifier = { #More likely depending on the following traits
+				add = 15
+				has_trait = callous
+			}
+			modifier = {
+				add = 15
+				has_trait = impatient
+			}
+			modifier = {
+				add = 10
+				has_trait = wrathful
+			}
+			modifier = {
+				add = 5
+				has_trait = cynical
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 10
+			}
+		}
+	}
+}
+
+## 0208-0208: (As a squire) Your knight tests your knowledge on Westerosi heraldry (1) - PTK +/- 5
+agot_squirehood_ongoing.0208 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0208.t
+	desc = agot_squirehood_ongoing.0208.desc
+
+	theme = martial
+
+	override_background = {
+		reference = army_camp
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_heraldy_quiz_1_flag #You can't have have this event recently
+			has_character_flag = squirehood_ongoing_heraldy_quiz_2_flag
+			has_character_flag = squirehood_ongoing_heraldy_quiz_3_flag
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+		modifier = {
+			add = 0.5
+			learning >= decent_skill_rating
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_heraldy_quiz_1_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0208 fired"
+		#debug_log_scopes = yes
+	}
+
+	#False Answer
+	option = {
+		name = agot_squirehood_ongoing.0208.a
+		custom_tooltip = agot_squirehood_ongoing.0208.a.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = -5
+			}
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.fail
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = disappointed_opinion
+						opinion = -10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_loss
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 5
+				has_trait = lazy
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_bad
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 25
+				learning < decent_skill_rating
+			}
+		}
+	}
+
+	#False Answer
+	option = {
+		name = agot_squirehood_ongoing.0208.b
+		custom_tooltip = agot_squirehood_ongoing.0208.b.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = -5
+			}
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.fail
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = disappointed_opinion
+						opinion = -10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_loss
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 10
+				has_trait = lazy
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_bad
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 25
+				learning < decent_skill_rating
+			}
+		}
+	}
+
+	#Correct Answer (Lannister, Martell, Tyrell)
+	option = {
+		name = agot_squirehood_ongoing.0208.c
+		custom_tooltip = agot_squirehood_ongoing.0208.c.tt
+		hidden_effect = {
+			agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.pass
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = pleased_opinion
+						opinion = 10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_gain
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 15
+				has_trait = diligent
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_good
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 30
+				has_trait = scholar
+			}
+			modifier = {
+				add = 25
+				learning > decent_skill_rating
+			}
+		}
+	}
+
+}
+
+## 0209-0209: (As a squire) Your knight tests your knowledge on Westerosi heraldry (2) - PTK +/- 5
+agot_squirehood_ongoing.0209 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0209.t
+	desc = agot_squirehood_ongoing.0209.desc
+
+	theme = martial
+
+	override_background = {
+		reference = army_camp
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_heraldy_quiz_1_flag #You can't have have this event recently
+			has_character_flag = squirehood_ongoing_heraldy_quiz_2_flag
+			has_character_flag = squirehood_ongoing_heraldy_quiz_3_flag
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+		modifier = {
+			add = 0.5
+			learning >= decent_skill_rating
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_heraldy_quiz_2_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0209 fired"
+		#debug_log_scopes = yes
+	}
+
+	#False Answer
+	option = {
+		name = agot_squirehood_ongoing.0209.a
+		custom_tooltip = agot_squirehood_ongoing.0209.a.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = -5
+			}
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.fail
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = disappointed_opinion
+						opinion = 10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_loss
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 10
+				has_trait = lazy
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_bad
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 25
+				learning < decent_skill_rating
+			}
+		}
+	}
+
+	#Correct Answer (Connington, Crakehall, Royce)
+	option = {
+		name = agot_squirehood_ongoing.0209.b
+		custom_tooltip = agot_squirehood_ongoing.0209.b.tt
+		hidden_effect = {
+			agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.pass
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = pleased_opinion
+						opinion = 10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_gain
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 15
+				has_trait = diligent
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_good
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 30
+				has_trait = scholar
+			}
+			modifier = {
+				add = 25
+				learning > decent_skill_rating
+			}
+		}
+	}
+
+	#False Answer
+	option = {
+		name = agot_squirehood_ongoing.0209.c
+		custom_tooltip = agot_squirehood_ongoing.0209.c.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = -5
+			}
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.fail
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = disappointed_opinion
+						opinion = 10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_loss
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 10
+				has_trait = lazy
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_bad
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 25
+				learning < decent_skill_rating
+			}
+		}
+	}
+
+}
+
+## 0210-0210: (As a squire) Your knight tests your knowledge on Westerosi heraldry (3) - PTK +/- 5
+agot_squirehood_ongoing.0210 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0210.t
+	desc = agot_squirehood_ongoing.0210.desc
+
+	theme = martial
+
+	override_background = {
+		reference = army_camp
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+
+		NOT = {
+			has_character_flag = squirehood_ongoing_heraldy_quiz_1_flag #You can't have have this event recently
+			has_character_flag = squirehood_ongoing_heraldy_quiz_2_flag
+			has_character_flag = squirehood_ongoing_heraldy_quiz_3_flag
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+		modifier = {
+			add = 0.5
+			learning >= decent_skill_rating
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_heraldy_quiz_3_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0210 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Correct Answer (Caron, Tarly, Florent)
+	option = {
+		name = agot_squirehood_ongoing.0210.a
+		custom_tooltip = agot_squirehood_ongoing.0210.a.tt
+		hidden_effect = {
+			agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.pass
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = pleased_opinion
+						opinion = 10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_gain
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 15
+				has_trait = diligent
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_good
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 30
+				has_trait = scholar
+			}
+			modifier = {
+				add = 25
+				learning > decent_skill_rating
+			}
+		}
+	}
+
+	#False Answer
+	option = {
+		name = agot_squirehood_ongoing.0210.b
+		custom_tooltip = agot_squirehood_ongoing.0210.b.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = -5
+			}
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.fail
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = disappointed_opinion
+						opinion = 10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_loss
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 10
+				has_trait = lazy
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_bad
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 25
+				learning < decent_skill_rating
+			}
+		}
+	}
+
+	#False Answer
+	option = {
+		name = agot_squirehood_ongoing.0210.c
+		custom_tooltip = agot_squirehood_ongoing.0210.c.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = -5
+			}
+			send_interface_toast = {
+				title = agot_squirehood_ongoing.heraldry_quiz.toast.fail
+				left_icon = root
+				right_icon = scope:my_knight
+
+				scope:my_knight = {
+					add_opinion = {
+						modifier = disappointed_opinion
+						opinion = 10
+						target = root
+					}
+				}
+
+				add_prestige = miniscule_prestige_loss
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				add = 10
+				has_trait = lazy
+			}
+			modifier = {
+				add = 25
+				has_trait_rank = {
+					trait = intellect_bad
+					rank >= 1
+				}
+			}
+			modifier = {
+				add = 25
+				learning < decent_skill_rating
+			}
+		}
+	}
+
+}
+
+## 0211-0211: (As a squire) You encounter a beggar in the streets. Your knight asks you what to do - PTK +/- 5
+agot_squirehood_ongoing.0211 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0211.t
+	desc = agot_squirehood_ongoing.0211.desc
+
+	theme = martial
+
+	override_background = {
+		reference = market
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_poor_beggar_encounter_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_poor_beggar_encounter_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0211 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option.
+	option = {
+		name = agot_squirehood_ongoing.0211.generic
+		custom_tooltip = agot_squirehood_ongoing.0211.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 35
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = compassionate
+			}
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = gregarious
+			}
+			modifier = {
+				add = 5
+				has_trait = just
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 25
+			}
+			modifier = {
+				ai_compassion >= low_positive_compassion
+				add = 33
+			}
+		}
+	}
+
+	#Negative option. You do the dishonorable thing and abuse your position as a squire.
+	option = {
+		name = agot_squirehood_ongoing.0211.negative
+		custom_tooltip = agot_squirehood_ongoing.0211.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 25
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = arrogant
+			}
+			modifier = {
+				add = 15
+				has_trait = rude
+			}
+			modifier = {
+				ai_boldness >= low_positive_boldness
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 25
+			}
+			modifier = {
+				ai_compassion <= low_negative_compassion
+				add = 33
+			}
+		}
+	}
+}
+
+## 0212-0212: (As a squire) While dressing your knight in his armor, you mess up. Blame him for shit armor or admit your error - PTK +/- 5
+agot_squirehood_ongoing.0212 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0212.t
+	desc = agot_squirehood_ongoing.0212.desc
+
+	theme = martial
+
+	override_background = {
+		reference = armory
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_armor_dressing_mistake_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_armor_dressing_mistake_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0212 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. You do the expected thing and clean the gear.
+	option = {
+		name = agot_squirehood_ongoing.0212.generic
+		custom_tooltip = agot_squirehood_ongoing.0212.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 35
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = honest
+			}
+			modifier = {
+				has_trait = just
+				add = 5
+			}
+			modifier = {
+				ai_honor >= low_positive_honor
+				add = 25
+			}
+		}
+	}
+
+	#Negative option. You do the dishonorable thing and abuse your position as a squire.
+	option = {
+		name = agot_squirehood_ongoing.0212.negative
+		custom_tooltip = agot_squirehood_ongoing.0212.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 15
+			modifier = { #More likely depending on the following traits
+				add = 25
+				has_trait = deceitful
+			}
+			modifier = {
+				has_trait = arrogant
+				add = 5
+			}
+			modifier = {
+				ai_boldness >= low_positive_boldness
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 25
+			}
+		}
+	}
+}
+
+## 0213-213: (As a squire) Several bullies are about to beat up a weaker stablehand. What do you do? - PTK +/- 5
+agot_squirehood_ongoing.0213 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0213.t
+	desc = agot_squirehood_ongoing.0213.desc
+
+	theme = martial
+
+	override_background = {
+		reference = armory
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_bully_1_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+		modifier = {
+			add = 0.25
+			age >= 10
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_bully_1_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0213 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. You do the knightly thing and defend the innocent.
+	option = {
+		name = agot_squirehood_ongoing.0213.generic
+		custom_tooltip = agot_squirehood_ongoing.0213.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 55
+			modifier = { #More likely depending on the following traits
+				add = 15
+				has_trait = compassionate
+			}
+			modifier = {
+				has_trait = brave
+				add = 10
+			}
+			modifier = {
+				has_trait = authoritative
+				add = 5
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 5
+			}
+			modifier = {
+				ai_honor >= low_positive_honor
+				add = 25
+			}
+			modifier = {
+				ai_compassion >= low_positive_compassion
+				add = 15
+			}
+		}
+	}
+
+	#Negative option. You do the dishonorable thing and ignore an innocent person in need of protection.
+	option = {
+		name = agot_squirehood_ongoing.0213.negative
+		custom_tooltip = agot_squirehood_ongoing.0213.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 45
+			modifier = { #More likely depending on the following traits
+				has_trait = callous
+				add = 15
+			}
+			modifier = {
+				has_trait = sadistic
+				add = 25
+			}
+			modifier = {
+				has_trait = craven
+				add = 30
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 5
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 30
+			}
+			modifier = {
+				ai_compassion <= low_negative_compassion
+				add = 30
+			}
+		}
+	}
+
+	#AGOT TODO CRUEL OPTION (TEACH THE STABLEHAND A LESSON YOURSELF)
+}
+
+## 0214-0214: (As a squire) Your knight gives you a simple errand but you think you're above doing it. - PTK +/- 5
+agot_squirehood_ongoing.0214 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0214.t
+	desc = agot_squirehood_ongoing.0214.desc
+
+	theme = martial
+
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = root
+		animation = boredom
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_generic_easy_errand_1_encounter_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_generic_easy_errand_1_encounter_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0214 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. You do the expected thing and run the errand.
+	option = {
+		name = agot_squirehood_ongoing.0214.generic
+		custom_tooltip = agot_squirehood_ongoing.0214.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 55
+			modifier = { #More likely depending on the following traits
+				has_trait = diligent
+				add = 25
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 5
+			}
+			modifier = {
+				ai_honor >= low_positive_honor
+				add = 25
+			}
+		}
+	}
+
+	#Negative option. You refuse to do the expected, squire-ly thing. Bad.
+	option = {
+		name = agot_squirehood_ongoing.0214.negative
+		custom_tooltip = agot_squirehood_ongoing.0214.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 45
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = arrogant
+			}
+			modifier = { #More likely depending on the following traits
+				add = 25
+				has_trait = lazy
+			}
+			modifier = {
+				ai_boldness >= low_positive_boldness
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 25
+			}
+		}
+	}
+
+}
+
+## 0215-0215: (As a squire) After running an errand you have some left over gold from your knight. Act on it. - PTK +/- 5
+agot_squirehood_ongoing.0215 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0215.t
+	desc = agot_squirehood_ongoing.0215.desc
+
+	theme = martial
+
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = squirehood_ongoing_spare_gold_1_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_spare_gold_1_flag
+			months = 7
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0215 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. You do the expected thing and run the errand.
+	option = {
+		name = agot_squirehood_ongoing.0215.generic
+		custom_tooltip = agot_squirehood_ongoing.0215.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 55
+			modifier = { #More likely depending on the following traits
+				add = 25
+				has_trait = temperate
+			}
+			modifier = { #More likely depending on the following traits
+				add = 10
+				has_trait = honest
+			}
+			modifier = {
+				add = 10
+				has_trait = just
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 15
+			}
+			modifier = {
+				ai_honor >= low_positive_honor
+				add = 25
+			}
+		}
+	}
+
+	#Negative option. You refuse to do the expected, squire-ly thing. Bad.
+	option = {
+		name = agot_squirehood_ongoing.0215.negative
+		custom_tooltip = agot_squirehood_ongoing.0215.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 45
+			modifier = { #More likely depending on the following traits
+				add = 25
+				has_trait = greedy
+			}
+			modifier = {
+				ai_greed >= medium_positive_greed
+				add = 33
+			}
+			modifier = {
+				ai_boldness >= low_positive_boldness
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 15
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 25
+			}
+		}
+	}
+
+}
+
+## 0216-0216: (As a squire) You have some downtime and decide whether or not to practice what you're knight's taught you - PTK +/- 5
+agot_squirehood_ongoing.0216 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0216.t
+	desc = agot_squirehood_ongoing.0216.desc
+
+	theme = martial
+
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+
+		NOT = {
+			has_character_flag = squirehood_ongoing_leisure_or_practice_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_leisure_or_practice_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0216 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option. You do the expected thing and pratice.
+	option = {
+		name = agot_squirehood_ongoing.0216.generic
+		custom_tooltip = agot_squirehood_ongoing.0216.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 50
+			modifier = { #More likely depending on the following traits
+				add = 15
+				has_trait = diligent
+			}
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 15
+			}
+			modifier = {
+				ai_honor >= low_positive_honor
+				add = 15
+			}
+		}
+	}
+
+	#Negative option. You neglect practicing.
+	option = {
+		name = agot_squirehood_ongoing.0216.negative
+		custom_tooltip = agot_squirehood_ongoing.0216.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 50
+			modifier = { #More likely depending on the following traits
+				add = 33
+				has_trait = lazy
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 35
+			}
+		}
+	}
+
+}
+
+## 0217-0217: (As a squire) You run a generic (hard) errand for your knight -
+agot_squirehood_ongoing.0217 = {
+	type = character_event
+	title = agot_squirehood_ongoing.0217.t
+	desc = agot_squirehood_ongoing.0217.desc
+
+	theme = martial
+
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+
+		NOT = {
+			has_character_flag = squirehood_ongoing_generic_hard_event_flag #You can't have have this event recently
+		}
+	}
+
+	weight_multiplier = {
+		base = 0.5
+		modifier = {
+			add = 0.5
+			ai_energy >= low_positive_energy
+		}
+		modifier = {
+			add = 0.5
+			ai_honor >= low_positive_honor
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = squirehood_ongoing_generic_hard_event_flag
+			months = 4
+		}
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight
+		}
+		#debug_log = "agot_squirehood_ongoing.0217 fired"
+		#debug_log_scopes = yes
+	}
+
+	#Generic option.
+	option = {
+		name = agot_squirehood_ongoing.0217.generic
+		custom_tooltip = agot_squirehood_ongoing.0217.generic.tt
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 5 }
+		ai_chance = {
+			base = 50
+			modifier = {
+				ai_energy >= low_positive_energy
+				add = 15
+			}
+			modifier = {
+				ai_honor >= low_positive_honor
+				add = 15
+			}
+		}
+	}
+
+	#Negative option.
+	option = {
+		name = agot_squirehood_ongoing.0217.negative
+		custom_tooltip = agot_squirehood_ongoing.0217.negative.tt
+		add_trait_xp = {
+			trait = squire
+			track = knight
+			value = -5
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				has_trait = rude
+				add = 5
+			}
+			modifier = {
+				ai_energy <= low_negative_energy
+				add = 25
+			}
+			modifier = {
+				ai_energy <= low_negative_honor
+				add = 25
+			}
+		}
+	}
+
+}
+
+## A one time event that fires after a squire becomes of age (16) and grants them +5-10 PTK
+## This is triggered from the on_16th_birthday on_action
+agot_squirehood_ongoing.0230 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		agot_is_squire_with_knight = yes
+	}
+
+	immediate = {
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 5 MAX_VALUE = 10 }
+	}
+}
+
+## This event fires on the squire's birthday EVERY year AFTER age 16 and grants them +1 PTK
+## This is triggered from the on_birthday on_action
+agot_squirehood_ongoing.0231 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		AND = {
+			agot_is_squire_with_knight = yes
+			has_trait_xp = {
+				trait = squire
+				track = knight
+				value >= 0
+			}
+			age > 16
+		}
+	}
+
+	immediate = {
+		agot_add_squire_trait_xp_effect = { MIN_VALUE = 1 MAX_VALUE = 1 }
+	}
+}
+
+## This event is a one time boost to PTK IF you're prowess is higher than high_skill_rating or very_high_skill rating
+## This is triggered from a yearly pulse on_action
+agot_squirehood_ongoing.0232 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				prowess >= high_skill_rating
+				prowess < very_high_skill_rating
+			}
+			prowess >= very_high_skill_rating
+		}
+		agot_is_squire_with_knight = yes
+		NOT = {
+			has_character_flag = agot_knighthood_maintenance_one_time_prowess_PTK_boost_flag
+		}
+	}
+
+	immediate = {
+		add_character_flag = agot_knighthood_maintenance_one_time_prowess_PTK_boost_flag
+		if = {
+			limit = {
+				AND = {
+					prowess >= high_skill_rating
+					prowess < very_high_skill_rating
+					#If prowess is higher than or equal to high_skill_rating AND is also less than very_high_skill_rating
+				}
+			}
+			agot_add_squire_trait_xp_effect = { MIN_VALUE = 10 MAX_VALUE = 10 }
+		}
+		else_if = {
+			limit = {
+				prowess >= very_high_skill_rating
+			}
+			agot_add_squire_trait_xp_effect = { MIN_VALUE = 10 MAX_VALUE = 15 }
+		}
+	}
+}
+
+agot_squirehood_ongoing.0400 = {
+	type = character_event
+	hidden = yes
+	# title = agot_squirehood_ongoing.0400.t
+	# desc = agot_squirehood_ongoing.0400.desc
+
+	theme = martial
+
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = scope:my_squire
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+	immediate = {
+		random_relation = {
+			type = agot_knight
+			save_scope_as = my_knight #For scoping
+		}
+		root = {
+			save_scope_as = my_squire
+		}
+	}
+
+	#Strategy
+	option = {
+		name = agot_squirehood_ongoing.0400.a
+		random_list = {
+			3 = { #Good Training Session Chance
+				modifier = {
+					scope:my_squire = {
+						has_trait_xp = {
+							trait = squire
+							track = knight
+							value >= 25
+						}
+					}
+					add = 25 #At this point you've been around the block and can understand theoretics.
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait_xp = {
+							trait = squire
+							track = knight
+							value >= 10
+						}
+					}
+					add = 2 #At this PTK, you're still learning, but you've learned some things so you shouldn't be punished to harshly
+				}
+				modifier = {
+					scope:my_squire.learning > mediocre_skill_rating #Having a learning skill higher than 8 will add 3
+					add = 3 # This number is fairly high since this event is about LEARNING the skills
+				}
+				modifier = {
+					scope:my_squire.martial > mediocre_skill_rating #Having a learning skill higher than 8 will add 5
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess
+					}
+					add = 1 #This is a low number because not every fighter will understand strategy
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_1
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_2
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_3
+					}
+					add = 9
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = shrewd
+					}
+					add = 9
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = strategist
+					}
+					add = 25
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = bossy
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = curious
+					}
+					add = 1 #Asking questions, while learning and practicing strategy, is probably a good thing to do
+				}
+				custom_tooltip = agot_squirehood_ongoing.0400.good_training.tt
+				scope:my_squire = {
+					add_character_flag = agot_squirehood_401_good_strategy_training					
+					send_interface_message = {
+						# type = event_generic_good_text
+						title = agot_squirehood_ongoing.0400.had_a_training_session.t
+						# desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good
+						custom_tooltip = { 
+						desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.strat.good
+						}
+						# left_icon = root
+						right_icon = scope:my_knight
+					}
+				}
+				trigger_event = {
+					id = agot_squirehood_ongoing.0401
+					days = 1
+				}
+			}
+
+			2 = { #Bad Training Session Chance
+				modifier = {
+					scope:my_squire.learning < mediocre_skill_rating
+					add = 1
+				}
+				modifier = {
+					scope:my_squire.martial < mediocre_skill_rating
+					add = 2 #This has less of an impact on this 'side of the coin' because a lot of squires will (ideally) be young lads who haven't developed traits/skillpoints yet; therefore we need to judge less harshly to maintain balance
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = lazy
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_1
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_2
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_3
+					}
+					add = 9
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = dull
+					}
+					add = 5
+				}
+				custom_tooltip = agot_squirehood_ongoing.0400.bad_training.tt
+				scope:my_squire = {
+					add_character_flag = agot_squirehood_401_bad_strategy_training					
+					send_interface_message = {
+						# type = event_generic_good_text
+						title = agot_squirehood_ongoing.0400.had_a_training_session.t
+						# desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good
+						custom_tooltip = { 
+						desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.strat.bad
+						}
+						# left_icon = root
+						right_icon = scope:my_knight
+					}
+				}
+				trigger_event = {
+					id = agot_squirehood_ongoing.0401
+					days = 1
+				}
+			}
+		}
+
+		
+		ai_chance = {
+			base = 100
+			modifier = {
+				scope:my_squire = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 25
+					}
+				}
+				add = 25 #At this point you've been around the block and can understand theoretics.
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 10
+					}
+				}
+				add = 2 #At this PTK, you're still learning, but you've learned some things so you shouldn't be punished to harshly
+			}
+			modifier = {
+				scope:my_squire.learning > mediocre_skill_rating #Having a learning skill higher than 8 will add 3
+				add = 3 # This number is fairly high since this event is about LEARNING the skills
+			}
+			modifier = {
+				scope:my_squire.martial > mediocre_skill_rating #Having a learning skill higher than 8 will add 5
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess
+				}
+				add = 1 #This is a low number because not every fighter will understand strategy
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_1
+				}
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_2
+				}
+				add = 7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_3
+				}
+				add = 9
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = shrewd
+				}
+				add = 9
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = strategist
+				}
+				add = 25
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = bossy
+				}
+				add = 3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = curious
+				}
+				add = 1 #Asking questions, while learning and practicing strategy, is probably a good thing to do
+			}
+
+
+
+			modifier = {
+				scope:my_squire.learning < mediocre_skill_rating
+				add = -1
+			}
+			modifier = {
+				scope:my_squire.martial < mediocre_skill_rating
+				add = -2 #This has less of an impact on this 'side of the coin' because a lot of squires will (ideally) be young lads who haven't developed traits/skillpoints yet; therefore we need to judge less harshly to maintain balance
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = lazy
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_1
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_2
+				}
+				add = -7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_3
+				}
+				add = -9
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = dull
+				}
+				add = -5
+			}
+		}
+	}
+
+	#Chivalry
+	option = {
+		name = agot_squirehood_ongoing.0400.b
+		random_list = {
+			4 = { #Good Training Session
+				modifier = {
+					scope:my_squire = {
+						has_trait_xp = {
+							trait = squire
+							track = knight
+							value >= 25
+						}
+					}
+					add = 25 #At this point you've been around the block and can understand theoretics.
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait_xp = {
+							trait = squire
+							track = knight
+							value >= 10
+						}
+					}
+					add = 2 #At this PTK, you're still learning, but you've learned some things so you shouldn't be punished to harshly
+				}
+				modifier = {
+					scope:my_squire.learning > mediocre_skill_rating
+					add = 1
+				}
+				modifier = {
+					scope:my_squire.martial > mediocre_skill_rating
+					add = 1
+				}
+				modifier = {
+					scope:my_squire.intrigue > mediocre_skill_rating
+					add = 4
+				}
+				modifier = {
+					scope:my_squire.diplomacy > mediocre_skill_rating
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_1
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_2
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_3
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial
+					}
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = gregarious
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = gallant
+					}
+					add = 25
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = charming
+					}
+					add = 3
+				}
+				custom_tooltip = agot_squirehood_ongoing.0400.good_training.tt
+				scope:my_squire = {
+					add_character_flag = agot_squirehood_401_good_chivalry_training					
+					send_interface_message = {
+						# type = event_generic_good_text
+						title = agot_squirehood_ongoing.0400.had_a_training_session.t
+						# desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good
+						custom_tooltip = { 
+						desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.chiv.good
+						}
+						# left_icon = root
+						right_icon = scope:my_knight
+					}
+				}
+				trigger_event = {
+					id = agot_squirehood_ongoing.0401
+					days = 1
+				}
+			}
+
+			2 = { #Bad Training Session
+				modifier = {
+					scope:my_squire.learning < mediocre_skill_rating
+					add = 1
+				}
+				modifier = {
+					scope:my_squire.martial < mediocre_skill_rating
+					add = 1
+				}
+				modifier = {
+					scope:my_squire.intrigue < mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					scope:my_squire.diplomacy < mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = lazy
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_1
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_2
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_3
+					}
+					add = 9
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = dull
+					}
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = shy
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = pensive
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = rude
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = arrogant
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = sadistic
+					}
+					add = 5
+				}
+				custom_tooltip = agot_squirehood_ongoing.0400.bad_training.tt
+				scope:my_squire = {
+					add_character_flag = agot_squirehood_401_bad_chivalry_training
+					send_interface_message = {
+						# type = event_generic_good_text
+						title = agot_squirehood_ongoing.0400.had_a_training_session.t
+						# desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good
+						custom_tooltip = { 
+						desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.chiv.bad
+						}
+						# left_icon = root
+						right_icon = scope:my_knight
+					}
+				}
+				trigger_event = agot_squirehood_ongoing.0401
+			}
+
+			ai_chance = {
+			base = 115
+		}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				scope:my_squire = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 25
+					}
+				}
+				add = 25 #At this point you've been around the block and can understand theoretics.
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 10
+					}
+				}
+				add = 2 #At this PTK, you're still learning, but you've learned some things so you shouldn't be punished to harshly
+			}
+			modifier = {
+				scope:my_squire.learning > mediocre_skill_rating
+				add = 1
+			}
+			modifier = {
+				scope:my_squire.martial > mediocre_skill_rating
+				add = 1
+			}
+			modifier = {
+				scope:my_squire.intrigue > mediocre_skill_rating
+				add = 4
+			}
+			modifier = {
+				scope:my_squire.diplomacy > mediocre_skill_rating
+				add = 3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_1
+				}
+				add = 3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_2
+				}
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_3
+				}
+				add = 7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial
+				}
+				add = 2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = gregarious
+				}
+				add = 3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = gallant
+				}
+				add = 25
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = charming
+				}
+				add = 3
+			}
+
+
+			modifier = {
+				scope:my_squire.learning < mediocre_skill_rating
+				add = -1
+			}
+			modifier = {
+				scope:my_squire.martial < mediocre_skill_rating
+				add = -1
+			}
+			modifier = {
+				scope:my_squire.intrigue < mediocre_skill_rating
+				add = -2
+			}
+			modifier = {
+				scope:my_squire.diplomacy < mediocre_skill_rating
+				add = -2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = lazy
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_1
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_2
+				}
+				add = -7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_3
+				}
+				add = -9
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = dull
+				}
+				add = -2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = shy
+				}
+				add = -3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = pensive
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = rude
+				}
+				add = -7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = arrogant
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = sadistic
+				}
+				add = -5
+			}
+		}
+	}
+
+	#Train Arms
+	option = {
+		name = agot_squirehood_ongoing.0400.c
+		random_list = {
+			4 = { #Good Training Session
+				modifier = {
+					scope:my_squire = {
+						has_trait_xp = {
+							trait = squire
+							track = knight
+							value >= 25
+						}
+					}
+					add = 25 #At this point you've been around the block and can understand theoretics.
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait_xp = {
+							trait = squire
+							track = knight
+							value >= 10
+						}
+					}
+					add = 2 #At this PTK, you're still learning, but you've learned some things so you shouldn't be punished to harshly
+				}
+				modifier = {
+					scope:my_squire.martial > mediocre_skill_rating
+					add = 5
+				}
+				modifier = {
+					scope:my_squire.prowess > mediocre_skill_rating
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial
+					}
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_1
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_2
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_3
+					}
+					add = 9
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_4
+					}
+					add = 11
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_5
+					}
+					add = 13
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_1
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_2
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_3
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = shrewd
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = overseer
+					}
+					add = 25
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = bossy
+					}
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = rowdy
+					}
+					add = 3
+				}
+				custom_tooltip = agot_squirehood_ongoing.0400.good_training.tt
+				scope:my_squire = {
+					add_character_flag = agot_squirehood_401_good_arms_training
+					send_interface_message = {
+						# type = event_generic_good_text
+						title = agot_squirehood_ongoing.0400.had_a_training_session.t
+						# desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good
+						custom_tooltip = { 
+							text = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good 
+						}
+						# left_icon = root
+						right_icon = scope:my_knight
+					}
+				}
+				trigger_event = {
+					id = agot_squirehood_ongoing.0401
+					days = 1
+				}
+			}
+
+			1 = { #Bad Training Session
+				modifier = {
+					scope:my_squire.prowess < mediocre_skill_rating
+					add = 1
+				}
+				modifier = {
+					scope:my_squire.martial < mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = lazy
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_1
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_2
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_3
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = dull
+					}
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = shy
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = pensive
+					}
+					add = 4
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = craven
+					}
+					add = 3
+				}
+				custom_tooltip = agot_squirehood_ongoing.0400.bad_training.tt
+				scope:my_squire = {
+					add_character_flag = agot_squirehood_401_bad_arms_training								
+					send_interface_message = {
+						# type = event_generic_good_text
+						title = agot_squirehood_ongoing.0400.had_a_training_session.t
+						# desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good
+						custom_tooltip = { 
+							text = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.bad
+						}
+						# left_icon = root
+						right_icon = scope:my_knight
+					}
+				}
+				trigger_event = {
+					id = agot_squirehood_ongoing.0401
+					days = 1
+				}
+			}
+		}
+		ai_chance = {
+			base = 130
+
+			modifier = {
+				scope:my_squire = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 25
+					}
+				}
+				add = 25 #At this point you've been around the block and can understand theoretics.
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 10
+					}
+				}
+				add = 2 #At this PTK, you're still learning, but you've learned some things so you shouldn't be punished to harshly
+			}
+			modifier = {
+				scope:my_squire.martial > mediocre_skill_rating
+				add = 5
+			}
+			modifier = {
+				scope:my_squire.prowess > mediocre_skill_rating
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial
+				}
+				add = 2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_1
+				}
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_2
+				}
+				add = 7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_3
+				}
+				add = 9
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_4
+				}
+				add = 11
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_5
+				}
+				add = 13
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_1
+				}
+				add = 3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_2
+				}
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_3
+				}
+				add = 7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = shrewd
+				}
+				add = 7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = overseer
+				}
+				add = 25
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = bossy
+				}
+				add = 2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = rowdy
+				}
+				add = 3
+			}
+
+
+			modifier = {
+				scope:my_squire.prowess < mediocre_skill_rating
+				add = -1
+			}
+			modifier = {
+				scope:my_squire.martial < mediocre_skill_rating
+				add = -2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = lazy
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_1
+				}
+				add = -3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_2
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_3
+				}
+				add = -7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = dull
+				}
+				add = -2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = shy
+				}
+				add = -3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = pensive
+				}
+				add = -4
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = craven
+				}
+				add = -3
+			}
+
+		}
+	}
+
+	#Train Horseriding
+	option = {
+		name = agot_squirehood_ongoing.0400.d
+		random_list = {
+			4 = { #Good Training Session
+			modifier = {
+					scope:my_squire = {
+						has_trait_xp = {
+							trait = squire
+							track = knight
+							value >= 25
+						}
+					}
+					add = 25 #At this point you've been around the block and can understand theoretics.
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait_xp = {
+							trait = squire
+							track = knight
+							value >= 10
+						}
+					}
+					add = 2 #At this PTK, you're still learning, but you've learned some things so you shouldn't be punished to harshly
+				}
+				modifier = {
+					scope:my_squire.martial > mediocre_skill_rating
+					add = 5
+				}
+				modifier = {
+					scope:my_squire.prowess > mediocre_skill_rating
+					add = 5
+				}
+				modifier = {
+					scope:my_squire.learning > mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial
+					}
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_1
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_2
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_3
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_4
+					}
+					add = 9
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = education_martial_prowess_5
+					}
+					add = 11
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_1
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_2
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_good_3
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = overseer
+					}
+					add = 25
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = bossy
+					}
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = rowdy
+					}
+					add = 2
+				}
+				custom_tooltip = agot_squirehood_ongoing.0400.good_training.tt
+				scope:my_squire = {
+					add_character_flag = agot_squirehood_401_good_horse_training					
+					send_interface_message = {
+						# type = event_generic_good_text
+						title = agot_squirehood_ongoing.0400.had_a_training_session.t
+						# desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good
+						custom_tooltip = { 
+							text = agot_squirehood_ongoing.0400.had_a_training_session.desc.horse.good
+						}
+						# left_icon = root
+						right_icon = scope:my_knight
+					}
+				}
+				trigger_event = {
+					id = agot_squirehood_ongoing.0401
+					days = 1
+				}
+			}
+
+			2 = { #Squire DID NOT do good in strategy training
+				modifier = {
+					scope:my_squire.prowess < mediocre_skill_rating
+					add = 1
+				}
+				modifier = {
+					scope:my_squire.learning < mediocre_skill_rating
+					add = 1
+				}
+				modifier = {
+					scope:my_squire.martial < mediocre_skill_rating
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = lazy
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_1
+					}
+					add = 3
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_2
+					}
+					add = 5
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = intellect_bad_3
+					}
+					add = 7
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = dull
+					}
+					add = 2
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = pensive
+					}
+					add = 4
+				}
+				modifier = {
+					scope:my_squire = {
+						has_trait = craven
+					}
+					add = 1
+				}
+				custom_tooltip = agot_squirehood_ongoing.0400.bad_training.tt
+				scope:my_squire = {
+					add_character_flag = agot_squirehood_401_bad_horse_training
+					send_interface_message = {
+						# type = event_generic_good_text
+						title = agot_squirehood_ongoing.0400.had_a_training_session.t
+						# desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.arms.good
+						custom_tooltip = { 
+							desc = agot_squirehood_ongoing.0400.had_a_training_session.desc.horse.bad
+						}
+						# left_icon = root
+						right_icon = scope:my_knight
+					}
+				}
+				trigger_event = {
+					id = agot_squirehood_ongoing.0401
+					days = 1
+				}
+			}
+
+		}		
+		ai_chance = {
+			base = 115
+			modifier = {
+				scope:my_squire = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 25
+					}
+				}
+				add = 25 #At this point you've been around the block and can understand theoretics.
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait_xp = {
+						trait = squire
+						track = knight
+						value >= 10
+					}
+				}
+				add = 2 #At this PTK, you're still learning, but you've learned some things so you shouldn't be punished to harshly
+			}
+			modifier = {
+				scope:my_squire.martial > mediocre_skill_rating
+				add = 5
+			}
+			modifier = {
+				scope:my_squire.prowess > mediocre_skill_rating
+				add = 5
+			}
+			modifier = {
+				scope:my_squire.learning > mediocre_skill_rating
+				add = 2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial
+				}
+				add = 2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_1
+				}
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_2
+				}
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_3
+				}
+				add = 7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_4
+				}
+				add = 9
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = education_martial_prowess_5
+				}
+				add = 11
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_1
+				}
+				add = 3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_2
+				}
+				add = 5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_good_3
+				}
+				add = 7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = overseer
+				}
+				add = 25
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = bossy
+				}
+				add = 2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = rowdy
+				}
+				add = 2
+			}
+
+
+
+			modifier = {
+				scope:my_squire.prowess < mediocre_skill_rating
+				add = -1
+			}
+			modifier = {
+				scope:my_squire.learning < mediocre_skill_rating
+				add = -1
+			}
+			modifier = {
+				scope:my_squire.martial < mediocre_skill_rating
+				add = -2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = lazy
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_1
+				}
+				add = -3
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_2
+				}
+				add = -5
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = intellect_bad_3
+				}
+				add = -7
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = dull
+				}
+				add = -2
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = pensive
+				}
+				add = -4
+			}
+			modifier = {
+				scope:my_squire = {
+					has_trait = craven
+				}
+				add = -1
+			}
+		}
+	}
+}
+
+agot_squirehood_ongoing.0401 = {
+	type = character_event
+	hidden = yes
+	# title = agot_squirehood_ongoing.0401.t
+	# desc = {
+	# 	first_valid = {
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				scope:my_squire = {
+	# 					has_character_flag = agot_squirehood_401_good_strategy_training
+	# 				}
+	# 			}
+	# 			desc = agot_squirehood_ongoing.0401_good_strategy_training.desc
+	# 		}
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				scope:my_squire = {
+	# 					has_character_flag = agot_squirehood_401_bad_strategy_training
+	# 				}
+	# 			}
+	# 			desc = agot_squirehood_ongoing.0401_bad_strategy_training.desc
+	# 		}
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				scope:my_squire = {
+	# 					has_character_flag = agot_squirehood_401_good_chivalry_training
+	# 				}
+	# 			}
+	# 			desc = agot_squirehood_ongoing.0401_good_chivalry_training.desc
+	# 		}
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				scope:my_squire = {
+	# 					has_character_flag = agot_squirehood_401_bad_chivalry_training
+	# 				}
+	# 			}
+	# 			desc = agot_squirehood_ongoing.0401_bad_chivalry_training.desc
+	# 		}
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				scope:my_squire = {
+	# 					has_character_flag = agot_squirehood_401_good_arms_training
+	# 				}
+	# 			}
+	# 			desc = agot_squirehood_ongoing.0401_good_arms_training.desc
+	# 		}
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				scope:my_squire = {
+	# 					has_character_flag = agot_squirehood_401_bad_arms_training
+	# 				}
+	# 			}
+	# 			desc = agot_squirehood_ongoing.0401_bad_arms_training.desc
+	# 		}
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				scope:my_squire = {
+	# 					has_character_flag = agot_squirehood_401_good_horse_training
+	# 				}
+	# 			}
+	# 			desc = agot_squirehood_ongoing.0401_good_horse_training.desc
+	# 		}
+	# 		triggered_desc = {
+	# 			trigger = {
+	# 				scope:my_squire = {
+	# 					has_character_flag = agot_squirehood_401_bad_horse_training
+	# 				}
+	# 			}
+	# 			desc = agot_squirehood_ongoing.0401_bad_horse_training.desc
+	# 		}
+	# 		desc = agot_squirehood_ongoing.0401.desc_fallback #Fallback in the event something doesn't scope or assign properly
+	# 	}
+	# }
+
+	theme = martial
+
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = scope:my_squire
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:my_knight
+		animation = idle
+	}
+
+
+	#Excellent!
+	option = {
+		name = agot_squirehood_ongoing.0401.a
+		trigger = { #This option will only show if the squire has had a good training session.
+			scope:my_squire = {
+				OR = {
+					has_character_flag = agot_squirehood_401_good_strategy_training
+					has_character_flag = agot_squirehood_401_good_chivalry_training
+					has_character_flag = agot_squirehood_401_good_arms_training
+					has_character_flag = agot_squirehood_401_good_horse_training
+				}
+			}
+		}
+		scope:my_squire = {
+			random_list = {
+				10 = { #Low chance at getting a one here just because not every training session will be worthy of maximum praise or whatever
+					scope:my_squire = {
+						if = {
+							limit = {
+								has_trait_xp = { #as long as exists
+									trait = squire
+									track = knight
+									value >= 0
+								}
+							}
+							add_trait_xp = {
+								trait = squire
+								track = knight
+								value = 2
+							}							
+						}
+						else = {
+							debug_log = "BUG Variable PTK Missing"
+							debug_log_scopes = no
+						}
+					}	
+					scope:my_knight = {
+						send_interface_message = {
+							title = agot_squirehood_ongoing.0401.aa
+							custom_tooltip = {
+								text = agot_squirehood_ongoing.0401.aaa
+							}
+							left_icon = root
+							# right_icon = scope:my_squire
+						}
+						
+					}				
+					
+				}
+				5 = { #Sometimes you impress the bossman!
+					scope:my_squire = {
+						add_trait_xp = {
+							trait = squire
+							track = knight
+							value = 10
+						}
+					}
+					scope:my_knight = {
+						send_interface_message = {
+							title = agot_squirehood_ongoing.0401.aa
+							custom_tooltip = {
+								text = agot_squirehood_ongoing.0401.aaa
+							}
+							left_icon = root
+							# right_icon = scope:my_squire
+						}
+					}
+					
+				}
+				25 = {
+					scope:my_squire = {
+						if = {
+							limit = {
+								has_trait_xp = {
+									trait = squire
+									track = knight
+									value >= 0
+								}
+							}
+							add_trait_xp = {
+								trait = squire
+								track = knight
+								value = 5
+							}
+						}
+						else = {
+							debug_log = "BUG Variable PTK Missing"
+							debug_log_scopes = no
+						}
+					}
+					scope:my_knight = {
+						send_interface_message = {
+							title = agot_squirehood_ongoing.0401.aa
+							custom_tooltip = {
+								text = agot_squirehood_ongoing.0401.aaa
+							}
+							left_icon = root
+							# right_icon = scope:my_squire
+						}
+					}
+				}
+			}
+		}
+		
+	}
+
+	#Disapponting!
+	option = { #This option will only show if the squire had a poor training session.
+		name = agot_squirehood_ongoing.0401.b
+		trigger = {
+			scope:my_squire = {
+				OR = {
+					has_character_flag = agot_squirehood_401_bad_strategy_training
+					has_character_flag = agot_squirehood_401_bad_chivalry_training
+					has_character_flag = agot_squirehood_401_bad_arms_training
+					has_character_flag = agot_squirehood_401_bad_horse_training
+				}
+			}
+		}
+		scope:my_squire = {
+			add_trait_xp = {
+				trait = squire
+				track = knight
+				value = -1
+			}
+		}
+		scope:my_knight = {
+			send_interface_message = {
+				title = agot_squirehood_ongoing.0401.bb
+				custom_tooltip = {
+					text = agot_squirehood_ongoing.0401.bbb
+				}
+				left_icon = root
+				# right_icon = scope:my_squire
+			}
+		}		
+		
+	}
+
+	after = { #Remove Flags
+		if = {
+			limit = {
+				scope:my_squire = {
+					has_character_flag = agot_squirehood_401_bad_strategy_training
+				}
+			}
+			scope:my_squire = { remove_character_flag = agot_squirehood_401_bad_strategy_training }
+		}
+		else_if = {
+			limit = {
+				scope:my_squire = {
+					has_character_flag = agot_squirehood_401_good_strategy_training
+				}
+			}
+			scope:my_squire = { remove_character_flag = agot_squirehood_401_good_strategy_training }
+		}
+		else_if = {
+			limit = {
+				scope:my_squire = {
+					has_character_flag = agot_squirehood_401_bad_chivalry_training
+				}
+			}
+			scope:my_squire = { remove_character_flag = agot_squirehood_401_bad_chivalry_training }
+		}
+		else_if = {
+			limit = {
+				scope:my_squire = {
+					has_character_flag = agot_squirehood_401_good_chivalry_training
+				}
+			}
+			scope:my_squire = { remove_character_flag = agot_squirehood_401_good_chivalry_training }
+		}
+		else_if = {
+			limit = {
+				scope:my_squire = {
+					has_character_flag = agot_squirehood_401_bad_arms_training
+				}
+			}
+			scope:my_squire = { remove_character_flag = agot_squirehood_401_bad_arms_training }
+		}
+		else_if = {
+			limit = {
+				scope:my_squire = {
+					has_character_flag = agot_squirehood_401_good_arms_training
+				}
+			}
+			scope:my_squire = { remove_character_flag = agot_squirehood_401_good_arms_training }
+		}
+		else_if = {
+			limit = {
+				scope:my_squire = {
+					has_character_flag = agot_squirehood_401_bad_horse_training
+				}
+			}
+			scope:my_squire = {
+				remove_character_flag = agot_squirehood_401_bad_horse_training
+			}
+		}
+		else_if = {
+			limit = {
+				scope:my_squire = {
+					has_character_flag = agot_squirehood_401_good_horse_training
+				}
+			}
+			scope:my_squire = { remove_character_flag = agot_squirehood_401_good_horse_training	}
+		}
+	}
+}

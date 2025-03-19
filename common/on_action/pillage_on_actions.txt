@@ -1,0 +1,229 @@
+﻿on_siege_completion = {
+	on_actions = {
+		pillage_siege_completion
+		pillage_development_degrade
+		pillage_sack_rival_barony
+	}
+}
+
+on_army_enter_province = {
+	on_actions = {
+		pillage_army_movement_friendly
+		pillage_army_movement_hostile
+	}
+}
+
+on_game_start = {
+	on_actions = {
+		pillage_start
+	}
+}
+pillage_start = {
+	effect = {
+		set_global_variable = {
+            name = pillage_is_loaded
+            value = yes
+        }
+		if = {
+			limit = { 
+				exists = global_var:pillage_is_loaded
+			}
+			debug_log = "### Pillage Loaded."
+		}
+	}
+}
+
+pillage_siege_completion = {
+	trigger = {
+		has_game_rule = pillage_building_destruction_enabled
+	}
+	effect = {
+		scope:previous_controller = {
+			send_interface_message = {
+				type = msg_barony_pillaged
+				title = pillage_message_title
+				right_icon = scope:barony
+				scope:barony = {
+					title_province = {
+						add_province_modifier = {
+							modifier = recently_looted_modifier
+							days = 180
+						}
+						custom_tooltip = pillage_message_tooltip
+					}
+					county = {
+						add_county_modifier = {
+							modifier = recently_looted_modifier
+							days = 180
+						}
+						# change_development_progress_with_overflow = {-10 -30}
+						show_as_tooltip = { destroy_random_building_effect = yes }
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			scope:barony = {
+				title_province = {
+					destroy_random_building_variable_effect = yes
+					destroy_random_building_effect = yes
+				}
+			}
+		}
+	}
+}
+
+pillage_development_degrade = {
+	trigger = {
+		scope:barony = {
+			county = {
+				county.development_level > 10
+			}
+		}
+		OR = {
+			has_game_rule = pillage_development_debuff_enabled
+			has_game_rule = pillage_development_debuff_halved
+		}
+		NOT = {
+			any_owned_story = {
+				story_type = story_mongol_invasion
+			}
+		}
+	}
+	effect = {
+		scope:barony = {
+			county = {
+				if = {
+					limit = { has_game_rule = pillage_development_debuff_enabled }
+					change_development_level = {
+						subtract = scope:county.development_level
+						multiply = 0.10
+						floor = yes
+					}
+				}
+				else_if = {
+					limit = { has_game_rule = pillage_development_debuff_halved }
+					change_development_level = {
+						subtract = scope:county.development_level
+						multiply = 0.05
+						floor = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+pillage_army_movement_friendly = {
+	trigger = {
+		has_game_rule = pillage_friendly_army_debuff_enabled
+		scope:army.location ?= {
+			is_sea_province = no
+			NOT= {
+				has_province_modifier = pillage_army_movement_friendly_province_modifier
+			}
+			county ?= {
+				holder ?= {
+					this = root
+				}
+			}
+		}
+		root = {
+			NOT = {
+				has_character_modifier = warfare_well_provisioned_troops_modifier
+			}
+		}
+	}
+	effect = {
+		scope:army = {
+			location = {
+				county = {
+					change_county_control = {-2 -5}
+					change_development_progress_with_overflow = {-1 -4}
+					add_county_modifier = {
+						modifier = pillage_army_movement_friendly_county_modifier
+						days = 90
+					}
+				}
+				add_province_modifier = {
+					modifier = pillage_army_movement_friendly_province_modifier
+					days = 90
+				}
+			}
+		}
+	}
+}
+
+pillage_army_movement_hostile = {
+	trigger = {
+		has_game_rule = pillage_hostile_army_debuff_enabled
+		scope:army.location ?= {
+			is_sea_province = no
+			county ?= {
+				holder ?= {
+					OR = {
+						any_liege_or_above = {
+							is_at_war_with = root
+						}
+						is_at_war_with = root
+					}
+				}
+			}
+			NOT= {
+				has_province_modifier = pillage_army_movement_hostile_province_modifier
+			}
+		}
+		# root = {
+		# 	is_at_war_with = scope:army.location.county.holder
+		# }
+	}
+	effect = {
+		scope:army = {
+			if = {
+				limit = { 
+					army_commander ?= {
+						has_trait = reaver
+					}
+				}
+				location = {
+					county = {
+						change_county_control = -3
+						change_development_progress_with_overflow = -3
+					}
+				}
+			}
+			location = {
+				county = {
+					change_county_control = {-5 -10}
+					change_development_progress_with_overflow = {-5 -10}
+					add_county_modifier = {
+						modifier = pillage_army_movement_hostile_county_modifier
+						days = 180
+					}
+				}
+				add_province_modifier = {
+					modifier = pillage_army_movement_hostile_province_modifier
+					days = 180
+				}
+			}
+		}
+	}
+}
+
+pillage_sack_rival_barony = {
+	trigger = {
+		OR = {
+			any_relation = {
+				type = rival
+				this = scope:barony.holder
+			}
+			any_relation = {
+				type = nemesis
+				this = scope:barony.holder
+			}
+		}
+	}
+	events = {
+		pillage.1
+	}
+}

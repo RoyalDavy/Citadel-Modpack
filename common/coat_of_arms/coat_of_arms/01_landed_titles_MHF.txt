@@ -1,0 +1,436 @@
+@smCastleX = 0.27
+@smCastleY = 0.23
+@smLysX = 0.23
+@smLysY = 0.26
+@smCross = 0.22
+d_blackwood_vale={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_red"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "rl_blackwood.dds"
+		color1 = "agot_black"
+		color2 = "agot_white"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 }  }
+	}
+}
+d_southstone={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_brown"
+	color2 = "agot_gold"
+	colored_emblem = {
+		texture = "rl_bracken.dds"
+		color1 = "agot_red"
+		color2 = "agot_gold"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+c_stillfen={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_green"
+	color2 = "agot_white"
+	colored_emblem = {
+		texture = "rl_vypren.dds"
+		color1 = "agot_black"
+		color2 = "agot_white"
+		instance = { position = { 0.5 0.52 } scale = { 1.2 1.2 }  }
+	}
+}
+d_wayfarers_rest={
+	#custom=yes 
+	pattern = "pattern_checkers_01.dds"
+	color1 = "agot_white"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "rl_vance_atranta_1.dds"
+		color1 = "agot_black"
+		color2 = "agot_black"
+		instance = { position = { 0.275 0.275 } scale = { -0.5 0.5 }  }
+		instance = { position = { 0.725 0.725 } scale = { 0.5 0.5 }  }
+	}
+	colored_emblem = {
+		texture = "rl_vance_wayfarer1.dds"
+		color1 = "agot_gold"
+		color2 = "agot_white"
+		instance = { position = { 0.725 0.275 } scale = { 0.5 0.5 }  }
+		instance = { position = { 0.275 0.725 } scale = { 0.5 0.5 }  }
+	}
+}
+d_runestone={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_bronze"
+	color2 = "agot_bronze"
+	colored_emblem = {
+		texture = "vl_royce.dds"
+		color1 = "agot_black"
+		color2 = "agot_black"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+d_gulltown={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_scarlet"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "vl_grafton_1.dds"
+		color1 = "agot_black"
+		color2 = "agot_scarlet"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "vl_grafton_2.dds"
+		color1 = "agot_yellow"
+		color2 = "agot_orange"
+		instance = { position = { 0.5 0.45 } scale = { 1.1 1.1 }  }
+	}
+}
+c_gullview={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_black"
+	color2 = "agot_white"
+	colored_emblem = {
+		texture = "vl_shett.dds"
+		color1 = "agot_gold"
+		color2 = "agot_white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+d_goldengrove={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = rgb {209 219 224}
+	color2 = "agot_gold"
+	colored_emblem = {
+		texture = "re_rowan.dds"
+		color1 = "agot_gold"
+		color2 = "agot_gold"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+d_the_westmarch={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_green"
+	color2 = "agot_red"
+
+	textured_emblem = {
+		texture = "reach_tarly.dds"
+		instance = { position = { 0.5 0.5 } scale = { 0.8 0.8 }  }
+	}
+}
+c_coldmoat={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_white"
+	color2 = "agot_green"
+	colored_emblem = {
+		texture = "re_osgrey_1.dds"
+		color1 = "agot_green"
+		color2 = "agot_gold"
+		instance = { position = { 0.5 0.49 } scale = { 1.25 1.25 }  }
+	}
+	colored_emblem = {
+		texture = "re_osgrey_2.dds"
+		color1 = "agot_black"
+		color2 = "agot_red"
+		instance = { position = { 0.5 0.49 } scale = { 1.25 1.25 }  }
+	}
+}
+c_standfast={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_white"
+	color2 = "agot_green"
+	colored_emblem = {
+		texture = "re_osgrey_1.dds"
+		color1 = "agot_green"
+		color2 = "agot_gold"
+		instance = { position = { 0.5 0.49 } scale = { 1.25 1.25 }  }
+	}
+	colored_emblem = {
+		texture = "re_osgrey_2.dds"
+		color1 = "agot_black"
+		color2 = "agot_red"
+		instance = { position = { 0.5 0.49 } scale = { 1.25 1.25 }  }
+	}
+}
+d_white_harbor={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_sea_green"
+	color2 = "agot_white"
+	colored_emblem = {
+		texture = "ce_manderly_1.dds"
+		color1 = "agot_green_dark"
+		color2 = "agot_white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "ce_manderly_2.dds"
+		color1 = "agot_black"
+		color2 = "agot_black"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+d_driftmark={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_sea_green"
+	color2 = "agot_silver"
+	color3 = rgb { 102 255 205 }
+	colored_emblem = {
+		texture = "cl_velaryon.dds"
+		color1 = "agot_silver"
+		color2 = "agot_grey"
+		instance = { position = { 0.53 0.465 } scale = { 1.0 1.0 }  }
+	}
+}
+c_brixworth={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_silver"
+	color2 = "agot_red_dark"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_silver"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "riverlands_mason_wall.dds"
+		color1 = "agot_red_dark"
+		color2 = "agot_red_dark"
+		instance = { position = { 0.475 0.525 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+}
+c_ironrath={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_black"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "ce_forrester.dds"
+		color1 = "agot_white"
+		color2 = "agot_white"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 }  }
+	}
+}
+
+d_the_dreadfort={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_pink"
+	color2 = "agot_red"
+	colored_emblem = {
+		texture = "north_bolton_blood.dds"
+		color1 = "agot_red"
+		instance = { position = { 0.5 0.5 } scale = { 1.3 1.3 }   }
+	}
+	colored_emblem = {
+		texture = "north_bolton_flayed_man2.dds"
+		color1 = "agot_red_dark"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }   }
+	}
+}
+
+c_fang_hill={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_yellow"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "wl_clegane.dds"
+		color1 = "agot_black"
+		color2 = "agot_black"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+
+c_osgoodswell={
+	pattern = "pattern_solid.dds"
+	color1 = "agot_brown"
+	colored_emblem = {
+		color1 = "agot_white"
+		texture = "vl_shettgt.dds"
+		instance = { scale={ 0.850000 0.850000 } }
+	}
+}
+d_atranta={
+	pattern = "pattern_checkers_01.dds"
+	color1 = "agot_white"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "rl_vance_atranta_1.dds"
+		color1 = "agot_green"
+		color2 = "agot_black"
+		instance = { position = { 0.275 0.275 } scale = { -0.5 0.5 }  }
+		instance = { position = { 0.725 0.725 } scale = { 0.5 0.5 }  }
+	}
+	colored_emblem = {
+		texture = "rl_vance_atranta_2.dds"
+		color1 = "agot_white"
+		color2 = "agot_black"
+		instance = { position = { 0.725 0.275 } scale = { 0.5 0.5 }  }
+		instance = { position = { 0.275 0.725 } scale = { 0.5 0.5 }  }
+	}
+}
+c_borrenline={
+	pattern = "pattern_checkers_02.dds"
+	color1 = "agot_red"
+	color2 = "agot_white"
+	colored_emblem = {
+		texture = "wl_reyne.dds"
+		color1 = "agot_silver"
+		color2 = "agot_gold"
+		instance = { position = { 0.7 0.275 } scale = { 0.5 0.5 }  }
+		instance = { position = { 0.3 0.7  } scale = { 0.5 0.5 }  }
+	}
+	colored_emblem = {
+		texture = "wl_vikary_2.dds"
+		color1 = "agot_red"
+		color2 = "agot_black"
+		instance = { position = { 0.3 0.31 } scale = { 0.5 0.5 }  }
+		instance = { position = { 0.7 0.72 } scale = { 0.5 0.5 }  }
+	}
+	colored_emblem = {
+		texture = "wl_vikary_3.dds"
+		color1 = "agot_gold"
+		color2 = "agot_gold"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+d_claw_isle={
+	pattern = "pattern_solid.dds"
+	color1 = "agot_white"
+	color2 = "agot_red"
+	colored_emblem = {
+		texture = "cl_celtigar.dds"
+		color1 = "agot_red"
+		color2 = "agot_black"
+		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 }  }
+	}
+}
+d_rivers_head={
+	#custom=yes 
+	pattern = "pattern_solid.dds"
+	color1 = "agot_silver"
+	color2 = "agot_red_dark"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_silver"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "riverlands_mason_wall.dds"
+		color1 = "agot_red_dark"
+		color2 = "agot_red_dark"
+		instance = { position = { 0.475 0.525 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+}
+c_the_scales={
+	pattern = "pattern_solid.dds"
+	color1 = "agot_purple"
+	color2 = "agot_white"
+	colored_emblem = {
+		texture = "cl_scales.dds"
+		color1 = "agot_white"
+		color2 = "agot_purple"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+c_sweetport_sound={
+	pattern = "pattern_solid.dds"
+	color1 = "agot_white"
+	color2 = "agot_gold"
+	colored_emblem = {
+		texture = "cl_sunglass.dds"
+		color1 = "agot_gold"
+		color2 = "agot_gold"
+		instance = { position = { 0.5 0.52 } scale = { 1.2 1.2 }  }
+	}
+}
+c_blackstripe = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_grey"
+	color2 = "agot_blue"
+	colored_emblem = {
+		texture = "cl_longwaters.dds"
+		color1 = "agot_blue"
+		color2 = "agot_white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+d_torrentine = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_lilac"
+	color2 = "agot_white"
+	color3 = "agot_lilac"
+	colored_emblem = {
+		texture = "do_dayne.dds"
+		color1 = "agot_white"
+		color2 = "agot_black"
+		instance = { position = { 0.5 0.45 } scale = { 1.2 1.2 }  }
+	}
+}
+d_the_stoneway = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_yellow"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "do_wyl.dds"
+		color1 = "agot_carnation"
+		color2 = "agot_black"
+		instance = { position = { 0.5 0.47 } scale = { 1.0 1.0 }  }
+	}
+}
+d_yronwood = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_sand"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "do_yronwood.dds"
+		color1 = "agot_black"
+		color2 = "agot_black"
+		instance = { position = { 0.5 0.5 } scale = { 1.2 1.2 }  }
+	}
+}
+d_brimstone = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_crimson"
+	color2 = "agot_yellow"
+	colored_emblem = {
+		texture = "do_uller.dds"
+		color1 = "agot_crimson"
+		color2 = "agot_yellow"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}
+k_torrentine = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_lilac"
+	color2 = "agot_white"
+	color3 = "agot_lilac"
+	colored_emblem = {
+		texture = "do_dayne.dds"
+		color1 = "agot_white"
+		color2 = "agot_black"
+		instance = { position = { 0.5 0.45 } scale = { 1.2 1.2 }  }
+	}
+}
+
+k_the_arbor = {
+	pattern = "pattern_solid.dds"
+	color1 = rgb { 16 70 136 }
+	color2 = "agot_burgundy"
+	colored_emblem = {
+		texture = "re_redwyne.dds"
+		color1 = rgb { 70 129 76 }
+		color2 = "agot_burgundy"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+}

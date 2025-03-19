@@ -1,0 +1,18 @@
+﻿
+@siege_weapons = "gfx/interface/icons/culture_innovations/innovation_siege_weapons.dds"
+
+
+innovation_catapult = {
+	group = culture_group_military
+	culture_era = culture_era_tribal
+	icon = @siege_weapons
+
+	character_modifier = {
+		siege_phase_time = -0.1    ### added
+	}
+	
+	#unlock_maa = onager          ### disabled
+
+	flag = global_regular
+	flag = early_medieval_era_regular
+}

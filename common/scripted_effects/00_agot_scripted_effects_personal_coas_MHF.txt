@@ -1,0 +1,2335 @@
+﻿agot_create_personal_coa = {
+	save_scope_as = actor
+	add_character_flag = has_personal_coa
+	if = {
+		limit = {
+			scope:actor = { is_landed = yes }
+		}
+		create_character = {
+			name = "Dummy"
+			gender = male
+			employer = scope:actor
+			trait = agot_dummy_trait
+			random_traits = no
+			faith = scope:actor.faith
+			culture = scope:actor.culture
+			dynasty = generate
+			save_scope_as = recipient
+		}
+	}
+	else_if = {
+		limit = {
+			scope:actor = {	is_landed = no }
+		}
+		if = {
+			limit = {
+				character:Ruin_Empress = {
+					is_alive = yes
+				}
+			}
+			create_character = {
+				name = "Dummy"
+				gender = male
+				employer = character:Ruin_Empress
+				trait = agot_dummy_trait
+				random_traits = no
+				faith = scope:actor.faith
+				culture = scope:actor.culture
+				dynasty = generate
+				save_scope_as = recipient
+			}
+		}
+		else_if = {
+			limit = {
+				character:Ruin_Empress = {
+					is_alive = no
+				}
+			}
+			title:d_ruins.holder = {
+				save_scope_as = ruins
+			}
+			create_character = {
+				name = "Dummy"
+				gender = male
+				employer = scope:ruins
+				trait = agot_dummy_trait
+				random_traits = no
+				faith = scope:actor.faith
+				culture = scope:actor.culture
+				dynasty = generate
+				save_scope_as = recipient
+			}
+		}
+	}
+	scope:recipient = {
+		set_global_variable = {
+			name = coa_new_name
+			value = scope:actor
+		}
+		scope:recipient.house = {
+			set_house_name = coa_new_name
+			# else_if... sibling count e.g. fourth child, third child, etc
+			# NOTE TO SELF.. maybe use a random_list to select which option?
+		}
+		#scope:recipient.dynasty = {
+			#add_dynasty_prestige_level = scope:actor.dynasty.dynasty_prestige_level
+			#add_dynasty_prestige_level = -1
+		#}
+		remove_global_variable = coa_new_name
+		set_variable = {
+			name = my_coa_belongs_to
+			value = scope:actor
+		}
+	}
+	if = {
+		limit = {
+			scope:actor = {
+				OR = {
+					has_black_nickname_trigger = yes
+					has_white_nickname_trigger = yes
+					has_red_nickname_trigger = yes
+					has_dark_nickname_trigger = yes
+					has_silver_nickname_trigger = yes
+					has_wise_nickname_trigger = yes
+					has_small_nickname_trigger = yes
+					has_big_nickname_trigger = yes
+				}
+			}
+		}
+		agot_select_personal_coa_based_on_nickname_system = yes
+	}
+	else_if = {
+		limit = {
+			scope:actor = {
+				OR = {
+					has_faith = faith:rhllor
+					has_faith = faith:red_god
+				}
+				has_specific_rhllor_personal_coa_trigger = yes
+			}
+		}
+		agot_select_special_rhllor_personal_coa = yes
+	}
+	else_if = {
+		limit = {
+			scope:actor = {
+				OR = {
+					has_faith = faith:rhllor
+					has_faith = faith:red_god
+				}
+				has_rhllor_personal_coa_trigger = yes
+			}
+		}
+		agot_select_rhllor_personal_coa = yes
+	}
+	else_if = {
+		limit = {
+			scope:actor = {
+				any_sibling = {
+					count = 3
+					AND = {
+						sex_same_as = scope:actor
+						age > scope:actor.age
+					}
+				}
+			}
+		}
+		agot_select_personal_coa_based_on_birth_number = yes
+	}
+	else_if = {
+		limit = {
+			scope:actor = {
+				is_lowborn = yes
+			}
+		}
+		scope:recipient.house = { generate_coa = yes }
+	}
+	else = {
+		scope:recipient.house = { set_coa = scope:actor.house }
+	}
+	scope:actor = {
+		set_variable = {
+			name = my_personal_coa
+			value = scope:recipient
+		}
+		set_relation_agot_personal_coa_slave = scope:recipient
+		if = {
+			limit = {
+				scope:actor = {
+					is_ai = yes
+				}
+			}
+			scope:recipient = { save_scope_as = exiled_dummy } # Send away the COA Dummy Immediately since the AI won't be editing their own COAs
+			trigger_event = agot_events_personal_coat_of_arms.0001
+		}
+		else = {
+			scope:recipient = { save_scope_as = exiled_dummy } # Send away the COA Dummy a few days after
+			trigger_event = { id = agot_events_personal_coat_of_arms.0001 days = 1 }
+		}
+	}
+}
+agot_create_personal_coa_for_historical_ai = {
+	$ACTOR$ = {
+		save_scope_as = actor
+		add_character_flag = has_personal_coa
+		if = {
+			limit = {
+				character:Ruin_Empress = {
+					is_alive = yes
+				}
+			}
+			create_character = {
+				name = "Dummy"
+				gender = male
+				employer = character:Ruin_Empress # AI Doesn't need to edit their COA, so send the dummy away immediately.
+				trait = agot_dummy_trait
+				faith = scope:actor.faith
+				culture = scope:actor.culture
+				dynasty = generate
+				save_scope_as = recipient
+			}
+		} 
+		else_if = {
+			limit = {
+				character:Ruin_Empress = {
+					is_alive = no
+				}				
+			}
+			title:d_ruins.holder = {
+				save_scope_as = ruins
+			}
+			create_character = {
+				name = "Dummy"
+				gender = male
+				employer = scope:ruins # AI Doesn't need to edit their COA, so send the dummy away immediately.
+				trait = agot_dummy_trait
+				faith = scope:actor.faith
+				culture = scope:actor.culture
+				dynasty = generate
+				save_scope_as = recipient
+			}
+		}
+		scope:recipient = {
+			set_global_variable = {
+				name = coa_new_name
+				value = scope:actor
+			}
+			scope:recipient.house = {
+				set_house_name = coa_new_name
+				set_coa = $COA_KEY$
+			}
+			#scope:recipient.dynasty = {
+				#add_dynasty_prestige_level = scope:actor.dynasty.dynasty_prestige_level
+				#add_dynasty_prestige_level = -1
+			#}
+			remove_global_variable = coa_new_name
+			set_variable = {
+				name = my_coa_belongs_to
+				value = scope:actor
+			}
+		}
+		scope:actor = {
+			set_variable = {
+				name = my_personal_coa
+				value = scope:recipient
+			}
+			set_relation_agot_personal_coa_slave = scope:recipient
+			scope:recipient = { save_scope_as = exiled_dummy } # Send away the COA Dummy Immediately since the AI won't be editing their own COAs
+			trigger_event = agot_events_personal_coat_of_arms.0001
+		}
+	}
+}
+agot_prune_personal_coa = {
+	var:my_personal_coa = {
+		death = {
+			death_reason = death_vanished
+		}
+	}
+}
+agot_set_personal_coa_based_on_house = {
+	#agot_set_personal_coa_based_on_house = { HOUSE_NAME = scope:actor.house } # This effect is reading 'scope:actor.house' itself as the VALUE, not the actual value BEHIND scope:actor.house. It needs something just like 'Lannister' or 'Stark' as it does not evaluate input. D=
+	set_coa = dynn_$HOUSE_NAME$_personal_coa_forth_son
+}
+agot_select_personal_coa_based_on_nickname_system = {
+	switch = {
+		trigger = house
+		character:Lannister_29.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_black_lion = { scope:recipient.house = { set_coa = dynn_Lannister_black_lion_personal_coa } }
+					nick_the_white_lion = { scope:recipient.house = { set_coa = dynn_Lannister_white_lion_personal_coa } }
+					nick_the_red_lion = { scope:recipient.house = { set_coa = dynn_Lannister_red_lion_personal_coa } }
+				}
+			}
+		}
+		character:Stark_12.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_black_wolf = { scope:recipient.house = { set_coa = dynn_Stark_black_wolf_personal_coa } }
+					nick_the_white_wolf = { scope:recipient.house = { set_coa = dynn_Stark_white_wolf_personal_coa } }
+					nick_the_red_wolf = { scope:recipient.house = { set_coa = dynn_Stark_red_wolf_personal_coa } }
+				}
+			}
+		}
+		character:Targaryen_13.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_white_dragon = { scope:recipient.house = { set_coa = dynn_Targaryen_white_dragon_personal_coa } }
+				}
+			}
+		}
+		character:Baratheon_14.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_white_stag = { scope:recipient.house = { set_coa = dynn_Baratheon_white_stag_personal_coa } }
+					nick_the_red_stag = { scope:recipient.house = { set_coa = dynn_Baratheon_red_stag_personal_coa  } }
+				}
+			}
+		}
+		character:Tyrell_40.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_black_rose = { scope:recipient.house = { set_coa = dynn_Tyrell_black_rose_personal_coa } }
+					nick_the_white_rose = { scope:recipient.house = { set_coa = dynn_Tyrell_white_rose_personal_coa  } }
+					nick_the_red_rose = { scope:recipient.house = { set_coa = dynn_Tyrell_red_rose_personal_coa  } }
+				}
+			}
+		}
+		character:Greyjoy_21.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_white_squid = { scope:recipient.house = { set_coa = dynn_Greyjoy_white_squid_personal_coa } }
+					nick_the_red_squid = { scope:recipient.house = { set_coa = dynn_Greyjoy_red_squid_personal_coa  } }
+				}
+			}
+		}
+		character:Tully_10.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_white_fish = { scope:recipient.house = { set_coa = dynn_Tully_white_fish_personal_coa } }
+					nick_the_red_fish = { scope:recipient.house = { set_coa = dynn_Tully_red_fish_personal_coa  } }
+					nick_the_black_fish = { scope:recipient.house = { set_coa = bryden_blackfish_tully_personal_coa  } }
+				}
+			}
+		}
+		character:Arryn_15.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_black_falcon = { scope:recipient.house = { set_coa = dynn_Arryn_black_falcon_personal_coa } }
+					nick_the_red_falcon = { scope:recipient.house = { set_coa = dynn_Arryn_red_falcon_personal_coa  } }
+				}
+			}
+		}
+		character:Bricker_1.house = {
+			scope:actor = {
+				switch = {
+					trigger = has_nickname
+					nick_the_black_brick = { scope:recipient.house = { set_coa = dynn_Bricker_black_brick_personal_coa } }
+					nick_the_dark_brick = { scope:recipient.house = { set_coa = dynn_Bricker_black_brick_personal_coa } }
+					nick_the_white_brick = { scope:recipient.house = { set_coa = dynn_Bricker_white_brick_personal_coa } }
+					nick_the_silver_brick = { scope:recipient.house = { set_coa = dynn_Bricker_silver_brick_personal_coa } }
+					nick_the_wise_brick = { scope:recipient.house = { set_coa = dynn_Bricker_bright_brick_personal_coa } }
+					nick_the_small_brick = { scope:recipient.house = { set_coa = dynn_Bricker_little_brick_personal_coa } }
+					nick_the_big_brick = { scope:recipient.house = { set_coa = dynn_Bricker_brick_wall_personal_coa } }
+				}
+			}
+		}
+	}
+}
+agot_select_personal_coa_based_on_birth_number = {
+	switch = {
+		trigger = house
+		##############
+		# Crownlands #
+		##############
+		character:Bar_Emmon_5.house = {
+			scope:recipient.house = { set_coa = dynn_Bar_Emmon_personal_coa_forth_son }
+		}
+		character:Bean_5.house = {
+			scope:recipient.house = { set_coa = dynn_Bean_personal_coa_forth_son }
+		}
+		character:Belgrave_6.house = {
+			scope:recipient.house = { set_coa = dynn_Belgrave_personal_coa_forth_son }
+		}
+		character:Blackberry_1.house = {
+			scope:recipient.house = { set_coa = dynn_Blackberry_personal_coa_forth_son }
+		}
+		character:Targaryen_94.house = {
+			scope:recipient.house = { set_coa = house_Blackfyre_personal_coa_forth_son }
+		}
+		character:Blackwater_1.house = {
+			scope:recipient.house = { set_coa = dynn_Blackwater_personal_coa_forth_son }
+		}
+		character:Blount_10.house = {
+			scope:recipient.house = { set_coa = dynn_Blount_personal_coa_forth_son }
+		}
+		character:Boggs_14.house = {
+			scope:recipient.house = { set_coa = dynn_Boggs_personal_coa_forth_son }
+		}
+		character:Bourney_22.house = {
+			scope:recipient.house = { set_coa = dynn_Bourney_personal_coa_forth_son }
+		}
+		character:Brune_9.house = {
+			scope:recipient.house = { set_coa = dynn_Brune_personal_coa_forth_son }
+		}
+		character:Brownhollow_5.house = {
+			scope:recipient.house = { set_coa = house_Brownhollow_personal_coa_forth_son }
+		}
+		character:Buckwell_8.house = {
+			scope:recipient.house = { set_coa = dynn_Buckwell_personal_coa_forth_son }
+		}
+		character:Bush_5.house = {
+			scope:recipient.house = { set_coa = dynn_Bush_personal_coa_forth_son }
+		}
+		character:Byrch_7.house = {
+			scope:recipient.house = { set_coa = dynn_Byrch_personal_coa_forth_son }
+		}
+		character:Cargyll_1.house = {
+			scope:recipient.house = { set_coa = dynn_Cargyll_personal_coa_forth_son }
+		}
+		character:Cave_30.house = {
+			scope:recipient.house = { set_coa = dynn_Cave_personal_coa_forth_son }
+		}
+		character:Celtigar_8.house = {
+			scope:recipient.house = { set_coa = dynn_Celtigar_personal_coa_forth_son }
+		}
+		character:Chelsted_8.house = {
+			scope:recipient.house = { set_coa = dynn_Chelsted_personal_coa_forth_son }
+		}
+		character:Chyttering_7.house = {
+			scope:recipient.house = { set_coa = dynn_Chyttering_personal_coa_forth_son }
+		}
+		character:Corne_22.house = {
+			scope:recipient.house = { set_coa = dynn_Corne_personal_coa_forth_son }
+		}
+		character:Groves_1.house = {
+			scope:recipient.house = { set_coa = dynn_Groves_personal_coa_forth_son }
+		}
+		character:Correy_2.house = {
+			scope:recipient.house = { set_coa = dynn_Correy_personal_coa_forth_son }
+		}
+		character:Crabb_13.house = {
+			scope:recipient.house = { set_coa = dynn_Crabb_personal_coa_forth_son }
+		}
+		character:Cressey_3.house = {
+			scope:recipient.house = { set_coa = dynn_Cressey_personal_coa_forth_son }
+		}
+		character:Rychard_5.house = {
+			scope:recipient.house = { set_coa = dynn_Rychard_personal_coa_forth_son }
+		}
+		character:Dargood_9.house = {
+			scope:recipient.house = { set_coa = house_Dargood_personal_coa_forth_son }
+		}
+		character:Darke_4.house = {
+			scope:recipient.house = { set_coa = house_Darke_personal_coa_forth_son }
+		}
+		character:Darklyn_1.house = {
+			scope:recipient.house = { set_coa = dynn_Darklyn_personal_coa_forth_son }
+		}
+		character:Darkwood_7.house = {
+			scope:recipient.house = { set_coa = house_Darkwood_personal_coa_forth_son }
+		}
+#		character:Deem_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Deem_personal_coa_forth_son }
+#		}
+		character:Edgerton_4.house = {
+			scope:recipient.house = { set_coa = dynn_Edgerton_personal_coa_forth_son }
+		}
+		character:Farring_7.house = {
+			scope:recipient.house = { set_coa = dynn_Farring_personal_coa_forth_son }
+		}
+		character:Farseed_1.house = {
+			scope:recipient.house = { set_coa = dynn_Farseed_personal_coa_forth_son }
+		}
+		character:Follard_5.house = {
+			scope:recipient.house = { set_coa = dynn_Follard_personal_coa_forth_son }
+		}
+		character:Foxglove_21.house = {
+			scope:recipient.house = { set_coa = dynn_Foxglove_personal_coa_forth_son }
+		}
+		character:Gaunt_8.house = {
+			scope:recipient.house = { set_coa = dynn_Gaunt_personal_coa_forth_son }
+		}
+		character:Goode_11.house = {
+			scope:recipient.house = { set_coa = dynn_Goode_personal_coa_forth_son }
+		}
+		character:Greenhill_5.house = {
+			scope:recipient.house = { set_coa = dynn_Greenhill_personal_coa_forth_son }
+		}
+		character:Hall_4.house = {
+			scope:recipient.house = { set_coa = dynn_Hall_personal_coa_forth_son }
+		}
+		character:Hammer_1.house = {
+			scope:recipient.house = { set_coa = dynn_Hammer_personal_coa_forth_son }
+		}
+		character:Hardy_11.house = {
+			scope:recipient.house = { set_coa = dynn_Hardy_personal_coa_forth_son }
+		}
+		character:Harte_7.house = {
+			scope:recipient.house = { set_coa = dynn_Harte_personal_coa_forth_son }
+		}
+		character:Wheaton_1.house = {
+			scope:recipient.house = { set_coa = dynn_Wheaton_personal_coa_forth_son }
+		}
+		character:Hayford_3.house = {
+			scope:recipient.house = { set_coa = dynn_Hayford_personal_coa_forth_son }
+		}
+		character:Hogg_4.house = {
+			scope:recipient.house = { set_coa = dynn_Hogg_personal_coa_forth_son }
+		}
+		character:Yore_4.house = {
+			scope:recipient.house = { set_coa = dynn_Yore_personal_coa_forth_son }
+		}
+		character:Hollard_12.house = {
+			scope:recipient.house = { set_coa = dynn_Hollard_personal_coa_forth_son }
+		}
+		character:Leek_6.house = {
+			scope:recipient.house = { set_coa = dynn_Leek_personal_coa_forth_son }
+		}
+		character:Kettleblack_1.house = {
+			scope:recipient.house = { set_coa = dynn_Kettleblack_personal_coa_forth_son }
+		}
+		character:Langward_5.house = {
+			scope:recipient.house = { set_coa = dynn_Langward_personal_coa_forth_son }
+		}
+		character:Largent_1.house = {
+			scope:recipient.house = { set_coa = dynn_Largent_personal_coa_forth_son }
+		}
+		character:Longwaters_1.house = {
+			scope:recipient.house = { set_coa = house_Longwaters_personal_coa_forth_son }
+		}
+		character:Mallery_3.house = {
+			scope:recipient.house = { set_coa = dynn_Mallery_personal_coa_forth_son }
+		}
+		character:Manning_5.house = {
+			scope:recipient.house = { set_coa = dynn_Manning_personal_coa_forth_son }
+		}
+		character:Bentley_5.house = {
+			scope:recipient.house = { set_coa = dynn_Bentley_personal_coa_forth_son }
+		}
+		character:Sweet_11.house = {
+			scope:recipient.house = { set_coa = dynn_Sweet_personal_coa_forth_son }
+		}
+		character:Massey_10.house = {
+			scope:recipient.house = { set_coa = dynn_Massey_personal_coa_forth_son }
+		}
+		character:Pyle_4.house = {
+			scope:recipient.house = { set_coa = dynn_Pyle_personal_coa_forth_son }
+		}
+		character:Miller_1.house = {
+			scope:recipient.house = { set_coa = dynn_Miller_personal_coa_forth_son }
+		}
+		character:Pyne_3.house = {
+			scope:recipient.house = { set_coa = dynn_Pyne_personal_coa_forth_son }
+		}
+		character:Quince_1.house = {
+			scope:recipient.house = { set_coa = dynn_Quince_personal_coa_forth_son }
+		}
+		character:Stoneseed_1.house = {
+			scope:recipient.house = { set_coa = house_Stoneseed_personal_coa_forth_son }
+		}
+		character:Bullock_1.house = {
+			scope:recipient.house = { set_coa = dynn_Bullock_personal_coa_forth_son }
+		}
+		character:Rollingford_4.house = {
+			scope:recipient.house = { set_coa = dynn_Rollingford_personal_coa_forth_son }
+		}
+		character:Rosby_5.house = {
+			scope:recipient.house = { set_coa = dynn_Rosby_personal_coa_forth_son }
+		}
+		character:Rykker_7.house = {
+			scope:recipient.house = { set_coa = dynn_Rykker_personal_coa_forth_son }
+		}
+		character:Scales_6.house = {
+			scope:recipient.house = { set_coa = dynn_Scales_personal_coa_forth_son }
+		}
+		character:Slynt_1.house = {
+			scope:recipient.house = { set_coa = dynn_Slynt_personal_coa_forth_son }
+		}
+		character:Staunton_4.house = {
+			scope:recipient.house = { set_coa = dynn_Staunton_personal_coa_forth_son }
+		}
+		character:Stokeworth_8.house = {
+			scope:recipient.house = { set_coa = dynn_Stokeworth_personal_coa_forth_son }
+		}
+		## STOPPING HERE
+		character:Straw_4.house = {
+			scope:recipient.house = { set_coa = dynn_Straw_personal_coa_forth_son }
+		}
+		character:Suggs_1.house = {
+			scope:recipient.house = { set_coa = dynn_Suggs_personal_coa_forth_son }
+		}
+		character:Sunglass_9.house = {
+			scope:recipient.house = { set_coa = dynn_Sunglass_personal_coa_forth_son }
+		}
+		character:Tall_1.house = {
+			scope:recipient.house = { set_coa = dynn_Tall_personal_coa_forth_son }
+		}
+#		character:Tanner_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Tanner_personal_coa_forth_son }
+#		}
+		character:Targaryen_13.house = {
+			scope:recipient.house = { set_coa = dynn_Targaryen_personal_coa_forth_son }
+		}
+		character:Thorne_4.house = {
+			scope:recipient.house = { set_coa = dynn_Thorne_personal_coa_forth_son }
+		}
+		character:Truefyre_1.house = {
+			scope:recipient.house = { set_coa = dynn_Truefyre_personal_coa_forth_son }
+		}
+#		character:Varezys_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Varezys_personal_coa_forth_son }
+#		}
+		character:Velaryon_6.house = {
+			scope:recipient.house = { set_coa = dynn_Velaryon_personal_coa_forth_son }
+		}
+		character:Wendwater_4.house = {
+			scope:recipient.house = { set_coa = dynn_Wendwater_personal_coa_forth_son }
+		}
+		character:White_1.house = {
+			scope:recipient.house = { set_coa = dynn_White_personal_coa_forth_son }
+		}
+#		character:Winters_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Winters_personal_coa_forth_son }
+#		}
+		###########
+		# DORNISH #
+		###########
+		character:Allyrion_12.house = {
+			scope:recipient.house = { set_coa = dynn_Allyrion_personal_coa_forth_son }
+		}
+		character:Blackmont_10.house = {
+			scope:recipient.house = { set_coa = dynn_Blackmont_personal_coa_forth_son }
+		}
+		character:Briar_25.house = {
+			scope:recipient.house = { set_coa = dynn_Briar_personal_coa_forth_son }
+		}
+		character:Brook_21.house = {
+			scope:recipient.house = { set_coa = dynn_Brook_personal_coa_forth_son }
+		}
+		character:Dalt_5.house = {
+			scope:recipient.house = { set_coa = dynn_Dalt_personal_coa_forth_son }
+		}
+		character:Dayne_15.house = {
+			scope:recipient.house = { set_coa = dynn_Dayne_personal_coa_forth_son }
+		}
+		character:Drinkwater_6.house = {
+			scope:recipient.house = { set_coa = dynn_Drinkwater_personal_coa_forth_son }
+		}
+		character:Fowler_9.house = {
+			scope:recipient.house = { set_coa = dynn_Fowler_personal_coa_forth_son }
+		}
+		character:Gargalen_7.house = {
+			scope:recipient.house = { set_coa = dynn_Gargalen_personal_coa_forth_son }
+		}
+		character:Hull_12.house = {
+			scope:recipient.house = { set_coa = dynn_Hull_personal_coa_forth_son }
+		}
+		character:Hood_27.house = {
+			scope:recipient.house = { set_coa = dynn_Hood_personal_coa_forth_son }
+		}
+		character:Jordayne_3.house = {
+			scope:recipient.house = { set_coa = dynn_Jordayne_personal_coa_forth_son }
+		}
+		character:Ladybright_8.house = {
+			scope:recipient.house = { set_coa = dynn_Ladybright_personal_coa_forth_son }
+		}
+		character:Manwoody_9.house = {
+			scope:recipient.house = { set_coa = dynn_Manwoody_personal_coa_forth_son }
+		}
+		character:Martell_23.house = {
+			scope:recipient.house = { set_coa = dynn_Martell_personal_coa_forth_son }
+		}
+		character:Nymeros_1.house = {
+			scope:recipient.house = { set_coa = dynn_Nymeros_personal_coa_forth_son }
+		}
+		character:Qorgyle_13.house = {
+			scope:recipient.house = { set_coa = dynn_Qorgyle_personal_coa_forth_son }
+		}
+		character:Santagar_8.house = {
+			scope:recipient.house = { set_coa = dynn_Santagar_personal_coa_forth_son }
+		}
+		character:Shell_Dorne_12.house = {
+			scope:recipient.house = { set_coa = dynn_Shell_Dorne_personal_coa_forth_son }
+		}
+		character:Shells_6.house = {
+			scope:recipient.house = { set_coa = dynn_Shells_personal_coa_forth_son }
+		}
+		character:Toland_8.house = {
+			scope:recipient.house = { set_coa = dynn_Toland_personal_coa_forth_son }
+		}
+		character:Uller_12.house = {
+			scope:recipient.house = { set_coa = dynn_Uller_personal_coa_forth_son }
+		}
+		character:Vaith_7.house = {
+			scope:recipient.house = { set_coa = dynn_Vaith_personal_coa_forth_son }
+		}
+		character:Wade_22.house = {
+			scope:recipient.house = { set_coa = dynn_Wade_personal_coa_forth_son }
+		}
+		character:Wells_9.house = {
+			scope:recipient.house = { set_coa = dynn_Wells_personal_coa_forth_son }
+		}
+		character:Wyl_14.house = {
+			scope:recipient.house = { set_coa = dynn_Wyl_personal_coa_forth_son }
+		}
+		character:Yronwood_8.house = {
+			scope:recipient.house = { set_coa = dynn_Yronwood_personal_coa_forth_son }
+		}
+		##############
+		# IRON ISLES #
+		##############
+		character:Blacktyde_8.house = {
+			scope:recipient.house = { set_coa = dynn_Blacktyde_personal_coa_forth_son }
+		}
+		character:Botley_19.house = {
+			scope:recipient.house = { set_coa = dynn_Botley_personal_coa_forth_son }
+		}
+		character:Codd_10.house = {
+			scope:recipient.house = { set_coa = dynn_Codd_personal_coa_forth_son }
+		}
+		character:Drumm_4.house = {
+			scope:recipient.house = { set_coa = dynn_Drumm_personal_coa_forth_son }
+		}
+		character:Farwynd_11.house = {
+			scope:recipient.house = { set_coa = dynn_Farwynd_personal_coa_forth_son }
+		}
+		character:Freeborn_14.house = {
+			scope:recipient.house = { set_coa = dynn_Freeborn_personal_coa_forth_son }
+		}
+		character:FarwyndLL_5.house = {
+			scope:recipient.house = { set_coa = house_FarwyndLL_personal_coa_forth_son }
+		}
+		character:FarwyndDL_10.house = {
+			scope:recipient.house = { set_coa = house_FarwyndDL_personal_coa_forth_son }
+		}
+		character:Goodbrother_1.house = {
+			scope:recipient.house = { set_coa = dynn_Goodbrother_personal_coa_forth_son }
+		}
+		character:Goodbrother_72.house = {
+			scope:recipient.house = { set_coa = house_GoodbrotherCPK_personal_coa_forth_son }
+		}
+		character:Goodbrother_83.house = {
+			scope:recipient.house = { set_coa = house_GoodbrotherOM_personal_coa_forth_son }
+		}
+		character:Goodbrother_58.house = {
+			scope:recipient.house = { set_coa = house_GoodbrotherSS_personal_coa_forth_son }
+		}
+		character:Goodbrother_25.house = {
+			scope:recipient.house = { set_coa = house_GoodbrotherCL_personal_coa_forth_son }
+		}
+		character:Goodbrother_33.house = {
+			scope:recipient.house = { set_coa = house_GoodbrotherDD_personal_coa_forth_son }
+		}
+		character:Greyiron_1.house = {
+			scope:recipient.house = { set_coa = dynn_Greyiron_personal_coa_forth_son }
+		}
+		character:Greyjoy_21.house = {
+			scope:recipient.house = { set_coa = dynn_Greyjoy_personal_coa_forth_son }
+		}
+		character:Harlaw_30.house = {
+			scope:recipient.house = { set_coa = dynn_Harlaw_personal_coa_forth_son }
+		}
+		character:Hoare_1.house = {
+			scope:recipient.house = { set_coa = dynn_Hoare_personal_coa_forth_son }
+		}
+		character:Humble_12.house = {
+			scope:recipient.house = { set_coa = dynn_Humble_personal_coa_forth_son }
+		}
+		character:Ironmaker_16.house = {
+			scope:recipient.house = { set_coa = dynn_Ironmaker_personal_coa_forth_son }
+		}
+		character:Kenning_10.house = {
+			scope:recipient.house = { set_coa = dynn_Kenning_personal_coa_forth_son }
+		}
+		character:Myre_6.house = {
+			scope:recipient.house = { set_coa = dynn_Myre_personal_coa_forth_son }
+		}
+		character:Netley_9.house = {
+			scope:recipient.house = { set_coa = dynn_Netley_personal_coa_forth_son }
+		}
+		character:Orkwood_8.house = {
+			scope:recipient.house = { set_coa = dynn_Orkwood_personal_coa_forth_son }
+		}
+		character:Salt_14.house = {
+			scope:recipient.house = { set_coa = house_Salt_personal_coa_forth_son }
+		}
+		character:Saltcliffe_6.house = {
+			scope:recipient.house = { set_coa = dynn_Saltcliffe_personal_coa_forth_son }
+		}
+		character:Sharp_11.house = {
+			scope:recipient.house = { set_coa = dynn_Sharp_personal_coa_forth_son }
+		}
+		character:Shepherd_10.house = {
+			scope:recipient.house = { set_coa = dynn_Shepherd_personal_coa_forth_son }
+		}
+		character:Sparr_7.house = {
+			scope:recipient.house = { set_coa = dynn_Sparr_personal_coa_forth_son }
+		}
+		character:Stonehouse_6.house = {
+			scope:recipient.house = { set_coa = dynn_Stonehouse_personal_coa_forth_son }
+		}
+		character:Stonetree_6.house = {
+			scope:recipient.house = { set_coa = dynn_Stonetree_personal_coa_forth_son }
+		}
+		character:Sunderly_8.house = {
+			scope:recipient.house = { set_coa = dynn_Sunderly_personal_coa_forth_son }
+		}
+		character:Tawney_6.house = {
+			scope:recipient.house = { set_coa = dynn_Tawney_personal_coa_forth_son }
+		}
+		character:Tidewood_18.house = {
+			scope:recipient.house = { set_coa = dynn_Tidewood_personal_coa_forth_son }
+		}
+		character:Volmark_5.house = {
+			scope:recipient.house = { set_coa = dynn_Volmark_personal_coa_forth_son }
+		}
+		character:Weaver_21.house = {
+			scope:recipient.house = { set_coa = dynn_Weaver_personal_coa_forth_son }
+		}
+		character:Wynch_7.house = {
+			scope:recipient.house = { set_coa = dynn_Wynch_personal_coa_forth_son }
+		}
+		#########
+		# NORTH #
+		#########
+		character:Amber_1.house = {
+			scope:recipient.house = { set_coa = dynn_Amber_personal_coa_forth_son }
+		}
+		character:Ashwood_13.house = {
+			scope:recipient.house = { set_coa = dynn_Ashwood_personal_coa_forth_son }
+		}
+		character:Blackbrow_1.house = {
+			scope:recipient.house = { set_coa = dynn_Blackbrow_personal_coa_forth_son }
+		}
+		character:Blackmyre_4.house = {
+			scope:recipient.house = { set_coa = dynn_Blackmyre_personal_coa_forth_son }
+		}
+		character:BoggsN_1.house = {
+			scope:recipient.house = { set_coa = dynn_BoggsN_personal_coa_forth_son }
+		}
+		character:Bolton_6.house = {
+			scope:recipient.house = { set_coa = dynn_Bolton_personal_coa_forth_son }
+		}
+		character:Branch_6.house = {
+			scope:recipient.house = { set_coa = dynn_Branch_personal_coa_forth_son }
+		}
+		character:Brownbarrow_4.house = {
+			scope:recipient.house = { set_coa = dynn_Brownbarrow_personal_coa_forth_son }
+		}
+		character:Burley_2.house = {
+			scope:recipient.house = { set_coa = dynn_Burley_personal_coa_forth_son }
+		}
+		character:Stark_110.house = {
+			scope:recipient.house = { set_coa = house_Cassel_personal_coa_forth_son }
+		}
+		character:Caulfield_1.house = {
+			scope:recipient.house = { set_coa = dynn_Caulfield_personal_coa_forth_son }
+		}
+		character:Cerwyn_7.house = {
+			scope:recipient.house = { set_coa = dynn_Cerwyn_personal_coa_forth_son }
+		}
+		character:Condon_1.house = {
+			scope:recipient.house = { set_coa = dynn_Condon_personal_coa_forth_son }
+		}
+		character:Cray_4.house = {
+			scope:recipient.house = { set_coa = dynn_Cray_personal_coa_forth_son }
+		}
+		character:Crowl_3.house = {
+			scope:recipient.house = { set_coa = dynn_Crowl_personal_coa_forth_son }
+		}
+		character:Degore_5.house = {
+			scope:recipient.house = { set_coa = dynn_Degore_personal_coa_forth_son }
+		}
+		character:Dormund_1.house = {
+			scope:recipient.house = { set_coa = dynn_Dormund_personal_coa_forth_son }
+		}
+		character:Dustin_12.house = {
+			scope:recipient.house = { set_coa = dynn_Dustin_personal_coa_forth_son }
+		}
+		character:Fenn_3.house = {
+			scope:recipient.house = { set_coa = dynn_Fenn_personal_coa_forth_son }
+		}
+		character:FisherSS_4.house = {
+			scope:recipient.house = { set_coa = dynn_FisherSS_personal_coa_forth_son }
+		}
+		character:Flint_19.house = {
+			scope:recipient.house = { set_coa = dynn_Flint_personal_coa_forth_son }
+		}
+		character:Flint_24.house = {
+			scope:recipient.house = { set_coa = house_FlintFF_personal_coa_forth_son }
+		}
+		character:Flint_43.house = {
+			scope:recipient.house = { set_coa = house_FlintWW_personal_coa_forth_son }
+		}
+		character:Forrester_9.house = {
+			scope:recipient.house = { set_coa = dynn_Forrester_personal_coa_forth_son }
+		}
+		character:Frost_1.house = {
+			scope:recipient.house = { set_coa = dynn_Frost_personal_coa_forth_son }
+		}
+		character:Glenmore_9.house = {
+			scope:recipient.house = { set_coa = dynn_Glenmore_personal_coa_forth_son }
+		}
+		character:Glover_8.house = {
+			scope:recipient.house = { set_coa = dynn_Glover_personal_coa_forth_son }
+		}
+		character:Goodman_2.house = {
+			scope:recipient.house = { set_coa = dynn_Goodman_personal_coa_forth_son }
+		}
+		character:Grayson_6.house = {
+			scope:recipient.house = { set_coa = dynn_Grayson_personal_coa_forth_son }
+		}
+		character:Greengood_1.house = {
+			scope:recipient.house = { set_coa = dynn_Greengood_personal_coa_forth_son }
+		}
+		character:Greenleaf_1.house = {
+			scope:recipient.house = { set_coa = dynn_Greenleaf_personal_coa_forth_son }
+		}
+		character:Greenwood_1.house = {
+			scope:recipient.house = { set_coa = dynn_Greenwood_personal_coa_forth_son }
+		}
+		character:Greystark_3.house = {
+			scope:recipient.house = { set_coa = house_Greystark_personal_coa_forth_son }
+		}
+		character:Harclay_5.house = {
+			scope:recipient.house = { set_coa = dynn_Harclay_personal_coa_forth_son }
+		}
+		character:Hayes_1.house = {
+			scope:recipient.house = { set_coa = dynn_Hayes_personal_coa_forth_son }
+		}
+		character:Holt_9.house = {
+			scope:recipient.house = { set_coa = dynn_Holt_personal_coa_forth_son }
+		}
+		character:Hornwood_6.house = {
+			scope:recipient.house = { set_coa = dynn_Hornwood_personal_coa_forth_son }
+		}
+		character:Karstark_20.house = {
+			scope:recipient.house = { set_coa = house_Karstark_personal_coa_forth_son }
+		}
+		character:Knott_4.house = {
+			scope:recipient.house = { set_coa = dynn_Knott_personal_coa_forth_son }
+		}
+		character:Lake_3.house = {
+			scope:recipient.house = { set_coa = dynn_Lake_personal_coa_forth_son }
+		}
+		character:Liddle_6.house = {
+			scope:recipient.house = { set_coa = dynn_Liddle_personal_coa_forth_son }
+		}
+		character:Lightfoot_4.house = {
+			scope:recipient.house = { set_coa = dynn_Lightfoot_personal_coa_forth_son }
+		}
+		character:Locke_8.house = {
+			scope:recipient.house = { set_coa = dynn_Locke_personal_coa_forth_son }
+		}
+		character:Long_4.house = {
+			scope:recipient.house = { set_coa = dynn_Long_personal_coa_forth_son }
+		}
+		character:Magnar_3.house = {
+			scope:recipient.house = { set_coa = dynn_Magnar_personal_coa_forth_son }
+		}
+		character:Manderly_13.house = {
+			scope:recipient.house = { set_coa = dynn_Manderly_personal_coa_forth_son }
+		}
+		character:Marsh_6.house = {
+			scope:recipient.house = { set_coa = dynn_Marsh_personal_coa_forth_son }
+		}
+		character:Mazin_1.house = {
+			scope:recipient.house = { set_coa = dynn_Mazin_personal_coa_forth_son }
+		}
+		character:Mollen_6.house = {
+			scope:recipient.house = { set_coa = dynn_Mollen_personal_coa_forth_son }
+		}
+		character:Mormont_12.house = {
+			scope:recipient.house = { set_coa = dynn_Mormont_personal_coa_forth_son }
+		}
+		character:Moss_6.house = {
+			scope:recipient.house = { set_coa = dynn_Moss_personal_coa_forth_son }
+		}
+		character:Norrey_7.house = {
+			scope:recipient.house = { set_coa = dynn_Norrey_personal_coa_forth_son }
+		}
+		character:Overton_3.house = {
+			scope:recipient.house = { set_coa = dynn_Overton_personal_coa_forth_son }
+		}
+		character:Peat_8.house = {
+			scope:recipient.house = { set_coa = dynn_Peat_personal_coa_forth_son }
+		}
+		character:Poole_4.house = {
+			scope:recipient.house = { set_coa = dynn_Poole_personal_coa_forth_son }
+		}
+		character:Quagg_1.house = {
+			scope:recipient.house = { set_coa = dynn_Quagg_personal_coa_forth_son }
+		}
+		character:Reed_6.house = {
+			scope:recipient.house = { set_coa = dynn_Reed_personal_coa_forth_son }
+		}
+		character:Ryder_4.house = {
+			scope:recipient.house = { set_coa = dynn_Ryder_personal_coa_forth_son }
+		}
+		character:Silverfield_1.house = {
+			scope:recipient.house = { set_coa = dynn_Silverfield_personal_coa_forth_son }
+		}
+		character:Slate_4.house = {
+			scope:recipient.house = { set_coa = dynn_Slate_personal_coa_forth_son }
+		}
+		character:Stane_4.house = {
+			scope:recipient.house = { set_coa = dynn_Stane_personal_coa_forth_son }
+		}
+		character:Stark_12.house = {
+			scope:recipient.house = { set_coa = dynn_Stark_personal_coa_forth_son }
+		}
+		character:Stout_6.house = {
+			scope:recipient.house = { set_coa = dynn_Stout_personal_coa_forth_son }
+		}
+		character:Tallhart_8.house = {
+			scope:recipient.house = { set_coa = dynn_Tallhart_personal_coa_forth_son }
+		}
+		character:345174344.house = {
+			scope:recipient.house = { set_coa = dynn_Thenn_personal_coa_forth_son }
+		}
+		character:TowersN_1.house = {
+			scope:recipient.house = { set_coa = dynn_TowersN_personal_coa_forth_son }
+		}
+		character:Tuttle_18.house = {
+			scope:recipient.house = { set_coa = dynn_Tuttle_personal_coa_forth_son }
+		}
+		character:Umber_78.house = {
+			scope:recipient.house = { set_coa = dynn_Umber_personal_coa_forth_son }
+		}
+		character:Greystark_3.house = {
+			scope:recipient.house = { set_coa = house_Greystark_personal_coa_forth_son }
+		}
+		character:Waterman_4.house = {
+			scope:recipient.house = { set_coa = dynn_Waterman_personal_coa_forth_son }
+		}
+		character:WellsN_6.house = {
+			scope:recipient.house = { set_coa = dynn_WellsN_personal_coa_forth_son }
+		}
+		character:Whitehill_7.house = {
+			scope:recipient.house = { set_coa = dynn_Whitehill_personal_coa_forth_son }
+		}
+		character:Wibberley_1.house = {
+			scope:recipient.house = { set_coa = dynn_Wibberley_personal_coa_forth_son }
+		}
+		character:Woodfoot_1.house = {
+			scope:recipient.house = { set_coa = dynn_Woodfoot_personal_coa_forth_son }
+		}
+		character:Woods_9.house = {
+			scope:recipient.house = { set_coa = dynn_Woods_personal_coa_forth_son }
+		}
+		character:Woolfield_8.house = {
+			scope:recipient.house = { set_coa = dynn_Woolfield_personal_coa_forth_son }
+		}
+		character:Wull_5.house = {
+			scope:recipient.house = { set_coa = dynn_Wull_personal_coa_forth_son }
+		}
+		#########
+		# REACH #
+		#########
+		character:Ambrose_4.house = {
+			scope:recipient.house = { set_coa = dynn_Ambrose_personal_coa_forth_son }
+		}
+		character:Appleton_5.house = {
+			scope:recipient.house = { set_coa = dynn_Appleton_personal_coa_forth_son }
+		}
+		character:Ashford_5.house = {
+			scope:recipient.house = { set_coa = dynn_Ashford_personal_coa_forth_son }
+		}
+		character:Averdyre_20.house = {
+			scope:recipient.house = { set_coa = dynn_Averdyre_personal_coa_forth_son }
+		}
+		character:Ball_4.house = {
+			scope:recipient.house = { set_coa = dynn_Ball_personal_coa_forth_son }
+		}
+		character:Beesbury_8.house = {
+			scope:recipient.house = { set_coa = dynn_Beesbury_personal_coa_forth_son }
+		}
+		character:Bellamy_23.house = {
+			scope:recipient.house = { set_coa = dynn_Bellamy_personal_coa_forth_son }
+		}
+		character:Bowles_22.house = {
+			scope:recipient.house = { set_coa = dynn_Bowles_personal_coa_forth_son }
+		}
+		character:Branfield_3.house = {
+			scope:recipient.house = { set_coa = dynn_Branfield_personal_coa_forth_son }
+		}
+		character:Bridges_6.house = {
+			scope:recipient.house = { set_coa = dynn_Bridges_personal_coa_forth_son }
+		}
+		character:Bulwer_6.house = {
+			scope:recipient.house = { set_coa = dynn_Bulwer_personal_coa_forth_son }
+		}
+		character:Bushy_4.house = {
+			scope:recipient.house = { set_coa = dynn_Bushy_personal_coa_forth_son }
+		}
+		character:Caswell_10.house = {
+			scope:recipient.house = { set_coa = dynn_Caswell_personal_coa_forth_son }
+		}
+		character:Chester_4.house = {
+			scope:recipient.house = { set_coa = dynn_Chester_personal_coa_forth_son }
+		}
+		character:Cobb_7.house = {
+			scope:recipient.house = { set_coa = dynn_Cobb_personal_coa_forth_son }
+		}
+		character:Cockshaw_6.house = {
+			scope:recipient.house = { set_coa = dynn_Cockshaw_personal_coa_forth_son }
+		}
+		character:Conklyn_9.house = {
+			scope:recipient.house = { set_coa = dynn_Conklyn_personal_coa_forth_son }
+		}
+		character:Converlon_20.house = {
+			scope:recipient.house = { set_coa = dynn_Converlon_personal_coa_forth_son }
+		}
+		character:Cordwayner_5.house = {
+			scope:recipient.house = { set_coa = dynn_Cordwayner_personal_coa_forth_son }
+		}
+		character:Costayne_7.house = {
+			scope:recipient.house = { set_coa = dynn_Costayne_personal_coa_forth_son }
+		}
+		character:Crane_7.house = {
+			scope:recipient.house = { set_coa = dynn_Crane_personal_coa_forth_son }
+		}
+		character:Cupps_18.house = {
+			scope:recipient.house = { set_coa = dynn_Cupps_personal_coa_forth_son }
+		}
+		character:Cuy_5.house = {
+			scope:recipient.house = { set_coa = dynn_Cuy_personal_coa_forth_son }
+		}
+		character:Dunn_9.house = {
+			scope:recipient.house = { set_coa = dynn_Dunn_personal_coa_forth_son }
+		}
+		character:Durwell_13.house = {
+			scope:recipient.house = { set_coa = dynn_Durwell_personal_coa_forth_son }
+		}
+		character:Everran_21.house = {
+			scope:recipient.house = { set_coa = dynn_Everran_personal_coa_forth_son }
+		}
+		character:Farrow_18.house = {
+			scope:recipient.house = { set_coa = dynn_Farrow_personal_coa_forth_son }
+		}
+		character:Florent_17.house = {
+			scope:recipient.house = { set_coa = dynn_Florent_personal_coa_forth_son }
+		}
+		character:Fossoway_8.house = {
+			scope:recipient.house = { set_coa = dynn_Fossoway_personal_coa_forth_son }
+		}
+		character:Fossoway_New_Barrel_1.house = {
+			scope:recipient.house = { set_coa = house_Fossoway_New_Barrel_personal_coa_forth_son }
+		}
+		character:Footly_5.house = {
+			scope:recipient.house = { set_coa = dynn_Footly_personal_coa_forth_son }
+		}
+		character:Gardener_1.house = {
+			scope:recipient.house = { set_coa = dynn_Gardener_personal_coa_forth_son }
+		}
+		character:Goldwyne_5.house = {
+			scope:recipient.house = { set_coa = house_Goldwyne_personal_coa_forth_son }
+		}
+		character:Graceford_5.house = {
+			scope:recipient.house = { set_coa = dynn_Graceford_personal_coa_forth_son }
+		}
+		character:Graves_11.house = {
+			scope:recipient.house = { set_coa = dynn_Graves_personal_coa_forth_son }
+		}
+		character:Grimm_4.house = {
+			scope:recipient.house = { set_coa = dynn_Grimm_personal_coa_forth_son }
+		}
+		character:Harme_22.house = {
+			scope:recipient.house = { set_coa = dynn_Harme_personal_coa_forth_son }
+		}
+		character:Hastwyck_12.house = {
+			scope:recipient.house = { set_coa = dynn_Hastwyck_personal_coa_forth_son }
+		}
+		character:Hewett_13.house = {
+			scope:recipient.house = { set_coa = dynn_Hewett_personal_coa_forth_son }
+		}
+		character:Hightower_18.house = {
+			scope:recipient.house = { set_coa = dynn_Hightower_personal_coa_forth_son }
+		}
+		character:Hunt_8.house = {
+			scope:recipient.house = { set_coa = dynn_Hunt_personal_coa_forth_son }
+		}
+		character:Hutcheson_8.house = {
+			scope:recipient.house = { set_coa = dynn_Hutcheson_personal_coa_forth_son }
+		}
+		character:Inchfield_5.house = {
+			scope:recipient.house = { set_coa = dynn_Inchfield_personal_coa_forth_son }
+		}
+		character:Kern_16.house = {
+			scope:recipient.house = { set_coa = dynn_Kern_personal_coa_forth_son }
+		}
+		character:Kidwell_1.house = {
+			scope:recipient.house = { set_coa = dynn_Kidwell_personal_coa_forth_son }
+		}
+		character:Leygood_15.house = {
+			scope:recipient.house = { set_coa = dynn_Leygood_personal_coa_forth_son }
+		}
+		character:Lowther_6.house = {
+			scope:recipient.house = { set_coa = dynn_Lowther_personal_coa_forth_son }
+		}
+		character:Lush_21.house = {
+			scope:recipient.house = { set_coa = dynn_Lush_personal_coa_forth_son }
+		}
+		character:Lyberr_6.house = {
+			scope:recipient.house = { set_coa = dynn_Lyberr_personal_coa_forth_son }
+		}
+		character:Meadows_5.house = {
+			scope:recipient.house = { set_coa = dynn_Meadows_personal_coa_forth_son }
+		}
+		character:Merryweather_7.house = {
+			scope:recipient.house = { set_coa = dynn_Merryweather_personal_coa_forth_son }
+		}
+		character:Middlebury_7.house = {
+			scope:recipient.house = { set_coa = dynn_Middlebury_personal_coa_forth_son }
+		}
+		character:Morgomery_21.house = {
+			scope:recipient.house = { set_coa = dynn_Morgomery_personal_coa_forth_son }
+		}
+		character:Mullendore_4.house = {
+			scope:recipient.house = { set_coa = dynn_Mullendore_personal_coa_forth_son }
+		}
+		character:Norcross_6.house = {
+			scope:recipient.house = { set_coa = dynn_Norcross_personal_coa_forth_son }
+		}
+		character:Norridge_9.house = {
+			scope:recipient.house = { set_coa = dynn_Norridge_personal_coa_forth_son }
+		}
+		character:Oakheart_5.house = {
+			scope:recipient.house = { set_coa = dynn_Oakheart_personal_coa_forth_son }
+		}
+		character:Oldflowers_4.house = {
+			scope:recipient.house = { set_coa = house_Oldflowers_personal_coa_forth_son }
+		}
+		character:Orme_5.house = {
+			scope:recipient.house = { set_coa = dynn_Orme_personal_coa_forth_son }
+		}
+		character:Osgrey_7.house = {
+			scope:recipient.house = { set_coa = dynn_Osgrey_personal_coa_forth_son }
+		}
+		character:Peake_6.house = {
+			scope:recipient.house = { set_coa = dynn_Peake_personal_coa_forth_son }
+		}
+		character:Percy_22.house = {
+			scope:recipient.house = { set_coa = dynn_Percy_personal_coa_forth_son }
+		}
+		character:Pommingham_5.house = {
+			scope:recipient.house = { set_coa = dynn_Pommingham_personal_coa_forth_son }
+		}
+		character:Potter_14.house = {
+			scope:recipient.house = { set_coa = dynn_Potter_personal_coa_forth_son }
+		}
+#		character:Purpleheart_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Purpleheart_personal_coa_forth_son }
+#		}
+		character:Redding_5.house = {
+			scope:recipient.house = { set_coa = dynn_Redding_personal_coa_forth_son }
+		}
+		character:Redwyne_11.house = {
+			scope:recipient.house = { set_coa = dynn_Redwyne_personal_coa_forth_son }
+		}
+		character:Rhysling_5.house = {
+			scope:recipient.house = { set_coa = dynn_Rhysling_personal_coa_forth_son }
+		}
+		character:Risley_11.house = {
+			scope:recipient.house = { set_coa = dynn_Risley_personal_coa_forth_son }
+		}
+		character:Rodden_6.house = {
+			scope:recipient.house = { set_coa = dynn_Rodden_personal_coa_forth_son }
+		}
+		character:Rowan_6.house = {
+			scope:recipient.house = { set_coa = dynn_Rowan_personal_coa_forth_son }
+		}
+		character:Roxton_10.house = {
+			scope:recipient.house = { set_coa = dynn_Roxton_personal_coa_forth_son }
+		}
+		character:Sawyer_11.house = {
+			scope:recipient.house = { set_coa = dynn_Sawyer_personal_coa_forth_son }
+		}
+		character:Serry_7.house = {
+			scope:recipient.house = { set_coa = dynn_Serry_personal_coa_forth_son }
+		}
+		character:Shermer_4.house = {
+			scope:recipient.house = { set_coa = dynn_Shermer_personal_coa_forth_son }
+		}
+		character:Sloane_9.house = {
+			scope:recipient.house = { set_coa = dynn_Sloane_personal_coa_forth_son }
+		}
+		character:Stackhouse_4.house = {
+			scope:recipient.house = { set_coa = dynn_Stackhouse_personal_coa_forth_son }
+		}
+		character:Stafford_4.house = {
+			scope:recipient.house = { set_coa = dynn_Stafford_personal_coa_forth_son }
+		}
+		character:Stonecrab_5.house = {
+			scope:recipient.house = { set_coa = dynn_Stonecrab_personal_coa_forth_son }
+		}
+		character:Strickland_2.house = {
+			scope:recipient.house = { set_coa = dynn_Strickland_personal_coa_forth_son }
+		}
+		character:Summerchild_11.house = {
+			scope:recipient.house = { set_coa = dynn_Summerchild_personal_coa_forth_son }
+		}
+		character:Tarly_8.house = {
+			scope:recipient.house = { set_coa = dynn_Tarly_personal_coa_forth_son }
+		}
+		character:Tyrell_40.house = {
+			scope:recipient.house = { set_coa = dynn_Tyrell_personal_coa_forth_son }
+		}
+		character:Thornton_22.house = {
+			scope:recipient.house = { set_coa = dynn_Thornton_personal_coa_forth_son }
+		}
+		character:Uffering_6.house = {
+			scope:recipient.house = { set_coa = dynn_Uffering_personal_coa_forth_son }
+		}
+		character:Varner_4.house = {
+			scope:recipient.house = { set_coa = dynn_Varner_personal_coa_forth_son }
+		}
+		character:Vyrwel_10.house = {
+			scope:recipient.house = { set_coa = dynn_Vyrwel_personal_coa_forth_son }
+		}
+		character:Webber_30.house = {
+			scope:recipient.house = { set_coa = dynn_Webber_personal_coa_forth_son }
+		}
+		character:Westbrook_28.house = {
+			scope:recipient.house = { set_coa = dynn_Westbrook_personal_coa_forth_son }
+		}
+		character:Whitewater_16.house = {
+			scope:recipient.house = { set_coa = dynn_Whitewater_personal_coa_forth_son }
+		}
+		character:Willum_4.house = {
+			scope:recipient.house = { set_coa = dynn_Willum_personal_coa_forth_son }
+		}
+		character:Woodwright_5.house = {
+			scope:recipient.house = { set_coa = dynn_Woodwright_personal_coa_forth_son }
+		}
+		character:Wythers_10.house = {
+			scope:recipient.house = { set_coa = dynn_Wythers_personal_coa_forth_son }
+		}
+		character:Yelshire_6.house = {
+			scope:recipient.house = { set_coa = dynn_Yelshire_personal_coa_forth_son }
+		}
+		##############
+		# RIVERLANDS #
+		##############
+		character:Tully_40.house = {
+			scope:recipient.house = { set_coa = dynn_Tully_personal_coa_forth_son }
+		}
+		character:Bigglestone_7.house = {
+			scope:recipient.house = { set_coa = dynn_Bigglestone_personal_coa_forth_son }
+		}
+		character:Blackwood_25.house = {
+			scope:recipient.house = { set_coa = dynn_Blackwood_personal_coa_forth_son }
+		}
+		character:Blanetree_4.house = {
+			scope:recipient.house = { set_coa = dynn_Blanetree_personal_coa_forth_son }
+		}
+		character:Bracken_28.house = {
+			scope:recipient.house = { set_coa = dynn_Bracken_personal_coa_forth_son }
+		}
+#		character:Bromley_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Bromley_personal_coa_forth_son }
+#		}
+		character:Butterwell_5.house = {
+			scope:recipient.house = { set_coa = dynn_Butterwell_personal_coa_forth_son }
+		}
+		character:Byrne_7.house = {
+			scope:recipient.house = { set_coa = dynn_Byrne_personal_coa_forth_son }
+		}
+		character:Chambers_5.house = {
+			scope:recipient.house = { set_coa = dynn_Chambers_personal_coa_forth_son }
+		}
+		character:Charlton_40.house = {
+			scope:recipient.house = { set_coa = dynn_Charlton_personal_coa_forth_son }
+		}
+		character:Chaynes_25.house = {
+			scope:recipient.house = { set_coa = dynn_Chaynes_personal_coa_forth_son }
+		}
+		character:Cox_12.house = {
+			scope:recipient.house = { set_coa = dynn_Cox_personal_coa_forth_son }
+		}
+		character:Weller_8.house = {
+			scope:recipient.house = { set_coa = dynn_Weller_personal_coa_forth_son }
+		}
+		character:Darry_12.house = {
+			scope:recipient.house = { set_coa = dynn_Darry_personal_coa_forth_son }
+		}
+		character:Dannett_11.house = {
+			scope:recipient.house = { set_coa = dynn_Dannett_personal_coa_forth_son }
+		}
+		character:Deddings_3.house = {
+			scope:recipient.house = { set_coa = dynn_Deddings_personal_coa_forth_son }
+		}
+		character:Dunstable_12.house = {
+			scope:recipient.house = { set_coa = dynn_Dunstable_personal_coa_forth_son }
+		}
+		character:Erenford_4.house = {
+			scope:recipient.house = { set_coa = dynn_Erenford_personal_coa_forth_son }
+		}
+		character:Fisher_riverlands_duplicate_1.house = {
+			scope:recipient.house = { set_coa = dynn_Fisher_personal_coa_forth_son }
+		}
+		character:Frey_141.house = {
+			scope:recipient.house = { set_coa = dynn_Frey_personal_coa_forth_son }
+		}
+		character:Crossing_1.house = {
+			scope:recipient.house = { set_coa = house_Crossing_personal_coa_forth_son }
+		}
+		character:Goodbrook_9.house = {
+			scope:recipient.house = { set_coa = dynn_Goodbrook_personal_coa_forth_son }
+		}
+		character:Grell_6.house = {
+			scope:recipient.house = { set_coa = dynn_Grell_personal_coa_forth_son }
+		}
+		character:Grey_6.house = {
+			scope:recipient.house = { set_coa = dynn_Grey_personal_coa_forth_son }
+		}
+		character:Greysteel_1.house = {
+			scope:recipient.house = { set_coa = dynn_Greysteel_personal_coa_forth_son }
+		}
+		character:Haigh_1.house = {
+			scope:recipient.house = { set_coa = dynn_Haigh_personal_coa_forth_son }
+		}
+		character:Harlton_24.house = {
+			scope:recipient.house = { set_coa = dynn_Harlton_personal_coa_forth_son }
+		}
+		character:Harroway_1.house = {
+			scope:recipient.house = { set_coa = dynn_Harroway_personal_coa_forth_son }
+		}
+		character:Hawick_7.house = {
+			scope:recipient.house = { set_coa = dynn_Hawick_personal_coa_forth_son }
+		}
+		character:Heddle_6.house = {
+			scope:recipient.house = { set_coa = dynn_Heddle_personal_coa_forth_son }
+		}
+#		character:Hook_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Hook_personal_coa_forth_son }
+#		}
+		character:Justman_1.house = {
+			scope:recipient.house = { set_coa = dynn_Justman_personal_coa_forth_son }
+		}
+#		character:Kanet_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Kanet_personal_coa_forth_son }
+#		}
+		character:Keath_5.house = {
+			scope:recipient.house = { set_coa = dynn_Keath_personal_coa_forth_son }
+		}
+		character:Kytley_11.house = {
+			scope:recipient.house = { set_coa = dynn_Kytley_personal_coa_forth_son }
+		}
+		character:Lolliston_5.house = {
+			scope:recipient.house = { set_coa = dynn_Lolliston_personal_coa_forth_son }
+		}
+		character:Knight_Riverlands_2.house = {
+			scope:recipient.house = { set_coa = dynn_Longbough_personal_coa_forth_son }
+		}
+		character:Lothston_1.house = {
+			scope:recipient.house = { set_coa = dynn_Lothston_personal_coa_forth_son }
+		}
+		character:Lychester_8.house = {
+			scope:recipient.house = { set_coa = dynn_Lychester_personal_coa_forth_son }
+		}
+		character:Mallister_11.house = {
+			scope:recipient.house = { set_coa = dynn_Mallister_personal_coa_forth_son }
+		}
+		character:Mooton_8.house = {
+			scope:recipient.house = { set_coa = dynn_Mooton_personal_coa_forth_son }
+		}
+		character:Mudd_3.house = {
+			scope:recipient.house = { set_coa = dynn_Mudd_personal_coa_forth_son }
+		}
+		character:Nayland_6.house = {
+			scope:recipient.house = { set_coa = dynn_Nayland_personal_coa_forth_son }
+		}
+		character:Nutt_1.house = {
+			scope:recipient.house = { set_coa = dynn_Nutt_personal_coa_forth_son }
+		}
+		character:Paege_7.house = {
+			scope:recipient.house = { set_coa = dynn_Paege_personal_coa_forth_son }
+		}
+		character:Pemford_6.house = {
+			scope:recipient.house = { set_coa = dynn_Pemford_personal_coa_forth_son }
+		}
+		character:Penny_16.house = {
+			scope:recipient.house = { set_coa = dynn_Penny_personal_coa_forth_son }
+		}
+		character:Perryn_9.house = {
+			scope:recipient.house = { set_coa = dynn_Perryn_personal_coa_forth_son }
+		}
+		character:Pimm_23.house = {
+			scope:recipient.house = { set_coa = dynn_Pimm_personal_coa_forth_son }
+		}
+		character:Piper_11.house = {
+			scope:recipient.house = { set_coa = dynn_Piper_personal_coa_forth_son }
+		}
+		character:Qoherys_1.house = {
+			scope:recipient.house = { set_coa = dynn_Qoherys_personal_coa_forth_son }
+		}
+		character:Rankenfell_6.house = {
+			scope:recipient.house = { set_coa = dynn_Rankenfell_personal_coa_forth_son }
+		}
+		character:Roote_31.house = {
+			scope:recipient.house = { set_coa = dynn_Roote_personal_coa_forth_son }
+		}
+		character:Rushmoor_3.house = {
+			scope:recipient.house = { set_coa = dynn_Rushmoor_personal_coa_forth_son }
+		}
+		character:Ryger_5.house = {
+			scope:recipient.house = { set_coa = dynn_Ryger_personal_coa_forth_son }
+		}
+		character:Ryn_1.house = {
+			scope:recipient.house = { set_coa = dynn_Ryn_personal_coa_forth_son }
+		}
+		character:Shawney_4.house = {
+			scope:recipient.house = { set_coa = dynn_Shawney_personal_coa_forth_son }
+		}
+		character:Smallwood_52.house = {
+			scope:recipient.house = { set_coa = dynn_Smallwood_personal_coa_forth_son }
+		}
+		character:Strong_1.house = {
+			scope:recipient.house = { set_coa = dynn_Strong_personal_coa_forth_son }
+		}
+		character:Teague_1.house = {
+			scope:recipient.house = { set_coa = dynn_Teague_personal_coa_forth_son }
+		}
+		character:Terrick_3.house = {
+			scope:recipient.house = { set_coa = dynn_Terrick_personal_coa_forth_son }
+		}
+		character:Towers_1.house = {
+			scope:recipient.house = { set_coa = dynn_Towers_personal_coa_forth_son }
+		}
+		character:Vance_Wayfarers_Rest_11.house = {
+			scope:recipient.house = { set_coa = dynn_Vance_personal_coa_forth_son }
+		}
+		character:Vance_Atranta_7.house = {
+			scope:recipient.house = { set_coa = house_VanceA_personal_coa_forth_son }
+		}
+		character:Vypren_4.house = {
+			scope:recipient.house = { set_coa = dynn_Vypren_personal_coa_forth_son }
+		}
+		character:Wayn_1.house = {
+			scope:recipient.house = { set_coa = dynn_Wayn_personal_coa_forth_son }
+		}
+		character:Whistler_12.house = {
+			scope:recipient.house = { set_coa = dynn_Whistler_personal_coa_forth_son }
+		}
+		character:Whent_14.house = {
+			scope:recipient.house = { set_coa = dynn_Whent_personal_coa_forth_son }
+		}
+		character:Wode_5.house = {
+			scope:recipient.house = { set_coa = dynn_Wode_personal_coa_forth_son }
+		}
+		##############
+		# STORMLANDS #
+		##############
+		character:Baratheon_14.house = {
+			scope:recipient.house = { set_coa = dynn_Baratheon_personal_coa_forth_son }
+		}
+		character:Bolling_9.house = {
+			scope:recipient.house = { set_coa = house_Bolling_personal_coa_forth_son }
+		}
+		character:Brownhill_4.house = {
+			scope:recipient.house = { set_coa = dynn_Brownhill_personal_coa_forth_son }
+		}
+		character:Buckler_5.house = {
+			scope:recipient.house = { set_coa = dynn_Buckler_personal_coa_forth_son }
+		}
+		character:Cafferen_5.house = {
+			scope:recipient.house = { set_coa = dynn_Cafferen_personal_coa_forth_son }
+		}
+		character:Caron_10.house = {
+			scope:recipient.house = { set_coa = dynn_Caron_personal_coa_forth_son }
+		}
+		character:Connington_10.house = {
+			scope:recipient.house = { set_coa = dynn_Connington_personal_coa_forth_son }
+		}
+		character:Crowell_4.house = {
+			scope:recipient.house = { set_coa = dynn_Crowell_personal_coa_forth_son }
+		}
+		character:Dondarrion_5.house = {
+			scope:recipient.house = { set_coa = dynn_Dondarrion_personal_coa_forth_son }
+		}
+		character:Durrandon_1.house = {
+			scope:recipient.house = { set_coa = dynn_Durrandon_personal_coa_forth_son }
+		}
+		character:Errol_4.house = {
+			scope:recipient.house = { set_coa = dynn_Errol_personal_coa_forth_son }
+		}
+		character:Estermont_11.house = {
+			scope:recipient.house = { set_coa = dynn_Estermont_personal_coa_forth_son }
+		}
+		character:Fell_6.house = {
+			scope:recipient.house = { set_coa = dynn_Fell_personal_coa_forth_son }
+		}
+		character:Gower_1.house = {
+			scope:recipient.house = { set_coa = dynn_Gower_personal_coa_forth_son }
+		}
+		character:Grandison_8.house = {
+			scope:recipient.house = { set_coa = dynn_Grandison_personal_coa_forth_son }
+		}
+		character:88000501.house = {
+			scope:recipient.house = { set_coa = dynn_Greenpools_personal_coa_forth_son }
+		}
+		character:Hasty_6.house = {
+			scope:recipient.house = { set_coa = dynn_Hasty_personal_coa_forth_son }
+		}
+		character:Herston_5.house = {
+			scope:recipient.house = { set_coa = dynn_Herston_personal_coa_forth_son }
+		}
+		character:Horpe_5.house = {
+			scope:recipient.house = { set_coa = dynn_Horpe_personal_coa_forth_son }
+		}
+		character:Kellington_3.house = {
+			scope:recipient.house = { set_coa = dynn_Kellington_personal_coa_forth_son }
+		}
+		character:Lonmouth_4.house = {
+			scope:recipient.house = { set_coa = dynn_Lonmouth_personal_coa_forth_son }
+		}
+		character:Mertyns_8.house = {
+			scope:recipient.house = { set_coa = dynn_Mertyns_personal_coa_forth_son }
+		}
+		character:Morrigen_5.house = {
+			scope:recipient.house = { set_coa = dynn_Morrigen_personal_coa_forth_son }
+		}
+		character:Musgood_7.house = {
+			scope:recipient.house = { set_coa = dynn_Musgood_personal_coa_forth_son }
+		}
+		character:Kings_Mountain_1.house = {
+			scope:recipient.house = { set_coa = dynn_Sendney_personal_coa_forth_son }
+		}
+		character:Shaw_10.house = {
+			scope:recipient.house = { set_coa = dynn_Shaw_personal_coa_forth_son }
+		}
+		character:Peasebury_4.house = {
+			scope:recipient.house = { set_coa = dynn_Peasebury_personal_coa_forth_son }
+		}
+		character:Penrose_5.house = {
+			scope:recipient.house = { set_coa = dynn_Penrose_personal_coa_forth_son }
+		}
+		character:Rambton_5.house = {
+			scope:recipient.house = { set_coa = dynn_Rambton_personal_coa_forth_son }
+		}
+		character:Rogers_4.house = {
+			scope:recipient.house = { set_coa = dynn_Rogers_personal_coa_forth_son }
+		}
+		character:Seaworth_1.house = {
+			scope:recipient.house = { set_coa = dynn_Seaworth_personal_coa_forth_son }
+		}
+		character:Selmy_11.house = {
+			scope:recipient.house = { set_coa = dynn_Selmy_personal_coa_forth_son }
+		}
+		character:Staedmon_5.house = {
+			scope:recipient.house = { set_coa = dynn_Staedmon_personal_coa_forth_son }
+		}
+		character:Stillman_10.house = {
+			scope:recipient.house = { set_coa = dynn_Stillman_personal_coa_forth_son }
+		}
+		character:Swann_9.house = {
+			scope:recipient.house = { set_coa = dynn_Swann_personal_coa_forth_son }
+		}
+		character:Swygert_10.house = {
+			scope:recipient.house = { set_coa = dynn_Swygert_personal_coa_forth_son }
+		}
+		character:Tarth_7.house = {
+			scope:recipient.house = { set_coa = dynn_Tarth_personal_coa_forth_son }
+		}
+		character:Toyne_9.house = {
+			scope:recipient.house = { set_coa = dynn_Toyne_personal_coa_forth_son }
+		}
+		character:Trant_11.house = {
+			scope:recipient.house = { set_coa = dynn_Trant_personal_coa_forth_son }
+		}
+		character:Tudbury_4.house = {
+			scope:recipient.house = { set_coa = dynn_Tudbury_personal_coa_forth_son }
+		}
+		character:Wagstaff_8.house = {
+			scope:recipient.house = { set_coa = dynn_Wagstaff_personal_coa_forth_son }
+		}
+		character:Durrandon_90.house = {
+			scope:recipient.house = { set_coa = house_Wensington_personal_coa_forth_son }
+		}
+		character:Whitehead_13.house = {
+			scope:recipient.house = { set_coa = dynn_Whitehead_personal_coa_forth_son }
+		}
+		character:Wormwood_9.house = {
+			scope:recipient.house = { set_coa = dynn_Wormwood_personal_coa_forth_son }
+		}
+		character:Wylde_14.house = {
+			scope:recipient.house = { set_coa = dynn_Wylde_personal_coa_forth_son }
+		}
+		character:Peck_23.house = {
+			scope:recipient.house = { set_coa = dynn_Peck_personal_coa_forth_son }
+		}
+		character:Spurn_22.house = {
+			scope:recipient.house = { set_coa = dynn_Spurn_personal_coa_forth_son }
+		}
+		character:Ginett_23.house = {
+			scope:recipient.house = { set_coa = dynn_Ginett_personal_coa_forth_son }
+		}
+		character:Lambert_22.house = {
+			scope:recipient.house = { set_coa = dynn_Lambert_personal_coa_forth_son }
+		}
+		character:Morrison_20.house = {
+			scope:recipient.house = { set_coa = dynn_Morrison_personal_coa_forth_son }
+		}
+		character:Grimsby_22.house = {
+			scope:recipient.house = { set_coa = dynn_Grimsby_personal_coa_forth_son }
+		}
+		character:Rooke_24.house = {
+			scope:recipient.house = { set_coa = dynn_Rooke_personal_coa_forth_son }
+		}
+		character:Staines_24.house = {
+			scope:recipient.house = { set_coa = dynn_Staines_personal_coa_forth_son }
+		}
+		character:Dennecent_23.house = {
+			scope:recipient.house = { set_coa = dynn_Dennecent_personal_coa_forth_son }
+		}
+		character:Hildreath_24.house = {
+			scope:recipient.house = { set_coa = dynn_Hildreath_personal_coa_forth_son }
+		}
+		character:Densmore_23.house = {
+			scope:recipient.house = { set_coa = dynn_Densmore_personal_coa_forth_son }
+		}
+		########
+		# VALE #
+		########
+		character:Arryn_15.house = {
+			scope:recipient.house = { set_coa = dynn_Arryn_personal_coa_forth_son }
+		}
+		character:ArrynGT_10.house = {
+			scope:recipient.house = { set_coa = house_ArrynGT_personal_coa_forth_son }
+		}
+		character:Back_1.house = {
+			scope:recipient.house = { set_coa = dynn_Back_personal_coa_forth_son }
+		}
+		character:Badics_1.house = {
+			scope:recipient.house = { set_coa = dynn_Badics_personal_coa_forth_son }
+		}
+		character:Baelish_3.house = {
+			scope:recipient.house = { set_coa = dynn_Baelish_personal_coa_forth_son }
+		}
+		character:Warrick_8.house = {
+			scope:recipient.house = { set_coa = dynn_Warrick_personal_coa_forth_son }
+		}
+		character:Borrell_9.house = {
+			scope:recipient.house = { set_coa = dynn_Borrell_personal_coa_forth_son }
+		}
+		character:Breakstone_9.house = {
+			scope:recipient.house = { set_coa = dynn_Breakstone_personal_coa_forth_son }
+		}
+		character:Brightstone_1.house = {
+			scope:recipient.house = { set_coa = dynn_Brightstone_personal_coa_forth_son }
+		}
+		character:Coldwater_6.house = {
+			scope:recipient.house = { set_coa = dynn_Coldwater_personal_coa_forth_son }
+		}
+		character:Corbray_6.house = {
+			scope:recipient.house = { set_coa = dynn_Corbray_personal_coa_forth_son }
+		}
+		character:Crayne_8.house = {
+			scope:recipient.house = { set_coa = dynn_Crayne_personal_coa_forth_son }
+		}
+		character:Donnerly_14.house = {
+			scope:recipient.house = { set_coa = dynn_Donnerly_personal_coa_forth_son }
+		}
+		character:Donniger_5.house = {
+			scope:recipient.house = { set_coa = dynn_Donniger_personal_coa_forth_son }
+		}
+		character:Dutton_1.house = {
+			scope:recipient.house = { set_coa = dynn_Dutton_personal_coa_forth_son }
+		}
+		character:Egen_7.house = {
+			scope:recipient.house = { set_coa = dynn_Egen_personal_coa_forth_son }
+		}
+		character:Elesham_5.house = {
+			scope:recipient.house = { set_coa = dynn_Elesham_personal_coa_forth_son }
+		}
+		character:Grafton_9.house = {
+			scope:recipient.house = { set_coa = dynn_Grafton_personal_coa_forth_son }
+		}
+		character:Hardyng_8.house = {
+			scope:recipient.house = { set_coa = dynn_Hardyng_personal_coa_forth_son }
+		}
+		character:Hersy_4.house = {
+			scope:recipient.house = { set_coa = dynn_Hersy_personal_coa_forth_son }
+		}
+		character:Hungerford_24.house = {
+			scope:recipient.house = { set_coa = dynn_Hungerford_personal_coa_forth_son }
+		}
+		character:Hunter_48.house = {
+			scope:recipient.house = { set_coa = dynn_Hunter_personal_coa_forth_son }
+		}
+		character:Lipps_10.house = {
+			scope:recipient.house = { set_coa = dynn_Lipps_personal_coa_forth_son }
+		}
+		character:Long_4.house = {
+			scope:recipient.house = { set_coa = dynn_Long_personal_coa_forth_son }
+		}
+		character:Longthorpe_6.house = {
+			scope:recipient.house = { set_coa = dynn_Longthorpe_personal_coa_forth_son }
+		}
+		character:Lynderly_8.house = {
+			scope:recipient.house = { set_coa = dynn_Lynderly_personal_coa_forth_son }
+		}
+		character:Marsten_9.house = {
+			scope:recipient.house = { set_coa = dynn_Marsten_personal_coa_forth_son }
+		}
+		character:Melcolm_6.house = {
+			scope:recipient.house = { set_coa = dynn_Melcolm_personal_coa_forth_son }
+		}
+		character:Moore_7.house = {
+			scope:recipient.house = { set_coa = dynn_Moore_personal_coa_forth_son }
+		}
+		character:Morgryn_16.house = {
+			scope:recipient.house = { set_coa = dynn_Morgryn_personal_coa_forth_son }
+		}
+		character:Pryor_6.house = {
+			scope:recipient.house = { set_coa = dynn_Pryor_personal_coa_forth_son }
+		}
+		character:Redfort_6.house = {
+			scope:recipient.house = { set_coa = dynn_Redfort_personal_coa_forth_son }
+		}
+		character:Royce_11.house = {
+			scope:recipient.house = { set_coa = dynn_Royce_personal_coa_forth_son }
+		}
+		character:RoyceGOTM_4.house = {
+			scope:recipient.house = { set_coa = house_RoyceGOTM_personal_coa_forth_son }
+		}
+		character:Ruthermont_7.house = {
+			scope:recipient.house = { set_coa = dynn_Ruthermont_personal_coa_forth_son }
+		}
+		character:Saul_1.house = {
+			scope:recipient.house = { set_coa = dynn_Saul_personal_coa_forth_son }
+		}
+#		character:Shadrich_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Shadrich_personal_coa_forth_son }
+#		}
+#		character:Shell_1.house = {
+#			scope:recipient.house = { set_coa = dynn_Shell_personal_coa_forth_son }
+#		}
+		character:Shett_8.house = {
+			scope:recipient.house = { set_coa = dynn_Shett_personal_coa_forth_son }
+		}
+		character:ShettGT_8.house = {
+			scope:recipient.house = { set_coa = house_ShettGT_personal_coa_forth_son }
+		}
+		character:Sunderland_9.house = {
+			scope:recipient.house = { set_coa = dynn_Sunderland_personal_coa_forth_son }
+		}
+		character:Templeton_5.house = {
+			scope:recipient.house = { set_coa = dynn_Templeton_personal_coa_forth_son }
+		}
+		character:Tollett_7.house = {
+			scope:recipient.house = { set_coa = dynn_Tollett_personal_coa_forth_son }
+		}
+		character:Torrent_6.house = {
+			scope:recipient.house = { set_coa = dynn_Torrent_personal_coa_forth_son }
+		}
+		character:True_1.house = {
+			scope:recipient.house = { set_coa = dynn_True_personal_coa_forth_son }
+		}
+		character:Underleaf_1.house = {
+			scope:recipient.house = { set_coa = dynn_Underleaf_personal_coa_forth_son }
+		}
+		character:Upcliff_6.house = {
+			scope:recipient.house = { set_coa = dynn_Upcliff_personal_coa_forth_son }
+		}
+		character:Waxley_9.house = {
+			scope:recipient.house = { set_coa = dynn_Waxley_personal_coa_forth_son }
+		}
+		character:Weatherwax_20.house = {
+			scope:recipient.house = { set_coa = dynn_Weatherwax_personal_coa_forth_son }
+		}
+		character:Waynwood_26.house = {
+			scope:recipient.house = { set_coa = dynn_Waynwood_personal_coa_forth_son }
+		}
+		character:Woodhull_9.house = {
+			scope:recipient.house = { set_coa = dynn_Woodhull_personal_coa_forth_son }
+		}
+		character:Wydman_7.house = {
+			scope:recipient.house = { set_coa = dynn_Wydman_personal_coa_forth_son }
+		}
+		character:Topp_1.house = {
+			scope:recipient.house = { set_coa = dynn_Topp_personal_coa_forth_son }
+		}
+		character:Gorse_1.house = {
+			scope:recipient.house = { set_coa = dynn_Gorse_personal_coa_forth_son }
+		}
+		character:Weight_21.house = {
+			scope:recipient.house = { set_coa = dynn_Weight_personal_coa_forth_son }
+		}
+		character:Auldryn_22.house = {
+			scope:recipient.house = { set_coa = dynn_Auldryn_personal_coa_forth_son }
+		}
+		character:Mullyn_22.house = {
+			scope:recipient.house = { set_coa = dynn_Mullyn_personal_coa_forth_son }
+		}
+		character:Garnett_23.house = {
+			scope:recipient.house = { set_coa = dynn_Garnett_personal_coa_forth_son }
+		}
+		character:Stewart_1.house = {
+			scope:recipient.house = { set_coa = dynn_Stewart_personal_coa_forth_son }
+		}
+		character:Webster_1.house = {
+			scope:recipient.house = { set_coa = dynn_Webster_personal_coa_forth_son }
+		}
+		character:Orimund_22.house = {
+			scope:recipient.house = { set_coa = dynn_Orimund_personal_coa_forth_son }
+		}
+		character:Beale_22.house = {
+			scope:recipient.house = { set_coa = dynn_Beale_personal_coa_forth_son }
+		}
+		character:Darkholme_24.house = {
+			scope:recipient.house = { set_coa = dynn_Darkholme_personal_coa_forth_son }
+		}
+		character:Crews_22.house = {
+			scope:recipient.house = { set_coa = dynn_Crews_personal_coa_forth_son }
+		}
+		character:Witt_21.house = {
+			scope:recipient.house = { set_coa = dynn_Witt_personal_coa_forth_son }
+		}
+		character:Driscoll_21.house = {
+			scope:recipient.house = { set_coa = dynn_Driscoll_personal_coa_forth_son }
+		}
+		character:Marks_21.house = {
+			scope:recipient.house = { set_coa = dynn_Marks_personal_coa_forth_son }
+		}
+		character:Kurrigan_23.house = {
+			scope:recipient.house = { set_coa = dynn_Kurrigan_personal_coa_forth_son }
+		}
+		character:Den_Brove_1.house = {
+			scope:recipient.house = { set_coa = dynn_Den_Brove_personal_coa_forth_son }
+		}
+		character:Grolt_21.house = {
+			scope:recipient.house = { set_coa = dynn_Grolt_personal_coa_forth_son }
+		}
+		character:Altger_21.house = {
+			scope:recipient.house = { set_coa = dynn_Altger_personal_coa_forth_son }
+		}
+		character:Devener_21.house = {
+			scope:recipient.house = { set_coa = dynn_Devener_personal_coa_forth_son }
+		}
+		character:Halcott_22.house = {
+			scope:recipient.house = { set_coa = dynn_Halcott_personal_coa_forth_son }
+		}
+		character:Shelldrake_21.house = {
+			scope:recipient.house = { set_coa = dynn_Shelldrake_personal_coa_forth_son }
+		}
+		character:Jesper_21.house = {
+			scope:recipient.house = { set_coa = dynn_Jesper_personal_coa_forth_son }
+		}
+		character:Vearnon_22.house = {
+			scope:recipient.house = { set_coa = dynn_Vearnon_personal_coa_forth_son }
+		}
+		character:Ringstone_1.house = {
+			scope:recipient.house = { set_coa = house_Ringstone_personal_coa_forth_son }
+		}
+		character:Morris_23.house = {
+			scope:recipient.house = { set_coa = dynn_Morris_personal_coa_forth_son }
+		}
+		character:Seasons_20.house = {
+			scope:recipient.house = { set_coa = dynn_Seasons_personal_coa_forth_son }
+		}
+		character:LynderlySC_1.house = {
+			scope:recipient.house = { set_coa = house_LynderlySC_personal_coa_forth_son }
+		}
+		character:Bleaker_22.house = {
+			scope:recipient.house = { set_coa = dynn_Bleaker_personal_coa_forth_son }
+		}
+		character:Wiltwood_22.house = {
+			scope:recipient.house = { set_coa = dynn_Wiltwood_personal_coa_forth_son }
+		}
+		character:Bommenstone_22.house = {
+			scope:recipient.house = { set_coa = dynn_Bommenstone_personal_coa_forth_son }
+		}
+		character:Brask_21.house = {
+			scope:recipient.house = { set_coa = dynn_Brask_personal_coa_forth_son }
+		}
+		character:Symes_21.house = {
+			scope:recipient.house = { set_coa = dynn_Symes_personal_coa_forth_son }
+		}
+		character:Flattery_23.house = {
+			scope:recipient.house = { set_coa = dynn_Flattery_personal_coa_forth_son }
+		}
+		character:Garrish_21.house = {
+			scope:recipient.house = { set_coa = dynn_Garrish_personal_coa_forth_son }
+		}
+		character:Revere_22.house = {
+			scope:recipient.house = { set_coa = dynn_Revere_personal_coa_forth_son }
+		}
+		character:Whickett_23.house = {
+			scope:recipient.house = { set_coa = dynn_Whickett_personal_coa_forth_son }
+		}
+		character:Harrow_22.house = {
+			scope:recipient.house = { set_coa = dynn_Harrow_personal_coa_forth_son }
+		}
+		character:Rutley_22.house = {
+			scope:recipient.house = { set_coa = dynn_Rutley_personal_coa_forth_son }
+		}
+		character:Bretherick_1.house = {
+			scope:recipient.house = { set_coa = dynn_Bretherick_personal_coa_forth_son }
+		}
+		character:Ran_Cammon_1.house = {
+			scope:recipient.house = { set_coa = dynn_Ran_Cammon_personal_coa_forth_son }
+		}
+		character:Chase_1.house = {
+			scope:recipient.house = { set_coa = dynn_Chase_personal_coa_forth_son }
+		}
+		character:Kinnear_1.house = {
+			scope:recipient.house = { set_coa = dynn_Kinnear_personal_coa_forth_son }
+		}
+		character:Seldon_1.house = {
+			scope:recipient.house = { set_coa = dynn_Seldon_personal_coa_forth_son }
+		}
+		character:Cullimore_1.house = {
+			scope:recipient.house = { set_coa = dynn_Cullimore_personal_coa_forth_son }
+		}
+		character:Lushry_1.house = {
+			scope:recipient.house = { set_coa = dynn_Lushry_personal_coa_forth_son }
+		}
+		###############
+		# WESTERLANDS #
+		###############
+		character:Lannister_29.house = {
+			scope:recipient.house = { set_coa = dynn_Lannister_personal_coa_forth_son }
+		}
+		character:LannisterLP_9.house = {
+			scope:recipient.house = { set_coa = house_LannisterLannisport_personal_coa_forth_son }
+		}
+		character:Reyne_1.house = {
+			scope:recipient.house = { set_coa = dynn_Reyne_personal_coa_forth_son }
+		}
+		character:Algood_7.house = {
+			scope:recipient.house = { set_coa = dynn_Algood_personal_coa_forth_son }
+		}
+		character:Banefort_5.house = {
+			scope:recipient.house = { set_coa = dynn_Banefort_personal_coa_forth_son }
+		}
+		character:Bettley_5.house = {
+			scope:recipient.house = { set_coa = dynn_Bettley_personal_coa_forth_son }
+		}
+		character:Brax_10.house = {
+			scope:recipient.house = { set_coa = dynn_Brax_personal_coa_forth_son }
+		}
+		character:Broom_6.house = {
+			scope:recipient.house = { set_coa = dynn_Broom_personal_coa_forth_son }
+		}
+		character:Broome_6.house = {
+			scope:recipient.house = { set_coa = dynn_Broome_personal_coa_forth_son }
+		}
+		character:Casterly_1.house = {
+			scope:recipient.house = { set_coa = dynn_Casterly_personal_coa_forth_son }
+		}
+		character:Clegane_1.house = {
+			scope:recipient.house = { set_coa = dynn_Clegane_personal_coa_forth_son }
+		}
+		character:Clifton_16.house = {
+			scope:recipient.house = { set_coa = dynn_Clifton_personal_coa_forth_son }
+		}
+		character:Crakehall_11.house = {
+			scope:recipient.house = { set_coa = dynn_Crakehall_personal_coa_forth_son }
+		}
+		character:Dabell_6.house = {
+			scope:recipient.house = { set_coa = dynn_Dabell_personal_coa_forth_son }
+		}
+		character:Doggett_3.house = {
+			scope:recipient.house = { set_coa = dynn_Doggett_personal_coa_forth_son }
+		}
+		character:Dulver_8.house = {
+			scope:recipient.house = { set_coa = dynn_Dulver_personal_coa_forth_son }
+		}
+		character:Drox_7.house = {
+			scope:recipient.house = { set_coa = dynn_Drox_personal_coa_forth_son }
+		}
+		character:Estren_4.house = {
+			scope:recipient.house = { set_coa = dynn_Estren_personal_coa_forth_son }
+		}
+		character:Falwell_6.house = {
+			scope:recipient.house = { set_coa = dynn_Falwell_personal_coa_forth_son }
+		}
+		character:Farman_6.house = {
+			scope:recipient.house = { set_coa = dynn_Farman_personal_coa_forth_son }
+		}
+		character:Ferren_5.house = {
+			scope:recipient.house = { set_coa = dynn_Ferren_personal_coa_forth_son }
+		}
+		character:Foote_10.house = {
+			scope:recipient.house = { set_coa = dynn_Foote_personal_coa_forth_son }
+		}
+		character:Garner_4.house = {
+			scope:recipient.house = { set_coa = dynn_Garner_personal_coa_forth_son }
+		}
+		character:Greenfield_9.house = {
+			scope:recipient.house = { set_coa = dynn_Greenfield_personal_coa_forth_son }
+		}
+		character:Hamell_5.house = {
+			scope:recipient.house = { set_coa = dynn_Hamell_personal_coa_forth_son }
+		}
+		character:Hawthorne_28.house = {
+			scope:recipient.house = { set_coa = dynn_Hawthorne_personal_coa_forth_son }
+		}
+		character:Hetherspoon_8.house = {
+			scope:recipient.house = { set_coa = dynn_Hetherspoon_personal_coa_forth_son }
+		}
+		character:Jast_6.house = {
+			scope:recipient.house = { set_coa = dynn_Jast_personal_coa_forth_son }
+		}
+		character:KenningK_4.house = {
+			scope:recipient.house = { set_coa = house_KenningK_personal_coa_forth_son }
+		}
+		character:Kyndall_5.house = {
+			scope:recipient.house = { set_coa = dynn_Kyndall_personal_coa_forth_son }
+		}
+		character:Lannett_9.house = {
+			scope:recipient.house = { set_coa = house_Lannett_personal_coa_forth_son }
+		}
+		character:Lanny_9.house = {
+			scope:recipient.house = { set_coa = house_Lanny_personal_coa_forth_son }
+		}
+		character:Lansdale_11.house = {
+			scope:recipient.house = { set_coa = dynn_Lansdale_personal_coa_forth_son }
+		}
+		character:Lanster_1.house = {
+			scope:recipient.house = { set_coa = dynn_Lanster_personal_coa_forth_son }
+		}
+		character:Lantell_1.house = {
+			scope:recipient.house = { set_coa = house_Lantell_personal_coa_forth_son }
+		}
+		character:Lefford_6.house = {
+			scope:recipient.house = { set_coa = dynn_Lefford_personal_coa_forth_son }
+		}
+		character:Lorch_6.house = {
+			scope:recipient.house = { set_coa = dynn_Lorch_personal_coa_forth_son }
+		}
+		character:Lydden_8.house = {
+			scope:recipient.house = { set_coa = dynn_Lydden_personal_coa_forth_son }
+		}
+		character:Marbrand_10.house = {
+			scope:recipient.house = { set_coa = dynn_Marbrand_personal_coa_forth_son }
+		}
+		character:Moreland_3.house = {
+			scope:recipient.house = { set_coa = dynn_Moreland_personal_coa_forth_son }
+		}
+		character:Parren_1.house = {
+			scope:recipient.house = { set_coa = dynn_Parren_personal_coa_forth_son }
+		}
+		character:Payne_17.house = {
+			scope:recipient.house = { set_coa = dynn_Payne_personal_coa_forth_son }
+		}
+		character:Peckledon_7.house = {
+			scope:recipient.house = { set_coa = dynn_Peckledon_personal_coa_forth_son }
+		}
+		character:Plumm_6.house = {
+			scope:recipient.house = { set_coa = dynn_Plumm_personal_coa_forth_son }
+		}
+		character:Prester_6.house = {
+			scope:recipient.house = { set_coa = dynn_Prester_personal_coa_forth_son }
+		}
+		character:Ruskyn_1.house = {
+			scope:recipient.house = { set_coa = dynn_Ruskyn_personal_coa_forth_son }
+		}
+		character:Ruttiger_4.house = {
+			scope:recipient.house = { set_coa = dynn_Ruttiger_personal_coa_forth_son }
+		}
+		character:Sarsfield_4.house = {
+			scope:recipient.house = { set_coa = dynn_Sarsfield_personal_coa_forth_son }
+		}
+		character:Sarwyck_9.house = {
+			scope:recipient.house = { set_coa = dynn_Sarwyck_personal_coa_forth_son }
+		}
+		character:Serrett_5.house = {
+			scope:recipient.house = { set_coa = dynn_Serrett_personal_coa_forth_son }
+		}
+		character:Spicer_1.house = {
+			scope:recipient.house = { set_coa = dynn_Spicer_personal_coa_forth_son }
+		}
+		character:Stackspear_4.house = {
+			scope:recipient.house = { set_coa = dynn_Stackspear_personal_coa_forth_son }
+		}
+		character:Stillwood_10.house = {
+			scope:recipient.house = { set_coa = dynn_Stilwood_personal_coa_forth_son }
+		}
+		character:Swyft_8.house = {
+			scope:recipient.house = { set_coa = dynn_Swyft_personal_coa_forth_son }
+		}
+		character:Tarbeck_1.house = {
+			scope:recipient.house = { set_coa = dynn_Tarbeck_personal_coa_forth_son }
+		}
+		character:Tarwick_1.house = {
+			scope:recipient.house = { set_coa = dynn_Tarwick_personal_coa_forth_son }
+		}
+		character:Turnberry_7.house = {
+			scope:recipient.house = { set_coa = dynn_Turnberry_personal_coa_forth_son }
+		}
+		character:Vikary_8.house = {
+			scope:recipient.house = { set_coa = house_Vikary_personal_coa_forth_son }
+		}
+		character:Westerling_6.house = {
+			scope:recipient.house = { set_coa = dynn_Westerling_personal_coa_forth_son }
+		}
+		character:Westford_4.house = {
+			scope:recipient.house = { set_coa = dynn_Westford_personal_coa_forth_son }
+		}
+		character:Whitfield_5.house = {
+			scope:recipient.house = { set_coa = dynn_Whitfield_personal_coa_forth_son }
+		}
+		character:Myatt_5.house = {
+			scope:recipient.house = { set_coa = dynn_Myatt_personal_coa_forth_son }
+		}
+		character:Wrexley_6.house = {
+			scope:recipient.house = { set_coa = dynn_Wrexley_personal_coa_forth_son }
+		}
+		character:Yarwyck_5.house = {
+			scope:recipient.house = { set_coa = dynn_Yarwyck_personal_coa_forth_son }
+		}
+		character:Yew_8.house = {
+			scope:recipient.house = { set_coa = dynn_Yew_personal_coa_forth_son }
+		}
+		character:Taves_21.house = {
+			scope:recipient.house = { set_coa = dynn_Taves_personal_coa_forth_son }
+		}
+		character:Merchant_22.house = {
+			scope:recipient.house = { set_coa = dynn_Merchant_personal_coa_forth_son }
+		}
+	}
+}
+
+agot_select_rhllor_personal_coa = {
+	switch = {
+		trigger = house
+		character:Stark_12.house = {
+			scope:recipient.house = { set_coa = Stark_rhllor_personal_coa }
+		}
+		character:Bolton_6.house = {
+			scope:recipient.house = { set_coa = Bolton_rhllor_personal_coa }
+		}
+		character:Glover_8.house = {
+			scope:recipient.house = { set_coa = Glover_rhllor_personal_coa }
+		}
+		character:Ryswell_14.house = {
+			scope:recipient.house = { set_coa = Ryswell_rhllor_personal_coa }
+		}
+		character:Karstark_20.house = {
+			scope:recipient.house = { set_coa = Karstark_rhllor_personal_coa }
+		}
+		character:Tully_10.house = {
+			scope:recipient.house = { set_coa = Tully_rhllor_personal_coa }
+		}
+		character:Blackwood_25.house = {
+			scope:recipient.house = { set_coa = Blackwood_rhllor_personal_coa }
+		}
+		character:Bracken_28.house = {
+			scope:recipient.house = { set_coa = Bracken_rhllor_personal_coa }
+		}
+		character:Frey_141.house = {
+			scope:recipient.house = { set_coa = Frey_rhllor_personal_coa }
+		}
+		character:Arryn_15.house = {
+			scope:recipient.house = { set_coa = Arryn_rhllor_personal_coa }
+		}
+		character:Redfort_6.house = {
+			scope:recipient.house = { set_coa = Redfort_rhllor_personal_coa }
+		}
+		character:Corbray_6.house = {
+			scope:recipient.house = { set_coa = Corbray_rhllor_personal_coa }
+		}
+		character:Royce_11.house = {
+			scope:recipient.house = { set_coa = Royce_rhllor_personal_coa }
+		}
+		character:Greyjoy_21.house = {
+			scope:recipient.house = { set_coa = Greyjoy_rhllor_personal_coa }
+		}
+		character:Harlaw_30.house = {
+			scope:recipient.house = { set_coa = Harlaw_rhllor_personal_coa }
+		}
+		character:Drumm_4.house = {
+			scope:recipient.house = { set_coa = Drumm_rhllor_personal_coa }
+		}
+		character:Saltcliffe_6.house = {
+			scope:recipient.house = { set_coa = Saltcliffe_rhllor_personal_coa }
+		}
+		character:Targaryen_13.house = {
+			scope:recipient.house = { set_coa = Targaryen_rhllor_personal_coa }
+		}
+		character:Targaryen_94.house = {
+			scope:recipient.house = { set_coa = Blackfyre_rhllor_personal_coa }
+		}
+		character:Velaryon_6.house = {
+			scope:recipient.house = { set_coa = Velaryon_rhllor_personal_coa }
+		}
+		character:Celtigar_8.house = {
+			scope:recipient.house = { set_coa = Celtigar_rhllor_personal_coa }
+		}
+		character:Baratheon_14.house = {
+			scope:recipient.house = { set_coa = Baratheon_rhllor_personal_coa }
+		}
+		character:Dondarrion_5.house = {
+			scope:recipient.house = { set_coa = Dondarrion_rhllor_personal_coa }
+		}
+		character:Estermont_11.house = {
+			scope:recipient.house = { set_coa = Estermont_rhllor_personal_coa }
+		}
+		character:Selmy_11.house = {
+			scope:recipient.house = { set_coa = Selmy_rhllor_personal_coa }
+		}
+		character:Lannister_29.house = {
+			scope:recipient.house = { set_coa = Lannister_rhllor_personal_coa }
+		}
+		character:Reyne_1.house = {
+			scope:recipient.house = { set_coa = Reyne_rhllor_personal_coa }
+		}
+		character:Brax_10.house = {
+			scope:recipient.house = { set_coa = Brax_rhllor_personal_coa }
+		}
+		character:Clegane_1.house = {
+			scope:recipient.house = { set_coa = Clegane_rhllor_personal_coa }
+		}
+		character:Tyrell_40.house = {
+			scope:recipient.house = { set_coa = Tyrell_rhllor_personal_coa }
+		}
+		character:Hightower_18.house = {
+			scope:recipient.house = { set_coa = Hightower_rhllor_personal_coa }
+		}
+		character:Florent_17.house = {
+			scope:recipient.house = { set_coa = Florent_rhllor_personal_coa }
+		}
+		character:Rowan_6.house = {
+			scope:recipient.house = { set_coa = Rowan_rhllor_personal_coa }
+		}
+		character:Martell_23.house = {
+			scope:recipient.house = { set_coa = Martell_rhllor_personal_coa }
+		}
+		character:Dayne_15.house = {
+			scope:recipient.house = { set_coa = Dayne_rhllor_personal_coa }
+		}
+		character:Toland_8.house = {
+			scope:recipient.house = { set_coa = Toland_rhllor_personal_coa }
+		}
+		character:Yronwood_8.house = {
+			scope:recipient.house = { set_coa = Yronwood_rhllor_personal_coa }
+		}
+	}
+}
+
+agot_select_special_rhllor_personal_coa = {
+	switch = {
+		trigger = this
+		character:Stark_7 = {
+			scope:recipient.house = { set_coa = Jonsnow_rhllor_personal_coa }
+		}
+		character:Targaryen_96 = {
+			scope:recipient.house = { set_coa = Bloodraven_rhllor_personal_coa }
+		}
+		character:Targaryen_95 = {
+			scope:recipient.house = { set_coa = Bittersteel_rhllor_personal_coa }
+		}
+	}
+}

@@ -1,0 +1,310 @@
+﻿on_death = {
+	on_actions = {
+		on_receiving_interest_modifier_death
+        on_paying_interest_modifier_death		
+		on_banker_death
+	    on_head_banker_death
+		on_head_banker_II_death
+		on_kg_branch_death
+        on_oldtown_branch_death
+		on_iron_bank_partnership_modifier_death
+	}	
+
+}
+on_paying_interest_modifier_death = {
+
+	effect = {
+
+		if = {
+		
+			limit = {
+				has_character_modifier = paying_interest_modifier
+				exists = player_heir
+			}
+			
+			while = {
+			
+				limit = {
+					has_character_modifier = paying_interest_modifier				
+				}
+				
+				remove_character_modifier = paying_interest_modifier
+				
+				player_heir = {				
+					add_character_modifier = paying_interest_modifier					
+				}
+			
+			}
+			
+		}	
+
+	}
+
+}
+on_receiving_interest_modifier_death = {
+
+	effect = {
+
+		if = {
+		
+			limit = {
+				has_character_modifier = receiving_interest_modifier
+				exists = player_heir
+			}
+			
+			while = {
+			
+				limit = {
+					has_character_modifier = receiving_interest_modifier				
+				}
+				
+				remove_character_modifier = receiving_interest_modifier
+				
+				player_heir = {				
+					add_character_modifier = receiving_interest_modifier					
+				}
+			
+			}
+			
+		}	
+
+	}
+
+}
+
+on_banker_death = {
+
+	effect = {
+
+		if = {
+		
+			limit = {
+				has_character_modifier = bank_gold_lending_modifier
+				exists = player_heir
+			}
+			
+			while = {
+			
+				limit = {
+					has_character_modifier = bank_gold_lending_modifier				
+				}
+				
+				remove_character_modifier = bank_gold_lending_modifier
+				
+				player_heir = {				
+					add_character_modifier = bank_gold_lending_modifier					
+				}
+			
+			}
+			
+		}	
+
+	}
+
+}
+
+on_head_banker_death = {
+
+	effect = {
+
+		if = {
+		
+			limit = {
+				has_character_modifier = golden_bank_head_modifier
+				exists = player_heir
+			}
+			
+			while = {
+			
+				limit = {
+					has_character_modifier = golden_bank_head_modifier				
+				}
+				
+				remove_character_modifier = golden_bank_head_modifier
+				
+				player_heir = {				
+					add_character_modifier = golden_bank_head_modifier					
+				}
+			
+			}
+			
+		}	
+
+	}
+
+}
+
+on_head_banker_II_death = {
+
+	effect = {
+
+		if = {
+		
+			limit = {
+				has_character_modifier = golden_bank_head_II_modifier
+				exists = player_heir
+			}
+			
+			while = {
+			
+				limit = {
+					has_character_modifier = golden_bank_head_II_modifier				
+				}
+				
+				remove_character_modifier = golden_bank_head_II_modifier
+				
+				player_heir = {				
+					add_character_modifier = golden_bank_head_II_modifier					
+				}
+			
+			}
+			
+		}	
+
+	}
+
+}
+
+on_kg_branch_death = {
+
+	effect = {
+
+		if = {
+		
+			limit = {
+				has_character_modifier = golden_bank_kg_branch_modifier
+				exists = player_heir
+			}
+			
+			while = {
+			
+				limit = {
+					has_character_modifier = golden_bank_kg_branch_modifier				
+				}
+				
+				remove_character_modifier = golden_bank_kg_branch_modifier
+				
+				player_heir = {				
+					add_character_modifier = golden_bank_kg_branch_modifier					
+				}
+			
+			}
+			
+		}	
+
+	}
+
+}
+
+on_oldtown_branch_death = {
+
+	effect = {
+
+		if = {
+		
+			limit = {
+				has_character_modifier = golden_bank_oldtown_branch_modifier
+				exists = player_heir
+			}
+			
+			while = {
+			
+				limit = {
+					has_character_modifier = golden_bank_oldtown_branch_modifier				
+				}
+				
+				remove_character_modifier = golden_bank_oldtown_branch_modifier
+				
+				player_heir = {				
+					add_character_modifier = golden_bank_oldtown_branch_modifier					
+				}
+			
+			}
+			
+		}	
+
+	}
+
+}
+
+on_iron_bank_partnership_modifier_death = {
+
+	effect = {
+
+		if = {
+		
+			limit = {
+				has_character_modifier = iron_bank_partnership_modifier
+				exists = player_heir
+			}
+			
+			while = {
+			
+				limit = {
+					has_character_modifier = iron_bank_partnership_modifier				
+				}
+				
+				remove_character_modifier = iron_bank_partnership_modifier
+				
+				player_heir = {				
+					add_character_modifier = iron_bank_partnership_modifier					
+				}
+			
+			}
+			
+		}	
+
+	}
+
+}
+
+quarterly_playable_pulse = {
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = lg_debt_period
+				}
+					has_character_flag = lg_took_out_loan
+			}
+			trigger_event = {	id = lannister_gold.0005	}
+		}
+	}
+}
+
+random_yearly_playable_pulse = {
+	effect = {	
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = lg_golden_bank_petitioner_cooldown
+				}
+				has_character_modifier = golden_bank_head_modifier
+			}
+			
+		    trigger_event = {
+			    on_action = on_lg_petitionare_action
+		    }
+		}
+	}
+}
+
+on_lg_petitionare_action = {
+    random_events = {
+        100 = lannister_gold.0019 
+        100 = lannister_gold.0023
+        100 = lannister_gold.0027
+        100 = lannister_gold.0034
+        100 = lannister_gold.0038
+        100 = lannister_gold.0042
+        100 = lannister_gold.0046
+        100 = lannister_gold.0050
+        100 = lannister_gold.0054
+        100 = lannister_gold.0058
+        100 = lannister_gold.0062
+        100 = lannister_gold.0066
+        100 = lannister_gold.0070
+        100 = lannister_gold.0074
+        100 = lannister_gold.0082			
+    }
+}	

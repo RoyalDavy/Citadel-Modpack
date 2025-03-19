@@ -1,0 +1,684 @@
+﻿create_high_lordship_of_rivers_head_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_opening.dds"
+	}
+	major = yes
+	ai_check_interval = 120
+	desc = create_high_lordship_of_rivers_head_desc
+	selection_tooltip = create_high_lordship_of_rivers_head_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Bricker
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_rivers_head
+			has_title = title:d_rivers_head
+			}
+		
+	}
+
+	is_valid = {
+		completely_controls = title:c_whitebricks
+		completely_controls = title:c_wishere
+		completely_controls = title:c_dawngate
+		completely_controls = title:c_wallwood
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 1000
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:d_rivers_head
+		title:k_the_westerlands = { save_temporary_scope_as = kingdom }
+		title:d_rivers_head = { 
+			set_de_jure_liege_title = scope:kingdom
+			save_temporary_scope_as = d_rivers_head
+		}
+		title:d_rivers_head = { save_temporary_scope_as = duchy }
+		title:d_sterling = { save_temporary_scope_as = duchy2 }
+		title:c_whitebricks = { 
+			set_de_jure_liege_title = scope:duchy
+			
+		}
+		title:c_wishere = { 
+			set_de_jure_liege_title = scope:duchy
+			
+		}
+		title:c_dawngate = { 
+			set_de_jure_liege_title = scope:duchy
+			
+		}
+		title:c_brixworth = { 
+			set_de_jure_liege_title = scope:duchy
+			
+		}
+		title:c_riverspring = { 
+			set_de_jure_liege_title = scope:duchy
+			
+		}
+		title:c_rutland = { 
+			set_de_jure_liege_title = scope:duchy
+			
+		}
+		title:c_worthmark = { 
+			set_de_jure_liege_title = scope:duchy
+			
+		}
+		scope:duchy = {
+				set_capital_county = title:c_brixworth
+			}
+		set_global_variable = pk_rivers_head
+	}
+
+	cost = { gold = 1000 }
+}
+create_kingdom_of_the_torrentine_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_hostility.dds"
+	}
+	major = yes
+	ai_check_interval = 0
+	desc = create_kingdom_of_the_torrentine_desc
+	selection_tooltip = create_kingdom_of_the_torrentine_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Dayne
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_torrentine
+			has_title = title:k_torrentine_mhf
+			}
+		
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		dynasty = {
+			has_dynasty_perk = dayne_legacy_5_MHF
+		}
+		completely_controls = title:d_torrentine
+		completely_controls = title:d_blackmont
+		completely_controls = title:d_sandstone
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:k_torrentine_mhf
+		title:e_the_iron_throne = { save_temporary_scope_as = empire }
+		title:k_torrentine_mhf = { 
+			set_de_jure_liege_title = scope:empire
+			save_temporary_scope_as = k_torrentine_mhf
+		}
+		title:k_torrentine_mhf = { save_temporary_scope_as = kingdom }
+		title:d_torrentine = { 
+			set_de_jure_liege_title = scope:kingdom
+			
+		}
+		title:d_blackmont = { 
+			set_de_jure_liege_title = scope:kingdom
+			
+		}
+		title:d_sandstone = { 
+			set_de_jure_liege_title = scope:kingdom
+			
+		}
+		set_global_variable = pk_torrentine
+	}
+
+	cost = { gold = 1000 }
+}
+create_kingdom_of_the_arbor_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_hostility.dds"
+	}
+	major = yes
+	ai_check_interval = 0
+	desc = create_kingdom_of_the_arbor_desc
+	selection_tooltip = create_kingdom_of_the_arbor_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Redwyne
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_arbor
+			has_title = title:k_the_arbor_mhf
+			}
+		
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		dynasty = {
+			has_dynasty_perk = redwyne_legacy_5
+		}
+		completely_controls = title:d_the_arbor
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:k_the_arbor_mhf
+		title:e_the_iron_throne = { save_temporary_scope_as = empire }
+		title:k_the_arbor_mhf = { 
+			set_de_jure_liege_title = scope:empire
+			save_temporary_scope_as = k_the_arbor_mhf
+		}
+		title:k_the_arbor_mhf = { save_temporary_scope_as = kingdom }
+		title:d_the_arbor = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		set_global_variable = pk_arbor
+	}
+
+	cost = { gold = 1000 }
+}
+
+create_kingdom_of_the_claw_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_opening.dds"
+	}
+	major = yes
+	ai_check_interval = 0
+	desc = create_kingdom_of_the_claw_desc
+	selection_tooltip = create_kingdom_of_the_claw_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Celtigar
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_claw
+			has_title = title:k_the_claw
+			}
+		
+	}
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				is_vassal_of = title:e_the_iron_throne.holder
+				OR = {
+					has_strong_hook = title:e_the_iron_throne.holder
+					has_relation_friend	= title:e_the_iron_throne.holder
+				}
+			}
+		}
+		dynasty = {
+			has_dynasty_perk = celtigar_legacy_5
+		}
+		completely_controls = title:d_claw_isle
+		completely_controls = title:d_crackclaw_point
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:k_the_claw
+		title:e_the_iron_throne = { save_temporary_scope_as = empire }
+		title:k_the_claw = { 
+			set_de_jure_liege_title = scope:empire
+			save_temporary_scope_as = k_the_claw
+		}
+		title:k_the_claw = { save_temporary_scope_as = kingdom }
+		title:d_claw_isle = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_crackclaw_point = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		scope:kingdom = {
+				set_capital_county = title:c_claw_isle
+			}
+		set_global_variable = pk_claw
+	}
+
+	cost = { gold = 1000 }
+}
+create_kingdom_of_the_true_men_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_opening.dds"
+	}
+	major = yes
+	ai_check_interval = 0
+	desc = create_kingdom_of_the_true_men_desc
+	selection_tooltip = create_kingdom_of_the_true_men_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Shett
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_gulltown
+			has_title = title:k_the_bay_of_crabs
+			}
+		
+	}
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				is_vassal_of = title:e_the_iron_throne.holder
+				OR = {
+					has_strong_hook = title:e_the_iron_throne.holder
+					has_relation_friend	= title:e_the_iron_throne.holder
+				}
+			}
+		}
+		dynasty = {
+			has_dynasty_perk = shett_legacy_5
+		}
+		has_title = title:c_gulltown
+		completely_controls = title:c_gullview
+		completely_controls = title:d_gulltown
+		completely_controls = title:d_strongstone
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:k_the_bay_of_crabs
+		title:e_the_iron_throne = { save_temporary_scope_as = empire }
+		title:k_the_bay_of_crabs = { 
+			set_de_jure_liege_title = scope:empire
+			save_temporary_scope_as = k_the_bay_of_crabs
+		}
+		title:k_the_bay_of_crabs = { save_temporary_scope_as = kingdom }
+		title:d_gulltown = { 
+			set_de_jure_liege_title = scope:kingdom	
+			save_temporary_scope_as = duchy
+		}
+		title:d_strongstone = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:c_gullview = { 
+			set_de_jure_liege_title = scope:duchy	
+		}
+		scope:kingdom = {
+				set_capital_county = title:c_gulltown
+			}
+		set_global_variable = pk_gulltown
+	}
+
+	cost = { gold = 1000 }
+}
+
+create_kingdom_of_gulltown_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_opening.dds"
+	}
+	major = yes
+	ai_check_interval = 0
+	desc = create_kingdom_of_gulltown_desc
+	selection_tooltip = create_kingdom_of_gulltown_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Grafton
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_gulltown
+			has_title = title:k_the_bay_of_crabs
+			}
+		
+	}
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				is_vassal_of = title:e_the_iron_throne.holder
+				OR = {
+					has_strong_hook = title:e_the_iron_throne.holder
+					has_relation_friend	= title:e_the_iron_throne.holder
+				}
+			}
+		}
+		dynasty = {
+			has_dynasty_perk = grafton_legacy_5
+		}
+		completely_controls = title:d_gulltown
+		completely_controls = title:d_strongstone
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:k_the_bay_of_crabs
+		title:e_the_iron_throne = { save_temporary_scope_as = empire }
+		title:k_the_bay_of_crabs = { 
+			set_de_jure_liege_title = scope:empire
+			save_temporary_scope_as = k_the_bay_of_crabs
+		}
+		title:k_the_bay_of_crabs = { save_temporary_scope_as = kingdom }
+		title:d_gulltown = { 
+			set_de_jure_liege_title = scope:kingdom	
+			save_temporary_scope_as = duchy
+		}
+		title:d_strongstone = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		scope:kingdom = {
+				set_capital_county = title:c_gulltown
+			}
+		set_global_variable = pk_gulltown
+	}
+
+	cost = { gold = 1000 }
+}
+
+create_kingdom_of_duskendale_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_opening.dds"
+	}
+	major = yes
+	ai_check_interval = 0
+	desc = create_kingdom_of_duskendale_desc
+	selection_tooltip = create_kingdom_of_duskendale_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Darklyn
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_duskendale
+			has_title = title:k_duskendale
+			}
+		
+	}
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				is_vassal_of = title:e_the_iron_throne.holder
+				OR = {
+					has_strong_hook = title:e_the_iron_throne.holder
+					has_relation_friend	= title:e_the_iron_throne.holder
+				}
+			}
+		}
+		dynasty = {
+			has_dynasty_perk = darklyn_legacy_5
+		}
+		completely_controls = title:d_duskendale
+		completely_controls = title:d_stokeworth
+		completely_controls = title:d_deerfield
+		completely_controls = title:d_rooks_rest
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:k_duskendale
+		title:e_the_iron_throne = { save_temporary_scope_as = empire }
+		title:k_duskendale = { 
+			set_de_jure_liege_title = scope:empire
+			save_temporary_scope_as = k_duskendale
+		}
+		title:k_duskendale = { save_temporary_scope_as = kingdom }
+		title:d_duskendale = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_stokeworth = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_deerfield = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_rooks_rest = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		scope:kingdom = {
+				set_capital_county = title:c_duskendale
+			}
+		add_pressed_claim = title:d_kings_landing
+		add_pressed_claim = title:d_rosby
+		add_pressed_claim = title:d_crackclaw_point
+		set_global_variable = pk_duskendale
+	}
+
+	cost = { gold = 1000 }
+}
+
+create_kingdom_of_runestone_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/fp2_decision_struggle_opening.dds"
+	}
+	major = yes
+	ai_check_interval = 0
+	desc = create_kingdom_of_runestone_desc
+	selection_tooltip = create_kingdom_of_runestone_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Royce
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_runestone
+			has_title = title:k_runestone
+			}
+		
+	}
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				is_vassal_of = title:e_the_iron_throne.holder
+				OR = {
+					has_strong_hook = title:e_the_iron_throne.holder
+					has_relation_friend	= title:e_the_iron_throne.holder
+				}
+			}
+		}
+		dynasty = {
+			has_dynasty_perk = royce_legacy_5
+		}
+		completely_controls = title:d_runestone
+		completely_controls = title:c_etterbill
+		completely_controls = title:c_kear
+		completely_controls = title:d_strongstone
+		completely_controls = title:d_wickenden
+		completely_controls = title:d_ironoaks
+		completely_controls = title:d_old_anchor
+		completely_controls = title:d_eastweald
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:k_runestone
+		title:e_the_iron_throne = { save_temporary_scope_as = empire }
+		title:k_runestone = { 
+			set_de_jure_liege_title = scope:empire
+			save_temporary_scope_as = k_runestone
+		}
+		title:k_runestone = { save_temporary_scope_as = kingdom }
+		title:d_runestone = { save_temporary_scope_as = duchy }
+		title:d_runestone = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:c_etterbill = { 
+			set_de_jure_liege_title = scope:duchy	
+		}
+		title:c_kear = { 
+			set_de_jure_liege_title = scope:duchy	
+		}
+		title:d_strongstone = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_wickenden = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_ironoaks = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_old_anchor = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_eastweald = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		scope:kingdom = {
+				set_capital_county = title:c_runestone
+			}
+		set_global_variable = pk_runestone
+	}
+
+	cost = { gold = 1000 }
+}
+
+create_kingdom_of_oldtown_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	major = yes
+	ai_check_interval = 0
+	desc = create_kingdom_of_oldtown_desc
+	selection_tooltip = create_kingdom_of_oldtown_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Hightower
+		NOT = {
+			has_variable = pre_war_liege 
+			has_global_variable = pk_oldtown
+			has_title = title:k_oldtown_mhf
+			}
+		
+	}
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				is_vassal_of = title:e_the_iron_throne.holder
+				OR = {
+					has_strong_hook = title:e_the_iron_throne.holder
+					has_relation_friend	= title:e_the_iron_throne.holder
+				}
+			}
+		}
+		dynasty = {
+			has_dynasty_perk = hightower_legacy_5
+		}
+		completely_controls = title:d_oldtown
+		completely_controls = title:d_garden_coast
+		completely_controls = title:d_ridgeview
+		completely_controls = title:d_oldhills
+		completely_controls = title:d_black_sound
+		prestige_level >= 3
+		gold >= 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	effect = {
+		add_prestige = 1500
+		add_legitimacy = 250
+		get_title = title:k_oldtown_mhf
+		title:e_the_iron_throne = { save_temporary_scope_as = empire }
+		title:k_oldtown_mhf = { 
+			set_de_jure_liege_title = scope:empire
+			save_temporary_scope_as = k_oldtown_mhf
+		}
+		title:k_oldtown_mhf = { save_temporary_scope_as = kingdom }
+		title:d_oldtown = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_garden_coast = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_ridgeview = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_oldhills = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		title:d_black_sound = { 
+			set_de_jure_liege_title = scope:kingdom	
+		}
+		scope:kingdom = {
+				set_capital_county = title:c_oldtown
+			}
+		set_global_variable = pk_oldtown
+	}
+
+	cost = { gold = 1000 }
+}

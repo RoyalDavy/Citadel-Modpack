@@ -1,0 +1,43 @@
+﻿vs_silverlight_modifier = {
+	prowess_no_portrait = 9
+	monthly_dynasty_prestige_mult = 0.05
+	monthly_prestige = 0.2
+	martial = 2
+	tolerance_advantage_mod = 5
+}
+vs_weirwood_bow_modifier = {
+	prowess_no_portrait = 7
+	monthly_dynasty_prestige_mult = 0.05
+	monthly_prestige = 0.15
+	defender_advantage = 5
+	archers_damage_mult = 0.1
+}
+vs_runic_armor_modifier = {
+	prowess_no_portrait = 6
+	monthly_dynasty_prestige_mult = 0.05
+	monthly_prestige = 0.2
+	health = 0.2
+	negate_health_penalty_add = 0.2
+}
+vs_flayed_man_armor_modifier = {
+	prowess_no_portrait = 6
+	monthly_dynasty_prestige_mult = 0.05
+	dread_gain_mult = 0.05
+	dread_baseline_add = 10
+	knight_effectiveness_per_dread = 0.0015
+}
+vs_warlords_will_modifier = {
+	prowess_no_portrait = 9
+	monthly_dynasty_prestige_mult = 0.05
+	monthly_prestige = 0.2
+	monthly_piety_gain_mult = 0.02
+	knight_limit = 2
+}
+vs_crossbow_modifier = {
+	prowess_no_portrait = 7
+	monthly_dynasty_prestige_mult = 0.05
+	monthly_prestige = 0.15
+	hills_advantage = 4
+	highlands_advantage = 4
+	archers_damage_mult = 0.2
+}

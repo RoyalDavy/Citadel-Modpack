@@ -1,0 +1,32 @@
+﻿
+#GOLD LENDING OPINION MODIFIERS
+
+sold_debt_to_the_iron_bank_modifier = {
+    opinion = -30
+	years = 20
+	decaying = yes
+}
+
+requested_gold_back_modifier = {
+    opinion = -15
+	years = 15
+	decaying = yes
+}
+
+lent_gold_modifier = {
+    opinion = 10
+	years = 10
+	decaying = yes
+}
+
+usurer_modifier = {
+    opinion = -15
+	years = 10
+	decaying = yes
+}
+
+lg_loyal_character_modifier = {
+    opinion = 50
+	years = 30
+	decaying = yes
+}

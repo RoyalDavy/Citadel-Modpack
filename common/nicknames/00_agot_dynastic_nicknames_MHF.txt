@@ -1,0 +1,27 @@
+﻿###################################
+### AGOT MHF DYNASTIC NICKNAMES ###
+###################################
+
+#Brick Nicknames
+
+nick_the_black_brick = {}
+nick_the_white_brick = {}
+nick_the_crazed_brick = {}
+nick_the_wild_brick = {}
+nick_the_quiet_brick = {}
+nick_the_red_brick = {}
+nick_the_big_brick = {}
+nick_the_strong_brick = {}
+nick_the_fair_brick = {}
+nick_the_ugly_brick = { is_bad = yes }
+nick_the_small_brick = {}
+nick_the_wise_brick = {}
+nick_the_dumb_brick = { is_bad = yes }
+nick_the_dark_brick = {}
+nick_the_weak_brick = { is_bad = yes }
+nick_the_silver_brick = {}
+nick_the_old_brick = {}
+nick_the_laughing_brick = {}
+nick_the_brick_daughter = {}
+nick_the_brickknight = {}
+nick_the_lustful_brick = { is_prefix = yes }

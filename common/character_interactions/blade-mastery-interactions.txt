@@ -1,0 +1,511 @@
+﻿
+@cost_to_train_blademaster_1 = 50
+@years_to_learn_blademaster_1 = 2
+
+@cost_to_train_blademaster_2 = 100
+@years_to_learn_blademaster_2 = 4
+
+@cost_to_train_blademaster_3 = 200
+@years_to_learn_blademaster_3 = 8
+
+# ====================================================================================================================
+#  BLADEMASTER 1
+# ====================================================================================================================
+
+become_blademaster_1 = {
+	category = interaction_category_vassal
+	common_interaction = yes
+
+	interface_priority = 10
+
+	greeting = positive
+	
+	desc = become_blademaster_1_desc
+
+	cost = {
+		gold = {
+			value = @cost_to_train_blademaster_1		
+		}
+	}
+
+	is_shown = {
+	
+		#do not show this option if the person is already a blademaster
+		#also, character must not be the court's blademaster
+		
+		scope:recipient = {
+			NOT = {		
+				has_trait = lifestyle_blademaster
+			}	
+			
+			NOT = {
+				has_court_position = court_blademaster_position
+			}
+		}
+		
+		OR = {
+		
+			# family members
+			
+			AND = {
+			
+				# they're part of your family
+				scope:actor = {
+					is_dynast = yes
+					dynasty = scope:recipient.dynasty
+				}
+				
+				# you are the head of the house
+				scope:actor = {
+					is_house_head = yes
+				}
+			}
+			
+			# they are a courtier
+			scope:recipient = {
+				is_courtier_of = scope:actor
+			}
+		}
+
+	}
+
+	is_valid_showing_failures_only = {
+		
+		# not availble for characters who are too far away or characters who are pussies
+		scope:recipient = {
+			is_diplomatically_available = yes			
+			is_physically_able_adult = yes
+			prowess >= decent_skill_rating
+
+			NOR = {
+				has_trait = craven
+				has_trait = lazy
+				has_trait = wheezing
+				has_trait = physique_bad_3
+				has_trait = physique_bad_2
+				has_trait = weak
+				has_trait = wounded_1
+				has_trait = wounded_2
+				has_trait = wounded_3
+				has_trait = infirm
+				has_trait = incapable
+				has_trait = blind
+				has_trait = ill
+				has_trait = bubonic_plague
+				has_trait = consumption
+				has_trait = pneumonic
+				has_trait = smallpox
+				has_trait = typhus
+				has_trait = pregnant
+			}
+			
+			custom_description = {
+				text = blademaster_trainee_is_healthy
+				is_healthy = yes
+			}			
+			
+			custom_description = {
+				text = blademaster_training
+				
+				NOT = {
+					has_character_flag = blademaster_training_flag
+				}
+			}
+		}
+		
+		scope:actor = {
+			custom_description = {
+				text = court_blademaster_available
+				
+				any_court_position_holder = {
+					type = court_blademaster_position
+					is_physically_able_adult = yes					
+					has_trait = lifestyle_blademaster					
+				}
+			}
+		}
+		
+	}
+
+	auto_accept = yes
+
+	on_send = {
+	
+		scope:actor = {
+			send_interface_message = {
+				type = event_generic_neutral
+				title = bm_courtier_in_training_1
+
+				right_icon = scope:recipient				
+			}			
+		}
+		
+		scope:recipient = {
+		
+			set_variable = {
+				name = bm_liege
+				value = scope:actor
+			}
+		
+			add_character_flag = {
+				flag = blademaster_training_flag
+				years = @years_to_learn_blademaster_1
+			}
+			
+			add_character_modifier = {
+				modifier = blademaster_training_modifier
+				years = @years_to_learn_blademaster_1
+			}
+		
+			trigger_event = {
+				on_action = blade_master_period_1
+				years = @years_to_learn_blademaster_1
+			}
+		}
+		
+	}
+	
+}
+
+# ====================================================================================================================
+#  BLADEMASTER 2
+# ====================================================================================================================
+
+become_blademaster_2 = {
+	category = interaction_category_vassal
+	common_interaction = yes
+
+	interface_priority = 10
+
+	greeting = positive
+	
+	desc = become_blademaster_2_desc
+
+	cost = {
+		gold = {
+			value = @cost_to_train_blademaster_2
+		}
+	}
+
+	is_shown = {
+	
+		#only show this option if the character is a blademaster level 1
+		#also, character must not be the court's blademaster
+		
+		scope:recipient = {
+			has_trait = lifestyle_blademaster
+		
+			has_trait_xp = {
+				trait = lifestyle_blademaster
+				value < 50
+			}
+
+			NOT = {
+				has_court_position = court_blademaster_position
+			}
+		}		
+		
+		OR = {
+		
+			# family members
+			
+			AND = {
+			
+				# they're part of your family
+				scope:actor = {
+					is_dynast = yes
+					dynasty = scope:recipient.dynasty
+				}
+				
+				# you are the head of the house
+				scope:actor = {
+					is_house_head = yes
+				}
+			}
+			
+			# they are a courtier
+			scope:recipient = {
+				is_courtier_of = scope:actor
+			}
+		}
+
+	}
+
+	is_valid_showing_failures_only = {
+		
+		# not availble for characters who are too far away
+		scope:recipient = {		
+			is_diplomatically_available = yes			
+			is_physically_able_adult = yes
+			prowess >= decent_skill_rating
+
+			NOR = {
+				has_trait = craven
+				has_trait = lazy
+				has_trait = wheezing
+				has_trait = feeble
+				has_trait = frail
+				has_trait = weak
+				has_trait = wounded_1
+				has_trait = wounded_2
+				has_trait = wounded_3
+				has_trait = infirm
+				has_trait = incapable
+				has_trait = blind
+				has_trait = ill
+				has_trait = bubonic_plague
+				has_trait = consumption
+				has_trait = pneumonic
+				has_trait = smallpox
+				has_trait = typhus
+				has_trait = pregnant
+			}
+			
+			custom_description = {
+				text = blademaster_trainee_is_healthy
+				is_healthy = yes
+			}			
+			
+			custom_description = {
+				text = blademaster_training
+				
+				NOT = {
+					has_character_flag = blademaster_training_flag
+				}
+			}
+		}
+		
+		#the current court's blademaster
+		#1. is designated
+		#2. is alive and well
+		#3. is at least blademaster level 2
+		
+		scope:actor = {
+			custom_description = {
+				text = court_blademaster_2_available
+				
+				any_court_position_holder = {
+					type = court_blademaster_position
+					AND = {
+						is_physically_able_adult = yes
+						
+						has_trait_xp = {
+							trait = lifestyle_blademaster
+							value >= 50
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+	auto_accept = yes
+
+	on_send = {
+	
+		scope:actor = {
+			send_interface_message = {
+				type = event_generic_neutral
+				title = bm_courtier_in_training_2
+
+				right_icon = scope:recipient				
+			}			
+		}
+		
+		scope:recipient = {
+		
+			set_variable = {
+				name = bm_liege
+				value = scope:actor
+			}
+		
+			add_character_flag = {
+				flag = blademaster_training_flag
+				years = @years_to_learn_blademaster_2
+			}			
+		
+			add_character_modifier = {
+				modifier = blademaster_training_modifier
+				years = @years_to_learn_blademaster_2
+			}
+
+			trigger_event = {
+				on_action = blade_master_period_2
+				years = @years_to_learn_blademaster_2
+			}
+		}
+		
+	}
+	
+}
+
+# ====================================================================================================================
+#  BLADEMASTER 3
+# ====================================================================================================================
+
+become_blademaster_3 = {
+	category = interaction_category_vassal
+	common_interaction = yes
+
+	interface_priority = 10
+
+	greeting = positive
+	
+	desc = become_blademaster_3_desc
+
+	cost = {
+		gold = {
+			value = @cost_to_train_blademaster_3
+		}
+	}
+
+	is_shown = {
+	
+		#only show this option if the character is a blademaster level 2
+		#also, character must not be the court's blademaster
+		
+		scope:recipient = {
+			has_trait_xp = {
+				trait = lifestyle_blademaster
+				value >= 50
+			}
+
+			NOT = {
+				has_court_position = court_blademaster_position
+			}
+		}
+		
+		OR = {
+		
+			# family members
+			
+			AND = {
+			
+				# they're part of your family
+				scope:actor = {
+					is_dynast = yes
+					dynasty = scope:recipient.dynasty
+				}
+				
+				# you are the head of the house
+				scope:actor = {
+					is_house_head = yes
+				}
+			}
+			
+			# they are a courtier
+			scope:recipient = {
+				is_courtier_of = scope:actor
+			}
+		}
+
+	}
+
+	is_valid_showing_failures_only = {
+		
+		# not availble for characters who are too far away
+		scope:recipient = {		
+			is_diplomatically_available = yes			
+			is_physically_able_adult = yes
+			prowess >= decent_skill_rating
+
+			NOR = {
+				has_trait = craven
+				has_trait = lazy
+				has_trait = wheezing
+				has_trait = feeble
+				has_trait = frail
+				has_trait = weak
+				has_trait = wounded_1
+				has_trait = wounded_2
+				has_trait = wounded_3
+				has_trait = infirm
+				has_trait = incapable
+				has_trait = blind
+				has_trait = ill
+				has_trait = bubonic_plague
+				has_trait = consumption
+				has_trait = pneumonic
+				has_trait = smallpox
+				has_trait = typhus
+				has_trait = pregnant
+			}
+			
+			custom_description = {
+				text = blademaster_trainee_is_healthy
+				is_healthy = yes
+			}			
+			
+			custom_description = {
+				text = blademaster_training
+				
+				NOT = {
+					has_character_flag = blademaster_training_flag
+				}
+			}
+		}
+		
+		#the current court's blademaster
+		#1. is designated
+		#2. is alive and well
+		#3. is at least blademaster level 3
+		
+		scope:actor = {
+			custom_description = {
+				text = court_blademaster_2_available
+				
+				any_court_position_holder = {
+					type = court_blademaster_position
+					AND = {
+						is_physically_able_adult = yes
+						
+						has_trait_xp = {
+							trait = lifestyle_blademaster
+							value >= 100
+						}
+					}
+				}
+			}
+		}
+		
+	}
+
+	on_send = {
+	
+		scope:actor = {
+			send_interface_message = {
+				type = event_generic_neutral
+				title = bm_courtier_in_training_3
+
+				right_icon = scope:recipient				
+			}			
+		}
+		
+		scope:recipient = {
+		
+			set_variable = {
+				name = bm_liege
+				value = scope:actor
+			}
+		
+			add_character_flag = {
+				flag = blademaster_training_flag
+				years = @years_to_learn_blademaster_3
+			}			
+		
+			add_character_modifier = {
+				modifier = blademaster_training_modifier
+				years = @years_to_learn_blademaster_3
+			}
+		
+			trigger_event = {
+				on_action = blade_master_period_3
+				years = @years_to_learn_blademaster_3
+			}
+		}
+		
+	}
+	
+}
+

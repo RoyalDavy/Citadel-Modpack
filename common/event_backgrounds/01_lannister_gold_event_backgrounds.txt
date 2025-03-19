@@ -1,0 +1,9 @@
+﻿### Golden Bank Backgrounds ###
+
+golden_bank_hall = { 
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/golden_bank_hall.dds"
+		environment = "environment_frontend_mediterranean_main"
+		ambience = "event:/SFX/Events/Backgrounds/throneroom_mediterranean"
+	}
+}

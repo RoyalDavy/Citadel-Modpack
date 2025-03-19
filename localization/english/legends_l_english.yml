@@ -1,0 +1,79 @@
+﻿l_english:
+
+#targaryen legends
+legend_daeron_i: "Legacy of the Young Dragon"
+legend_daeron_i_desc: "[ancestor.GetName], known as the Young Dragon, was a young ambitious Targaryen king who attempted to complete the conquest of Westeros, left unfinished by the independence of Dorne. When reminded of his family's past failures and loss of power from the death of their dragons, Daeron famously proclaimed, "You have a dragon. He stands before you""
+legend_aegon_i: "Blood of the Conqueror"
+legend_aegon_i_desc: "[ancestor.GetName], also known as the Conqueror, was the first Targaryen king of Westeros. He and his sister wives, Rhaenys and Visenya, along with their three great dragons, Balerion, Vhagar, and Meraxes, unified Westeros under Targaryen rule."
+legend_daenys_dreamer: "Dragon Dreamers"
+legend_daenys_dreamer_desc: "Those with the blood of the dragon are known to have premonition-like dream ability. Such when [ancestor.GetName] had a powerful prophetic dream, showing her the destruction of Valyria. Her father would heed her dreams, moving the Targaryen family to Dragonstone. When the Doom of Valyria came twelve years later, House Targaryen was the only family of dragonriders which survived."
+legend_daemon_blackfyre: "The Black Dragon"
+legend_daemon_blackfyre_desc: "[ancestor.GetName], born Daemon Waters, was the legitimized bastard son of King Aegon IV Targaryen. Daemon founded House Blackfyre, named after the Targaryen Valyrian steel sword. He fought against his half-brother, King Daeron II Targaryen, for the Iron Throne in the First Blackfyre Rebellion."
+legend_jaehaerys_i: "Remembrance of the Conciliator"
+legend_jaehaerys_i_desc: "[ancestor.GetName], was known by many names, the Conciliator, the Wise, and later in life as the Old King. Jaehaerys I's reign is remembered as the most prosperous period in the history of the Targaryen monarchy. His rule brought peace, stability, and justice to the Seven Kingdoms. Although it was Aegon the Conqueror who had taken the Seven Kingdoms, it was Jaehaerys the Conciliator who had kept them together. "He bound the land together, and made of seven kingdoms, one.""
+
+#velaryon legend
+legend_corlys_velaryon: "Ambitions of the Sea Snake"
+legend_corlys_velaryon_desc: "[ancestor.GetName], the Sea Snake was a fabled Lord of the Tides, Master of Driftmark, and head of House Velaryon. During his life, Corlys Velaryon would make nine great voyages across the known world on Sea Snake, a ship he designed and built himself. Corlys would return with treasures like silk, spices, and jade, greatly increasing the wealth of House Velaryon."
+legend_corlys_velaryon_1: "Corlys Velaryon, known as the Sea Snake, was a fabled Lord of the Tides, Master of Driftmark, and head of House Velaryon. Throughout his life, lord Corlys made nine great voyages on Sea Snake, a ship he designed and built himself. These nine great voyages brought great wealth to house Velaryon."
+legend_corlys_velaryon_2: "Corlys took to the sea at a young age, first crossing the narrow sea to Pentos with an uncle when he was only six. Corlys would make such voyages every year that followed, working on the ships as a member of the crew. According to the captains he served under, they had never seen such a natural sailor as Corlys. He became a captain himself at the age of sixteen, when he sailed the Cod Queen from Driftmark to Dragonstone and back. By the age of twenty-three, Corlys was already a celebrated mariner. "
+legend_corlys_velaryon_3: "The first of Lord Corlys great voyage, saw him sailing beyond the Jade Gates at Qarth to Yi Ti and Leng. Corlys returned with treasures like silk, spices, and jade, doubling the wealth of House Velaryon. His second voyage took him to Asshai. At Asshai, Corlys also saw a ship docked in the harbor that he believed to have been the Sun Chaser of Elissa Farman. Corlys's third voyage led to him becoming the first Westerosi to navigate the Thousand Islands in the Shivering Sea and visit Nefer in N'ghai and Mossovy."
+legend_corlys_velaryon_4: "During his ninth voyage on Sea Snake, Corlys filled the ship's hold with gold and bought twenty more ships at Qarth, loading them with spices, elephants, and silk. Only fourteen ships reached Driftmark and all the elephants died, but Corlys became vastly wealthy from the venture. He took his nickname "Sea Snake" from his famous ship. Corlys's expeditions on the Sea Snake have been described by Maester Mathis in his book The Nine Voyages."
+legend_corlys_velaryon_5: "By the of age seven-and-thirty, Corlys was hailed as the greatest seafarer the Seven Kingdoms had ever known. Corlys was said to be as brilliant as he was restless, and as adventurous as he was ambitious. Lord Corlys's great ambition and voyages had brought House Velaryon to an unprecedented height, allowing them to even rival the great houses of Westeros "
+
+
+#stark legends
+legend_bran_the_builder: "Blood of Bran the Builder"
+legend_bran_the_builder_desc: "[ancestor.GetName] also known as Bran the Builder, was a legendary figure from the Age of Heroes who is said to have founded House Stark. Legends claim the Wall, Winterfell, the Hightower, and Storm's End to all have been built under his direction."
+legend_hungry_wolf: "Hunger of Wolves"
+legend_hungry_wolf_desc: "[ancestor.GetName] was known as the Hungry Wolf. During a time when the Andals had conquered much of the south, King Theon Stark rallied the North against the Andal invaders and defeated the warlord Argos Sevenstar in the battle of the Weeping Water. The Hungry Wolf then sailed across the narrow sea to the coast of Andalos with Argos's body displayed on the prow of his ship like a figurehead. The king displayed the spiked heads of his victims along his coastline to deter future invaders."
+legend_cregan_stark: "Wolves of the North"
+legend_cregan_stark_desc: "[ancestor.GetName], known as the Wolf of the North, was the Lord of Winterfell and head of House Stark during the tumultuous Dance of the Dragons. Cregan would march south in support of Princess Rhaenyra Targaryen. When told “Half your men will die, lord Stark.” the Wolf of Winterfell replied, “They died the day we marched, boy.” Lord Stark briefly served as Hand of the King for Aegon III after the Dance of the Dragons, a time that would be remembered as the Hour of the Wolf, during which Cregan would enact justice upon the realm."
+legend_royce_bolton: "Line of Red Kings"
+legend_royce_bolton_desc: "The Boltons are an ancient and powerful house of the north who once ruled as Red Kings from the Dreadfort. Red Kings were known to be bitter rivals of the Kings of Winter, the Starks of Winterfell. During one of the wars between Houses Bolton and Stark, [ancestor.GetName] succeeded in taking and burning Winterfell. According to rumor, some Boltons wore the flayed skins of Stark princes and lords, such as the son of Bael the Bard, as cloaks.
+
+#lannister legends
+legend_the_clever: "Tale of Tricksters"
+legend_the_clever_desc: "[ancestor.GetName] the Clever is the legendary hero who founded House Lannister in the Age of Heroes, winkling Casterly Rock from the Casterlys with only his wits. Stories differ in the method by which Lann took Casterly Rock from House Casterly. In the most common version, Lann, having stripped naked and coated himself in butter, squeezed through a secret cleft in the stone. Once inside he confused the sleeping Casterlys by whispering threats, howling like a demon, stealing treasures from one brother and placing them in the bedchamber of another, and rigging traps. Thus, he set the Casterlys at odds with one another and convinced them their seat was haunted."
+legend_tywin_lannister: "Rains of Castamere"
+
+legend_tywin_lannister: "Rains of Castamere"
+legend_tywin_lannister_desc: "An infamous song that serves as a warning and reminder to those who have forgotten the power of House Lannister."
+
+legend_tywin_lannister_opening: ""And who are you, the proud lord said, that I must bow so low?" So goes the infamous song, The Rains of Castamere, a song immortalizing the destruction of House Reyne by [ancestor.GetName]. House Reyne was obliterated after they rebelled against their liege lord, Tytos Lannister, who was perceived as weak by his own vassals. To restore Lannister dominance, Tytos's son, [ancestor.GetName], marched against the Red Lions of Castamere. By the end of the rebellion, Castamere had been flooded and all members of House Reyne killed."
+
+legend_tywin_lannister_motivation: "When disciplining unruly vassals, most lords send armies. The Lions of Lannister only had to send a singer. There's no faster way to dull a vassal's ambition or any festive occasion than hearing The Rains of Castamere. Through the use of this song [ROOT.Legend.GetProtagonist.GetTitledFirstNameNoTooltip] is determined to restore order to the Westerlands. A stark reminder to everyone that no matter what, the golden lion is still to be feared."
+
+legend_tywin_lannister_deed: "Those who act against House Lannister will not continue to do so with unchecked impunity. As such [ROOT.Legend.GetProtagonist.GetTitledFirstNameNoTooltip] has sent envoys and bards to foreign courts, performing The Rains of Castamere as a reminder of what the Lions of Lannister are capable of."
+
+legend_tywin_lannister_extra_deed: ""And who are you, the proud lord said, that I must bow so low? Only a cat of a different coat, that's all the truth I know. In a coat of gold or a coat of red, a lion still has claws, And mine are long and sharp, my lord, as long and sharp as yours. And so he spoke, and so he spoke, that lord of Castamere, But now the rains weep o'er his hall, with no one there to hear. Yes now the rains weep o’er his hall, and not a soul to hear.""
+
+legend_tywin_lannister_conclusion: "As the story of House Reyne of Castamere is immortalized in song, so is the power of House Lannister. All those who would choose to defy House Lannister will face the consequences of their action as the lion has awoken." 
+
+#iron island legends
+legend_dalton_greyjoy: "The Red Kraken"
+legend_dalton_greyjoy_desc: "[ancestor.GetName], also known as the Red Kraken, was the Lord of the Iron Islands at the outset of the Dance of the Dragons. The Dance of the Dragons began after the death of King Viserys I Targaryen in 129 AC when Dalton was sixteen. The Red Kraken is said to have laughed after hearing of the outbreak of war. Despite his youth, Dalton was shrewd and wild. Dalton is regarded as a great hero of the ironborn of the Iron Islands."
+
+#baratheon legends
+legend_durran_godsgrief: "Ours is the Fury"
+legend_durran_godsgrief_desc: "[ancestor.GetName] called Durran Godsgrief, was the mythic first Storm King and the founder of House Durrandon. According to legend, Durran won the love of Elenei, the daughter of the sea god and the goddess of the wind, during the Age of Heroes. Her divine parents forbade their love, but Durran and Elenei wed despite them. The gods' wrath was terrible to behold, destroying Durran's keep on his wedding night and killing all his family and guests. King Durran persisted in building larger and more powerful fortifications, until finally the seventh castle, Storm's End, stayed in place and resisted the storms of Shipbreaker Bay."
+
+#reach legend
+legend_garth_greenhand: "Descendants of Garth Greenhand"
+legend_garth_greenhand_desc: "[ancestor.GetName], was a mythical High King of the First Men said to have been the common ancestor of numerous houses from the Reach. It is said Garth first taught men to farm, giving them the gift of seed and showing them how to plant and sow, how to raise crops and reap the harvest. Where Garth walked, farms and villages and orchards sprouted. Garth Greenhand not only brought fertility to the land but also to women. Lords and common men alike offered up their virgin daughters to him wherever he went so their crops may ripen and trees grow heavy with fruit. Garth had many descendants; supposedly half the noble houses in the Reach, can trace their lineage back to him."
+
+#vale legends
+legend_falcon_knight: "Wings of a Falcon"
+legend_falcon_knight_desc: "[ancestor.GetName] was the first King of Mountain and Vale and the founder of House Arryn in Westeros. Prior to his coronation, Ser Artys, called the Falcon Knight, was an Andal knight who defeated the First Men of the Vale in the Battle of the Seven Stars. He is sometimes combined in tales with the Winged Knight, a legendary hero of the Vale from thousands of years before the Andal invasion."
+legend_bronze_kings: "Bronze Kings"
+legend_bronze_kings_desc: "House Royce once called themselves the Bronze Kings and wore the runic crown. Although they no longer hold this title, House Royce is still one of the most powerful houses in the Vale. Members of House Royce wear sets of ancient bronze plate armor inscribed with runes that are thought to make their wearers immune to injury."
+
+
+#dorne legends
+legend_princess_nymeria: "Last of the Rhoynar"
+legend_princess_nymeria_desc: "[ancestor.GetName] of Ny Sar was a princess of the Rhoynar. After the Rhoyne was conquered by the Valyrian Freehold, Princess Nymeria managed to unite the surviving Rhoynar, and began an evacuation from the Rhoyne, allegedly fleeing in ten thousand ships. After years of arduous journeying, Nymeria led the surviving Rhoynar to Dorne where she took Lord Mors Martell of the Sandship as her husband. With Nymeria's vast host joined to their strength, the newly established House Nymeros Martell was able to unite the entire peninsula of Dorne in Nymeria's War. Nymeria's life inspired the books Ten Thousand Ships and The Loves of Queen Nymeria."
+legend_sword_of_the_morning: "Swords of the Morning"
+legend_sword_of_the_morning_desc: "In history, the greatest knights of House Dayne are given the title, the Sword of the Morning. This great honor is bestowed upon a knight of House Dayne who is deemed worthy to wield the ancestral greatsword, Dawn."
+legend_dayne_opening: "According to legend, the founder of House Dayne tracked a falling star to an island at the mouth of the Torentine. It is said that the famous ancestral greatsword of House Dayne was forged from the heart of this fallen star. Unlike the ancestral swords of other houses, House Dayne does not pass its sword from lord to heir. Only a knight of House Dayne who is deemed worthy can wield Dawn.
+legend_dayne_motivation: "[ROOT.Legend.GetProtagonist.GetTitledFirstNameNoTooltip] has been deemed one of the few amongst history to be worthy of wielding Dawn. As the wielder of Dawn, the Sword of the Morning is one of the most famous and envied knights throughout the realm. [ROOT.Legend.GetProtagonist.GetTitledFirstNameNoTooltip] is determined to continue to prove why they are worthy of this illustrious title."
+legend_dayne_famous_deed: "[ROOT.Legend.GetProtagonist.GetTitledFirstNameNoTooltip] shows all the hallmarks of a great and chivalrous knight. [ROOT.Legend.GetProtagonist.GetTitledFirstNameNoTooltip] once proved their skill at a great tourney, dazzling those in attendance with their great prowess. Found with a worthy opponent, [ROOT.Legend.GetProtagonist.GetTitledFirstNameNoTooltip] moved with a grace that seemed almost ethereal, every step commanding the attention of all who beheld. Dawn alive with light, gleaming like a star in the afternoon sun. As [ROOT.Legend.GetProtagonist.GetTitledFirstNameNoTooltip] raised Dawn in victory, bathed in the warm glow of the setting sun, it was clear that their legend would endure for generations to come, a beacon of inspiration to future generations of knights.

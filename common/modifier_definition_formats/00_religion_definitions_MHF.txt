@@ -1,0 +1,14 @@
+﻿rf_faith_of_the_seven_opinion = {
+    decimals = 0
+    color = good
+}
+
+red_god_opinion = { decimals = 0 }
+
+bearded_god_opinion = { decimals = 0 }
+
+old_gods_vale_opinion = { decimals = 0 }
+
+old_gods_south_opinion = { decimals = 0 }
+
+valyrian_opinion = { decimals = 0 }

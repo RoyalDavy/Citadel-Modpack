@@ -1,0 +1,987 @@
+﻿# standard costs
+@maa_buy_cost = 150
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 5.0
+
+# Must be synced between files with the values located at "# Provisions Costs #".
+@provisions_cost_infantry_cheap = 3
+@provisions_cost_infantry_moderate = 7
+@provisions_cost_infantry_expensive = 12
+@provisions_cost_infantry_bankrupting = 15
+
+@provisions_cost_cavalry_cheap = 7
+@provisions_cost_cavalry_moderate = 15
+@provisions_cost_cavalry_expensive = 21
+@provisions_cost_cavalry_bankrupting = 30
+
+@provisions_cost_special_cheap = 6
+@provisions_cost_special_moderate = 12
+@provisions_cost_special_expensive = 18
+@provisions_cost_special_bankrupting = 24
+
+light_footmen = {
+	type = skirmishers
+	
+	damage = 10
+	#AGOT Modified
+	# toughness = 16
+	toughness = 15
+	pursuit = 10
+	#AGOT Modified
+	# screen = 16
+	screen = 15
+	
+	terrain_bonus = {
+		#AGOT Modified/Added
+		#forest = { damage = 4 toughness = 6 }
+		#taiga = { damage = 4 toughness = 6 }
+		#jungle = { damage = 4 toughness = 6 }
+
+		
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		taiga = { toughness = 5 }
+		majorroad_taiga = { toughness = 5 }
+		minorroad_taiga = { toughness = 5 }
+		cloudforest = { toughness = 5 }
+		majorroad_cloudforest = { toughness = 5 }
+		minorroad_cloudforest = { toughness = 5 }
+
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+		wetlands = { toughness = -5 }
+		majorroad_wetlands = { toughness = -5 }
+		minorroad_wetlands = { toughness = -5 }
+		floodplains = { toughness = -5 }
+		majorroad_floodplains = { toughness = -5 }
+		minorroad_floodplains = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+	}
+
+	counters = {
+		#AGOT Modified
+		#heavy_infantry = 1
+		light_cavalry = 2
+	}
+
+	#AGOT Added
+	can_recruit = {                                                     ### Edited by REMASTERED mod
+		NOT = { has_government = nights_watch_government }
+		culture = { 
+			NOR = { 
+				has_innovation = innovation_agot_riverlands_fighting
+				has_innovation = innovation_agot_stepstone_fighting	
+				has_cultural_parameter = unlock_maa_purple_sailors
+				has_cultural_parameter = unlock_maa_stone_scouts
+				has_cultural_parameter = unlock_maa_marsh_walker
+				has_cultural_parameter = unlock_maa_trackers
+				has_cultural_parameter = unlock_maa_greenblood_oars
+				has_cultural_parameter = unlock_maa_sea_snakes
+				has_cultural_parameter = unlock_maa_purple_sailors
+				has_cultural_parameter = unlock_maa_indentured_legion 
+				has_cultural_parameter = unlock_maa_arbor_marines
+				
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}				
+			}		
+		}
+	}
+
+	buy_cost = { gold = skirmisher_recruitment_cost }
+	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
+	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+
+	holy_order_fallback = yes
+
+	stack = 100
+	ai_quality = { value = culture_ai_weight_skirmishers }
+	icon = skirmishers
+}
+
+bowmen = {
+	type = archers
+	
+	damage = 25
+	toughness = 10
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		#AGOT Modified/Added
+		#hills = { damage = 10 toughness = 4 }
+		#forest = { toughness = 4 screen = 4 }
+		#taiga = { toughness = 4 screen = 4 }
+
+		
+		hills = { toughness = 5 }
+		majorroad_hills = { toughness = 5 }
+		minorroad_hills = { toughness = 5 }
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		cloudforest = { toughness = 5 }
+		majorroad_cloudforest = { toughness = 5 }
+		minorroad_cloudforest = { toughness = 5 }
+		taiga = { toughness = 5 }
+		majorroad_taiga = { toughness = 5 }
+		minorroad_taiga = { toughness = 5 }
+		
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+	}
+
+	counters = {
+		skirmishers = 1
+		#AGOT Added
+		pikemen = 1
+		archer_cavalry = 1
+	}
+
+	#AGOT Added
+	can_recruit = {                                                     ### Edited by REMASTERED mod
+		NOT = { has_government = nights_watch_government }
+		culture = { 
+			NOR = { 
+				has_cultural_parameter = unlock_maa_wolfswood_hunters 
+				has_cultural_parameter = unlock_maa_dragon_bows
+				has_cultural_parameter = unlock_maa_iron_bows
+				has_cultural_parameter = unlock_maa_vale_archers
+				has_cultural_parameter = unlock_maa_storm_bows
+				has_cultural_parameter = unlock_maa_sand_archers
+				has_cultural_parameter = unlock_maa_honeywine_quirrels
+				has_cultural_parameter = unlock_maa_hunters_of_the_moon
+				has_cultural_parameter = unlock_maa_wolfswood_hunters
+				has_cultural_parameter = unlock_maa_river_bows
+				has_cultural_parameter = unlock_maa_collared_bows				
+				
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}				
+			}		
+		}
+	}
+	
+	buy_cost = { gold = bowmen_recruitment_cost }
+	low_maintenance_cost = { gold = bowmen_low_maint_cost }
+	high_maintenance_cost = { gold = bowmen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	holy_order_fallback = yes
+
+	stack = 100
+	ai_quality = { 
+		value = culture_ai_weight_archers
+		add = counter_synergy_ai_weight_archers
+	}
+	icon = bowmen
+}
+
+light_horsemen = {
+	type = light_cavalry
+	
+	#AGOT Modified
+	#damage = 22
+	damage = 20
+	toughness = 15
+	pursuit = 30
+	screen = 30
+	
+	terrain_bonus = {
+		#AGOT Modified/Added
+		#plains = { damage = 15 }
+		#drylands = { damage = 15 }
+		#hills = { damage = -5 }
+		#mountains = { damage = -10 pursuit = -20 }
+		#desert_mountains = { damage = -15 pursuit = -20 }
+		#wetlands = { damage = -15 toughness = -10 pursuit = -30 screen = -30 }
+
+		
+		farmlands = { pursuit = 5 }
+		majorroad_farmlands = { pursuit = 5 }
+		minorroad_farmlands = { pursuit = 5 }
+		plains = { pursuit = 5 }
+		majorroad_plains = { pursuit = 5 }
+		minorroad_plains = { pursuit = 5 }
+		
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+		desert_mountains = { pursuit = -5 }
+		majorroad_desert_mountains = { pursuit = -5 }
+		minorroad_desert_mountains = { pursuit = -5 }
+		glacier = { pursuit = -5 }
+		majorroad_glacier = { pursuit = -5 }
+		minorroad_glacier = { pursuit = -5 }
+		frozen_flats = { pursuit = -5 }
+		majorroad_frozen_flats = { pursuit = -5 }
+		minorroad_frozen_flats = { pursuit = -5 }
+
+		the_bog = { toughness = -10 pursuit = -10 }
+		majorroad_the_bog = { toughness = -10 pursuit = -10 }
+		minorroad_the_bog = { toughness = -10 pursuit = -10 }
+	}
+	
+	counters = {
+		#AGOT Modified
+		#archers = 1
+		archers = 2
+	}
+
+	#AGOT Added
+	can_recruit = {                                                     ### Edited by REMASTERED mod
+		NOT = { has_government = nights_watch_government }
+		culture = { 
+			NOR = { 
+			has_innovation = innovation_agot_reach_fighting
+			has_cultural_parameter = unlock_maa_dragon_scouts
+			has_cultural_parameter = unlock_maa_river_scouts
+			has_cultural_parameter = unlock_maa_reach_scouts
+			has_cultural_parameter = unlock_maa_finger_scouts
+			has_cultural_parameter = unlock_maa_iron_riders
+			has_cultural_parameter = unlock_maa_cape_watch
+			has_cultural_parameter = unlock_maa_sand_steeds			
+				
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}				
+			}		
+		}
+	}
+
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+
+	buy_cost = { gold = light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+
+	holy_order_fallback = yes
+
+	stack = 100
+	ai_quality = { 
+		value = culture_ai_weight_light_cavalry
+		add = counter_synergy_ai_weight_light_cavalry
+	}
+	icon = light_cavalry
+}
+
+pikemen_unit = {
+	type = pikemen
+	
+	#AGOT Modified
+	# damage = 22
+	# toughness = 24
+	damage = 20
+	toughness = 25
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		#AGOT Modified/Added
+		#mountains = { toughness = 12 }
+		#desert_mountains = { toughness = 12 }
+		#hills = { toughness = 8 }
+
+		
+		hills = { toughness = 5 }
+		majorroad_hills = { toughness = 5 }
+		minorroad_hills = { toughness = 5 }
+		mountains = { toughness = 5 }
+		majorroad_mountains = { toughness = 5 }
+		minorroad_mountains = { toughness = 5 }
+
+		floodplains = { toughness = -5 }
+		majorroad_floodplains = { toughness = -5 }
+		minorroad_floodplains = { toughness = -5 }
+		wetlands = { toughness = -5 }
+		majorroad_wetlands = { toughness = -5 }
+		minorroad_wetlands = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		#AGOT Modified
+		#heavy_cavalry = 1
+		heavy_cavalry = 2
+		camel_cavalry = 1
+		elephant_cavalry = 1
+	}
+
+	#AGOT Added
+	can_recruit = {                                                     ### Edited by REMASTERED mod
+		NOT = { has_government = nights_watch_government }
+		culture = { 
+			NOR = { 
+				has_innovation = innovation_agot_stormlands_fighting 
+				has_innovation = innovation_agot_westerlands_fighting	
+				has_innovation = innovation_agot_crownlands_fighting
+				has_innovation = innovation_agot_northern_fighting
+				has_innovation = innovation_agot_crownlands_fighting
+				has_cultural_parameter = unlock_maa_iron_pikes
+				has_cultural_parameter = unlock_maa_dragon_spears
+				has_cultural_parameter = unlock_maa_vale_pikes
+				has_cultural_parameter = unlock_maa_westerland_billmen
+				has_cultural_parameter = unlock_maa_storm_pikes
+				has_cultural_parameter = unlock_maa_reach_pikes
+				has_cultural_parameter = unlock_maa_stolen_spears
+				has_cultural_parameter = unlock_maa_sun_spears
+				has_cultural_parameter = unlock_maa_pass_pikes
+				has_cultural_parameter = unlock_maa_ornate_helms
+				has_cultural_parameter = unlock_maa_unsullied
+				has_cultural_parameter = unlock_maa_cohort_of_the_three_thousand
+				has_cultural_parameter = unlock_maa_iron_legion				
+				
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}				
+			}		
+		}
+	}
+	
+	buy_cost = { gold = pikemen_recruitment_cost }
+	low_maintenance_cost = { gold = pikemen_low_maint_cost }
+	high_maintenance_cost = { gold = pikemen_high_maint_cost }
+	#AGOT Modified
+	#provision_cost = @provisions_cost_infantry_expensive
+	provision_cost = @provisions_cost_infantry_moderate
+	holy_order_fallback = yes
+
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_pikemen
+		add = counter_synergy_ai_weight_pikemen
+	}
+	icon = pikemen
+}
+
+
+
+#Tribal Era
+armored_footmen = {
+	type = heavy_infantry
+	
+	#AGOT Modified
+	# damage = 32
+	# toughness = 22
+	damage = 35
+	toughness = 25
+	pursuit = 0
+	screen = 0
+	
+	counters = {
+		pikemen = 1
+		#AGOT Added
+		skirmishers = 1
+	}
+
+	#AGOT Added
+	terrain_bonus = {
+		hills = { toughness = 5 }
+		majorroad_hills = { toughness = 5 }
+		minorroad_hills = { toughness = 5 }
+		mountains = { toughness = 5 }
+		majorroad_mountains = { toughness = 5 }
+		minorroad_mountains = { toughness = 5 }
+
+		floodplains = { toughness = -5 }
+		majorroad_floodplains = { toughness = -5 }
+		minorroad_floodplains = { toughness = -5 }
+		wetlands = { toughness = -5 }
+		majorroad_wetlands = { toughness = -5 }
+		minorroad_wetlands = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+	}
+
+
+
+	#AGOT Added
+	can_recruit = {                                                      ### Edited by REMASTERED mod
+		NOT = { has_government = nights_watch_government }
+		culture = {
+			has_innovation = innovation_agot_mail 		
+			NOR = {	
+				culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }			
+				has_innovation = innovation_agot_stormlands_fighting 
+				has_innovation = innovation_agot_westerlands_fighting
+				has_innovation = innovation_agot_vale_fighting
+				has_cultural_parameter = unlock_maa_dragonkeepers	
+				has_cultural_parameter = unlock_maa_vale_footmen
+				has_cultural_parameter = unlock_maa_river_footmen
+				has_cultural_parameter = unlock_maa_westerland_footmen
+				has_cultural_parameter = unlock_maa_storm_footmen
+				has_cultural_parameter = unlock_maa_reach_swords
+				has_cultural_parameter = unlock_maa_reavers
+				has_cultural_parameter = unlock_maa_clan_champions
+				has_cultural_parameter = unlock_maa_winter_wolves
+				has_cultural_parameter = unlock_maa_misty_shields
+				has_cultural_parameter = unlock_maa_sistermen_pirates
+				has_cultural_parameter = unlock_maa_weeping_guard
+				has_cultural_parameter = unlock_maa_holy_guard
+				has_cultural_parameter = unlock_maa_pit_warriors
+				has_cultural_parameter = unlock_maa_bronze_raiders				
+				
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}				
+			}		
+		}
+	}
+		
+	buy_cost = { gold = heavy_infantry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+	#AGOT Modified
+	#provision_cost = @provisions_cost_infantry_moderate
+	provision_cost = @provisions_cost_infantry_expensive
+	holy_order_fallback = yes
+
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_heavy_infantry
+		add = counter_synergy_ai_weight_heavy_infantry
+	}
+	icon = heavy_infantry
+}
+
+#AGOT Disabled
+#onager = {
+#	type = siege_weapon
+#	fights_in_main_phase = no
+#	
+#	damage = 0
+#	toughness = 12
+#	
+#	siege_tier = 1
+#	siege_value = 0.2
+#	
+#	buy_cost = { gold = onager_recruitment_cost }
+#	low_maintenance_cost = { gold = onager_low_maint_cost }
+#	high_maintenance_cost = { gold = onager_high_maint_cost }
+#	provision_cost = @provisions_cost_special_cheap
+#	
+#	stack = 10
+#	allowed_in_hired_troops = no
+#}
+
+#Medieval Era
+armored_horsemen = {
+	type = heavy_cavalry
+	
+	damage = 100
+	toughness = 35
+	pursuit = 20
+	screen = 0
+	
+	terrain_bonus = {
+		#AGOT Modified/Added
+		#plains = { damage = 30 }
+		#drylands = { damage = 30 }
+		#hills = { damage = -20 }
+		#mountains = { damage = -75 }
+		#desert_mountains = { damage = -75 }
+		#wetlands = { damage = -75 toughness = -10 pursuit = -10 }
+
+		
+		farmlands = { pursuit = 5 }
+		majorroad_farmlands = { pursuit = 5 }
+		minorroad_farmlands = { pursuit = 5 }
+		plains = { pursuit = 5 }
+		majorroad_plains = { pursuit = 5 }
+		minorroad_plains = { pursuit = 5 }
+		
+		mountains = { pursuit = -10 }
+		majorroad_mountains = { pursuit = -10 }
+		minorroad_mountains = { pursuit = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		glacier = { pursuit = -10 }
+		majorroad_glacier = { pursuit = -10 }
+		minorroad_glacier = { pursuit = -10 }
+		frozen_flats = { pursuit = -10 }
+		majorroad_frozen_flats = { pursuit = -10 }
+		minorroad_frozen_flats = { pursuit = -10 }
+
+		the_bog = { toughness = -20 pursuit = -20 }
+		majorroad_the_bog = { toughness = -20 pursuit = -20 }
+		minorroad_the_bog = { toughness = -20 pursuit = -20 }
+	}
+
+	counters = {
+		archers = 1
+		#AGOT Added
+		heavy_infantry = 1
+		skirmishers = 1
+	}
+
+
+	#AGOT Added
+	can_recruit = {                                                      ### Edited by REMASTERED mod
+		NOT = { has_government = nights_watch_government }
+		culture = {
+			has_innovation = innovation_arched_saddle
+			NOR = { 
+			has_innovation = innovation_agot_westerlands_fighting	
+			has_innovation = innovation_agot_stormlands_fighting
+			has_innovation = innovation_agot_vale_fighting
+			has_innovation = innovation_agot_free_companies	
+			has_cultural_parameter = unlock_maa_dragon_knights
+			has_cultural_parameter = unlock_maa_westerland_knights
+			has_cultural_parameter = unlock_maa_sun_knights
+			has_cultural_parameter = unlock_maa_vale_knights
+			has_cultural_parameter = unlock_maa_barrow_knights
+			has_cultural_parameter = unlock_maa_summer_knights
+			has_cultural_parameter = unlock_maa_winged_knights
+			has_cultural_parameter = unlock_maa_storm_knights
+			has_cultural_parameter = unlock_maa_green_hand 			
+				
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}				
+			}		
+		}
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -10 }
+	}
+
+	buy_cost = { gold = heavy_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_expensive
+	
+	stack = 50
+	ai_quality = { value = culture_ai_weight_heavy_cavalry }
+	icon = heavy_cavalry
+}
+
+#AGOT Disabled
+#mangonel = {
+#	type = siege_weapon
+#	fights_in_main_phase = no
+#	
+#	damage = 0
+#	toughness = 12
+#	
+#	siege_tier = 2
+#	siege_value = 0.3
+#	
+#	buy_cost = { gold = mangonel_recruitment_cost }
+#	low_maintenance_cost = { gold = mangonel_low_maint_cost }
+#	high_maintenance_cost = { gold = mangonel_high_maint_cost }
+#	provision_cost = @provisions_cost_special_moderate
+#	
+#	stack = 10
+#	allowed_in_hired_troops = no
+#}
+
+#High Medieval Era
+crossbowmen = {
+	type = archers
+	
+	#AGOT Modified
+	# damage = 42
+	# toughness = 18
+	damage = 45
+	toughness = 20
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		#AGOT Modified/Added
+		#hills = { damage = 10 }
+		#plains = { toughness = -8 }
+		#drylands = { toughness = -8 }
+		#desert = { toughness = -8 }
+
+		
+		hills = { toughness = 5 }
+		majorroad_hills = { toughness = 5 }
+		minorroad_hills = { toughness = 5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+
+	counters = {
+		heavy_infantry = 1
+		heavy_cavalry = 1
+		#AGOT Modified
+		#archer_cavalry = 0.5
+		elephant_cavalry = 1
+	}
+
+
+	#AGOT Added
+	can_recruit = {                                                      ### Edited by REMASTERED mod
+		NOT = { has_government = nights_watch_government }
+		culture = {
+			has_innovation = innovation_advanced_bowmaking
+			NOR = { 
+				has_innovation = innovation_agot_dorne_fighting
+				has_cultural_parameter = unlock_maa_bloody_balesters
+				has_cultural_parameter = unlock_maa_myrish_crossbows
+				has_cultural_parameter = unlock_maa_royal_crossbowmen 
+				
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}				
+			}		
+		}
+	}
+
+	buy_cost = { gold = crossbowmen_recruitment_cost }
+	low_maintenance_cost = { gold = crossbowmen_low_maint_cost }
+	high_maintenance_cost = { gold = crossbowmen_high_maint_cost }
+	#AGOT Modified
+	#provision_cost = @provisions_cost_infantry_moderate
+	provision_cost = @provisions_cost_infantry_expensive
+	
+	ai_quality = {
+		value = counter_synergy_ai_weight_archers
+	}
+	
+	holy_order_fallback = yes
+	
+	stack = 100
+	
+	icon = crossbowmen
+}
+
+#AGOT Disabled
+#trebuchet = {
+#	type = siege_weapon
+#	fights_in_main_phase = no
+#	
+#	damage = 0
+#	toughness = 12
+#	
+#	siege_tier = 3
+#	siege_value = 0.4
+#	
+#	buy_cost = { gold = trebuchet_recruitment_cost }
+#	low_maintenance_cost = { gold = trebuchet_low_maint_cost }
+#	high_maintenance_cost = { gold = trebuchet_high_maint_cost }
+#	provision_cost = @provisions_cost_special_expensive
+#	
+#	stack = 10
+#	allowed_in_hired_troops = no
+#
+#}
+
+#Late Medieval Era
+#AGOT Disabled
+# bombard = {
+# 	type = siege_weapon
+# 	fights_in_main_phase = no
+	
+# 	damage = 0
+# 	toughness = 12
+	
+# 	siege_tier = 4
+# 	siege_value = 0.6
+	
+# 	buy_cost = { gold = bombard_recruitment_cost }
+# 	low_maintenance_cost = { gold = bombard_low_maint_cost }
+# 	high_maintenance_cost = { gold = bombard_high_maint_cost }
+# 	provision_cost = @provisions_cost_special_bankrupting
+	
+# 	stack = 10
+# 	allowed_in_hired_troops = no
+# }
+
+# Special
+house_guard = {
+	type = heavy_infantry
+	can_recruit = {
+		exists = dynasty
+		dynasty = {
+			has_dynasty_perk = warfare_legacy_5
+		}
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}		 																		   
+   		#AGOT Added
+		NOT = { has_government = nights_watch_government }
+	}
+	
+	damage = 40
+	#AGOT Modified
+	#toughness = 32
+	toughness = 30
+	pursuit = 0
+	#AGOT Modified
+	#screen = 24
+	screen = 25
+	
+	counters = {
+		pikemen = 2
+		archers = 2
+	}
+	
+	buy_cost = { gold = 50 }
+	low_maintenance_cost = { gold = 0 }
+	high_maintenance_cost = { gold = 1 }
+	provision_cost = @provisions_cost_infantry_expensive
+	
+	max_regiments = 1
+	
+	stack = 100
+	ai_quality = { value = 100 }
+	
+	icon = house_guard
+}

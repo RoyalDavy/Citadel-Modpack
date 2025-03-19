@@ -1,0 +1,461 @@
+﻿make_brixworth_dejure_capital_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	major = yes
+	ai_check_interval = 120
+	desc = make_brixworth_dejure_capital_decision_desc
+	selection_tooltip = make_brixworth_dejure_capital_tooltip
+
+	is_shown = {
+		dynasty = dynasty:dynn_Bricker
+		has_title = title:d_the_gold_road
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:brixworth_capital
+			}
+			has_variable = pre_war_liege 
+		}
+	}
+
+	is_valid = {
+		completely_controls = title:d_the_gold_road
+		prestige_level >= 2
+		gold >= 400
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 1000
+	}
+
+	effect = {
+		custom_tooltip = make_brixworth_dejure_capital_decision_tooltip_1
+		custom_tooltip = make_brixworth_dejure_capital_decision_tooltip_2
+		add_prestige = 500
+		add_legitimacy = -350
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:brixworth_capital
+		}
+	
+	hidden_effect = {
+			title:d_the_gold_road = {
+				save_scope_as = gold_road
+			}
+
+			create_dynamic_title = {
+				tier = duchy
+				name = NEW_CREATED_TITLE_NAME
+			}
+
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			
+			scope:new_title = {
+				set_delete_on_destroy = yes
+				change_title_holder = {
+					holder = root
+					change = scope:change
+				}
+			}
+		
+			resolve_title_and_vassal_change = scope:change
+
+			scope:gold_road = {
+				set_capital_county = title:c_brixworth
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_county
+						NOT = { title_capital_county = de_jure_liege.title_capital_county }
+					}
+					add_to_list = moved_counties
+				}
+			}
+
+			every_in_list = {
+				list = moved_counties
+				set_de_jure_liege_title = scope:new_title
+			}
+
+			every_in_list = {
+				list = moved_counties
+				set_de_jure_liege_title = scope:gold_road
+			}
+
+			destroy_title = scope:new_title
+		}
+	}
+
+	cost = { gold = 400 }
+}
+reforge_runic_armor_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	}
+	major = yes
+	ai_check_interval = 60
+	
+	sort_order = 0
+
+	cost = {
+		gold = 500
+	}
+	desc = reforge_runic_armor_decision_desc
+	selection_tooltip = reforge_runic_armor_decision_tooltip_2
+	is_shown = {
+		dynasty = dynasty:dynn_Royce
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 500
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 10957 }
+
+	ai_potential = {
+		dynasty = dynasty:dynn_Royce
+		is_landed = yes
+		is_available_adult = yes
+		gold > 500
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 100
+			AND = {
+				current_date >= 8292.1.1
+				this = character:Royce_1
+				gold >= 500
+			}
+		}
+		modifier = {
+			add = -100
+			NOT = { gold >= 500}
+		}
+		modifier = {
+			add = 30
+			gold >= 500
+		}
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 20
+			has_trait = greedy
+		}
+		modifier = {
+			add = 50
+			has_trait = adventurer
+		}
+	}
+
+	effect = {
+		custom_tooltip = reforge_runic_armor_decision_tooltip_1
+		custom_tooltip = reforge_runic_armor_decision_tooltip_4
+
+		if = {
+			create_character = {
+				location = root.capital_province
+				gender_female_chance = 0
+				template_character = root
+				faith = root.faith
+				culture = root.culture
+				random_traits = yes
+				dynasty = none
+				age = { 18 55 }
+				martial = { 3 15 }
+				save_scope_as = smith
+			}
+		}
+
+		trigger_event = {
+			id = reforge_runic_armor.0001
+		}
+	}
+}
+make_flayed_man_armor_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	}
+	major = yes
+	ai_check_interval = 60
+	
+	sort_order = 0
+
+	cost = {
+		gold = 500
+	}
+	desc = make_flayed_man_armor_decision_desc
+	selection_tooltip = make_flayed_man_armor_decision_tooltip_2
+	is_shown = {
+		dynasty = dynasty:dynn_Bolton
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 500
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 10957 }
+
+	ai_potential = {
+		dynasty = dynasty:dynn_Bolton
+		is_landed = yes
+		is_available_adult = yes
+		gold > 500
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = -100
+			NOT = { gold >= 500}
+		}
+		modifier = {
+			add = 30
+			gold >= 500
+		}
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 20
+			has_trait = greedy
+		}
+		modifier = {
+			add = 50
+			has_trait = adventurer
+		}
+	}
+
+	effect = {
+		custom_tooltip = make_flayed_man_armor_decision_tooltip_1
+		custom_tooltip = make_flayed_man_armor_decision_tooltip_4
+
+		if = {
+			create_character = {
+				location = root.capital_province
+				gender_female_chance = 0
+				template_character = root
+				faith = root.faith
+				culture = root.culture
+				random_traits = yes
+				dynasty = none
+				age = { 18 55 }
+				martial = { 3 15 }
+				save_scope_as = smith
+			}
+		}
+
+		trigger_event = {
+			id = make_flayed_man_armor.0001
+		}
+	}
+}
+search_for_the_warlords_blade_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+	}
+	major = yes
+	ai_check_interval = 60
+	
+	sort_order = 0
+
+	cost = {
+		gold = 500
+	}
+	desc = search_for_the_warlords_blade_decision_desc
+	selection_tooltip = search_for_the_warlords_blade_decision_tooltip_2
+	is_shown = {
+		dynasty = dynasty:dynn_Vance
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:found_warlords_blade
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 500
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 3975 }
+
+	ai_potential = {
+		dynasty = dynasty:dynn_Vance
+		is_landed = yes
+		is_available_adult = yes
+		gold > 500
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = -100
+			NOT = { gold >= 500}
+		}
+		modifier = {
+			add = 30
+			gold >= 500
+		}
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 20
+			has_trait = greedy
+		}
+		modifier = {
+			add = 50
+			has_trait = adventurer
+		}
+	}
+
+	effect = {
+		custom_tooltip = search_for_the_warlords_blade_decision_tooltip_1
+		custom_tooltip = search_for_the_warlords_blade_decision_tooltip_4
+
+		if = {
+			create_character = {
+				location = root.capital_province
+				gender_female_chance = 0
+				template_character = root
+				faith = root.faith
+				culture = root.culture
+				random_traits = yes
+				dynasty = none
+				age = { 18 55 }
+				martial = { 3 15 }
+				save_scope_as = smith
+			}
+		}
+
+		trigger_event = {
+			id = search_for_the_warlords_blade.0001
+		}
+	}
+}
+recover_silverlight_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+	}
+	major = yes
+	ai_check_interval = 60
+	
+	cost = {
+		gold = 500
+	}
+	desc = recover_silverlight_decision_desc
+	selection_tooltip = recover_silverlight_decision_tooltip_3
+	is_shown = {
+		dynasty = dynasty:dynn_Bricker
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:recovered_silverlight
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 500
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 3975 }
+
+	ai_potential = {
+		dynasty = dynasty:dynn_Bricker
+		is_landed = yes
+		is_available_adult = yes
+		gold > 500
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 100
+			AND = {
+				current_date >= 8292.1.1
+				this = character:Bricker_1
+				gold >= 500
+			}
+		}
+		modifier = {
+			add = -100
+			NOT = { gold >= 500}
+		}
+		modifier = {
+			add = 30
+			gold >= 500
+		}
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 20
+			has_trait = greedy
+		}
+		modifier = {
+			add = 50
+			has_trait = adventurer
+		}
+	}
+
+	effect = {
+		custom_tooltip = recover_silverlight_decision_tooltip_1
+		custom_tooltip = recover_silverlight_decision_tooltip_2
+
+		if = {
+			limit = {
+				character:Bricker_25 = {
+					is_alive = yes
+					is_landed = no
+					is_available_adult = yes
+					is_imprisoned = no
+				}
+			}
+			character:Bricker_25 = {
+				save_scope_as = explorer
+			}
+		}
+		else = {
+			create_character = {
+				location = root.capital_province
+				gender_female_chance = 0
+				template_character = root
+				faith = root.faith
+				culture = root.culture
+				random_traits = yes
+				dynasty = none
+				age = { 18 55 }
+				martial = { 3 15 }
+				save_scope_as = explorer
+			}
+		}
+
+		trigger_event = {
+			id = recover_silverlight.0001
+		}
+	}
+}

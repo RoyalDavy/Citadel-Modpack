@@ -1,0 +1,22 @@
+﻿namespace = agot_minor_decisions_events
+
+##########################################
+# The Great Northern Bake Off
+##########################################
+#great_northern_bakeoff_events.0001 = {
+#	type = character_event
+#	title = great_northern_bakeoff_events.0001.t
+#	desc = great_northern_bakeoff_events.0001.desc
+#	theme = feast_activity
+#	override_background = { event_background = army_camp }
+#	left_portrait = {
+#		character = root
+#		animation = happiness
+#	}
+#	
+#	option = {
+#		name = great_northern_bakeoff_events.0001.a
+#		add_prestige = medium_prestige_gain
+#		add_stress = major_stress_loss
+#	}
+#}

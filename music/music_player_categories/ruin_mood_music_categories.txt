@@ -1,0 +1,49 @@
+﻿
+#### Mood tracks
+
+category = {
+	id = "ruin_mood_music"
+	name = "ruin_mood_music_list"
+	tracks = {
+		ruin_mood_01
+		ruin_mood_02
+		ruin_mood_03
+		ruin_mood_04
+		ruin_mood_05
+		ruin_mood_06
+		ruin_mood_07
+		ruin_mood_08
+		ruin_mood_09
+		ruin_mood_10
+		ruin_mood_11
+		ruin_mood_12
+		ruin_mood_13
+		ruin_mood_14
+		ruin_mood_15
+		ruin_mood_16
+		ruin_mood_17
+		ruin_mood_18
+		ruin_mood_19
+		ruin_mood_20
+		ruin_mood_21
+		ruin_mood_22
+		ruin_mood_23
+		ruin_mood_24
+		ruin_mood_25
+		ruin_mood_26
+		ruin_mood_27
+		ruin_mood_28
+		ruin_mood_29
+		ruin_mood_30
+		ruin_mood_31
+		ruin_mood_32
+		ruin_mood_33
+		ruin_mood_34
+		ruin_mood_35
+		ruin_mood_36
+		ruin_mood_37
+		ruin_mood_38
+		ruin_mood_39	
+		ruin_mood_40		
+	}
+}

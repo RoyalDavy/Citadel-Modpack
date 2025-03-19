@@ -1,0 +1,4041 @@
+﻿namespace = lannister_gold
+
+##########################################
+# Founding the Golden bank
+##########################################
+
+lannister_gold.0001 = { # You have founded the Golden Bank of Lannisport and decide to send for experienced bankers to assist you with the enterprise
+	type = character_event
+	title = lannister_gold.0001.t
+	desc = lannister_gold.0001.desc
+	theme = stewardship
+	override_background = {
+		reference = golden_bank_hall
+	}
+
+	right_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+
+	trigger = {
+		is_imprisoned = no
+		is_incapable = no
+	}
+
+	option = {
+		name = lannister_gold.0001.a
+		custom_tooltip = lannister_gold.0001.a_tt
+		trigger_event = {
+			id = lannister_gold.0002
+			days = 30
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_loss
+			greedy = minor_stress_impact_loss		
+		}		
+	}
+}
+
+##########################################
+# The Architects of Wealth
+##########################################
+
+
+lannister_gold.0002 = { ###Choose one of three bankers to hire and help running the bank
+	type = character_event
+	title = lannister_gold.0002.t
+	desc = lannister_gold.0002.desc
+	theme = stewardship
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = {
+		character = scope:target1
+		animation = personality_greedy
+	}
+	right_portrait = {
+		character = scope:target2
+		animation = personality_greedy
+	}
+	lower_center_portrait = {
+		character = scope:target3
+		animation = personality_greedy
+	}
+	immediate = {
+			create_character = {
+				gender = male
+				save_scope_as = target1
+ 				age = 34
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        intellect_good_1 = {}
+		        intellect_good_2 = {}
+	            }
+	            random_traits_list = {
+		        count = 1
+		        education_stewardship_3 = {}
+		        education_stewardship_4 = {}
+	            }
+				random_traits_list = {
+		        count = 4
+		        administrator = {}
+		        architect = {}
+		        temperate = {}
+		        patient = {}
+		        greedy = {}
+		        diligent = {}
+	            }
+				dynasty = none
+				random_traits = yes
+				faith = faith:rhllor
+				culture = culture:braavosi
+	            stewardship = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            martial = { 5 12 }
+	            diplomacy = { 8 16 }
+	            learning = { 8 16 }
+			}
+			create_character = {
+				gender = male
+				save_scope_as = target2
+ 				age = 32
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        intellect_good_1 = {}
+		        intellect_good_2 = {}
+	            }
+	            random_traits_list = {
+		        count = 1
+		        education_stewardship_3 = {}
+		        education_stewardship_4 = {}
+	            }
+				random_traits_list = {
+		        count = 4
+		        administrator = {}
+		        architect = {}
+		        temperate = {}
+		        patient = {}
+		        greedy = {}
+		        diligent = {}
+	            }
+				dynasty = none
+				random_traits = yes
+				faith = faith:weeping_lady
+				culture = culture:lyseni
+	            stewardship = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            martial = { 5 12 }
+	            diplomacy = { 8 16 }
+	            learning = { 8 16 }
+			}
+			create_character = {
+				gender = male
+				save_scope_as = target3
+ 				age = 31
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        intellect_good_1 = {}
+		        intellect_good_2 = {}
+	            }
+	            random_traits_list = {
+		        count = 1
+		        education_stewardship_3 = {}
+		        education_stewardship_4 = {}
+	            }
+				random_traits_list = {
+		        count = 4
+		        administrator = {}
+		        architect = {}
+		        temperate = {}
+		        patient = {}
+		        greedy = {}
+		        diligent = {}
+	            }
+				dynasty = none
+				random_traits = yes
+				faith = faith:the_seven_main
+				culture = culture:westerman
+	            stewardship = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            martial = { 5 12 }
+	            diplomacy = { 8 16 }
+	            learning = { 8 16 }
+			}
+		hidden_effect = {
+			scope:target1 = {
+				remove_trait = giant
+				remove_trait = scaly
+				remove_trait = clubfooted
+				remove_trait = dwarf
+				remove_trait = hunchbacked
+				remove_trait = spindly
+				remove_trait = albino
+				remove_trait = infertile
+				remove_trait = wheezing
+				remove_trait = bleeder
+				remove_trait = depressed_genetic
+				remove_trait = depressed_1
+				remove_trait = lunatic_genetic
+				remove_trait = lunatic_1
+				remove_trait = possessed_genetic
+				remove_trait = possessed_1
+				
+				add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+			}
+			scope:target2 = {
+				remove_trait = giant
+				remove_trait = scaly
+				remove_trait = clubfooted
+				remove_trait = dwarf
+				remove_trait = hunchbacked
+				remove_trait = spindly
+				remove_trait = albino
+				remove_trait = infertile
+				remove_trait = wheezing
+				remove_trait = bleeder
+				remove_trait = depressed_genetic
+				remove_trait = depressed_1
+				remove_trait = lunatic_genetic
+				remove_trait = lunatic_1
+				remove_trait = possessed_genetic
+				remove_trait = possessed_1
+				
+				add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+			}
+			scope:target3 = {
+				remove_trait = giant
+				remove_trait = scaly
+				remove_trait = clubfooted
+				remove_trait = dwarf
+				remove_trait = hunchbacked
+				remove_trait = spindly
+				remove_trait = albino
+				remove_trait = infertile
+				remove_trait = wheezing
+				remove_trait = bleeder
+				remove_trait = depressed_genetic
+				remove_trait = depressed_1
+				remove_trait = lunatic_genetic
+				remove_trait = lunatic_1
+				remove_trait = possessed_genetic
+				remove_trait = possessed_1
+				
+				add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+			}
+		}
+	}
+	option = {
+		name = lannister_gold.0002.a
+		trigger_event = {
+			id = lannister_gold.0003
+			months = 2
+		}
+		add_character_modifier = aided_by_braavosi_bankers_modifier
+		ai_chance = {
+			base = 50
+		}
+		add_courtier = scope:target1
+		hidden_effect = {
+			scope:target2 = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			scope:target3 = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+	}
+	option = {
+		name = lannister_gold.0002.b
+		trigger_event = {
+			id = lannister_gold.0003
+			months = 2
+		}
+		add_character_modifier = aided_by_lyseni_bankers_modifier
+		ai_chance = {
+			base = 30
+		}
+		add_courtier = scope:target2
+		hidden_effect = {
+			scope:target1 = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			scope:target3 = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+	}
+
+	option = {
+		name = lannister_gold.0002.c
+		trigger_event = {
+			id = lannister_gold.0003
+			months = 2
+		}
+		add_character_modifier = aided_by_local_bankers_modifier
+		ai_chance = {
+			base = 40
+		}
+		add_courtier = scope:target3
+		hidden_effect = {
+			scope:target1 = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			scope:target2 = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+	}
+}
+
+
+##########################################
+# Gold & Scorn
+##########################################
+
+lannister_gold.0003 = { # Prestige hit from the establishment of the Bank
+	type = character_event
+	title = lannister_gold.0003.t
+	desc = lannister_gold.0003.desc
+	theme = stewardship
+	override_background = {
+		reference = golden_bank_hall
+	}
+
+	left_portrait = {
+		character = root
+		animation = stress	
+	}
+
+	trigger = {
+		is_imprisoned = no
+		is_incapable = no
+	}
+	option = {
+		name = lannister_gold.0003.a
+	    remove_short_term_gold = 100
+		custom_tooltip = lannister_gold.0003.a_tt
+		title:e_the_iron_throne.holder = {
+			add_gold = 100
+		}
+		add_piety = -150
+		add_prestige = 150
+		trigger_event = {
+			id = lannister_gold.0004
+			months = 3
+		}
+		stress_impact = {	
+			arrogant = minor_stress_gain
+			zealous = minor_stress_gain				
+		}			
+        set_nickname_effect = { NICKNAME = nick_the_golden_lion }
+	}
+	option = {
+		name = lannister_gold.0003.b
+	    remove_short_term_gold = 100
+		custom_tooltip = lannister_gold.0003.b_tt
+		title:k_the_most_devout.holder = {
+			add_gold = 100
+		}
+		add_prestige = -100
+		add_piety = 150
+		trigger_event = {
+			id = lannister_gold.0004
+			months = 3
+		}
+		stress_impact = {
+			arrogant = medium_stress_impact_gain
+			zealous = minor_stress_impact_gain		
+		}		
+        set_nickname_effect = { NICKNAME = nick_the_golden_lion }
+	}
+	option = {
+		name = lannister_gold.0003.c
+	    remove_short_term_gold = 200
+		custom_tooltip = lannister_gold.0003.c_tt
+		add_prestige = 75
+		add_piety = 75
+		trigger_event = {
+			id = lannister_gold.0004
+			months = 3
+		}
+		stress_impact = {
+			arrogant = medium_stress_impact_gain	
+            compassionate = massive_stress_impact_loss			
+		}		
+        set_nickname_effect = { NICKNAME = nick_goldtouch }
+	}
+	option = {
+		name = lannister_gold.0003.d
+		custom_tooltip = lannister_gold.0003.d_tt
+		add_piety = -100
+		add_prestige = -100
+		trigger_event = {
+			id = lannister_gold.0004
+			months = 3
+		}
+		stress_impact = {
+			base = medium_stress_gain
+            arrogant = minor_stress_impact_loss		
+		}		
+        set_nickname_effect = { NICKNAME = nick_usurer }
+	}
+}
+
+
+##########################################
+# A Cold Wind from Braavos
+##########################################
+
+lannister_gold.0004 = { # The Iron Bank Threat
+	type = character_event
+	title = lannister_gold.0004.t
+	desc = lannister_gold.0004.desc
+	theme = stewardship
+	override_background = {
+		reference = golden_bank_hall
+	}
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	trigger = {
+		is_imprisoned = no
+		is_incapable = no
+	}
+	option = {
+		name = lannister_gold.0004.a
+		custom_tooltip = lannister_gold.0004.a_tt
+		add_prestige = -250
+		stress_impact = {
+			greedy = minor_stress_impact_gain		
+		}	
+		trigger_event = {
+			id = lannister_gold.0006
+			months = 1
+		}
+	}
+	option = {
+		name = lannister_gold.0004.b
+		custom_tooltip = lannister_gold.0004.b_tt
+		stress_impact = {
+			wrathful = minor_stress_impact_gain		
+		}		
+		trigger_event = {
+			id = lannister_gold.0007
+			months = 1
+		}
+	}	
+	option = {
+		name = lannister_gold.0004.c
+		custom_tooltip = lannister_gold.0004.c_tt
+		add_prestige = 250
+		stress_impact = {
+			brave = medium_stress_impact_loss
+			craven = minor_stress_impact_gain		
+		}		
+		trigger_event = {
+			id = lannister_gold.0010
+			months = 1
+		}
+	}	
+}
+
+##########################################
+# Merchants Withdraw their support
+##########################################
+
+
+lannister_gold.0005 = { ##Time is up to repay the debt
+	type = character_event
+	title = lannister_gold.0005.t
+	desc = lannister_gold.0005.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}	
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0005.a
+		add_character_modifier = lg_delayed_debtor_modifier
+		remove_character_modifier = lg_indebted_to_the_burghers_modifier
+		remove_character_flag = lg_debt_period
+		remove_character_flag = lg_took_out_loan
+		add_prestige = -150
+		ai_chance = {
+			base = 0
+		}		
+	}
+}
+
+
+##########################################
+# The Golden Bank Closes its Doors
+##########################################
+
+
+lannister_gold.0006 = { ##Shut the Golden Bank of Lannisport
+	type = character_event
+	title = lannister_gold.0006.t
+	desc = lannister_gold.0006.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}	
+	left_portrait = {
+		character = root
+		animation = shame
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0006.a
+		custom_tooltip = lannister_gold.0006.a_tt		
+		add_prestige = 300
+		ai_chance = {
+			base = 0
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain	
+			zealous = minor_stress_impact_gain					
+		}			
+        hidden_effect = {	
+		    remove_character_modifier = golden_bank_head_modifier	
+		    remove_character_modifier = golden_bank_head_II_modifier	
+		    remove_character_modifier = golden_bank_kg_branch_modifier	
+		    remove_character_modifier = golden_bank_oldtown_branch_modifier	
+		    remove_character_modifier = iron_bank_partnership_modifier	
+			
+			while = {
+                    limit = { has_character_modifier = bank_gold_lending_modifier }
+                    remove_character_modifier = bank_gold_lending_modifier
+            }
+		    title:c_lannisport = {
+		  	    remove_county_modifier = golden_bank_lannisport_modifier
+		    }
+		    title:c_oldtown = {
+			    remove_county_modifier = golden_bank_office_modifier
+		    }	
+		    title:c_kings_landing = {
+			    remove_county_modifier = golden_bank_office_modifier
+		    }				
+		}		
+	}
+}
+
+
+##########################################
+# A Dangerous Negotiation
+##########################################
+
+lannister_gold.0007 = { ##Negotiate with the Iron Bank
+	type = character_event
+	title = lannister_gold.0007.t
+	desc = lannister_gold.0007.desc	
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}	
+	left_portrait = {
+		character = root
+		animation = shame
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0007.a
+        custom_tooltip = lannister_gold.0007.a_tt		
+		trigger_event = {
+			id = lannister_gold.0009
+			months = 1
+		}		
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = lannister_gold.0007.b
+        custom_tooltip = lannister_gold.0007.b_tt			
+		trigger_event = {
+			id = lannister_gold.0008
+			days = 7
+		}
+        remove_short_term_gold = 750	        		
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = lannister_gold.0007.c
+        custom_tooltip = lannister_gold.0007.c_tt				
+		add_prestige = 150
+		trigger_event = {
+			id = lannister_gold.0010
+			months = 1
+		}					
+		ai_chance = {
+			base = 0
+		}
+	}	
+}
+
+##########################################
+# A Pact forged in Gold
+##########################################
+
+lannister_gold.0008 = { ##Agreement Reached - Iron Bank Acceoted payment
+	type = character_event
+	title = lannister_gold.0008.t
+	desc = lannister_gold.0008.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}	
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+
+	immediate = {
+	}
+	option = {
+		name = lannister_gold.0008.a
+		add_prestige = -50		
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+
+##########################################
+# A Pact with Braavos
+##########################################
+
+lannister_gold.0009 = { ##Agreement Reached - Partnership
+	type = character_event
+	title = lannister_gold.0009.t
+	desc = lannister_gold.0009.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}	
+	left_portrait = {
+		character = root
+		animation = steward
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+
+	immediate = {
+	}
+	option = {
+		name = lannister_gold.0009.a
+        custom_tooltip = lannister_gold.0009.a_tt				
+		add_character_modifier = iron_bank_partnership_modifier	
+		add_prestige = -75
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+
+##########################################
+# The Iron Bank Strikes Back
+##########################################
+
+lannister_gold.0010 = { ##No Deal - Economy Undermined
+	type = character_event
+	title = lannister_gold.0010.t
+	desc = lannister_gold.0010.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}	
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0010.a
+		trigger = {
+			exists = scope:claimant
+		}
+		trigger_event = {
+			id = lannister_gold.0012
+			months = 1
+		}		
+		scope:claimant = {
+			start_war = {
+				cb = claim_cb
+				target = scope:player
+				claimant = scope:claimant
+				target_title = scope:player.primary_title
+			}
+
+			spawn_army = {
+				name = the_golden_company_name
+				men_at_arms = {
+					type = light_footmen # 2000
+					stacks = 20
+				}
+				men_at_arms = {
+					type = pikemen_unit # 2000
+					stacks = 20
+				}
+				men_at_arms = {
+					type = armored_footmen # 2000
+					stacks = 20
+				}
+				men_at_arms = {
+					type = light_horsemen # 2500
+					stacks = 25
+				}
+				men_at_arms = {
+					type = armored_horsemen # 500
+					stacks = 10
+				}
+				men_at_arms = {
+					type = bowmen # 300
+					stacks = 3
+				}
+				men_at_arms = {
+					type = longbowmen # 700
+					stacks = 7
+				}
+				men_at_arms = {
+					type = war_elephant # 25
+					stacks = 1
+				}
+				location = scope:claimant.capital_province
+				inheritable = no
+			}
+		}
+	}	
+		
+	option = {	# Economic collapse
+		name = lannister_gold.0010.b
+		trigger_event = {
+			id = lannister_gold.0012
+			months = 1
+		}			
+		trigger = {
+			NOT = {
+				exists = scope:claimant
+			}
+		}
+		add_character_modifier = {
+			modifier = economically_undermined_character_modifier
+			years = 20
+		}
+		capital_county = {
+			add_county_modifier = {
+				modifier = economically_undermined_modifier
+				years = 15
+			}
+		}
+	}
+	option = {	# They will take ownership of local business entourages to slowly hurt us.
+		name = lannister_gold.0010.c
+		trigger_event = {
+			id = lannister_gold.0012
+			months = 1
+		}			
+		trigger = {
+			capital_county = {
+				development_level > 60
+			}
+			NOT = {
+				scope:claimant = {
+					has_strong_claim_on = scope:player.primary_title
+				}
+			}
+		}
+		add_character_modifier = {
+			modifier = economically_undermined_character_modifier
+			years = 20
+		}
+	}	
+}
+
+
+### Close the Iron Bank via Decision ###
+
+lannister_gold.0011 = { ##Close the Golden Bank of Lannisport
+	type = character_event
+	title = lannister_gold.0011.t
+	desc = lannister_gold.0011.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}	
+	left_portrait = {
+		character = root
+		animation = shame
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0011.a
+		custom_tooltip = lannister_gold.0011.a_tt		
+		add_prestige = -150
+		ai_chance = {
+			base = 0
+		}
+        hidden_effect = {	
+		    remove_character_modifier = golden_bank_head_modifier	
+		    remove_character_modifier = golden_bank_head_II_modifier	
+		    remove_character_modifier = golden_bank_kg_branch_modifier	
+		    remove_character_modifier = golden_bank_oldtown_branch_modifier	
+		    remove_character_modifier = iron_bank_partnership_modifier	 		
+			while = {
+                    limit = { has_character_modifier = bank_gold_lending_modifier }
+                    remove_character_modifier = bank_gold_lending_modifier
+            }
+		    title:c_lannisport = {
+			    remove_county_modifier = golden_bank_lannisport_modifier
+		    }
+		    title:c_oldtown = {
+			    remove_county_modifier = golden_bank_office_modifier
+		    }	
+		    title:c_kings_landing = {
+			    remove_county_modifier = golden_bank_office_modifier
+		    }			
+		}	
+		add_prestige = 150
+	}
+}
+
+lannister_gold.0012 = { ## Feeling Watched - Iron Bank
+	type = character_event
+	title = lannister_gold.0012.t
+	desc = lannister_gold.0012.desc
+	theme = murder_scheme
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0012.a
+		custom_tooltip = lannister_gold.0012.a_tt	
+        add_stress = 15
+		trigger_event = {
+			id = lannister_gold.0013
+			months = 1
+		}
+		remove_short_term_gold = medium_gold_value		
+		stress_impact = {	
+			craven = major_stress_gain
+			brave = minor_stress_gain
+		}		
+		ai_chance = {
+			base = 0
+		}	
+	}
+	option = {
+		name = lannister_gold.0012.b
+		custom_tooltip = lannister_gold.0012.b_tt	
+		trigger_event = {
+			id = lannister_gold.0014
+			months = 1
+		}			
+		stress_impact = {	
+			craven = massive_stress_gain
+			brave = minor_stress_loss
+		}		
+		ai_chance = {
+			base = 0
+		}	
+	}	
+}
+
+
+lannister_gold.0013 = {
+	hidden = yes
+	immediate = {
+		if = {
+			random_list = {
+				## Assasin Caught
+				70 = {
+					trigger_event = {
+						id = lannister_gold.0015
+						months = 2	
+					}
+				}
+				## Assasination Attempt
+				30 = {
+					trigger_event = {
+						id = lannister_gold.0016
+						months = 2
+					}
+				}
+			}
+		}
+	}
+}
+
+lannister_gold.0014 = {
+	hidden = yes
+	immediate = {
+		if = {
+			random_list = {
+				## Assasination Attempt
+				50 = {
+					trigger_event = {
+						id = lannister_gold.0016
+						months = 2
+					}
+				}
+				## faceless man #RIP BOZO
+				50 = {
+					trigger_event = {
+						id = lannister_gold.0017
+						months = 2
+					}
+				}
+			}
+		}
+	}
+}
+
+### Assasin Caught ###
+
+lannister_gold.0015 = { ##Assasin brought in by your guards
+	type = character_event
+	title = lannister_gold.0015.t
+	desc = lannister_gold.0015.desc
+	theme = murder_scheme	
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		character = scope:assasin_iron
+		animation = beg
+	}	
+	immediate = {
+			create_character = {
+				gender = male
+				save_scope_as = assasin_iron
+ 				age = 34
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        education_intrigue_3 = {}
+		        education_intrigue_4 = {}
+	            }
+				random_traits_list = {
+		        count = 4
+		        brave = {}
+		        callous = {}
+		        strong = {}
+		        patient = {}
+		        greedy = {}
+		        arbitrary = {}
+	            }
+				dynasty = none
+				random_traits = yes
+				faith = faith:the_seven_main
+				culture = culture:westerman
+	            intrigue = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            martial = { 5 12 }
+	            diplomacy = { 8 16 }
+	            learning = { 8 16 }
+			}
+			scope:assasin_iron = {
+			    add_trait = wounded_1
+			}
+	}			
+			
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = { ###Assasin Imprisoned
+		name = lannister_gold.0015.a
+		custom_tooltip = lannister_gold.0015.a_tt
+		imprison = {
+			target = scope:assasin_iron
+			type = dungeon
+		}		
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = { ###Assasin Executed
+		name = lannister_gold.0015.b
+		custom_tooltip = lannister_gold.0015.b_tt
+       	execute_prisoner_effect = {
+			VICTIM = scope:assasin_iron
+			EXECUTIONER = ROOT
+		}	
+        add_dread = 5		
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = { ###Sent back to kill his employer
+		name = lannister_gold.0015.c
+		custom_tooltip = lannister_gold.0015.c_tt	
+		trigger_event = {
+			id = lannister_gold.0032
+			days = 1
+		}		
+		ai_chance = {
+			base = 0
+		}
+	}	
+}
+
+### Assasination Attempt ###
+
+lannister_gold.0016 = { ##Assasination Attempt
+	type = character_event
+	title = lannister_gold.0016.t
+	desc = lannister_gold.0016.desc
+	theme = murder_scheme
+    left_portrait = {
+        character = root
+        triggered_animation = {
+            trigger = {
+                root = {
+                    has_trait = brave
+                }
+            }
+            # If above trigger is hit, animation is fear
+            animation = fear
+        }
+        # If trigger is not hit, falls back to fear
+        animation = fear
+    }
+	right_portrait = {
+		character = scope:assasin_iron
+		animation = assassin
+	}	
+	immediate = {
+			create_character = {
+				gender = male
+				save_scope_as = assasin_iron
+ 				age = 34
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        education_intrigue_2 = {}
+	            }
+				random_traits_list = {
+		        count = 4
+		        brave = {}
+		        callous = {}
+		        strong = {}
+		        patient = {}
+		        greedy = {}
+		        arbitrary = {}
+	            }
+				dynasty = none
+				random_traits = yes
+				faith = faith:the_seven_main
+				culture = culture:westerman
+	            intrigue = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            martial = { 5 12 }
+	            diplomacy = { 8 16 }
+	            learning = { 8 16 }
+			}
+	}	
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = { ### RUN!!
+		name = lannister_gold.0016.a
+		custom_tooltip = lannister_gold.0016.a_tt		
+		ai_chance = {
+			base = 0
+		}
+		stress_impact = {	
+			craven = minor_stress_loss
+			brave = minor_stress_gain
+		}	
+		trigger_event = {
+			id = lannister_gold.0031
+			days = 1
+		}		
+	}
+	
+	option = { ### Fight Back!!
+		name = lannister_gold.0016.b
+		custom_tooltip = lannister_gold.0016.b_tt		
+		ai_chance = {
+			base = 0
+		}
+		trigger_event = {
+			id = lannister_gold.0018
+			days = 1
+		}		
+		stress_impact = {	
+			craven = massive_stress_gain
+			brave = medium_stress_loss
+		}			
+	}	
+}
+
+### Faceless Man ###
+
+lannister_gold.0017 = { ### Faceless Man Kills You
+	type = character_event
+	title = lannister_gold.0017.t
+	desc = lannister_gold.0017.desc
+	theme = murder_scheme
+	left_portrait = {
+		character = root
+		animation = fear
+	}	
+	right_portrait = {
+		character = scope:facelessman_iron
+		animation = assassin
+	}	
+	immediate = {
+			random_courtier = {
+				limit = {
+					basic_is_available_ai = yes
+					NOT = { is_close_or_extended_family_of = root }
+					has_friendly_relationship_with_root_trigger = yes
+				}
+				alternative_limit = {
+					basic_is_available_ai = yes
+					NOT = { is_close_or_extended_family_of = root }
+					OR = { #You probably care more for highly skilled courtiers
+						martial > high_skill_rating
+						diplomacy > high_skill_rating
+						intrigue > high_skill_rating
+						learning > high_skill_rating
+						stewardship > high_skill_rating
+						prowess > high_skill_rating
+					}
+				}
+				save_scope_as = facelessman_iron
+			}
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0017.a
+		custom_tooltip = lannister_gold.0017.a_tt			
+		show_as_tooltip = {
+			death = {
+				death_reason = death_murder
+			}
+		}
+		hidden_effect = {
+			unknown_murder_effect = {
+				VICTIM = root
+				MURDERER = scope:facelessman_iron
+				REASON = death_murder
+			}
+			scope:facelessman_iron = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}			
+		}
+	}
+}
+
+### Survived Assasination Attempt by fighting ###
+
+lannister_gold.0018 = {
+	type = character_event
+	title = lannister_gold.0018.t
+	desc = lannister_gold.0018.desc
+	theme = murder_scheme
+	left_portrait = {
+		character = root
+		animation = pain
+	}	
+	right_portrait = {
+		character = scope:assasin_iron
+		animation = beg		
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	immediate = {
+	    scope:assasin_iron = {
+	       add_trait = wounded_1
+		}
+	add_trait = wounded_1	
+	}
+	option = { ###Assasin Imprisoned
+		name = lannister_gold.0018.a
+		custom_tooltip = lannister_gold.0018.a_tt
+		imprison = {
+			target = scope:assasin_iron
+			type = dungeon
+		}		
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = { ###Assasin Executed
+		name = lannister_gold.0018.b
+		custom_tooltip = lannister_gold.0018.b_tt
+       	execute_prisoner_effect = {
+			VICTIM = scope:assasin_iron
+			EXECUTIONER = ROOT
+		}	
+        add_dread = 3		
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = { ###Sent back to kill his employer
+		name = lannister_gold.0018.c
+		custom_tooltip = lannister_gold.0018.c_tt	
+		trigger_event = {
+			id = lannister_gold.0032
+			days = 1
+		}		
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+### Surivided Assasination Attempt by Running ###
+
+lannister_gold.0031 = {
+	type = character_event
+	title = lannister_gold.0031.t
+	desc = lannister_gold.0031.desc
+	theme = murder_scheme
+	left_portrait = {
+		character = root
+		animation = disbelief
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0031.a
+		custom_tooltip = lannister_gold.0031.a_tt		
+		ai_chance = {
+			base = 0
+		}	
+        add_stress = -15	
+	    scope:assasin_iron = {
+			death = {
+				death_reason = death_disappearance
+			}
+		}		
+	}
+}
+
+lannister_gold.0032 = {
+	type = character_event
+	title = lannister_gold.0032.t
+	desc = lannister_gold.0032.desc
+	theme = murder_scheme
+	left_portrait = {
+		character = root
+		animation = scheme
+	}	
+	right_portrait = {
+		character = scope:assasin_iron
+		animation = beg		
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0032.a
+		custom_tooltip = lannister_gold.0032.a_tt		
+		ai_chance = {
+			base = 0
+		}	
+		remove_short_term_gold = 10
+	    scope:assasin_iron = {
+            add_gold = 10
+		}
+		trigger_event = {
+			id = lannister_gold.0033
+			days = 7
+		}		
+	}
+}
+
+lannister_gold.0033 = {
+	type = character_event
+	title = lannister_gold.0033.t
+	desc = lannister_gold.0033.desc
+	theme = murder_scheme
+	left_portrait = {
+		character = root
+		animation = scheme
+	}	
+	right_portrait = {
+		character = scope:assasin_iron
+		animation = throne_room_bow_1		
+	}
+	trigger = {
+		root = {	
+			is_ai = no
+		}
+	}
+	option = {
+		name = lannister_gold.0033.a
+		custom_tooltip = lannister_gold.0033.a_tt		
+		ai_chance = {
+			base = 0
+		}	
+		remove_short_term_gold = 10
+	    scope:assasin_iron = {
+            add_gold = 10
+		}	
+        add_prestige = 25		
+	}
+	option = {
+		name = lannister_gold.0033.b
+		custom_tooltip = lannister_gold.0033.b_tt		
+		ai_chance = {
+			base = 0
+		}	
+		remove_short_term_gold = 10
+	    scope:assasin_iron = {
+            add_gold = 10
+			add_opinion = {
+				modifier = lg_loyal_character_modifier
+				target = root
+			}			
+		}
+		add_prestige = 25
+        add_courtier = scope:assasin_iron			
+	}
+	option = {
+		name = lannister_gold.0033.c
+		custom_tooltip = lannister_gold.0033.c_tt		
+		ai_chance = {
+			base = 0
+		}	
+       	execute_prisoner_effect = {
+			VICTIM = scope:assasin_iron
+			EXECUTIONER = ROOT
+		}	
+        add_dread = 5			
+	}	
+}
+
+
+
+
+#### GOLDEN BANK PETITIONS START ####
+
+###  Alchemist ###
+
+lannister_gold.0019 = {
+	type = character_event
+	title = lannister_gold.0019.t
+    desc = lannister_gold.0019.desc
+    theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:alchemist
+		animation = personality_rational
+	}	
+	immediate = {
+			create_character = {
+				gender = male
+				save_scope_as = alchemist
+ 				age = 45
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        intellect_good_1 = {}
+		        intellect_good_2 = {}
+	            }
+	            random_traits_list = {
+		        count = 1
+		        education_learning_2 = {}				
+		        education_learning_3 = {}
+		        education_learning_4 = {}
+	            }
+				random_traits_list = {
+		        count = 5
+		        lifestyle_herbalist = {}
+		        scholar = {}
+		        patient = {}
+		        greedy = {}
+		        eccentric = {}	
+				}
+				dynasty = none
+				random_traits = yes
+				faith = faith:the_seven_main
+				culture = culture:honeywiner
+	            learning = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            martial = { 5 12 }
+	            diplomacy = { 8 16 }
+	            stewardship = { 8 16 }
+		    }
+		hidden_effect = {
+			scope:alchemist = {
+				remove_trait = giant
+				remove_trait = scaly
+				remove_trait = clubfooted
+				remove_trait = septon
+				remove_trait = hunchbacked
+				remove_trait = spindly
+				remove_trait = infertile
+				remove_trait = wheezing
+				remove_trait = bleeder
+				remove_trait = depressed_genetic
+				remove_trait = depressed_1
+				remove_trait = lunatic_genetic
+				remove_trait = lunatic_1
+				remove_trait = possessed_genetic
+				remove_trait = possessed_1
+				
+				add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+		    }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+		}			
+	}		
+	option = {
+		name = lannister_gold.0019.a
+		custom_tooltip = lannister_gold.0019.a_tt
+		remove_short_term_gold = 100 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger_event = {
+			id = lannister_gold.0020
+		}
+	}
+
+	option = {
+		name = lannister_gold.0019.b
+		custom_tooltip = lannister_gold.0019.b_tt
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+lannister_gold.0020 = {
+	hidden = yes
+	immediate = {
+		if = {
+			random_list = {
+				## Alchemist Succesful
+				40 = {
+					trigger_event = {
+						id = lannister_gold.0021
+						days = {365 700}
+					}
+				}
+				## Alchemist Fails
+				60 = {
+					trigger_event = {
+						id = lannister_gold.0022
+						days = {365  700}
+					}
+				}
+			}
+		}
+	}
+}
+
+lannister_gold.0021 = {
+	type = character_event
+	title = lannister_gold.0021.t
+	desc = lannister_gold.0021.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:alchemist
+		animation = personality_greedy
+	}
+	option = {
+		name = lannister_gold.0021.a
+        add_gold = 250	
+        add_prestige = 150		
+	}
+}
+
+lannister_gold.0022 = {
+	type = character_event
+	title = lannister_gold.0022.t
+	desc = lannister_gold.0022.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:alchemist
+		animation = personality_greedy
+	}
+	option = {
+		name = lannister_gold.0022.a
+		custom_tooltip = lannister_gold.0022.a_tt			
+		imprison = {
+			target = scope:alchemist
+			type = dungeon
+		}
+		add_dread = 5
+	}	
+	option = {
+		name = lannister_gold.0022.b
+		custom_tooltip = lannister_gold.0022.b_tt		
+        add_prestige = 50	
+		add_courtier = scope:alchemist		
+	}	
+}
+
+
+### Shipbuilder ###
+
+lannister_gold.0023 = {
+	type = character_event
+	title = lannister_gold.0023.t
+    desc = lannister_gold.0023.desc
+    theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:shipbuilder
+		animation = personality_rational
+	}	
+	immediate = {
+			create_character = {
+				gender = male
+				save_scope_as = shipbuilder
+ 				age = 35
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        intellect_good_1 = {}
+		        intellect_good_2 = {}
+	            }
+	            random_traits_list = {
+		        count = 1
+		        education_stewardship_2 = {}				
+		        education_stewardship_3 = {}
+		        education_stewardship_4 = {}
+	            }
+				random_traits_list = {
+		        count = 5
+		        shrewd = {}
+		        brave = {}
+		        patient = {}
+		        diligent = {}
+		        ambitious = {}	
+		        honest = {}	
+		        humble = {}					
+	            }
+				dynasty = none
+				random_traits = yes
+				faith = faith:the_seven_main
+				culture = culture:honeywiner
+	            learning = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            martial = { 5 12 }
+	            diplomacy = { 8 16 }
+	            learning = { 8 16 }
+	        }
+		hidden_effect = {
+			scope:shipbuilder = {
+				remove_trait = giant
+				remove_trait = scaly
+				remove_trait = clubfooted
+				remove_trait = septon
+				remove_trait = hunchbacked
+				remove_trait = spindly
+				remove_trait = infertile
+				remove_trait = wheezing
+				remove_trait = bleeder
+				remove_trait = depressed_genetic
+				remove_trait = depressed_1
+				remove_trait = lunatic_genetic
+				remove_trait = lunatic_1
+				remove_trait = possessed_genetic
+				remove_trait = possessed_1
+				
+				add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+		    }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+		}			
+    }		
+	option = {
+		name = lannister_gold.0023.a
+		
+		custom_tooltip = lannister_gold.0023.a_tt
+		remove_short_term_gold = 200 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger_event = {
+			id = lannister_gold.0024
+		}
+	}
+
+	option = {
+		name = lannister_gold.0023.b
+		custom_tooltip = lannister_gold.0023.b_tt
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+lannister_gold.0024 = {
+	hidden = yes
+	immediate = {
+		if = {
+			random_list = {
+				## shipbuilder Succesful
+				70 = {
+					trigger_event = {
+						id = lannister_gold.0025
+						days = {365 700}
+					}
+				}
+				## shipbuilder Fails
+				30 = {
+					trigger_event = {
+						id = lannister_gold.0026
+						days = {365  700}
+					}
+				}
+			}
+		}
+	}
+}
+
+lannister_gold.0025 = {
+	type = character_event
+	title = lannister_gold.0025.t
+	desc = lannister_gold.0025.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:shipbuilder
+		animation = personality_greedy
+	}
+	option = {
+		name = lannister_gold.0025.a
+		custom_tooltip = lannister_gold.0025.a_tt		
+		scope:shipbuilder = {
+	    add_gold = 250
+		}
+        add_gold = 150	
+        add_character_modifier = lg_new_trade_ships_modifier		
+	}
+	option = {
+		name = lannister_gold.0025.b
+		custom_tooltip = lannister_gold.0025.b_tt		
+		scope:shipbuilder = {
+	    add_gold = 150
+		}
+        add_gold = 150	
+		add_courtier = scope:shipbuilder		
+        add_character_modifier = {
+		    modifier = lg_new_trade_ships_modifier
+            years = 10			
+		}
+	}	
+}
+
+lannister_gold.0026 = {
+	type = character_event
+	title = lannister_gold.0026.t
+	desc = lannister_gold.0026.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		character = scope:shipbuilder
+		animation = beg
+	}
+	option = {
+		name = lannister_gold.0026.a
+		custom_tooltip = lannister_gold.0026.a_tt
+		imprison = {
+			target = scope:shipbuilder
+			type = dungeon
+		}	
+		add_dread = 5
+	}	
+	option = {
+		name = lannister_gold.0026.b
+		custom_tooltip = lannister_gold.0026.b_tt		
+        add_prestige = 25		
+	}	
+}
+
+### Textile Magnate ###
+
+lannister_gold.0027 = {
+	type = character_event
+	title = lannister_gold.0027.t
+    desc = lannister_gold.0027.desc
+    theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:textile_magnate
+		animation = personality_rational
+	}	
+	immediate = {
+			create_character = {
+				gender = male
+				save_scope_as = textile_magnate
+ 				age = 36
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        education_stewardship_2 = {}			
+		        education_stewardship_3 = {}
+		        education_stewardship_4 = {}
+	            }
+				random_traits_list = {
+		        count = 4
+		        greedy = {}
+		        diligent = {}
+		        eccentric = {}		
+                fashionable = {}	
+				shrewd = {}	
+				ambitious = {}					
+	            }
+				dynasty = none
+				random_traits = yes
+				faith = faith:the_seven_main
+				culture = culture:westerman
+	            stewardship = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            martial = { 5 12 }
+	            diplomacy = { 8 16 }
+	            learning = { 8 16 }
+			}
+		hidden_effect = {
+			scope:textile_magnate = {
+				remove_trait = giant
+				remove_trait = scaly
+				remove_trait = clubfooted
+				remove_trait = septon
+				remove_trait = hunchbacked
+				remove_trait = spindly
+				remove_trait = infertile
+				remove_trait = wheezing
+				remove_trait = bleeder
+				remove_trait = depressed_genetic
+				remove_trait = depressed_1
+				remove_trait = lunatic_genetic
+				remove_trait = lunatic_1
+				remove_trait = possessed_genetic
+				remove_trait = possessed_1
+				
+				add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+		    }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+		}			
+	}			
+	option = {
+		name = lannister_gold.0027.a
+		custom_tooltip = lannister_gold.0027.a_tt		
+		remove_short_term_gold = 100 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger_event = {
+			id = lannister_gold.0028
+		}
+	}
+
+	option = {
+		name = lannister_gold.0027.b
+		custom_tooltip = lannister_gold.0027.b_tt
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+lannister_gold.0028 = {
+	hidden = yes
+	immediate = {
+		if = {
+			random_list = {
+				## textile magnate Succesful
+				60 = {
+					trigger_event = {
+						id = lannister_gold.0029
+						days = {365 700}
+					}
+				}
+				## textile magnate Fails
+				40 = {
+					trigger_event = {
+						id = lannister_gold.0030
+						days = {365  700}
+					}
+				}
+			}
+		}
+	}
+}
+
+lannister_gold.0029 = {
+	type = character_event
+	title = lannister_gold.0029.t
+	desc = lannister_gold.0029.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:textile_magnate
+		animation = personality_greedy
+	}
+	option = {
+		name = lannister_gold.0029.a
+		custom_tooltip = lannister_gold.0029.a_tt		
+		scope:textile_magnate = {
+	    add_gold = 150
+		}
+        add_gold = 200	
+		title:c_lannisport = {
+			add_county_modifier = {
+				modifier = lg_silk_lannisport_modifier
+				years = 7
+			}
+		}
+	}	
+}
+
+lannister_gold.0030 = {
+	type = character_event
+	title = lannister_gold.0030.t
+	desc = lannister_gold.0030.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = scope:textile_magnate
+	option = {
+		name = lannister_gold.0030.a
+		custom_tooltip = lannister_gold.0030.a_tt
+		imprison = {
+			target = scope:textile_magnate
+			type = dungeon
+		}
+        add_dread = 5		
+	}	
+	option = {
+		name = lannister_gold.0030.b
+		custom_tooltip = lannister_gold.0030.b_tt			
+        add_gold = 25			
+	}	
+}
+
+
+
+
+#### Old Knight ###
+
+
+
+lannister_gold.0034 = {
+	type = character_event
+	title = lannister_gold.0034.t
+	desc = lannister_gold.0034.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:old_knight
+		animation = personality_rational
+	}	
+	immediate = {
+			create_character = {
+				gender = male
+				save_scope_as = old_knight
+ 				age = 52
+				location = root.location
+	            random_traits_list = {
+		        count = 1
+		        education_martial_2 = {}				
+		        education_martial_3 = {}
+	            }
+				random_traits_list = {
+		        count = 5
+		        loyal = {}
+		        brave = {}
+		        patient = {}
+		        temperate = {}
+		        generous = {}	
+		        honest = {}	
+				}
+				dynasty = none
+				random_traits = yes
+				faith = faith:the_seven_main
+				culture = culture:westerman
+	            martial = {
+		        min_template_decent_skill
+		        max_template_decent_skill
+	            }
+	            prowess = { 5 14 }
+	            stewardship = { 5 12 }
+	            diplomacy = { 8 16 }
+	            learning = { 8 16 }
+	        }
+		hidden_effect = {
+			scope:old_knight = {
+				remove_trait = giant
+				remove_trait = scaly
+				remove_trait = clubfooted
+				remove_trait = septon
+				remove_trait = hunchbacked
+				remove_trait = spindly
+				remove_trait = infertile
+				remove_trait = wheezing
+				remove_trait = bleeder
+				remove_trait = depressed_genetic
+				remove_trait = depressed_1
+				remove_trait = lunatic_genetic
+				remove_trait = lunatic_1
+				remove_trait = possessed_genetic
+				remove_trait = possessed_1
+				
+				add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+		    }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+		}			
+    }		
+	option = {
+		name = lannister_gold.0034.a
+		
+		custom_tooltip = lannister_gold.0034.a_tt
+		remove_short_term_gold = 100 
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger_event = {
+			id = lannister_gold.0035
+		}
+	}
+
+	option = {
+		name = lannister_gold.0034.b
+		custom_tooltip = lannister_gold.0034.b_tt
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+lannister_gold.0035 = {
+	hidden = yes
+	immediate = {
+		if = {
+			random_list = {
+				## old_knight Successful
+				50 = {
+					trigger_event = {
+						id = lannister_gold.0036
+						days = {365 700}
+					}
+				}
+				## old_knight Fails
+				50 = {
+					trigger_event = {
+						id = lannister_gold.0037
+						days = {365  700}
+					}
+				}
+			}
+		}
+	}
+}
+
+lannister_gold.0036 = {
+	type = character_event
+	title = lannister_gold.0036.t
+	desc = lannister_gold.0036.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = root
+	right_portrait = {
+		character = scope:old_knight
+	}
+	option = {
+		name = lannister_gold.0036.a
+		custom_tooltip = lannister_gold.0036.a_tt		
+		scope:old_knight = {
+	    add_gold = 100
+		}
+        add_gold = 175		
+	}	
+}
+
+lannister_gold.0037 = {
+	type = character_event
+	title = lannister_gold.0037.t
+	desc = lannister_gold.0037.desc
+	theme = stewardship_domain_focus
+	override_background = {
+		reference = golden_bank_hall
+	}
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		character = scope:old_knight
+		animation = beg
+	}
+	option = {
+		name = lannister_gold.0037.a
+		custom_tooltip = lannister_gold.0037.a_tt	
+		add_prestige = 100
+	}	
+	option = {
+		name = lannister_gold.0037.b
+		custom_tooltip = lannister_gold.0037.b_tt		
+        add_gold = 50	
+        add_prestige = -100	
+	}	
+}
+
+### Wall Explorer ###
+
+lannister_gold.0038 = {
+    type = character_event
+    title = lannister_gold.0038.t
+    desc = lannister_gold.0038.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:wall_explorer
+        animation = personality_bold
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = wall_explorer
+                age = 29
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_2 = {}                
+                education_stewardship_3 = {}
+                }
+                random_traits_list = {
+                count = 5
+                fashionable = {}
+                brave = {}
+                impatient = {}
+                diligent = {}
+                ambitious = {}    
+                scholar = {}  				
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                learning = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 5 14 }
+                martial = { 5 12 }
+                diplomacy = { 8 16 }
+                learning = { 8 16 }
+            }
+        hidden_effect = {
+            scope:wall_explorer = {
+                remove_trait = giant
+                remove_trait = scaly
+                remove_trait = clubfooted
+                remove_trait = septon
+                remove_trait = hunchbacked
+                remove_trait = spindly
+                remove_trait = infertile
+                remove_trait = wheezing
+                remove_trait = bleeder
+                remove_trait = depressed_genetic
+                remove_trait = depressed_1
+                remove_trait = lunatic_genetic
+                remove_trait = lunatic_1
+                remove_trait = possessed_genetic
+                remove_trait = possessed_1
+                
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0038.a
+        
+        custom_tooltip = lannister_gold.0038.a_tt
+        remove_short_term_gold = 100 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0039
+        }
+    }
+
+    option = {
+        name = lannister_gold.0038.b
+        custom_tooltip = lannister_gold.0038.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0039 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## wall_explorer Successful
+                20 = {
+                    trigger_event = {
+                        id = lannister_gold.0040
+                        days = {365 700}
+                    }
+                }
+                ## wall_explorer Fails
+                80 = {
+                    trigger_event = {
+                        id = lannister_gold.0041
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0040 = {
+    type = character_event
+    title = lannister_gold.0040.t
+    desc = lannister_gold.0040.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:wall_explorer
+        animation = marshal
+    }
+    immediate = {
+	    scope:wall_explorer = {
+		    remove_trait = impatient
+			add_trait = patient
+			remove_trait = ambitious
+			add_trait = content
+			add_trait = logistician
+			add_trait = winter_soldier
+			remove_trait = fashionable
+			add_trait = humble
+			add_trait = scarred
+            add_character_modifier = {
+                modifier = north_explorer_character_modifier
+            }			
+		}
+    }	
+    option = {
+        name = lannister_gold.0040.a
+        custom_tooltip = lannister_gold.0040.a_tt         
+    } 
+    option = {
+        name = lannister_gold.0040.b
+        custom_tooltip = lannister_gold.0040.b_tt   
+		add_courtier = scope:wall_explorer  		
+    } 	
+}
+
+lannister_gold.0041 = {
+    type = character_event
+    title = lannister_gold.0041.t
+    desc = lannister_gold.0041.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+	left_portrait = root
+    option = {
+        name = lannister_gold.0041.a
+        custom_tooltip = lannister_gold.0041.a_tt   
+        add_prestige = -5	
+		scope:explorer = {
+			death = { death_reason = death_disappearance }
+		}		
+    }    
+}
+
+### Brewery Visionary ###
+
+lannister_gold.0042 = {
+    type = character_event
+    title = lannister_gold.0042.t
+    desc = lannister_gold.0042.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:brewery_visionary
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = brewery_visionary
+                age = 45
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_2 = {}            
+                education_stewardship_3 = {}
+                education_stewardship_4 = {}
+                }
+                random_traits_list = {
+                count = 4
+                greedy = {}
+                diligent = {}
+                eccentric = {}       
+                shrewd = {}  
+                ambitious = {}                    
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 5 14 }
+                martial = { 5 12 }
+                diplomacy = { 8 16 }
+                learning = { 8 16 }
+            }
+        hidden_effect = {
+            scope:brewery_visionary = {
+                remove_trait = giant
+                remove_trait = scaly
+                remove_trait = clubfooted
+                remove_trait = septon
+                remove_trait = hunchbacked
+                remove_trait = spindly
+                remove_trait = infertile
+                remove_trait = wheezing
+                remove_trait = bleeder
+                remove_trait = depressed_genetic
+                remove_trait = depressed_1
+                remove_trait = lunatic_genetic
+                remove_trait = lunatic_1
+                remove_trait = possessed_genetic
+                remove_trait = possessed_1
+                
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0042.a
+        
+        custom_tooltip = lannister_gold.0042.a_tt
+        remove_short_term_gold = 100 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0043
+        }
+    }
+
+    option = {
+        name = lannister_gold.0042.b
+        custom_tooltip = lannister_gold.0042.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0043 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## brewery visionary Successful
+                60 = {
+                    trigger_event = {
+                        id = lannister_gold.0044
+                        days = {365 700}
+                    }
+                }
+                ## brewery visionary Fails
+                40 = {
+                    trigger_event = {
+                        id = lannister_gold.0045
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0044 = {
+    type = character_event
+    title = lannister_gold.0044.t
+    desc = lannister_gold.0044.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:brewery_visionary
+        animation = personality_greedy
+    }
+    option = {
+        name = lannister_gold.0044.a
+        custom_tooltip = lannister_gold.0044.a_tt        
+        scope:brewery_visionary = {
+        add_gold = 150
+        }
+        add_gold = 200    
+        title:c_lannisport = {
+            add_county_modifier = {
+                modifier = lg_new_ale_lannisport_modifier
+                years = 7
+            }
+        }
+    }   
+}
+
+lannister_gold.0045 = {
+    type = character_event
+    title = lannister_gold.0045.t
+    desc = lannister_gold.0045.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:brewery_visionary
+        animation = beg
+    }
+    option = {
+        name = lannister_gold.0045.a
+        custom_tooltip = lannister_gold.0045.a_tt
+        imprison = {
+            target = scope:brewery_visionary
+            type = dungeon
+        }
+        add_dread = 5      
+    }   
+    option = {
+        name = lannister_gold.0045.b
+        custom_tooltip = lannister_gold.0045.b_tt          
+        add_gold = 25           
+    }   
+}
+
+### Jewelry Artisan Visionary ###
+
+lannister_gold.0046 = {
+    type = character_event
+    title = lannister_gold.0046.t
+    desc = lannister_gold.0046.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:jewelry_artisan
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = female
+                save_scope_as = jewelry_artisan
+                age = 38
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_2 = {}            
+                education_stewardship_3 = {}
+                education_stewardship_4 = {}
+                }
+                random_traits_list = {
+                count = 4
+                greedy = {}
+                diligent = {}
+                eccentric = {}       
+                shrewd = {}  
+                ambitious = {}                    
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 5 14 }
+                martial = { 5 12 }
+                diplomacy = { 8 16 }
+                learning = { 8 16 }
+            }
+        hidden_effect = {
+            scope:jewelry_artisan = {
+                remove_trait = giant
+                remove_trait = scaly
+                remove_trait = clubfooted
+                remove_trait = septon
+                remove_trait = hunchbacked
+                remove_trait = spindly
+                remove_trait = infertile
+                remove_trait = wheezing
+                remove_trait = bleeder
+                remove_trait = depressed_genetic
+                remove_trait = depressed_1
+                remove_trait = lunatic_genetic
+                remove_trait = lunatic_1
+                remove_trait = possessed_genetic
+                remove_trait = possessed_1
+                
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0046.a
+        
+        custom_tooltip = lannister_gold.0046.a_tt
+        remove_short_term_gold = 100 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0047
+        }
+    }
+
+    option = {
+        name = lannister_gold.0046.b
+        custom_tooltip = lannister_gold.0046.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0047 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## jewelry artisan Successful
+                60 = {
+                    trigger_event = {
+                        id = lannister_gold.0048
+                        days = {365 700}
+                    }
+                }
+                ## jewelry artisan Fails
+                40 = {
+                    trigger_event = {
+                        id = lannister_gold.0049
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0048 = {
+    type = character_event
+    title = lannister_gold.0048.t
+    desc = lannister_gold.0048.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:jewelry_artisan
+        animation = personality_greedy
+    }
+    option = {
+        name = lannister_gold.0048.a
+        custom_tooltip = lannister_gold.0048.a_tt        
+        scope:jewelry_artisan = {
+        add_gold = 150
+        }
+        add_gold = 200    
+        title:c_lannisport = {
+            add_county_modifier = {
+                modifier = lg_exquisite_jewels_lannisport_modifier
+                years = 7
+            }
+        }
+    }   
+}
+
+lannister_gold.0049 = {
+    type = character_event
+    title = lannister_gold.0049.t
+    desc = lannister_gold.0049.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:jewelry_artisan
+        animation = beg
+    }
+    option = {
+        name = lannister_gold.0049.a
+        custom_tooltip = lannister_gold.0049.a_tt
+        imprison = {
+            target = scope:jewelry_artisan
+            type = dungeon
+        }
+        add_dread = 5      
+    }   
+    option = {
+        name = lannister_gold.0049.b
+        custom_tooltip = lannister_gold.0049.b_tt          
+        add_gold = 25           
+    }   
+}
+
+### Wealthy Farmer Expansion ###
+
+lannister_gold.0050 = {
+    type = character_event
+    title = lannister_gold.0050.t
+    desc = lannister_gold.0050.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:wealthy_farmer
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = wealthy_farmer
+                age = 50
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_3 = {}            
+                }
+                random_traits_list = {
+                count = 3
+                diligent = {}
+                ambitious = {}       
+                patient = {}  
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+				max_template_decent_skill
+                }
+                prowess = { 4 10 }
+                martial = { 3 9 }
+                diplomacy = { 5 15 }
+                learning = { 4 10 }
+            }
+        hidden_effect = {
+            scope:wealthy_farmer = {
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0050.a
+        
+        custom_tooltip = lannister_gold.0050.a_tt
+        remove_short_term_gold = 200 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0051
+        }
+    }
+
+    option = {
+        name = lannister_gold.0050.b
+        custom_tooltip = lannister_gold.0050.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0051 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## wealthy farmer Successful
+                60 = {
+                    trigger_event = {
+                        id = lannister_gold.0052
+                        days = {365 700}
+                    }
+                }
+                ## wealthy farmer Fails
+                40 = {
+                    trigger_event = {
+                        id = lannister_gold.0053
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0052 = {
+    type = character_event
+    title = lannister_gold.0052.t
+    desc = lannister_gold.0052.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:wealthy_farmer
+        animation = personality_greedy
+    }
+    option = {
+        name = lannister_gold.0052.a
+        custom_tooltip = lannister_gold.0052.a_tt        
+        scope:wealthy_farmer = {
+        add_gold = 300
+        }
+        add_gold = 250    
+        title:c_lannisport = {
+            add_county_modifier = {
+                modifier = lg_abundant_harvests_lannisport_modifier
+                years = 10
+            }
+        }
+    }   
+}
+
+lannister_gold.0053 = {
+    type = character_event
+    title = lannister_gold.0053.t
+    desc = lannister_gold.0053.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:wealthy_farmer
+        animation = beg
+    }
+    option = {
+        name = lannister_gold.0053.a
+        custom_tooltip = lannister_gold.0053.a_tt
+        imprison = {
+            target = scope:wealthy_farmer
+            type = dungeon
+        }
+        add_dread = 5      
+    }   
+    option = {
+        name = lannister_gold.0053.b
+        custom_tooltip = lannister_gold.0053.b_tt          
+        add_gold = 50           
+    }   
+}
+### Candlemaker's Modest Expansion ###
+
+lannister_gold.0054 = {
+    type = character_event
+    title = lannister_gold.0054.t
+    desc = lannister_gold.0054.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:candlemaker
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = candlemaker
+                age = 42
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_2 = {}            
+                education_stewardship_3 = {}
+                }
+                random_traits_list = {
+                count = 3
+                diligent = {}
+                patient = {}  
+                humble = {}
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 3 8 }
+                martial = { 3 9 }
+                diplomacy = { 5 12 }
+                learning = { 6 14 }
+            }
+        hidden_effect = {
+            scope:candlemaker = {
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0054.a
+        
+        custom_tooltip = lannister_gold.0054.a_tt
+        remove_short_term_gold = 50 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0055
+        }
+    }
+
+    option = {
+        name = lannister_gold.0054.b
+        custom_tooltip = lannister_gold.0054.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0055 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## candlemaker Successful
+                60 = {
+                    trigger_event = {
+                        id = lannister_gold.0056
+                        days = {365 700}
+                    }
+                }
+                ## candlemaker Fails
+                40 = {
+                    trigger_event = {
+                        id = lannister_gold.0057
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0056 = {
+    type = character_event
+    title = lannister_gold.0056.t
+    desc = lannister_gold.0056.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:candlemaker
+        animation = personality_happy
+    }
+    option = {
+        name = lannister_gold.0056.a
+        custom_tooltip = lannister_gold.0056.a_tt        
+        scope:candlemaker = {
+        add_gold = 100
+        }
+        add_gold = 75    
+    }   
+}
+
+lannister_gold.0057 = {
+    type = character_event
+    title = lannister_gold.0057.t
+    desc = lannister_gold.0057.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:candlemaker
+        animation = sad
+    }
+    option = {
+        name = lannister_gold.0057.a
+        custom_tooltip = lannister_gold.0057.a_tt
+        imprison = {
+            target = scope:candlemaker
+            type = dungeon
+        }
+        add_dread = 2      
+    }   
+    option = {
+        name = lannister_gold.0057.b
+        custom_tooltip = lannister_gold.0057.b_tt          
+        add_gold = 20           
+    }   
+}
+
+### Fisherman's Modest Ambition ###
+
+lannister_gold.0058 = {
+    type = character_event
+    title = lannister_gold.0058.t
+    desc = lannister_gold.0058.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:fisherman
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = fisherman
+                age = 38
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_2 = {}            
+                education_stewardship_3 = {}
+                }
+                random_traits_list = {
+                count = 3
+                diligent = {}
+                patient = {}  
+                humble = {}
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 4 10 }
+                martial = { 3 8 }
+                diplomacy = { 5 12 }
+                learning = { 5 10 }
+            }
+        hidden_effect = {
+            scope:fisherman = {
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0058.a
+        
+        custom_tooltip = lannister_gold.0058.a_tt
+        remove_short_term_gold = 50 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0059
+        }
+    }
+
+    option = {
+        name = lannister_gold.0058.b
+        custom_tooltip = lannister_gold.0058.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0059 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## fisherman Successful
+                60 = {
+                    trigger_event = {
+                        id = lannister_gold.0060
+                        days = {365 700}
+                    }
+                }
+                ## fisherman Fails
+                40 = {
+                    trigger_event = {
+                        id = lannister_gold.0061
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0060 = {
+    type = character_event
+    title = lannister_gold.0060.t
+    desc = lannister_gold.0060.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:fisherman
+        animation = personality_happy
+    }
+    option = {
+        name = lannister_gold.0060.a
+        custom_tooltip = lannister_gold.0060.a_tt        
+        scope:fisherman = {
+        add_gold = 125
+        }
+        add_gold = 100    
+    }   
+}
+
+lannister_gold.0061 = {
+    type = character_event
+    title = lannister_gold.0061.t
+    desc = lannister_gold.0061.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:fisherman
+        animation = sad
+    }
+    option = {
+        name = lannister_gold.0061.a
+        custom_tooltip = lannister_gold.0061.a_tt
+        imprison = {
+            target = scope:fisherman
+            type = dungeon
+        }
+        add_dread = 2      
+    }   
+    option = {
+        name = lannister_gold.0061.b
+        custom_tooltip = lannister_gold.0061.b_tt          
+        add_gold = 30           
+    }   
+}
+
+### Stonemason's Expansion ###
+
+lannister_gold.0062 = {
+    type = character_event
+    title = lannister_gold.0062.t
+    desc = lannister_gold.0062.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:stonemason
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = stonemason
+                age = 45
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_2 = {}            
+                education_stewardship_3 = {}
+                }
+                random_traits_list = {
+                count = 3
+                diligent = {}
+                patient = {}  
+                temperate = {}
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 5 12 }
+                martial = { 4 10 }
+                diplomacy = { 6 14 }
+                learning = { 5 12 }
+            }
+        hidden_effect = {
+            scope:stonemason = {
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0062.a
+        
+        custom_tooltip = lannister_gold.0062.a_tt
+        remove_short_term_gold = 100 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0063
+        }
+    }
+
+    option = {
+        name = lannister_gold.0062.b
+        custom_tooltip = lannister_gold.0062.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0063 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## stonemason Successful
+                60 = {
+                    trigger_event = {
+                        id = lannister_gold.0064
+                        days = {365 700}
+                    }
+                }
+                ## stonemason Fails
+                40 = {
+                    trigger_event = {
+                        id = lannister_gold.0065
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0064 = {
+    type = character_event
+    title = lannister_gold.0064.t
+    desc = lannister_gold.0064.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:stonemason
+        animation = personality_happy
+    }
+    option = {
+        name = lannister_gold.0064.a
+        custom_tooltip = lannister_gold.0064.a_tt        
+        scope:stonemason = {
+        add_gold = 150
+        }
+        add_gold = 125    
+    }   
+}
+
+lannister_gold.0065 = {
+    type = character_event
+    title = lannister_gold.0065.t
+    desc = lannister_gold.0065.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:stonemason
+        animation = sad
+    }
+    option = {
+        name = lannister_gold.0065.a
+        custom_tooltip = lannister_gold.0065.a_tt
+        imprison = {
+            target = scope:stonemason
+            type = dungeon
+        }
+        add_dread = 3      
+    }   
+    option = {
+        name = lannister_gold.0065.b
+        custom_tooltip = lannister_gold.0065.b_tt          
+        add_gold = 50           
+    }   
+}
+
+### Miller's Mill Upgrade ###
+
+lannister_gold.0066 = {
+    type = character_event
+    title = lannister_gold.0066.t
+    desc = lannister_gold.0066.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:miller
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = miller
+                age = 40
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_2 = {}            
+                education_stewardship_3 = {}
+                }
+                random_traits_list = {
+                count = 3
+                diligent = {}
+                patient = {}  
+                temperate = {}
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 4 10 }
+                martial = { 3 9 }
+                diplomacy = { 5 12 }
+                learning = { 5 10 }
+            }
+        hidden_effect = {
+            scope:miller = {
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0066.a
+        
+        custom_tooltip = lannister_gold.0066.a_tt
+        remove_short_term_gold = 75 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0067
+        }
+    }
+
+    option = {
+        name = lannister_gold.0066.b
+        custom_tooltip = lannister_gold.0066.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0067 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## miller Successful
+                60 = {
+                    trigger_event = {
+                        id = lannister_gold.0068
+                        days = {365 700}
+                    }
+                }
+                ## miller Fails
+                40 = {
+                    trigger_event = {
+                        id = lannister_gold.0069
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0068 = {
+    type = character_event
+    title = lannister_gold.0068.t
+    desc = lannister_gold.0068.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:miller
+        animation = personality_happy
+    }
+    option = {
+        name = lannister_gold.0068.a
+        custom_tooltip = lannister_gold.0068.a_tt        
+        scope:miller = {
+        add_gold = 125
+        }
+        add_gold = 100    
+    }   
+}
+
+lannister_gold.0069 = {
+    type = character_event
+    title = lannister_gold.0069.t
+    desc = lannister_gold.0069.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:miller
+        animation = sad
+    }
+    option = {
+        name = lannister_gold.0069.a
+        custom_tooltip = lannister_gold.0069.a_tt
+        imprison = {
+            target = scope:miller
+            type = dungeon
+        }
+        add_dread = 2      
+    }   
+    option = {
+        name = lannister_gold.0069.b
+        custom_tooltip = lannister_gold.0069.b_tt          
+        add_gold = 30           
+    }   
+}
+
+### Merchant's Expansion ###
+
+lannister_gold.0070 = {
+    type = character_event
+    title = lannister_gold.0070.t
+    desc = lannister_gold.0070.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:merchant
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = merchant
+                age = 38
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_3 = {}            
+                education_stewardship_4 = {}
+                }
+                random_traits_list = {
+                count = 3
+                ambitious = {}
+                diligent = {}  
+                greedy = {}
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 4 10 }
+                martial = { 3 8 }
+                diplomacy = { 6 14 }
+                learning = { 5 12 }
+            }
+        hidden_effect = {
+            scope:merchant = {
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0070.a
+        
+        custom_tooltip = lannister_gold.0070.a_tt
+        remove_short_term_gold = 200 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0071
+        }
+    }
+
+    option = {
+        name = lannister_gold.0070.b
+        custom_tooltip = lannister_gold.0070.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0071 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## merchant Successful
+                70 = {
+                    trigger_event = {
+                        id = lannister_gold.0072
+                        days = {365 700}
+                    }
+                }
+                ## merchant Fails
+                30 = {
+                    trigger_event = {
+                        id = lannister_gold.0073
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0072 = {
+    type = character_event
+    title = lannister_gold.0072.t
+    desc = lannister_gold.0072.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:merchant
+        animation = personality_rational
+    }
+    option = {
+        name = lannister_gold.0072.a
+        custom_tooltip = lannister_gold.0072.a_tt        
+        scope:merchant = {
+        add_gold = 300
+        }
+        add_gold = 250    
+    }   
+}
+
+lannister_gold.0073 = {
+    type = character_event
+    title = lannister_gold.0073.t
+    desc = lannister_gold.0073.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:merchant
+        animation = sad
+    }
+    option = {
+        name = lannister_gold.0073.a
+        custom_tooltip = lannister_gold.0073.a_tt
+        imprison = {
+            target = scope:merchant
+            type = dungeon
+        }
+        add_dread = 5      
+    }   
+    option = {
+        name = lannister_gold.0073.b
+        custom_tooltip = lannister_gold.0073.b_tt          
+        add_gold = 50           
+    }   
+}
+
+### The Shady Loan Request ###
+
+lannister_gold.0074 = {
+    type = character_event
+    title = lannister_gold.0074.t
+    desc = lannister_gold.0074.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:shady_individual
+        animation = scheme
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = shady_individual
+                age = 35
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_intrigue_3 = {}            
+                education_intrigue_4 = {}
+                }
+                random_traits_list = {
+                count = 3
+                deceitful = {}
+                ambitious = {}  
+                cynical = {}
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                intrigue = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 4 8 }
+                martial = { 3 8 }
+                diplomacy = { 4 12 }
+                learning = { 5 10 }
+            }
+        hidden_effect = {
+            scope:shady_individual = {
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			add_character_flag = {
+                flag = lg_golden_bank_petitioner_cooldown
+                 years = 5
+            }			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0074.a
+        
+        custom_tooltip = lannister_gold.0074.a_tt
+        remove_short_term_gold = 100 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0075
+        }
+    }
+
+    option = {
+        name = lannister_gold.0074.b
+        custom_tooltip = lannister_gold.0074.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0075 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## shady_individual Successful
+                50 = {
+                    trigger_event = {
+                        id = lannister_gold.0076
+                        days = {365 700}
+                    }
+                }
+                ## shady_individual Fails
+                50 = {
+                    trigger_event = {
+                        id = lannister_gold.0077
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0076 = {
+    type = character_event
+    title = lannister_gold.0076.t
+    desc = lannister_gold.0076.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:shady_individual
+        animation = personality_scheming
+    }
+    option = {
+        name = lannister_gold.0076.a
+        custom_tooltip = lannister_gold.0076.a_tt        
+        scope:shady_individual = {
+        add_gold = 200
+        }
+        add_gold = 150    
+    }   
+}
+
+lannister_gold.0077 = {
+    type = character_event
+    title = lannister_gold.0077.t
+    desc = lannister_gold.0077.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:shady_individual
+        animation = personality_scheming
+    }
+    option = {
+        name = lannister_gold.0077.a
+        custom_tooltip = lannister_gold.0077.a_tt
+        imprison = {
+            target = scope:shady_individual
+            type = dungeon
+        }
+        add_dread = 3      
+    }   
+    option = {
+        name = lannister_gold.0077.b
+        custom_tooltip = lannister_gold.0077.b_tt          
+        add_gold = 25           
+    }   
+}
+
+
+### Goldsmith's Ambitious Expansion ###
+
+lannister_gold.0082 = {
+    type = character_event
+    title = lannister_gold.0082.t
+    desc = lannister_gold.0082.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:goldsmith
+        animation = personality_rational
+    }   
+    immediate = {
+            create_character = {
+                gender = male
+                save_scope_as = goldsmith
+                age = 44
+                location = root.location
+                random_traits_list = {
+                count = 1
+                education_stewardship_3 = {}            
+                education_stewardship_4 = {}
+                }
+                random_traits_list = {
+                count = 3
+                diligent = {}
+                ambitious = {}  
+                greedy = {}
+                }
+                dynasty = none
+                random_traits = yes
+                faith = faith:the_seven_main
+                culture = culture:westerman
+                stewardship = {
+                min_template_decent_skill
+                max_template_decent_skill
+                }
+                prowess = { 4 10 }
+                martial = { 3 8 }
+                diplomacy = { 5 12 }
+                learning = { 5 12 }
+            }
+        hidden_effect = {
+            scope:goldsmith = {
+                add_character_flag = {
+                    flag = no_headgear
+                     years = 1
+                }
+            }
+			
+        }           
+    }       
+    option = {
+        name = lannister_gold.0082.a
+        
+        custom_tooltip = lannister_gold.0082.a_tt
+        remove_short_term_gold = 150 
+        ai_chance = {
+            factor = 0
+            modifier = {
+                factor = 0
+            }
+        }
+        trigger_event = {
+            id = lannister_gold.0083
+        }
+    }
+
+    option = {
+        name = lannister_gold.0082.b
+        custom_tooltip = lannister_gold.0082.b_tt
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+lannister_gold.0083 = {
+    hidden = yes
+    immediate = {
+        if = {
+            random_list = {
+                ## goldsmith Successful
+                65 = {
+                    trigger_event = {
+                        id = lannister_gold.0084
+                        days = {365 700}
+                    }
+                }
+                ## goldsmith Fails
+                35 = {
+                    trigger_event = {
+                        id = lannister_gold.0085
+                        days = {365  700}
+                    }
+                }
+            }
+        }
+    }
+}
+
+lannister_gold.0084 = {
+    type = character_event
+    title = lannister_gold.0084.t
+    desc = lannister_gold.0084.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = root
+    right_portrait = {
+        character = scope:goldsmith
+        animation = personality_happy
+    }
+    option = {
+        name = lannister_gold.0084.a
+        custom_tooltip = lannister_gold.0084.a_tt        
+        scope:goldsmith = {
+        add_gold = 300
+        }
+        add_gold = 250    
+    }   
+}
+
+lannister_gold.0085 = {
+    type = character_event
+    title = lannister_gold.0085.t
+    desc = lannister_gold.0085.desc
+    theme = stewardship_domain_focus
+    override_background = {
+        reference = golden_bank_hall
+    }
+    left_portrait = {
+        character = root
+        animation = anger
+    }
+    right_portrait = {
+        character = scope:goldsmith
+        animation = personality_scheming
+    }
+    option = {
+        name = lannister_gold.0085.a
+        custom_tooltip = lannister_gold.0085.a_tt
+        imprison = {
+            target = scope:goldsmith
+            type = dungeon
+        }
+        add_dread = 5      
+    }   
+    option = {
+        name = lannister_gold.0085.b
+        custom_tooltip = lannister_gold.0085.b_tt          
+        add_gold = 50           
+    }   
+}

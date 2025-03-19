@@ -1,0 +1,87 @@
+﻿l_english:
+ #Brixhall
+ agot_travel_events_mhf.1000.t:0 "Brixhall: Arrival"
+ agot_travel_events_mhf.1000.desc:0 "Brixhall, seat of House [brixhall_lord.GetHouse.GetName] and gateway to [GetGeographicalRegion('world_westeros_the_westerlands').GetName].\n\nAs I approach the castle from the goldroad, the landscape gently rises, revealing Brixhall’s distinctive architecture. Constructed from mud-red bricks made from the clay around the Red Fork, the keep stands in stark contrast to its surroundings; cleverly constructed around a bustling silver mine that has long been the lifeblood of the area.\n\nThe gates stands open and welcoming, and inside you find [brixhall_lord.GetShortUINameNoFormat] waiting with wine and bread. After the bestowing of guest right, [brixhall_lord.GetSheHe] gives you leisure to explore the castle. "
+ agot_travel_events_mhf.1000.sept:0 "I will explore the castle #bold sept#!, home of the Seven"
+ agot_travel_events_mhf.1000.tombs:0 "I will explore the #bold mausoleum#!, and look upon the Brickers of old"
+ agot_travel_events_mhf.1000.silver_mine:0 "I will visit the #bold silver mines#!, the beating heart of the castle"
+ agot_travel_events_mhf.1000.brixworth:0 "I will peruse the nearby town of Brixworth and its more... #italic carnal#! attractions"
+ agot_travel_events_mhf.1000.opt_out:0 "I don't have time to waste exploring"
+
+ agot_travel_events_mhf.1001.t:0 "Brixhall: Sept"
+ agot_travel_events_mhf.1001.intro_faith_of_the_seven:0 "Walking the hallways of Brixhall I see the castle sept. I cannot help but feel like I have returned home, the quiet and sanctified atmosphere calling to me in a mysterious way.\n\n"
+ agot_travel_events_mhf.1001.intro_other:0 "Walking the hallways of Brixhall I see the castle sept. I cannot help but feel like I am trespassing, and yet the quiet and sanctified atmosphere of the sept calls to me all the same.\n\n"
+ agot_travel_events_mhf.1001.desc:0 "Making my way through the sacred hall, I find myself in front of a blessed shrine, and a great stained glass window casting colorful light across the stone floor. Moving closer to the altar and window, I feel compelled."
+ agot_travel_events_mhf.1001.a:0 "The #bold altar#!, the Seven call to me."
+ agot_travel_events_mhf.1001.b:0 "The warmth and sunshine #bold outside#! cannot be denied."
+
+ agot_travel_events_mhf.1002.t:0 "Brixhall: Sept"
+ agot_travel_events_mhf.1002.desc:0 "Kneeling before the altar, I feel at peace.\n\nI look upon the faces of the statues before me; the Father, the Mother, the Maiden, the Crone, the Warrior, the Smith, and the Stranger. #italic Yes#!, the Seven, the #bold true#! gods, are speaking to me."
+ agot_travel_events_mhf.1002.a:0 "I feel born anew, a follower of the [GetReligionByKey('faith_of_the_seven_religion').GetName]."
+ agot_travel_events_mhf.1002.b:0 "I feel newly attuned to the [GetReligionByKey('faith_of_the_seven_religion').GetName]."
+
+ agot_travel_events_mhf.1003.t:0 "Brixhall: Outside"
+ agot_travel_events_mhf.1003.desc:0 "Stepping out from the cool shadows of the castle sept, I am greeted by the warmth of the sun caressing my face. As I leave the confines of the sept behind, a stroll through the bustling courtyard brings a renewed sense of vigor. The gentle warmth contrasts sharply with the stone-cold interiors I've left behind. "
+ agot_travel_events_mhf.1003.a:0 "I feel a new sense of peace for the future."
+
+ agot_travel_events_mhf.1004.t:0 "Brixhall: Mausoleum"
+ agot_travel_events_mhf.1004.desc:0 "I cross the weathered threshold of the ancient Bricker Mausoleum, my footsteps echoing among the somber rows of moss-covered statues of long-gone Brickers.\n\nBefore me stands a heavy oak door, intricately carved with the [GetDynastyByID('dynn_Bricker').GetName] sigil, leading deeper into the mausoleum. As I push it open, the cool stillness inside envelops me, drawing me further away from the whispers of the living into the quiet halls reserved for the dead.\n\nWalking amid the brick-adorned sarcophagi, I find the dark corridors a maze. The faint torchlight gives little guidance. As I come to an intersection, I must choose #bold right#! or #bold left#!."
+ agot_travel_events_mhf.1004.a:0 "I will head to the right, I think I see something down that way."
+ agot_travel_events_mhf.1004.b:0 "There is a torch to the left; that must be the way to go!"
+
+ agot_travel_events_mhf.1005.t:0 "Brixhall: Mausoleum"
+ agot_travel_events_mhf.1005.intro:0 "As I continue down the corridor, I find myself face to face with a statue of a man. The base of the statue is made with mud-red bricks, and in his hand a sword, long ago rusted. The few words etched upon the side are slightly worn away, but still decipherable:\n\n"
+ agot_travel_events_mhf.1005.bellos:0 "#bold [bricker_ancestor.GetFullNameNicknamed].#! I can't help but look upon the statue with respect. Bellos was an Andal knight in the service of [GetScriptedCharacterByHistoryID('Vance_Wayfarers_Rest_11').GetFullName], the mightiest of the Andal warlords that invaded the Riverlands. Bellos established the rule of House Bricker over [GetTitleByKey('d_rivers_head').GetNameNoTier], and brutally struck down any resistance from the local First Men opposing Andal rule.\n\nThough you know this is not his grave, merely as statue, as his final restingplace lies on the edge of his namesake, the [GetTitleByKey('c_wallwood').GetNameNoTier], in [GetBuilding('wallwood_bellos_tomb_01').GetName]."
+ agot_travel_events_mhf.1005.baros:0 "#bold [bricker_ancestor.GetFullNameNicknamed].#! I can't help but look upon the statue with respect. This was the famed Andal knight who was part of the invasion of the Westerlands during the Coming of the Andals, and was struck down in battle by [GetScriptedCharacterByHistoryID('Lannister_37').GetFullNameNicknamed]."
+ agot_travel_events_mhf.1005.gregor:0 "#bold [bricker_ancestor.GetFullNameNicknamed].#! I can't help but look upon the statue with respect. This was the lord who rode with [GetScriptedCharacterByHistoryID('Lannister_79').GetCharacterViewNameNicknamed] onto the Field of Fire, but unlike Loren who only left his crown, Gregor himself never left the infernal field that day. Along with the vestiges of House [GetDynastyByID('dynn_Gardener').GetName], he was [bricker_ancestor.GetDeathReason]."
+ agot_travel_events_mhf.1005.brus:0 "#bold [bricker_ancestor.GetFullNameNicknamed].#! I can't help but look upon the statue with respect. The appropriately called [GetScriptedCharacterByHistoryID('Bricker_13').GetCharacterViewNameNicknamed] was a zealous adherent of the [GetFaithByKey('warring_star').GetName], who rose up during the Faith Militant uprising against [GetScriptedCharacterByHistoryID('Targaryen_31').GetCharacterViewNameNicknamed], but [bricker_ancestor.GetDeathReason] during the Battle at the Great Fork of the Blackwater Rush."
+ agot_travel_events_mhf.1005.hendry:0 "#bold [bricker_ancestor.GetFullNameNicknamed].#! I can't help but look upon the statue with respect. He was a staunch [GetDynastyByID('dynn_Targaryen').GetName] loyalist, and supporter of the #bold;color:{0.55,0.71,0.00} Greens#!, the queen's party, during the Dance of the Dragons. The man was a fearsome warrior, but was captured by the #bold;color:{0.00,0.00,0.00} Blacks#! during the Battle by the Lakeshore, often called the Fishfeed, and was forced to take the black by [GetScriptedCharacterByHistoryID('Dustin_28').GetTitledFirstNameNicknamed]."
+ agot_travel_events_mhf.1005.jon:0 "#bold [bricker_ancestor.GetFullNameNicknamed].#! I can't help but look upon the statue with respect. Songs about Jon [GetScriptedCharacterByHistoryID('Bricker_8').GetNickname] is sung even to this day in parts of the Westerlands. [castellan|E] to both [GetScriptedCharacterByHistoryID('Lannister_103').GetName], and later his son and heir, [GetScriptedCharacterByHistoryID('Lannister_114').GetTitledFirstNameNicknamed]. Some songs even suggest that Lord Loreon named his eldest son and heir after his faithful right hand and friend [GetScriptedCharacterByHistoryID('Bricker_8').GetNickname]."
+ agot_travel_events_mhf.1005.a:0 "The history here is palpable."
+
+ agot_travel_events_mhf.1006.t:0 "Brixhall: Mausoleum"
+ agot_travel_events_mhf.1006.desc:0 "Soon, a page finds me in the depths of the mausoleum and announces that dinner will soon be served. Thankfully, the page knows the way out and leads me once again our into the sunlight and the world of the living."
+ agot_travel_events_mhf.1006.a:0 "I will not forget this day."
+
+ agot_travel_events_mhf.1007.t:0 "Brixhall: Mausoleum"
+ agot_travel_events_mhf.1007.desc:0 "I have clearly chosen the wrong way, for I now find myself even further lost in these corridors. The torches are randomly placed, only leading me further and further into the mausoleum. #italic Each step brings a further chill.#!\n\nI can feel a strange heat emanating from the walls and the ceiling, drawing me further into the depths. Coming around a corner, I see the last thing I would have expected to find in the mausoleum in Brixhall...\n\nBefore me is a #bold dragon egg#!! Placed in some sort of holder, it was clearly left here for a purpose, but what such a purpose could be, I cannot even begin to fathom. "
+ agot_travel_events_mhf.1007.a:0 "Surely its purpose is to remain in this place."
+ agot_travel_events_mhf.1007.b:0 "After all, why not? Why shouldn't I take it?"
+
+ agot_travel_events_mhf.1008.t:0 "Brixhall: Silver Mines"
+ agot_travel_events_mhf.1008.desc:0 "Walking into the Brixhall Silver Mines, I suddenly feel overdressed. As I make my way through the narrow, echoing tunnels, the gear I've brought along begins to feel cumbersome and burdensome.\n\nAll around, the clank of pickaxes and the rumble of carts fill the air, echoing through the cavernous depths where miners extract silver from rich veins deep within the earth. As I navigate through the labyrinth of passageways, the air grows cooler and the sounds of labor intensify. Moving deeper into the mine, I spot something extraordinary; a large, shimmering #bold;color:{0.75,0.75,0.75} silver nugget#!. Its lustrous surface catches the dim light, its appearance more striking than any gem I have ever seen.
+ agot_travel_events_mhf.1008.a:0 "I should study the engineering and see if it would be possible to replicate"
+ agot_travel_events_mhf.1008.b:0 "Mayhaps I could ask to take the silver nugget home..."
+ agot_travel_events_mhf.1008.c:0 "These mines are truly a wonder to behold."
+ agot_travel_events_mhf_unlocked_glass_garden:0 "You unlock Glass Garden duchy building."
+
+ agot_travel_events_mhf.1009.t:0 "Brixhall: Brixworth"
+ agot_travel_events_mhf.1009.desc:0 "Leaving the castle, I head into the nearby town of Brixworth. Even though it is far from full, there are still many people milling about: Farmers displaying their crops, tradesmen hawking their wares, an occasional minstrel belting out a tune.\n\nMaking discrete inquiries, I soon find the place I was looking for: #bold Miner's Delight#!. The locals all assured me that I will have a good time, and with my coin purse I am sure I will."
+ agot_travel_events_mhf.1009.a:0 "Time to spend some coin..."
+ agot_travel_events_mhf.1009.b:0 "Maybe just a drink at the tavern instead..."
+ 
+ #Wayfarer's Rest: Warlord's Tomb 
+ 
+ agot_travel_events_mhf.2000.t:0 "Wayfarer's Rest: Arrival"
+ agot_travel_events_mhf.2000.desc:0 "Wayfarer's Rest, seat of House [wayfarers_rest_lord.GetHouse.GetName] and home to the [GetBuilding('wayfarers_rest_armisteads_tomb_01').GetName].\n\nAs I approach the castle from the river road, the landscape gently rises, revealing the castle's distinctive architecture.\n\nThe gates stands open and welcoming, and inside you find [wayfarers_rest_lord.GetShortUINameNoFormat] waiting with wine and bread. After the bestowing of guest right, [wayfarers_rest_lord.GetSheHe] gives you leisure to visit the famed [GetBuilding('wayfarers_rest_armisteads_tomb_01').GetName]."
+ agot_travel_events_mhf.2000.tombs:0 "I will explore the #bold tomb#!, and look upon the Andal Warlord of old"
+ agot_travel_events_mhf.2000.opt_out:0 "I don't have time to waste"
+ 
+ agot_travel_events_mhf.2004.t:0 "Warlord's Rest"
+ agot_travel_events_mhf.2004.desc:0 "I cross the weathered threshold of the ancient mausoleum, Warlord's Rest, my footsteps echoing among the somber rows of moss-covered statues of long-gone Vances.\n\nBefore me stands a heavy oak door, intricately carved with the [GetDynastyByID('dynn_Vance').GetName] sigil, leading deeper into the mausoleum. As I push it open, the cool stillness inside envelops me, drawing me further away from the whispers of the living into the quiet halls reserved for the dead.\n\nWalking amid the adorned sarcophagi, I find the dark corridors a maze. The faint torchlight gives little guidance. As I come to an intersection, I must choose #bold right#! or #bold left#!."
+ agot_travel_events_mhf.2004.a:0 "I will head to the right, I think I see something down that way."
+ agot_travel_events_mhf.2004.b:0 "There is a torch to the left; that must be the way to go!"
+
+ agot_travel_events_mhf.2005.t:0 "Warlord's Rest"
+ agot_travel_events_mhf.2005.intro:0 "As I continue down the corridor, I find myself face to face with a statue of a man. The base of the statue is made with beautiful stone, and in his hand a sword, long ago rusted. The few words etched upon the side are slightly worn away, but still decipherable:\n\n"
+ agot_travel_events_mhf.2005.armistead:0 "#bold [vance_ancestor.GetFullNameNicknamed].#! I can't help but look upon the statue with respect. Armistead Vance was the mightiest of the Andal warlords that invaded the Riverlands, and one of the Andal warlords who defeated [GetScriptedCharacterByHistoryID('Mudd_31').GetCharacterViewNameNicknamed], King of the Rivers and the Hills.\n\nAfterward he gained the allegiance of [GetScriptedCharacterByHistoryID('Tully_10').GetCharacterViewNameNicknamed] and his sons. Armistead granted Edmure's son [GetScriptedCharacterByHistoryID('Tully_11').GetCharacterViewNameNicknamed] lands at the juncture of the Red Fork and the Tumblestone, where Lord Axel raised [GetTitleByKey('b_riverrun').GetNameNoTier]."
+ agot_travel_events_mhf.2005.a:0 "The history here is palpable."
+
+ agot_travel_events_mhf.2006.t:0 "Warlord's Rest"
+ agot_travel_events_mhf.2006.desc:0 "Soon, a page finds me in the depths of the mausoleum and announces that dinner will soon be served. Thankfully, the page knows the way out and leads me once again our into the sunlight and the world of the living."
+ agot_travel_events_mhf.2006.a:0 "I will not forget this day."
+
+ agot_travel_events_mhf.2007.t:0 "Warlord's Rest"
+ agot_travel_events_mhf.2007.desc:0 "I have clearly chosen the wrong way, for I now find myself even further lost in these corridors. The torches are randomly placed, only leading me further and further into the mausoleum. #italic Each step brings a further chill.#!\n\nI can feel a strange heat emanating from the walls and the ceiling, drawing me further into the depths. Coming around a corner, I see the last thing I would have expected to find in the mausoleum in Wayfarer's Rest...\n\nBefore me is a #bold dragon egg#!! Placed in some sort of holder, it was clearly left here for a purpose, but what such a purpose could be, I cannot even begin to fathom. "
+ agot_travel_events_mhf.2007.a:0 "Surely its purpose is to remain in this place."
+ agot_travel_events_mhf.2007.b:0 "After all, why not? Why shouldn't I take it?"

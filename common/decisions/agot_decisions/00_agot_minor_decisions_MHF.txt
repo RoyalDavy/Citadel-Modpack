@@ -1,0 +1,460 @@
+﻿recover_lamentation_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	ai_check_interval = 60
+	
+	sort_order = 1
+
+	cost = {
+		gold = 500
+	}
+	desc = recover_lamentation_decision_desc
+	selection_tooltip = recover_lamentation_decision_tooltip_2
+	is_shown = {
+		dynasty = dynasty:dynn_Royce
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:recovered_lamentation
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 500
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 3975 }
+
+	ai_potential = {
+		dynasty = dynasty:dynn_Royce
+		is_landed = yes
+		is_available_adult = yes
+		gold > 500
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 100
+			AND = {
+				current_date >= 8292.1.1
+				this = character:Royce_1
+				gold >= 500
+			}
+		}
+		modifier = {
+			add = -100
+			NOT = { gold >= 500}
+		}
+		modifier = {
+			add = 30
+			gold >= 500
+		}
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 20
+			has_trait = greedy
+		}
+		modifier = {
+			add = 50
+			has_trait = adventurer
+		}
+	}
+
+	effect = {
+		custom_tooltip = recover_lamentation_decision_tooltip_1
+		custom_tooltip = recover_lamentation_decision_tooltip_2
+
+		if = {
+			limit = {
+				character:Royce_111 = {
+					is_alive = yes
+					is_landed = no
+					is_available_adult = yes
+					is_imprisoned = no
+				}
+			}
+			character:Royce_111 = {
+				save_scope_as = explorer
+			}
+		}
+		else = {
+			create_character = {
+				location = root.capital_province
+				gender_female_chance = 0
+				template_character = root
+				faith = root.faith
+				culture = root.culture
+				random_traits = yes
+				dynasty = none
+				age = { 18 55 }
+				martial = { 3 15 }
+				save_scope_as = explorer
+			}
+		}
+
+		trigger_event = {
+			id = recover_lamentation.0001
+		}
+	}
+}
+
+#great_northern_bakeoff_decision = {
+	#picture = { 
+		#reference = "gfx/interface/illustrations/decisions/fp1_decision_raise_runestone.dds"
+	#}
+	#desc = great_northern_bakeoff_decision_desc
+	#selection_tooltip = great_northern_bakeoff_decision_tooltip
+	#
+	#ai_check_interval = 36
+	#
+	#cooldown = { days = 1825 }
+	#
+	#is_shown = {
+	#	dynasty = dynasty:dynn_Manderly
+	#}
+	#
+	#cost = {
+	#	gold = 150
+	#	prestige = 50
+	#}
+	#
+	#is_valid_showing_failures_only = {
+	#	is_available = yes
+	#}
+	#
+	#effect = {
+	#	custom_tooltip = stress_loss_drunkard_decision_effect_tooltip
+	#
+	#	show_as_tooltip = { #The effect is actually applied in the event itself
+	#		add_prestige = medium_prestige_gain
+	#	}
+	#
+	#trigger_event = {
+	#		id = great_northern_bakeoff_events.0001
+	#	}
+	#}
+	#
+	#ai_potential = {
+	#	dynasty = dynasty:dynn_Manderly
+	#}
+	#
+	#ai_will_do = {
+	#	base = 0
+	#
+	#	modifier = {
+	#		add = 100
+	#		stress >= 50
+	#	}
+	#}
+#}
+
+bracken_warhorse_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/activity_backgrounds/contest_bg_horseracing.dds"
+	}
+	ai_check_interval = 0
+	
+	sort_order = 1
+
+	cost = {
+		gold = 250
+	}
+	desc = bracken_warhorse_decision_desc
+	selection_tooltip = bracken_warhorse_decision_tooltip
+	is_shown = {
+		dynasty = dynasty:dynn_Bracken
+	}
+	
+	is_valid = {
+		completely_controls = title:c_stone_hedge
+		province:2058 = {
+			has_building = stone_hedge_stables_01
+		}
+		employs_court_position = master_of_horse_court_position
+		gold >= 250
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 250
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 9125 }
+
+	effect = {
+		custom_tooltip = bracken_warhorse_decision_tooltip_1
+		custom_tooltip = bracken_warhorse_decision_tooltip_2
+		custom_tooltip = bracken_warhorse_decision_tooltip_3
+
+		trigger_event = {
+			id = martial_chivalry_special.1601
+		}
+	}
+}
+
+fashion_weirdwood_bow_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/activity_backgrounds/wilderness_forest.dds"
+	}
+	ai_check_interval = 60
+	
+	sort_order = 1
+
+	cost = {
+		gold = 500
+	}
+	desc = fashion_weirdwood_bow_decision_desc
+	selection_tooltip = fashion_weirdwood_bow_decision_tooltip_1
+	is_shown = {
+		dynasty = dynasty:dynn_Blackwood
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:fashioned_weirwood_bow
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 500
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 3975 }
+
+	ai_potential = {
+		dynasty = dynasty:dynn_Blackwood
+		is_landed = yes
+		is_available_adult = yes
+		gold > 500
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 100
+			AND = {
+				current_date >= 8292.1.1
+				this = character:Blackwood_6
+				gold >= 500
+			}
+		}
+		modifier = {
+			add = -100
+			NOT = { gold >= 500}
+		}
+		modifier = {
+			add = 30
+			gold >= 500
+		}
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 20
+			has_trait = greedy
+		}
+		modifier = {
+			add = 50
+			has_trait = adventurer
+		}
+	}
+
+	effect = {
+		custom_tooltip = fashion_weirdwood_bow_decision_tooltip_1
+		custom_tooltip = fashion_weirdwood_bow_decision_tooltip_2
+
+		if = {
+			limit = {
+				character:Blackwood_7 = {
+					is_alive = yes
+					is_landed = no
+					is_available_adult = yes
+					is_imprisoned = no
+				}
+			}
+			character:Blackwood_7 = {
+				save_scope_as = bowyer
+			}
+		}
+		else = {
+			create_character = {
+				location = root.capital_province
+				gender_female_chance = 0
+				template_character = root
+				faith = root.faith
+				culture = root.culture
+				random_traits = yes
+				dynasty = none
+				age = { 18 55 }
+				martial = { 3 15 }
+				save_scope_as = bowyer
+			}
+		}
+
+		trigger_event = {
+			id = fashion_weirdwood_bow.0001
+		}
+	}
+}
+
+fashion_crossbow_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	}
+	ai_check_interval = 60
+	
+	sort_order = 1
+
+	cost = {
+		gold = 500
+	}
+	desc = fashion_crossbow_decision_desc
+	selection_tooltip = fashion_crossbow_decision_tooltip_1
+	is_shown = {
+		dynasty = dynasty:dynn_Drox
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:fashioned_crossbow
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 500
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 3975 }
+
+	ai_potential = {
+		dynasty = dynasty:dynn_Drox
+		is_landed = yes
+		is_available_adult = yes
+		gold > 500
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 100
+			AND = {
+				current_date >= 8292.1.1
+				this = character:Drox_6
+				gold >= 500
+			}
+		}
+		modifier = {
+			add = -100
+			NOT = { gold >= 500}
+		}
+		modifier = {
+			add = 30
+			gold >= 500
+		}
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 20
+			has_trait = greedy
+		}
+		modifier = {
+			add = 50
+			has_trait = adventurer
+		}
+	}
+
+	effect = {
+		custom_tooltip = fashion_crossbow_decision_tooltip_1
+		custom_tooltip = fashion_crossbow_decision_tooltip_2
+
+		if = {
+			limit = {
+				character:Drox_7 = {
+					is_alive = yes
+					is_landed = no
+					is_available_adult = yes
+					is_imprisoned = no
+				}
+			}
+			character:Drox_7 = {
+				save_scope_as = bowyer
+			}
+		}
+		else = {
+			create_character = {
+				location = root.capital_province
+				gender_female_chance = 0
+				template_character = root
+				faith = root.faith
+				culture = root.culture
+				random_traits = yes
+				dynasty = none
+				age = { 18 55 }
+				martial = { 3 15 }
+				save_scope_as = bowyer
+			}
+		}
+
+		trigger_event = {
+			id = fashion_crossbow.0001
+		}
+	}
+}
+
+clegane_dog_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/event_scenes/ep2_dog_kennels.dds"
+	}
+	ai_check_interval = 0
+	
+	sort_order = 1
+
+	cost = {
+		gold = 100
+	}
+	desc = clegane_dog_decision_desc
+	selection_tooltip = clegane_dog_decision_tooltip
+	is_shown = {
+		dynasty = dynasty:dynn_Clegane
+	}
+	
+	is_valid = {
+		completely_controls = title:c_fang_hill
+		province:2867 = {
+			has_building = fang_hill_kennel_01
+		}
+		employs_court_position = master_of_hunt_court_position
+		gold >= 100
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_landed = yes
+		gold > 100
+		is_imprisoned = no
+	}
+
+	cooldown = { days = 3650 }
+
+	effect = {
+		start_dog_story_cycle_effect	
+	}
+
+}

@@ -1,0 +1,27 @@
+﻿l_english:
+fashion_crossbow_decision:0 "Commission Ancestral Crossbow"
+fashion_crossbow_decision_desc: "House [GetDynastyByID('dynn_Drox').GetName] was formed by the union of First Men and Andal nobles during the coming of the Andals. Other noble houses formed around the same time strut around with their Valyrian steel swords, while we have no such ancestral heirloom to call our own.\nOur sigil consists of three crossbows, and if we were to have an ancestral heirloom, it should be just that; a crossbow.\n\nI'm going to build my own heirloom, with ebonwood and belt hooks! If I am to fashion a crossbow of worthy quality, I would need to send someone further afield to search for suitable exotic wood.\n\nPerhaps to [GetGeographicalRegion('world_essos').GetName], or maybe even beyond.\n\n#weak Fund an explorer to search for suitable wood for engineering an heirloom crossbow."
+fashion_crossbow_t: "The Drox Crossbow"
+fashion_crossbow_decision_tooltip: "A voyage to [GetGeographicalRegion('world_essos').GetName] is dangerous, many who travel there do not return."
+fashion_crossbow_decision_tooltip_1: "The expedition you send could lead to the crafting of an [inventory_artifact|E] crossbow."
+fashion_crossbow_decision_tooltip_2: "The expedition could also lead to the death of the explorer you send to [GetGeographicalRegion('world_essos').GetName]."
+fashion_crossbow_decision_tooltip_3: "An explorer will travel [GetGeographicalRegion('world_essos').GetName] in an attempt to gather suitable exotic wood, and crafting a crossbow worthy of House [ROOT.Char.GetDynasty.GetBaseName]."
+
+fashion_crossbow_decision_confirm: "Prepare for the journey"
+
+fashion_crossbow_0001_a_desc: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('bowyer'))] [bowyer.GetFirstName] has long sought my permission to travel [GetGeographicalRegion('world_essos').GetName] in search of wood suitable for crafting a crossbow worthy of House [ROOT.Char.GetDynasty.GetBaseName].\n\nThe expedition will be both expensive and dangerous, but the rewards could be impressive."
+fashion_crossbow_0001_c_desc: "There are few problems that gold cannot solve, with enough money and daring adventureres, enough suitable exotic wood for crafting a crossbow could be recovered.\n\n[bowyer.GetFirstName], a local adventurer has offered to lead the expedition to [GetGeographicalRegion('world_essos').GetName] to search for the exotic wood.\n\nThe expedition will be both expensive and dangerous, but the rewards could be impressive."
+
+fashion_crossbow_0001_tt: "[bowyer.GetFirstName] will travel to [GetGeographicalRegion('world_essos').GetName] to gather suitable exotic wood for crafting a crossbow"
+fashion_crossbow_0001_b_tt: "You will cancel the expedition and your gold will be refunded"
+
+fashion_crossbow_0001_a: "Return safely [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('bowyer'))]..."
+fashion_crossbow_0001_b: "Return safely, [bowyer.GetName]"
+fashion_crossbow_0001_c: "Perhaps now is not the time for a quest to Essos..."
+
+fashion_crossbow_0002_a_desc: "Word of [bowyer.GetFirstNamePossessive] return has worked its way to me. I rush to the gates of [GetTitleByKey('b_drox_castle').GetNameNoTier] and see that the men are already unloading spices, silks and logs of exotic wood from [GetGeographicalRegion('world_essos').GetName]. \n\n[bowyer.GetFirstName] approaches me with an already made crossbow in hand. He bows and presents it to me.\n\n"A true engineering marvel, my [ROOT.Char.GetLadyLord]. We found ample amounts of exotic wood in the jungles of the [GetTitleByKey('k_disputed_lands').GetNameNoTier], and on our return journey [GetTitleByKey('c_myr').GetHolder.GetName] was kind enough to let me use the workshops and engineering expertise found in the [GetTitleByKey('b_southern_market').GetNameNoTier]. All the best crossbows have names, my [ROOT.Char.GetLadyLord]. Will you name it?"\n\nI take the crossbow into my hands, and ponder for a second, while I take aim. "Longbolt", I whisper under my breath."
+fashion_crossbow_0002_a: "You've outdone yourself [bowyer.GetFirstName]."
+
+fashion_crossbow_0003_a_desc: "[bowyer.GetFirstNamePossessive] expedition is long overdue. They were scheduled to have returned by now.\n\nI fear that something has gone terribly wrong in [GetGeographicalRegion('world_essos').GetName]...\n\n"
+fashion_crossbow_0003_a: "That treacherous land have claimed another life..."
+

@@ -1,0 +1,61 @@
+Fully included in main (generally no need to update): - ALL UPDATED ON 19 MAR 25
+1.  4 Personality Traits
+2.  AGOT - Citadel is a University
+3.  AGOT - Council Experience
+4.  AGOT - Dynasty Modifiers
+5.  AGOT - Melodies of Ruin
+6.  AGOT Legends Seeds
+7.  AGOT: Battlefield Duel
+8.  AGOT: Minor House Flavour
+9.  AGOT: Minor House Flavour Fix
+10. An AGOT Special World [removed all gfx models, double check the events/scripted effects and see if they are needed or bugged, they also not included]
+11. Blade Mastery
+12. Border Disputes
+13. CTFA + AGOT Compatch
+14. Custom Nickname
+15. Custom Title Form of Address
+16. Dragonpit access: none without permit
+17. Ecsaty's Destroy Titles
+18. Ecsaty's Titular Title Creator Fix
+19. Freeholder's RP Interactions
+20. Lannister Gold - AGOT
+21. Minor House Flavour - REMASTERED PATCH
+22. Pillage
+23. Raised Army CoA
+24. Scrollable Character Interaction Window
+25. Valaddar's AGOT Tweaks
+26. Valyrian Name Lists Expanded - A Submod for CK3AGOT
+
+Partially included in main:
+
+2.  AGOT - Armies of Westeros (common: culture; men_at_arms_types)
+3.  Armies of Westeros REMASTERED (common: accolade_types; culture; men_at_arms_types)
+
+1.	AGOT (
+4.  COW-AGOT: 3d Models  & Bigger Castles
+5.  AGOT - Holding Art
+6.  AGOT: Immersion
+7.  Commanders+
+8.  Commanders+ For AGOT
+9.  Divine Intervention Cheat Menu
+10. Divine Intervention AGOT Cheat Menu
+11. More Interactive Vassals
+
+Not included in main branch:
+1.  Submod Core
+2.  AGOT+ [remove CoA changes]
+3.  Crowns of Westeros
+4.  Valyrian Steel
+5.  Legacy of the Dragon
+6.  Visible Disfigurement
+7.  Visible Disfigurement - AGOT Compatch
+
+Add when needed each season:
+1.  AGOT More Bookmarks
+
+Possible additions:
+1.  Advanced Cheat Menu
+2.  Advanced Cheat Menu AGOT Compatch
+3.	Seasons Mod
+4.	No More Gods, Only Man
+5.	Lets Raid

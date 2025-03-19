@@ -1,0 +1,4 @@
+﻿NCharacterOpinion = {
+	COUNT_LIEGE_HOLDS_MY_DUCHY = 0 					# Penalty with count vassals for whom you hold their dejure duchy (and you're above duchy tier)
+						# Opinion bonus for making someone the Acclaimed Knight of an active Accolade
+}

@@ -1,0 +1,366 @@
+﻿########################
+### Dynasty Modifiers ###
+########################
+
+
+## Dynasties Modifiers
+
+oakheart_heritage_dynasty_modifier = {
+	icon = letter_positive
+        stone_dornish_opinion = -15
+        knight_effectiveness_mult = 0.1
+        monthly_dynasty_prestige_mult = 0.1
+        monthly_prestige_gain_mult = 0.1
+}
+
+wyl_heritage_dynasty_modifier = {
+	icon = blood_positive
+        raid_speed = 0.2
+        retreat_losses = -0.1
+        stormlander_opinion = -15
+        dread_loss_mult = -0.15
+}
+
+webber_heritage_dynasty_modifier = {
+	icon = intrigue_positive
+        intrigue_per_prestige_level = 1
+        general_opinion = -5
+        scheme_secrecy = 10
+}
+
+reyne_heritage_dynasty_modifier = {
+	icon = economy_positive
+        opinion_of_liege = -10
+        tax_mult = 0.05
+        stewardship = 2
+        intrigue = 1
+}
+
+connington_heritage_dynasty_modifier = {
+	icon = martial_positive
+        stone_dornish_opinion = -10
+        high_valyrian_opinion = 10
+        prowess = 2
+        knight_effectiveness_mult = 0.05
+}
+
+rogare_heritage_dynasty_modifier = {
+	icon = economy_positive
+        attraction_opinion = 10
+        republic_government_tax_contribution_mult = 0.05
+        monthly_income_mult = 0.05
+}
+
+velaryon_heritage_dynasty_modifier = {
+	icon = family_positive
+        monthly_dynasty_prestige_mult = 0.1
+        naval_movement_speed_mult = 0.15
+        monthly_prestige_gain_mult = 0.1
+}
+
+celtigar_heritage_dynasty_modifier = {
+	icon = economy_positive
+        stewardship_per_stress_level = 1
+        domain_limit = 1
+        vassal_opinion = -5
+}
+
+targaryen_heritage_dynasty_modifier = {
+	icon = prestige_positive
+        attraction_opinion = 10
+        positive_random_genetic_chance = 0.05
+        monthly_dynasty_prestige_mult = 0.1
+}
+
+borrell_heritage_dynasty_modifier = {
+	icon = martial_positive
+        max_loot_mult = 0.1
+        raid_speed = 0.1
+        naval_movement_speed_mult = 0.1
+        skirmishers_recruitment_cost_mult = -0.05
+}
+
+forrester_heritage_dynasty_modifier = {
+	icon = family_positive
+        monthly_dynasty_prestige_mult = 0.05
+        defender_advantage = 5
+        taiga_tax_mult = 0.05
+        taiga_bog_tax_mult = 0.05
+}
+
+uller_heritage_dynasty_modifier = {
+	icon = flame_positive
+        dread_baseline_add = 10
+        intrigue = 2
+        guest_opinion = -10
+        enemy_hard_casualty_modifier	= 0.05
+}
+
+codd_heritage_dynasty_modifier = {
+	icon = prison_positive
+        faith_of_the_seven_religion_opinion = -5
+        general_opinion = -10
+	dynasty_opinion = 15
+        max_hostile_schemes_add = 1
+}
+
+ryswell_heritage_dynasty_modifier = {
+	icon = horse_positive
+	heavy_cavalry_toughness_add = 5
+        light_cavalry_damage_add = 5
+        light_cavalry_pursuit_add = 5
+        character_travel_speed_mult = 0.05
+}
+
+tarly_heritage_dynasty_modifier = {
+	icon = martial_positive
+	martial_per_prestige_level = 1
+        advantage = 5
+        siege_phase_time = -0.05
+}
+
+yronwood_heritage_dynasty_modifier = {
+	icon = prestige_positive
+	opinion_of_liege = -10
+        monthly_dynasty_prestige_mult = 0.05
+        legitimacy_gain_mult = 0.1
+        domain_tax_mult = 0.05
+}
+
+clegane_heritage_dynasty_modifier = {
+	icon = dog_positive
+	health = 0.25
+        prowess = 2
+        knight_effectiveness_mult = 0.05
+        fellow_vassal_opinion = -5
+}
+
+royce_heritage_dynasty_modifier = {
+	icon = prestige_positive
+	heavy_infantry_toughness_mult = 0.05
+        heavy_infantry_max_size_add = 1
+        heavy_infantry_recruitment_cost_mult = -0.1
+        monthly_prestige_gain_mult = 0.05
+}
+
+reed_heritage_dynasty_modifier = {
+	icon = hunt_positive
+	liege_opinion = 15
+        trait_track_hunter_xp_gain_mult = 0.10
+        scheme_resistance	= 10
+        different_culture_opinion = -5
+}
+
+bracken_heritage_dynasty_modifier = {
+	icon = horse_positive
+	intrigue = 2
+        light_cavalry_damage_add = 5
+        light_cavalry_pursuit_add = 5
+        faith_conversion_piety_cost_mult = -0.20
+}
+
+blackwood_heritage_dynasty_modifier = {
+	icon = bird_positive
+	same_faith_opinion = 10
+        intrigue = 2
+        archers_damage_add = 5
+        faith_conversion_piety_cost_mult = 0.20
+}
+
+thenn_heritage_dynasty_modifier = {
+	icon = prestige_positive
+        zealot_levy_contribution_mult = 0.1
+        zealot_tax_contribution_mult = 0.1
+        faith_conversion_piety_cost_mult = 0.20
+        same_faith_opinion = 10
+}
+
+redwyne_heritage_dynasty_modifier = {
+	icon = drink_positive
+	naval_movement_speed_mult = 0.10
+        embarkation_cost_mult = -0.10
+	stress_gain_mult = -0.1 
+}
+
+umber_heritage_dynasty_modifier = {
+	icon = prowess_positive
+	prowess = 2
+	health = 0.25
+        hostile_raid_time = 0.10
+}
+
+bolton_heritage_dynasty_modifier = {
+	icon = dread_positive
+	dread_baseline_add = 10
+	cowed_vassal_tax_contribution_mult	= 0.05
+        cowed_vassal_levy_contribution_mult = 0.05
+        general_opinion = -5
+}
+
+manderly_heritage_dynasty_modifier = {
+	icon = county_modifier_development_positive
+	development_growth = 0.01
+	build_gold_cost = -0.05
+        holding_build_gold_cost = -0.05
+        republic_government_tax_contribution_mult = 0.05
+}
+
+crabb_heritage_dynasty_modifier = {
+	icon = blood_positive
+	dread_baseline_add = 10
+	prowess = 2
+        monthly_prestige_gain_per_dread_mult = 0.003
+        cultural_head_fascination_mult = -0.05
+}
+
+mormont_heritage_dynasty_modifier = {
+	icon = bear_positive
+	coastal_advantage = 5
+	health = 0.25
+        hostile_raid_time = 0.10
+}
+
+dayne_heritage_dynasty_modifier = {
+	icon = martial_positive
+        prowess_per_prestige_level = 1
+        knight_limit = 2
+        monthly_prestige_gain_per_knight_mult = 0.01
+}
+
+banefort_heritage_dynasty_modifier = {
+	icon = intrigue_positive
+        Intrigue = 2
+	dread_baseline_add = 10
+        scheme_secrecy = 10
+        faith_of_the_seven_religion_opinion = -5
+}
+
+darklyn_heritage_dynasty_modifier = {
+	icon = county_modifier_corruption_positive
+	accolade_glory_gain_mult = 0.15
+	knight_effectiveness_mult = 0.1
+        monthly_prestige_gain_per_knight_mult = 0.01
+}
+
+goodbrother_heritage_dynasty_modifier = {
+	icon = family_positive
+	naval_movement_speed_mult = 0.10
+	same_faith_opinion = 5
+        liege_opinion = 10
+        embarkation_cost_mult = -0.10
+}
+
+greyking_heritage_dynasty_modifier = {
+	icon = prowess_positive
+	naval_movement_speed_mult = 0.10
+	prowess_per_piety_level = 1
+        opinion_of_liege = -10
+        embarkation_cost_mult = -0.05
+}
+
+saan_heritage_dynasty_modifier = {
+	icon = compass_positive
+	coastal_advantage = 5
+	naval_movement_speed_mult = 0.10
+        embarkation_cost_mult = -0.10
+        skirmishers_damage_add = 5
+}
+
+magnar_heritage_dynasty_modifier = {
+	icon = rock_positive
+	dread_baseline_add = 10
+	mountains_travel_danger = -10
+        embarkation_cost_mult = -0.10
+        northman_opinion = -5
+}
+
+tyrell_heritage_dynasty_modifier = {
+	icon = fertility_positive
+	diplomacy = 2
+	monthly_prestige_gain_mult = 0.05
+        scheme_secrecy = 5
+}
+
+arryn_heritage_dynasty_modifier = {
+	icon = bird_positive
+	accolade_glory_gain_mult = 0.15
+	vassal_opinion = 10
+        liege_opinion = 5
+        monthly_piety_gain_per_legitimacy_level_mult = 0.05
+}
+
+
+martell_heritage_dynasty_modifier = {
+	icon = intrigue_positive
+	dread_baseline_add = 10
+	intrigue = 2
+        pikemen_damage_add = 5
+        opinion_of_liege = -5
+}
+
+tully_heritage_dynasty_modifier = {
+	icon = family_positive
+	dynasty_opinion = 5
+	diplomacy = 2
+        close_relative_opinion = 10
+}
+
+frey_heritage_dynasty_modifier = {
+	icon = family_positive
+	fertility = 0.15
+	intrigue = 2
+        attraction_opinion = -5
+	liege_opinion = -5
+}
+
+stark_heritage_dynasty_modifier = {
+	icon = family_positive
+	negate_health_penalty_add = 0.25
+	winter_advantage = 5
+        defender_winter_advantage = 5
+}
+
+lannister_heritage_dynasty_modifier = {
+	icon = economy_positive
+	domain_tax_mult = 0.05 
+	stewardship = 2
+        dynasty_opinion = 5
+}
+
+baratheon_heritage_dynasty_modifier = {
+	icon = prowess_positive
+	prowess_per_stress_level = 2
+	health = 0.25
+        stress_gain_mult = 0.05
+}
+
+
+## Major Dynasties
+
+valyrian_heritage_dynasty_modifier = {
+	icon = flame_positive
+	inbreeding_chance = -0.95
+	negate_health_penalty_add = 0.25
+}
+
+thrall_house_dynasty_modifier = {
+	icon = blood_negative
+	ironborn_opinion = -5
+}
+
+divided_dynasty_house_modifier = {
+	icon = blood_negative
+}
+
+bittersteel_modifier = {
+	icon = blood_negative
+}
+
+dragonrider_house_modifier = {
+	icon = beast_positive
+}
+
+walled_off_no_more_modifier = {
+	icon = social_positive
+	cultural_head_fascination_mult = 0.25
+}

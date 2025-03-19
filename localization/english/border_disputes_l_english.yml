@@ -1,0 +1,40 @@
+﻿l_english:
+ BORDER_DISPUTE_CB_NAME:1 "Minor Border Dispute over [county|E]"
+ BORDER_DISPUTE_WAR_NAME:2 "Minor Border Dispute over [TITLE.GetBaseName]"
+ BORDER_DISPUTE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+ county_border_cb_victory_desc_attacker:1 "All [vassals|E] on either side that own a territory in or adjacent to the disputed [county|E] will join the border conflict.\n\nYou gain the contested [title|E]."
+ county_border_cb_victory_desc:1 "All [vassals|E] on either side that own a territory in or adjacent to the disputed [county|E] will join the border conflict.\n\n[attacker.GetShortUIName|U] gains the contested [title|E]."
+ county_border_cb_white_peace_desc_defender:1 "All [vassals|E] on either side that own a territory in or adjacent to the disputed [county|E] will join the border conflict.\n\nYou keep the contested [title|E]."
+ county_border_cb_white_peace_desc:1 "All [vassals|E] on either side that own a territory in or adjacent to the disputed [county|E] will join the border conflict.\n\n[defender.GetShortUIName|U] keeps the contested [title|E]."
+ county_border_cb_defeat_desc_defender:1 "All [vassals|E] on either side that own a territory in or adjacent to the disputed [county|E] will join the border conflict.\n\nYou keep the contested [title|E]."
+ county_border_cb_defeat_desc_attacker:1 "All [vassals|E] on either side that own a territory in or adjacent to the disputed [county|E] will join the border conflict.\n\n[defender.GetShortUIName|U] keeps the contested [title|E]. All [factions|E] against you increase their [discontent|E]."
+ county_border_cb_defeat_desc:1 "All [vassals|E] on either side that own a territory in or adjacent to the disputed [county|E] will join the border conflict.\n\n[defender.GetShortUIName|U] keeps the contested [title|E]. All [factions|E] against you increase their [discontent|E]."
+
+ BORDER_DISPUTE_DUCHY_CB_NAME:1 "Major Border Dispute over [duchy|E]"
+ BORDER_DISPUTE_DUCHY_WAR_NAME:2 "Major Border Dispute over [TITLE.GetBaseName]"
+
+ duchy_border_cb_victory_desc_attacker:1 "All [vassals|e] that border the neighboring realm will join the border conflict and fight over the disputed [duchy|E].\n\nYou gain the contested [title|E]."
+ duchy_border_cb_victory_desc:1 "All [vassals|e] that border the neighboring realm will join the border conflict and fight over the disputed [duchy|E].\n\n[attacker.GetShortUIName|U] gains the contested [title|E]."
+ duchy_border_cb_white_peace_desc_defender:1 "All [vassals|e] that border the neighboring realm will join the border conflict and fight over the disputed [duchy|E].\n\nYou keep the contested [title|E]."
+ duchy_border_cb_white_peace_desc:1 "All [vassals|e] that border the neighboring realm will join the border conflict and fight over the disputed [duchy|E].\n\n[defender.GetShortUIName|U] keeps the contested [title|E]."
+ duchy_border_cb_defeat_desc_defender:1 "All [vassals|e] that border the neighboring realm will join the border conflict and fight over the disputed [duchy|E].\n\nYou keep the contested [title|E]."
+ duchy_border_cb_defeat_desc_attacker:1 "All [vassals|e] that border the neighboring realm will join the border conflict and fight over the disputed [duchy|E].\n\n[defender.GetShortUIName|U] keeps the contested [title|E]. All [factions|E] against you increase their [discontent|E]."
+ duchy_border_cb_defeat_desc:1 "All [vassals|e] that border the neighboring realm will join the border conflict and fight over the disputed [duchy|E].\n\n[defender.GetShortUIName|U] keeps the contested [title|E]. All [factions|E] against you increase their [discontent|E]."
+
+ BORDER_DISPUTE_KINGDOM_CB_NAME:1 "Massive Border Dispute over [kingdom|E]"
+ BORDER_DISPUTE_KINGDOM_WAR_NAME:2 "Massive Border Dispute over [TITLE.GetBaseName]"
+
+ kingdom_border_cb_victory_desc_attacker:1 "All [vassals|e] of both realms will join the border conflict and fight over the disputed [kingdom|E].\n\nYou gain the contested [title|E]."
+ kingdom_border_cb_victory_desc:1 "All [vassals|e] of both realms will join the border conflict and fight over the disputed [kingdom|E].\n\n[attacker.GetShortUIName|U] gains the contested [title|E]."
+ kingdom_border_cb_white_peace_desc_defender:1 "All [vassals|e] of both realms will join the border conflict and fight over the disputed [kingdom|E].\n\nYou keep the contested [title|E]."
+ kingdom_border_cb_white_peace_desc:1 "All [vassals|e] of both realms will join the border conflict and fight over the disputed [kingdom|E].\n\n[defender.GetShortUIName|U] keeps the contested [title|E]."
+ kingdom_border_cb_defeat_desc_defender:1 "All [vassals|e] of both realms will join the border conflict and fight over the disputed [kingdom|E].\n\nYou keep the contested [title|E]."
+ kingdom_border_cb_defeat_desc_attacker:1 "All [vassals|e] of both realms will join the border conflict and fight over the disputed [kingdom|E].\n\n[defender.GetShortUIName|U] keeps the contested [title|E]. All [factions|E] against you increase their [discontent|E]."
+ kingdom_border_cb_defeat_desc:1 "All [vassals|e] of both realms will join the border conflict and fight over the disputed [kingdom|E].\n\n[defender.GetShortUIName|U] keeps the contested [title|E]. All [factions|E] against you increase their [discontent|E]."
+
+rule_border_disputes_restrictions_game_rules:0 "#Bold Border Disputes#!: Arbitration"
+setting_full_border_restrictions:0 "Enabled"
+setting_full_border_restrictions_desc:0 "Independent rulers can declare border disputes against neighboring realms to fight over disputed territories."
+setting_partial_border_restrictions:0 "Disabled"
+setting_partial_border_restrictions_desc:0 ""

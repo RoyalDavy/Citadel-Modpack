@@ -1,0 +1,90 @@
+﻿ironborn_rebellion_decision = {
+	ai_check_interval = 36
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_reaving.dds"
+	}
+
+	desc = ironborn_rebellion_decision_desc
+
+	selection_tooltip = ironborn_rebellion_decision_tooltip
+
+	decision_group_type = major
+
+	ai_goal = no
+
+	confirm_text = ironborn_rebellion_decision_confirm_text_desc
+
+	is_shown = {
+		is_available_adult = yes
+		has_title = title:k_the_iron_islands
+		OR = {
+			has_trait = ambitious
+			has_trait = viking
+			has_trait = reaver
+		}
+		OR = {
+			AND = {
+				culture = { has_cultural_pillar = heritage_ironborn }
+				liege = {
+					NOT = { culture = { has_cultural_pillar = heritage_ironborn } }
+				}
+			}
+			AND = {
+				faith = faith:drowned_god_main
+				liege = {
+					NOT = { faith = faith:drowned_god_main }
+				}
+			}
+		}
+		exists = liege
+		NOT = {
+			has_character_flag = ironborn_rebellion
+		}
+	}
+
+	cost = {
+		gold = 500
+		prestige = 2000
+	}
+
+	effect = {
+		
+		liege = {
+			save_scope_as = old_liege
+		}
+
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = change
+		}
+		root = {
+			becomes_independent = { change = scope:change }
+		}
+		resolve_title_and_vassal_change = scope:change
+		# get_title = title:e_the_iron_islands
+		scope:old_liege = {
+			start_war = {
+				casus_belli = val_reconquest_war
+				target = root
+			}
+		}
+		if = {
+			limit = { exists = root.var:pre_war_liege }
+			remove_variable = pre_war_liege
+		}
+		every_vassal_or_below = {
+			if = {
+				limit = { exists = root.var:pre_war_liege }
+				remove_variable = pre_war_liege
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}

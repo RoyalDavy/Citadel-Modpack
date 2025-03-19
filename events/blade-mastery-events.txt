@@ -1,0 +1,133 @@
+﻿
+namespace = blade_mastery
+
+# use prestige to obtain gold
+
+@cost_to_appoint_blademaster_1 = 25
+@cost_to_appoint_blademaster_2 = 50
+@cost_to_appoint_blademaster_3 = 100
+
+blade_mastery.0001 = {
+	type = character_event
+	title = blade_mastery.0001.title
+	desc = blade_mastery.0001.desc
+	
+	theme = martial
+	
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		animation = idle
+	}
+
+	lower_right_portrait = var:court_blademaster
+
+	trigger = {
+		exists = capital_province 
+	}
+
+	# appoint new court blademaster
+
+	option = {
+		name = blade_mastery.0001.a
+
+		trigger = {
+			scope:recipient = { 
+				has_trait = lifestyle_blademaster 
+				has_trait_xp = {
+					trait = lifestyle_blademaster 
+					value < 50
+				}
+			}
+			gold >= @cost_to_appoint_blademaster_1
+		}
+		
+		show_as_unavailable = {
+			scope:recipient = {
+				has_trait = lifestyle_blademaster 
+				has_trait_xp = {
+					trait = lifestyle_blademaster 
+					value < 50
+				}
+			}
+			gold < @cost_to_appoint_blademaster_1			
+		}
+		
+		appoint_blademaster_1 = true
+		
+	}
+
+	option = {
+		name = blade_mastery.0001.b
+
+		trigger = {
+			scope:recipient = {
+				has_trait_xp = {
+					trait = lifestyle_blademaster 
+					value >= 50
+				}
+				has_trait_xp = {
+					trait = lifestyle_blademaster 
+					value < 100
+				}
+			}
+			gold >= @cost_to_appoint_blademaster_2
+		}
+		
+		show_as_unavailable = {
+			scope:recipient = {
+				has_trait_xp = {
+					trait = lifestyle_blademaster 
+					value >= 50
+				}
+				has_trait_xp = {
+					trait = lifestyle_blademaster 
+					value < 100
+				}
+			}
+			gold < @cost_to_appoint_blademaster_2
+		}
+		
+		appoint_blademaster_2 = true
+		
+	}
+	
+	option = {
+		name = blade_mastery.0001.c
+
+		trigger = {
+			scope:recipient = {
+				has_trait_xp = {
+					trait = lifestyle_blademaster 
+					value >= 100
+				}
+			}
+			gold >= @cost_to_appoint_blademaster_3
+		}
+		
+		show_as_unavailable = {
+			scope:recipient = {
+				has_trait_xp = {
+					trait = lifestyle_blademaster 
+					value >= 100
+				}
+			}
+			gold < @cost_to_appoint_blademaster_3
+		}
+		
+		appoint_blademaster_3 = true
+		
+	}
+	
+	# nevermind/keep the current blademaster
+
+	option = {
+		name = blade_mastery.0001.d
+	}
+
+}
+

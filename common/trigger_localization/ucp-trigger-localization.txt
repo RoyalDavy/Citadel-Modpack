@@ -1,0 +1,12 @@
+﻿
+ucp_character_is_guardian = {
+	third = ucp_character_is_guardian
+}
+
+ucp_character_is_ward = {
+	third = ucp_character_is_ward
+}
+
+ucp_character_is_too_young = {
+	third = ucp_character_is_too_young
+}

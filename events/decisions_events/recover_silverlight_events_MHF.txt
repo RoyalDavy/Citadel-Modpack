@@ -1,0 +1,224 @@
+﻿namespace = recover_silverlight
+
+recover_silverlight.0001 = {
+	type = character_event
+	title = recover_silverlight_t
+
+	theme = crown
+	override_background = throne_room
+	left_portrait = root
+	right_portrait = scope:explorer
+
+	desc = {
+		first_valid = {
+			##Waymar and Yohn
+			triggered_desc = {
+				trigger = {
+					scope:explorer = {
+						this = character:Bricker_25
+					}
+				 }
+				desc = recover_silverlight_0001_a_desc
+			}
+			##Not Waymar
+			triggered_desc = {
+				desc =  recover_silverlight_0001_c_desc
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { exists = character:Bricker_31 }
+			character:Bricker_31 = { save_scope_as = william }
+		}
+	}
+
+
+	##Waymar is alive
+	option = {
+
+		custom_tooltip = recover_silverlight_0001_tt
+
+		trigger = {
+			scope:explorer = {
+				this = character:Bricker_25
+			}
+			is_landed = yes #extra check to make sure they haven't lost their status
+		}
+		name = recover_silverlight_0001_a
+
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				gold > 500
+				factor = 100
+			}
+		}
+
+		trigger_event = {
+			id = recover_silverlight.9999
+		}
+	}
+
+	##Waymar is not alive, fund a random dude
+	option = {
+		trigger = {
+			scope:explorer = {
+				NOT = {
+					this = character:Bricker_25
+				}
+			}
+			is_landed = yes
+		}
+		name = recover_silverlight_0001_b
+
+		custom_tooltip = recover_silverlight_0001_tt
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger_event = {
+			id = recover_silverlight.9999
+		}
+	}
+
+	###Changed my mind...
+	option = {
+		name = recover_silverlight_0001_c
+
+		custom_tooltip = recover_silverlight_0001_b_tt
+
+		remove_decision_cooldown = recover_silverlight_decision
+
+		add_gold = 500
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+##Does return with silverlight
+recover_silverlight.0002 = {
+	type = character_event
+	title = recover_silverlight_t
+	desc = recover_silverlight_0002_a_desc
+
+	theme = crown
+	override_background = bp1_courtyard_mena
+	left_portrait = {
+		character = root
+		animation = agot_andal_longsword_gold_2
+	}
+	right_portrait = scope:explorer
+	immediate = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:recovered_silverlight
+		}
+
+		root = {
+			agot_create_artifact_vs_silverlight_effect = {
+				OWNER = this
+			}
+			dynasty = { add_dynasty_prestige = 500 }
+		}
+		scope:newly_created_artifact = {
+			add_artifact_history = {
+				type = given
+				actor = scope:explorer
+				recipient = root
+			}
+			set_artifact_description = vs_silverlight_recovered_description
+		}
+
+		scope:explorer = {
+			add_prestige = 500
+			add_trait = adventurer
+		}
+	}
+
+	artifact = { # To display the artifact in the event-window
+		target = scope:newly_created_artifact
+		position = lower_left_portrait
+	}
+
+	option = {
+		name = recover_silverlight_0002_a
+	}
+}
+
+##Does not return
+recover_silverlight.0003 = {
+	type = character_event
+	title = recover_silverlight_t
+	desc = recover_silverlight_0003_a_desc
+	theme = crown
+	override_background = bedchamber
+	left_portrait = root
+
+	immediate = {
+		scope:explorer = {
+			death = { death_reason = death_lost_in_snowstorm }
+		}
+	}
+
+	##Waymar is alive, and Yohn is alive and is the person funding him.
+	option = {
+		name = recover_silverlight_0003_a
+	}
+}
+
+recover_silverlight.9999 = {
+	hidden = yes
+	immediate = {
+		## If Waymar Royce is the candidate, he has an increased chance to recover silverlight
+		if = {
+			limit = {
+				scope:explorer = {
+					this = character:Bricker_25
+				}
+			}
+			random_list = {
+				## Person returns with silverlight
+				80 = {
+					trigger_event = {
+						id = recover_silverlight.0002
+						days = {60 365}
+					}
+				}
+				## Person goes missing (dead)
+				20 = {
+					trigger_event = {
+						id = recover_silverlight.0003
+						days = {60 365}
+					}
+				}
+			}
+		}
+		## Otherwise the chance to recover is 1%
+		else = {
+			random_list = {
+				## Person returns with silverlight
+				35 = {
+					trigger_event = {
+						id = recover_silverlight.0002
+						days = {60 365}
+					}
+				}
+				## Person goes missing (dead)
+				65 = {
+					trigger_event = {
+						id = recover_silverlight.0003
+						days = {60 365}
+					}
+				}
+			}
+		}
+	}
+}

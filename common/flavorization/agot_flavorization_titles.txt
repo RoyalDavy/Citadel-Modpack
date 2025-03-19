@@ -1,0 +1,193 @@
+﻿###This file defines titles for TITLES only
+###Default/fallback title flavour should be assigned to the governments trigger (use a lower priority for this)
+###Special title flavourization should be defined lower down and should use a higher priority to override the fallback title
+
+##Feudal Government
+#Kingdom
+kingdom_feudal_independent = {
+	type = title
+	tier = kingdom
+	priority = 499
+	flavourization_rules = {
+		only_independent = yes
+	}
+	governments = { feudal_government }
+}
+
+##LP Feudal Government
+kingdom_lp_feudal = {
+	type = title
+	tier = kingdom
+	flavourization_rules = {
+		top_liege = no
+	}
+	priority = 250
+	governments = { lp_feudal_government }
+}
+empire_lp_feudal = {
+	type = title
+	tier = empire
+	flavourization_rules = {
+		top_liege = no
+	}
+	priority = 260
+	governments = { lp_feudal_government }
+}
+
+##Pirate Government
+barony_pirate = {
+	type = title
+	tier = barony
+	priority = 7
+	governments = { pirate_government }
+}
+county_pirate = {
+	type = title
+	tier = county
+	priority = 18
+	governments = { pirate_government }
+}
+duchy_pirate = {
+	type = title
+	tier = duchy
+	priority = 27
+	governments = { pirate_government }
+}
+kingdom_pirate = {
+	type = title
+	tier = kingdom
+	priority = 47
+	governments = { pirate_government }
+}
+empire_pirate = {
+	type = title
+	tier = empire
+	priority = 102
+	governments = { pirate_government }
+}
+
+##Ruin
+barony_ruin = {
+	type = title
+	tier = barony
+	flavourization_rules = {
+		top_liege = no
+	}
+	priority = 6
+	governments = { ruins_government }
+}
+county_ruin = {
+	type = title
+	tier = county
+	flavourization_rules = {
+		top_liege = no
+	}
+	priority = 16
+	governments = { ruins_government }
+}
+duchy_ruin = {
+	type = title
+	tier = duchy
+	flavourization_rules = {
+		top_liege = no
+	}
+	priority = 26
+	governments = { ruins_government }
+}
+kingdom_ruin = {
+	type = title
+	tier = kingdom
+	flavourization_rules = {
+		top_liege = no
+	}
+	priority = 46
+	governments = { ruins_government }
+}
+empire_ruin = {
+	type = title
+	tier = empire
+	flavourization_rules = {
+		top_liege = no
+	}
+	priority = 101
+	governments = { ruins_government }
+}
+
+##Free Cities Government
+#Barony
+barony_free_city = {
+	type = title
+	tier = barony
+	priority = 5
+	governments = { free_city_government }
+}
+#County
+county_free_city = {
+	type = title
+	tier = county
+	priority = 16
+	governments = { free_city_government }
+}
+#Duchy
+duchy_free_city = {
+	type = title
+	tier = duchy
+	governments = { free_city_government }
+	priority = 27
+}
+duchy_free_city_independent = {
+	type = title
+	tier = duchy
+	governments = { free_city_government }
+	flavourization_rules = {
+		only_independent = yes
+	}
+	priority = 28
+}
+kingdom_free_city = {
+	type = title
+	tier = kingdom
+	priority = 46
+	governments = { free_city_government }
+}
+kingdom_free_city_independent = {
+	type = title
+	tier = kingdom
+	flavourization_rules = {
+		only_independent = yes
+	}
+	priority = 50
+	governments = { free_city_government }
+}
+empire_free_city = {
+	type = title
+	tier = empire
+	priority = 101
+	governments = { free_city_government }
+}
+
+##Special Titles
+#The Iron Throne
+empire_iron_throne = {
+	type = title
+	tier = empire
+	flavourization_rules = {
+		top_liege = no
+	}
+	priority = 499
+	titles = { e_the_iron_throne }
+}
+#Dorne
+empire_dorne = {
+	type = title
+	tier = empire
+	priority = 499
+	titles = { e_dorne }
+}
+#Three Daughters
+kingdom_three_daughters = {
+	type = title
+	tier = empire
+	priority = 104
+	titles = { e_three_daughters }
+}

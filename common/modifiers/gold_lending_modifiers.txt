@@ -1,0 +1,174 @@
+﻿
+
+receiving_interest_modifier = {
+	icon = economy_positive
+
+	monthly_income = 2
+    monthly_prestige = 0.1
+
+	stacking = yes
+
+}
+
+paying_interest_modifier = {
+	icon = economy_negative
+
+	monthly_income = -2
+	
+	monthly_prestige = -0.1
+
+	stacking = yes
+
+}
+
+golden_bank_head_modifier = {
+	icon = golden_bank_positive
+	stewardship = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1	
+	monthly_prestige = 1
+	monthly_piety = -0.5
+
+	stacking = no
+
+}
+
+golden_bank_head_II_modifier = {
+	icon = golden_bank_positive
+	stewardship = 2
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.2	
+	monthly_prestige = 1
+	monthly_piety = -0.5
+
+	stacking = no
+}
+
+golden_bank_lannisport_modifier = {
+	icon = golden_bank_positive
+	county_opinion_add = 25
+	tax_mult = 0.1
+	development_growth_factor = 0.1
+	stacking = no
+
+}
+
+bank_gold_lending_modifier = {
+	icon = economy_positive
+	
+	monthly_income = 0.5
+	monthly_prestige = 0.05
+	
+	stacking = yes
+}
+
+aided_by_braavosi_bankers_modifier = {
+	icon = stewardship_positive
+
+	intrigue = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1	
+
+	stacking = no
+
+}
+
+aided_by_lyseni_bankers_modifier = {
+	icon = stewardship_positive
+
+	stewardship = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1	
+
+	stacking = no
+
+}
+
+aided_by_local_bankers_modifier = {
+	icon = stewardship_positive
+
+	diplomacy = 1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1	
+
+	stacking = no
+
+}
+
+grand_merchant_loan_modifier = {
+	icon = stewardship_positive
+	tax_mult = 0.1
+	development_growth_factor = 0.1
+	stacking = no
+} 
+
+golden_bank_office_modifier = {
+	icon = golden_bank_positive
+	county_opinion_add = 25
+	tax_mult = 0.1
+	development_growth_factor = 0.1
+	stacking = no
+}
+
+golden_bank_kg_branch_modifier = {
+	icon = golden_bank_kgs_positive
+	monthly_income = 0.2
+    monthly_prestige = 0.5
+	intrigue = 2
+}
+
+golden_bank_oldtown_branch_modifier = {
+	icon = golden_bank_oldtown_positive
+	monthly_income = 0.2
+    monthly_prestige = 0.5
+	learning = 2
+}
+
+lg_delayed_debtor_modifier = {
+	icon = economy_negative
+	monthly_piety = -0.5
+    monthly_prestige = -0.5
+	stewardship = -3
+	stress_gain_mult = 0.3
+}
+
+lg_indebted_to_the_burghers_modifier = {
+	icon = economy_negative
+	monthly_piety = -0.2
+    monthly_prestige = -0.2
+	stress_gain_mult = 0.1
+}
+
+iron_bank_partnership_modifier = {
+	icon = iron_bank_negative
+	monthly_income = -0.5
+    monthly_prestige = -0.2
+}
+
+lg_new_trade_ships_modifier = {
+	icon = compass_positive
+	monthly_income = 1
+	stacking = no
+	
+}
+
+lg_silk_lannisport_modifier = {
+	icon = fashion_positive
+	tax_mult = 0.2
+}
+
+north_explorer_character_modifier = {
+	icon = martial_positive
+	martial = 4
+	prowess = 7
+}
+
+lg_new_ale_lannisport_modifier = {
+	icon = economy_positive
+	tax_mult = 0.2
+}
+
+lg_exquisite_jewels_lannisport_modifier = {
+	icon = economy_positive
+	tax_mult = 0.2
+}
+
+lg_abundant_harvests_lannisport_modifier = {
+	icon = economy_positive	
+	development_growth_factor = 0.1
+}

@@ -1,0 +1,21 @@
+﻿l_english:
+VAL_VASSALIZATION_CB_NAME: "Iron Throne [vassalization_casus_belli|E] of [DEFENDER.GetShortUIName]"
+
+VAL_VASSALIZATION_WAR_NAME: "$ORDER$ The [DEFENDER.GetPrimaryTitle.GetAdjective] Rebellion"
+VAL_VASSALIZATION_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetName][DEFENDER.GetPrimaryTitle.GetName]"
+
+val_reconquest_war: "Subdue Rebellion"
+val_reconquest_war_name: "Subdue Rebellion"
+
+val_events.0001.t: "Rebellion Stirs"
+val_events.0001.desc: "[rebeller.GetFirstName] [rebeller.GetHouse.GetBaseName] has declared themselves Lord of an independent realm and have foresworn their fealty towards [old_liege.GetFullName].\n\nAs a bannermen of [old_liege.GetTitledFirstName], I already lend levies and gold to his service. However, I could take a more active role in the conflict..."
+
+val_events.0001.a: "I shall join my own armies with [old_liege.GetTitledFirstNameNoTooltip]'s!"
+val_events.0001.b: "[old_liege.GetTitledFirstNameNoTooltip] surely does not need additional aid"
+
+val_events.0002.t: "Freedom At Last"
+val_events.0002.desc: "[rebeller.GetFirstName] [rebeller.GetHouse.GetBaseName] has declared themselves Lord of an independent realm and have foresworn their fealty towards [old_liege.GetFullName].\n\nAs a bannermen of [old_liege.GetTitledFirstName], I already lend levies and gold to his service. However, I could take a more active role in the conflict..."
+
+val_events.0002.a: "I shall join my own armies with [old_liege.GetTitledFirstNameNoTooltip]'s!"
+val_events.0002.b: "[old_liege.GetTitledFirstNameNoTooltip] surely does not need additional aid"
+

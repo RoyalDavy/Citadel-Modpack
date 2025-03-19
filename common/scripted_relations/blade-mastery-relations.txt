@@ -1,0 +1,4 @@
+﻿
+court_blademaster = {
+	hidden = yes
+}

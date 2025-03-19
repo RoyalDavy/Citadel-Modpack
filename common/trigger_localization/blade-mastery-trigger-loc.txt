@@ -1,0 +1,21 @@
+﻿
+blademaster_trainee_is_healthy = {
+	third = blademaster_trainee_is_healthy
+}
+
+blademaster_training = {
+	third = blademaster_training
+}
+
+court_blademaster_available = {
+	first = court_blademaster_available
+}
+
+court_blademaster_2_available = {
+	first = court_blademaster_2_available
+}
+
+court_blademaster_3_available = {
+	first = court_blademaster_3_available
+}
+

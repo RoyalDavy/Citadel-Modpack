@@ -1,0 +1,340 @@
+﻿############################         MHF NON-CANON          ########################
+####################################################################################
+
+
+###### HOUSE BRICKER (id = dynn_Bricker)
+############################
+### Built to Last
+###
+Bricker_29 = { 
+	name = Marina
+	dynasty = dynn_Bricker
+	female = yes
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_6
+	mother = Dunkel_14
+ 
+	8187.1.1 = { birth = yes }
+	8210.1.1 = { trait = septon } 
+	8241.1.1 = { death = yes }
+}
+Bricker_5 = { 
+	name = Otto # a lord
+	dynasty = dynn_Bricker
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_6
+	mother = Dunkel_14
+ 
+	8190.1.1 = { birth = yes }
+	8206.1.1 = { trait = knight }
+	8220.1.1 = { add_spouse = Bretherick_24 } 
+	8253.1.1 = { death = yes }
+}
+Bricker_rs_5 = {
+	name = Lily
+	female = yes
+
+	religion = the_seven_main
+	culture = crownlander
+
+	8190.1.1 = { birth = yes }
+	8253.1.1 = { death = yes }
+}
+Bricker_30 = { 
+	name = Caspor
+	dynasty = dynn_Bricker
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_6
+	mother = Dunkel_14
+ 
+	8194.1.1 = { birth = yes }
+	8210.1.1 = { trait = knight }
+	8218.1.1 = { add_spouse = Bricker_rs_30 } 
+	8258.1.1 = { death = yes }
+}
+Bricker_rs_30 = {
+	name = Helen
+	female = yes
+
+	religion = the_seven_main
+	culture = stormlander
+
+	8194.1.1 = { birth = yes }
+	8258.1.1 = { death = yes }
+}
+Bricker_31 = { 
+	name = Matthos
+	dynasty = dynn_Bricker
+	
+	prowess = 10
+ 
+	religion = the_seven_main
+	culture = westerman
+	
+	give_nickname = nick_the_black_brick
+ 
+	father = Bricker_6
+	mother = Dunkel_14
+	
+	trait = education_martial_2
+ 
+	8197.1.1 = { birth = yes }
+	8215.1.1 = {
+		trait = knight
+		trait = zealous
+		trait = rude
+		trait = stubborn
+		trait = vengeful
+		trait = lifestyle_blademaster_2_history
+	}
+	8217.1.1 = { trait = nightswatch_historical }
+	8218.6.1 = { trait = one_eyed }
+	8220.1.1 = {
+		death = {
+			death_reason = death_disappeared_on_ranging # Gone Beyond the Wall
+		}
+	}
+}
+### Issue of Otto
+Bricker_4 = { 
+	name = Gregor # a lord
+	dynasty = dynn_Bricker
+ 
+  	martial = 7
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 5
+	learning = 2
+	prowess = 8
+ 
+	religion = the_seven_main
+	culture = westerman
+ 	sexuality = heterosexual
+	
+	father = Bricker_5
+	mother = Bretherick_24
+ 	
+	trait = education_martial_2
+
+	disallow_random_traits = yes
+	
+	8221.1.1 = { birth = yes }
+	8241.1.1 = { trait = knight }
+	8242.1.1 = { trait = impatient }
+	8243.1.1 = { trait = content }
+	8244.1.1 = { trait = wrathful } 
+	8245.1.1 = { trait = reaver }
+	8247.1.1 = { add_spouse = Severyn_28 } 
+	8275.1.1 = {
+		death = {
+			death_reason = death_battle
+			killer = Fletcher_1 # George Fletcher
+		}
+	}
+}
+### Issue of Gregor
+Bricker_23 = { 
+	name = Theo
+	dynasty = dynn_Bricker
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_4
+	
+	trait = bastard
+	give_nickname = nick_hill
+ 
+	8241.1.1 = { birth = yes }
+	8241.2.1 = { death = yes }
+}
+Bricker_24 = { 
+	name = Carrina
+	dynasty = dynn_Bricker
+	female = yes
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_4
+	mother = Severyn_28
+ 
+	8248.1.1 = { birth = yes }
+}
+Bricker_1 = { 
+	name = Caspor # a lord
+	dynasty = dynn_Bricker
+	dna = Bricker_1
+	
+ 	martial = 7
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 6
+	learning = 5
+	prowess = 8
+ 
+	religion = the_seven_main
+	culture = westerman
+	sexuality = heterosexual
+ 
+	father = Bricker_4
+	mother = Severyn_28
+	
+	trait = education_martial_2
+
+	disallow_random_traits = yes
+ 
+	8252.1.1 = { birth = yes }
+	8258.1.1 = { trait = bossy }
+	8268.1.1 = { trait = knight }
+	8268.8.1 = { trait = diligent }
+	8270.8.1 = { trait = ruthless }
+	8271.8.1 = { trait = gluttonous }
+	8271.9.1 = { trait = stubborn }
+	8271.1.1 = { add_spouse = Silverfield_20 }
+}
+Bricker_25 = { 
+	name = Hendry
+	dynasty = dynn_Bricker
+ 
+	religion = the_seven_main
+	culture = westerman
+	sexuality = heterosexual
+ 
+	father = Bricker_4
+	mother = Severyn_28
+	
+	trait = education_martial_1
+
+	disallow_random_traits = yes
+ 
+	8257.1.1 = { birth = yes }
+	8273.1.1 = { trait = knight }
+	8274.8.1 = { trait = brave }
+	8275.8.1 = { trait = rude }
+	8276.8.1 = { trait = authoritative }
+	8281.1.1 = { add_spouse = Merchant_23 }  
+}
+### Issue of Caspor
+Bricker_35 = { 
+	name = Wyla
+	dynasty = dynn_Bricker
+	female = yes
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_1
+	mother = Silverfield_20
+ 
+	8278.1.1 = { birth = yes }
+}
+Bricker_36 = { 
+	name = Balthasar
+	dynasty = dynn_Bricker
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_1
+	mother = Silverfield_20
+ 
+	8282.1.1 = { birth = yes }
+	8298.1.1 = { trait = knight }
+}
+### Issue of Caspor
+Bricker_38 = { 
+	name = Roy
+	dynasty = dynn_Bricker
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_30
+	mother = Bricker_rs_30
+ 
+	8225.1.1 = { birth = yes }
+	8241.1.1 = { trait = knight }
+	8256.1.1 = { add_spouse = Averdyre_22 } 
+	8290.1.1 = { death = yes }
+}
+Bricker_39 = { 
+	name = Lily
+	dynasty = dynn_Bricker
+	female = yes
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_30
+	mother = Bricker_rs_30
+ 
+	8234.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+Bricker_40 = { 
+	name = Brianna
+	dynasty = dynn_Bricker
+	female = yes
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_30
+	mother = Bricker_rs_30
+ 
+	8238.1.1 = { birth = yes }
+	8256.1.1 = { trait = septon } 
+}
+### Issue of Hugh
+Bricker_41 = { 
+	name = Alicent
+	dynasty = dynn_Bricker
+	female = yes
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_38
+	mother = Averdyre_22
+ 
+	8256.1.1 = { birth = yes }
+}
+Bricker_42 = { 
+	name = Landra
+	dynasty = dynn_Bricker
+	female = yes
+ 
+	religion = the_seven_main
+	culture = westerman
+ 
+	father = Bricker_38
+	mother = Averdyre_22
+ 
+	8262.1.1 = { birth = yes }
+}
+Bricker_43 = { 
+	name = Brus
+	dynasty = dynn_Bricker
+ 
+	prowess = 12
+ 
+	religion = the_seven_main
+	culture = westerman
+	sexuality = heterosexual
+	
+	father = Bricker_38
+	mother = Averdyre_22
+ 
+	8270.1.1 = { birth = yes }
+	8286.1.1 = { trait = knight }
+}
