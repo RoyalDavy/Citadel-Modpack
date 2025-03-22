@@ -1,0 +1,47 @@
+﻿NPowerfulVassal = {
+	NUM_PER_TIER = { 0 0 3 4 5 6 } # miv: empires have one additional powerful vassal
+}
+
+# MIV: Men At Arms replenish 5% per month instead of 10% (50% reduction in reinforcement rate)
+# To enable this change, remove the "#" from the below three lines
+# NArmy = {
+# 	REGIMENT_MONTHLY_MAA_REINFORCE_SPEED = 0.05
+# }
+
+NWar = {
+	CAPTURED_VASSAL_WAR_SCORE = 2 # miv: direct vassals grant 2% war score when captured
+	ATTACKER_TICKING_WAR_SCORE = 0.0275				# Default ticking war score per day for attackers. Can be overwritten by CB. Set to 0 to disable
+	DEFENDER_TICKING_WAR_SCORE = 0.0275				# Default ticking war score per day for defenders. Can be overwritten by CB. Set to 0 to disable
+	DEFENDER_TICKING_WAR_SCORE_DELAY_DAYS = 730		# Default delay in days before applying ticking war score for defenders. Can be overwritten by CB
+	CAPTURED_HEIR_WAR_SCORE = { 30 20 10 }			# War Score in order of succession
+	AI_USE_VASSAL_OF_VASSAL_CLAIMS = yes 			# If this is set to "no", the AI will never push the claims of vassals of vassals
+}
+
+NMercenary = {
+	LEVIES = { 200 400 600 }				# The base numbers of levies for levels of mercenary bands
+}
+
+NHolyOrder = {
+	# In addition to the holding levies, a holy order has levies according to this formula:
+	# NUM_LEVIES_BASE + <num holdings> * NUM_LEVIES_PER_HOLDING
+	NUM_LEVIES_BASE = 200
+	NUM_LEVIES_PER_HOLDING = 100
+}
+
+NSiege = {
+	RELATIVE_ATTACKER_MEN_STACK_SIZE = 100				# Extra stack size of men to start getting daily morale loss
+}
+
+NCharacterOpinion = {
+	NON_RIGHTFUL_LIEGE_OPINION = -10					# Opinion penalty for being non-rightful liege
+	TOO_MANY_DUCHIES_OPINION = -20						# Penalty per duchy too many
+	HOLDS_CLAIMED_TITLE = -30							# Opinion penalty for holding someone else's claimed title
+}
+
+NAdministrative = {
+	AI_MIN_INFLUENCE_FOR_APPOINTMENT = 200 # AI ruler needs to have at least this much influence to start using appointment interactions
+}
+
+NProvince = {
+	SUPPLY_PER_DEVELOPMENT = 200				# Each development adds this much to the supply limit
+}

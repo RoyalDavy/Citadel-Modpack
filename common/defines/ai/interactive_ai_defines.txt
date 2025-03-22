@@ -1,0 +1,7 @@
+﻿NAI = {
+	NEGATIVE_SCORE_PER_EXISTING_REGIMENT = 10			# How much is the score of the regiment type reduced per existing subregiment of that type?
+	THREAT_MIN_POWER_RATIO = 0.25						# Only consider threats above this ratio
+	CB_TARGET_MAX_POWER = 2.0
+	CB_TARGET_MAX_POWER_VASSAL = 1.0
+	TARGET_MAX_DEFENSIVE_WARS = 4
+}

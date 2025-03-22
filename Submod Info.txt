@@ -8,7 +8,7 @@ Fully included in main (generally no need to update): - ALL UPDATED ON 19 MAR 25
 7.  AGOT: Battlefield Duel
 8.	AGOT: Immersion [removed naval related files]
 9.  AGOT: Minor House Flavour
-10.  AGOT: Minor House Flavour Fix
+10. AGOT: Minor House Flavour Fix
 11. An AGOT Special World [removed all gfx models, double check the events/scripted effects and see if they are needed or bugged, they also not included]
 12. Blade Mastery
 13. Border Disputes
@@ -34,9 +34,9 @@ Partially included in main: - ALL UPDATED ON 19 MAR 25
 4.  COW-AGOT: 3d Models  & Bigger Castles (common: buildings; script_values)
 5.  AGOT - Holding Art (common: buildings; culture)
 6.	Divine Intervention Cheat Menu (common: character_interaction_categories | gui: button)
+7.	More Interactive Vassals (common: casus_belli_types; defines) [remove lifestyle_perks]
 
 1.	AGOT (
-11. More Interactive Vassals
 
 Not included in main branch:
 1.  Submod Core
