@@ -1,0 +1,83 @@
+﻿title_succession_laws = {
+	nights_watch_succession_law = { # Note: This does not actually controll NW succession, see agot_nw_elect_lc effect
+		can_have = {
+			government_has_flag = government_is_nw
+			#always = yes
+		}
+		can_pass = {
+			can_change_title_law_trigger = yes
+		}
+		can_title_have = {
+			#government_has_flag = government_is_nw
+			always = yes
+		}
+		succession = {
+			order_of_succession = inheritance
+			traversal_order = children
+			rank = youngest
+			title_division = single_heir
+		}
+		
+		flag = elective_succession_law
+		title_allegiance_opinion = 5
+		
+		revoke_cost = {
+			prestige = 15000
+		}
+		pass_cost = {
+			prestige = change_title_succession_law_prestige_cost
+		}
+	}
+
+	silent_sisterhood_succession_law = { # Note: This does not actually controll SS succession, see agot_ss_elect_sm effect
+		can_have = {
+			has_government = silent_sisterhood_government
+		}
+		can_pass = {
+			can_change_title_law_trigger = yes
+		}
+		can_title_have = {
+			always = yes
+		}
+		succession = {
+			order_of_succession = inheritance
+			traversal_order = children
+			rank = youngest
+			title_division = single_heir
+		}
+		
+		flag = elective_succession_law
+		
+		revoke_cost = {
+			prestige = 15000
+		}
+		pass_cost = {
+			prestige = change_title_succession_law_prestige_cost
+		}
+	}
+
+	pirate_succession_law = {
+		can_have = {
+			has_government = pirate_government
+			highest_held_title_tier >= tier_duchy
+		}
+		can_pass = {
+			can_change_title_law_trigger = yes
+		}
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		succession = {
+			order_of_succession = election
+			election_type = pirate_elective
+		}
+		flag = elective_succession_law
+		title_allegiance_opinion = 10
+		revoke_cost = {
+			prestige = 15000
+		}
+		pass_cost = {
+			prestige = change_title_succession_law_prestige_cost
+		}
+	}
+}

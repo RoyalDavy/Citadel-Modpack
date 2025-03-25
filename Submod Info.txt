@@ -28,7 +28,7 @@ Fully included in main (generally no need to update): - ALL UPDATED ON 19 MAR 25
 27. Valyrian Name Lists Expanded - A Submod for CK3AGOT
 
 Partially included in main: - ALL UPDATED ON 19 MAR 25
-
+1.	AGOT (common: buildings; casus_belli_types; combat_phase_events; council_tasks; court_positions; culture; defines; domiciles; dynasty_legacies; dynasty_perks; laws; lifestyle_perks; men_at_arms_types; traits)
 2.  AGOT - Armies of Westeros (common: culture; men_at_arms_types)
 3.  Armies of Westeros REMASTERED (common: accolade_types; culture; men_at_arms_types)
 4.  COW-AGOT: 3d Models  & Bigger Castles (common: buildings; script_values)

@@ -1,0 +1,92 @@
+﻿agot_tradition_insular_marriage = {
+	category = realm
+
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = greeting.dds
+	}
+
+	parameters = {
+		dislikes_marrying_outside_of_culture = yes
+		ai_doesnt_marry_outside_culture = yes
+		romance_scheme_bonus_vs_spouse = yes
+	}
+	character_modifier = {
+		same_culture_opinion = 10
+		spouse_opinion = 10
+
+		ai_war_chance = -0.5
+		ai_war_cooldown = 5
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_communal = { is_in_list = traits }
+						culture_pillar:ethos_egalitarian = { is_in_list = traits }
+						culture_pillar:heritage_rhoynish = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_egalitarian_or_courtly_desc
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_innovation = innovation_baliffs
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = lacks_baliffs_innovation_desc
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_innovation = innovation_development_02
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = lacks_development_02_innovation_desc
+				}
+			}
+
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				scope:character = {
+					any_vassal = {
+						count < 30
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_innovation = innovation_baliffs
+					has_innovation = innovation_development_02
+				}
+			}
+			multiply = 0.25
+		}
+	}
+}

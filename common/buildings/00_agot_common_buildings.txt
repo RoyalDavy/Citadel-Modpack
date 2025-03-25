@@ -1,0 +1,89 @@
+﻿####################
+# Common Buildings #
+####################
+
+### Mines
+
+agot_mines_01 = {
+	construction_time = slow_construction_time
+
+	can_construct_potential = {
+		faith = {
+			has_doctrine_parameter = agot_sacred_mines_parameter
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_1
+	}
+	county_modifier = {
+		development_growth_factor = 0.01
+		build_speed = -0.01
+		build_gold_cost = -0.01
+	}
+	character_modifier = {
+		monthly_piety = 0.4
+	}
+
+	type_icon = "icon_building_quarries.dds"
+
+	ai_value = {
+		base = 100
+	}
+}
+
+generic_dragon_pit_01 = {
+	construction_time = very_slow_construction_time
+
+	can_construct_potential = {
+		agot_can_build_or_restore_dragonpits = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	effect_desc = building_dragonpit_effect
+
+	on_complete = {
+		county.holder = {
+			trigger_event = agot_dragon_pits.0005
+		}
+	}
+
+	cost_gold = expensive_building_tier_8_cost
+
+	province_modifier = {
+		monthly_income = -0.5
+	}
+	county_modifier = {
+		county_opinion_add = -10
+	}
+	character_modifier = {
+		dread_gain_mult = 0.05
+		monthly_dynasty_prestige_mult = 0.05
+		owned_legend_spread_mult  = 0.05
+		intimidated_vassal_tax_contribution_mult  = 0.05
+	}
+	county_holder_character_modifier = {
+		dread_gain_mult = 0.05
+		monthly_dynasty_prestige_mult = 0.05
+		owned_legend_spread_mult  = 0.05
+		intimidated_vassal_tax_contribution_mult  = 0.05
+	}
+	type_icon = "icon_dragonpit.dds"
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}

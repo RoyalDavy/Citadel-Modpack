@@ -1,0 +1,70 @@
+﻿is_baratheon_rs_1 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_baratheon_rs_2 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_haen_58 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_lannister_rs_1 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_poole_rs_2 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_cassel_rs_3 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_dayne_rs_3 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_payne_rs_8 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_reed_rs_1 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}
+is_karstark_rs_1 = {
+	physical = no
+	shown_in_ruler_designer = no
+	name = trait_hidden
+	desc = trait_hidden_desc
+	icon = pure_blooded.dds
+}

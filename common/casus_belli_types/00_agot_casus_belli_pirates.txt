@@ -1,0 +1,215 @@
+﻿### Pirate Kingdom Dissolution CB ###
+### Allows you to destroy duchy+ pirate titles
+destroy_pirates_cb = {
+	group = invasion
+	on_declaration = {
+		on_declared_war = yes
+	}
+
+	allowed_for_character = {
+		AND= {
+			NOT = {
+				scope:attacker = {
+					has_government = pirate_government
+				}
+			}
+			scope:attacker = {
+				AND = {
+					capital_province ?= {
+						OR = {
+							geographical_region = world_essos_free_cities
+							geographical_region = world_stepstones
+							geographical_region = world_westeros_dorne_rhoynish
+							geographical_region = world_westeros_the_crownlands
+							geographical_region = world_westeros_the_stormlands
+						}
+					}
+					any_sub_realm_county = {
+						is_coastal_county = yes
+					}
+				}
+			}
+		}
+	}
+
+	allowed_against_character = {
+		scope:defender = {
+			AND = {
+				has_government = pirate_government
+				primary_title.tier >= tier_duchy
+				primary_title.tier < tier_empire
+			}
+		}
+		OR = {
+			NOT = {
+				scope:attacker = {
+					any_vassal_or_below = {
+						AND = {
+							is_at_war = yes
+							is_at_war_with = scope:defender
+						}
+					}
+				}
+			}
+			AND = {
+				exists = scope:attacker.liege
+				NOT = {
+					scope:attacker.liege = {
+						is_at_war_with = scope:defender
+					}
+				}
+			}
+		}
+	}
+
+
+	target_titles = none
+	ignore_effect = change_title_holder
+
+	white_peace_possible = no
+
+	cost = {
+		prestige = {
+			value = 0
+		}
+	}
+
+	on_victory_desc = {
+		desc = disrupt_piracy_victory_desc
+	}
+
+	on_victory = {
+		
+		scope:defender = {
+			every_held_title = {
+				limit = {
+					tier = prev.primary_title.tier
+				}
+				scope:attacker = {
+					destroy_title = prev
+				}
+			}
+			death = {
+				death_reason = death_execution
+				killer = scope:attacker
+			}
+		}
+
+		scope:attacker = { 
+			add_prestige = medium_prestige_gain 
+			add_character_modifier = {
+				modifier = proven_against_pirates_offensive_modifier
+				years = 5
+			}
+		}
+
+		hidden_effect = { # Hidden from player, this is every coastal province they own!
+			scope:attacker = {
+				every_sub_realm_county = {
+					if = {
+						limit = {
+							is_coastal_county = yes
+							title_province = {
+								OR = {
+									geographical_region = world_essos_free_cities
+									geographical_region = world_stepstones
+									geographical_region = world_westeros_dorne_rhoynish
+									geographical_region = world_westeros_the_crownlands
+									geographical_region = world_westeros_the_stormlands
+								}
+							}
+						}
+						add_county_modifier = {
+							modifier = agot_disrupted_piracy_modifier
+							years = 2
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = DISRUPT_PIRACY_COASTAL_GOOD # This needs to go down here, or else it messes with indentation of everything below it!
+	}
+
+	on_defeat_desc = {
+		desc = disrupt_piracy_defeat_desc
+	}
+
+	on_defeat = {
+		scope:defender = {
+			add_character_modifier = {
+				modifier = proven_against_anti_pirate_invaders_offensive_modifier
+				years = 10
+			}
+			add_prestige = massive_prestige_gain
+			add_gold = 500
+			capital_county = {
+				add_county_modifier = {
+					modifier = agot_bested_anti_pirate_invaders
+					years = 4
+				}
+			}
+		}
+		scope:attacker = {
+			add_prestige = major_prestige_loss
+			add_dread = minor_dread_loss
+			stress_impact = {
+				ambitious = medium_stress_impact_gain
+				arrogant = medium_stress_impact_gain
+			}
+			add_character_modifier = {
+				modifier = humiliated_by_pirates
+				years = 5
+			}
+		}
+
+		hidden_effect = {
+			scope:attacker = {
+				every_sub_realm_county = {
+					if = {
+						limit = {
+							is_coastal_county = yes
+							title_province = {
+								OR = {
+									geographical_region = world_essos_free_cities
+									geographical_region = world_stepstones
+									geographical_region = world_westeros_dorne_rhoynish
+									geographical_region = world_westeros_the_crownlands
+									geographical_region = world_westeros_the_stormlands
+								}
+							}
+						}
+						add_county_modifier = {
+							modifier = agot_stunned_by_pirates_modifier
+							years = 2
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = DISRUPT_PIRACY_COASTAL_BAD
+	}
+
+	on_white_peace_desc = {
+		first_valid = {
+			desc = disrupt_piracy_white_peace_desc
+		}
+	}
+
+	on_invalidated_desc = {
+		first_valid = {
+			desc = disrupt_piracy_invalidated_desc
+		}
+	}
+
+	transfer_behavior = transfer
+
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	war_name = DISRUPT_PIRACY_WAR_NAME
+	war_name_base = DISRUPT_PIRACY_WAR_NAME_BASE
+	cb_name = DISRUPT_PIRACY_CB
+}
