@@ -36,8 +36,6 @@ Partially included in main: - ALL UPDATED ON 19 MAR 25
 6.	Divine Intervention Cheat Menu (common: character_interaction_categories | gui: button)
 7.	More Interactive Vassals (common: casus_belli_types; defines) [remove lifestyle_perks]
 
-1.	AGOT (
-
 Not included in main branch:
 1.  Submod Core
 2.  AGOT+ [remove CoA changes, fix Lannister hair]

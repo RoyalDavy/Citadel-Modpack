@@ -16,6 +16,7 @@
 				scope:recipient = { is_vassal_of = scope:actor }
 			}
 		}
+		debug_only = yes #Hambone
 	}
 	
 	on_accept = {
@@ -63,6 +64,7 @@ remove_nickname_interaction = {
 			}
 		}
 		scope:recipient = { has_any_nickname = yes }
+		debug_only = yes #Hambone
 		#has_game_rule = remove_nickname_conditions_free
 	}
 	

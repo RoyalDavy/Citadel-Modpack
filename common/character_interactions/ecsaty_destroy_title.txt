@@ -8,6 +8,7 @@ ecsaty_destroy_title = {
 	interface_priority = 79
 	
 	is_shown = {
+		debug_only = yes
 		scope:recipient = {
 			primary_title.tier >= tier_duchy
 			is_ruler = yes

@@ -8,6 +8,7 @@ ecsaty_create_titular = {
 	interface_priority = 79
 	
 	is_shown = {
+		debug_only = yes #Hambone
 		scope:recipient = {
 			is_ruler = yes
 		}

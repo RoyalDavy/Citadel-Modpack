@@ -60,7 +60,7 @@ commander_wounded = {
 	}
 
 	chance = {
-		base = 25
+		base = 10 #Hambone doubled
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
@@ -179,7 +179,7 @@ commander_maimed = {
 	}
 
 	chance = {
-		base = 10
+		base = 2 #Hambone doubled
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
@@ -201,8 +201,8 @@ commander_maimed = {
 			}
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.side_strength
 		}
-		modifier = { # No deaths when vastly outnumbering the enemy
-			factor = 0
+		modifier = { # No deaths when vastly outnumbering the enemy #Hambone half chance
+			factor = 0.5
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.vastly_outnumbered_combat_side_threshold
 		}
 		modifier = {
@@ -288,34 +288,34 @@ commander_killed = {
 	type = commander
 
 	is_valid = {
-		exists = root
-		#Commanders cannot be killed outright unless...
-		OR = {
-			#...they are already wounded...
-			has_trait_rank = {
-				trait = wounded
-				rank >= 1
-			}
-			#...or they are absolutely terrible at battle to begin with!
-			AND = {
-				martial <= low_skill_rating
-				prowess <= low_skill_rating
-			}
-		}
-		NOR = {
-			AND = {
-				is_ai = no
-				has_game_rule = very_easy_difficulty
-			}
-			ai_should_get_extreme_conqueror_bonuses = yes
-		}
+		# exists = root #Hambone took out
+		# #Commanders cannot be killed outright unless...
+		# OR = {
+		# 	#...they are already wounded...
+		# 	has_trait_rank = {
+		# 		trait = wounded
+		# 		rank >= 1
+		# 	}
+		# 	#...or they are absolutely terrible at battle to begin with!
+		# 	AND = {
+		# 		martial <= low_skill_rating
+		# 		prowess <= low_skill_rating
+		# 	}
+		# }
+		# NOR = {
+		# 	AND = {
+		# 		is_ai = no
+		# 		has_game_rule = very_easy_difficulty
+		# 	}
+		# 	ai_should_get_extreme_conqueror_bonuses = yes
+		# }
 		# AGOT Added - no fighting dragonriders on foot (by default anyway)
 		is_current_dragonrider_warfare = no
 		has_character_flag = calculated_dragon_modifier # Run dragon calcs first
 	}
 
 	chance = {
-		base = 5
+		base = 1 #Hambone doubled
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
@@ -338,7 +338,7 @@ commander_killed = {
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.side_strength
 		}
 		modifier = { # No deaths when vastly outnumbering the enemy
-			factor = 0
+			factor = 0.5 #Hambone
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.vastly_outnumbered_combat_side_threshold
 		}
 		modifier = {
@@ -748,8 +748,6 @@ commander_wild_dragon_joined_battle = {
 
 	is_valid = {
 		exists = location.county
-
-		agot_dragon_population_alive = yes
 
 		scope:combat_side ?= {
 			NOR = { # For now, no dragons to mess it up

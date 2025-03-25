@@ -2,7 +2,7 @@
 	type = knight
 
 	chance = {
-		base = 2000
+		base = 1750 #Hambone halved
 		#AGOT Disabled, same chances as AI
 		# modifier = {
 		# 	factor = 1.5
@@ -497,7 +497,7 @@ knight_becomes_incapable = {
 
 	chance = {
 		# This is just random bad luck of suffering a serious head injury.
-		base = 1
+		base = 5 #Hambone
 	}
 
 	effect = {
@@ -533,12 +533,12 @@ knight_wounded = {
 	}
 
 	chance = {
-		base = 100
+		base = 200 #Hambone doubled
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
 				# value = 40 # Value at which 'immortality' happens
-				value = 50
+				value = 80
 				subtract = prowess
 				#AGOT Disabled
 				# if = {
@@ -556,7 +556,7 @@ knight_wounded = {
 				}
 				#AGOT Modified
 				# divide = 40
-				divide = 50
+				divide = 80
 				min = 0.1 # Everyone dies.
 			}
 		}
@@ -564,7 +564,7 @@ knight_wounded = {
 			factor = {
 				value = scope:combat_side.enemy_side.side_strength
 				divide = scope:combat_side.side_strength
-				multiply = 1.4 # Outnumbering 2-1 reduces chance by 30%
+				multiply = 1.2 # Outnumbering 2-1 reduces chance by 30%
 				max = 1
 			}
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.side_strength
@@ -786,12 +786,12 @@ knight_maimed = {
 	}
 
 	chance = {
-		base = 40
+		base = 80 #Hambone doubled
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
 				# value = 30 # Value at which 'immortality' happens
-				value = 40
+				value = 80
 				subtract = prowess
 				#AGOT Disabled
 				# if = {
@@ -809,7 +809,7 @@ knight_maimed = {
 				}
 				#AGOT Modified
 				#divide = 30
-				divide = 40
+				divide = 80
 				min = 0.1 # Everyone dies.
 			}
 		}
@@ -817,15 +817,15 @@ knight_maimed = {
 			factor = {
 				value = scope:combat_side.enemy_side.side_strength
 				divide = scope:combat_side.side_strength
-				multiply = 1.4 # Outnumbering 2-1 reduces chance by 30%
+				multiply = 1.2 # Outnumbering 2-1 reduces chance by 30%
 				max = 1
 			}
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.side_strength
 		}
-		modifier = { # No deaths when vastly outnumbering the enemy
-			factor = 0
-			scope:combat_side.side_strength > scope:combat_side.enemy_side.vastly_outnumbered_combat_side_threshold
-		}
+		# modifier = { # No deaths when vastly outnumbering the enemy
+		# 	factor = 0
+		# 	scope:combat_side.side_strength > scope:combat_side.enemy_side.vastly_outnumbered_combat_side_threshold
+		# }
 		modifier = {
 			factor = 1.05
 			culture = {
@@ -1037,12 +1037,12 @@ knight_killed = {
 	#End AGOT Added
 
 	chance = {
-		base = 30
+		base = 100 #Hambone upped
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
 				# value = 30 # Value at which 'immortality' happens
-				value = 40
+				value = 80
 				subtract = prowess
 				#AGOT Disabled
 				# if = {
@@ -1060,7 +1060,7 @@ knight_killed = {
 				}
 				#AGOT Modified
 				# divide = 30
-				divide = 40
+				divide = 80
 				min = 0.1 # Everyone dies.
 			}
 		}
@@ -1068,15 +1068,15 @@ knight_killed = {
 			factor = {
 				value = scope:combat_side.enemy_side.side_strength
 				divide = scope:combat_side.side_strength
-				multiply = 1.4 # Outnumbering 2-1 reduces chance by 30%
+				multiply = 1.2 # Outnumbering 2-1 reduces chance by 30%
 				max = 1
 			}
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.side_strength
 		}
-		modifier = { # No deaths when vastly outnumbering the enemy
-			factor = 0
-			scope:combat_side.side_strength > scope:combat_side.enemy_side.vastly_outnumbered_combat_side_threshold
-		}
+		# modifier = { # No deaths when vastly outnumbering the enemy
+		# 	factor = 0
+		# 	scope:combat_side.side_strength > scope:combat_side.enemy_side.vastly_outnumbered_combat_side_threshold
+		# }
 		modifier = {
 			factor = 1.05
 			culture = {
