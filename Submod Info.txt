@@ -57,5 +57,7 @@ Possible additions:
 1.  Advanced Cheat Menu
 2.  Advanced Cheat Menu AGOT Compatch
 3.	Seasons Mod
-4.	No More Gods, Only Man
+4.  No More Gods, Only Man
 5.	Lets Raid
+6.  Sundry
+7.  Better Barbershop
