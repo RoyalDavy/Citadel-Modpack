@@ -57,7 +57,12 @@ Possible additions:
 1.  Advanced Cheat Menu
 2.  Advanced Cheat Menu AGOT Compatch
 3.	Seasons Mod
-4.  No More Gods, Only Man
+4.	No More Gods, Only Man
 5.	Lets Raid
-6.  Sundry
-7.  Better Barbershop
+6.  Faster Transitions
+7.  Sundry
+8.  Better Barbershop
+9.  Armies of Middle Earth
+10. Cultural Armies II
+11. Fog Of War
+12. Genetics, Death, and Difficulty
