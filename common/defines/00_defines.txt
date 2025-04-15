@@ -317,7 +317,7 @@ NOldAge = {
 
 	#AGOT Modified, many older characters are renowned warriors
 	#LOWER_PROWESS_START_AGE = 45 # At this age characters start getting the chance to lose prowess each year
-	LOWER_PROWESS_START_AGE = 60 # At this age characters start getting the chance to lose prowess each year
+	LOWER_PROWESS_START_AGE = 45 # At this age characters start getting the chance to lose prowess each year
 	LOWER_PROWESS_BASE_CHANCE = 0.1 # This is the base chance of losing prowess at the START_AGE
 	LOWER_PROWESS_YEARLY_INCREASE = 0.015 # This is the yearly increase of the chance to lose prowess
 	LOWER_PROWESS_MAX_CHANCE = 0.75 # This is the maximum chance to lose prowess
@@ -328,9 +328,9 @@ NOldAge = {
 NChildbirth = {
 	MIN_REPRODUCTION_AGE_IN_HISTORY_DB = 12 # If a historical parent is younger than this when their child is born, we log an error
 	MIN_FEMALE_REPRODUCTION_AGE = 16
-	MAX_FEMALE_REPRODUCTION_AGE = 45
+	MAX_FEMALE_REPRODUCTION_AGE = 50
 	MIN_MALE_REPRODUCTION_AGE = 16
-	BASE_NR_OF_CHILDREN_PER_COUPLE = { 1 1 2 3 5 5 } # Based on tier of character or parents; whichever is higher Unlanded, Baron, Count, ..., Emperor
+	BASE_NR_OF_CHILDREN_PER_COUPLE = { 1 1 3 3 5 5 } # Based on tier of character or parents; whichever is higher Unlanded, Baron, Count, ..., Emperor
 	CHANCE_OF_LOWERED_CHILD_LIMIT = 0.5	# Chance that the child limit is lowered by 1
 	EXTRA_CHILDREN_FOR_RULERS = 2 # If either character is a ruler, they get extra children
 	CHARACTER_IN_POOL_CHILD_LIMIT = -1	# If in the pool, child limit is modified by this
@@ -396,7 +396,7 @@ NChildbirth = {
 	PUREBLOODED_INBRED_RELATEDNESS_MULT = 0.03				# Same as INBRED_RELATEDNESS_MULT, but for the "pure-blooded" trait.
 	TRAIT_REINFORCEMENT_CHANCE = 0.5						# The chance that a trait that gets inherited from both parents will get reinforced to a higher level.
 
-	EXTRA_CHILDREN_FOR_PLAYERS = 2 # Num of extra children players can have before reaching living child limit
+	EXTRA_CHILDREN_FOR_PLAYERS = 0 # Num of extra children players can have before reaching living child limit
 	EXTRA_CHILDREN_PER_EXTRA_SPOUSE = 2 # Num of extra children per spouse above one before reaching living child limit
 	EXTRA_CHILDREN_PER_EXTRA_CONCUBINE = 2 # Num of extra children per concubine above one before reaching living child limit
 	#AGOT Modified, dynastic stability
@@ -541,7 +541,7 @@ NActionPoints = {
 }
 
 NCombat = {
-	UNRAISED_LEVY_REGIMENTS_SPEED = 40.0			# How many distance units do unraised regiments travel per day when gathering
+	UNRAISED_LEVY_REGIMENTS_SPEED = 10.0			# How many distance units do unraised regiments travel per day when gathering #Hambone was 40
 	COMBAT_ROLL_DAYS = 3							# How many days are there between rolls?
 	COMBAT_EVENT_DAYS = 5							# How many days are there between knight events?
 
@@ -604,17 +604,17 @@ NArmy = {
 	MOVEMENT_SPEED_RETREAT = 12					# Movement speed while retreating
 	MOVEMENT_SPEED = 8								# Normal movement speed
 	MOVEMENT_SPEED_BONUS_FRIENDLY_AREA = 0.2		# In friendly areas you get a 20% speed bonus
-	REGIMENT_MONTHLY_REINFORCE_SPEED = 0.03			# Monthly reinforcement percentage of unraised chunks [0-1]
-	REGIMENT_MONTHLY_MAA_REINFORCE_SPEED = 0.1		# Monthly reinforcement percentage of unraised MAA chunks [0-1]
+	REGIMENT_MONTHLY_REINFORCE_SPEED = 0.005			# Monthly reinforcement percentage of unraised chunks [0-1]
+	REGIMENT_MONTHLY_MAA_REINFORCE_SPEED = 0.05		# Monthly reinforcement percentage of unraised MAA chunks [0-1]
 	#AGOT Modified, increased levies to resemble canon numbers without increased income
 	#GOLD_COST_PER_SOLDIER = 0.003					# Gold maintenance cost per soldier
-	GOLD_COST_PER_SOLDIER = 0.001					# Gold maintenance cost per soldier
+	GOLD_COST_PER_SOLDIER = 0.005					# Gold maintenance cost per soldier
 	RAID_ARMY_COST_MULT = 0.5						# Maintenance of raid armies is multiplied by this
 	MOVEMENT_LOCKED = 0.5							# Percentage after which movement is locked
 	#AGOT Modified
 	#COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.05
-	COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.01
-	MINIMUM_COUNTY_MOVEMENT_ATTRITION = 100
+	COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.02
+	MINIMUM_COUNTY_MOVEMENT_ATTRITION = 10
 	REGIMENT_DEFAULT_STACK_SIZE = 100
 	REGIMENT_DEFAULT_MAX_SIZE = 3					# Number of regiment chunks
 	REGIMENT_MAA_CAP_BY_TIER = { 0 1 2 3 4 5 }
@@ -623,17 +623,17 @@ NArmy = {
 	REGIMENT_MAA_STARTING_COUNT = 5
 
 	FULL_SUPPLY = 100								# Fully supplied units' supply value
-	SUPPLY_LOSS_AT_SEA = 8							# This is the supply loss at sea after the ATTRITION_AFTER_DAYS grace period
-	SUPPLY_LOSS_PER_SOLDIER_ABOVE_LIMIT = 0.001		# Each check's supply loss per every soldier over the province's supply limit
+	SUPPLY_LOSS_AT_SEA = 10							# This is the supply loss at sea after the ATTRITION_AFTER_DAYS grace period
+	SUPPLY_LOSS_PER_SOLDIER_ABOVE_LIMIT = 0.0015	# Each check's supply loss per every soldier over the province's supply limit
 	SUPPLY_LOSS_MINIMUM = 5							# This is the minimum supply limit loss (before commander effects)
 	SUPPLY_LOSS_MAXIMUM = 10						# This is the maximum supply limit loss (after commander effects)
 	SUPPLY_GAIN_BELOW_LIMIT = 20					# Each check's supply gain under or at the province's supply limit
-	SUPPLY_OWN_REALM = 0.15							# Extra supply within top realm
-	SUPPLY_OWN_SUB_REALM = 0.3						# Extra supply within subrealm
+	SUPPLY_OWN_REALM = 0.2							# Extra supply within top realm
+	SUPPLY_OWN_SUB_REALM = 0.4						# Extra supply within subrealm
 	#AGOT Modified to allow for extremely low supply limits
 	#MINIMUM_SUPPLY_LIMIT = 1000						# Supply limit will never ever be lower than this
 	MINIMUM_SUPPLY_LIMIT = 4						# Supply limit will never ever be lower than this
-	NO_SUPPLY_LOSS_DAYS = 30						# After gathering, armies won't lose supplies for this number of days
+	NO_SUPPLY_LOSS_DAYS = 21						# After gathering, armies won't lose supplies for this number of days
 
 	SUPPLY_STATE_LEVELS = {
 		60
@@ -649,7 +649,7 @@ NArmy = {
 
 	SUPPLY_STATE_ATTRITION = {
 		0.0
-		0.0
+		0.01
 		0.05
 	}
 
@@ -666,7 +666,7 @@ NArmy = {
 NFleet = {
 	#AGOT Modified
 	# FLEET_SPEED = 15						# Fleet speed
-	FLEET_SPEED = 20						# Fleet speed
+	FLEET_SPEED = 15						# Fleet speed
 	#AGOT Modified, ships more expensive
 	# EMBARK_GOLD_COST_PER_HUNDRED = 1		# Embark cost for every hundred units
 	EMBARK_GOLD_COST_PER_HUNDRED = 5		# Embark cost for every hundred units
@@ -968,7 +968,7 @@ NCouncil = {
 NDynasty = {
 	MONTHLY_PRESTIGE_GAIN_PER_MEMBER = 0.02 # Was 0.2 per year, should be then 0.016 recurring but that is ugly so round to 0.015
 	MAX_MONTHLY_PRESTIGE_GAIN_FROM_ALIVE_MEMBERS = 2 # Cap the above number
-	MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER = { 0 0.125 0.25 0.5 1 2 } # When per year was { 0 2 4 6 8 10 }
+	MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER = { 0 0.5 1 2 4 8 } # When per year was { 0 2 4 6 8 10 } #Hambone
 	MONTHLY_PRESTIGE_GAIN_MULT_FOR_VASSALS_OF_SAME_DYNASTY = 0	# Dynasty members who are vassal of below of someone of the same dynasty have their prestige contribution multiplied with this. 0 disables their prestige contribution entirely
 	MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER_SPOUSE = { 0 0.1 0.2 0.4 0.8 1.6 } # When per year was { 0 2 4 6 8 10 }
 	MONTHLY_PRESTIGE_GAIN_MULT_FOR_VASSALS_OF_SAME_DYNASTY_SPOUSE = 0	# Dynasty members whose spouse are vassal of below of someone of the same dynasty have their prestige contribution multiplied with this. 0 disables their prestige contribution entirely
@@ -1012,14 +1012,14 @@ NDreadEffectOnBoldness = {
 }
 
 NDomain = {
-	ABOVE_LIMIT_LEVY_PENALTY = 0.2				# How much levies are reduced per holding over the limit
+	ABOVE_LIMIT_LEVY_PENALTY = 0.3				# How much levies are reduced per holding over the limit #Hambone
 	ABOVE_LIMIT_MAX_LEVY_PENALTY = 1			# How much levies can be reduced at most
-	ABOVE_LIMIT_TAX_INCOME_PENALTY = 0.2		# How much tax income from domain is reduced per holding over the limit
+	ABOVE_LIMIT_TAX_INCOME_PENALTY = 0.3		# How much tax income from domain is reduced per holding over the limit #Hambone
 	ABOVE_LIMIT_MAX_TAX_INCOME_PENALTY = 1		# How much tax income from domain can be reduced at most
 	HOLDING_GRACE_PERIOD = 365					# How many days do newly gained holdings not count towards the domain size for the purposes of penalties (but also not produce any levies)
 	#AGOT Modified, lower domain limits
 	# STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 6	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE )
-	STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 10	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE )
+	STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 100	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE ) #Hambone
 	LEVIES_AT_ZERO_COUNTY_CONTROL = 0.5			# How many % levies do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
 	TAX_AT_ZERO_COUNTY_CONTROL = 0.0			# How much % tax do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
 	#AGOT Modified, nerf levies and taxes (no 900k megawars)
@@ -1046,11 +1046,11 @@ NFaction =
 	POTENTIAL_FORCE_JOIN_HOOK_TYPE = "strong" # The type of hook that means the UI will show a member as potentially joining
 }
 
-NPathFinding = {
+NPathFinding = { #Hambone lowered
 	#AGOT Modified, the time from clicking in the sea, to actually being at sea, idk ask Uber
 	#EMBARK_COST = 30								# This value will be set as pathfinding cost if it goes from land to sea
-	EMBARK_COST = 15								# This value will be set as pathfinding cost if it goes from land to sea
-	DISEMBARK_COST = 10								# This value will be set as pathfinding cost if it goes from sea to land
+	EMBARK_COST = 8								# This value will be set as pathfinding cost if it goes from land to sea
+	DISEMBARK_COST = 4							# This value will be set as pathfinding cost if it goes from sea to land
 }
 
 NCulture = {
@@ -1247,7 +1247,7 @@ NSuggestions = {
 }
 
 NModifier = {
-	HEALTH_VALUE_FORMAT_THRESHOLDS = { -6 -4.5 -3 -1 -0.75 -0.5 -0.25 0 0.09 0.25 0.5 0.75 1 2 }	# Thresholds to select the key in HEALTH_VALUE_FORMAT_KEYS
+	HEALTH_VALUE_FORMAT_THRESHOLDS = { -6 -4.5 -3 -1 -0.75 -0.5 -0.25 0 0.25 0.5 0.75 1 2 }	# Thresholds to select the key in HEALTH_VALUE_FORMAT_KEYS
 	HEALTH_VALUE_FORMAT_KEYS = {
 		"HEALTH_VALUE_FORMAT_ALREADY_DEAD"
 		"HEALTH_VALUE_FORMAT_CATASTROPHIC_PENALTY"
@@ -1437,7 +1437,7 @@ NCourtPositions = {
 	COURT_POSITION_DEFAULT_ANIMATION = "idle"													# Default court portrait animation, used as a fallback if missing court_position_asset animation in Court Position or Court Task
 	COURT_POSITION_DEFAULT_BACKGROUND = "gfx/interface/illustrations/event_scenes/corridor.dds"	# Default court background, used as a fallback if missing court_position_asset background in Court Position or Court Task
 	COURT_POSITION_BACKGROUND_ALPHA = 0.1														# How much grayscale to use for the court position backgrounds. Value between 0 to 1
-
+	
 	MAX_NUMBER_IN_COURT_POSITION = 5 # Max number of positions that a court position can have.
 	DEFAULT_APTITUDE_LEVEL_BREAKPOINTS = { 20 40 60 80 } # Breakpoints to increase aptitude by 1.
 }

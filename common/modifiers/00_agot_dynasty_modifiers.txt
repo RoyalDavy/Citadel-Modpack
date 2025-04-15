@@ -3,13 +3,13 @@
 ########################
 
 
-## Dynasties Modifiers
+## Dynasties Modifiers #Hambone important to lower dynasty prestige mult
 
 oakheart_heritage_dynasty_modifier = {
 	icon = letter_positive
         stone_dornish_opinion = -15
         knight_effectiveness_mult = 0.1
-        monthly_dynasty_prestige_mult = 0.1
+        monthly_dynasty_prestige_mult = 0.01
         monthly_prestige_gain_mult = 0.1
 }
 
@@ -32,7 +32,7 @@ reyne_heritage_dynasty_modifier = {
 	icon = economy_positive
         opinion_of_liege = -10
         tax_mult = 0.05
-        stewardship = 2
+        stewardship = 1
         intrigue = 1
 }
 
@@ -53,7 +53,7 @@ rogare_heritage_dynasty_modifier = {
 
 velaryon_heritage_dynasty_modifier = {
 	icon = family_positive
-        monthly_dynasty_prestige_mult = 0.1
+        monthly_dynasty_prestige_mult = 0.01
         naval_movement_speed_mult = 0.15
         monthly_prestige_gain_mult = 0.1
 }
@@ -61,7 +61,6 @@ velaryon_heritage_dynasty_modifier = {
 celtigar_heritage_dynasty_modifier = {
 	icon = economy_positive
         stewardship_per_stress_level = 1
-        domain_limit = 1
         vassal_opinion = -5
 }
 
@@ -69,7 +68,7 @@ targaryen_heritage_dynasty_modifier = {
 	icon = prestige_positive
         attraction_opinion = 10
         positive_random_genetic_chance = 0.05
-        monthly_dynasty_prestige_mult = 0.1
+        monthly_dynasty_prestige_mult = 0.01
 }
 
 borrell_heritage_dynasty_modifier = {
@@ -82,7 +81,7 @@ borrell_heritage_dynasty_modifier = {
 
 forrester_heritage_dynasty_modifier = {
 	icon = family_positive
-        monthly_dynasty_prestige_mult = 0.05
+        monthly_dynasty_prestige_mult = 0.01
         defender_advantage = 5
         taiga_tax_mult = 0.05
         taiga_bog_tax_mult = 0.05
@@ -91,7 +90,7 @@ forrester_heritage_dynasty_modifier = {
 uller_heritage_dynasty_modifier = {
 	icon = flame_positive
         dread_baseline_add = 10
-        intrigue = 2
+        intrigue = 1
         guest_opinion = -10
         enemy_hard_casualty_modifier	= 0.05
 }
@@ -115,14 +114,14 @@ ryswell_heritage_dynasty_modifier = {
 tarly_heritage_dynasty_modifier = {
 	icon = martial_positive
 	martial_per_prestige_level = 1
-        advantage = 5
+        advantage = 2
         siege_phase_time = -0.05
 }
 
 yronwood_heritage_dynasty_modifier = {
 	icon = prestige_positive
 	opinion_of_liege = -10
-        monthly_dynasty_prestige_mult = 0.05
+        monthly_dynasty_prestige_mult = 0.01
         legitimacy_gain_mult = 0.1
         domain_tax_mult = 0.05
 }
@@ -153,7 +152,7 @@ reed_heritage_dynasty_modifier = {
 
 bracken_heritage_dynasty_modifier = {
 	icon = horse_positive
-	intrigue = 2
+	intrigue = 1
         light_cavalry_damage_add = 5
         light_cavalry_pursuit_add = 5
         faith_conversion_piety_cost_mult = -0.20
@@ -162,7 +161,7 @@ bracken_heritage_dynasty_modifier = {
 blackwood_heritage_dynasty_modifier = {
 	icon = bird_positive
 	same_faith_opinion = 10
-        intrigue = 2
+        intrigue = 1
         archers_damage_add = 5
         faith_conversion_piety_cost_mult = 0.20
 }
@@ -170,7 +169,7 @@ blackwood_heritage_dynasty_modifier = {
 thenn_heritage_dynasty_modifier = {
 	icon = prestige_positive
         zealot_levy_contribution_mult = 0.1
-        zealot_tax_contribution_mult = 0.1
+        zealot_tax_contribution_mult = 0.05
         faith_conversion_piety_cost_mult = 0.20
         same_faith_opinion = 10
 }
@@ -192,8 +191,8 @@ umber_heritage_dynasty_modifier = {
 bolton_heritage_dynasty_modifier = {
 	icon = dread_positive
 	dread_baseline_add = 10
-	cowed_vassal_tax_contribution_mult	= 0.05
-        cowed_vassal_levy_contribution_mult = 0.05
+	cowed_vassal_tax_contribution_mult = 0.05
+        # cowed_vassal_levy_contribution_mult = 0.05
         general_opinion = -5
 }
 
@@ -208,9 +207,8 @@ manderly_heritage_dynasty_modifier = {
 crabb_heritage_dynasty_modifier = {
 	icon = blood_positive
 	dread_baseline_add = 10
-	prowess = 2
+	prowess = 1
         monthly_prestige_gain_per_dread_mult = 0.003
-        cultural_head_fascination_mult = -0.05
 }
 
 mormont_heritage_dynasty_modifier = {
@@ -284,7 +282,7 @@ tyrell_heritage_dynasty_modifier = {
 arryn_heritage_dynasty_modifier = {
 	icon = bird_positive
 	accolade_glory_gain_mult = 0.15
-	vassal_opinion = 10
+	vassal_opinion = 5
         liege_opinion = 5
         monthly_piety_gain_per_legitimacy_level_mult = 0.05
 }
@@ -293,7 +291,7 @@ arryn_heritage_dynasty_modifier = {
 martell_heritage_dynasty_modifier = {
 	icon = intrigue_positive
 	dread_baseline_add = 10
-	intrigue = 2
+	intrigue = 1
         pikemen_damage_add = 5
         opinion_of_liege = -5
 }
@@ -316,14 +314,13 @@ frey_heritage_dynasty_modifier = {
 stark_heritage_dynasty_modifier = {
 	icon = family_positive
 	negate_health_penalty_add = 0.25
-	winter_advantage = 5
-        defender_winter_advantage = 5
+	vassal_opinion = 5
 }
 
 lannister_heritage_dynasty_modifier = {
 	icon = economy_positive
 	domain_tax_mult = 0.05 
-	stewardship = 2
+	stewardship = 1
         dynasty_opinion = 5
 }
 

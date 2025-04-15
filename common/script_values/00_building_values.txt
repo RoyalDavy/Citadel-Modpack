@@ -12,7 +12,7 @@
 # You shouldn't have to change more than a few numbers to affect every single building in the game!
 
 #######
-# Tax #
+# Tax # #Hambone changed these slightly
 #######
 
 #AGOT Modified
@@ -25,12 +25,12 @@
 # @copper_mine_tax_base = 2
 # @silver_mine_tax_base = 3
 # @special_mine_tax_base = 5
-@poor_tax_base = 0.13
-@normal_tax_base = 0.18
-@good_tax_base = 0.25
+@poor_tax_base = 0.20
+@normal_tax_base = 0.25
+@good_tax_base = 0.30
 @excellent_tax_base = 0.35
 
-@copper_mine_tax_base = 0.4
+@copper_mine_tax_base = 0.5
 @silver_mine_tax_base = 1
 @special_mine_tax_base = 1.5
 
@@ -44,12 +44,12 @@
 # @copper_mine_tax_scale_addition_per_tier = 1.5
 # @silver_mine_tax_scale_addition_per_tier = 2
 # @special_mine_tax_scale_addition_per_tier = 3
-@poor_tax_scale_addition_per_tier = 0.08
-@normal_tax_scale_addition_per_tier = 0.1
-@good_tax_scale_addition_per_tier = 0.15
-@excellent_tax_scale_addition_per_tier = 0.23
+@poor_tax_scale_addition_per_tier = 0.10
+@normal_tax_scale_addition_per_tier = 0.15
+@good_tax_scale_addition_per_tier = 0.20
+@excellent_tax_scale_addition_per_tier = 0.25
 
-@copper_mine_tax_scale_addition_per_tier = 0.4
+@copper_mine_tax_scale_addition_per_tier = 0.5
 @silver_mine_tax_scale_addition_per_tier = 0.5
 @special_mine_tax_scale_addition_per_tier = 0.5
 
@@ -57,31 +57,31 @@
 # Levy #
 ########
 
-#AGOT Modified
+#AGOT Modified #Hambone these are Flumph S3 Changes
 # Base
 # @poor_levy_base = 50
 # @small_levy_base = 75
 # @normal_levy_base = 100
 # @good_levy_base = 125
 # @excellent_levy_base = 150
-@poor_levy_base = 100
-@small_levy_base = 150
-@normal_levy_base = 200
-@good_levy_base = 250
-@excellent_levy_base = 300
+@poor_levy_base = 10
+@small_levy_base = 30
+@normal_levy_base = 50
+@good_levy_base = 70
+@excellent_levy_base = 90
 
-#AGOT Modified
+#AGOT Modified #Hambone these are Flumph S3 Changes
 # Scaling Increase
 # @poor_levy_scale_addition_per_tier = 25
 # @small_levy_scale_addition_per_tier = 50
 # @normal_levy_scale_addition_per_tier = 75
 # @good_levy_scale_addition_per_tier = 100
 # @excellent_levy_scale_addition_per_tier = 125
-@poor_levy_scale_addition_per_tier = 50
-@small_levy_scale_addition_per_tier = 100
-@normal_levy_scale_addition_per_tier = 150
-@good_levy_scale_addition_per_tier = 200
-@excellent_levy_scale_addition_per_tier = 250
+@poor_levy_scale_addition_per_tier = 10
+@small_levy_scale_addition_per_tier = 30
+@normal_levy_scale_addition_per_tier = 50
+@good_levy_scale_addition_per_tier = 70
+@excellent_levy_scale_addition_per_tier = 90
 
 ################
 # Supply Limit #
@@ -142,14 +142,14 @@
 ############
 
 # Base
-@low_tax_mult_base = 0.02
-@normal_tax_mult_base = 0.04
-@good_tax_mult_base = 0.06
+@low_tax_mult_base = 0.01
+@normal_tax_mult_base = 0.02
+@good_tax_mult_base = 0.03
 
 # Scaling Increase
-@low_tax_mult_addition_per_tier = 0.02
-@normal_tax_mult_addition_per_tier = 0.04
-@good_tax_mult_addition_per_tier = 0.06
+@low_tax_mult_addition_per_tier = 0.01
+@normal_tax_mult_addition_per_tier = 0.02
+@good_tax_mult_addition_per_tier = 0.03
 
 ###############
 # MaA Bonuses #
@@ -248,37 +248,37 @@
 ######################
 
 # Base Levy Reinforcement Value
-@normal_levy_reinforcement_rate_base = 0.1
-@high_levy_reinforcement_rate_base = 0.2
+@normal_levy_reinforcement_rate_base = 0.05
+@high_levy_reinforcement_rate_base = 0.1
 
-# Scaling Increase Levy Reinforcement
+# Scaling Increase Levy Reinforcement #Hambone
 @normal_levy_reinforcement_rate_addition_per_tier = 0.05
 @high_levy_reinforcement_rate_addition_per_tier = 0.1
 
 ############
-# Garrison #
+# Garrison # #Hambone
 ############
 
 #AGOT Modified
 # Base
 # @normal_max_garrison_base = 150
 # @good_max_garrison_base = 250
-@normal_max_garrison_base = 75
-@good_max_garrison_base = 125
+@normal_max_garrison_base = 50
+@good_max_garrison_base = 100
 
 #AGOT Modified
 # Scaling Increase
 # @normal_max_garrison_scale_addition_per_tier = 150
 # @good_max_garrison_scale_addition_per_tier = 250
-@normal_max_garrison_scale_addition_per_tier = 75
-@good_max_garrison_scale_addition_per_tier = 125
+@normal_max_garrison_scale_addition_per_tier = 25
+@good_max_garrison_scale_addition_per_tier = 50
 
 ##########################
-# Garrison Reinforcement #
+# Garrison Reinforcement # #Hambone
 ##########################
 
 # Reinforcement rate: by default it takes 2,8 years to completly refill a garrison 
-@base_garrison_reinforcement_factor = 0.03
+@base_garrison_reinforcement_factor = 0.01
 
 # Scaling increase: at level 8, it takes a bit less than 1 year to completly refill a garrison
 @garrison_reinforcement_factor_addition_per_tier = 0.01
