@@ -10,7 +10,7 @@ court_artificer_court_position_task_martial = {
 		round = no
 		gold = {
 			add = {
-				value = monthly_court_position_task_cost_double
+				value = 1
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
@@ -22,8 +22,8 @@ court_artificer_court_position_task_martial = {
 	}
 	
 	employee_modifier = {
-		martial = 2
-		prowess = 2
+		martial = 1
+		prowess = 1
 	}
 	
 	on_yearly = {
@@ -89,7 +89,7 @@ court_artificer_court_position_task_learning = {
 		round = no
 		gold = {
 			add = {
-				value = monthly_court_position_task_cost_double
+				value = 1
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
@@ -101,8 +101,8 @@ court_artificer_court_position_task_learning = {
 	}
 	
 	employee_modifier = {
-		learning = 2
-		diplomacy = 2
+		learning = 1
+		diplomacy = 1
 	}
 	
 	on_yearly = {
@@ -168,7 +168,7 @@ court_artificer_court_position_task_stewardship = {
 		round = no
 		gold = {
 			add = {
-				value = monthly_court_position_task_cost_double
+				value = 1
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
@@ -180,8 +180,8 @@ court_artificer_court_position_task_stewardship = {
 	}
 
 	employee_modifier = {
-		stewardship = 2
-		prowess = 2
+		stewardship = 1
+		prowess = 1
 	}
 	on_yearly = {
 		if = {

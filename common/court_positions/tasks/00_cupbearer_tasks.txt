@@ -30,25 +30,25 @@ cupbearer_court_position_task_flatter_dignitaries = {
 			courting_scheme_phase_duration_add = -5
 		}
 		poor = {
-		 	owned_personal_scheme_success_chance_max_add = 3
+		 	owned_personal_scheme_success_chance_max_add = 2
 			sway_scheme_phase_duration_add = -15
 			seduce_scheme_phase_duration_add = -15
 			courting_scheme_phase_duration_add = -15
 		}
 		average = {
-		 	owned_personal_scheme_success_chance_max_add = 5
+		 	owned_personal_scheme_success_chance_max_add = 3
 			sway_scheme_phase_duration_add = -30
 			seduce_scheme_phase_duration_add = -30
 			courting_scheme_phase_duration_add = -30
 		}
 		good = {
-		 	owned_personal_scheme_success_chance_max_add = 10
+		 	owned_personal_scheme_success_chance_max_add = 4
 			sway_scheme_phase_duration_add = -50
 			seduce_scheme_phase_duration_add = -50
 			courting_scheme_phase_duration_add = -50
 		}
 		excellent = {
-		 	owned_personal_scheme_success_chance_max_add = 20
+		 	owned_personal_scheme_success_chance_max_add = 5
 			sway_scheme_phase_duration_add = -75
 			seduce_scheme_phase_duration_add = -75
 			courting_scheme_phase_duration_add = -75
@@ -103,16 +103,16 @@ cupbearer_court_position_task_collect_tallage = {
 		 	courtly_tax_contribution_mult = 0.01
 		}
 		poor = {
-		 	courtly_tax_contribution_mult = 0.03
+		 	courtly_tax_contribution_mult = 0.02
 		}
 		average = {
-		 	courtly_tax_contribution_mult = 0.06
+		 	courtly_tax_contribution_mult = 0.03
 		}
 		good = {
-		 	courtly_tax_contribution_mult = 0.1
+		 	courtly_tax_contribution_mult = 0.04
 		}
 		excellent = {
-		 	courtly_tax_contribution_mult = 0.18
+		 	courtly_tax_contribution_mult = 0.05
 		}
 	}
 	

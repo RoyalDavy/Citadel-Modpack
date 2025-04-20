@@ -5,19 +5,19 @@ court_brewmaster_popular_opinion = {
 
 	scaling_employer_modifiers = {
 		terrible = {
-		 	county_opinion_add = 2
+		 	county_opinion_add = 1
 		}
 		poor = {
-		 	county_opinion_add = 5
+		 	county_opinion_add = 3
 		}
 		average = {
-		 	county_opinion_add = 10
+		 	county_opinion_add = 5
 		}
 		good = {
-		 	county_opinion_add = 15
+		 	county_opinion_add = 7
 		}
 		excellent = {
-		 	county_opinion_add = 20
+		 	county_opinion_add = 10
 		}
 	}
 
@@ -43,13 +43,13 @@ court_brewmaster_court_opinion = {
 
 	scaling_employer_modifiers = {
 		terrible = {
-		 	courtier_and_guest_opinion = 1
+		 	courtier_and_guest_opinion = 2
 		}
 		poor = {
-		 	courtier_and_guest_opinion = 3
+		 	courtier_and_guest_opinion = 4
 		}
 		average = {
-		 	courtier_and_guest_opinion = 5
+		 	courtier_and_guest_opinion = 6
 		}
 		good = {
 		 	courtier_and_guest_opinion = 8
@@ -85,7 +85,7 @@ court_brewmaster_court_opinion = {
 	}
 }
 
-court_brewmaster_experimental_brew = {
+court_brewmaster_experimental_brew = { #Hambone
 	court_position_types = { court_brewmaster_court_position }
 
 	is_valid_showing_failures_only = {
@@ -102,7 +102,7 @@ court_brewmaster_experimental_brew = {
 
 	on_start = {
 		scope:liege = {
-			add_prestige = -50
+			gold = -10
 			custom_tooltip = court_brewmaster_experimental_brew_tt
 			set_variable = active_experimental_brew
 			trigger_event = bp3_court_position.100
@@ -115,6 +115,17 @@ court_brewmaster_experimental_brew = {
 				NOT = { has_variable = experimental_brew_cooldown }
 			}
 			trigger_event = bp3_court_position.100
+		}
+	}
+
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = 0.5
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
 		}
 	}
 

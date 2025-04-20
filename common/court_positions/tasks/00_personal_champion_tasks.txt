@@ -80,7 +80,7 @@ champion_exercise_ruler = {
 				value = 1
 				add = {
 					value = "aptitude(champion_court_position)"
-					multiply = 0.8
+					multiply = 0.2
 				}
 			}
 			scope:liege = {
@@ -191,6 +191,7 @@ champion_improve_self = {
 				value = 1
 				add = {
 					value = "aptitude(champion_court_position)"
+					multiply = 0.5
 				}
 			}
 			if = {
@@ -201,7 +202,7 @@ champion_improve_self = {
 			}
 			else = {
 				random_list = {
-					50 = {
+					30 = {
 						modifier = {
 							add = {
 								subtract = root.prowess
@@ -209,7 +210,7 @@ champion_improve_self = {
 						}
 						add_prowess_skill = 1
 					}
-					50 = {
+					70 = {
 						random_list = {
 							1 = {
 								trigger = {

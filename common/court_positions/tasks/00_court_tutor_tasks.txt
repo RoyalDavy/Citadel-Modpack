@@ -6,9 +6,9 @@ court_tutor_improve_others = {
 	# Monthly cost for the task
 	cost = {
 		round = no
-		prestige = {
+		gold = {
 			add = {
-				value = monthly_court_position_task_cost
+				value = 1
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
@@ -29,7 +29,7 @@ court_tutor_improve_others = {
 				value = 1
 				add = {
 					value = "aptitude(court_tutor_court_position)"
-					multiply = 4
+					multiply = 2
 				}
 			}
 			# Find target
@@ -315,9 +315,9 @@ court_tutor_teach_kids = {
 	# Monthly cost for the task
 	cost = {
 		round = no
-		prestige = {
+		gold = {
 			add = {
-				value = monthly_court_position_task_cost
+				value = 1
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}

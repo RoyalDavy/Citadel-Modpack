@@ -42,7 +42,7 @@ wet_nurse_instill_virtue = {
 						value = 1
 						add = {
 							value = "aptitude(wet_nurse_court_position)"
-							multiply = 0.4
+							multiply = 0.2
 						}
 					}
 					instill_virtue_trait_effect = yes
@@ -201,7 +201,7 @@ wet_nurse_promote_competition = {
 					value = 1
 					add = {
 						value = "aptitude(wet_nurse_court_position)"
-						multiply = 0.4
+						multiply = 0.2
 					}
 				}
 				random_courtier_or_guest = {
@@ -213,7 +213,7 @@ wet_nurse_promote_competition = {
 					}
 					set_variable = {
 						name = wet_nurse_promote_competition_char_cooldown
-						months = 6
+						months = 12
 					}
 					save_scope_as = child_character
 					scope:notification_character = {

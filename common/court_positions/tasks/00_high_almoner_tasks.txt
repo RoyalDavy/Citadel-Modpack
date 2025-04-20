@@ -85,23 +85,18 @@ high_almoner_court_position_task_appease_zealots = {
 	scaling_employer_modifiers = {
 		terrible = {
 		 	zealot_same_faith_opinion = 2
-			zealot_levy_contribution_mult = 0.01
 		}
 		poor = {
 		 	zealot_same_faith_opinion = 5
-			zealot_levy_contribution_mult = 0.02
 		}
 		average = {
 		 	zealot_same_faith_opinion = 10
-			zealot_levy_contribution_mult = 0.05
 		}
 		good = {
 		 	zealot_same_faith_opinion = 15
-			zealot_levy_contribution_mult = 0.10
 		}
 		excellent = {
 		 	zealot_same_faith_opinion = 20
-			zealot_levy_contribution_mult = 0.15
 		}
 	}
 

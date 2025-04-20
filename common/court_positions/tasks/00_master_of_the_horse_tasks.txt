@@ -8,7 +8,7 @@ master_of_horse_oversee_breeding = {
 		round = no
 		gold = {
 			add = {
-				value = monthly_court_position_task_cost
+				value = 0.5
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
@@ -17,19 +17,19 @@ master_of_horse_oversee_breeding = {
 
 	scaling_employer_modifiers = {
 		terrible = {
-			army_pursuit_mult = 0.02
+			army_pursuit_mult = 0.01
 		}
 		poor = {
-			army_pursuit_mult = 0.04
+			army_pursuit_mult = 0.02
 		}
 		average = {
-			army_pursuit_mult = 0.07
+			army_pursuit_mult = 0.03
 		}
 		good = {
-			army_pursuit_mult = 0.1
+			army_pursuit_mult = 0.04
 		}
 		excellent = {
-			army_pursuit_mult = 0.15
+			army_pursuit_mult = 0.05
 		}
 	}
 
@@ -53,7 +53,7 @@ master_of_horse_mightiest_warhorse = {
 		round = no
 		gold = {
 			add = {
-				value = monthly_court_position_task_cost
+				value = 1
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}

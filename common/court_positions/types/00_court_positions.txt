@@ -1235,7 +1235,7 @@ travel_leader_court_position = {
 	}
 
 	# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints)
-	scaling_employer_modifiers = {
+	scaling_employer_modifiers = { #Hambone
 		terrible = {
 			monthly_wanderer_lifestyle_xp_gain_mult = 0.025
 		}
@@ -1246,10 +1246,10 @@ travel_leader_court_position = {
 			monthly_wanderer_lifestyle_xp_gain_mult = 0.075
 		}
 		good = {
-			monthly_wanderer_lifestyle_xp_gain_mult = 0.15
+			monthly_wanderer_lifestyle_xp_gain_mult = 0.12
 		}
 		excellent = {
-			monthly_wanderer_lifestyle_xp_gain_mult = 0.25
+			monthly_wanderer_lifestyle_xp_gain_mult = 0.15
 		}
 	}
 
@@ -2099,7 +2099,7 @@ seneschal_court_position = {
 
 	modifier = {
 		general_opinion = 5
-		monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 	}
 
 	on_court_position_received = {
@@ -2403,7 +2403,7 @@ court_tutor_court_position = {
 	salary = {
 		round = no
 		gold = {
-			value = medium_court_position_salary # Update X_salary_tooltip if script_value is changed
+			value = 1 # Update X_salary_tooltip if script_value is changed
 			# Set to 0 with Dynasty Perk Inner Circle
 			if = {
 				limit = { court_position_inner_circle_salary_trigger = { POS = court_tutor } }
@@ -2830,7 +2830,7 @@ wet_nurse_court_position = {
 	salary = {
 		round = no
 		gold = {
-			value = tiny_court_position_salary # Update X_salary_tooltip if script_value is changed
+			value = 0.25 # Update X_salary_tooltip if script_value is changed
 			# Set to 0 with Dynasty Perk Inner Circle
 			if = {
 				limit = { court_position_inner_circle_salary_trigger = { POS = wet_nurse } }
@@ -10124,35 +10124,35 @@ royal_architect_court_position = {
 	# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints)
 	scaling_employer_modifiers = {
 		terrible = {
-			build_speed = -0.05
-			domicile_build_speed = -0.05
+			build_speed = -0.02
+			domicile_build_speed = -0.02
 			holding_build_speed = -0.02
 		}
 		poor = {
-			build_speed = -0.1
-			domicile_build_speed = -0.1
+			build_speed = -0.04
+			domicile_build_speed = -0.04
 			holding_build_speed = -0.04
 		}
 		average = {
-			build_speed = -0.15
-			domicile_build_speed = -0.15
-			holding_build_speed = -0.08
+			build_speed = -0.06
+			domicile_build_speed = -0.06
+			holding_build_speed = -0.06
 		}
 		good = {
-			build_speed = -0.2
-			domicile_build_speed = -0.2
-			holding_build_speed = -0.12
+			build_speed = -0.08
+			domicile_build_speed = -0.08
+			holding_build_speed = -0.08
 		}
 		excellent = {
-			build_speed = -0.3
-			domicile_build_speed = -0.3
-			holding_build_speed = -0.2
+			build_speed = -0.1
+			domicile_build_speed = -0.1
+			holding_build_speed = -0.1
 		}
 	}
 
 	modifier = {
-		build_speed = -0.15
-		build_gold_cost = -0.15
+		build_speed = -0.05
+		build_gold_cost = -0.05
 		monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 	}
 
@@ -10488,16 +10488,16 @@ high_almoner_court_position = {
 			monthly_piety_gain_mult = 0.02
 		}
 		poor = {
-			monthly_piety_gain_mult = 0.05
+			monthly_piety_gain_mult = 0.04
 		}
 		average = {
-			monthly_piety_gain_mult = 0.10
+			monthly_piety_gain_mult = 0.06
 		}
 		good = {
-			monthly_piety_gain_mult = 0.15
+			monthly_piety_gain_mult = 0.08
 		}
 		excellent = {
-			monthly_piety_gain_mult = 0.2
+			monthly_piety_gain_mult = 0.1
 		}
 	}
 
@@ -13139,8 +13139,8 @@ executioner_court_position = {
 
 	salary = {
 		round = no
-		prestige = {
-			value = minor_court_position_prestige_salary # Update X_salary_tooltip if script_value is changed
+		gold = {
+			value = 0.3 # Update X_salary_tooltip if script_value is changed
 			# Set to 0 with Dynasty Perk Inner Circle
 			if = {
 				limit = { court_position_inner_circle_salary_trigger = { POS = executioner } }

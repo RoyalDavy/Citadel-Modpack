@@ -8,8 +8,7 @@ royal_architect_fortify_lands = {
 		round = no
 		gold = {
 			add = {
-				value = monthly_court_position_task_cost
-				multiply = 3
+				value = 1
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
@@ -27,15 +26,15 @@ royal_architect_fortify_lands = {
 		}
 		average = {
 			additional_fort_level = 2
-			garrison_size = 0.04
+			garrison_size = 0.03
 		}
 		good = {
 			additional_fort_level = 2
-			garrison_size = 0.07
+			garrison_size = 0.04
 		}
 		excellent = {
 			additional_fort_level = 3
-			garrison_size = 0.1
+			garrison_size = 0.05
 		}
 	}
 

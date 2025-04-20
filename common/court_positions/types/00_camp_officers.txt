@@ -48,7 +48,7 @@ second_camp_officer = {
 	}
 	
 	# How high the aptitude has to be to reach the 5 different modifier levels
-	aptitude_level_breakpoints = { 20 40 60 80 }
+	aptitude_level_breakpoints = { 40 60 85 95 }
 
 	# How good is this character in this position? root scope is the holder of the court position
 	aptitude = {
@@ -307,12 +307,12 @@ second_camp_officer = {
 			prowess = 3
 		}
 		excellent = {
-			diplomacy = 5
-			martial = 5
-			stewardship = 5
-			intrigue = 5
-			learning = 5
-			prowess = 5
+			diplomacy = 4
+			martial = 4
+			stewardship = 4
+			intrigue = 4
+			learning = 4
+			prowess = 4
 		}
 	}
 

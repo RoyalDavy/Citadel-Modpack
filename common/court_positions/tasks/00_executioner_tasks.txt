@@ -32,15 +32,15 @@ executioner_terrify_court = {
 		}
 		average = {
 			courtier_and_guest_opinion = -4
-			dread_baseline_add = 4
+			dread_baseline_add = 3
 		}
 		good = {
 			courtier_and_guest_opinion = -7
-			dread_baseline_add = 7
+			dread_baseline_add = 4
 		}
 		excellent = {
 			courtier_and_guest_opinion = -10
-			dread_baseline_add = 10
+			dread_baseline_add = 5
 		}
 	}
 

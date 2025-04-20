@@ -192,7 +192,7 @@ chronicler_espouse_legend = {
 		round = no
 		gold = {
 			add = {
-				value = monthly_court_position_task_cost_double
+				value = 1
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
