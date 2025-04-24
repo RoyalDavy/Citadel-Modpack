@@ -1,9 +1,0 @@
-﻿# val_duels = {
-# 	default = yes_val_duels
-	
-# 	yes_val_duels = {
-# 	}
-	
-# 	no_val_duels = {
-# 	}
-# }

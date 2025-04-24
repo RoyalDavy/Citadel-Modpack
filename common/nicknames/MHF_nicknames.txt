@@ -1,6 +1,0 @@
-﻿###############################
-### MHF NICKNAMES ###
-###############################
-
-nick_pennypress = {}
-nick_embattled = { is_prefix = yes }

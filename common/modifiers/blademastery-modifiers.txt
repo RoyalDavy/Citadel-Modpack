@@ -1,7 +1,0 @@
-﻿
-blademaster_training_modifier = {
-	icon = prowess_positive
-	health = 0.75
-	stress_gain_mult = -0.1
-	stress_loss_mult = +0.1
-}

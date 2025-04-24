@@ -1,5 +1,0 @@
-﻿l_english:
- agot_mega_war_declare_independence_decision: "Declare Independence"
- agot_mega_war_declare_independence_decision_desc: "I will declare independence from [ROOT.Var('pre_war_liege').Char.GetTitledFirstName]. However, [ROOT.Var('pre_war_liege').Char.GetSheHe] might not like my seccession from the realm and may attempt to bring me back into the realm by force."
- agot_mega_war_declare_independence_decision_tooltip: "You will become a fully independent realm, or you will be considered a rebel in a #R war#! against your liege."
- agot_mega_war_declare_independence_decision_confirm: "Time has come to make my split!"
