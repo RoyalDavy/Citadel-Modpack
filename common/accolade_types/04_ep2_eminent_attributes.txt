@@ -623,7 +623,10 @@ house_knight_attribute = {
 			has_trait = denounced
 		}
 		dynasty = {
+		OR = {
 			has_dynasty_perk = kin_legacy_4
+			has_dynasty_perk = bricker_legacy_2
+			}
 		}
 	}
 	
