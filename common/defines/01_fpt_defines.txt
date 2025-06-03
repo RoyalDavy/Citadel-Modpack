@@ -1,3 +1,0 @@
-﻿NCharacter = {
-	RANDOM_PERSONALITY_TRAITS_BASE = 4
-}

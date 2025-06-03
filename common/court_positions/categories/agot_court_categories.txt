@@ -1,3 +1,0 @@
-﻿#court_position_category_guard = {
-#	name = COURT_POSITION_CATEGORY_GUARD_NAME
-#}
