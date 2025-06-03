@@ -1,0 +1,31 @@
+###########################################################
+################# AGOT CHARACTER WINDOW ###################
+###########################################################
+
+types CharacterWindow
+{
+	type agot_knight_tree_button = button_knight_tree
+	{
+		name = "knight_tree_button"
+		visible = "[And(And(GetPlayer.IsValid, Not(IsObserver)),GetScriptedGui('agot_knight_tree_check').IsShown(GuiScope.SetRoot(CharacterWindow.GetCharacter.MakeScope).End))]"
+		datacontext = "[CharacterWindow.GetCharacter]"
+		size = { 30 30 }
+
+		onclick = "[GetVariableSystem.Toggle('knight_tree_visible')]"
+		onclick = "[GetScriptedGui('agot_open_knight_tree').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('opened_character', Character.MakeScope).End)]"
+		using = tooltip_ne
+		tooltip = "KNIGHT_TREE_TT"
+	}
+
+	type agot_interaction_knight_tree_button = button_knight_tree
+	{
+		name = "knight_tree_button"
+		visible = "[And(GetPlayer.IsValid, GetScriptedGui('agot_knight_tree_check').IsShown(GuiScope.SetRoot(Character.MakeScope).End))]"
+		size = { 25 25 }
+
+		onclick = "[GetVariableSystem.Toggle('knight_tree_visible')]"
+		onclick = "[GetScriptedGui('agot_open_knight_tree').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('opened_character', Character.MakeScope).End)]"
+		using = tooltip_ne
+		tooltip = "KNIGHT_TREE_TT"
+	}
+}

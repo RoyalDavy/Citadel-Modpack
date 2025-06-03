@@ -1,0 +1,42 @@
+ecsaty_destroy_title = {
+	category = interaction_category_diplomacy
+	desc = ecsaty_destroy_title
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	target_type = title
+	target_filter = recipient_domain_titles
+	interface_priority = 79
+	
+	is_shown = {
+		scope:recipient = {
+			primary_title.tier >= tier_duchy
+			is_ruler = yes
+		}
+		scope:actor = {
+			is_ai = no
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		scope:actor = { is_ai = no }
+	}
+	
+	can_be_picked_title = {
+		scope:target = {
+			holder = scope:recipient
+			tier >= tier_duchy
+		}
+	}
+	
+	auto_accept = yes
+	
+	on_auto_accept = {
+	}
+	
+	on_accept = {
+		scope:actor = {
+			trigger_event = ecsaty_destroy_title.0001
+			#trigger_event = ecsaty_destroy_title.0000    <--- if you want confirmation before execution
+		}
+	}
+}

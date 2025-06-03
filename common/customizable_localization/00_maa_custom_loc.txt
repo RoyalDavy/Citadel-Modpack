@@ -1,0 +1,545 @@
+﻿
+GetRegionalArcherMAA = {
+	type = character
+	
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_archers_of_the_nile } }
+		localization_key = archers_of_the_nile
+	}
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_bush_hunter } }
+	# 	localization_key = bush_hunter
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_metsanvartija } }
+	# 	localization_key = metsanvartija
+	# }
+	#AGOT Disabled
+	#text = {
+	#	trigger = { culture = { has_cultural_parameter = unlock_maa_maturkan_warriors } }
+	#	localization_key = maturkan_warriors
+	#}
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_longbowmen } }
+		localization_key = longbowmen
+	}
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_repeating_crossbow } } #Chu-ko-nu Archers
+	# 	localization_key = chu_ko_nu
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_bamboo_bows } } #Paiks
+	# 	localization_key = paiks
+	# }
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_royal_crossbowmen } }
+		localization_key = royal_crossbowmen
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_honeywine_quirrels } }
+		localization_key = honeywine_quirrels
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_hunters_of_the_moon } }
+		localization_key = hunters_of_the_moon
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_river_bows } }
+		localization_key = river_bows
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_marcher_longbowmen } }
+		localization_key = marcher_longbowmen
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_bloody_balesters } }
+		localization_key = bloody_balesters
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_wolfswood_hunters } }
+		localization_key = wolfswood_hunters
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_myrish_crossbows } }
+		localization_key = myrish_crossbows
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_collared_bows } }
+		localization_key = collared_bows
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = bowmen
+	}
+}
+
+GetRegionalInfantryMAA = {
+	type = character
+	random_valid = yes
+	
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_ayyar } }
+	# 	localization_key = ayyar
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_mubarizun } }
+	# 	localization_key = mubarizun
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_druzhina } }
+	# 	localization_key = druzhina
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_khandayat } }
+	# 	localization_key = khandayat
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_garudas } }
+	# 	localization_key = garudas
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_palace_guards } }
+	# 	localization_key = palace_guards
+	# }
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_huscarls } }
+		localization_key = huscarl
+	}
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_mountaineer } }
+	# 	localization_key = mountaineer
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_zbrojnosh } }
+	# 	localization_key = zbrojnosh
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_sarawit } } #Sarawit - Later Era MAA
+	# 	localization_key = sarawit
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_legionnaires } } #Praetorian
+	# 	localization_key = praetorian
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_rectilinear_schiltron } } #Schiltron - Later Era MAA
+	# 	localization_key = schiltron
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_pike_columns } } #Picchieri - Later Era MAA
+	# 	localization_key = picchieri
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_zweihanders } } #Later Era MAA
+	# 	localization_key = landsknecht
+	# }
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_misty_shields } }
+		localization_key = misty_shields
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_clan_champions } }
+		localization_key = clan_champions
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_winter_wolves } }
+		localization_key = winter_wolves
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_ironborn_reavers } }
+		localization_key = ironborn_reavers
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_dragonkeepers } }
+		localization_key = dragonkeepers
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_weeping_guard } }
+		localization_key = weeping_guard
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_bronze_raiders } }
+		localization_key = bronze_raiders
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_star_carved } }
+		localization_key = star_carved
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_pit_fighters } }
+		localization_key = pit_fighters
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_festival_guards } }
+		localization_key = festival_guards
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_garden_guard } }
+		localization_key = garden_guard
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = infantry
+	}
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_skoutatoi } }
+		localization_key = skoutatoi
+	}
+}
+
+GetRegionalCavalryMAA = {
+	type = character
+	random_valid = yes
+	
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_mulaththamun } }
+	# 	localization_key = mulaththamun
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_hussar } } #Konni
+	# 	localization_key = hussar
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_desert_tactics } } #Chasseur
+	# 	localization_key = chasseur
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_caballeros } } #Caballero
+	# 	localization_key = caballero
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_hobbies } } #Hobelar
+	# 	localization_key = hobelar
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_sahel_horsemen } } #Sahel Horsemen
+	# 	localization_key = sahel_horsemen
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_cataphract } }
+	# 	localization_key = cataphract
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_monaspa } }
+	# 	localization_key = monaspa
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_valets } } #Gendarme - Later Era MAA
+	# 	localization_key = gendarme
+	# }
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_ayrudzi } }
+		localization_key = ayrudzi
+	}
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_conrois } }
+		localization_key = conrois
+	}
+	#AGOT Disabled
+	#text = {
+	#	trigger = { culture = { has_cultural_parameter = unlock_maa_mangudai } }
+	#	localization_key = mangudai
+	#}
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_cataphract_archers } }
+		localization_key = cataphract_archers
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_finger_scouts } }
+		localization_key = finger_scouts
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_green_hand } }
+		localization_key = green_hand
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_summer_knights } }
+		localization_key = summer_knights
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_storm_knights } }
+		localization_key = storm_knights
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_winged_knights } }
+		localization_key = winged_knights
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_barrow_knights } }
+		localization_key = barrow_knights
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_unicorn_riders } }
+		localization_key = unicorn_riders
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_cape_watch } }
+		localization_key = cape_watch
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_sand_steeds } }
+		localization_key = sand_steeds
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_black_wall_chariots } }
+		localization_key = black_wall_chariots
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_disputant_scouts } }
+		localization_key = disputant_scouts
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = cavalry
+	}
+}
+
+GetRegionalSkirmisherMAA = {
+	type = character
+	random_valid = yes
+	
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_horn_warrior } }
+	# 	localization_key = horn_warrior
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_shomer } }
+	# 	localization_key = shomer
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_abudrar } }
+	# 	localization_key = abudrar
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_cultural_parameter = unlock_maa_guinea_warrior } }
+	# 	localization_key = guinea_warrior
+	# }
+	#AGOT Disabled
+	# text = {
+	# 	trigger = { culture = { has_innovation = innovation_adaptive_militia } } #Goedendag - Later Era MAA
+	# 	localization_key = goedendag
+	# }
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_akritai } }
+		localization_key = akritai
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_arbor_marines } }
+		localization_key = arbor_marines
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_marsh_walker } }
+		localization_key = marsh_walker
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_frog_spears } }
+		localization_key = frog_spears
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_sistermen_pirates } }
+		localization_key = sistermen_pirates
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_sea_snakes } }
+		localization_key = sea_snakes
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_greenblood_oars } }
+		localization_key = greenblood_oars
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_she_bears } }
+		localization_key = she_bears
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_purple_sailors } }
+		localization_key = purple_sailors
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_indentured_legion } }
+		localization_key = indentured_legion
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_qarlons_fallen } }
+		localization_key = qarlons_fallen
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_mother_sworn } }
+		localization_key = mother_sworn
+	}
+	#AGOT Added
+	text = {
+		trigger = { culture = { has_cultural_parameter = unlock_maa_green_daggers } }
+		localization_key = green_daggers
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = light_footmen
+	}
+}
+
+GetRandomEmployedMAA = {
+	type = character
+
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = elephant_cavalry
+				value > 0
+			}
+		}
+		localization_key = elephant_cavalry_lowercase
+	}
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = camel_cavalry
+				value > 0
+			}
+		}
+		localization_key = camel_cavalry_lowercase
+	}
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = heavy_cavalry
+				value > 0
+			}
+		}
+		localization_key = light_cavalry_lowercase
+	}
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = archer_cavalry
+				value > 0
+			}
+		}
+		localization_key = horse_archers_lowercase
+	}
+	
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = pikemen
+				value > 0
+			}
+		}
+		localization_key = pikemen_lowercase
+	}
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = heavy_infantry
+				value > 0
+			}
+		}
+		localization_key = heavy_infantry_lowercase
+	}
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = light_cavalry
+				value > 0
+			}
+		}
+		localization_key = heavy_cavalry_lowercase
+	}
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = archers
+				value > 0
+			}
+		}
+		localization_key = archers_lowercase
+	}
+	text = {
+		trigger = {
+			number_maa_regiments_of_base_type = {
+				type = skirmishers
+				value > 0
+			}
+		}
+		localization_key = skirmishers_lowercase
+	}
+	text = {
+		localization_key = levies_lowercase
+	}
+}

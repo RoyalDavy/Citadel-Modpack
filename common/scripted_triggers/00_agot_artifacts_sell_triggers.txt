@@ -1,0 +1,23 @@
+﻿agot_is_valyrian_steel_artifact = {
+	has_variable = valyrian_steel
+}
+
+agot_is_dragon_egg_artifact = {
+	has_variable = dragon_egg
+}
+
+agot_is_unique_throne_artifact = {
+	artifact_type = throne_special
+}
+
+agot_is_historical_unique_artifact = {
+	has_variable = historical_unique_artifact
+}
+
+# Selling special artifacts to the merchant is controlled via events
+agot_is_special_artifact = {
+	OR = {
+		agot_is_valyrian_steel_artifact = yes
+		agot_is_dragon_egg_artifact = yes
+	}
+}

@@ -1,0 +1,188 @@
+﻿is_valid_coronation_special_guest_trigger = {
+	OR = {
+		is_ai = no
+		is_busy_in_events_unlocalised = no
+	}
+	is_alive = yes
+	is_human = yes
+	is_at_war = no
+	is_imprisoned = no
+}
+
+needs_crown_for_coronation_trigger = {
+	any_character_artifact = {
+		artifact_slot_type = helmet
+	}
+}
+
+iron_throne_valid_trigger = {
+	exists = title:e_the_iron_throne.holder
+	has_title = title:e_the_iron_throne
+}
+
+activity_coronation_is_valid_guest = {
+	age >= 3
+	is_at_war = no
+	is_in_army = no
+	is_imprisoned = no
+	NOR = {
+		exists = involved_activity
+		has_trait = incapable
+	}
+}
+
+coronation_extra_victim_valid_trigger = {
+	is_ai = yes
+	is_adult = yes
+	NOR = {
+		this = root
+		this = scope:1050_victim
+	}
+	NOT = { has_character_flag = busy_in_banquet_event }
+}
+
+coronation_1000_valid_relative_trigger = {
+	is_alive = yes
+	is_ai = yes
+	is_participant_in_activity = scope:activity
+	age >= 16
+	location = root.location
+	NOT = { has_character_flag = busy_in_coronation_event }
+}
+
+coronation_1310_friend_trigger = {
+	any_relation = { type = friend this = root }
+	is_adult = yes
+	is_ai = yes
+	NOT = { this = root }
+}
+
+coronation_1320_forgiving_rival_trigger = {
+	is_adult = yes
+	is_ai = yes
+	any_relation = { type = rival this = root }
+	NOR = {
+		has_character_flag = busy_in_banquet_event
+		has_trait = vengeful
+		has_trait = arrogant
+		any_relation = { type = nemesis this = root }
+	}
+	OR = {
+		has_trait = forgiving
+		has_trait = humble
+		has_trait = compassionate
+		AND = {
+			has_trait = zealous
+			this.faith = { trait_is_virtue = forgiving }
+		}
+		trait_compatibility = {
+			target = root
+			value >= medium_positive_trait_compatibility # We're not so different, you and I...
+		}
+	}
+}
+
+coronation_2000_valid_friend = {
+	feast_default_adult_participant_trigger = yes
+	drinks_alcohol_trigger = yes
+	OR = { #they know the person
+		is_close_family_or_spouse_of_root_trigger = yes
+		has_any_moderate_good_relationship_with_character_trigger = { CHARACTER = root.intent_target }
+	}
+	NOT = { is_spouse_of = root }
+	NOT = { is_close_family_of = root }
+}
+
+coronation_2000_is_valiant = {
+	OR = {
+		has_lifestyle = martial_lifestyle
+		prowess >= high_skill_rating
+		martial >= high_skill_rating
+		has_trait = brave
+		has_trait = reckless
+		has_trait = gallant
+		has_trait = wrathful
+		has_trait = overseer
+		has_trait = strategist
+		has_trait = lifestyle_hunter
+		has_trait = lifestyle_blademaster
+	}
+}
+
+coronation_2000_is_nerd = {
+	OR = {
+		has_lifestyle = learning_lifestyle
+		learning >= high_skill_rating
+		has_trait = theologian
+		has_trait = scholar
+		has_trait = diligent
+		has_trait = shrewd
+	}
+}
+
+coronation_2000_is_social = {
+	OR = {
+		has_lifestyle = diplomacy_lifestyle
+		diplomacy >= high_skill_rating
+		has_trait = lifestyle_reveler
+		has_trait = gregarious
+		has_trait = august
+		has_trait = diplomat
+		has_trait = drunkard
+		has_trait = trusting
+		has_trait = compassionate
+	}
+}
+
+coronation_2000_is_fishy = {
+	OR = {
+		has_lifestyle = intrigue_lifestyle
+		intrigue >= high_skill_rating
+		has_trait = callous
+		has_trait = cynical
+		has_trait = arbitrary
+		has_trait = deceitful
+		has_trait = schemer
+		has_trait = torturer
+		has_trait = greedy
+		has_trait = vengeful
+		has_trait = ambitious
+		has_trait = disloyal
+	}
+}
+
+coronation_2000_is_lustful = {
+	OR = {
+		has_trait = lustful
+		has_trait = seducer
+		has_trait = rakish
+		has_trait = fornicator
+		has_trait = adulterer
+		has_trait = sodomite
+		has_trait = deviant
+	}
+}
+
+coronation_2010_impressed = {
+	OR = { #what kind of people would be impressed by a legendary animal?
+		has_trait = gregarious
+		has_trait = brave
+		has_trait = lifestyle_reveler
+		has_trait = lifestyle_hunter
+		has_trait = drunkard
+		has_trait = gallant #white animals were a pretty chivalrous thing to find/hunt
+	}
+}
+
+coronation_2020_would_fall_trigger = {
+	is_adult = yes
+	is_alive = yes
+	feast_default_adult_participant_trigger = yes
+	drinks_alcohol_trigger = yes
+	OR = {
+		has_trait = lifestyle_reveler
+		has_trait = drunkard
+		has_trait = gregarious
+		has_trait = arbitrary
+	}
+}

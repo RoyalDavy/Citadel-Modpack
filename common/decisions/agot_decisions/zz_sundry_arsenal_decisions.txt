@@ -1,0 +1,31 @@
+﻿sundry_arsenal_decision = {
+	ai_check_interval = 0
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_herbs.dds"
+	}
+
+	desc = sundry_arsenal_decision_desc
+
+	selection_tooltip = sundry_arsenal_decision_tooltip
+
+	is_shown = {
+		OR = {
+			sundry_has_armor = yes
+			sundry_armor_potential_trigger = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = sundry_arsenal_decision_effect
+		trigger_event = sundry_arsenal_decision_event.0001
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+	
+}

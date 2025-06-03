@@ -1,0 +1,6 @@
+﻿dynn_Estatis = {
+	pattern = "val_pattern_17.dds"
+	color1 = "agot_blue_sky"
+	color2 = "agot_indigo"
+	color3 = rgb { 229 255 253 }
+}

@@ -1,0 +1,157 @@
+﻿#Realm Maintenance events
+
+namespace = agot_realm_maintenance
+
+agot_realm_maintenance.0001 = {
+	hidden = yes
+
+	trigger = {
+		scope:landed_title = { tier = tier_empire }
+		exists = title:e_the_iron_throne.holder
+		scope:landed_title = {
+			OR = {
+				AND = {
+					this = title:e_dorne
+					exists = title:k_dorne.holder
+					title:k_dorne.holder.top_liege = title:e_the_iron_throne.holder
+				}
+				AND = {
+					this = title:e_the_iron_islands
+					exists = title:k_the_iron_islands.holder
+					title:k_the_iron_islands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+				AND = {
+					this = title:e_the_north
+					exists = title:k_the_north.holder
+					title:k_the_north.holder.top_liege = title:e_the_iron_throne.holder
+				}
+				AND = {
+					this = title:e_the_reach
+					exists = title:k_the_reach.holder
+					title:k_the_reach.holder.top_liege = title:e_the_iron_throne.holder
+				}
+				AND = {
+					this = title:e_the_riverlands
+					exists = title:k_the_riverlands.holder
+					title:k_the_riverlands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+				AND = {
+					this = title:e_the_stormlands
+					exists = title:k_the_stormlands.holder
+					title:k_the_stormlands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+				AND = {
+					this = title:e_the_vale
+					exists = title:k_the_vale.holder
+					title:k_the_vale.holder.top_liege = title:e_the_iron_throne.holder
+				}
+				AND = {
+					this = title:e_the_westerlands
+					exists = title:k_the_westerlands.holder
+					title:k_the_westerlands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+				AND = {
+					this = title:e_blackwater_bay
+					exists = title:k_the_crownlands.holder
+					title:k_the_crownlands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_dorne
+					exists = title:k_dorne.holder
+					title:k_dorne.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_dorne = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+		else_if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_the_iron_islands
+					exists = title:k_the_iron_islands.holder
+					title:k_the_iron_islands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_the_iron_islands = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+		else_if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_the_north
+					exists = title:k_the_north.holder
+					title:k_the_north.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_the_north = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+		else_if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_the_reach
+					exists = title:k_the_reach.holder
+					title:k_the_reach.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_the_reach = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+		else_if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_the_riverlands
+					exists = title:k_the_riverlands.holder
+					title:k_the_riverlands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_the_riverlands = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+		else_if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_the_stormlands
+					exists = title:k_the_stormlands.holder
+					title:k_the_stormlands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_the_stormlands = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+		else_if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_the_vale
+					exists = title:k_the_vale.holder
+					title:k_the_vale.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_the_vale = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+		else_if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_the_westerlands
+					exists = title:k_the_westerlands.holder
+					title:k_the_westerlands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_the_westerlands = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+		else_if = {
+			limit = {
+				AND = {
+					scope:landed_title = title:e_blackwater_bay
+					exists = title:k_the_crownlands.holder
+					title:k_the_crownlands.holder.top_liege = title:e_the_iron_throne.holder
+				}
+			}
+			title:k_the_crownlands = { set_de_jure_liege_title = title:e_the_iron_throne }
+		}
+	}
+}
+
+
+

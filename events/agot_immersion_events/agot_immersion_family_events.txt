@@ -1,0 +1,335 @@
+﻿
+namespace = agot_immersion_family
+
+#agot_immersion_family.0001 - Liege decides whether to intervene
+#agot_immersion_family.0002 - Notify Attackers
+#agot_immersion_family.0003 - Notify Defenders
+
+
+
+
+### Should I demand a title?
+
+agot_immersion_family.0001 = {
+	title = agot_immersion_family.0001.t
+	theme = alliance
+	left_portrait = {
+		character = scope:familymember
+		#animation = marshal
+	}
+
+	
+	override_background = {
+		reference = throne_room
+	}
+	desc = "agot_immersion_family.0001_desc"
+	
+	immediate = {
+	scope:familymember = { remove_character_flag = needs_a_county }
+	scope:titlegiver = {
+	ordered_sub_realm_title = { 
+		limit = { 
+			holder = scope:titlegiver
+		NOR = { this = title:k_dragonstone
+				this = title:d_dragonstone
+				this = title:c_dragonstone
+
+		}
+		NOT = { is_leased_out = yes }
+		NOT = { this = scope:titlegiver.primary_title }
+		NOT = { this = scope:titlegiver.capital_county }
+		NOT = { this = scope:titlegiver.capital_county.duchy }
+		NOT = { this = scope:titlegiver.capital_county.kingdom }
+		NOT = { is_capital_barony = yes }
+		}
+	order_by = tier
+	max = 3
+	if = { limit = { NOT = { exists = scope:title1 } } save_scope_as = title1}
+	else_if = { limit = { NOT = { exists = scope:title2 } } save_scope_as = title2}
+	else_if = { limit = { NOT = { exists = scope:title3 } } save_scope_as = title3}
+	
+	}
+	
+	}
+	
+	}
+	
+	#### I want title 1
+	option = {
+		name =  agot_immersion_family.0001.a
+		custom_tooltip =  agot_immersion_family.0001.a.tt
+		trigger = { exists = scope:title1 }
+
+		if = { limit = { NOT = { scope:title1 = { any_de_jure_county = { holder = scope:titlegiver } } } } scope:familymember = { add_character_flag = needs_a_county } } 
+		scope:title1 = { every_de_jure_county = { limit = { holder = scope:titlegiver
+	NOT = { this = scope:title1 }
+		}
+		scope:familymember = { get_title = prev } }
+		if = { limit = { scope:familymember = { has_character_flag = needs_a_county } }  scope:titlegiver = { ordered_sub_realm_county = { limit = { scope:title1 = { is_de_jure_liege_or_above_target = prev } } order_by = development_level position = 30 scope:familymember = { get_title = prev } } } }
+
+
+
+		
+		
+	scope:familymember = { get_title = scope:title1 }
+		every_dejure_vassal_title_holder = { 
+		limit = { NOT = { this = scope:titlegiver }
+						liege = scope:titlegiver 
+		 }
+		
+				create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = change
+	}
+	
+		change_liege = {
+			liege = scope:familymember
+			change = scope:change
+		}
+	
+	resolve_title_and_vassal_change = scope:change
+		}
+		}
+		
+		scope:familymember = {  add_opinion = {
+			target = scope:titlegiver
+			modifier = grateful_opinion  
+			opinion = 60
+					}
+					}
+		
+		
+				ai_chance = {
+			base = 20
+			modifier = {
+			add = 60 # To remove something you just add a negative number (5 + -10 = -5)
+		OR = {
+			ai_boldness <= 0
+			ai_honor >= 50
+			ai_greed <= -50	
+			
+		}
+		
+		
+		}
+			
+		}
+	
+							
+	}
+	
+#### I want title 2
+option = {
+	name =  agot_immersion_family.0001.b
+	trigger = { exists = scope:title2 }
+	
+		if = { limit = { NOT = { scope:title2 = { any_de_jure_county = { holder = scope:titlegiver } } } } scope:familymember = { add_character_flag = needs_a_county } } 
+		scope:title2 = { every_de_jure_county = { limit = { holder = scope:titlegiver
+	NOT = { this = scope:title2 }
+		}
+		scope:familymember = { get_title = prev } }
+		if = { limit = { scope:familymember = { has_character_flag = needs_a_county } }  scope:titlegiver = { ordered_sub_realm_county = { limit = { scope:title2 = { is_de_jure_liege_or_above_target = prev } } order_by = development_level position = 30 scope:familymember = { get_title = prev } } } }
+
+
+
+		
+		
+	scope:familymember = { get_title = scope:title2 }
+		every_dejure_vassal_title_holder = { 
+		limit = { NOT = { this = scope:titlegiver }
+						liege = scope:titlegiver 
+		 }
+		
+				create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = change
+	}
+	
+		change_liege = {
+			liege = scope:familymember
+			change = scope:change
+		}
+	
+	resolve_title_and_vassal_change = scope:change
+		}
+		}
+	scope:familymember = {  add_opinion = {
+			target = scope:titlegiver
+			modifier = grateful_opinion  
+			opinion = 50
+					}
+					}
+			ai_chance = {
+		base = 20
+		modifier = {
+			add = 50 # To remove something you just add a negative number (5 + -10 = -5)
+		OR = {
+			ai_boldness <= 0
+			ai_honor >= 25
+			ai_greed <= 0	
+			
+		}
+		
+		
+		}
+		
+	}
+
+						
+}
+
+#### I want title 3
+option = {
+	name =  agot_immersion_family.0001.c
+	trigger = { exists = scope:title3 }
+	
+		if = { limit = { NOT = { scope:title3 = { any_de_jure_county = { holder = scope:titlegiver } } } } scope:familymember = { add_character_flag = needs_a_county } } 
+		scope:title3 = { every_de_jure_county = { limit = { holder = scope:titlegiver
+	NOT = { this = scope:title3 }
+		}
+		scope:familymember = { get_title = prev } }
+		if = { limit = { scope:familymember = { has_character_flag = needs_a_county } }  scope:titlegiver = { ordered_sub_realm_county = { limit = { scope:title3 = { is_de_jure_liege_or_above_target = prev } } order_by = development_level position = 30 scope:familymember = { get_title = prev } } } }
+
+
+
+		
+		
+	scope:familymember = { get_title = scope:title3 }
+		every_dejure_vassal_title_holder = { 
+		limit = { NOT = { this = scope:titlegiver }
+						liege = scope:titlegiver 
+		 }
+		
+				create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = change
+	}
+	
+		change_liege = {
+			liege = scope:familymember
+			change = scope:change
+		}
+	
+	resolve_title_and_vassal_change = scope:change
+		}
+		}
+	
+		scope:familymember = {  add_opinion = {
+			target = scope:titlegiver
+			modifier = grateful_opinion  
+			opinion = 40
+					}
+					}
+			ai_chance = {
+		base = 30
+		modifier = {
+			add = 50 # To remove something you just add a negative number (5 + -10 = -5)
+		OR = {
+			ai_compassion <= 0
+			ai_greed >= 25	
+			
+		}
+		
+		
+		}
+		
+	}
+
+						
+}
+
+### I will not grant you this!
+option = {
+		name =  agot_immersion_family.0001.d
+		custom_tooltip =  agot_immersion_family.0001.d.tt
+		scope:familymember = {  add_opinion = {
+			target = scope:titlegiver
+			modifier = greedy_family_opinion  
+					}
+					}
+		hidden_effect = {
+	
+		house = { every_house_member = { add_opinion = {
+			target = scope:titlegiver
+			modifier = greedy_family_opinion  
+					} } }
+		scope:familymember = { primary_spouse = { add_opinion = {
+			target = scope:titlegiver
+			modifier = greedy_family_opinion  
+					} }
+				mother = { 
+				add_opinion = {
+			target = scope:titlegiver
+			modifier = greedy_family_opinion  
+					}
+					}
+				
+				
+				}
+				}
+				
+			ai_chance = {
+		base = 1
+		modifier = {
+			add = 100 # To remove something you just add a negative number (5 + -10 = -5)
+		OR = {
+			ai_compassion <= -50
+			ai_greed >= 50	
+			
+		}
+		
+		
+		}
+		
+	}
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+agot_immersion_family.0002 = {
+	type = letter_event
+	sender = scope:internal_conflict_liege
+	opening = {
+		desc = "agot_immersion_family.0002_opening"
+	}
+	desc = "agot_immersion_family.0002_desc"
+	trigger = { exists = scope:internal_conflict_defender }
+
+	#### Oh no!
+	option = {
+		name =  agot_immersion_family.0002.a
+		custom_tooltip =  agot_immersion_family.0002.a.tt
+		
+	}
+		
+	
+	
+	
+}
+agot_immersion_family.0003 = {
+	type = letter_event
+	sender = scope:internal_conflict_liege
+	opening = {
+		desc = "agot_immersion_family.0003_opening"
+	}
+	desc = "agot_immersion_family.0003_desc"
+
+
+	#### Great News!
+	option = {
+		name =  agot_immersion_family.0003.a
+		custom_tooltip =  agot_immersion_family.0002.a.tt
+		
+	}
+		
+	
+	
+	
+}

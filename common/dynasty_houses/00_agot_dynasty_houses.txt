@@ -1,0 +1,463 @@
+﻿#Most Devout
+house_Most_Devout = {
+	name = "dynn_Most_Devout"
+	dynasty = dynn_Most_Devout
+}
+
+### Arryn
+# Arryn of Gulltown
+house_ArrynGT = {
+	name = "dynn_Arryn"
+	dynasty = dynn_Arryn
+	motto = dynn_Arryn_motto
+}
+
+### Baelish
+# Baelish of Harrenhal
+house_BaelishHH = {
+	name = "dynn_Baelish"
+	dynasty = dynn_Baelish
+	motto = dynn_Baelish_motto
+}
+
+### Durrandon
+# Baratheon of King's Landing
+house_BaratheonKL = {
+	name = "dynn_Baratheon"
+	dynasty = dynn_Baratheon
+	motto = dynn_Durrandon_motto
+}
+# Baratheon of Dragonstone / Rhllor
+house_BaratheonDS = {
+	name = "dynn_Baratheon"
+	dynasty = dynn_Baratheon
+	motto = dynn_Durrandon_motto
+}
+# Baratheon of Storm's End / Renly
+house_BaratheonSE = {
+	name = "dynn_Baratheon"
+	dynasty = dynn_Baratheon
+	motto = dynn_Durrandon_motto
+}
+
+# Blackwater
+house_Blackwater = {
+	name = "dynn_Blackwater"
+	dynasty = dynn_Blackwater
+	motto = dynn_Blackwater_motto
+}
+
+# Bolling
+house_Bolling = {
+	name = "dynn_Bolling"
+	dynasty = dynn_Durrandon
+	motto = "dynn_Bolling_motto"
+}
+
+# Wensington
+house_Wensington = {
+	name = "dynn_Wensington"
+	dynasty = dynn_Durrandon
+	motto = dynn_Wensington_motto # Sound the Charge
+}
+
+### Frey
+# Crossing
+house_Crossing = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Crossing"
+	dynasty = dynn_Frey
+	motto = dynn_Frey_motto
+}
+
+### Darklyn
+# Darke
+house_Darke = {
+	name = "dynn_Darke"
+	dynasty = dynn_Darklyn
+	motto = dynn_Darke_motto
+}
+house_Darkwood = {
+	name = "dynn_Darkwood"
+	dynasty = dynn_Darklyn
+	motto = dynn_Darkwood_motto
+}
+house_Dargood = {
+	name = "dynn_Dargood"
+	dynasty = dynn_Darklyn
+	motto = dynn_Dargood_motto
+}
+
+### Hoare
+# Salt
+house_Salt = {
+	name = "dynn_Salt"
+	dynasty = dynn_Hoare
+	motto = dynn_Salt_motto
+}
+
+### Farwynd
+# Farwynd of the Lonley Light
+house_FarwyndLL = {
+	name = "dynn_Farwynd"
+	dynasty = dynn_Farwynd
+	motto = dynn_FarwyndLL_motto
+}
+# Farwynd of the Deadlock
+house_FarwyndDL = {
+	name = "dynn_Farwynd"
+	dynasty = dynn_Farwynd
+	motto = dynn_FarwyndDL_motto
+}
+
+### Flint
+# Flint of Flint's Finger
+house_FlintFF = {
+	name = "dynn_Flint"
+	dynasty = dynn_Flint
+	motto = dynn_FlintFF_motto
+}
+# Flint of Widow's Watch
+house_FlintWW = {
+	name = "dynn_Flint"
+	dynasty = dynn_Flint
+	motto = dynn_FlintWW_motto
+}
+
+### Goodbrother
+# Goodbrother of Corpse Lake
+house_GoodbrotherCL = {
+	name = "dynn_Goodbrother"
+	dynasty = dynn_Goodbrother
+	motto = dynn_GoodbrotherCL_motto
+}
+# Goodbrother of Crow Spike Keep
+house_GoodbrotherCPK = {
+	name = "dynn_Goodbrother"
+	dynasty = dynn_Goodbrother
+	motto = dynn_GoodbrotherCP_motto
+}
+# Goodbrother of Downdelving
+house_GoodbrotherDD = {
+	name = "dynn_Goodbrother"
+	dynasty = dynn_Goodbrother
+	motto = dynn_GoodbrotherDD_motto
+}
+# Goodbrother of Orkmont
+house_GoodbrotherOM = {
+	name = "dynn_Goodbrother"
+	dynasty = dynn_Goodbrother
+	motto = dynn_GoodbrotherOM_motto
+}
+# Goodbrother of Shatterstone
+house_GoodbrotherSS = {
+	name = "dynn_Goodbrother"
+	dynasty = dynn_Goodbrother
+	motto = dynn_GoodbrotherSS_motto
+}
+
+### Lannister
+# Lannister of Lannisport
+house_LannisterLannisport = {
+	name = "dynn_Lannister"
+	dynasty = dynn_Lannister
+	motto = dynn_Lannister_motto
+}
+house_Lanny = {
+	name = "house_Lanny"
+	dynasty = dynn_Lannister
+	motto = dynn_Lanny_motto
+}
+house_Lannett = {
+	name = "house_Lannett"
+	dynasty = dynn_Lannister
+	motto = dynn_Lannett_motto
+}
+house_Lantell = {
+	name = "house_Lantell"
+	dynasty = dynn_Lannister
+	motto = dynn_Lantell_motto
+}
+
+### Reyne
+# Vikary
+house_Vikary = {
+	name = "dynn_Vikary"
+	dynasty = dynn_Reyne
+	motto = dynn_Vikary_motto
+}
+
+### Foote
+# Foote of Nightsong
+house_FooteNG = {
+	name = "dynn_FooteNG"
+	dynasty = dynn_Foote
+	motto = dynn_FooteNG_motto
+}
+
+### Royce
+# Royce of the Gates of the Moon
+house_RoyceGOTM = {
+	name = "dynn_Royce"
+	dynasty = dynn_Royce
+	motto = dynn_Royce_motto
+}
+
+### Shett
+# Shett of Gulltown
+house_ShettGT = {
+	name = "dynn_Shett"
+	dynasty = dynn_Shett
+	motto = dynn_ShettGT_motto
+}
+
+### Stark
+# Greystark
+house_Greystark = {
+	name = "house_Greystark"
+	dynasty = dynn_Stark
+	motto = dynn_Greystark_motto
+}
+# Karstark
+house_Karstark = {
+	name = "dynn_Karstark"
+	dynasty = dynn_Stark
+	motto = dynn_Karstark_motto
+}
+# Cassel
+house_Cassel = {
+	name = "dynn_Cassel"
+	dynasty = dynn_Stark
+	motto = dynn_Cassel_motto
+}
+
+### Targaryen
+# Blackfyre
+house_Blackfyre = {
+	name = "dynn_Blackfyre"
+	dynasty = dynn_Targaryen
+	motto = dynn_Blackfyre_motto
+}
+# of Essos
+house_Essos = {
+	prefix = "dynnp_of"
+	name = "dynn_Essos"
+	dynasty = dynn_Essos
+	motto = dynn_Targaryen_motto
+}
+# Brightflame
+house_Brightflame = {
+	name = "dynn_Brightflame"
+	dynasty = dynn_Targaryen
+	# motto = dynn_Targaryen_motto
+}
+
+### Fossoway
+# Fossoway of New Barrel
+house_Fossoway_New_Barrel = {
+	name = "dynn_Fossoway"
+	dynasty = dynn_Fossoway
+	motto = dynn_Fossoway_motto # A Taste of Glory
+}
+
+### Gardener
+# Oldflowers
+house_Oldflowers = {
+	name = "dynn_Oldflowers"
+	dynasty = dynn_Gardener
+	motto = dynn_Oldflowers_motto
+}
+
+### Redwyne
+# Goldwyne
+house_Goldwyne = {
+	name = "dynn_Goldwyne"
+	dynasty = dynn_Redwyne
+	motto = dynn_Goldwyne_motto
+}
+
+### Velaryon
+# Longwaters
+house_Longwaters = {
+	name = "dynn_Longwaters"
+	dynasty = dynn_Velaryon
+	motto = dynn_Velaryon_motto
+}
+
+### Quince
+# Greyseed
+house_Stoneseed = {
+	name = "dynn_Stoneseed"
+	dynasty = dynn_Quince
+	motto = dynn_Quince_motto
+}
+
+### Brune
+# Brownhollow
+house_Brownhollow = {
+	name = "dynn_Brownhollow"
+	dynasty = dynn_Brune
+	motto = dynn_Brownhollow_motto
+}
+
+### Kenning
+# Kenning
+house_KenningK = {
+	name = "dynn_Kenning"
+	dynasty = dynn_Kenning
+	motto = dynn_Kenning_motto
+}
+
+### Martell
+# Nymeros-Martell (just called "Martell")
+house_Martell = {
+	name = "house_Martell"
+	dynasty = dynn_Martell
+	motto = dynn_Martell_motto
+}
+
+### Vance
+# Vance of Atranta
+house_VanceA = {
+	name = "dynn_Vance"
+	dynasty = dynn_Vance
+	motto = dynn_VanceA_motto
+}
+
+### Aranys
+# Telaryen
+house_Telaryen = {
+	name = "dynn_Telaryen"
+	dynasty = dynn_Aranys
+	motto = dynn_Aranys_motto
+}
+
+### Warrick
+# Warrick of North
+house_Warrick_North = {
+	name = "dynn_Warrick"
+	dynasty = dynn_Warrick
+}
+
+#Seaworth
+house_Seaworth = {
+	name = "dynn_Seaworth"
+	dynasty = dynn_Seaworth
+	motto = dynn_Seaworth_motto
+}
+
+### Forester
+# Kingsblood
+house_Kingsblood = {
+	name = "house_Kingsblood"
+	dynasty = dynn_Forester
+}
+
+### Belmore
+# Ringstone
+house_Ringstone = {
+	name = "house_Ringstone"
+	dynasty = dynn_Belmore
+	motto = dynn_Belmore_Ringstone_motto
+}
+
+### Lynderly
+# Lynderly of Sunken Castle
+house_LynderlySC = {
+	name = "dynn_Lynderly"
+	dynasty = dynn_Lynderly
+	motto = dynn_LynderlySC_motto
+}
+
+### Mallister
+# Festering
+house_Festering = {
+	name = "dynn_Festering"
+	dynasty = dynn_Mallister
+}
+
+### Fowler
+# Cage of Cadgemont
+house_Cage = {
+	name = "dynn_Cage"
+	dynasty = dynn_Fowler
+	forced_coa_religiongroup = "rhoynish"
+}
+
+### Rogare
+# Vernal
+house_Vernal = {
+	name = "house_Vernal"
+	dynasty = dynn_Rogare
+}
+
+### Draz
+# Gold Draz
+house_Gold_Draz = {
+	name = "house_Gold_Draz"
+	dynasty = dynn_Draz
+}
+# Red Draz
+house_Red_Draz = {
+	name = "house_Red_Draz"
+	dynasty = dynn_Draz
+}
+
+### Uhoris
+# Altoris of Tyrosh
+house_Altoris = {
+	name = "house_Altoris"
+	dynasty = dynn_Uhoris
+}
+
+# Hammer
+house_Hammer = {
+	name = "dynn_Hammer"
+	dynasty = dynn_Hammer
+}
+house_White = {
+	name = "dynn_White"
+	dynasty = dynn_White
+}
+house_Farseed = {
+	name = "dynn_Farseed"
+	dynasty = dynn_Farseed
+}
+
+# Scallard
+house_Scallard = {
+	name = "dynn_Scallard"
+	dynasty = dynn_Scallard
+	motto = dynn_Scallard_motto
+}
+
+#Historical Characters
+house_Tall = {
+	name = "dynn_Tall"
+	dynasty = dynn_Tall
+}
+
+house_Mopatis = {
+	name = "dynn_Mopatis"
+	dynasty = dynn_Mopatis
+}
+
+house_Skirling_Pass = {
+	name = "dynn_Skirling_Pass"
+	dynasty = dynn_Skirling_Pass
+}
+
+house_Ruddy_Hall = {
+	name = "dynn_Ruddy_Hall"
+	dynasty = dynn_Ruddy_Hall
+}
+
+house_Underleaf = {
+	name = "dynn_Underleaf"
+	dynasty = dynn_Underleaf
+}
+
+house_Xho = {
+	name = "dynn_Xho"
+	dynasty = dynn_Xho
+}

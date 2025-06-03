@@ -1,0 +1,421 @@
+
+
+#targaryen legends
+
+daeron_i = {
+ 	type = heroic
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date >= 8161.6.9
+ 		OR = {
+		dynasty = dynasty:dynn_Targaryen
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = young_dragon
+ 	chronicle_properties = {
+ 		ancestor = character:Targaryen_81
+ 		title = title:e_the_iron_throne
+ 	}
+}
+
+aegon_i = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 8037.9.9
+ 		OR = {
+		dynasty = dynasty:dynn_Targaryen
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+
+ 	chronicle = the_conqueror
+ 	chronicle_properties = {
+ 		ancestor = character:Targaryen_27
+ 		title = title:e_the_iron_throne
+ 	}
+}
+
+jaehaerys_i = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 8103.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Targaryen
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+
+ 	chronicle = the_conciliator
+ 	chronicle_properties = {
+ 		ancestor = character:Targaryen_35
+ 		title = title:e_the_iron_throne
+ 	}
+}
+
+daenys_dreamer = {
+ 	type = heroic
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 7930.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Targaryen
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = the_dreamer
+ 	chronicle_properties = {
+ 		ancestor = character:Targaryen_15
+ 		title = title:d_dragonstone
+		original_region = geographical_region:world_westeros_dragonstone_island
+ 	}
+}
+
+daemon_blackfyre = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 8220.1.1
+ 		OR = {
+		house = house:house_Blackfyre
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = black_dragon
+ 	chronicle_properties = {
+ 		ancestor = character:Targaryen_94
+ 		title = title:e_the_iron_throne
+ 	}
+}
+
+corlys_velaryon = {
+ 	type = heroic
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date >= 8106.4.18
+ 		OR = {
+		dynasty = dynasty:dynn_Velaryon
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = sea_snake
+ 	chronicle_properties = {
+ 		ancestor = character:Velaryon_31
+ 		title = title:d_driftmark
+ 	}
+}
+
+#stark legends
+
+brandon_builder = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 110.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Stark
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = the_builder
+ 	chronicle_properties = {
+ 		ancestor = character:Stark_12
+ 		title = title:k_the_north
+ 	}
+}
+
+theon_stark = {
+ 	type = heroic
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 6638.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Stark
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = hungry_wolf
+ 	chronicle_properties = {
+ 		ancestor = character:Stark_21
+ 		title = title:k_the_north
+ 	}
+}
+
+cregan_stark = {
+ 	type = heroic
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 8173.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Stark
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = cregan_stark
+ 	chronicle_properties = {
+ 		ancestor = character:Stark_86
+ 		title = title:k_the_north
+ 	}
+}
+
+lann_the_clever = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 370.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Lannister
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = the_clever
+ 	chronicle_properties = {
+ 		ancestor = character:Lannister_29
+ 		title = title:k_the_westerlands
+ 	}
+}
+
+durran_godsgrief = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 90.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Durrandon
+		dynasty = dynasty:dynn_Baratheon
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = godsgrief
+ 	chronicle_properties = {
+ 		ancestor = character:Durrandon_1
+ 		title = title:k_the_stormlands
+ 	}
+}
+
+garth_greenhand = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 80.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Gardener
+		dynasty = dynasty:dynn_Oakheart
+		dynasty = dynasty:dynn_Redwyne
+		dynasty = dynasty:dynn_Fossoway
+		dynasty = dynasty:dynn_Hightower
+		dynasty = dynasty:dynn_Bulwer
+		dynasty = dynasty:dynn_Crane
+		dynasty = dynasty:dynn_Beesbury
+		dynasty = dynasty:dynn_Rowan
+		dynasty = dynasty:dynn_Florent
+		dynasty = dynasty:dynn_Ball
+		dynasty = dynasty:dynn_Peake
+		dynasty = dynasty:dynn_Tarly
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = garth_greenhand
+ 	chronicle_properties = {
+ 		ancestor = character:Gardener_1
+ 		title = title:k_the_reach
+ 	}
+}
+
+artys_arryn = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 6563.1.1
+ 		OR = {
+		dynasty = dynasty:dynn_Arryn
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = falcon_knight
+ 	chronicle_properties = {
+ 		ancestor = character:Arryn_15
+ 		title = title:k_the_vale
+ 	}
+}
+
+princess_nymeria = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+ 		OR = {
+		dynasty = dynasty:dynn_Martell
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = princess_nymeria
+ 	chronicle_properties = {
+ 		ancestor = character:Martell_24
+ 		title = title:k_dorne
+ 	}
+}
+
+red_kings = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+ 		OR = {
+		dynasty = dynasty:dynn_Bolton
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = red_kings
+ 	chronicle_properties = {
+ 		ancestor = character:Bolton_7
+ 		title = title:d_the_dreadfort
+ 		title = title:k_the_north
+ 	}
+}
+
+tywin_lannister = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date > 8261.11.1
+ 		OR = {
+		dynasty = dynasty:dynn_Lannister
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = tywin_lannister
+ 	chronicle_properties = {
+ 		ancestor = character:Lannister_1
+ 		title = title:k_the_westerlands
+ 	}
+}
+
+
+sword_of_the_morning = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+ 		OR = {
+		dynasty = dynasty:dynn_Dayne
+ 		}
+ 	}
+ 	is_valid = {
+		custom_tooltip = {
+			text = sword_of_the_morning_desc
+			has_character_flag = is_sword_of_morning
+		}
+	}
+
+ 	chronicle = sword_of_the_morning
+	chronicle_properties = {
+ 		ancestor = character:Dayne_15
+ 		title = title:d_torrentine
+	}
+}
+
+bronze_kings = {
+ 	type = legitimizing
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+ 		OR = {
+		dynasty = dynasty:dynn_Royce
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = bronze_kings
+ 	chronicle_properties = {
+ 		ancestor = character:Royce_11
+ 		title = title:d_runestone
+ 	}
+}
+
+dalton_greyjoy = {
+ 	type = heroic
+ 	quality = famed
+ 	is_shown = {
+ 		has_dlc_feature = legends
+		game_start_date >= 8133.12.1
+ 		OR = {
+		dynasty = dynasty:dynn_Greyjoy
+ 		}
+ 	}
+ 	is_valid = {
+ 		prestige_level >= high_prestige_level
+ 	}
+
+ 	chronicle = red_kraken
+ 	chronicle_properties = {
+ 		ancestor = character:Greyjoy_59
+ 		title = title:k_the_iron_islands
+ 	}
+}

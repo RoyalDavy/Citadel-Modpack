@@ -1,0 +1,80 @@
+﻿poi_exploration_target_MHF = {
+	build_province_list = {
+		province:3038 = {
+			add_to_list = provinces
+		}
+	}
+
+	on_visit = {
+		trigger_event = {
+			id = agot_travel_events_mhf.1000
+		}
+		if = {
+			limit = {
+				NOT = { scope:province.county.holder = root } #If I own it then it does not make sense to visit it.
+			}
+			custom_tooltip = poi_exploration_event_tt
+		}
+	}
+}
+
+poi_exploration_target_tombs_MHF = {
+	build_province_list = {
+		province:2143 = {
+			add_to_list = provinces
+		}
+	}
+
+	on_visit = {
+		trigger_event = {
+			id = agot_travel_events_mhf.2000
+		}
+		if = {
+			limit = {
+				NOT = { scope:province.county.holder = root } #If I own it then it does not make sense to visit it.
+			}
+			custom_tooltip = poi_exploration_event_tt
+		}
+	}
+}
+
+agot_poi_historical_battle_MHF = {
+	build_province_list = {
+		# STATIC ONES 
+		province:3070 = { add_to_list = provinces } # Butcher at Boneroot
+	}
+
+	on_visit = {
+		send_interface_toast = {
+			title = agot_poi_historical_battle.visit_MHF
+			left_icon = root
+			custom_tooltip = agot_poi_historical_battle.visit_MHF.tt
+		}
+		add_martial_lifestyle_xp = travel_medium_xp
+		traveler_travel_xp_effect = {
+			MIN = 3
+			MAX = 5
+		}
+	}
+}
+
+
+agot_poi_castle_stewardship_MHF = {
+	build_province_list = {
+		province:3038 = { add_to_list = provinces } # Brixhall
+	}
+
+	on_visit = {
+		send_interface_toast = {
+			title = poi_notable_castle_visit_MHF
+			left_icon = root
+			custom_tooltip = poi_notable_castle_visit_MHF.tt
+
+			add_stewardship_lifestyle_xp = travel_medium_xp
+			traveler_danger_xp_effect = {
+				MIN = 3
+				MAX = 5
+			}
+		}
+	}
+}

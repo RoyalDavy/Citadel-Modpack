@@ -1,0 +1,97 @@
+﻿asoiaf_mega_war_effect = {
+    # Scope the Rebel story, which contains the list of rebels
+    scope:attacker = {
+        # Scope the Rebel story to assign gold and friendship
+        scope:mw_rebel_story = {
+            every_in_list = {
+                variable = mw_rebel_supporter_list
+                add_gold = 10000
+                if = {
+                    limit = { has_variable = pre_war_liege }
+                    var:pre_war_liege = { set_relation_friend = prev }
+                }
+
+                # Switch sides based on pre-war liege's alignment
+                if = { # Join Crown side if pre-war liege is a loyalist
+                    limit = {
+                        OR = {
+                            var:pre_war_liege = { scope:mw_crown_story = { is_target_in_variable_list = { name = mw_loyalist_list target = prev } } }
+                            var:pre_war_liege = scope:mw_crown_story.story_owner
+                        }
+                    }
+					add_prestige = 10000
+                    agot_mw_join_loyalists_effect = { RULER = this CROWN = scope:mw_crown_story.story_owner }
+                }
+                else_if = { # Stay Neutral if pre-war liege is neutral
+                    limit = {
+                        var:pre_war_liege = { scope:mw_crown_story = { is_target_in_variable_list = { name = mw_neutral_list target = prev } } }
+                    }
+					add_piety = 10000
+                    agot_mw_stay_neutral_effect = { RULER = this CROWN = scope:mw_crown_story.story_owner }
+                }
+            }
+        }
+
+        # Scope the Crown story to handle loyalists and neutrals
+        scope:defender = {
+            scope:mw_crown_story = {
+                every_in_list = {
+                    variable = mw_loyalist_list
+                    add_prestige = 10000
+                    if = {
+                        limit = { has_variable = pre_war_liege }
+                        var:pre_war_liege = { set_relation_friend = prev }
+                    }
+                    # Switch sides based on pre-war liege's alignment
+                    if = { # Join Rebel side if pre-war liege is a Rebel
+                        limit = {
+                            OR = {
+                                var:pre_war_liege = { scope:mw_rebel_story = { is_target_in_variable_list = { name = mw_rebel_supporter_list target = prev } } }
+                                var:pre_war_liege = scope:mw_rebel_story.story_owner
+                            }
+                        }
+                        add_gold = 10000
+                        agot_mw_join_loyalists_effect = { RULER = this CROWN = scope:mw_rebel_story.story_owner }
+                    }
+                    else_if = { # Stay Neutral if pre-war liege is neutral
+                        limit = {
+                            var:pre_war_liege = { scope:mw_crown_story = { is_target_in_variable_list = { name = mw_neutral_list target = prev } } }
+                        }
+                        add_piety = 10000
+                        agot_mw_stay_neutral_effect = { RULER = this CROWN = scope:mw_crown_story.story_owner }
+                    }
+                }
+
+                every_in_list = {
+                    variable = mw_neutral_list
+                    add_piety = 10000
+                    if = {
+                        limit = { has_variable = pre_war_liege }
+                        var:pre_war_liege = { set_relation_friend = prev }
+                    }
+                    # Switch sides based on pre-war liege's alignment
+                    if = { # Join Crown side if pre-war liege is a loyalist
+                        limit = {
+                            OR = {
+                                var:pre_war_liege = { scope:mw_crown_story = { is_target_in_variable_list = { name = mw_loyalist_list target = prev } } }
+                                var:pre_war_liege = scope:mw_crown_story.story_owner
+                            }
+                        }
+                        add_prestige = 10000
+                        agot_mw_join_loyalists_effect = { RULER = this CROWN = scope:mw_crown_story.story_owner }
+                    }
+                    if = { # Join Rebel side if pre-war liege is a Rebel
+                        limit = {
+                            OR = {
+                                var:pre_war_liege = { scope:mw_rebel_story = { is_target_in_variable_list = { name = mw_rebel_supporter_list target = prev } } }
+                                var:pre_war_liege = scope:mw_rebel_story.story_owner
+                            }
+                        }
+                        add_gold = 10000
+                        agot_mw_join_loyalists_effect = { RULER = this CROWN = scope:mw_rebel_story.story_owner }
+                    }
+                }
+            }
+        }
+    }
+}

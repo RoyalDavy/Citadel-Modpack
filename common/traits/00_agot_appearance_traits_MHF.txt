@@ -1,0 +1,9 @@
+﻿
+################### MHF Strong Seeds ##################
+
+eye_bags = {
+	physical = no
+	shown_in_ruler_designer = no
+	desc = strong_seed_desc
+	icon = pure_blooded.dds
+}

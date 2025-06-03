@@ -1,0 +1,271 @@
+﻿agot_canon_children_setup_trigger = {
+	has_game_rule = agot_canon_children_enabled
+}
+
+agot_canon_children_force_pregnancy_spouse_trigger = {
+	OR = {
+		is_spouse_of = $SPOUSE$
+		betrothed = $SPOUSE$
+	}
+}
+
+agot_canon_children_force_pregnancy_real_father_trigger = {
+	$REAL_FATHER$ = {
+		# TODO: Check for lover on strict mode
+		is_alive = yes
+		can_have_children = yes
+		trigger_if = {
+			limit = {
+				OR = {
+					is_ai = no
+					$MOTHER$ = { is_ai = no }
+				}
+			}
+			has_relation_lover = $MOTHER$
+		}
+	}
+}
+
+agot_canon_children_force_pregnancy_happy_accident_trigger = {
+	$MOTHER$ = { is_alive = yes }
+
+	# More strict conditions for players to avoid getting children with strangers (until custom events are added)
+	trigger_if = {
+		limit = {
+			OR = {
+				is_ai = no
+				$MOTHER$ = { is_ai = no }
+			}
+		}
+		# TODO: Check for location/title on strict mode - eg Robert should be king to make bastards in King's Landing
+		OR = {
+			has_relation_lover = $MOTHER$
+			is_spouse_of = $MOTHER$
+		}
+	}
+}
+
+agot_canon_children_birth_year_trigger = {
+	OR = {
+		AND = {
+			current_year >= $BIRTH_YEAR$_min
+			current_month >= 4
+		}
+		current_year >= $BIRTH_YEAR$
+	}
+}
+
+agot_canon_children_had_child_trigger = {
+	OR = {
+		exists = character:$ID$
+		$MOTHER$ = {
+			any_child = {
+				even_if_dead = yes
+				has_inactive_trait = $TRAIT$
+			}
+		}
+	}
+}
+
+agot_canon_children_should_block_pregnancy_trigger = {
+	# Block pregnancies if flags preventing pregnancy are set
+	has_character_flag = canon_children_prevent_pregnancy
+	NOT = {
+		has_character_flag = agot_is_pregnant
+	}
+
+	trigger_if = { # Allow players to make bastards with canon mothers
+		limit = {
+			exists = scope:real_father
+			scope:real_father = { is_ai = no }
+			NOT = {
+				scope:real_father = {
+					OR = {
+						is_spouse_of = root
+						betrothed = root
+					}
+				}
+			}
+		}
+		always = no
+	}
+}
+
+agot_canon_children_should_use_liege_as_guardian_for_heir_trigger = {
+	exists = scope:use_liege_for_heir
+	scope:ward = {
+		NOT = { this = scope:ward_liege }
+		is_player_heir_of = scope:ward_liege
+	}
+	scope:ward_liege = {
+		agot_canon_children_can_become_guardian = {
+			WARD = scope:ward
+			WARD_LIEGE = scope:ward_liege
+			GUARDIAN_LIEGE = scope:guardian_liege
+		}
+	}
+}
+
+#Used in 00_education_interactions to determine whether automatic guardian assignation should be allowed
+# secondary_actor = ward OR guardian
+# secondary_recipient = ward OR guardian
+agot_canon_children_should_allow_guardian_trigger = {
+	OR = {
+		# Players can assign a guardian whenever they want
+		scope:actor = { is_ai = no }
+
+		# AI can assign a guardian for children without canon guardian
+		NOT = {
+			trigger_if = {
+				limit = { exists = scope:secondary_recipient }
+				scope:secondary_recipient = { has_variable = canon_guardian }
+			}
+			trigger_else = {
+				scope:recipient = { has_variable = canon_guardian }
+			}
+
+			trigger_if = {
+				limit = { exists = scope:secondary_actor }
+				scope:secondary_actor = { has_variable = canon_guardian }
+			}
+			trigger_else = {
+				scope:actor = { has_variable = canon_guardian }
+			}
+		}
+
+		# AI can assign a guardian if the canon guardian is unavailable
+		NOT = {
+
+			trigger_if = {
+				limit = { exists = scope:secondary_recipient }
+
+				trigger_if = {
+					limit = { scope:secondary_recipient = { has_variable = canon_guardian } }
+					scope:secondary_recipient = {
+						var:canon_guardian = {
+							agot_canon_children_can_become_guardian = {
+								WARD = scope:secondary_recipient
+								WARD_LIEGE = scope:recipient
+								GUARDIAN_LIEGE = scope:actor
+							}
+						}
+					}
+				}
+				trigger_else_if = {
+					limit = { scope:recipient = { has_variable = canon_guardian } }
+					scope:recipient = {
+						var:canon_guardian = {
+							agot_canon_children_can_become_guardian = {
+								WARD = scope:recipient
+								WARD_LIEGE = scope:recipient
+								GUARDIAN_LIEGE = scope:actor
+							}
+						}
+					}
+				}
+				trigger_else = {
+					#do nothing
+				}
+			}
+
+			trigger_if = {
+				limit = { exists = scope:secondary_actor }
+
+				trigger_if = {
+					limit = { scope:secondary_actor = { has_variable = canon_guardian } }
+					scope:secondary_actor = {
+						var:canon_guardian = {
+							agot_canon_children_can_become_guardian = {
+								WARD = scope:secondary_actor
+								WARD_LIEGE = scope:actor
+								GUARDIAN_LIEGE = scope:recipient
+							}
+						}
+					}
+				}
+				trigger_else_if = {
+					limit = { scope:actor = { has_variable = canon_guardian } }
+					scope:actor = {
+						var:canon_guardian = {
+							agot_canon_children_can_become_guardian = {
+								WARD = scope:actor
+								WARD_LIEGE = scope:actor
+								GUARDIAN_LIEGE = scope:recipient
+							}
+						}
+					}
+				}
+				trigger_else = {
+					#do nothing
+				}
+			}
+		}
+	}
+}
+
+agot_canon_children_can_get_guardian_trigger = {
+	is_available_child = yes
+	num_of_relation_guardian = 0
+	is_imprisoned = no
+	NOT = { has_trait = incapable }
+	trigger_if = { # If a hostage then only if scope:guardian is the hostage taker
+		limit = { is_hostage = yes }
+		is_hostage_of = scope:guardian
+	}
+}
+
+agot_canon_children_can_become_guardian = {
+	is_alive = yes
+	is_physically_able_adult = yes
+	is_imprisoned = no
+	NOT = { has_trait = incapable }
+
+	# Check guardian's status to prevent setting fired/disinherited/whatever guardians
+	OR = {
+		$WARD_LIEGE$ = $GUARDIAN_LIEGE$
+		is_courtier_of = $WARD_LIEGE$
+		is_vassal_of = $WARD_LIEGE$
+		is_close_family_of = $WARD$
+		is_landed = yes
+	}
+}
+
+agot_canon_children_can_add_trait_trigger = {
+	is_alive = yes
+	is_adult = no
+	number_of_personality_traits < personality_trait_limit
+}
+
+agot_canon_children_can_add_personality_trigger = {
+	is_alive = yes
+	is_adult = no
+	any_character_trait = {
+		has_trait_category = childhood
+		count = 0
+	}
+}
+
+agot_canon_children_child_pregnancy_trigger = {
+	save_temporary_scope_as = mother
+	NOT = {
+		agot_canon_children_had_child_trigger = {
+			ID = $ID$
+			MOTHER = scope:mother
+			TRAIT = $TRAIT$
+		}
+	}
+	agot_canon_children_birth_year_trigger = { BIRTH_YEAR = $BIRTH_YEAR$ }
+	is_alive = yes
+	is_pregnant = no
+	can_have_children = yes
+
+	scope:canon_father = {
+		can_have_children = yes
+	}
+}
+
+agot_canon_children_check_pregnancy_child_trigger = {
+	scope:mother = {
+		var:agot_pregnancy_child = flag:$FLAG$
+	}
+}

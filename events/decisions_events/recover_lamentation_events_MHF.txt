@@ -1,0 +1,222 @@
+﻿namespace = recover_lamentation
+
+recover_lamentation.0001 = {
+	type = character_event
+	title = recover_lamentation_t
+
+	theme = crown
+	override_background = throne_room
+	left_portrait = root
+	right_portrait = scope:explorer
+
+	desc = {
+		first_valid = {
+			##Waymar and Yohn
+			triggered_desc = {
+				trigger = {
+					scope:explorer = {
+						this = character:Royce_111
+					}
+				 }
+				desc = recover_lamentation_0001_a_desc
+			}
+			##Not Waymar
+			triggered_desc = {
+				desc =  recover_lamentation_0001_c_desc
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { exists = character:Royce_82 }
+			character:Royce_82 = { save_scope_as = william }
+		}
+	}
+
+
+	##Waymar is alive
+	option = {
+
+		custom_tooltip = recover_lamentation_0001_tt
+
+		trigger = {
+			scope:explorer = {
+				this = character:Royce_111
+			}
+			is_landed = yes #extra check to make sure they haven't lost their status
+		}
+		name = recover_lamentation_0001_a
+
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				gold > 500
+				factor = 100
+			}
+		}
+
+		trigger_event = {
+			id = recover_lamentation.9999
+		}
+	}
+
+	##Waymar is not alive, fund a random dude
+	option = {
+		trigger = {
+			scope:explorer = {
+				NOT = {
+					this = character:Royce_111
+				}
+			}
+			is_landed = yes
+		}
+		name = recover_lamentation_0001_b
+
+		custom_tooltip = recover_lamentation_0001_tt
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger_event = {
+			id = recover_lamentation.9999
+		}
+	}
+
+	###Changed my mind...
+	option = {
+		name = recover_lamentation_0001_c
+
+		custom_tooltip = recover_lamentation_0001_b_tt
+
+		remove_decision_cooldown = recover_lamentation_decision
+
+		add_gold = 500
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+##Does return with lamentation
+recover_lamentation.0002 = {
+	type = character_event
+	title = recover_lamentation_t
+	desc = recover_lamentation_0002_a_desc
+
+	theme = crown
+	override_background = docks
+	left_portrait = {
+		character = root
+		animation = agot_lamentation_2
+	}
+	right_portrait = scope:explorer
+	immediate = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:recovered_lamentation
+		}
+
+		root = {
+			agot_create_artifact_vs_lamentation_effect = {
+				OWNER = this
+			}
+			dynasty = { add_dynasty_prestige = 500 }
+		}
+		scope:newly_created_artifact = {
+			add_artifact_history = {
+				type = given
+				actor = scope:explorer
+				recipient = root
+			}
+		}
+
+		scope:explorer = {
+			add_prestige = 500
+		}
+	}
+
+	artifact = { # To display the artifact in the event-window
+		target = scope:newly_created_artifact
+		position = lower_left_portrait
+	}
+
+	option = {
+		name = recover_lamentation_0002_a
+	}
+}
+
+##Does not return
+recover_lamentation.0003 = {
+	type = character_event
+	title = recover_lamentation_t
+	desc = recover_lamentation_0003_a_desc
+	theme = crown
+	override_background = throne_room
+	left_portrait = root
+
+	immediate = {
+		scope:explorer = {
+			death = { death_reason = death_vanished }
+		}
+	}
+
+	##Waymar is alive, and Yohn is alive and is the person funding him.
+	option = {
+		name = recover_lamentation_0003_a
+	}
+}
+
+recover_lamentation.9999 = {
+	hidden = yes
+	immediate = {
+		## If Waymar Royce is the candidate, he has an increased chance to recover brightroar
+		if = {
+			limit = {
+				scope:explorer = {
+					this = character:Royce_111
+				}
+			}
+			random_list = {
+				## Person returns with lamentation
+				40 = {
+					trigger_event = {
+						id = recover_lamentation.0002
+						days = {60 365}
+					}
+				}
+				## Person goes missing (dead)
+				60 = {
+					trigger_event = {
+						id = recover_lamentation.0003
+						days = {60 365}
+					}
+				}
+			}
+		}
+		## Otherwise the chance to recover is 1%
+		else = {
+			random_list = {
+				## Person returns with lamentation
+				25 = {
+					trigger_event = {
+						id = recover_lamentation.0002
+						days = {60 365}
+					}
+				}
+				## Person goes missing (dead)
+				75 = {
+					trigger_event = {
+						id = recover_lamentation.0003
+						days = {60 365}
+					}
+				}
+			}
+		}
+	}
+}

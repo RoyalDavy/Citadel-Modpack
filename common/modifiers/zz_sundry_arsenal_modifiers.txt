@@ -1,0 +1,89 @@
+﻿crownlander_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+stormlander_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+reachman_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+honeywiner_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+westerman_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+riverman_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+valeman_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+northman_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+ironborn_armor = {
+	icon = mask_positive
+	general_opinion = -5
+	ironborn_opinion = 10
+	prowess_no_portrait = 1
+	coastal_advantage = 5
+}
+
+stone_dornish_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+sand_dornish_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+salt_dornish_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+essosi_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+crannogman_armor = {
+	icon = mask_positive
+	prowess_no_portrait = 1
+}
+
+valyrian_armor = {
+	icon = mask_positive
+	general_opinion = -5
+	high_valyrian_opinion = 10
+	westerosi_valyrian_opinion = 10
+	essosi_valyrian_opinion = 10
+	prowess_no_portrait = 1
+	knight_effectiveness_mult = 0.10
+}
+
+pirate_armor = {
+	icon = mask_positive
+	general_opinion = -5
+	prowess_no_portrait = 1
+	embarkation_cost_mult = -0.5
+}

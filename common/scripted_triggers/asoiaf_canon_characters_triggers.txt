@@ -1,0 +1,1467 @@
+﻿#HOUSE TARGARYEN
+is_character_targaryen_1 = {
+	OR = {
+		has_inactive_trait = is_targaryen_1
+		has_inactive_trait = asoiaf_Targaryen_1_trait
+		AND = {
+			exists = character:Targaryen_1
+			this = character:Targaryen_1
+		}
+	}
+}
+is_character_targaryen_10 = {
+	OR = {
+		has_inactive_trait = is_targaryen_10
+		has_inactive_trait = asoiaf_Targaryen_10_trait
+		AND = {
+			exists = character:Targaryen_10
+			this = character:Targaryen_10
+		}
+	}
+}
+is_character_targaryen_100 = {
+	OR = {
+		has_inactive_trait = is_targaryen_100
+		has_inactive_trait = asoiaf_Targaryen_100_trait
+		AND = {
+			exists = character:Targaryen_100
+			this = character:Targaryen_100
+		}
+	}
+}
+is_character_targaryen_101 = {
+	OR = {
+		has_inactive_trait = is_targaryen_101
+		has_inactive_trait = asoiaf_Targaryen_101_trait
+		AND = {
+			exists = character:Targaryen_101
+			this = character:Targaryen_101
+		}
+	}
+}
+is_character_targaryen_102 = {
+	OR = {
+		has_inactive_trait = is_targaryen_102
+		has_inactive_trait = asoiaf_Targaryen_102_trait
+		AND = {
+			exists = character:Targaryen_102
+			this = character:Targaryen_102
+		}
+	}
+}
+is_character_targaryen_103 = {
+	OR = {
+		has_inactive_trait = is_targaryen_103
+		has_inactive_trait = asoiaf_Targaryen_103_trait
+		AND = {
+			exists = character:Targaryen_103
+			this = character:Targaryen_103
+		}
+	}
+}
+is_character_targaryen_104 = {
+	OR = {
+		has_inactive_trait = is_targaryen_104
+		has_inactive_trait = asoiaf_Targaryen_104_trait
+		AND = {
+			exists = character:Targaryen_104
+			this = character:Targaryen_104
+		}
+	}
+}
+is_character_targaryen_105 = {
+	OR = {
+		has_inactive_trait = is_targaryen_105
+		has_inactive_trait = asoiaf_Targaryen_105_trait
+		AND = {
+			exists = character:Targaryen_105
+			this = character:Targaryen_105
+		}
+	}
+}
+is_character_targaryen_106 = {
+	OR = {
+		has_inactive_trait = is_targaryen_106
+		has_inactive_trait = asoiaf_Targaryen_106_trait
+		AND = {
+			exists = character:Targaryen_106
+			this = character:Targaryen_106
+		}
+	}
+}
+is_character_targaryen_107 = {
+	OR = {
+		has_inactive_trait = is_targaryen_107
+		has_inactive_trait = asoiaf_Targaryen_107_trait
+		AND = {
+			exists = character:Targaryen_107
+			this = character:Targaryen_107
+		}
+	}
+}
+is_character_targaryen_108 = {
+	OR = {
+		has_inactive_trait = is_targaryen_108
+		has_inactive_trait = asoiaf_Targaryen_108_trait
+		AND = {
+			exists = character:Targaryen_108
+			this = character:Targaryen_108
+		}
+	}
+}
+is_character_targaryen_109 = {
+	OR = {
+		has_inactive_trait = is_targaryen_109
+		has_inactive_trait = asoiaf_Targaryen_109_trait
+		AND = {
+			exists = character:Targaryen_109
+			this = character:Targaryen_109
+		}
+	}
+}
+is_character_targaryen_11 = {
+	OR = {
+		has_inactive_trait = is_targaryen_11
+		has_inactive_trait = asoiaf_Targaryen_11_trait
+		AND = {
+			exists = character:Targaryen_11
+			this = character:Targaryen_11
+		}
+	}
+}
+is_character_targaryen_110 = {
+	OR = {
+		has_inactive_trait = is_targaryen_110
+		has_inactive_trait = asoiaf_Targaryen_110_trait
+		AND = {
+			exists = character:Targaryen_110
+			this = character:Targaryen_110
+		}
+	}
+}
+is_character_targaryen_111 = {
+	OR = {
+		has_inactive_trait = is_targaryen_111
+		has_inactive_trait = asoiaf_Targaryen_111_trait
+		AND = {
+			exists = character:Targaryen_111
+			this = character:Targaryen_111
+		}
+	}
+}
+is_character_targaryen_112 = {
+	OR = {
+		has_inactive_trait = is_targaryen_112
+		has_inactive_trait = asoiaf_Targaryen_112_trait
+		AND = {
+			exists = character:Targaryen_112
+			this = character:Targaryen_112
+		}
+	}
+}
+is_character_targaryen_115 = {
+	OR = {
+		has_inactive_trait = is_targaryen_115
+		has_inactive_trait = asoiaf_Targaryen_115_trait
+		AND = {
+			exists = character:Targaryen_115
+			this = character:Targaryen_115
+		}
+	}
+}
+is_character_targaryen_116 = {
+	OR = {
+		has_inactive_trait = is_targaryen_116
+		has_inactive_trait = asoiaf_Targaryen_116_trait
+		AND = {
+			exists = character:Targaryen_116
+			this = character:Targaryen_116
+		}
+	}
+}
+is_character_targaryen_117 = {
+	OR = {
+		has_inactive_trait = is_targaryen_117
+		has_inactive_trait = asoiaf_Targaryen_117_trait
+		AND = {
+			exists = character:Targaryen_117
+			this = character:Targaryen_117
+		}
+	}
+}
+is_character_targaryen_118 = {
+	OR = {
+		has_inactive_trait = is_targaryen_118
+		has_inactive_trait = asoiaf_Targaryen_118_trait
+		AND = {
+			exists = character:Targaryen_118
+			this = character:Targaryen_118
+		}
+	}
+}
+is_character_targaryen_119 = {
+	OR = {
+		has_inactive_trait = is_targaryen_119
+		has_inactive_trait = asoiaf_Targaryen_119_trait
+		AND = {
+			exists = character:Targaryen_119
+			this = character:Targaryen_119
+		}
+	}
+}
+is_character_targaryen_120 = {
+	OR = {
+		has_inactive_trait = is_targaryen_120
+		has_inactive_trait = asoiaf_Targaryen_120_trait
+		AND = {
+			exists = character:Targaryen_120
+			this = character:Targaryen_120
+		}
+	}
+}
+is_character_targaryen_121 = {
+	OR = {
+		has_inactive_trait = is_targaryen_121
+		has_inactive_trait = asoiaf_Targaryen_121_trait
+		AND = {
+			exists = character:Targaryen_121
+			this = character:Targaryen_121
+		}
+	}
+}
+is_character_targaryen_122 = {
+	OR = {
+		has_inactive_trait = is_targaryen_122
+		has_inactive_trait = asoiaf_Targaryen_122_trait
+		AND = {
+			exists = character:Targaryen_122
+			this = character:Targaryen_122
+		}
+	}
+}
+is_character_targaryen_123 = {
+	OR = {
+		has_inactive_trait = is_targaryen_123
+		has_inactive_trait = asoiaf_Targaryen_123_trait
+		AND = {
+			exists = character:Targaryen_123
+			this = character:Targaryen_123
+		}
+	}
+}
+is_character_targaryen_124 = {
+	OR = {
+		has_inactive_trait = is_targaryen_124
+		has_inactive_trait = asoiaf_Targaryen_124_trait
+		AND = {
+			exists = character:Targaryen_124
+			this = character:Targaryen_124
+		}
+	}
+}
+is_character_targaryen_125 = {
+	OR = {
+		has_inactive_trait = is_targaryen_125
+		has_inactive_trait = asoiaf_Targaryen_125_trait
+		AND = {
+			exists = character:Targaryen_125
+			this = character:Targaryen_125
+		}
+	}
+}
+is_character_targaryen_126 = {
+	OR = {
+		has_inactive_trait = is_targaryen_126
+		has_inactive_trait = asoiaf_Targaryen_126_trait
+		AND = {
+			exists = character:Targaryen_126
+			this = character:Targaryen_126
+		}
+	}
+}
+is_character_targaryen_127 = {
+	OR = {
+		has_inactive_trait = is_targaryen_127
+		has_inactive_trait = asoiaf_Targaryen_127_trait
+		AND = {
+			exists = character:Targaryen_127
+			this = character:Targaryen_127
+		}
+	}
+}
+is_character_targaryen_128 = {
+	OR = {
+		has_inactive_trait = is_targaryen_128
+		has_inactive_trait = asoiaf_Targaryen_128_trait
+		AND = {
+			exists = character:Targaryen_128
+			this = character:Targaryen_128
+		}
+	}
+}
+is_character_targaryen_129 = {
+	OR = {
+		has_inactive_trait = is_targaryen_129
+		has_inactive_trait = asoiaf_Targaryen_129_trait
+		AND = {
+			exists = character:Targaryen_129
+			this = character:Targaryen_129
+		}
+	}
+}
+is_character_targaryen_13 = {
+	OR = {
+		has_inactive_trait = is_targaryen_13
+		has_inactive_trait = asoiaf_Targaryen_13_trait
+		AND = {
+			exists = character:Targaryen_13
+			this = character:Targaryen_13
+		}
+	}
+}
+is_character_targaryen_130 = {
+	OR = {
+		has_inactive_trait = is_targaryen_130
+		has_inactive_trait = asoiaf_Targaryen_130_trait
+		AND = {
+			exists = character:Targaryen_130
+			this = character:Targaryen_130
+		}
+	}
+}
+is_character_targaryen_14 = {
+	OR = {
+		has_inactive_trait = is_targaryen_14
+		has_inactive_trait = asoiaf_Targaryen_14_trait
+		AND = {
+			exists = character:Targaryen_14
+			this = character:Targaryen_14
+		}
+	}
+}
+is_character_targaryen_15 = {
+	OR = {
+		has_inactive_trait = is_targaryen_15
+		has_inactive_trait = asoiaf_Targaryen_15_trait
+		AND = {
+			exists = character:Targaryen_15
+			this = character:Targaryen_15
+		}
+	}
+}
+is_character_targaryen_16 = {
+	OR = {
+		has_inactive_trait = is_targaryen_16
+		has_inactive_trait = asoiaf_Targaryen_16_trait
+		AND = {
+			exists = character:Targaryen_16
+			this = character:Targaryen_16
+		}
+	}
+}
+is_character_targaryen_17 = {
+	OR = {
+		has_inactive_trait = is_targaryen_17
+		has_inactive_trait = asoiaf_Targaryen_17_trait
+		AND = {
+			exists = character:Targaryen_17
+			this = character:Targaryen_17
+		}
+	}
+}
+is_character_targaryen_2 = {
+	OR = {
+		has_inactive_trait = is_targaryen_2
+		has_inactive_trait = asoiaf_Targaryen_2_trait
+		AND = {
+			exists = character:Targaryen_2
+			this = character:Targaryen_2
+		}
+	}
+}
+is_character_targaryen_20 = {
+	OR = {
+		has_inactive_trait = is_targaryen_20
+		has_inactive_trait = asoiaf_Targaryen_20_trait
+		AND = {
+			exists = character:Targaryen_20
+			this = character:Targaryen_20
+		}
+	}
+}
+is_character_targaryen_21 = {
+	OR = {
+		has_inactive_trait = is_targaryen_21
+		has_inactive_trait = asoiaf_Targaryen_21_trait
+		AND = {
+			exists = character:Targaryen_21
+			this = character:Targaryen_21
+		}
+	}
+}
+is_character_targaryen_22 = {
+	OR = {
+		has_inactive_trait = is_targaryen_22
+		has_inactive_trait = asoiaf_Targaryen_22_trait
+		AND = {
+			exists = character:Targaryen_22
+			this = character:Targaryen_22
+		}
+	}
+}
+is_character_targaryen_23 = {
+	OR = {
+		has_inactive_trait = is_targaryen_23
+		has_inactive_trait = asoiaf_Targaryen_23_trait
+		AND = {
+			exists = character:Targaryen_23
+			this = character:Targaryen_23
+		}
+	}
+}
+is_character_targaryen_24 = {
+	OR = {
+		has_inactive_trait = is_targaryen_24
+		has_inactive_trait = asoiaf_Targaryen_24_trait
+		AND = {
+			exists = character:Targaryen_24
+			this = character:Targaryen_24
+		}
+	}
+}
+is_character_targaryen_25 = {
+	OR = {
+		has_inactive_trait = is_targaryen_25
+		has_inactive_trait = asoiaf_Targaryen_25_trait
+		AND = {
+			exists = character:Targaryen_25
+			this = character:Targaryen_25
+		}
+	}
+}
+is_character_targaryen_27 = {
+	OR = {
+		has_inactive_trait = is_targaryen_27
+		has_inactive_trait = asoiaf_Targaryen_27_trait
+		AND = {
+			exists = character:Targaryen_27
+			this = character:Targaryen_27
+		}
+	}
+}
+is_character_targaryen_28 = {
+	OR = {
+		has_inactive_trait = is_targaryen_28
+		has_inactive_trait = asoiaf_Targaryen_28_trait
+		AND = {
+			exists = character:Targaryen_28
+			this = character:Targaryen_28
+		}
+	}
+}
+is_character_targaryen_29 = {
+	OR = {
+		has_inactive_trait = is_targaryen_29
+		has_inactive_trait = asoiaf_Targaryen_29_trait
+		AND = {
+			exists = character:Targaryen_29
+			this = character:Targaryen_29
+		}
+	}
+}
+is_character_targaryen_3 = {
+	OR = {
+		has_inactive_trait = is_targaryen_3
+		has_inactive_trait = asoiaf_Targaryen_3_trait
+		AND = {
+			exists = character:Targaryen_3
+			this = character:Targaryen_3
+		}
+	}
+}
+is_character_targaryen_30 = {
+	OR = {
+		has_inactive_trait = is_targaryen_30
+		has_inactive_trait = asoiaf_Targaryen_30_trait
+		AND = {
+			exists = character:Targaryen_30
+			this = character:Targaryen_30
+		}
+	}
+}
+is_character_targaryen_31 = {
+	OR = {
+		has_inactive_trait = is_targaryen_31
+		has_inactive_trait = asoiaf_Targaryen_31_trait
+		AND = {
+			exists = character:Targaryen_31
+			this = character:Targaryen_31
+		}
+	}
+}
+is_character_targaryen_32 = {
+	OR = {
+		has_inactive_trait = is_targaryen_32
+		has_inactive_trait = asoiaf_Targaryen_32_trait
+		AND = {
+			exists = character:Targaryen_32
+			this = character:Targaryen_32
+		}
+	}
+}
+is_character_targaryen_33 = {
+	OR = {
+		has_inactive_trait = is_targaryen_33
+		has_inactive_trait = asoiaf_Targaryen_33_trait
+		AND = {
+			exists = character:Targaryen_33
+			this = character:Targaryen_33
+		}
+	}
+}
+is_character_targaryen_34 = {
+	OR = {
+		has_inactive_trait = is_targaryen_34
+		has_inactive_trait = asoiaf_Targaryen_34_trait
+		AND = {
+			exists = character:Targaryen_34
+			this = character:Targaryen_34
+		}
+	}
+}
+is_character_targaryen_35 = {
+	OR = {
+		has_inactive_trait = is_targaryen_35
+		has_inactive_trait = asoiaf_Targaryen_35_trait
+		AND = {
+			exists = character:Targaryen_35
+			this = character:Targaryen_35
+		}
+	}
+}
+is_character_targaryen_36 = {
+	OR = {
+		has_inactive_trait = is_targaryen_36
+		has_inactive_trait = asoiaf_Targaryen_36_trait
+		AND = {
+			exists = character:Targaryen_36
+			this = character:Targaryen_36
+		}
+	}
+}
+is_character_targaryen_41 = {
+	OR = {
+		has_inactive_trait = is_targaryen_41
+		has_inactive_trait = asoiaf_Targaryen_41_trait
+		AND = {
+			exists = character:Targaryen_41
+			this = character:Targaryen_41
+		}
+	}
+}
+is_character_targaryen_42 = {
+	OR = {
+		has_inactive_trait = is_targaryen_42
+		has_inactive_trait = asoiaf_Targaryen_42_trait
+		AND = {
+			exists = character:Targaryen_42
+			this = character:Targaryen_42
+		}
+	}
+}
+is_character_targaryen_44 = {
+	OR = {
+		has_inactive_trait = is_targaryen_44
+		has_inactive_trait = asoiaf_Targaryen_44_trait
+		AND = {
+			exists = character:Targaryen_44
+			this = character:Targaryen_44
+		}
+	}
+}
+is_character_targaryen_45 = {
+	OR = {
+		has_inactive_trait = is_targaryen_45
+		has_inactive_trait = asoiaf_Targaryen_45_trait
+		AND = {
+			exists = character:Targaryen_45
+			this = character:Targaryen_45
+		}
+	}
+}
+is_character_targaryen_46 = {
+	OR = {
+		has_inactive_trait = is_targaryen_46
+		has_inactive_trait = asoiaf_Targaryen_46_trait
+		AND = {
+			exists = character:Targaryen_46
+			this = character:Targaryen_46
+		}
+	}
+}
+is_character_targaryen_47 = {
+	OR = {
+		has_inactive_trait = is_targaryen_47
+		has_inactive_trait = asoiaf_Targaryen_47_trait
+		AND = {
+			exists = character:Targaryen_47
+			this = character:Targaryen_47
+		}
+	}
+}
+is_character_targaryen_48 = {
+	OR = {
+		has_inactive_trait = is_targaryen_48
+		has_inactive_trait = asoiaf_Targaryen_48_trait
+		AND = {
+			exists = character:Targaryen_48
+			this = character:Targaryen_48
+		}
+	}
+}
+is_character_targaryen_49 = {
+	OR = {
+		has_inactive_trait = is_targaryen_49
+		has_inactive_trait = asoiaf_Targaryen_49_trait
+		AND = {
+			exists = character:Targaryen_49
+			this = character:Targaryen_49
+		}
+	}
+}
+is_character_targaryen_50 = {
+	OR = {
+		has_inactive_trait = is_targaryen_50
+		has_inactive_trait = asoiaf_Targaryen_50_trait
+		AND = {
+			exists = character:Targaryen_50
+			this = character:Targaryen_50
+		}
+	}
+}
+is_character_targaryen_51 = {
+	OR = {
+		has_inactive_trait = is_targaryen_51
+		has_inactive_trait = asoiaf_Targaryen_51_trait
+		AND = {
+			exists = character:Targaryen_51
+			this = character:Targaryen_51
+		}
+	}
+}
+is_character_targaryen_52 = {
+	OR = {
+		has_inactive_trait = is_targaryen_52
+		has_inactive_trait = asoiaf_Targaryen_52_trait
+		AND = {
+			exists = character:Targaryen_52
+			this = character:Targaryen_52
+		}
+	}
+}
+is_character_targaryen_55 = {
+	OR = {
+		has_inactive_trait = is_targaryen_55
+		has_inactive_trait = asoiaf_Targaryen_55_trait
+		AND = {
+			exists = character:Targaryen_55
+			this = character:Targaryen_55
+		}
+	}
+}
+is_character_targaryen_59 = {
+	OR = {
+		has_inactive_trait = is_targaryen_59
+		has_inactive_trait = asoiaf_Targaryen_59_trait
+		AND = {
+			exists = character:Targaryen_59
+			this = character:Targaryen_59
+		}
+	}
+}
+is_character_targaryen_60 = {
+	OR = {
+		has_inactive_trait = is_targaryen_60
+		has_inactive_trait = asoiaf_Targaryen_60_trait
+		AND = {
+			exists = character:Targaryen_60
+			this = character:Targaryen_60
+		}
+	}
+}
+is_character_targaryen_61 = {
+	OR = {
+		has_inactive_trait = is_targaryen_61
+		has_inactive_trait = asoiaf_Targaryen_61_trait
+		AND = {
+			exists = character:Targaryen_61
+			this = character:Targaryen_61
+		}
+	}
+}
+is_character_targaryen_63 = {
+	OR = {
+		has_inactive_trait = is_targaryen_63
+		has_inactive_trait = asoiaf_Targaryen_63_trait
+		AND = {
+			exists = character:Targaryen_63
+			this = character:Targaryen_63
+		}
+	}
+}
+is_character_targaryen_64 = {
+	OR = {
+		has_inactive_trait = is_targaryen_64
+		has_inactive_trait = asoiaf_Targaryen_64_trait
+		AND = {
+			exists = character:Targaryen_64
+			this = character:Targaryen_64
+		}
+	}
+}
+is_character_targaryen_65 = {
+	OR = {
+		has_inactive_trait = is_targaryen_65
+		has_inactive_trait = asoiaf_Targaryen_65_trait
+		AND = {
+			exists = character:Targaryen_65
+			this = character:Targaryen_65
+		}
+	}
+}
+is_character_targaryen_66 = {
+	OR = {
+		has_inactive_trait = is_targaryen_66
+		has_inactive_trait = asoiaf_Targaryen_66_trait
+		AND = {
+			exists = character:Targaryen_66
+			this = character:Targaryen_66
+		}
+	}
+}
+is_character_targaryen_67 = {
+	OR = {
+		has_inactive_trait = is_targaryen_67
+		has_inactive_trait = asoiaf_Targaryen_67_trait
+		AND = {
+			exists = character:Targaryen_67
+			this = character:Targaryen_67
+		}
+	}
+}
+is_character_targaryen_68 = {
+	OR = {
+		has_inactive_trait = is_targaryen_68
+		has_inactive_trait = asoiaf_Targaryen_68_trait
+		AND = {
+			exists = character:Targaryen_68
+			this = character:Targaryen_68
+		}
+	}
+}
+is_character_targaryen_69 = {
+	OR = {
+		has_inactive_trait = is_targaryen_69
+		has_inactive_trait = asoiaf_Targaryen_69_trait
+		AND = {
+			exists = character:Targaryen_69
+			this = character:Targaryen_69
+		}
+	}
+}
+is_character_targaryen_70 = {
+	OR = {
+		has_inactive_trait = is_targaryen_70
+		has_inactive_trait = asoiaf_Targaryen_70_trait
+		AND = {
+			exists = character:Targaryen_70
+			this = character:Targaryen_70
+		}
+	}
+}
+is_character_targaryen_71 = {
+	OR = {
+		has_inactive_trait = is_targaryen_71
+		has_inactive_trait = asoiaf_Targaryen_71_trait
+		AND = {
+			exists = character:Targaryen_71
+			this = character:Targaryen_71
+		}
+	}
+}
+is_character_targaryen_72 = {
+	OR = {
+		has_inactive_trait = is_targaryen_72
+		has_inactive_trait = asoiaf_Targaryen_72_trait
+		AND = {
+			exists = character:Targaryen_72
+			this = character:Targaryen_72
+		}
+	}
+}
+is_character_targaryen_73 = {
+	OR = {
+		has_inactive_trait = is_targaryen_73
+		has_inactive_trait = asoiaf_Targaryen_73_trait
+		AND = {
+			exists = character:Targaryen_73
+			this = character:Targaryen_73
+		}
+	}
+}
+is_character_targaryen_74 = {
+	OR = {
+		has_inactive_trait = is_targaryen_74
+		has_inactive_trait = asoiaf_Targaryen_74_trait
+		AND = {
+			exists = character:Targaryen_74
+			this = character:Targaryen_74
+		}
+	}
+}
+is_character_targaryen_75 = {
+	OR = {
+		has_inactive_trait = is_targaryen_75
+		has_inactive_trait = asoiaf_Targaryen_75_trait
+		AND = {
+			exists = character:Targaryen_75
+			this = character:Targaryen_75
+		}
+	}
+}
+is_character_targaryen_76 = {
+	OR = {
+		has_inactive_trait = is_targaryen_76
+		has_inactive_trait = asoiaf_Targaryen_76_trait
+		AND = {
+			exists = character:Targaryen_76
+			this = character:Targaryen_76
+		}
+	}
+}
+is_character_targaryen_77 = {
+	OR = {
+		has_inactive_trait = is_targaryen_77
+		has_inactive_trait = asoiaf_Targaryen_77_trait
+		AND = {
+			exists = character:Targaryen_77
+			this = character:Targaryen_77
+		}
+	}
+}
+is_character_targaryen_78 = {
+	OR = {
+		has_inactive_trait = is_targaryen_78
+		has_inactive_trait = asoiaf_Targaryen_78_trait
+		AND = {
+			exists = character:Targaryen_78
+			this = character:Targaryen_78
+		}
+	}
+}
+is_character_targaryen_79 = {
+	OR = {
+		has_inactive_trait = is_targaryen_79
+		has_inactive_trait = asoiaf_Targaryen_79_trait
+		AND = {
+			exists = character:Targaryen_79
+			this = character:Targaryen_79
+		}
+	}
+}
+is_character_targaryen_8 = {
+	OR = {
+		has_inactive_trait = is_targaryen_8
+		has_inactive_trait = asoiaf_Targaryen_8_trait
+		AND = {
+			exists = character:Targaryen_8
+			this = character:Targaryen_8
+		}
+	}
+}
+is_character_targaryen_80 = {
+	OR = {
+		has_inactive_trait = is_targaryen_80
+		has_inactive_trait = asoiaf_Targaryen_80_trait
+		AND = {
+			exists = character:Targaryen_80
+			this = character:Targaryen_80
+		}
+	}
+}
+is_character_targaryen_81 = {
+	OR = {
+		has_inactive_trait = is_targaryen_81
+		has_inactive_trait = asoiaf_Targaryen_81_trait
+		AND = {
+			exists = character:Targaryen_81
+			this = character:Targaryen_81
+		}
+	}
+}
+is_character_targaryen_82 = {
+	OR = {
+		has_inactive_trait = is_targaryen_82
+		has_inactive_trait = asoiaf_Targaryen_82_trait
+		AND = {
+			exists = character:Targaryen_82
+			this = character:Targaryen_82
+		}
+	}
+}
+is_character_targaryen_83 = {
+	OR = {
+		has_inactive_trait = is_targaryen_83
+		has_inactive_trait = asoiaf_Targaryen_83_trait
+		AND = {
+			exists = character:Targaryen_83
+			this = character:Targaryen_83
+		}
+	}
+}
+is_character_targaryen_84 = {
+	OR = {
+		has_inactive_trait = is_targaryen_84
+		has_inactive_trait = asoiaf_Targaryen_84_trait
+		AND = {
+			exists = character:Targaryen_84
+			this = character:Targaryen_84
+		}
+	}
+}
+is_character_targaryen_85 = {
+	OR = {
+		has_inactive_trait = is_targaryen_85
+		has_inactive_trait = asoiaf_Targaryen_85_trait
+		AND = {
+			exists = character:Targaryen_85
+			this = character:Targaryen_85
+		}
+	}
+}
+is_character_targaryen_88 = {
+	OR = {
+		has_inactive_trait = is_targaryen_88
+		has_inactive_trait = asoiaf_Targaryen_88_trait
+		AND = {
+			exists = character:Targaryen_88
+			this = character:Targaryen_88
+		}
+	}
+}
+is_character_targaryen_89 = {
+	OR = {
+		has_inactive_trait = is_targaryen_89
+		has_inactive_trait = asoiaf_Targaryen_89_trait
+		AND = {
+			exists = character:Targaryen_89
+			this = character:Targaryen_89
+		}
+	}
+}
+is_character_targaryen_9 = {
+	OR = {
+		has_inactive_trait = is_targaryen_9
+		has_inactive_trait = asoiaf_Targaryen_9_trait
+		AND = {
+			exists = character:Targaryen_9
+			this = character:Targaryen_9
+		}
+	}
+}
+is_character_targaryen_90 = {
+	OR = {
+		has_inactive_trait = is_targaryen_90
+		has_inactive_trait = asoiaf_Targaryen_90_trait
+		AND = {
+			exists = character:Targaryen_90
+			this = character:Targaryen_90
+		}
+	}
+}
+is_character_targaryen_91 = {
+	OR = {
+		has_inactive_trait = is_targaryen_91
+		has_inactive_trait = asoiaf_Targaryen_91_trait
+		AND = {
+			exists = character:Targaryen_91
+			this = character:Targaryen_91
+		}
+	}
+}
+is_character_targaryen_92 = {
+	OR = {
+		has_inactive_trait = is_targaryen_92
+		has_inactive_trait = asoiaf_Targaryen_92_trait
+		AND = {
+			exists = character:Targaryen_92
+			this = character:Targaryen_92
+		}
+	}
+}
+is_character_targaryen_94 = {
+	OR = {
+		has_inactive_trait = is_targaryen_94
+		has_inactive_trait = asoiaf_Targaryen_94_trait
+		AND = {
+			exists = character:Targaryen_94
+			this = character:Targaryen_94
+		}
+	}
+}
+is_character_targaryen_95 = {
+	OR = {
+		has_inactive_trait = is_targaryen_95
+		has_inactive_trait = asoiaf_Targaryen_95_trait
+		AND = {
+			exists = character:Targaryen_95
+			this = character:Targaryen_95
+		}
+	}
+}
+is_character_targaryen_96 = {
+	OR = {
+		has_inactive_trait = is_targaryen_96
+		has_inactive_trait = asoiaf_Targaryen_96_trait
+		AND = {
+			exists = character:Targaryen_96
+			this = character:Targaryen_96
+		}
+	}
+}
+is_character_targaryen_97 = {
+	OR = {
+		has_inactive_trait = is_targaryen_97
+		has_inactive_trait = asoiaf_Targaryen_97_trait
+		AND = {
+			exists = character:Targaryen_97
+			this = character:Targaryen_97
+		}
+	}
+}
+is_character_targaryen_98 = {
+	OR = {
+		has_inactive_trait = is_targaryen_98
+		has_inactive_trait = asoiaf_Targaryen_98_trait
+		AND = {
+			exists = character:Targaryen_98
+			this = character:Targaryen_98
+		}
+	}
+}
+is_character_targaryen_99 = {
+	OR = {
+		has_inactive_trait = is_targaryen_99
+		has_inactive_trait = asoiaf_Targaryen_99_trait
+		AND = {
+			exists = character:Targaryen_99
+			this = character:Targaryen_99
+		}
+	}
+}
+
+#HOUSE VELARYON
+is_character_velaryon_1 = {
+	OR = {
+		has_inactive_trait = is_velaryon_1
+		has_inactive_trait = asoiaf_Velaryon_1_trait
+		AND = {
+			exists = character:Velaryon_1
+			this = character:Velaryon_1
+		}
+	}
+}
+is_character_velaryon_10 = {
+	OR = {
+		has_inactive_trait = is_velaryon_10
+		has_inactive_trait = asoiaf_Velaryon_10_trait
+		AND = {
+			exists = character:Velaryon_10
+			this = character:Velaryon_10
+		}
+	}
+}
+is_character_velaryon_11 = {
+	OR = {
+		has_inactive_trait = is_velaryon_11
+		has_inactive_trait = asoiaf_Velaryon_11_trait
+		AND = {
+			exists = character:Velaryon_11
+			this = character:Velaryon_11
+		}
+	}
+}
+is_character_velaryon_12 = {
+	OR = {
+		has_inactive_trait = is_velaryon_12
+		has_inactive_trait = asoiaf_Velaryon_12_trait
+		AND = {
+			exists = character:Velaryon_12
+			this = character:Velaryon_12
+		}
+	}
+}
+is_character_velaryon_13 = {
+	OR = {
+		has_inactive_trait = is_velaryon_13
+		has_inactive_trait = asoiaf_Velaryon_13_trait
+		AND = {
+			exists = character:Velaryon_13
+			this = character:Velaryon_13
+		}
+	}
+}
+is_character_velaryon_14 = {
+	OR = {
+		has_inactive_trait = is_velaryon_14
+		has_inactive_trait = asoiaf_Velaryon_14_trait
+		AND = {
+			exists = character:Velaryon_14
+			this = character:Velaryon_14
+		}
+	}
+}
+is_character_velaryon_15 = {
+	OR = {
+		has_inactive_trait = is_velaryon_15
+		has_inactive_trait = asoiaf_Velaryon_15_trait
+		AND = {
+			exists = character:Velaryon_15
+			this = character:Velaryon_15
+		}
+	}
+}
+is_character_velaryon_16 = {
+	OR = {
+		has_inactive_trait = is_velaryon_16
+		has_inactive_trait = asoiaf_Velaryon_16_trait
+		AND = {
+			exists = character:Velaryon_16
+			this = character:Velaryon_16
+		}
+	}
+}
+is_character_velaryon_2 = {
+	OR = {
+		has_inactive_trait = is_velaryon_2
+		has_inactive_trait = asoiaf_Velaryon_2_trait
+		AND = {
+			exists = character:Velaryon_2
+			this = character:Velaryon_2
+		}
+	}
+}
+is_character_velaryon_20 = {
+	OR = {
+		has_inactive_trait = is_velaryon_20
+		has_inactive_trait = asoiaf_Velaryon_20_trait
+		AND = {
+			exists = character:Velaryon_20
+			this = character:Velaryon_20
+		}
+	}
+}
+is_character_velaryon_21 = {
+	OR = {
+		has_inactive_trait = is_velaryon_21
+		has_inactive_trait = asoiaf_Velaryon_21_trait
+		AND = {
+			exists = character:Velaryon_21
+			this = character:Velaryon_21
+		}
+	}
+}
+is_character_velaryon_23 = {
+	OR = {
+		has_inactive_trait = is_velaryon_23
+		has_inactive_trait = asoiaf_Velaryon_23_trait
+		AND = {
+			exists = character:Velaryon_23
+			this = character:Velaryon_23
+		}
+	}
+}
+is_character_velaryon_24 = {
+	OR = {
+		has_inactive_trait = is_velaryon_24
+		has_inactive_trait = asoiaf_Velaryon_24_trait
+		AND = {
+			exists = character:Velaryon_24
+			this = character:Velaryon_24
+		}
+	}
+}
+is_character_velaryon_25 = {
+	OR = {
+		has_inactive_trait = is_velaryon_25
+		has_inactive_trait = asoiaf_Velaryon_25_trait
+		AND = {
+			exists = character:Velaryon_25
+			this = character:Velaryon_25
+		}
+	}
+}
+is_character_velaryon_26 = {
+	OR = {
+		has_inactive_trait = is_velaryon_26
+		has_inactive_trait = asoiaf_Velaryon_26_trait
+		AND = {
+			exists = character:Velaryon_26
+			this = character:Velaryon_26
+		}
+	}
+}
+is_character_velaryon_3 = {
+	OR = {
+		has_inactive_trait = is_velaryon_3
+		has_inactive_trait = asoiaf_Velaryon_3_trait
+		AND = {
+			exists = character:Velaryon_3
+			this = character:Velaryon_3
+		}
+	}
+}
+is_character_velaryon_31 = {
+	OR = {
+		has_inactive_trait = is_velaryon_31
+		has_inactive_trait = asoiaf_Velaryon_31_trait
+		AND = {
+			exists = character:Velaryon_31
+			this = character:Velaryon_31
+		}
+	}
+}
+is_character_velaryon_34 = {
+	OR = {
+		has_inactive_trait = is_velaryon_34
+		has_inactive_trait = asoiaf_Velaryon_34_trait
+		AND = {
+			exists = character:Velaryon_34
+			this = character:Velaryon_34
+		}
+	}
+}
+is_character_velaryon_35 = {
+	OR = {
+		has_inactive_trait = is_velaryon_35
+		has_inactive_trait = asoiaf_Velaryon_35_trait
+		AND = {
+			exists = character:Velaryon_35
+			this = character:Velaryon_35
+		}
+	}
+}
+is_character_velaryon_45 = {
+	OR = {
+		has_inactive_trait = is_velaryon_45
+		has_inactive_trait = asoiaf_Velaryon_45_trait
+		AND = {
+			exists = character:Velaryon_45
+			this = character:Velaryon_45
+		}
+	}
+}
+is_character_velaryon_5 = {
+	OR = {
+		has_inactive_trait = is_velaryon_5
+		has_inactive_trait = asoiaf_Velaryon_5_trait
+		AND = {
+			exists = character:Velaryon_5
+			this = character:Velaryon_5
+		}
+	}
+}
+is_character_velaryon_53 = {
+	OR = {
+		has_inactive_trait = is_velaryon_53
+		has_inactive_trait = asoiaf_Velaryon_53_trait
+		AND = {
+			exists = character:Velaryon_53
+			this = character:Velaryon_53
+		}
+	}
+}
+is_character_velaryon_54 = {
+	OR = {
+		has_inactive_trait = is_velaryon_54
+		has_inactive_trait = asoiaf_Velaryon_54_trait
+		AND = {
+			exists = character:Velaryon_54
+			this = character:Velaryon_54
+		}
+	}
+}
+is_character_velaryon_56 = {
+	OR = {
+		has_inactive_trait = is_velaryon_56
+		has_inactive_trait = asoiaf_Velaryon_56_trait
+		AND = {
+			exists = character:Velaryon_56
+			this = character:Velaryon_56
+		}
+	}
+}
+is_character_velaryon_57 = {
+	OR = {
+		has_inactive_trait = is_velaryon_57
+		has_inactive_trait = asoiaf_Velaryon_57_trait
+		AND = {
+			exists = character:Velaryon_57
+			this = character:Velaryon_57
+		}
+	}
+}
+is_character_velaryon_58 = {
+	OR = {
+		has_inactive_trait = is_velaryon_58
+		has_inactive_trait = asoiaf_Velaryon_58_trait
+		AND = {
+			exists = character:Velaryon_58
+			this = character:Velaryon_58
+		}
+	}
+}
+is_character_velaryon_59 = {
+	OR = {
+		has_inactive_trait = is_velaryon_59
+		has_inactive_trait = asoiaf_Velaryon_59_trait
+		AND = {
+			exists = character:Velaryon_59
+			this = character:Velaryon_59
+		}
+	}
+}
+is_character_velaryon_6 = {
+	OR = {
+		has_inactive_trait = is_velaryon_6
+		has_inactive_trait = asoiaf_Velaryon_6_trait
+		AND = {
+			exists = character:Velaryon_6
+			this = character:Velaryon_6
+		}
+	}
+}
+is_character_velaryon_60 = {
+	OR = {
+		has_inactive_trait = is_velaryon_60
+		has_inactive_trait = asoiaf_Velaryon_60_trait
+		AND = {
+			exists = character:Velaryon_60
+			this = character:Velaryon_60
+		}
+	}
+}
+is_character_velaryon_61 = {
+	OR = {
+		has_inactive_trait = is_velaryon_61
+		has_inactive_trait = asoiaf_Velaryon_61_trait
+		AND = {
+			exists = character:Velaryon_61
+			this = character:Velaryon_61
+		}
+	}
+}
+is_character_velaryon_62 = {
+	OR = {
+		has_inactive_trait = is_velaryon_62
+		has_inactive_trait = asoiaf_Velaryon_62_trait
+		AND = {
+			exists = character:Velaryon_62
+			this = character:Velaryon_62
+		}
+	}
+}
+is_character_velaryon_63 = {
+	OR = {
+		has_inactive_trait = is_velaryon_63
+		has_inactive_trait = asoiaf_Velaryon_63_trait
+		AND = {
+			exists = character:Velaryon_63
+			this = character:Velaryon_63
+		}
+	}
+}
+is_character_velaryon_7 = {
+	OR = {
+		has_inactive_trait = is_velaryon_7
+		has_inactive_trait = asoiaf_Velaryon_7_trait
+		AND = {
+			exists = character:Velaryon_7
+			this = character:Velaryon_7
+		}
+	}
+}
+is_character_velaryon_7_b = {
+	OR = {
+		has_inactive_trait = is_velaryon_7_b
+		has_inactive_trait = asoiaf_Velaryon_7_b_trait
+		AND = {
+			exists = character:Velaryon_7_B
+			this = character:Velaryon_7_B
+		}
+	}
+}
+is_character_velaryon_8 = {
+	OR = {
+		has_inactive_trait = is_velaryon_8
+		has_inactive_trait = asoiaf_Velaryon_8_trait
+		AND = {
+			exists = character:Velaryon_8
+			this = character:Velaryon_8
+		}
+	}
+}
+is_character_velaryon_9 = {
+	OR = {
+		has_inactive_trait = is_velaryon_9
+		has_inactive_trait = asoiaf_Velaryon_9_trait
+		AND = {
+			exists = character:Velaryon_9
+			this = character:Velaryon_9
+		}
+	}
+}
+
+#DRAGONSEEDS
+is_character_farseed_1 = {
+	OR = {
+		has_inactive_trait = is_farseed_1
+		has_inactive_trait = asoiaf_Farseed_1_trait
+		AND = {
+			exists = character:Farseed_1
+			this = character:Farseed_1
+		}
+	}
+}
+is_character_white_1 = {
+	OR = {
+		has_inactive_trait = asoiaf_Hammer_1_trait
+		AND = {
+			exists = character:White_1
+			this = character:White_1
+		}
+	}
+}
+is_character_hammer_1 = {
+	OR = {
+		has_inactive_trait = is_hammer_1
+		has_inactive_trait = asoiaf_White_1_trait
+		AND = {
+			exists = character:Hammer_1
+			this = character:Hammer_1
+		}
+	}
+}
+is_character_melisandre_1 = {
+	OR = {
+		has_inactive_trait = is_melisandre_1
+		AND = {
+			exists = character:Melisandre_1
+			this = character:Melisandre_1
+		}
+		AND = {
+			exists = character:asoiaf_Melisandre_1
+			this = character:asoiaf_Melisandre_1
+		}
+	}
+}

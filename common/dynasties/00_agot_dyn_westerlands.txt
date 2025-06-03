@@ -1,0 +1,352 @@
+﻿############################       THE WESTERLANDS      ############################
+####################################################################################
+
+### Great House
+############################
+dynn_Lannister = {
+	name = "dynn_Lannister"
+	culture = "westerman"
+	motto = dynn_Lannister_motto # Hear Me Roar!
+}
+
+### Main
+############################
+dynn_Algood = {
+	name = "dynn_Algood"
+	culture = "westerman"
+	motto = dynn_Algood_motto
+}
+dynn_Banefort = {
+	name = "dynn_Banefort"
+	culture = "westerman"
+	motto = dynn_Banefort_motto
+}
+dynn_Bettley = {
+	name = "dynn_Bettley"
+	culture = "westerman"
+	motto = dynn_Banefort_motto
+}
+dynn_Brax = {
+	name = "dynn_Brax"
+	culture = "westerman"
+	motto = dynn_Brax_motto
+}
+dynn_Broome = {
+	name = "dynn_Broome"
+	culture = "westerman"
+	motto = dynn_Broome_motto
+}
+dynn_Clegane = {
+	name = "dynn_Clegane"
+	culture = "westerman"
+	motto = dynn_Clegane_motto
+}
+dynn_Clifton = {
+	name = "dynn_Clifton"
+	culture = "westerman"
+	motto = dynn_Clifton_motto
+}
+dynn_Crakehall = {
+	name = "dynn_Crakehall"
+	culture = "westerman"
+	motto = dynn_Crakehall_motto # None so Fierce
+}
+dynn_Doggett = {
+	name = "dynn_Doggett"
+	culture = "westerman"
+	motto = dynn_Doggett_motto
+}
+dynn_Drox = {
+	name = "dynn_Drox"
+	culture = "westerman"
+	motto = dynn_Drox_motto
+}
+dynn_Estren = {
+	name = "dynn_Estren"
+	culture = "westerman"
+	motto = dynn_Estren_motto
+}
+dynn_Falwell = {
+	name = "dynn_Falwell"
+	culture = "westerman"
+	motto = dynn_Falwell_motto
+}
+dynn_Farman = {
+	name = "dynn_Farman"
+	culture = "westerman"
+	motto = dynn_Farman_motto # The Wind Our Steed
+}
+dynn_Ferren = {
+	name = "dynn_Ferren"
+	culture = "westerman"
+	motto = dynn_Ferren_motto
+}
+dynn_Foote = {
+	name = "dynn_Foote"
+	culture = "westerman"
+	motto = dynn_Foote_motto
+}
+dynn_Garner = {
+	name = "dynn_Garner"
+	culture = "westerman"
+	motto = dynn_Garner_motto
+}
+dynn_Greenfield = {
+	name = "dynn_Greenfield"
+	culture = "westerman"
+	motto = dynn_Greenfield_motto
+}
+dynn_Hamell = {
+	name = "dynn_Hamell"
+	culture = "westerman"
+	motto = dynn_Hamell_motto
+}
+dynn_Hawthorne = {
+	name = "dynn_Hawthorne"
+	culture = "westerman"
+	motto = dynn_Hawthorne_motto
+}
+dynn_Hetherspoon = {
+	name = "dynn_Hetherspoon"
+	culture = "westerman"
+	motto = dynn_Hetherspoon_motto
+}
+dynn_Jast = {
+	name = "dynn_Jast"
+	culture = "westerman"
+	motto = dynn_Jast_motto
+}
+dynn_Kyndall = {
+	name = "dynn_Kyndall"
+	culture = "westerman"
+}
+dynn_Lansdale = {
+	name = "dynn_Lansdale"
+	culture = "westerman"
+}
+dynn_Lanster = {
+	name = "dynn_Lanster"
+	culture = "westerman"
+}
+dynn_Lefford = {
+	name = "dynn_Lefford"
+	culture = "westerman"
+	motto = dynn_Lefford_motto
+}
+dynn_Lorch = {
+	name = "dynn_Lorch"
+	culture = "westerman"
+	motto = dynn_Lorch_motto
+}
+dynn_Lydden = {
+	name = "dynn_Lydden"
+	culture = "westerman"
+	motto = dynn_Lydden_motto
+}
+dynn_Marbrand = {
+	name = "dynn_Marbrand"
+	culture = "westerman"
+	motto = dynn_Marbrand_motto # Burning Bright
+}
+dynn_Merrell = {
+	name = "dynn_Merrell"
+	culture = "westerman"
+	motto = dynn_Merrell_motto # Grown in Valor
+}
+dynn_Moreland = {
+	name = "dynn_Moreland"
+	culture = "westerman"
+	motto = dynn_Moreland_motto
+}
+dynn_Myatt = {
+	name = "dynn_Myatt"
+	culture = "westerman"
+	motto = dynn_Myatt_motto
+}
+dynn_Parren = {
+	name = "dynn_Parren"
+	culture = "westerman"
+	motto = dynn_Parren_motto
+}
+dynn_Payne = {
+	name = "dynn_Payne"
+	culture = "westerman"
+	motto = dynn_Payne_motto
+}
+dynn_Peckledon = {
+	name = "dynn_Peckledon"
+	culture = "westerman"
+	motto = dynn_Peckledon_motto # Unflinching
+}
+dynn_Plumm = {
+	name = "dynn_Plumm"
+	culture = "westerman"
+	motto = dynn_Plumm_motto # Come Try Me
+}
+dynn_Prester = {
+	name = "dynn_Prester"
+	culture = "westerman"
+	motto = dynn_Prester_motto # Tireless
+}
+dynn_Reyne = {
+	name = "dynn_Reyne"
+	culture = "westerman"
+	motto = dynn_Reyne_motto
+}
+dynn_Ruskyn = {
+	name = "dynn_Ruskyn"
+	culture = "westerman"
+}
+dynn_Ruttiger = {
+	name = "dynn_Ruttiger"
+	culture = "westerman"
+	motto = dynn_Ruttiger_motto
+}
+dynn_Sarsfield = {
+	name = "dynn_Sarsfield"
+	culture = "westerman"
+	motto = dynn_Sarsfield_motto # True to the Mark
+}
+dynn_Serrett = {
+	name = "dynn_Serrett"
+	culture = "westerman"
+	motto = dynn_Serrett_motto # I Have No Rival
+}
+dynn_Spicer = {
+	name = "dynn_Spicer"
+	culture = "westerman"
+	motto = dynn_Spicer_motto
+}
+dynn_Stackspear = {
+	name = "dynn_Stackspear"
+	culture = "westerman"
+	motto = dynn_Stackspear_motto
+}
+dynn_Stilwood = {
+	name = "dynn_Stilwood"
+	culture = "westerman"
+}
+dynn_Swyft = {
+	name = "dynn_Swyft"
+	culture = "westerman"
+	motto = dynn_Swyft_motto # Awake! Awake!
+}
+dynn_Tarbeck = {
+	name = "dynn_Tarbeck"
+	culture = "westerman"
+	motto = dynn_Tarbeck_motto
+}
+dynn_Turnberry = {
+	name = "dynn_Turnberry"
+	culture = "westerman"
+	motto = dynn_Turnberry_motto
+}
+dynn_Westerling = {
+	name = "dynn_Westerling"
+	culture = "westerman"
+	motto = dynn_Westerling_motto # Honor, not Honors
+}
+dynn_Yarwyck = {
+	name = "dynn_Yarwyck"
+	culture = "westerman"
+	motto = dynn_Yarwyck_motto
+}
+dynn_Yew = {
+	name = "dynn_Yew"
+	culture = "westerman"
+	motto = dynn_Yew_motto
+}
+
+### Extinct
+############################
+dynn_Casterly = {
+	name = "dynn_Casterly"
+	culture = "first_man"
+}
+
+### Hedge Knight Graphic Novel
+############################
+dynn_Tortoll = {
+	name = "dynn_Tortoll"
+	culture = "westerman"
+	motto = dynn_Tortoll_motto # For Gain, For Time
+}
+dynn_Dabell = {
+	name = "dynn_Dabell"
+	culture = "westerman"
+	motto = dynn_Dabell_motto # Ring Like None Other
+}
+dynn_Avery = {
+	name = "dynn_Avery"
+	culture = "westerman"
+	motto = dynn_Avery_motto # Weight in Our Words
+}
+
+### AGOT Video Game (2012)
+############################
+dynn_Sarwyck = {
+	name = "dynn_Sarwyck"
+	culture = "westerman"
+	motto = dynn_Sarwyck_motto # Family is Hope, Protect it Always
+}
+dynn_Westford = {
+	name = "dynn_Westford"
+	culture = "westerman"
+	motto = dynn_Westford_motto # Death Over Dishonor
+}
+
+### Telltale AGOT
+############################
+dynn_Tarwick = {
+	name = "dynn_Tarwick"
+	culture = "westerman"
+	motto = dynn_Tarwick_motto # Stronger than Stone (nc)
+}
+
+### TTRPG
+############################
+dynn_Dulver = {
+	name = "dynn_Dulver"
+	culture = "westerman"
+	motto = dynn_Dulver_motto # Earth Yields
+}
+dynn_Lugus = {
+	name = "dynn_Lugus"
+	culture = "westerman"
+	motto = dynn_Lugus_motto # Drink, Live, Last
+}
+
+### Modcanon Houses
+############################
+dynn_Wrexley = {
+	name = "dynn_Wrexley"
+	culture = "westerman"
+}
+dynn_Taves = {
+	name = "dynn_Taves"
+	culture = "westerman"
+}
+dynn_Merchant = {
+	name = "dynn_Merchant"
+	culture = "westerman"
+}
+dynn_Kirkby = {
+	name = "dynn_Kirkby"
+	culture = "westerman"
+}
+dynn_Whetstone = {
+	name = "dynn_Whetstone"
+	culture = "westerman"
+}
+dynn_Brockryn = {
+	name = "dynn_Brockryn"
+	culture = "westerman"
+}
+dynn_Headingley = {
+	name = "dynn_Headingley"
+	culture = "westerman"
+}
+dynn_Lowell = {
+	name = "dynn_Lowell"
+	culture = "westerman"
+}

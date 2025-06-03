@@ -1,0 +1,641 @@
+﻿agot_add_birthplace_bastard_nickname_effect = {
+	if = {
+		limit = {
+			faith = {
+				NOT = { has_doctrine_parameter = bastards_none }
+			}
+			NOR = {
+				has_inactive_trait = surname_flowers
+				has_inactive_trait = surname_hill
+				has_inactive_trait = surname_pyke
+				has_inactive_trait = surname_rivers
+				has_inactive_trait = surname_sand
+				has_inactive_trait = surname_snow
+				has_inactive_trait = surname_stone
+				has_inactive_trait = surname_storm
+				has_inactive_trait = surname_waters
+			}
+			has_trait = bastard
+		}
+		if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_dorne } }
+			custom_description = {
+				text = agot_gain_surname_sand_effect
+				object = this
+				make_trait_inactive = surname_sand
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_iron_islands } }
+			custom_description = {
+				text = agot_gain_surname_pyke_effect
+				object = this
+				make_trait_inactive = surname_pyke
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_north } }
+			custom_description = {
+				text = agot_gain_surname_snow_effect
+				object = this
+				make_trait_inactive = surname_snow
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_reach } }
+			custom_description = {
+				text = agot_gain_surname_flowers_effect
+				object = this
+				make_trait_inactive = surname_flowers
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_riverlands } }
+			custom_description = {
+				text = agot_gain_surname_rivers_effect
+				object = this
+				make_trait_inactive = surname_rivers
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_stormlands } }
+			custom_description = {
+				text = agot_gain_surname_storm_effect
+				object = this
+				make_trait_inactive = surname_storm
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_vale } }
+			custom_description = {
+				text = agot_gain_surname_stone_effect
+				object = this
+				make_trait_inactive = surname_stone
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_westerlands } }
+			custom_description = {
+				text = agot_gain_surname_hill_effect
+				object = this
+				make_trait_inactive = surname_hill
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_crownlands } }
+			custom_description = {
+				text = agot_gain_surname_waters_effect
+				object = this
+				make_trait_inactive = surname_waters
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			faith = {
+				NOT = { has_doctrine_parameter = bastards_none }
+			}
+			OR = {
+				has_inactive_trait = surname_flowers
+				has_inactive_trait = surname_hill
+				has_inactive_trait = surname_pyke
+				has_inactive_trait = surname_rivers
+				has_inactive_trait = surname_sand
+				has_inactive_trait = surname_snow
+				has_inactive_trait = surname_stone
+				has_inactive_trait = surname_storm
+				has_inactive_trait = surname_waters
+			}
+			has_trait = bastard
+		}
+		hidden_effect = { agot_remove_bastard_nickname_effect = yes }
+		if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_dorne } }
+			custom_description = {
+				text = agot_gain_surname_sand_effect
+				object = this
+				make_trait_inactive = surname_sand
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_iron_islands } }
+			custom_description = {
+				text = agot_gain_surname_pyke_effect
+				object = this
+				make_trait_inactive = surname_pyke
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_north } }
+			custom_description = {
+				text = agot_gain_surname_snow_effect
+				object = this
+				make_trait_inactive = surname_snow
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_reach } }
+			custom_description = {
+				text = agot_gain_surname_flowers_effect
+				object = this
+				make_trait_inactive = surname_flowers
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_riverlands } }
+			custom_description = {
+				text = agot_gain_surname_rivers_effect
+				object = this
+				make_trait_inactive = surname_rivers
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_stormlands } }
+			custom_description = {
+				text = agot_gain_surname_storm_effect
+				object = this
+				make_trait_inactive = surname_storm
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_vale } }
+			custom_description = {
+				text = agot_gain_surname_stone_effect
+				object = this
+				make_trait_inactive = surname_stone
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_westerlands } }
+			custom_description = {
+				text = agot_gain_surname_hill_effect
+				object = this
+				make_trait_inactive = surname_hill
+			}
+		}
+		else_if = {
+			limit = { $BIRTHPLACE$ = { geographical_region = world_westeros_the_crownlands } }
+			custom_description = {
+				text = agot_gain_surname_waters_effect
+				object = this
+				make_trait_inactive = surname_waters
+			}
+		}
+	}
+}
+
+agot_add_custom_bastard_nickname_effect = {
+	if = {
+		limit = {
+			NOR = {
+				has_inactive_trait = surname_flowers
+				has_inactive_trait = surname_hill
+				has_inactive_trait = surname_pyke
+				has_inactive_trait = surname_rivers
+				has_inactive_trait = surname_sand
+				has_inactive_trait = surname_snow
+				has_inactive_trait = surname_stone
+				has_inactive_trait = surname_storm
+				has_inactive_trait = surname_waters
+			}
+		}
+		if = {
+			limit = { location = { geographical_region = world_westeros_dorne } }
+			make_trait_inactive = surname_sand
+		}
+		else_if = {
+			limit = { location = { geographical_region = world_westeros_the_iron_islands } }
+			make_trait_inactive = surname_pyke
+		}
+		else_if = {
+			limit = { location = { geographical_region = world_westeros_the_north } }
+			make_trait_inactive = surname_snow
+		}
+		else_if = {
+			limit = { location = { geographical_region = world_westeros_the_reach } }
+			make_trait_inactive = surname_flowers
+		}
+		else_if = {
+			limit = { location = { geographical_region = world_westeros_the_riverlands } }
+			make_trait_inactive = surname_rivers
+		}
+		else_if = {
+			limit = { location = { geographical_region = world_westeros_the_stormlands } }
+			make_trait_inactive = surname_storm
+		}
+		else_if = {
+			limit = { location = { geographical_region = world_westeros_the_vale } }
+			make_trait_inactive = surname_stone
+		}
+		else_if = {
+			limit = { location = { geographical_region = world_westeros_the_westerlands } }
+			make_trait_inactive = surname_hill
+		}
+		else_if = {
+			limit = { location = { geographical_region = world_westeros_the_crownlands } }
+			make_trait_inactive = surname_waters
+		}
+		else = { #fallback for weirdness
+			make_trait_inactive = surname_waters
+		}
+	}
+}
+
+
+agot_remove_bastard_nickname_effect = {
+	if = {
+		limit = { has_inactive_trait = surname_sand }
+		custom_description = {
+			text = agot_lose_surname_sand_effect
+			object = this
+			make_trait_active = surname_sand
+			remove_trait = surname_sand
+		}
+	}
+	if = {
+		limit = { has_inactive_trait = surname_pyke }
+		custom_description = {
+			text = agot_pyke_surname_pyke_effect
+			object = this
+			make_trait_active = surname_pyke
+			remove_trait = surname_pyke
+		}
+	}
+	if = {
+		limit = { has_inactive_trait = surname_snow }
+		custom_description = {
+			text = agot_lose_surname_snow_effect
+			object = this
+			make_trait_active = surname_snow
+			remove_trait = surname_snow
+		}
+	}
+	if = {
+		limit = { has_inactive_trait = surname_flowers }
+		custom_description = {
+			text = agot_lose_surname_flowers_effect
+			object = this
+			make_trait_active = surname_flowers
+			remove_trait = surname_flowers
+		}
+	}
+	if = {
+		limit = { has_inactive_trait = surname_rivers }
+		custom_description = {
+			text = agot_lose_surname_rivers_effect
+			object = this
+			make_trait_active = surname_rivers
+			remove_trait = surname_rivers
+		}
+	}
+	if = {
+		limit = { has_inactive_trait = surname_storm }
+		custom_description = {
+			text = agot_lose_surname_storm_effect
+			object = this
+			make_trait_active = surname_storm
+			remove_trait = surname_storm
+		}
+	}
+	if = {
+		limit = { has_inactive_trait = surname_stone }
+		custom_description = {
+			text = agot_lose_surname_stone_effect
+			object = this
+			make_trait_active = surname_stone
+			remove_trait = surname_stone
+		}
+	}
+	if = {
+		limit = { has_inactive_trait = surname_hill }
+		custom_description = {
+			text = agot_lose_surname_hill_effect
+			object = this
+			make_trait_active = surname_hill
+			remove_trait = surname_hill
+		}
+	}
+	if = {
+		limit = { has_inactive_trait = surname_waters }
+		custom_description = {
+			text = agot_lose_surname_waters_effect
+			object = this
+			make_trait_active = surname_waters
+			remove_trait = surname_waters
+		}
+	}
+
+	# For legitimate descendants who have the bastard surname
+	every_child = {
+		limit = {
+			NOR = {
+				has_trait = bastard
+				has_trait = bastard_founder
+			}
+			OR = {
+				has_inactive_trait = surname_flowers
+				has_inactive_trait = surname_sand
+				has_inactive_trait = surname_stone
+				has_inactive_trait = surname_rivers
+				has_inactive_trait = surname_snow
+				has_inactive_trait = surname_pyke
+				has_inactive_trait = surname_storm
+				has_inactive_trait = surname_hill
+				has_inactive_trait = surname_waters
+			}
+		}
+		agot_remove_bastard_nickname_effect = yes
+	}
+}
+
+agot_legitimize_bastard_effect = {
+	$BASTARD$ = {
+		save_scope_as = bastard
+	}
+	$LEGITIMIZER$ = {
+		save_scope_as = actor
+	}
+	scope:bastard = {
+		remove_trait = bastard
+		add_trait = legitimized_bastard
+
+		add_opinion = {
+			target = scope:actor
+			modifier = legitimized_me_opinion
+		}
+
+		agot_remove_bastard_nickname_effect = yes
+
+		if = {
+			limit = {
+				scope:actor = {
+					can_add_hook = {
+						type = favor_hook
+						target = scope:bastard
+					}
+				}
+			}
+			scope:actor = {
+				add_hook = {
+					type = favor_hook
+					target = scope:bastard
+				}
+			}
+		}
+	}
+}
+
+agot_crown_bastard_nickname_effect = {
+	if = {
+		limit = { has_inactive_trait = surname_sand }
+		give_nickname = nick_sandcrowned
+	}
+	else_if = {
+		limit = { has_inactive_trait = surname_pyke }
+		give_nickname = nick_pykecrowned
+	}
+	else_if = {
+		limit = { has_inactive_trait = surname_snow }
+		give_nickname = nick_snowcrowned
+	}
+	else_if = {
+		limit = { has_inactive_trait = surname_flowers }
+		give_nickname = nick_flowercrowned
+	}
+	else_if = {
+		limit = { has_inactive_trait = surname_rivers }
+		give_nickname = nick_rivercrowned
+	}
+	else_if = {
+		limit = { has_inactive_trait = surname_storm }
+		give_nickname = nick_stormcrowned
+	}
+	else_if = {
+		limit = { has_inactive_trait = surname_stone }
+		give_nickname = nick_stonecrowned
+	}
+	else_if = {
+		limit = { has_inactive_trait = surname_hill }
+		give_nickname = nick_hillcrowned
+	}
+	else_if = {
+		limit = { has_inactive_trait = surname_waters }
+		give_nickname = nick_watercrowned
+	}
+}
+
+agot_children_of_bastard_surname_effect = {
+	if = {
+		limit = {
+			NOT = { faith = { has_doctrine_parameter = bastards_none } }
+			NOT = {
+				has_trait = bastard
+			}
+			exists = scope:father
+		}
+		if = {
+			limit = {
+				scope:father = {
+					OR = {
+						AND = {
+							is_spouse_of = scope:mother
+							matrilinear_marriage = yes
+						}
+						is_concubine_of = scope:mother
+					}
+				}
+				mother = {
+					NOR = {
+						has_trait = legitimized_bastard
+						has_trait = bastard_founder
+					}
+					OR = {
+						has_inactive_trait = surname_flowers
+						has_inactive_trait = surname_sand
+						has_inactive_trait = surname_stone
+						has_inactive_trait = surname_rivers
+						has_inactive_trait = surname_snow
+						has_inactive_trait = surname_pyke
+						has_inactive_trait = surname_storm
+						has_inactive_trait = surname_hill
+						has_inactive_trait = surname_waters
+					}
+				}
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_flowers
+					}
+				}
+				make_trait_inactive = surname_flowers
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_sand
+					}
+				}
+				make_trait_inactive = surname_sand
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_stone
+					}
+				}
+				make_trait_inactive = surname_stone
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_storm
+					}
+				}
+				make_trait_inactive = surname_storm
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_snow
+					}
+				}
+				make_trait_inactive = surname_snow
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_hill
+					}
+				}
+				make_trait_inactive = surname_hill
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_pyke
+					}
+				}
+				make_trait_inactive = surname_pyke
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_rivers
+					}
+				}
+				make_trait_inactive = surname_rivers
+			}
+			if = {
+				limit = {
+					mother = {
+						has_inactive_trait = surname_waters
+					}
+				}
+				make_trait_inactive = surname_waters
+			}
+		}
+		else_if = {
+			limit = {
+				mother = {
+					OR = {
+						AND = {
+							is_spouse_of = scope:father
+							matrilinear_marriage = no
+						}
+						is_concubine_of = scope:father
+					}
+				}
+				father = {
+					NOR = {
+						has_trait = legitimized_bastard
+						has_trait = bastard_founder
+					}
+					OR = {
+						has_inactive_trait = surname_flowers
+						has_inactive_trait = surname_sand
+						has_inactive_trait = surname_stone
+						has_inactive_trait = surname_rivers
+						has_inactive_trait = surname_snow
+						has_inactive_trait = surname_pyke
+						has_inactive_trait = surname_storm
+						has_inactive_trait = surname_hill
+						has_inactive_trait = surname_waters
+					}
+				}
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_flowers
+					}
+				}
+				make_trait_inactive = surname_flowers
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_sand
+					}
+				}
+				make_trait_inactive = surname_sand
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_stone
+					}
+				}
+				make_trait_inactive = surname_stone
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_storm
+					}
+				}
+				make_trait_inactive = surname_storm
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_snow
+					}
+				}
+				make_trait_inactive = surname_snow
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_hill
+					}
+				}
+				make_trait_inactive = surname_hill
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_pyke
+					}
+				}
+				make_trait_inactive = surname_pyke
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_rivers
+					}
+				}
+				make_trait_inactive = surname_rivers
+			}
+			if = {
+				limit = {
+					father = {
+						has_inactive_trait = surname_waters
+					}
+				}
+				make_trait_inactive = surname_waters
+			}
+		}
+	}
+}

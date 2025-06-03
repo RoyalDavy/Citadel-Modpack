@@ -1,0 +1,113 @@
+﻿# All start dates
+
+andal_heritage = { # Erm, my family are *actually* Andal nobles erm
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = andal_heritage_legend
+		}
+		OR = {
+			culture = { has_cultural_pillar = heritage_andal }
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancient_people
+	chronicle_properties = {
+		culture = culture:andal
+		title = title:k_andalos
+		original_region = geographical_region:world_essos_andalos
+	}
+}
+
+first_men_heritage = { # Erm, my family are *actually* First Men nobles erm
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = first_man_heritage_legend
+		}
+		OR = {
+			culture = { has_cultural_pillar = heritage_first_man }
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancient_people
+	chronicle_properties = {
+		culture = culture:first_man
+		title = primary_title
+		original_region = geographical_region:world_westeros
+	}
+}
+
+
+
+#Dynasty perk
+ce1_heroic_legacy_1 = {
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		dynasty = {
+			has_dynasty_perk = ce1_heroic_legacy_1
+			NOT = {
+				exists = var:dynasty_legend_used
+			}
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		OR = {
+			is_ai = no
+			# Prevent the AI from sniping the seed from the player
+			AND = {
+				is_ai = yes
+				NOT = {
+					dynasty = { any_dynasty_member = { is_ai = no } }
+				}
+			}
+		}
+	}
+	chronicle = great_deed_dynasty
+	chronicle_properties = {
+		founder = house.house_founder
+		dynasty = dynasty
+		title = primary_title
+	}
+}
+
+bellos_bricker = {
+	type = heroic
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = bellos_bricker_legend
+		}
+		OR = {
+			dynasty = dynasty:dynn_Bricker 
+			dynasty = dynasty:dynn_Mason 
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancestral_glory_not_in_history
+	chronicle_properties = {
+		ancestor_flag = flag:bellos_bricker
+		title = title:c_brixworth
+	}
+}

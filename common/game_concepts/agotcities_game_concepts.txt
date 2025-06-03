@@ -1,0 +1,5 @@
+﻿wall_ruin_holding = {
+	alias = { wall_ruin wall_ruins wall_ruin_holdings }
+	parent = holding_type
+	texture = "gfx/interface/icons/secret_categories/ruin_game_concept.dds"
+}

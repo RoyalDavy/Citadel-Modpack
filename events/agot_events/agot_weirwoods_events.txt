@@ -1,0 +1,273 @@
+﻿namespace = agot_weirwood_events
+
+##################################################
+# You visit a Weirwood
+# by Hapchazzard
+# 0001 - 0020
+##################################################
+
+# Choose what you'll be meditating for
+agot_weirwood_events.0001 = {
+	type = character_event
+	title = agot_weirwood_events.0001.t
+	desc = agot_weirwood_events.0001.desc
+	theme = faith
+	override_background = {
+		reference = garden
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { ai_zeal >= 100 }
+			animation = personality_zealous
+		}
+		triggered_animation = {
+			trigger = { ai_zeal <= -100 }
+			animation = personality_cynical
+		}
+		triggered_animation = {
+			trigger = { always = yes }
+			animation = personality_honorable
+		}
+	}
+
+	immediate = {
+		# generate_removable_sins_effect = yes
+		if = {
+			limit = { exists = primary_spouse }
+			primary_spouse = { save_scope_as = spouse }
+		}
+	}
+
+	# Seek blessing
+	option = {
+		name = agot_weirwood_events.0001.a
+
+		random_list = {
+			70 = {	# Fallback (Piety)
+				add_piety = medium_piety_gain
+			}
+			20 = {
+				trigger = {
+					can_have_children = yes
+				}
+				add_character_modifier = {
+					modifier = weirwood_fertility_bonus_modifier
+					years = 5
+				}
+			}
+			4 = {
+				trigger = {
+					can_gain_pet_trigger = yes
+				}
+				start_cat_story_cycle_effect = yes
+			}
+			4 = {
+				trigger = {
+					can_gain_pet_trigger = yes
+				}
+				start_dog_story_cycle_effect = yes
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_zeal = 0.25
+			}
+		}
+	}
+
+	# Seek healing
+	option = {
+		name = agot_weirwood_events.0001.b
+
+		random_list = {
+			40 = {
+				add_character_modifier = {
+					modifier = weirwood_minor_health_bonus_modifier
+					years = 5
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = weirwood_medium_health_bonus_modifier
+					years = 5
+				}
+			}
+			6 = {
+				trigger = {
+					has_trait = wounded
+				}
+				change_trait_rank = {
+					trait = wounded
+					rank = -1
+				}
+			}
+			4 = {
+				trigger = {
+					has_trait_rank = {
+						trait = wounded
+						rank >= 3
+					}
+				}
+				custom_tooltip = wounds_turn_to_cripple_tooltip
+				show_as_tooltip = {
+					if = {
+						limit = {
+							has_trait = wounded_3
+						}
+						remove_trait = wounded_3
+					}
+					add_trait = crippled
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 30
+				health < fine_health
+			}
+			modifier = {
+				add = 50
+				health < poor_health
+			}
+			modifier = {
+				add = 100
+				health < dying_health
+			}
+			modifier = {	# Cynical less likely to believe this would actually work
+				add = -40
+				has_trait = cynical
+			}
+		}
+	}
+
+	# Seek calm
+	option = {
+		name = agot_weirwood_events.0001.c
+
+		if = {
+			limit = { has_variable = times_visited_weirwood_for_calm }
+			change_variable = {
+				name = times_visited_weirwood_for_calm
+				add = 1
+			}
+		}
+		else = {
+			set_variable = {
+				name = times_visited_weirwood_for_calm
+				value = 0
+			}
+		}
+
+		random_list = {
+			1 = {
+				trigger = {
+					NOR = {
+						has_trait = calm
+						has_trait = wrathful
+						number_of_personality_traits >= personality_trait_limit
+					}
+				}
+				add_trait = calm
+			}
+			30 = {	# Fallback (Stress reduction/Piety)
+				trigger = { stress > 0 }
+				stress_impact = {
+					base = medium_stress_impact_loss
+					zealous = minor_stress_impact_loss
+				}
+			}
+			30 = {
+				add_character_modifier = {
+					modifier = weirwood_stress_modifier
+					years = 5
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_energy = -0.25
+			}
+		}
+	}
+
+	# Seek guidance
+	option = {
+		name = agot_weirwood_events.0001.d
+
+		trigger = {
+			OR = {
+				has_trait = drunkard
+				has_trait = hashishiyah
+				has_trait = rakish
+				has_trait = irritable
+				has_trait = flagellant
+				has_trait = contrite
+				has_trait = profligate
+				has_trait = comfort_eater
+				has_trait = inappetetic
+			}
+		}
+
+		random_list = {
+			1 = {
+				modifier = {
+					trigger = { ai_zeal > 0 }
+					add = ai_zeal
+				}
+				if = {
+					limit = { has_trait = drunkard }
+					remove_trait = drunkard
+				}
+				else_if = {
+					limit = { has_trait = hashishiyah }
+					remove_trait = hashishiyah
+				}
+				else_if = {
+					limit = { has_trait = rakish }
+					remove_trait = rakish
+				}
+				else_if = {
+					limit = { has_trait = irritable }
+					remove_trait = irritable
+				}
+				else_if = {
+					limit = { has_trait = flagellant }
+					remove_trait = flagellant
+				}
+				else_if = {
+					limit = { has_trait = contrite }
+					remove_trait = contrite
+				}
+				else_if = {
+					limit = { has_trait = profligate }
+					remove_trait = profligate
+				}
+				else_if = {
+					limit = { has_trait = comfort_eater }
+					remove_trait = comfort_eater
+				}
+				else_if = {
+					limit = { has_trait = inappetetic }
+					remove_trait = inappetetic
+				}
+			}
+			100 = {
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_zeal = 0.25
+				ai_honor = 0.25
+			}
+		}
+	}
+}

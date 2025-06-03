@@ -1,0 +1,19 @@
+﻿use_cow_moat_cailin = {
+	default = yes_use_cow_moat_cailin
+	
+	yes_use_cow_moat_cailin = {
+	}
+	
+	no_use_cow_moat_cailin = {
+	}
+}
+
+use_cow_runestone = {
+	default = yes_use_cow_runestone
+	
+	yes_use_cow_runestone = {
+	}
+	
+	no_use_cow_runestone = {
+	}
+}

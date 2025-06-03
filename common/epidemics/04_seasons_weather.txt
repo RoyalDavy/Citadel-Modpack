@@ -1,0 +1,167 @@
+﻿#Hello!
+#This is here as a temporary placeholder. Currently I plan to introduce major storms and weather in the form of the epidemic mechanic, as it should be visible on the map
+#and spread on the map like a storm. It will mainly begin in the stormlands and stepstones in autumn for the time being, atleast for 
+#Beta 0.2 Release. It is also a good way to activate events for players and characters.
+
+
+#Autumn, Stormlands & Stepstones Storm (Hurricane)
+
+seasons_autumn_storm = {
+	trait = seasons_caught_in_storm_trait
+	priority = 4
+	color = blue
+	
+	
+	name = {
+	#Set to be Storm of "Year"
+	#Or Great Storm of "Year"
+		first_valid = {
+			triggered_desc = {
+			#Storm of YEAR
+				trigger = {
+					outbreak_intensity = minor
+				}
+				desc = minor_autumn_storm_year
+			}
+			triggered_desc = {
+				trigger = {
+					outbreak_intensity = apocalyptic
+				}
+				desc = the_great_storm_year_not_specified
+			}
+			random_valid = {
+				triggered_desc = {
+					trigger = {
+						outbreak_intensity = major #change to major?
+					}
+					desc = major_autumn_storm_year #Great Storm of YEAR
+				}
+			}
+		}
+	}
+	
+	shader_data = {
+		strength = 0.5 #if cant make custom texture then set to = 0
+		edge_fade = 0.125
+		tile_multiplier = 0.004702  #Idk what this does if I'm quite honest
+		texture_index = 2 #??? maybe?
+		channel = alpha #i've got no clue what this does, if you're reading this and you
+		#do, please do tell me 
+	
+	}
+
+
+	can_infect_character = {
+	
+	
+	}
+	
+	character_infection_chance = {
+
+	}
+	
+	on_character_infected = {
+		trigger_event = season_weather_events.002
+		if = {
+			limit = { 
+				is_commanding_army = yes
+			}
+			#trigger_event = season_weather_events.0?? #army WASHES AWAY
+		}
+	}
+
+	on_province_infected = {
+	#needs to have a small development decrease, 
+	#needs to be marked as storm impacted
+		county = {
+			apply_infection_development_loss = { BASE = 3 } #Less than a storm
+		}
+	}
+
+	on_province_recovered = {
+		county = { 
+			remove_isolated_capital_modifiers_effect = yes
+		}
+		set_variable = { #pretty sure this does nothing right now. But I'm a solo-dev and I'm doing this for fun. 
+			name = storm_cooldown_general
+			years = 5 
+		}
+	}	
+	on_start = {
+		#Something Storm Effect 
+	
+	}
+	on_end = {
+		#storm is over yippe
+	
+	
+	}	
+	infection_levels = {
+		mildly_impacted_value = {
+			province_modifier = {
+			#idk maybe income modifier?
+			}
+			county_modifier = {
+			#Control growth lower, dev lower
+			}
+			realm_modifier = {
+			#idk maybe something??
+			
+			}
+		}
+	}
+	outbreak_intensities = {
+		minor = {
+			global_notification = no
+		
+			outbreak_chance = {
+				value = seasons_no_random_outbreak
+				if = {
+					limit = {
+						has_game_rule = seasons_storm_disabled
+					}
+					multiply = 0
+				}
+				if = {
+					#CHECK IF IT IS AUTUMN, AND CHECK IF STORMLANDS OR STEPSTONES.
+					is_it_autumn = yes
+					is_this_stormlands_or_stepstones = yes
+				}
+			}
+			spread_chance = {
+				value = SEASONS_PLACEHOLDER
+				multiply = SEASONS_PLACEHOLDER
+			}
+			max_provinces = { 5 15 }
+
+			infection_duration = {
+				days = { 20 50 }
+			}
+
+			infection_progress_duration = {
+				days = { 2 8 }
+			}
+
+			infection_recovery_duration = {
+				days = { 5 15 }
+			}		
+		}
+		major = {
+			global_notification = yes
+			
+			outbreak_chance = {
+				value = seasons_no_random_outbreak #Fix!
+				if = {
+					limit = {
+						has_game_rule = seasons_storm_disabled
+					} 
+					multiply = 0
+				}
+				if = {
+					is_it_autumn = yes
+					is_this_stormlands_or_stepstones = yes #FIX
+				}		
+			}
+		}	
+	}
+}

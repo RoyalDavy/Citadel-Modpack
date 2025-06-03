@@ -1,0 +1,77 @@
+﻿# Called from code after history generation
+# Empty scope
+on_game_start_after_lobby = {
+	on_actions = {
+		agot_duchy_legitimate_house
+	}
+}
+
+agot_duchy_legitimate_house = {
+	effect = {
+		every_duchy = {
+			if = {
+				limit = {
+					is_landless_type_title = no
+					holder = { government_has_flag = government_is_feudal }
+					AND = { # In case of shenanigans with shattered titles
+						title_capital_county.title_province = {
+							geographical_region = world_westeros_seven_kingdoms
+							NOT = { geographical_region = world_westeros_the_wall }
+						}
+					}
+				}
+				set_variable = {
+					name = legitimate_house_title
+					value = 1
+				}
+				set_variable = {
+					name = new_house_progress
+					value = 100
+				}
+				set_variable = { # Set the current house to the holder's house
+							name = current_house
+							value = holder.house
+				}
+				set_variable = { # Set the current house to the holder's house
+							name = legitimate_house
+							value = holder.house
+				}
+				add_to_global_variable_list = {
+					name = legitimate_house_titles
+					target = this
+				}
+				
+			}
+			else = {
+				set_variable = {
+					name = legitimate_house_title
+					value = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				game_start_date > 8283.9.1
+				NOR = { # Don't do this if shattered world
+					has_game_rule = agot_shatter_duchies
+					has_game_rule = agot_shatter_duchies_even
+					has_game_rule = agot_shatter_petty_kingdoms
+					has_game_rule = agot_shatter_kingdoms
+					has_game_rule = agot_shatter_empires
+				}
+			}
+			
+			agot_set_new_house_progress = {
+				TITLE = title:d_dragonstone
+				PROGRESS = 1
+			}
+			agot_set_new_house_progress = {
+				TITLE = title:d_kings_landing
+				PROGRESS = 1
+			}
+		}
+	}
+}
+
+
+

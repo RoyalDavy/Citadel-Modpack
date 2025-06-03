@@ -1,0 +1,986 @@
+﻿######################
+### AGOT NICKNAMES ###
+######################
+
+### Bastard Nicknames ###
+
+nick_waters = {}
+nick_sand = {}
+nick_pyke = {}
+nick_snow = {}
+nick_flowers = {}
+nick_rivers = {}
+nick_storm = {}
+nick_stone = {}
+nick_hill = {}
+
+### Bastard-derived Nicknames ###
+
+nick_watercrowned = {}
+nick_sandcrowned = {}
+nick_pykecrowned = {}
+nick_snowcrowned = {}
+nick_flowercrowned = {}
+nick_rivercrowned = {}
+nick_stormcrowned = {}
+nick_stonecrowned = {}
+nick_hillcrowned = {}
+
+### Other Nicknames in Alphabetical Order ###
+nick_ambercloak = {}
+nick_anvil_of_hammerhal = {}
+nick_anvilbreaker = {}
+nick_the_apostate = {}
+nick_apple_eater = {}
+nick_appleseed = {}
+nick_badbrother = { is_bad = yes }
+nick_be_lucky = {}
+nick_big = { is_prefix = yes }
+nick_big_belly = { is_prefix = yes }
+nick_big_liddle = {}
+nick_big_norrey = {}
+nick_big_walder_frey = { is_prefix = yes }
+nick_bittersteel = {}
+nick_black = { is_prefix = yes }
+nick_black_builder = {}
+nick_black_bear = {}
+nick_black_pearl = {}
+nick_blackbean = {}
+nick_blackbolt = {}
+nick_blackcrown = {}
+nick_blackfish = {}
+nick_blackheart = {}
+nick_blacklance = {}
+nick_blackshield = {}
+nick_blacksword = {}
+nick_blackthumb = {}
+nick_bleak = {}
+nick_bloodaxe = {}
+nick_bloodborn = {}
+nick_bloodbeard = {}
+nick_bloodless = { is_prefix = yes }
+nick_bloodraven = {}
+nick_bloody = { is_prefix = yes }
+nick_bluespur = {}
+nick_bluetooth = {}
+nick_bonehand = {}
+nick_bonesuckled = { is_prefix = yes }
+nick_books = {}
+nick_brave_bentbow = {}
+nick_breakbones = {}
+nick_breakspear = {}
+nick_breaksword = {}
+nick_brightflame = {}
+nick_brightmane = {}
+nick_brightrune = {}
+nick_brightsmile = {}
+nick_bronze = { is_prefix = yes }
+nick_bronze_axe = {}
+nick_bronze_bitch = {}
+nick_brown = { is_prefix = yes }
+nick_browntooth = {}
+nick_buckets = {}
+nick_cleftjaw = {}
+nick_clubfoot = { is_prefix = yes }
+nick_coldwind = {}
+nick_cornburner = {}
+nick_corpse = { is_prefix = yes is_bad = yes }
+nick_cotter = {}
+nick_crabfeeder = {}
+nick_crowfood = {}
+nick_crowkiller = {}
+nick_crows_eye = {}
+nick_crowson = {}
+nick_dame_of_andalos = {}
+nick_damphair = {}
+nick_dance_for_me = {}
+nick_darkrobin = {}
+nick_darkstar = {}
+nick_dashing_prefix = { is_prefix = yes }
+nick_daughter_of_the_sand = {}
+nick_deaf = { is_prefix = yes }
+nick_dead = { is_prefix = yes }
+nick_dim = { is_prefix = yes }
+nick_dolorous = { is_prefix = yes }
+nick_dour_prefix = { is_prefix = yes }
+nick_drakethief = {}
+nick_dread_prefix = { is_prefix = yes }
+nick_drunken_giant = {}
+nick_the_eastern = {}
+nick_the_ebon_prince = {}
+nick_evenstar = {}
+nick_ever_sweet = {}
+nick_fair = { is_prefix = yes }
+nick_fairhands = {}
+nick_falconhelm = {}
+nick_fat = { is_prefix = yes }
+nick_fabulous_she_he = {}
+nick_feareater = {}
+nick_fighting_fool = {}
+nick_fireball = {}
+nick_first_goose = {}
+nick_flatnose = {}
+nick_fletcher = { is_prefix = yes }
+nick_fourskins = {}
+nick_four_groats = { is_bad = yes }
+nick_foxglove = {}
+nick_freeborn = {}
+nick_frostfinger = {}
+nick_gatehouse = { is_prefix = yes }
+nick_giantsbane = {}
+nick_ginger = { is_prefix = yes }
+nick_godsgrief = {}
+nick_gold_tree = {}
+nick_golden = { is_prefix = yes }
+nick_goldeneye = {}
+nick_goldstag = {}
+nick_good = { is_prefix = yes }
+nick_good_queen = { is_prefix = yes }
+nick_great_axe = {}
+nick_greatjon = {}
+nick_greenbeard = {}
+nick_greenhand = {}
+nick_greensail = {}
+nick_grey_eyes = {}
+nick_greybeard = {}
+nick_greycloak = {}
+nick_greysteel_historical = {}
+nick_grim = { is_prefix = yes }
+nick_half_hoare = {}
+nick_halfblood = {}
+nick_halfhand = {}
+nick_hardhand = {}
+nick_hardstone = {}
+nick_the_headless = {}
+nick_health_god_mercy = {}
+nick_the_high_lickspittle = {}
+nick_hodor = {}
+nick_hot = { is_prefix = yes }
+nick_homeless = { is_prefix = yes }
+nick_honeyed = { is_prefix = yes }
+nick_ice_eyes = {}
+nick_inkpots = { is_bad = yes }
+nick_iron = { is_prefix = yes }
+nick_iron_banger = {}
+nick_ironfoot = {}
+nick_ironhand = {}
+nick_jingelbells = {}
+nick_kegs = {}
+nick_kin_killer = { is_bad = yes }
+nick_knight_of_the_laughing_tree = {}
+nick_knight_of_the_moon = {}
+nick_knight_of_the_pantry = {}
+nick_lame = { is_prefix = yes }
+nick_lap_goose = {}
+nick_lazy = { is_prefix = yes }
+nick_lefthand = { is_prefix = yes }
+nick_left_hand = { is_prefix = yes }
+nick_lemoncloak = {}
+nick_lightheart = {}
+nick_little = { is_prefix = yes }
+nick_little_liddle = {}
+nick_little_walder_frey = { is_prefix = yes }
+nick_littlefinger = {}
+nick_littlefoot = {}
+nick_long = { is_prefix = yes }
+nick_longaxe = {}
+nick_longinch = {}
+nick_longneck = {}
+nick_longneck_the_hanged = {}
+nick_longneck_the_twice_hanged = {}
+nick_longneck_the_thrice_hanged = {}
+nick_longspear_ryk = {}
+nick_longthorn = {}
+nick_lophand = {}
+nick_lord_of_battles = {}
+nick_lord_of_daughters = {}
+nick_mad = { is_prefix = yes }
+nick_maidensbane = {}
+nick_mean_prefix = { is_prefix = yes }
+nick_merry = { is_prefix = yes }
+nick_middle_liddle = {}
+nick_milk_eye = {}
+nick_mossdear = {}
+nick_mudfoot = {}
+nick_mumble = {}
+nick_nine_eyes = {}
+nick_northern_shield = {}
+nick_noseless = { is_prefix = yes }
+nick_oakenfist = {}
+nick_oakenshield = {}
+nick_oakshanks = {}
+nick_of_many_honors = {}
+nick_of_oldstones = {}
+nick_of_red_lake = {}
+nick_of_sour_hill = {}
+nick_of_the_black_hood = {}
+nick_of_the_bloody_blade = {}
+nick_of_the_brown_shield = {}
+nick_of_the_golden_bowl = {}
+nick_of_the_high_tower = {}
+nick_of_the_horn = {}
+nick_of_the_mirror_shield = {}
+nick_of_the_red = {}
+nick_of_the_red_smile = {}
+nick_of_the_tower = {}
+nick_of_the_woods = {}
+nick_of_the_vines = {}
+nick_old_hawk = {}
+nick_one_ear = {}
+nick_one_eye_historical_jonnel = {}
+nick_one_eye_historical_aemond = {}
+nick_one_hand_historical = {}
+nick_palehair_gaemon = {}
+nick_pennylover = {}
+nick_pimple = {}
+nick_pinchface = {}
+nick_pinchpenny = {}
+nick_preachfire = {}
+nick_pretty_prefix = { is_prefix = yes }
+nick_priestkiller = {}
+nick_queen_lorea = {}
+nick_ragged = { is_prefix = yes }
+nick_rattleshirt = {}
+nick_raven_feeder = {}
+nick_ravenfriend = {}
+nick_ready_prefix = { is_prefix = yes }
+nick_reaversbane = {}
+nick_red = { is_prefix = yes }
+nick_red_oarsman = {}
+nick_red_spear = {}
+nick_redarm_royce = {}
+nick_redback = { is_bad = yes }
+nick_redbeard = {}
+nick_redhand_line = {}
+nick_redhand_urron = {}
+nick_redraven = {}
+nick_redsteel = {}
+nick_redtusk = {}
+nick_reek = { is_bad = yes }
+nick_salt_beard = {}
+nick_scalesnatcher = {}
+nick_sealskinner = {}
+nick_seaspray = {}
+nick_seastar = {}
+nick_second_goose = {}
+nick_sharpgrove = {}
+nick_sheepstealer = {}
+nick_shieldbreaker = {}
+nick_shitmouth = { is_bad = yes }
+nick_short = { is_prefix = yes }
+nick_shortfoot = {}
+nick_sick_leek = {}
+nick_silveraxe = {}
+nick_silverhair_sigfryd = {}
+nick_silverhorn = {}
+nick_silvertongue = {}
+nick_sixskins = {}
+nick_sly = { is_prefix = yes }
+nick_small = { is_prefix = yes }
+nick_smalljon = {}
+nick_snowbeard = {}
+nick_softspear = {}
+nick_sourmouth = {}
+nick_speardancer = {}
+nick_spearlover = {}
+nick_spotted = { is_prefix = yes }
+nick_spotted_butcher = { is_prefix = yes }
+nick_squire = { is_prefix = yes }
+nick_stammerer = {}
+nick_standfast = {}
+nick_star_eyes = {}
+nick_starfire_samwell = {}
+nick_steelshanks = {}
+nick_steelsong = {}
+nick_stonehand = {}
+nick_stoneheart = {}
+nick_stonesnake = {}
+nick_stormborn = {}
+nick_stormdrunk = {}
+nick_stormsword = {}
+nick_strong_prefix = { is_prefix = yes }
+nick_strongarm = {}
+nick_strongboar = {}
+nick_stump_hand = {}
+nick_swiftspur = {}
+nick_sweetberry = {}
+nick_swordbiter = {}
+nick_tailcutter = {}
+nick_tanner = {}
+nick_teak = {}
+nick_the_acolyte = {}
+nick_the_affable = {}
+nick_the_anointed = {}
+nick_the_anvil = {}
+nick_the_archer = {}
+nick_the_architect = {}
+nick_the_arrogant = {}
+nick_the_artist = {}
+nick_the_avenger = {}
+nick_the_bad = {}
+nick_the_bad_apple = { is_bad = yes }
+nick_the_bald_historical = {}
+nick_the_barber_nute = {}
+nick_the_bard_bael = {}
+nick_the_bard_loron = {}
+nick_the_barren = {}
+nick_the_bat = {}
+nick_the_bastard_historical = {}
+nick_the_bear = {}
+nick_the_beast_of_harrenhal = {}
+nick_the_beautiful = {}
+nick_the_beggar_king = {}
+nick_the_belly = {}
+nick_the_belly_lorimer = {}
+nick_the_beloved = {}
+nick_the_benevolent = {}
+nick_the_besieger = {}
+nick_the_big = {}
+nick_the_big_bucket = {}
+nick_the_big_man = {}
+nick_the_big_prefix = { is_prefix = yes }
+nick_the_bitter = {}
+nick_the_black_harren = {}
+nick_the_black_centaur = {}
+nick_the_black_dragon_historical = {}
+nick_the_black_lion_historical = {}
+nick_the_black_prefix = { is_prefix = yes }
+nick_the_black_priest = {}
+nick_the_black_rose_historical = {}
+nick_the_black_serpent = {}
+nick_the_black_shepherd = {}
+nick_the_black_swan_historical = {}
+nick_the_black_tempest = {}
+nick_the_black_widow = {}
+nick_the_blackhand = {}
+nick_the_blackmane = {}
+nick_the_blessed = {}
+nick_the_blind = {}
+nick_the_blind_bastard = {}
+nick_the_blind_bowman = {}
+nick_the_blind_king = {}
+nick_the_blood_motherfather = {}
+nick_the_blue = {}
+nick_the_blue_bard = {}
+nick_the_boarkiller = {}
+nick_the_boastful = {}
+nick_the_boisterous = {}
+nick_the_bold = {}
+nick_the_boor = { is_bad = yes }
+nick_the_boy_king = {}
+nick_the_brave_historical = {}
+nick_the_breaker_bulwer = {}
+nick_the_breaker_bulwer_line = {}
+nick_the_breaker_stark = {}
+nick_the_breaker_stark_line = {}
+nick_the_breaker_of_chains = {}
+nick_the_bridegroom = {}
+nick_the_bridegroom_garland = {}
+nick_the_bright_prince = {}
+nick_the_broken_king = {}
+nick_the_bronzeman = {}
+nick_the_brown_dragon = {}
+nick_the_brute = {}
+nick_the_builder = {}
+nick_the_bull = {}
+nick_the_bull_of_blackcrown = {}
+nick_the_bully = {}
+nick_the_burner = {}
+nick_the_butcher_historical = {}
+nick_the_callow = {}
+nick_the_cat = {}
+nick_the_chain = {}
+nick_the_champion = {}
+nick_the_chaste = {}
+nick_the_cheerful = {}
+nick_the_cherry = {}
+nick_the_chestmaker = {}
+nick_the_chestnut = {}
+nick_the_child = {}
+nick_the_child_killer = { is_bad = yes }
+nick_the_child_of_devilgod = { is_bad = yes }
+nick_the_chivalrous = {}
+nick_the_chopper = {}
+nick_the_chronicler = {}
+nick_the_clever = {}
+nick_the_cloakless = {}
+nick_the_clubfoot = {}
+nick_the_collector = {}
+nick_the_conciliator = {}
+nick_the_corpsekiller = { is_bad = yes }
+nick_the_conqueror = {}
+nick_the_cousin = {}
+nick_the_crab = {}
+nick_the_crackclaw = {}
+nick_the_craftsman = {}
+nick_the_creator = {}
+nick_the_crow = {}
+nick_the_cruel = { is_bad = yes }
+nick_the_coward = {}
+nick_the_cunning_qhorwyn = {}
+nick_the_curd = { is_bad = yes }
+nick_the_daring_historical = {}
+nick_the_darling_of_the_vale = {}
+nick_the_daughterless = {}
+nick_the_daughter_of_the_dusk = {}
+nick_the_defiant_argrave = {}
+nick_the_defiant_daena = {}
+nick_the_delayer = {}
+nick_the_demon = {}
+nick_the_demon_of_darry = {}
+nick_the_demonlover = {}
+nick_the_devourer = {}
+nick_the_devout = {}
+nick_the_dim = {}
+nick_the_diplomat = {}
+nick_the_divine = {}
+nick_the_dogshead = {}
+nick_the_dour_dorden = {}
+nick_the_dour_durran = {}
+nick_the_dragon = {}
+nick_the_dragon_prince = {}
+nick_the_dragon_queen = {}
+nick_the_dragonbane = {}
+nick_the_dragonfaller = {}
+nick_the_dragonknight_historic = {}
+nick_the_dragonless = { is_bad = yes }
+nick_the_dragonslayer = {}
+nick_the_dread = { is_bad = yes }
+nick_the_dreamer = {}
+nick_the_drowned = {}
+nick_the_drunkard = { is_bad = yes }
+nick_the_drunken = { is_bad = yes }
+nick_the_dutiful = {}
+nick_the_eagle = {}
+nick_the_elder = {}
+nick_the_elegant = {}
+nick_the_enlightened = {}
+nick_the_even_younger_prince = {}
+nick_the_evenstar = {}
+nick_the_exile = {}
+nick_the_fair = {}
+nick_the_faithful = {}
+nick_the_falcon_knight = {}
+nick_the_fat = {}
+nick_the_father_of_dragons = {}
+nick_the_fatherless = { is_bad = yes }
+nick_the_fearless = {}
+nick_the_featherless = {}
+nick_the_fierce = {}
+nick_the_fighter = {}
+nick_the_fishwife = {}
+nick_the_fishy = {}
+nick_the_flamboyant = {}
+nick_the_flayer = {}
+nick_the_flea = {}
+nick_the_flower_of_the_mountain = {}
+nick_the_fool = {}
+nick_the_foolish = {}
+nick_the_fortunate = {}
+nick_the_footstool = {}
+nick_the_forgotten = {}
+nick_the_fox = {}
+nick_the_fox_knight = {}
+nick_the_frog = {}
+nick_the_fruitful = {}
+nick_the_fury = {}
+nick_the_gallant = {}
+nick_the_gardener = {}
+nick_the_garlic = {}
+nick_the_generous = {}
+nick_the_giantslayer = {}
+nick_the_girlfather = {}
+nick_the_glass = {}
+nick_the_glorious = {}
+nick_the_glutton = {}
+nick_the_goat = { is_bad = yes }
+nick_the_gods_fearing = {}
+nick_the_golden = {}
+nick_the_goldenhand = {}
+nick_the_goldsmith = {}
+nick_the_good_historical = {}
+nick_the_great = {}
+nick_the_greedy = {}
+nick_the_green = {}
+nick_the_green_lady = {}
+nick_the_green_lion = {}
+nick_the_green_oak = {}
+nick_the_grey = {}
+nick_the_grey_lion = {}
+nick_the_grey_thunder = {}
+nick_the_griffin_king = {}
+nick_the_grim = {}
+nick_the_grim_handed = {}
+nick_the_gross = {}
+nick_the_griffin = {}
+nick_the_guardian = {}
+nick_the_guest = {}
+nick_the_haggler = {}
+nick_halfdrowned = {}
+nick_the_half_year_queen = { is_bad = yes }
+nick_the_halfwild = {}
+nick_the_ham = {}
+nick_the_hammer = {}
+nick_the_hammer_of_justice = {}
+nick_the_handsome = {}
+nick_the_hardhead = {}
+nick_the_harelip = {}
+nick_the_harper = {}
+nick_the_hawk = {}
+nick_the_heartbreaker = {}
+nick_the_heartless = {}
+nick_the_hell_knight = {}
+nick_the_heretic = {}
+nick_the_hewer = {}
+nick_the_historian = {}
+nick_the_holy = {}
+nick_the_holy_fool = {}
+nick_the_honorable = {}
+nick_the_hopeful = {}
+nick_the_horsekiller = { is_bad = yes }
+nick_the_host = {}
+nick_the_hound = {}
+nick_the_humpback = {}
+nick_the_hungry = {}
+nick_the_hungry_wolf = {}
+nick_the_hunter = {}
+nick_the_huntsman = {}
+nick_the_imp = {}
+nick_the_impaler = { is_bad = yes }
+nick_the_imperious = {}
+nick_the_implacable = {}
+nick_the_inked = {}
+nick_the_iron_serpent = {}
+nick_the_ironmonger = {}
+nick_the_ironrod = {}
+nick_the_jewel_of_the_eyrie = {}
+nick_the_jolly = {}
+nick_the_jousting_lord = {}
+nick_the_joyful = {}
+nick_the_just = {}
+nick_the_keg_o_ale = {}
+nick_the_kind = {}
+nick_the_king_who_flew = {}
+nick_the_king_who_knelt = {}
+nick_the_kingmaker = {}
+nick_the_kingslayer = { is_bad = yes }
+nick_the_kinslayer = {}
+nick_the_knight = {}
+nick_the_knight_of_flowers = {}
+nick_the_knight_of_kisses = {}
+nick_the_knight_of_the_flame = {}
+nick_the_knight_of_the_fountains = {}
+nick_the_knight_of_the_twilight = {}
+nick_the_knott = {}
+nick_the_krakens_daughter = {}
+nick_the_lace_serpent = {}
+nick_the_lackwit = {}
+nick_the_lame = {}
+nick_the_last = {}
+nick_the_last_loren = {}
+nick_the_last_dragon = {}
+nick_the_last_reaver = {}
+nick_the_last_valyrian = {}
+nick_the_late_lord = {}
+nick_the_latecomer = {}
+nick_the_laughing_lion_historical = {}
+nick_the_laughing_storm_historical = {}
+nick_the_laughing_wolf_historical = {}
+nick_the_lawgiver = {}
+nick_the_lazy = {}
+nick_the_learned = {}
+nick_the_leech_lord = { is_bad = yes }
+nick_the_leopard = {}
+nick_the_liar = {}
+nick_the_liddle = {}
+nick_the_limp = {}
+nick_the_limper = {}
+nick_the_lion = {}
+nick_the_lion_king = {}
+nick_the_lion_of_braavos = {}
+nick_the_lionslayer = {}
+nick_the_little = {}
+nick_the_little_bear = {}
+nick_the_little_bee = {}
+nick_the_little_lemon = {}
+nick_the_little_lion = {}
+nick_the_little_pussy = {}
+nick_the_little_witch = {}
+nick_the_long = {}
+nick_the_long_prefix = { is_prefix = yes }
+nick_the_longknife = {}
+nick_the_lord_lamprey = {}
+nick_the_loud = {}
+nick_the_lusty = {}
+nick_the_mad = {}
+nick_the_mad_bard = {}
+nick_the_mad_heir = {}
+nick_the_mad_huntsman = {}
+nick_the_mad_king = { is_bad = yes }
+nick_the_mad_maid = {}
+nick_the_mad_mouse = {}
+nick_the_madling = {}
+nick_the_mage = {}
+nick_the_magnanimous = {}
+nick_the_magnificent = {}
+nick_the_maid = {}
+nick_the_maiden_of_the_vale = {}
+nick_the_martyr = {}
+nick_the_mason = {}
+nick_the_meek = {}
+nick_the_merciful = {}
+nick_the_merciless = {}
+nick_the_merling_queen = {}
+nick_the_merry = {}
+nick_the_meticulous = {}
+nick_the_mighty = {}
+nick_the_mindbreaker = {}
+nick_the_mistress_of_swords = {}
+nick_the_monstrous = { is_bad = yes }
+nick_the_moon_king = {}
+nick_the_moonshadow = {}
+nick_the_mordant = {}
+nick_the_morningstar = {}
+nick_the_morrey = {}
+nick_the_mother_of_dragons = {}
+nick_the_mountain_that_rides = {}
+nick_the_mouse = {}
+nick_the_mother = {}
+nick_the_mother_hen = {}
+nick_the_mummer = {}
+nick_the_musician = {}
+nick_the_necromancer = {}
+nick_the_neveryield = {}
+nick_the_niggardly = {}
+nick_the_nightingale = {}
+nick_the_nights_king = {}
+nick_the_nimble = {}
+nick_the_noble = {}
+nick_the_nocturnal = {}
+nick_the_norrey = {}
+nick_the_northman = {}
+nick_the_oak = {}
+nick_the_old = {}
+nick_the_old_bear_historical = {}
+nick_the_old_falcon_historical = {}
+nick_the_old_grey_gull = {}
+nick_the_old_king = {}
+nick_the_old_kraken = {}
+nick_the_old_ox = {}
+nick_the_old_prefix = { is_prefix = yes }
+nick_the_old_steelhand = {}
+nick_the_old_tattersalt = {}
+nick_the_oldfather = {}
+nick_the_onion_knight = {}
+nick_the_onion_lord = {}
+nick_the_openhanded = {}
+nick_the_orange = {}
+nick_the_painter = {}
+nick_the_pale_griffin = {}
+nick_the_pander = {}
+nick_the_patient = {}
+nick_the_patriarch = {}
+nick_the_patternmaker = {}
+nick_the_peacemaker = {}
+nick_the_penniless = {}
+nick_the_philosopher = {}
+nick_the_piglet = { is_bad = yes }
+nick_the_pike = {}
+nick_the_pirate = { is_bad = yes }
+nick_the_pious = {}
+nick_the_pious_will = {}
+nick_the_plowman = {}
+nick_the_plump = {}
+nick_the_poet = {}
+nick_the_poetess = {}
+nick_the_prince_of_dragonflies = {}
+nick_the_prince_who_thought_he_was_a_dragon = {}
+nick_the_prince_who_was_an_egg = {}
+nick_the_proud_perwyn = {}
+nick_the_puppeteer = {}
+nick_the_purple = {}
+nick_the_queen_of_thorns = {}
+nick_the_queen_who_never_was = {}
+nick_the_queenmaker = {}
+nick_the_queer = {}
+nick_the_quick = {}
+nick_the_quickfinger = {}
+nick_the_quiver = {}
+nick_the_raper = {}
+nick_the_raven = {}
+nick_the_reader_rodrik = {}
+nick_the_realms_delight = {}
+nick_the_reaver = {}
+nick_the_red = {}
+nick_the_red_crab_historical = {}
+nick_the_red_dog = {}
+nick_the_red_kraken = {}
+nick_the_red_lion_historical = {}
+nick_the_red_viper = {}
+nick_the_red_widow = {}
+nick_the_redsmile = {}
+nick_the_regent = {}
+nick_the_rhymer = {}
+nick_the_rhoynar = {}
+nick_the_riverman = {}
+nick_the_roarer = {}
+nick_the_rodent = { is_bad = yes }
+nick_the_rogue_prince = {}
+nick_the_rogue_prince_reborn = {}
+nick_the_rogue_king = {}
+nick_the_rogue_rider = {}
+nick_the_rook = {}
+nick_the_ruin = {}
+nick_the_ruined = {}
+nick_the_rune = {}
+nick_the_saddlesore = {}
+nick_the_sage = {}
+nick_the_sailmaker = {}
+nick_the_salt_rat = {}
+nick_the_savage = {}
+nick_the_sand_dog = {}
+nick_the_scaly_prefix = { is_prefix = yes }
+nick_the_scholar = {}
+nick_the_scrapesword = {}
+nick_the_scribe = {}
+nick_the_sculptor = {}
+nick_the_sea_lion_leo = {}
+nick_the_sea_lion_lymond = {}
+nick_the_sea_snake = {}
+nick_the_seeker = {}
+nick_the_selfish = {}
+nick_the_shade_of_ghost_hill = {}
+nick_the_shadow_sandoq = {}
+nick_the_shaker = {}
+nick_the_shebear = {}
+nick_the_shepherd = {}
+nick_the_shieldsmasher = {}
+nick_the_shipwright = {}
+nick_the_silver_prefix = { is_prefix = yes }
+nick_the_silver_prince = {}
+nick_the_sisterman = {}
+nick_the_simple_vaella = {}
+nick_the_sleeper = {}
+nick_the_sleepy = {}
+nick_the_sleepy_jack = {}
+nick_the_sly = {}
+nick_the_small = {}
+nick_the_smiling_knight = {}
+nick_the_smith = {}
+nick_the_snail = {}
+nick_the_sneaky = {}
+nick_the_sot = { is_bad = yes }
+nick_the_soulless = { is_bad = yes }
+nick_the_sour = {}
+nick_the_spider = {}
+nick_the_spotted = {}
+nick_the_spring_king = {}
+nick_the_spring_prince = {}
+nick_the_stalwart = {}
+nick_the_stammerer = {}
+nick_the_stargazer = {}
+nick_the_starvling = {}
+nick_the_steelhand = {}
+nick_the_stinger = {}
+nick_the_stonemason = {}
+nick_the_stormbreaker = {}
+nick_the_storyteller = {}
+nick_the_stray = {}
+nick_the_strong = {}
+nick_the_strummer = {}
+nick_the_survivor = {}
+nick_the_sweet = {}
+nick_the_sweet_prefix = { is_prefix = yes }
+nick_the_sweetling = {}
+nick_the_sword_of_the_evening = {}
+nick_the_sword_of_the_morning = {}
+nick_the_sybarite = {}
+nick_the_tactician = {}
+nick_the_tall_duncan = {}
+nick_the_tall_gerhard = {}
+nick_the_tall_john = {}
+nick_the_tall_tallad = {}
+nick_the_tall_toregg = {}
+nick_the_talon = {}
+nick_the_tame = {}
+nick_the_tanglebeard = {}
+nick_the_tangletongue = {}
+nick_the_tattered_prince = {}
+nick_the_terrible_togarion = {}
+nick_the_thrall = {}
+nick_the_threadbare = {}
+nick_the_thrice_drowned = {}
+nick_the_thrice_widowed = {}
+nick_the_tickler_jon = { is_bad = yes }
+nick_the_tiger = {}
+nick_the_tiger_tessario = {}
+nick_the_titans_bastard = {}
+nick_the_tooth = {}
+nick_the_toothless_lion = {}
+nick_the_tormentor = {}
+nick_the_tormentor_tyrion = {}
+nick_the_trader = {}
+nick_the_triumphant = {}
+nick_the_true = {}
+nick_the_trueborn = {}
+nick_the_truthseeker = {}
+nick_the_twisted = {}
+nick_the_twisted_peremore = {}
+nick_the_ugly_erich = { is_bad = yes }
+nick_the_unburnt = {}
+nick_the_uncrowned = {}
+nick_the_undefeated = {}
+nick_the_undisputed = {}
+nick_the_unforseen = {}
+nick_the_unhappy = {}
+nick_the_unlikely = {}
+nick_the_unlucky = {}
+nick_the_unready = {}
+nick_the_unready_erich = {}
+nick_the_unrelenting = {}
+nick_the_unsmiling = {}
+nick_the_unworthy = {}
+nick_the_usurper = {}
+nick_the_valiant_victor = {}
+nick_the_veiled_lady = {}
+nick_the_vigorous = {}
+nick_the_virtuous = {}
+nick_the_visitor = {}
+nick_the_vole = {}
+nick_the_vulture = {}
+nick_the_vulture_king = {}
+nick_the_wanderer = {}
+nick_the_wandering_wolf = {}
+nick_the_war_hound = {}
+nick_the_wasp = {}
+nick_the_weak_legs = {}
+nick_the_weeper_gendel = {}
+nick_the_wetnurse = {}
+nick_the_whisperer = {}
+nick_the_white_bastard = {}
+nick_the_white_bull = {}
+nick_the_white_fawn = {}
+nick_the_white_owl = {}
+nick_the_white_worm = {}
+nick_the_whoreson = {}
+nick_the_wicked = {}
+nick_the_widowmaker = {}
+nick_the_widower = {}
+nick_the_wild = {}
+nick_the_wild_flower = {}
+nick_the_wild_prefix = { is_prefix = yes }
+nick_the_winged_knight = {}
+nick_the_winter_child = {}
+nick_the_winterfast = {}
+nick_the_wise = {}
+nick_the_witch = {}
+nick_the_woe_gyles = {}
+nick_the_woodcock = {}
+nick_the_wordsmith = {}
+nick_the_wull = {}
+nick_the_yellow = {}
+nick_the_young = {}
+nick_the_young_dragon = {}
+nick_the_young_falcon = {}
+nick_the_young_prefix = { is_prefix = yes }
+nick_the_young_prince = {}
+nick_the_young_wolf = {}
+nick_the_younger = {}
+nick_the_youngest = {}
+nick_three_finger = { is_prefix = yes }
+nick_three_toes = { is_bad = yes }
+nick_three_tooth = {}
+nick_threeskins = {}
+nick_thunderbolt_tybolt = {}
+nick_third_goose = {}
+nick_toad = { is_bad = yes }
+nick_too_tall = { is_bad = yes }
+nick_tourney_goose = {}
+nick_twelve_tooth = {}
+nick_two_swords = {}
+nick_twice_over = {}
+nick_wanderer = {}
+nick_warwolf = {}
+nick_white = { is_prefix = yes }
+nick_whiteye = {}
+nick_white_mask = {}
+nick_whittlestick = {}
+nick_whoresbane_hother = {}
+nick_witch_eye = {}
+nick_yellow = { is_prefix = yes }
+
+#AGOT Filler nicknames
+nick_the_brawler = {}
+nick_the_summer_breeze = {}
+nick_the_mapper = {}
+nick_stormblessed = {}
+nick_the_inkeeper = {}
+
+#AGOT High Septon Nicknames
+nick_the_high_septon = {}#fallback
+nick_the_fat_one = {}
+nick_the_other_fat_one = {}
+nick_the_one_after_the_fat_one = {}
+nick_the_gay_one = {}
+nick_the_sparrow = {}
+nick_high_septon = {}
+nick_the_small_one = {}
+nick_the_sharp_one = {}
+nick_the_bright_one = {}
+nick_the_dumb_one = { is_bad = yes }
+nick_the_dull_one = { is_bad = yes }
+nick_the_slow_one = { is_bad = yes }
+nick_the_strong_one = {}
+nick_the_pretty_one = {}
+nick_the_gross_one = { is_bad = yes }
+nick_the_weird_one = { is_bad = yes }
+nick_the_nail = {}
+nick_the_nice_one = {}
+nick_the_kind_one = {}
+nick_the_vile_one = { is_bad = yes }
+nick_the_loathsome_one = { is_bad = yes }
+nick_the_smelly_one = { is_bad = yes }
+nick_the_quiet_one = {}
+nick_the_fair_one = {}
+nick_the_pure_one = {}
+nick_the_tranquil_one = {}
+nick_the_funny_one = {}
+nick_the_modest_one = {}
+nick_the_meek_one = {}
+nick_the_bold_one = {}
+nick_the_fierce_one = {}
+nick_the_raunchy_one = {}
+nick_the_dithering_one = { is_bad = yes }
+nick_the_magnanimous_one = {}
+nick_the_moody_one = {}
+nick_the_staunch_one = {}
+nick_the_stalwart_one = {}
+nick_the_high_aurochs = {}
+nick_the_high_capon = { is_bad = yes }
+nick_the_high_hawk = {}
+nick_the_high_mouse = {}
+nick_the_high_serpent = { is_bad = yes }
+nick_the_high_sheep = {}
+nick_the_high_spider = { is_bad = yes }
+nick_the_high_squirrel = {}
+nick_the_high_swine = {}
+nick_the_high_bespawler = {}
+nick_the_high_coxcomb = { is_bad = yes }
+nick_the_high_cumberworld = { is_bad = yes }
+nick_the_high_milksop = { is_bad = yes }
+nick_the_high_mumpsimus = { is_bad = yes }
+nick_the_high_muckspout = { is_bad = yes }
+nick_the_high_ninnyhammer = { is_bad = yes }
+nick_the_high_prickmedainty = { is_bad = yes }
+nick_the_high_saddlegoose = { is_bad = yes }
+nick_the_high_smellfeast = {}
+nick_the_high_snollygoster = { is_bad = yes }
+nick_trusty = { is_prefix = yes }
+
+#AGOT Struggle BTW Nicknames
+nick_the_king_btw = {}
+nick_the_queen_btw = {}
+
+#AGOT Faegon Event Nicknames
+nick_young_griff = {}
+nick_the_dragon_wolf = {}

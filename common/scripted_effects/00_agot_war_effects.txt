@@ -1,0 +1,110 @@
+﻿clean_stepstones_adventurer_effect = {
+	scope:attacker = {
+		every_held_title = {
+			limit = { has_variable = temporary_title }
+			save_scope_as = destroyable_title
+			scope:attacker = { destroy_title = scope:destroyable_title }
+		}
+		remove_character_modifier = stepstones_adventurer_modifier
+	}
+}
+
+add_realm_size_appropriate_stepstones_adventurer_reprieve_effect = {
+	# Depending on the sub realm size of $VICTIM$, we give them a scaling amount of time not to be hit by SA attacks.
+	## The smallest realms get a long reprieve.
+	if = {
+		limit = { sub_realm_size <= tiny_realm_size }
+		add_character_modifier = {
+			modifier = proven_against_pirates_modifier
+			years = 20
+		}
+	}
+	## Then a decent reprieve.
+	else_if = {
+		limit = { sub_realm_size <= minor_realm_size }
+		add_character_modifier = {
+			modifier = proven_against_pirates_modifier
+			years = 15
+		}
+	}
+	## Then a short reprieve.
+	else_if = {
+		limit = { sub_realm_size <= medium_realm_size }
+		add_character_modifier = {
+			modifier = proven_against_pirates_modifier
+			years = 10
+		}
+	}
+	## Then you're clearly too big and juicy a target for much reprieve at all.
+	else = {
+		add_character_modifier = {
+			modifier = proven_against_pirates_modifier
+			years = 5
+		}
+	}
+}
+
+generate_golden_company_special_troops = {
+	$LOCATION$ = { save_scope_as = location }
+	$ORIGIN$ = { save_scope_as = origin }
+	spawn_army = {
+		name = $ARMY_NAME$
+		men_at_arms = {
+			type = light_footmen # 2000
+			stacks = 20
+		}
+		men_at_arms = {
+			type = pikemen_unit # 2000
+			stacks = 20
+		}
+		men_at_arms = {
+			type = armored_footmen # 2000
+			stacks = 20
+		}
+		men_at_arms = {
+			type = bowmen # 300
+			stacks = 3
+		}
+		men_at_arms = {
+			type = longbowmen # 700
+			stacks = 7
+		}
+		location = scope:location
+		origin = scope:origin
+		inheritable = no
+	}
+
+	spawn_army = {
+		name = $ARMY_NAME$
+		men_at_arms = {
+			type = light_horsemen # 2500
+			stacks = 25
+		}
+		men_at_arms = {
+			type = armored_horsemen # 500
+			stacks = 10
+		}
+		men_at_arms = {
+			type = trebuchet # 50
+			stacks = 5
+		}
+		men_at_arms = {
+			type = war_elephant # 25
+			stacks = 1
+		}
+		location = scope:location
+		origin = scope:origin
+		inheritable = no
+	}
+}
+blackfyre_war_declared = {
+	if = {
+		limit = {
+			exists = global_var:number_of_blackfyre_rebellions
+		}
+		change_global_variable = {
+			name = number_of_blackfyre_rebellions
+			add = 1
+		}
+	}
+}

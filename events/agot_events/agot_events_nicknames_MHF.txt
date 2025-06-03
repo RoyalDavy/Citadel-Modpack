@@ -1,0 +1,285 @@
+﻿
+#agot_nicknames.000 - Generic nicknames
+
+#agot_nicknames.0001 - Lion nicknames - Lannister/Reyne/Osgrey/Grandison
+#agot_nicknames.0002 - Wolf nicknames - Stark
+#agot_nicknames.0003 - Dragon nicknames - Targaryen 
+#agot_nicknames.0046 - Fire nicknames - Targaryen/Uller
+#agot_nicknames.0004 - Stag nicknames - Baratheon/Durrandon
+#agot_nicknames.0005 - Storm nicknames - Baratheon/Durrandon
+#agot_nicknames.0006 - Spear nicknames - Martell
+#agot_nicknames.0007 - Sun nicknames - Martell
+#agot_nicknames.0008 - Rose nicknames - Tyrell
+#agot_nicknames.0009 - Fish nicknames - Fish
+#agot_nicknames.0010 - Squid nicknames - Greyjoy
+#agot_nicknames.0011 - Falcon nicknames - Arryn
+#agot_nicknames.0012 - Hand nicknames - Gardener
+#agot_nicknames.0013 - Iron nicknames - Hoare/Greyjoy
+
+#agot_nicknames.0014 - Seahorse nicknames - Velaryon
+#agot_nicknames.0015 - Fox nicknames - Florent
+#agot_nicknames.0016 - Bear nicknames - Mormont
+#agot_nicknames.0017 - Tower nicknames - Hightower
+#agot_nicknames.0018 - Griffin nicknames - Connington
+#agot_nicknames.0019 - Bridge nicknames - Frey
+#agot_nicknames.0020 - Gate Nicknames - Yronwood
+#agot_nicknames.0021 - Star Nicknames - Dayne/Tarbeck
+#agot_nicknames.0022 - Sword Nicknames - Dayne
+#agot_nicknames.0023 - Oak Nicknames - Oakheart
+#agot_nicknames.0024 - Merman Nicknames - Manderly
+#agot_nicknames.0025 - Bat Nicknames - Whent/Lothston
+#agot_nicknames.0026 - Boar Nicknames - Crakehall
+#agot_nicknames.0027 - Badger Nicknames - Lydden
+#agot_nicknames.0028 - Bronze Nicknames - Royce
+#agot_nicknames.0029 - Swan Nicknames - Swann
+#agot_nicknames.0030 - Bee Nicknames - Beesbury
+#agot_nicknames.0031 - Turtle Nicknames - Estermont
+#agot_nicknames.0032 - Arrow Nicknames - Hunter/Sarsfield 
+#agot_nicknames.0033 - Apple Nicknames - Fossoway 
+#agot_nicknames.0034 - Peacock Nicknames - Serrett 
+#agot_nicknames.0035 - Scythe nicknames - Harlaw
+#agot_nicknames.0036 - Horn nicknames - Goodbrother/Merryweather 
+#agot_nicknames.0037 - Lightning Nicknames - Dondarion
+#agot_nicknames.0038 - Pipe Nicknames - Piper 
+#agot_nicknames.0039 - Crab Nicknames - Celtigar/Crabb/Borrell  
+#agot_nicknames.0040 - Scorpion Nicknames - Qorgyle
+#agot_nicknames.0041 - Hunt Nicknames - Tarly/Hunt
+#agot_nicknames.0042 - Rooster Nicknames - Swyft
+#agot_nicknames.0043 - Fox Nicknames - Florent
+#agot_nicknames.0044 - Skinner Nicknames - Bolton
+#agot_nicknames.0045 - Skull Nicknames - Manwoody/Qoherys 
+#agot_nicknames.0046 - Fire nicknames - Targaryen/Uller
+#agot_nicknames.0047 - Horse nicknames - Bracken/Ryswell 
+#agot_nicknames.0048 - Raven nicknames - Blackwood/Corbray 
+#agot_nicknames.0049 - Sapphire nicknames - Tarth/Morne 
+#agot_nicknames.0050 - Moon nicknames - Arryn/Fell/Egen/Wynch/Moonfell  
+#agot_nicknames.0051 - Eagle Nicknames - Mallister 
+#agot_nicknames.0052 - Heart Nicknames - Staedmon/Toyne 
+#agot_nicknames.0053 - Bell Nicknames - Belmore 
+#agot_nicknames.0054 - Anchor Nicknames - Melcolm 
+#agot_nicknames.0055 - Seashell Nicknames - Westerling 
+#agot_nicknames.0056 - Chain Nicknames - Roxton/Hoare
+#agot_nicknames.0057 - Brick Nicknames - Bricker
+
+#agot_nicknames.0018 - Clegane nicknames.
+#agot_nicknames.0022 - Cerwyn nicknames.
+#agot_nicknames.0025 - Saltcliffe nicknames.
+#agot_nicknames.0026 - Mooton nicknames.
+#agot_nicknames.0027 - Vypren nicknames.
+#agot_nicknames.0031 - Bar Emmon nicknames.
+#agot_nicknames.0033 - Brax nicknames.
+#agot_nicknames.0036 - Prester nicknames.
+#agot_nicknames.0038 - Cafferen nicknames.
+#agot_nicknames.0040 - Ambrose nicknames.
+#agot_nicknames.0041 - Caswell nicknames.
+#agot_nicknames.0043 - Mullendore nicknames.
+#agot_nicknames.0044 - Webber nicknames.
+#agot_nicknames.0045 - Varner nicknames.
+#agot_nicknames.0047 - Vaith nicknames.
+#agot_nicknames.0049 - Deddings nicknames.
+#agot_nicknames.0050 - Lolliston nicknames.
+#agot_nicknames.0052 - Brune nicknames.
+#agot_nicknames.0055 - Hull clansman nicknames.
+
+# North
+
+# Umber
+# Locke
+# Flint
+# Reed
+# Glover
+# Fisher
+# Tallhart
+# Cerwyn
+
+# IronIsles
+# Blacktyde
+# Farwynd 
+
+# Riverlands
+# Paege
+# Ryger
+# Vance
+# Mooton
+# Bricker
+
+# Vale
+# Hersy
+# Lynderly
+# Waynwood
+# Grafton
+# Melcolm
+# Elesham
+# Sunderland
+
+# Westerlands
+# Plumm
+# Westerling
+# Banefort
+# Broom
+# Marbrand
+# Lefford
+# Brax
+# Farman
+
+# Reach
+# Redwyne
+# Vyrwell
+# Rowan
+# Crane
+# Varner
+# Footly
+# Meadows
+# Caswell
+
+# Stormlands
+# Fell
+
+# Trant
+# Errol
+# Wyld
+# Selmy
+# Caron
+# Cafferen
+
+# Dorne
+# Blackmont
+# Fowler
+# Wyl
+# Jordayne
+# Gargalen
+# Dalt
+# Santagar
+
+
+namespace = agot_nicknames_MHF
+
+agot_nicknames_MHF.0057 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		has_any_nickname = no
+		dynasty ?= dynasty:dynn_Bricker
+	}
+
+	option = {
+		random_list = {
+			1 = {} #Fallback 
+			5 = {
+				trigger = { black_nickname_trigger = yes }
+				modifier = {
+					has_trait = nightswatch 
+					factor = 5
+				}
+				give_nickname = nick_the_black_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { white_nickname_trigger = yes }
+				modifier = {
+					has_trait = kingsguard 
+					factor = 5
+				}
+				give_nickname = nick_the_white_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { mad_nickname_trigger = yes }
+				give_nickname = nick_the_crazed_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { wroth_nickname_trigger = yes }
+				give_nickname = nick_the_wild_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { quiet_nickname_trigger = yes }
+				give_nickname = nick_the_quiet_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { red_nickname_trigger = yes }
+				give_nickname = nick_the_red_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { big_nickname_trigger = yes }
+				give_nickname = nick_the_big_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { strong_nickname_trigger = yes }
+				give_nickname = nick_the_strong_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { fair_nickname_trigger = yes }
+				give_nickname = nick_the_fair_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { ugly_nickname_trigger = yes }
+				give_nickname = nick_the_ugly_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { small_nickname_trigger = yes }
+				give_nickname = nick_the_small_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { wise_nickname_trigger = yes }
+				give_nickname = nick_the_wise_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { dumb_nickname_trigger = yes }
+				give_nickname = nick_the_dumb_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { dark_nickname_trigger = yes }
+				give_nickname = nick_the_dark_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { weak_nickname_trigger = yes }
+				give_nickname = nick_the_weak_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { silver_nickname_trigger = yes }
+				give_nickname = nick_the_silver_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { old_nickname_trigger = yes }
+				modifier = {
+					age >= 80
+					factor = 5
+				}
+				give_nickname = nick_the_old_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { laughing_nickname_trigger = yes }
+				give_nickname = nick_the_laughing_brick
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { daughter_nickname_trigger = yes }
+				give_nickname = nick_the_brick_daughter
+				trigger_event = lifestyle_nicknames.1000
+			}
+			5 = {
+				trigger = { warrior_nickname_trigger = yes }
+				give_nickname = nick_the_brickknight
+				trigger_event = lifestyle_nicknames.1000
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,25 @@
+﻿############################          GOGOSSOS          ############################
+####################################################################################
+
+### Modcanon Houses
+############################
+dynn_Paenohrin = {
+	name = "dynn_Paenohrin"
+	culture = "gogossosi"
+}
+dynn_Brenaris = {
+	name = "dynn_Brenaris"
+	culture = "gogossosi"
+}
+dynn_Nahion = {
+	name = "dynn_Nahion"
+	culture = "gogossosi"
+}
+dynn_Vhassorlan = {
+	name = "dynn_Vhassorlan"
+	culture = "gogossosi"
+}
+dynn_Ennyrion = {
+	name = "dynn_Ennyrion"
+	culture = "gogossosi"
+}

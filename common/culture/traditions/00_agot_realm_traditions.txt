@@ -1,0 +1,140 @@
+﻿agot_tradition_insular_marriage = {
+	category = realm
+
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = greeting.dds
+	}
+
+	parameters = {
+		dislikes_marrying_outside_of_culture = yes
+		ai_doesnt_marry_outside_culture = yes
+		romance_scheme_bonus_vs_spouse = yes
+	}
+	character_modifier = {
+		same_culture_opinion = 10
+		spouse_opinion = 10
+
+		ai_war_chance = -0.5
+		ai_war_cooldown = 5
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_communal = { is_in_list = traits }
+						culture_pillar:ethos_egalitarian = { is_in_list = traits }
+						culture_pillar:heritage_rhoynish = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_egalitarian_or_courtly_desc
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_innovation = innovation_baliffs
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = lacks_baliffs_innovation_desc
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_innovation = innovation_development_02
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = lacks_development_02_innovation_desc
+				}
+			}
+
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				scope:character = {
+					any_vassal = {
+						count < 30
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_innovation = innovation_baliffs
+					has_innovation = innovation_development_02
+				}
+			}
+			multiply = 0.25
+		}
+	}
+}
+
+agot_tradition_debug = {
+	category = realm
+
+	layers = {
+		0 = intrigue
+		1 = mediterranean
+		4 = crown.dds
+	}
+
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_for_hybridization = { always = no }
+
+	parameters = {
+		better_barracks_bonuses = yes
+		better_watchtower_bonuses = yes
+		better_caravanserai_bonuses = yes
+		better_gathering_hall_bonuses = yes
+		better_orchard_bonuses = yes
+		better_scriptorium_bonuses = yes
+		better_regimental_bonuses = yes
+		better_bakeries_bonuses = yes
+		better_war_camp_bonuses = yes
+		better_guild_bonuses = yes
+		better_watermill_bonuses = yes
+		better_farm_estates_bonuses = yes
+		better_monastic_school_bonuses = yes
+		better_hospice_bonuses = yes
+
+		unlock_maa_slave_legion = yes
+		unlock_maa_skahazdahn_wardens = yes
+		unlock_maa_dragonsworn = yes
+		unlock_maa_triarchs_herd = yes
+		unlock_maa_demon_guards = yes
+		unlock_maa_tolosi_slingers = yes
+		unlock_maa_stair_guard = yes
+		unlock_maa_market_guard = yes
+		unlock_maa_smiths_axes = yes
+		unlock_maa_sun_guard = yes
+		unlock_maa_elyrian_sailors = yes
+		unlock_maa_iron_legion = yes
+	}
+
+	cost = { prestige = 300000 }
+
+	ai_will_do = { value = 0 }
+}

@@ -1,0 +1,542 @@
+﻿ntc_targaryen_crown_spawn.1_rr = {
+	character:Targaryen_2 = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				game_start_date = 8282.9.15
+			}
+			create_artifact_bethablackwood_circlet_effect = { OWNER = this }
+			create_artifact_alicenthightower_crown_effect = { OWNER = this }
+			create_artifact_alyssavelaryon_crown_effect = { OWNER = this }
+			create_artifact_daena_crown_effect = { OWNER = this }
+			create_artifact_mariah_martell_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_targaryen_crown_spawn.1_npk = {
+	character:Blackwood_87 = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				game_start_date = 8258.12.21
+			}
+			create_artifact_bethablackwood_circlet_effect = { OWNER = this }
+			create_artifact_alicenthightower_crown_effect = { OWNER = this }
+			create_artifact_alyssavelaryon_crown_effect = { OWNER = this }
+			create_artifact_daena_crown_effect = { OWNER = this }
+			create_artifact_mariah_martell_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_targaryen_crown_spawn.2 = {
+	title:k_the_most_devout.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_hugor_of_the_hill_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_harrenhal.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_rhaenatargaryen_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_greyking_crown_spawn.1 = {
+	title:c_lonely_light.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_crown_of_the_grey_king_rusted_historic_effect = { OWNER = this }
+			dynasty:dynn_Farwynd = {
+				ordered_dynasty_member = {
+					order_by = highest_held_title_tier
+					house = { add_house_artifact_claim = scope:newly_created_artifact }
+				}
+			}
+		}
+	}
+}
+
+ntc_lannister_crown_spawn.1 = {
+	title:c_blackblood.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_geroldlannister_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_casterly_rock.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_tyboltthunderbolt_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_lannister_crown_spawn.2_cs = {
+	character:Lannister_6 = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				game_start_date = 8284.6.2
+			}
+			create_artifact_cersei_tiara_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_arryn_crown_spawn.1 = {
+	title:c_the_eyrie.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_sharra_arryn_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_martell_crown_spawn.1 = {
+	title:c_sunspear.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_mors_martell_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_martell_crown_spawn.2 = {
+	title:c_sunspear.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_aliandra_martell_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_baratheon_crown_spawn.1 = {
+	title:c_storms_end.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_argella_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_blackfyre_crown_spawn.1 = {
+	title:c_milkstone.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_daemon_ii_blackfyre_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_lannister_crown_shattered_spawn.1 = {
+	title:c_blackblood.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_geroldlannister_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_casterly_rock.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_tyboltthunderbolt_crown_effect = { OWNER = this }
+		}
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_westerlands_crown_effect = { OWNER = this }
+			agot_create_artifact_westerlands2_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_arryn_crown_shattered_spawn.1 = {
+	title:k_the_vale.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_sharra_arryn_crown_effect = { OWNER = this }
+		}
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_falcon_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_baratheon_crown_shattered_spawn.1 = {
+	title:k_the_stormlands.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_argella_crown_effect = { OWNER = this }
+		}
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_stormlands_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_stark_crown_shattered_spawn.1 = {
+	title:k_the_north.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_crown_of_winter_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_greyjoy_crown_shattered_spawn.1 = {
+	title:k_the_iron_islands.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_iron_isles_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_tyrell_crown_shattered_spawn.1 = {
+	title:k_the_reach.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_gardener_peace_crown_effect = { OWNER = this }
+			create_artifact_gardener_war_crown_effect = { OWNER = this }
+		}
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_reach_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_tully_crown_shattered_spawn.1 = {
+	title:k_the_riverlands.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_tully_crown_effect = { OWNER = this }
+		}
+	}
+}
+
+ntc_the_north_petty_kings_crown_spawn.1 = {
+	title:c_deepwood.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				has_game_rule = show_dynamic_crowns_enabled
+			}
+			create_artifact_wolfswood_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_the_dreadfort.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_bolton_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_barrowton.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_dustin_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_last_hearth.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_umber_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_greywater_watch.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_reed_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_white_harbor.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_manderly_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_mormont.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_bear_island_effect = { OWNER = this }
+		}
+	}
+}
+ntc_westerlands_petty_kings_crown_spawn.1 = {
+	title:c_castamere.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+				NOT = {
+					dynasty ?= dynasty:dynn_Lannister
+				}
+			}
+			create_artifact_crown_of_castamere_effect = { OWNER = this }
+		}
+	}
+	title:c_deep_den.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_deep_den_effect = { OWNER = this }
+		}
+	}
+	title:c_banefort.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_the_banefort_effect = { OWNER = this }
+		}
+	}
+	title:c_crakehall.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_crakehall_effect = { OWNER = this }
+		}
+	}
+}
+ntc_stormlands_petty_kings_crown_spawn.1 = {
+	title:c_evenfall.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_tarth_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_blackhaven.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_dondarrion_effect = { OWNER = this }
+		}
+	}
+	title:c_griffins_roost.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_connington_effect = { OWNER = this }
+		}
+	}
+}
+ntc_the_reach_petty_kings_crown_spawn.1 = {
+	title:c_goldengrove.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_goldengrove_effect = { OWNER = this }
+		}
+	}
+	title:c_wynegarde.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_redwyne_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_oldtown.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_hightower_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_horn_hill.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_tarly_crown_effect = { OWNER = this }
+		}
+	}
+}
+ntc_the_vale_petty_kings_crown_spawn.1 = {
+	title:c_runestone.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_royce_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_hearts_home.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_hearts_home_effect = { OWNER = this }
+		}
+	}
+}
+ntc_iron_isles_petty_kings_crown_spawn.1 = {
+	title:c_ten_towers.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_harlaw_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_pyke.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_greyjoy_crown_effect = { OWNER = this }
+		}
+	}
+}
+ntc_crownlands_petty_kings_crown_spawn.1 = {
+	title:c_driftmark.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_crown_of_the_tides_effect = { OWNER = this }
+		}
+	}
+	title:c_stonedance.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_massey_crown_effect = { OWNER = this }
+		}
+	}
+}
+ntc_dorne_petty_kings_crown_spawn.1 = {
+	title:c_starfall.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_dayne_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_yronwood.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_yronwood_effect = { OWNER = this }
+		}
+	}
+	title:c_hellholt.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_hellholt_effect = { OWNER = this }
+		}
+	}
+}
+ntc_riverlands_petty_kings_crown_spawn.1 = {
+	title:c_raventree.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_blackwood_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_the_twins.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			agot_create_artifact_frey_crown_effect = { OWNER = this }
+		}
+	}
+	title:c_stone_hedge.holder = {
+		if = {
+			limit = {
+				has_dlc_feature = royal_court
+			}
+			create_artifact_crown_of_stone_hedge_effect = { OWNER = this }
+			create_artifact_bracken_crown_effect = { OWNER = this }
+		}
+	}
+}

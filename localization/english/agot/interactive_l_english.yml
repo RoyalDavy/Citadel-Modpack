@@ -1,0 +1,1474 @@
+﻿l_english:
+rule_improved_civil_wars_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Civil Wars"
+setting_improved_civil_wars_enabled:0 "Enabled"
+setting_improved_civil_wars_enabled_desc:0 "At the start of a civil war, all vassals will choose to either side with their liege, declare neutrality, or join the rebellion."
+setting_improved_civil_wars_disabled:0 "Disabled"
+setting_improved_civil_wars_disabled_desc:0 ""
+
+rule_call_allied_vassals_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Vassal Alliances"
+setting_call_allied_vassals_enabled:0 "Enabled"
+setting_call_allied_vassals_enabled_desc:0 "When a liege is allied with their vassal, they can both call each other into their own internal and external wars."
+setting_call_allied_vassals_disabled:0 "Disabled"
+setting_call_allied_vassals_disabled_desc:0 ""
+
+rule_miv_loyalist_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Loyalist Faction"
+setting_miv_loyalist_enabled:0 "Enabled"
+setting_miv_loyalist_enabled_desc:0 "Vassals can form a Crown Loyalist faction to help stabilize the realm and protect their liege from internal threats."
+setting_miv_loyalist_disabled:0 "Disabled"
+setting_miv_loyalist_disabled_desc:0 ""
+
+rule_border_vassals_join_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Bordering Vassals"
+setting_border_vassals_join_enabled:0 "Enabled"
+setting_border_vassals_join_enabled_desc:0 "At the start of a war, vassals that border the opposing realm are called to arms for both the attackers and defenders."
+setting_border_vassals_join_disabled:0 "Disabled"
+setting_border_vassals_join_disabled_desc:0 ""
+
+rule_vassals_join_claims_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Claimants"
+setting_vassals_join_claims_enabled:0 "Enabled"
+setting_vassals_join_claims_enabled_desc:0 "When a liege presses one of their vassal's claims on a title, they will be called to arms on the attacking side."
+setting_vassals_join_claims_disabled:0 "Disabled"
+setting_vassals_join_claims_disabled_desc:0 ""
+
+rule_traitor_vassals_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Treacherous Vassals" 
+setting_traitor_vassals_miv_enabled:0 "Enabled"
+setting_traitor_vassals_miv_enabled_desc:0 "When allied with the opposing side, vassals can be called to war against their own liege and vice versa."
+setting_traitor_vassals_miv_disabled:0 "Disabled"
+setting_traitor_vassals_miv_disabled_desc:0 ""
+
+rule_challenging_ai_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Challenging AI" 
+setting_challenging_ai_enabled:0 "Enabled"
+setting_challenging_ai_enabled_desc:0 "AI rulers will be more aggressive, receive reasonable buffs, and establish powerful realms across the map."
+setting_challenging_ai_disabled:0 "Disabled"
+setting_challenging_ai_disabled_desc:0 ""
+
+rule_miv_starting_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Starting Wars"
+setting_miv_starting_enabled:0 "Enabled"
+setting_miv_starting_enabled_desc:0 "Scripted event wars that begin before the start date of a new game will not be affected by MIV's features."
+setting_miv_starting_disabled:0 "Disabled"
+setting_miv_starting_disabled_desc:0 ""
+
+rule_war_exhaustion_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: War Exhaustion"
+setting_war_exhaustion_miv_enabled:0 "Enabled"
+setting_war_exhaustion_miv_enabled_desc:0 "Vassals gain a variable amount of war exhaustion depending on their reasons for accepting a call to arms."
+setting_war_exhaustion_miv_disabled:0 "Disabled"
+setting_war_exhaustion_miv_disabled_desc:0 ""
+
+interactive.0001.title:0 "A Call to Arms"
+interactive.0001.desc:0 "Following the start of the [war.GetName], our liege has called their banners and we must now decide how to answer our summons.\n\nLet it be known that House [ROOT.Char.GetHouse.GetName] shall..."
+interactive.0001.a:0 "Declare for our liege."
+interactive.0001.b:0 "Remain neutral."
+interactive.0001.c:0 "Side with the enemy."
+
+war_exhaustion_vassal_opinion:0 "War Exhaustion"
+great_war_vassal_opinion:0 "Called to Great War"
+civil_wars_vassal_opinion:0 "Enemy in Civil War"
+ally_civil_wars_vassal_opinion:0 "Ally in Civil War"
+internal_turmoil_vassal_opinion:0 "Internal Turmoil"
+challenging_ai:0 "Difficulty"
+player_improvements:0 "Player Difficulty"
+
+crown_loyalist_faction:1 "Crown Loyalist Faction"
+crown_loyalist_faction_desc:1 "Members of the Crown Loyalist [faction|E] seek to protect the realm of their [liege|E].\n\n#S Effects#!\nAll Faction Members raise their armies in defense of their [liege|e] in the event of a [war|e] by a hostile [faction|e]."
+crown_loyalist_faction_short_effect_desc:0 "Wants to protect their [liege|e] against hostile [factions|e]"
+
+rule_directives_unlocked_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Vassal Directives"
+setting_directives_unlocked_enabled:0 "Enabled"
+setting_directives_unlocked_enabled_desc:0 "Several vassal directives are unlocked for all government types if the host owns the Roads to Power DLC."
+setting_directives_unlocked_disabled:0 "Disabled"
+setting_directives_unlocked_disabled_desc:0 ""
+
+less_levies_10:0 "Difficulty"
+less_levies_20:0 "Difficulty"
+less_levies_30:0 "Difficulty"
+less_levies_40:0 "Difficulty"
+less_levies_50:0 "Difficulty"
+less_levies_60:0 "Difficulty"
+less_levies_70:0 "Difficulty"
+less_levies_80:0 "Difficulty"
+less_levies_90:0 "Difficulty"
+less_levies_100:0 "Difficulty"
+less_levies_110:0 "Difficulty"
+
+rule_less_levies_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Levy Size"
+setting_less_levies_10:0 "10% Reduction"
+setting_less_levies_10_desc:0 "Levies from all sources are reduced by 10%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_20:0 "20% Reduction"
+setting_less_levies_20_desc:0 "Levies from all sources are reduced by 20%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_30:0 "30% Reduction"
+setting_less_levies_30_desc:0 "Levies from all sources are reduced by 30%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_40:0 "40% Reduction"
+setting_less_levies_40_desc:0 "Levies from all sources are reduced by 40%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_50:0 "50% Reduction"
+setting_less_levies_50_desc:0 "Levies from all sources are reduced by 50%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_60:0 "60% Reduction"
+setting_less_levies_60_desc:0 "Levies from all sources are reduced by 60%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_70:0 "70% Reduction"
+setting_less_levies_70_desc:0 "Levies from all sources are reduced by 70%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_80:0 "80% Reduction"
+setting_less_levies_80_desc:0 "Levies from all sources are reduced by 80%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_90:0 "90% Reduction"
+setting_less_levies_90_desc:0 "Levies from all sources are reduced by 90%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_100:0 "95% Reduction"
+setting_less_levies_100_desc:0 "Levies from all sources are reduced by 95%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_110:0 "99% Reduction"
+setting_less_levies_110_desc:0 "Levies from all sources are reduced by 99%, which makes army sizes smaller and more realistic."
+
+setting_less_levies_disabled:0 "Disabled (Default)"
+setting_less_levies_disabled_desc:0 ""
+
+rule_call_the_banners_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Direct Vassals"
+setting_call_the_banners_enabled:0 "Enabled"
+setting_call_the_banners_enabled_desc:0 "In an external war, a liege can call all of their direct vassals to arms, but the chance of them refusing is also much higher."
+setting_call_the_banners_disabled:0 "Disabled (Default)"
+setting_call_the_banners_disabled_desc:0 ""
+
+game_rule_category_miv: "#P More Interactive Vassals#!"
+
+INTERACTIVE_AI_HONOR:0 "Character Honorability: $VALUE|0+=$"
+
+rule_civil_war_indirect_vassals_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Indirect Vassals"
+setting_civil_war_indirect_vassals_enabled:0 "Enabled"
+setting_civil_war_indirect_vassals_enabled_desc:0 "In a civil war, a vassal can call on their own vassals to support their commitments to the loyalist or rebel factions."
+setting_civil_war_indirect_vassals_disabled:0 "Disabled (Default)"
+setting_civil_war_indirect_vassals_disabled_desc:0 ""
+
+slower_levies_10:0 "Difficulty"
+slower_levies_20:0 "Difficulty"
+slower_levies_30:0 "Difficulty"
+slower_levies_40:0 "Difficulty"
+slower_levies_50:0 "Difficulty"
+slower_levies_60:0 "Difficulty"
+slower_levies_70:0 "Difficulty"
+slower_levies_80:0 "Difficulty"
+slower_levies_90:0 "Difficulty"
+slower_levies_100:0 "Difficulty"
+
+rule_slower_levies_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Levy Reinforcement"
+setting_slower_levies_10:0 "10% Reduction"
+setting_slower_levies_10_desc:0 "The rate of levy replenishment is reduced by 10%, making losses from combat more impactful."
+
+setting_slower_levies_20:0 "20% Reduction"
+setting_slower_levies_20_desc:0 "The rate of levy replenishment is reduced by 20%, making losses from combat more impactful."
+
+setting_slower_levies_30:0 "30% Reduction"
+setting_slower_levies_30_desc:0 "The rate of levy replenishment is reduced by 30%, making losses from combat more impactful."
+
+setting_slower_levies_40:0 "40% Reduction"
+setting_slower_levies_40_desc:0 "The rate of levy replenishment is reduced by 40%, making losses from combat more impactful."
+
+setting_slower_levies_50:0 "50% Reduction"
+setting_slower_levies_50_desc:0 "The rate of levy replenishment is reduced by 50%, making losses from combat more impactful."
+
+setting_slower_levies_60:0 "60% Reduction"
+setting_slower_levies_60_desc:0 "The rate of levy replenishment is reduced by 60%, making losses from combat more impactful."
+
+setting_slower_levies_70:0 "70% Reduction"
+setting_slower_levies_70_desc:0 "The rate of levy replenishment is reduced by 70%, making losses from combat more impactful."
+
+setting_slower_levies_80:0 "80% Reduction"
+setting_slower_levies_80_desc:0 "The rate of levy replenishment is reduced by 80%, making losses from combat more impactful."
+
+setting_slower_levies_90:0 "90% Reduction"
+setting_slower_levies_90_desc:0 "The rate of levy replenishment is reduced by 90%, making losses from combat more impactful."
+
+setting_slower_levies_100:0 "95% Reduction"
+setting_slower_levies_100_desc:0 "The rate of levy replenishment is reduced by 95%, making losses from combat more impactful."
+
+setting_slower_levies_disabled:0 "Disabled (Default)"
+setting_slower_levies_disabled_desc:0 ""
+
+start_war_date_tooltip:0 "#X #Bold More Interactive Vassals is almost done setting up. Unpause the game for a few seconds for the mod to fully activate!#!#!"
+
+FACTION_REASON_CAPITAL_COUNTY_INTERACTIVE:0 "We will defend our [liege|E]'s [realm_capital|E]: $VALUE|0+=$"
+
+rule_intervention_war_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Liege Intervention"
+setting_intervention_war_miv_enabled:0 "Enabled"
+setting_intervention_war_miv_enabled_desc:0 "A liege can intervene in a war involving their direct vassals, but at the cost of incurring tyranny or losing prestige."
+setting_intervention_war_miv_disabled:0 "Disabled"
+setting_intervention_war_miv_disabled_desc:0 ""
+
+interactive_intervene_war_interaction:0 "Intervene in Vassal War"
+interactive_intervene_war_interaction_desc:3 "A [liege|e] can intervene in a [war|e] involving their direct [vassals|e].\n$BULLET_WITH_TAB$Incurs [tyranny|e] when joining an Internal War\n$BULLET_WITH_TAB$Costs [prestige|e] when joining an External War"
+
+interactive_war_ui_message:0 "@warning_icon! Some [vassals|e] from both [realms|e] might join the [war|e]!"
+
+interactive_attackers_ui_tooltip:0 "#X #Bold Attacking Vassals ($VALUE|0$)#!#!"
+
+interactive_defenders_ui_tooltip:0 "#P #Bold Defending Vassals ($VALUE|0$)#!#!"
+
+interactive_other_effects_tooltip:0 "#clickable #Bold Other Effects#!#!"
+
+rule_vassals_defend_titles_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Title Holders" 
+setting_vassals_defend_titles_enabled:0 "Enabled"
+setting_vassals_defend_titles_enabled_desc:0 "When a vassal would lose any of their titles from an external war, they will be called to arms on the defending side."
+setting_vassals_defend_titles_disabled:0 "Disabled"
+setting_vassals_defend_titles_disabled_desc:0 ""
+
+interactive_war_ui_second_message:0 "#Bold #High Participating Vassals#!#!"
+
+less_garrisons_10:0 "Difficulty"
+less_garrisons_20:0 "Difficulty"
+less_garrisons_30:0 "Difficulty"
+less_garrisons_40:0 "Difficulty"
+less_garrisons_50:0 "Difficulty"
+less_garrisons_60:0 "Difficulty"
+less_garrisons_70:0 "Difficulty"
+less_garrisons_80:0 "Difficulty"
+less_garrisons_90:0 "Difficulty"
+less_garrisons_100:0 "Difficulty"
+less_garrisons_110:0 "Difficulty"
+
+rule_less_garrisons_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Garrison Size"
+setting_less_garrisons_10:0 "10% Reduction"
+setting_less_garrisons_10_desc:0 "The size of all garrisons is reduced by 10%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_20:0 "20% Reduction"
+setting_less_garrisons_20_desc:0 "The size of all garrisons is reduced by 20%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_30:0 "30% Reduction"
+setting_less_garrisons_30_desc:0 "The size of all garrisons is reduced by 30%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_40:0 "40% Reduction"
+setting_less_garrisons_40_desc:0 "The size of all garrisons is reduced by 40%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_50:0 "50% Reduction"
+setting_less_garrisons_50_desc:0 "The size of all garrisons is reduced by 50%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_60:0 "60% Reduction"
+setting_less_garrisons_60_desc:0 "The size of all garrisons is reduced by 60%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_70:0 "70% Reduction"
+setting_less_garrisons_70_desc:0 "The size of all garrisons is reduced by 70%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_80:0 "80% Reduction"
+setting_less_garrisons_80_desc:0 "The size of all garrisons is reduced by 80%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_90:0 "90% Reduction"
+setting_less_garrisons_90_desc:0 "The size of all garrisons is reduced by 90%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_100:0 "95% Reduction"
+setting_less_garrisons_100_desc:0 "The size of all garrisons is reduced by 95%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_110:0 "99% Reduction"
+setting_less_garrisons_110_desc:0 "The size of all garrisons is reduced by 99%, lowering the number of soldiers needed to lay siege to a holding."
+
+setting_less_garrisons_disabled:0 "Disabled (Default)"
+setting_less_garrisons_disabled_desc:0 ""
+
+rule_war_participants_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Crown Authority"
+setting_war_participants_miv_enabled:0 "Enabled"
+setting_war_participants_miv_enabled_desc:0 "At absolute crown authority, vassals who refuse a call to arms are considered oathbreakers, a punishable offense."
+setting_war_participants_miv_disabled:0 "Disabled (Default)"
+setting_war_participants_miv_disabled_desc:0 ""
+
+interactive_dont_call_vassals:0 "Disable Call to Arms"
+interactive_dont_call_vassals_decision_desc:0 "We can fight our wars on our own, for now."
+interactive_dont_call_vassals_decision_tooltip:0 "Disallow [vassals|e] from joining your [wars|e]."
+interactive_dont_call_vassals_confirm:0 "Send my orders"
+
+interactive_call_vassals:0 "Enable Call to Arms"
+interactive_call_vassals_decision_desc:0 "We must ask for the support of our vassals once more."
+interactive_call_vassals_decision_tooltip:0 "Allow [vassals|e] to join your [wars|e]."
+interactive_call_vassals_confirm:0 "Send my orders"
+
+dont_call_vassals_tooltip:0 "#Bold You have chosen not to call your vassals to war!#!"
+they_dont_call_vassals_tooltip:0 "#Bold They have chosen not to call their vassals to war!#!"
+
+interactive_dont_call_vassals_decision_effect:0 "[vassals|e] will no longer be called to join your [wars|e] and you will not receive any additional #X War Exhaustion#! penalties when declaring a war."
+interactive_call_vassals_decision_effect:0 "[vassals|e] are allowed to join your [wars|e] again."
+
+rule_ally_exhaustion_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Alliance Fatigue"
+setting_ally_exhaustion_miv_enabled:0 "Enabled"
+setting_ally_exhaustion_miv_enabled_desc:0 "Allies can become increasingly reluctant to offer aid when called into too many wars during their lifetime."
+setting_ally_exhaustion_miv_disabled:0 "Disabled"
+setting_ally_exhaustion_miv_disabled_desc:0 ""
+
+ally_exhaustion_opinion:0 "Alliance Fatigue"
+
+rule_politics_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Realm Politics"
+setting_politics_miv_enabled:0 "Enabled"
+setting_politics_miv_enabled_desc:0 "During a civil war, vassals can be coaxed to choose or switch sides by using gold, prestige, hooks, prisoners, and alliances."
+setting_politics_miv_disabled:0 "Disabled"
+setting_politics_miv_disabled_desc:0 ""
+
+interactive_political_maneuver_interaction:0 "Change Allegiance in Civil War"
+interactive_political_maneuver_interaction_desc:0 "A [vassal|e] can be persuaded to choose or switch sides in a [faction|e] [war|e] by using [gold|e], [prestige|e], [hooks|e], [prisoners|e], and [alliances|e]."
+interactive_political_maneuver_gold_option:0 "@gold_icon! Offer Gold"
+interactive_political_maneuver_prestige_option:0 "@prestige_icon! Spend Prestige"
+interactive_political_maneuver_hook_option:0 "@cs_weak_hook_icon! Use Hook"
+interactive_political_maneuver_prisoner_option:0 "@prison_icon! Ransom Prisoner"
+interactive_political_maneuver_alliance_option:0 "@alliance_icon! Leverage Alliance"
+
+interactive_political_maneuver_at_war_tooltip:0 "Enemy in Civil War: $VALUE|+0=$"
+interactive_political_maneuver_gold_tooltip:0 "Offered Gold: $VALUE|+0=$"
+interactive_political_maneuver_prestige_tooltip:0 "Spent Prestige: $VALUE|+0=$"
+interactive_political_maneuver_hook_tooltip:0 "Used Hook: $VALUE|+0=$"
+interactive_political_maneuver_prisoner_tooltip:0 "Ransomed Prisoner: $VALUE|+0=$"
+interactive_political_maneuver_alliance_tooltip:0 "Leveraged Alliance: $VALUE|+0=$"
+
+ally_called_on_alliance_opinion:0 "Leveraged Alliance"
+NOT_DEBUG_I_HAVE_MORE_PRESTIGE_TRIGGER:0 "You do #Bold not#! have enough [prestige|e]"
+DEBUG_I_HAVE_MORE_GOLD_TRIGGER:0 "You do #Bold not#! have enough [gold|e]"
+
+less_mercs_10:0 "Difficulty"
+less_mercs_20:0 "Difficulty"
+less_mercs_30:0 "Difficulty"
+less_mercs_40:0 "Difficulty"
+less_mercs_50:0 "Difficulty"
+less_mercs_60:0 "Difficulty"
+less_mercs_70:0 "Difficulty"
+less_mercs_80:0 "Difficulty"
+less_mercs_90:0 "Difficulty"
+less_mercs_100:0 "Difficulty"
+
+rule_less_mercs_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Mercenary Cost"
+setting_less_mercs_10:0 "10% Increase"
+setting_less_mercs_10_desc:0 "The cost of hiring mercenaries and holy orders is increased by 10%, encouraging the use of personal armies instead."
+
+setting_less_mercs_20:0 "20% Increase"
+setting_less_mercs_20_desc:0 "The cost of hiring mercenaries and holy orders is increased by 20%, encouraging the use of personal armies instead."
+
+setting_less_mercs_30:0 "30% Increase"
+setting_less_mercs_30_desc:0 "The cost of hiring mercenaries and holy orders is increased by 30%, encouraging the use of personal armies instead."
+
+setting_less_mercs_40:0 "40% Increase"
+setting_less_mercs_40_desc:0 "The cost of hiring mercenaries and holy orders is increased by 40%, encouraging the use of personal armies instead."
+
+setting_less_mercs_50:0 "50% Increase"
+setting_less_mercs_50_desc:0 "The cost of hiring mercenaries and holy orders is increased by 50%, encouraging the use of personal armies instead."
+
+setting_less_mercs_60:0 "60% Increase"
+setting_less_mercs_60_desc:0 "The cost of hiring mercenaries and holy orders is increased by 60%, encouraging the use of personal armies instead."
+
+setting_less_mercs_70:0 "70% Increase"
+setting_less_mercs_70_desc:0 "The cost of hiring mercenaries and holy orders is increased by 70%, encouraging the use of personal armies instead."
+
+setting_less_mercs_80:0 "80% Increase"
+setting_less_mercs_80_desc:0 "The cost of hiring mercenaries and holy orders is increased by 80%, encouraging the use of personal armies instead."
+
+setting_less_mercs_90:0 "90% Increase"
+setting_less_mercs_90_desc:0 "The cost of hiring mercenaries and holy orders is increased by 90%, encouraging the use of personal armies instead."
+
+setting_less_mercs_100:0 "100% Increase"
+setting_less_mercs_100_desc:0 "The cost of hiring mercenaries and holy orders is increased by 100%, encouraging the use of personal armies instead."
+
+setting_less_mercs_disabled:0 "Disabled (Default)"
+setting_less_mercs_disabled_desc:0 ""
+
+rule_request_vassal_support_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Military Support"
+setting_request_vassal_support_miv_enabled:0 "Enabled"
+setting_request_vassal_support_miv_enabled_desc:0 "A liege can ask one of their direct vassals to join an external war in exchange for granting them a hook."
+setting_request_vassal_support_miv_disabled:0 "Disabled"
+setting_request_vassal_support_miv_disabled_desc:0 ""
+
+request_vassal_support:0 "Request Military Support"
+request_vassal_support_desc:0 "A [liege|e] can ask one of their own [vassals|e] to join a [war|e] in exchange for granting them a [hook|e]."
+ASK_VASSAL_MILITARY_SUPPORT_NOT_VALID:0 "[CHARACTER.GetShortUIName|U] already has a hook on you."
+ASK_VASSAL_MILITARY_SUPPORT_IS_CIVIL_WAR:0 "#Bold To ask them to join a Civil War, you must use the Change Allegiance in Civil War interaction instead.#!\n"
+
+rule_miv_invite_faction_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Power Blocs"
+setting_miv_invite_faction_enabled:0 "Enabled"
+setting_miv_invite_faction_enabled_desc:0 "Vassals can leverage their existing alliances when forming a faction, promising mutual aid in the event of a rebellion."
+setting_miv_invite_faction_disabled:0 "Disabled"
+setting_miv_invite_faction_disabled_desc:0 ""
+
+interactive_ask_ally_join_faction:0 "Ask Ally to Join Faction"
+interactive_ask_ally_join_faction_desc:0 "[vassals|e] who share a [liege|e] can leverage their [alliance|e] to invite each other into the same [faction|e]."
+
+levy_maintenance_10:0 "Difficulty"
+levy_maintenance_20:0 "Difficulty"
+levy_maintenance_30:0 "Difficulty"
+levy_maintenance_40:0 "Difficulty"
+levy_maintenance_50:0 "Difficulty"
+levy_maintenance_60:0 "Difficulty"
+levy_maintenance_70:0 "Difficulty"
+levy_maintenance_80:0 "Difficulty"
+levy_maintenance_90:0 "Difficulty"
+levy_maintenance_100:0 "Difficulty"
+
+rule_levy_maintenance_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Levy Maintenance"
+setting_levy_maintenance_10:0 "10% Reduction"
+setting_levy_maintenance_10_desc:0 "The maintenance cost of levies is reduced by 10%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_20:0 "20% Reduction"
+setting_levy_maintenance_20_desc:0 "The maintenance cost of levies is reduced by 20%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_30:0 "30% Reduction"
+setting_levy_maintenance_30_desc:0 "The maintenance cost of levies is reduced by 30%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_40:0 "40% Reduction"
+setting_levy_maintenance_40_desc:0 "The maintenance cost of levies is reduced by 40%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_50:0 "50% Reduction"
+setting_levy_maintenance_50_desc:0 "The maintenance cost of levies is reduced by 50%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_60:0 "60% Reduction"
+setting_levy_maintenance_60_desc:0 "The maintenance cost of levies is reduced by 60%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_70:0 "70% Reduction"
+setting_levy_maintenance_70_desc:0 "The maintenance cost of levies is reduced by 70%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_80:0 "80% Reduction"
+setting_levy_maintenance_80_desc:0 "The maintenance cost of levies is reduced by 80%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_90:0 "90% Reduction"
+setting_levy_maintenance_90_desc:0 "The maintenance cost of levies is reduced by 90%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_100:0 "95% Reduction"
+setting_levy_maintenance_100_desc:0 "The maintenance cost of levies is reduced by 95%, which reduces the upkeep for raised levies during a war."
+
+setting_levy_maintenance_disabled:0 "Disabled (Default)"
+setting_levy_maintenance_disabled_desc:0 ""
+
+maa_maintenance_10:0 "Difficulty"
+maa_maintenance_20:0 "Difficulty"
+maa_maintenance_30:0 "Difficulty"
+maa_maintenance_40:0 "Difficulty"
+maa_maintenance_50:0 "Difficulty"
+maa_maintenance_60:0 "Difficulty"
+maa_maintenance_70:0 "Difficulty"
+maa_maintenance_80:0 "Difficulty"
+maa_maintenance_90:0 "Difficulty"
+maa_maintenance_100:0 "Difficulty"
+
+rule_maa_maintenance_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Men-at-Arms Upkeep"
+setting_maa_maintenance_10:0 "10% Increase"
+setting_maa_maintenance_10_desc:0 "The maintenance cost of Men-at-Arms is increased by 10%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_20:0 "20% Increase"
+setting_maa_maintenance_20_desc:0 "The maintenance cost of Men-at-Arms is increased by 20%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_30:0 "30% Increase"
+setting_maa_maintenance_30_desc:0 "The maintenance cost of Men-at-Arms is increased by 30%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_40:0 "40% Increase"
+setting_maa_maintenance_40_desc:0 "The maintenance cost of Men-at-Arms is increased by 40%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_50:0 "50% Increase"
+setting_maa_maintenance_50_desc:0 "The maintenance cost of Men-at-Arms is increased by 50%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_60:0 "60% Increase"
+setting_maa_maintenance_60_desc:0 "The maintenance cost of Men-at-Arms is increased by 60%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_70:0 "70% Increase"
+setting_maa_maintenance_70_desc:0 "The maintenance cost of Men-at-Arms is increased by 70%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_80:0 "80% Increase"
+setting_maa_maintenance_80_desc:0 "The maintenance cost of Men-at-Arms is increased by 80%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_90:0 "90% Increase"
+setting_maa_maintenance_90_desc:0 "The maintenance cost of Men-at-Arms is increased by 90%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_100:0 "100% Increase"
+setting_maa_maintenance_100_desc:0 "The maintenance cost of Men-at-Arms is increased by 100%, making it harder to maintain a large standing army."
+
+setting_maa_maintenance_disabled:0 "Disabled (Default)"
+setting_maa_maintenance_disabled_desc:0 ""
+
+maa_recruitment_cost_10:0 "Difficulty"
+maa_recruitment_cost_20:0 "Difficulty"
+maa_recruitment_cost_30:0 "Difficulty"
+maa_recruitment_cost_40:0 "Difficulty"
+maa_recruitment_cost_50:0 "Difficulty"
+maa_recruitment_cost_60:0 "Difficulty"
+maa_recruitment_cost_70:0 "Difficulty"
+maa_recruitment_cost_80:0 "Difficulty"
+maa_recruitment_cost_90:0 "Difficulty"
+maa_recruitment_cost_100:0 "Difficulty"
+
+rule_maa_recruitment_cost_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Men-at-Arms Cost"
+setting_maa_recruitment_cost_10:0 "10% Increase"
+setting_maa_recruitment_cost_10_desc:0 "The recruitment cost of Men-at-Arms is increased by 10%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_20:0 "20% Increase"
+setting_maa_recruitment_cost_20_desc:0 "The recruitment cost of Men-at-Arms is increased by 20%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_30:0 "30% Increase"
+setting_maa_recruitment_cost_30_desc:0 "The recruitment cost of Men-at-Arms is increased by 30%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_40:0 "40% Increase"
+setting_maa_recruitment_cost_40_desc:0 "The recruitment cost of Men-at-Arms is increased by 40%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_50:0 "50% Increase"
+setting_maa_recruitment_cost_50_desc:0 "The recruitment cost of Men-at-Arms is increased by 50%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_60:0 "60% Increase"
+setting_maa_recruitment_cost_60_desc:0 "The recruitment cost of Men-at-Arms is increased by 60%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_70:0 "70% Increase"
+setting_maa_recruitment_cost_70_desc:0 "The recruitment cost of Men-at-Arms is increased by 70%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_80:0 "80% Increase"
+setting_maa_recruitment_cost_80_desc:0 "The recruitment cost of Men-at-Arms is increased by 80%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_90:0 "90% Increase"
+setting_maa_recruitment_cost_90_desc:0 "The recruitment cost of Men-at-Arms is increased by 90%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_100:0 "100% Increase"
+setting_maa_recruitment_cost_100_desc:0 "The recruitment cost of Men-at-Arms is increased by 100%, which increases the initial investment needed for a retinue."
+
+setting_maa_recruitment_cost_disabled:0 "Disabled (Default)"
+setting_maa_recruitment_cost_disabled_desc:0 ""
+
+levy_attack_25:0 "Difficulty"
+levy_attack_50:0 "Difficulty"
+levy_attack_75:0 "Difficulty"
+levy_attack_100:0 "Difficulty"
+levy_attack_125:0 "Difficulty"
+levy_attack_150:0 "Difficulty"
+levy_attack_175:0 "Difficulty"
+levy_attack_200:0 "Difficulty"
+levy_attack_225:0 "Difficulty"
+levy_attack_250:0 "Difficulty"
+levy_attack_275:0 "Difficulty"
+levy_attack_300:0 "Difficulty"
+levy_attack_325:0 "Difficulty"
+levy_attack_350:0 "Difficulty"
+levy_attack_375:0 "Difficulty"
+
+rule_levy_attack_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Levy Damage"
+setting_levy_attack_25:0 "+1 Increase"
+setting_levy_attack_25_desc:0 "The damage stat of levies is increased by 1, improving their ability to deal damage in combat."
+
+setting_levy_attack_50:0 "+2 Increase"
+setting_levy_attack_50_desc:0 "The damage stat of levies is increased by 2, improving their ability to deal damage in combat."
+
+setting_levy_attack_75:0 "+3 Increase"
+setting_levy_attack_75_desc:0 "The damage stat of levies is increased by 3, improving their ability to deal damage in combat."
+
+setting_levy_attack_100:0 "+4 Increase"
+setting_levy_attack_100_desc:0 "The damage stat of levies is increased by 4, improving their ability to deal damage in combat."
+
+setting_levy_attack_125:0 "+5 Increase"
+setting_levy_attack_125_desc:0 "The damage stat of levies is increased by 5, improving their ability to deal damage in combat."
+
+setting_levy_attack_150:0 "+6 Increase"
+setting_levy_attack_150_desc:0 "The damage stat of levies is increased by 6, improving their ability to deal damage in combat."
+
+setting_levy_attack_175:0 "+7 Increase"
+setting_levy_attack_175_desc:0 "The damage stat of levies is increased by 7, improving their ability to deal damage in combat."
+
+setting_levy_attack_200:0 "+8 Increase"
+setting_levy_attack_200_desc:0 "The damage stat of levies is increased by 8, improving their ability to deal damage in combat."
+
+setting_levy_attack_225:0 "+9 Increase"
+setting_levy_attack_225_desc:0 "The damage stat of levies is increased by 9, improving their ability to deal damage in combat."
+
+setting_levy_attack_250:0 "+10 Increase"
+setting_levy_attack_250_desc:0 "The damage stat of levies is increased by 10, improving their ability to deal damage in combat."
+
+setting_levy_attack_275:0 "+11 Increase"
+setting_levy_attack_275_desc:0 "The damage stat of levies is increased by 11, improving their ability to deal damage in combat."
+
+setting_levy_attack_300:0 "+12 Increase"
+setting_levy_attack_300_desc:0 "The damage stat of levies is increased by 12, improving their ability to deal damage in combat."
+
+setting_levy_attack_325:0 "+13 Increase"
+setting_levy_attack_325_desc:0 "The damage stat of levies is increased by 13, improving their ability to deal damage in combat."
+
+setting_levy_attack_350:0 "+14 Increase"
+setting_levy_attack_350_desc:0 "The damage stat of levies is increased by 14, improving their ability to deal damage in combat."
+
+setting_levy_attack_375:0 "+15 Increase"
+setting_levy_attack_375_desc:0 "The damage stat of levies is increased by 15, improving their ability to deal damage in combat."
+
+setting_levy_attack_disabled:0 "Disabled (Default)"
+setting_levy_attack_disabled_desc:0 ""
+
+levy_toughness_25:0 "Difficulty"
+levy_toughness_50:0 "Difficulty"
+levy_toughness_75:0 "Difficulty"
+levy_toughness_100:0 "Difficulty"
+levy_toughness_125:0 "Difficulty"
+levy_toughness_150:0 "Difficulty"
+levy_toughness_175:0 "Difficulty"
+levy_toughness_200:0 "Difficulty"
+levy_toughness_225:0 "Difficulty"
+levy_toughness_250:0 "Difficulty"
+levy_toughness_275:0 "Difficulty"
+levy_toughness_300:0 "Difficulty"
+levy_toughness_325:0 "Difficulty"
+levy_toughness_350:0 "Difficulty"
+levy_toughness_375:0 "Difficulty"
+
+rule_levy_toughness_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Levy Toughness"
+setting_levy_toughness_25:0 "+1 Increase"
+setting_levy_toughness_25_desc:0 "The toughness stat of levies is increased by 1, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_50:0 "+2 Increase"
+setting_levy_toughness_50_desc:0 "The toughness stat of levies is increased by 2, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_75:0 "+3 Increase"
+setting_levy_toughness_75_desc:0 "The toughness stat of levies is increased by 3, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_100:0 "+4 Increase"
+setting_levy_toughness_100_desc:0 "The toughness stat of levies is increased by 4, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_125:0 "+5 Increase"
+setting_levy_toughness_125_desc:0 "The toughness stat of levies is increased by 5, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_150:0 "+6 Increase"
+setting_levy_toughness_150_desc:0 "The toughness stat of levies is increased by 6, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_175:0 "+7 Increase"
+setting_levy_toughness_175_desc:0 "The toughness stat of levies is increased by 7, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_200:0 "+8 Increase"
+setting_levy_toughness_200_desc:0 "The toughness stat of levies is increased by 8, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_225:0 "+9 Increase"
+setting_levy_toughness_225_desc:0 "The toughness stat of levies is increased by 9, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_250:0 "+10 Increase"
+setting_levy_toughness_250_desc:0 "The toughness stat of levies is increased by 10, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_275:0 "+11 Increase"
+setting_levy_toughness_275_desc:0 "The toughness stat of levies is increased by 11, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_300:0 "+12 Increase"
+setting_levy_toughness_300_desc:0 "The toughness stat of levies is increased by 12, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_325:0 "+13 Increase"
+setting_levy_toughness_325_desc:0 "The toughness stat of levies is increased by 13, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_350:0 "+14 Increase"
+setting_levy_toughness_350_desc:0 "The toughness stat of levies is increased by 14, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_375:0 "+15 Increase"
+setting_levy_toughness_375_desc:0 "The toughness stat of levies is increased by 15, improving their ability to sustain damage in combat."
+
+setting_levy_toughness_disabled:0 "Disabled (Default)"
+setting_levy_toughness_disabled_desc:0 ""
+
+rule_levy_contribution_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Levy Contribution"
+
+setting_levy_contribution_disabled:0 "Disabled (Default)"
+setting_levy_contribution_disabled_desc:0 ""
+
+setting_levy_contribution_10r:0 "10% Reduction"
+setting_levy_contribution_10r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 10%."
+
+setting_levy_contribution_20r:0 "20% Reduction"
+setting_levy_contribution_20r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 20%."
+
+setting_levy_contribution_30r:0 "30% Reduction"
+setting_levy_contribution_30r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 30%."
+
+setting_levy_contribution_40r:0 "40% Reduction"
+setting_levy_contribution_40r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 40%."
+
+setting_levy_contribution_50r:0 "50% Reduction"
+setting_levy_contribution_50r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 50%."
+
+setting_levy_contribution_60r:0 "60% Reduction"
+setting_levy_contribution_60r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 60%."
+
+setting_levy_contribution_70r:0 "70% Reduction"
+setting_levy_contribution_70r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 70%."
+
+setting_levy_contribution_80r:0 "80% Reduction"
+setting_levy_contribution_80r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 80%."
+
+setting_levy_contribution_90r:0 "90% Reduction"
+setting_levy_contribution_90r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 90%."
+
+setting_levy_contribution_100r:0 "95% Reduction"
+setting_levy_contribution_100r_desc:0 "The percentage of levies that vassals provide to their liege is reduced by a multiplier of 95%."
+
+levy_contribution_10r:0 "Difficulty"
+levy_contribution_20r:0 "Difficulty"
+levy_contribution_30r:0 "Difficulty"
+levy_contribution_40r:0 "Difficulty"
+levy_contribution_50r:0 "Difficulty"
+levy_contribution_60r:0 "Difficulty"
+levy_contribution_70r:0 "Difficulty"
+levy_contribution_80r:0 "Difficulty"
+levy_contribution_90r:0 "Difficulty"
+levy_contribution_100r:0 "Difficulty"
+
+rule_help_house_member_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: House Assistance"
+setting_help_house_member_miv_enabled:0 "Enabled"
+setting_help_house_member_miv_enabled_desc:0 "House members can offer to join the wars of other house members, even without an alliance."
+setting_help_house_member_miv_disabled:0 "Disabled"
+setting_help_house_member_miv_disabled_desc:0 ""
+
+interactive_help_house_member_interaction:0 "Assist House Member"
+interactive_help_house_member_interaction_desc:3 "Offer to join [recipient.GetShortUINameNoTooltip]'s [war|e] as a fellow [house|E] member."
+
+rule_administrative_governors_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Imperial Armies"
+setting_administrative_governors_enabled:0 "Enabled"
+setting_administrative_governors_enabled_desc:0 "In an administrative realm, characters can call on the armies of other governors at the cost of influence."
+setting_administrative_governors_disabled:0 "Disabled"
+setting_administrative_governors_disabled_desc:0 ""
+
+interactive_administrative_governors:0 "Request Governor Support"
+interactive_administrative_governors_desc:0 "In an [administrative|e] [realm|E], [characters|e] can call on the [armies|e] of other [governors|e] at the cost of [influence|e]."
+
+miv_pursuit_of_power:0 "[powerful_vassal|E]"
+
+rule_miv_pursuit_of_power_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Pursuit of Power"
+setting_miv_pursuit_of_power_enabled:0 "Enabled"
+setting_miv_pursuit_of_power_enabled_desc:0 "Powerful vassals are harder to satisfy, requiring careful management and strategic alliances to prevent civil wars."
+
+setting_miv_pursuit_of_power_disabled:0 "Disabled"
+setting_miv_pursuit_of_power_disabled_desc:0 ""
+
+rule_internal_turmoil_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Internal Turmoil"
+setting_internal_turmoil_enabled:0 "Enabled"
+setting_internal_turmoil_enabled_desc:0 "Whenever a civil war occurs, vassals lose opinion of their liege and become less likely to support them in the future."
+setting_internal_turmoil_disabled:0 "Disabled (Default)"
+setting_internal_turmoil_disabled_desc:0 ""
+
+rule_additional_powerful_vassal_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Overextension"
+setting_additional_powerful_vassal_miv_enabled:0 "Enabled"
+setting_additional_powerful_vassal_miv_enabled_desc:0 "Empire-tier realms have six powerful vassals instead of five, making large realms much harder to manage."
+setting_additional_powerful_vassal_miv_disabled:0 "Manually Disabled"
+setting_additional_powerful_vassal_miv_disabled_desc:0 "Disabling this feature requires you to modify a file:\ncommon/defines/interactive_main_defines.txt."
+
+rule_vassal_prisoner_warscore_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Prisoners of War"
+setting_vassal_prisoner_warscore_enabled:0 "Enabled"
+setting_vassal_prisoner_warscore_enabled_desc:0 "Capturing a direct vassal of a war leader will add 2% war score for each prisoner, greatly increasing their value."
+setting_vassal_prisoner_warscore_disabled:0 "Manually Disabled"
+setting_vassal_prisoner_warscore_disabled_desc:0 "Disabling this feature requires you to modify a file:\ncommon/defines/interactive_main_defines.txt."
+
+interactive_bribe_to_leave_war_interaction:0 "Offer Payment for Neutrality"
+interactive_bribe_to_leave_war_desc:0 "[vassals|e] that join a [war|e] can be bribed to withdraw their [armies|e] in exchange for [gold|e], using a [hook|e], or by releasing a [prisoner|e]."
+
+interactive_bribe_to_leave_war_tooltip:0 "[CHARACTER.GetShortUIName] leaves the [WAR.GetName|V]"
+
+rule_bribe_to_leave_war_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Shifting Loyalties"
+setting_bribe_to_leave_war_miv_enabled:0 "Enabled"
+setting_bribe_to_leave_war_miv_enabled_desc:0 "Vassals that join a war can be bribed to withdraw their armies in exchange for gold, hooks, and prisoners."
+setting_bribe_to_leave_war_miv_disabled:0 "Disabled"
+setting_bribe_to_leave_war_miv_disabled_desc:0 ""
+
+rule_defiant_vassals_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Defiant Vassals"
+setting_defiant_vassals_enabled:0 "Enabled"
+setting_defiant_vassals_enabled_desc:0 "Vassals can refuse to join a war based on their opinion of their liege, and can also block their own vassals from joining."
+setting_defiant_vassals_disabled:0 "Disabled"
+setting_defiant_vassals_disabled_desc:0 ""
+
+interactive_vassal_accepts_tooltip:0 "[CHARACTER.GetShortUIName] ([CHARACTER.GetPrimaryTitle.GetNameNoTier]) joins with #V $VALUE|0$#! [soldiers|E]."
+
+interactive_vassal_accepts_claimant_tooltip:0 "[CHARACTER.GetShortUIName] ([CHARACTER.GetPrimaryTitle.GetNameNoTier]) supports [CHARACTER.GetHerHis] claim with #V $VALUE|0$#! [soldiers|E]."
+
+interactive_vassal_accepts_title_holder_tooltip:0 "[CHARACTER.GetShortUIName] ([CHARACTER.GetPrimaryTitle.GetNameNoTier]) defends [CHARACTER.GetHerHis] title with #V $VALUE|0$#! [soldiers|E]."
+
+interactive_vassal_refuses_tooltip:0 "[CHARACTER.GetShortUIName] ([CHARACTER.GetPrimaryTitle.GetNameNoTier]) declines the call to arms."
+
+interactive_vassal_refuses_liege_tooltip:0 "[CHARACTER.GetShortUIName] ([CHARACTER.GetPrimaryTitle.GetNameNoTier]) refuses to support [CHARACTER.GetHerHis] liege."
+
+interactive_vassal_refuses_liege_blocked_tooltip:0 "[CHARACTER.GetShortUIName|V] ([CHARACTER.GetPrimaryTitle.GetNameNoTier]) is blocked by [CHARACTER.GetHerHis] liege from joining."
+
+interactive_war_exhaustion_tooltip:0 "#Bold #V $VALUE|0$#!#! of your [vassals|e] will be affected by #Bold War Exhaustion#!."
+
+interactive_bannermen_refuse_tooltip:0 "#Bold #V $VALUE|0$#!#! other direct vassals defy their military obligations."
+
+civil_war_tooltip:0 "#X #Bold This is a civil war and every vassal in the realm will be called to pick a side after it begins!#!#!"
+
+miv_hard_difficulty_1:0 "Difficulty"
+miv_hard_difficulty_2:0 "Difficulty"
+miv_hard_difficulty_3:0 "Difficulty"
+miv_hard_difficulty_4:0 "Difficulty"
+miv_hard_difficulty_5:0 "Difficulty"
+
+rule_miv_hard_difficulty_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Vassal Opinion"
+setting_miv_hard_difficulty_enabled_1:0 "-10 Opinion"
+setting_miv_hard_difficulty_enabled_1_desc:0 "All characters receive a modifier of -10 vassal opinion, making their realms more instable."
+setting_miv_hard_difficulty_enabled_1_player:0 "-10 Opinion (Player Only)"
+setting_miv_hard_difficulty_enabled_1_player_desc:0 "All players receive a modifier of -10 vassal opinion, making their realms more instable."
+
+setting_miv_hard_difficulty_enabled_2:0 "-20 Opinion"
+setting_miv_hard_difficulty_enabled_2_desc:0 "All characters receive a modifier of -20 vassal opinion, making their realms more instable."
+setting_miv_hard_difficulty_enabled_2_player:0 "-20 Opinion (Player Only)"
+setting_miv_hard_difficulty_enabled_2_player_desc:0 "All players receive a modifier of -20 vassal opinion, making their realms more instable."
+
+setting_miv_hard_difficulty_enabled_3:0 "-30 Opinion"
+setting_miv_hard_difficulty_enabled_3_desc:0 "All characters receive a modifier of -30 vassal opinion, making their realms more instable."
+setting_miv_hard_difficulty_enabled_3_player:0 "-30 Opinion (Player Only)"
+setting_miv_hard_difficulty_enabled_3_player_desc:0 "All players receive a modifier of -30 vassal opinion, making their realms more instable."
+
+setting_miv_hard_difficulty_enabled_4:0 "-40 Opinion"
+setting_miv_hard_difficulty_enabled_4_desc:0 "All characters receive a modifier of -40 vassal opinion, making their realms more instable."
+setting_miv_hard_difficulty_enabled_4_player:0 "-40 Opinion (Player Only)"
+setting_miv_hard_difficulty_enabled_4_player_desc:0 "All players receive a modifier of -40 vassal opinion, making their realms more instable."
+
+setting_miv_hard_difficulty_enabled_5:0 "-50 Opinion"
+setting_miv_hard_difficulty_enabled_5_desc:0 "All characters receive a modifier of -50 vassal opinion, making their realms more instable."
+setting_miv_hard_difficulty_enabled_5_player:0 "-50 Opinion (Player Only)"
+setting_miv_hard_difficulty_enabled_5_player_desc:0 "All players receive a modifier of -50 vassal opinion, making their realms more instable."
+
+setting_miv_hard_difficulty_disabled:0 "Disabled (Default)"
+setting_miv_hard_difficulty_disabled_desc:0 ""
+
+knight_effectiveness_10:0 "Difficulty"
+knight_effectiveness_20:0 "Difficulty"
+knight_effectiveness_30:0 "Difficulty"
+knight_effectiveness_40:0 "Difficulty"
+knight_effectiveness_50:0 "Difficulty"
+knight_effectiveness_60:0 "Difficulty"
+knight_effectiveness_70:0 "Difficulty"
+knight_effectiveness_80:0 "Difficulty"
+knight_effectiveness_90:0 "Difficulty"
+knight_effectiveness_100:0 "Difficulty"
+
+rule_knight_effectiveness_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Knight Effectiveness"
+setting_knight_effectiveness_10:0 "10% Reduction"
+setting_knight_effectiveness_10_desc:0 "The effectiveness of knights is reduced by 10%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_20:0 "20% Reduction"
+setting_knight_effectiveness_20_desc:0 "The effectiveness of knights is reduced by 20%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_30:0 "30% Reduction"
+setting_knight_effectiveness_30_desc:0 "The effectiveness of knights is reduced by 30%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_40:0 "40% Reduction"
+setting_knight_effectiveness_40_desc:0 "The effectiveness of knights is reduced by 40%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_50:0 "50% Reduction"
+setting_knight_effectiveness_50_desc:0 "The effectiveness of knights is reduced by 50%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_60:0 "60% Reduction"
+setting_knight_effectiveness_60_desc:0 "The effectiveness of knights is reduced by 60%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_70:0 "70% Reduction"
+setting_knight_effectiveness_70_desc:0 "The effectiveness of knights is reduced by 70%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_80:0 "80% Reduction"
+setting_knight_effectiveness_80_desc:0 "The effectiveness of knights is reduced by 80%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_90:0 "90% Reduction"
+setting_knight_effectiveness_90_desc:0 "The effectiveness of knights is reduced by 90%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_100:0 "95% Reduction"
+setting_knight_effectiveness_100_desc:0 "The effectiveness of knights is reduced by 95%, decreasing their damage to levies and Men-at-Arms during battles."
+
+setting_knight_effectiveness_disabled:0 "Disabled (Default)"
+setting_knight_effectiveness_disabled_desc:0 ""
+
+domain_tax_10:0 "Difficulty"
+domain_tax_20:0 "Difficulty"
+domain_tax_30:0 "Difficulty"
+domain_tax_40:0 "Difficulty"
+domain_tax_50:0 "Difficulty"
+domain_tax_60:0 "Difficulty"
+domain_tax_70:0 "Difficulty"
+domain_tax_80:0 "Difficulty"
+domain_tax_90:0 "Difficulty"
+domain_tax_100:0 "Difficulty"
+
+rule_domain_tax_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Domain Tax"
+setting_domain_tax_10:0 "10% Reduction"
+setting_domain_tax_10_desc:0 "The income from holdings is reduced by a factor of 10%, which slows down the rate of economic growth."
+
+setting_domain_tax_20:0 "20% Reduction"
+setting_domain_tax_20_desc:0 "The income from holdings is reduced by a factor of 20%, which slows down the rate of economic growth."
+
+setting_domain_tax_30:0 "30% Reduction"
+setting_domain_tax_30_desc:0 "The income from holdings is reduced by a factor of 30%, which slows down the rate of economic growth."
+
+setting_domain_tax_40:0 "40% Reduction"
+setting_domain_tax_40_desc:0 "The income from holdings is reduced by a factor of 40%, which slows down the rate of economic growth."
+
+setting_domain_tax_50:0 "50% Reduction"
+setting_domain_tax_50_desc:0 "The income from holdings is reduced by a factor of 50%, which slows down the rate of economic growth."
+
+setting_domain_tax_60:0 "60% Reduction"
+setting_domain_tax_60_desc:0 "The income from holdings is reduced by a factor of 60%, which slows down the rate of economic growth."
+
+setting_domain_tax_70:0 "70% Reduction"
+setting_domain_tax_70_desc:0 "The income from holdings is reduced by a factor of 70%, which slows down the rate of economic growth."
+
+setting_domain_tax_80:0 "80% Reduction"
+setting_domain_tax_80_desc:0 "The income from holdings is reduced by a factor of 80%, which slows down the rate of economic growth."
+
+setting_domain_tax_90:0 "90% Reduction"
+setting_domain_tax_90_desc:0 "The income from holdings is reduced by a factor of 90%, which slows down the rate of economic growth."
+
+setting_domain_tax_100:0 "95% Reduction"
+setting_domain_tax_100_desc:0 "The income from holdings is reduced by a factor of 95%, which slows down the rate of economic growth."
+
+setting_domain_tax_disabled:0 "Disabled (Default)"
+setting_domain_tax_disabled_desc:0 ""
+
+maa_size_10:0 "Difficulty"
+maa_size_20:0 "Difficulty"
+maa_size_30:0 "Difficulty"
+maa_size_40:0 "Difficulty"
+maa_size_50:0 "Difficulty"
+maa_size_60:0 "Difficulty"
+maa_size_70:0 "Difficulty"
+maa_size_80:0 "Difficulty"
+maa_size_90:0 "Difficulty"
+maa_size_100:0 "Difficulty"
+
+rule_maa_size_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Men-at-Arms Size"
+setting_maa_size_10:0 "+1 Increase"
+setting_maa_size_10_desc:0 "The max size of Men-at-Arms regiments is increased by 1, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_20:0 "+2 Increase"
+setting_maa_size_20_desc:0 "The max size of Men-at-Arms regiments is increased by 2, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_30:0 "+3 Increase"
+setting_maa_size_30_desc:0 "The max size of Men-at-Arms regiments is increased by 3, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_40:0 "+4 Increase"
+setting_maa_size_40_desc:0 "The max size of Men-at-Arms regiments is increased by 4, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_50:0 "+5 Increase"
+setting_maa_size_50_desc:0 "The max size of Men-at-Arms regiments is increased by 5, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_60:0 "+6 Increase"
+setting_maa_size_60_desc:0 "The max size of Men-at-Arms regiments is increased by 6, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_70:0 "+7 Increase"
+setting_maa_size_70_desc:0 "The max size of Men-at-Arms regiments is increased by 7, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_80:0 "+8 Increase"
+setting_maa_size_80_desc:0 "The max size of Men-at-Arms regiments is increased by 8, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_90:0 "+9 Increase"
+setting_maa_size_90_desc:0 "The max size of Men-at-Arms regiments is increased by 9, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_100:0 "+10 Increase"
+setting_maa_size_100_desc:0 "The max size of Men-at-Arms regiments is increased by 10, allowing more soldiers to be stationed in a domain."
+
+setting_maa_size_disabled:0 "Disabled (Default)"
+setting_maa_size_disabled_desc:0 ""
+
+maa_limit_10:0 "Difficulty"
+maa_limit_20:0 "Difficulty"
+maa_limit_25:0 "Difficulty"
+maa_limit_30:0 "Difficulty"
+maa_limit_40:0 "Difficulty"
+maa_limit_50:0 "Difficulty"
+maa_limit_60:0 "Difficulty"
+maa_limit_70:0 "Difficulty"
+maa_limit_80:0 "Difficulty"
+maa_limit_90:0 "Difficulty"
+maa_limit_100:0 "Difficulty"
+
+rule_maa_limit_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Men-at-Arms Limit"
+setting_maa_limit_10:0 "+1 Increase"
+setting_maa_limit_10_desc:0 "The number of Men-at-Arms recruitment slots is increased by 1, creating larger professional armies in a realm."
+
+setting_maa_limit_20:0 "+2 Increase"
+setting_maa_limit_20_desc:0 "The number of Men-at-Arms recruitment slots is increased by 2, creating larger professional armies in a realm."
+
+setting_maa_limit_30:0 "+3 Increase"
+setting_maa_limit_30_desc:0 "The number of Men-at-Arms recruitment slots is increased by 3, creating larger professional armies in a realm."
+
+setting_maa_limit_40:0 "+4 Increase"
+setting_maa_limit_40_desc:0 "The number of Men-at-Arms recruitment slots is increased by 4, creating larger professional armies in a realm."
+
+setting_maa_limit_50:0 "+5 Increase"
+setting_maa_limit_50_desc:0 "The number of Men-at-Arms recruitment slots is increased by 5, creating larger professional armies in a realm."
+
+setting_maa_limit_60:0 "+6 Increase"
+setting_maa_limit_60_desc:0 "The number of Men-at-Arms recruitment slots is increased by 6, creating larger professional armies in a realm."
+
+setting_maa_limit_70:0 "+7 Increase"
+setting_maa_limit_70_desc:0 "The number of Men-at-Arms recruitment slots is increased by 7, creating larger professional armies in a realm."
+
+setting_maa_limit_80:0 "+8 Increase"
+setting_maa_limit_80_desc:0 "The number of Men-at-Arms recruitment slots is increased by 8, creating larger professional armies in a realm."
+
+setting_maa_limit_90:0 "+9 Increase"
+setting_maa_limit_90_desc:0 "The number of Men-at-Arms recruitment slots is increased by 9, creating larger professional armies in a realm."
+
+setting_maa_limit_100:0 "+10 Increase"
+setting_maa_limit_100_desc:0 "The number of Men-at-Arms recruitment slots is increased by 10, creating larger professional armies in a realm."
+
+setting_maa_limit_disabled:0 "Disabled (Default)"
+setting_maa_limit_disabled_desc:0 ""
+
+ASK_SUPPORT_CANNOT_AFFORD_PRESTIGE:0 "You do not have enough Prestige."
+
+ASK_SUPPORT_CANNOT_AFFORD_INFLUENCE:0 "You do not have enough Influence."
+
+supply_limit_10:0 "Difficulty"
+supply_limit_20:0 "Difficulty"
+supply_limit_30:0 "Difficulty"
+supply_limit_40:0 "Difficulty"
+supply_limit_50:0 "Difficulty"
+supply_limit_60:0 "Difficulty"
+supply_limit_70:0 "Difficulty"
+supply_limit_80:0 "Difficulty"
+supply_limit_90:0 "Difficulty"
+supply_limit_100:0 "Difficulty"
+
+rule_supply_limit_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Supply Limit"
+setting_supply_limit_10:0 "+1000 Increase"
+setting_supply_limit_10_desc:0 "The base supply limit in provinces is increased by 1000, enabling larger army stacks in each province."
+
+setting_supply_limit_20:0 "+2000 Increase"
+setting_supply_limit_20_desc:0 "The base supply limit in provinces is increased by 2000, enabling larger army stacks in each province."
+
+setting_supply_limit_30:0 "+3000 Increase"
+setting_supply_limit_30_desc:0 "The base supply limit in provinces is increased by 3000, enabling larger army stacks in each province."
+
+setting_supply_limit_40:0 "+4000 Increase"
+setting_supply_limit_40_desc:0 "The base supply limit in provinces is increased by 4000, enabling larger army stacks in each province."
+
+setting_supply_limit_50:0 "+5000 Increase"
+setting_supply_limit_50_desc:0 "The base supply limit in provinces is increased by 5000, enabling larger army stacks in each province."
+
+setting_supply_limit_60:0 "+6000 Increase"
+setting_supply_limit_60_desc:0 "The base supply limit in provinces is increased by 6000, enabling larger army stacks in each province."
+
+setting_supply_limit_70:0 "+7000 Increase"
+setting_supply_limit_70_desc:0 "The base supply limit in provinces is increased by 7000, enabling larger army stacks in each province."
+
+setting_supply_limit_80:0 "+8000 Increase"
+setting_supply_limit_80_desc:0 "The base supply limit in provinces is increased by 8000, enabling larger army stacks in each province."
+
+setting_supply_limit_90:0 "+9000 Increase"
+setting_supply_limit_90_desc:0 "The base supply limit in provinces is increased by 9000, enabling larger army stacks in each province."
+
+setting_supply_limit_100:0 "+10000 Increase"
+setting_supply_limit_100_desc:0 "The base supply limit in provinces is increased by 10000, enabling larger army stacks in each province."
+
+setting_supply_limit_disabled:0 "Disabled"
+setting_supply_limit_disabled_desc:0 ""
+
+supply_duration_10:0 "Difficulty"
+supply_duration_20:0 "Difficulty"
+supply_duration_30:0 "Difficulty"
+supply_duration_40:0 "Difficulty"
+supply_duration_50:0 "Difficulty"
+supply_duration_60:0 "Difficulty"
+supply_duration_70:0 "Difficulty"
+supply_duration_80:0 "Difficulty"
+supply_duration_90:0 "Difficulty"
+supply_duration_100:0 "Difficulty"
+
+rule_supply_duration_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Supply Capacity"
+setting_supply_duration_10:0 "+100 Increase"
+setting_supply_duration_10_desc:0 "The maximum supplies an army can carry is increased by 100, letting armies last longer before resupplying."
+
+setting_supply_duration_20:0 "+200 Increase"
+setting_supply_duration_20_desc:0 "The maximum supplies an army can carry is increased by 200, letting armies last longer before resupplying."
+
+setting_supply_duration_30:0 "+300 Increase"
+setting_supply_duration_30_desc:0 "The maximum supplies an army can carry is increased by 300, letting armies last longer before resupplying."
+
+setting_supply_duration_40:0 "+400 Increase"
+setting_supply_duration_40_desc:0 "The maximum supplies an army can carry is increased by 400, letting armies last longer before resupplying."
+
+setting_supply_duration_50:0 "+500 Increase"
+setting_supply_duration_50_desc:0 "The maximum supplies an army can carry is increased by 500, letting armies last longer before resupplying."
+
+setting_supply_duration_60:0 "+600 Increase"
+setting_supply_duration_60_desc:0 "The maximum supplies an army can carry is increased by 600, letting armies last longer before resupplying."
+
+setting_supply_duration_70:0 "+700 Increase"
+setting_supply_duration_70_desc:0 "The maximum supplies an army can carry is increased by 700, letting armies last longer before resupplying."
+
+setting_supply_duration_80:0 "+800 Increase"
+setting_supply_duration_80_desc:0 "The maximum supplies an army can carry is increased by 800, letting armies last longer before resupplying."
+
+setting_supply_duration_90:0 "+900 Increase"
+setting_supply_duration_90_desc:0 "The maximum supplies an army can carry is increased by 900, letting armies last longer before resupplying."
+
+setting_supply_duration_100:0 "+1000 Increase"
+setting_supply_duration_100_desc:0 "The maximum supplies an army can carry is increased by 1000, letting armies last longer before resupplying."
+
+setting_supply_duration_disabled:0 "Disabled (Default)"
+setting_supply_duration_disabled_desc:0 ""
+
+army_speed_10:0 "Difficulty"
+army_speed_20:0 "Difficulty"
+army_speed_30:0 "Difficulty"
+army_speed_40:0 "Difficulty"
+army_speed_50:0 "Difficulty"
+army_speed_60:0 "Difficulty"
+army_speed_70:0 "Difficulty"
+army_speed_80:0 "Difficulty"
+army_speed_90:0 "Difficulty"
+army_speed_100:0 "Difficulty"
+
+rule_army_speed_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Army Speed"
+setting_army_speed_10:0 "10% Reduction"
+setting_army_speed_10_desc:0 "The speed of army movement on land is reduced by 10%, making military campaigns more strategic."
+
+setting_army_speed_20:0 "20% Reduction"
+setting_army_speed_20_desc:0 "The speed of army movement on land is reduced by 20%, making military campaigns more strategic."
+
+setting_army_speed_30:0 "30% Reduction"
+setting_army_speed_30_desc:0 "The speed of army movement on land is reduced by 30%, making military campaigns more strategic."
+
+setting_army_speed_40:0 "40% Reduction"
+setting_army_speed_40_desc:0 "The speed of army movement on land is reduced by 40%, making military campaigns more strategic."
+
+setting_army_speed_50:0 "50% Reduction"
+setting_army_speed_50_desc:0 "The speed of army movement on land is reduced by 50%, making military campaigns more strategic."
+
+setting_army_speed_60:0 "60% Reduction"
+setting_army_speed_60_desc:0 "The speed of army movement on land is reduced by 60%, making military campaigns more strategic."
+
+setting_army_speed_70:0 "70% Reduction"
+setting_army_speed_70_desc:0 "The speed of army movement on land is reduced by 70%, making military campaigns more strategic."
+
+setting_army_speed_80:0 "80% Reduction"
+setting_army_speed_80_desc:0 "The speed of army movement on land is reduced by 80%, making military campaigns more strategic."
+
+setting_army_speed_90:0 "90% Reduction"
+setting_army_speed_90_desc:0 "The speed of army movement on land is reduced by 90%, making military campaigns more strategic."
+
+setting_army_speed_100:0 "95% Reduction"
+setting_army_speed_100_desc:0 "The speed of army movement on land is reduced by 95%, making military campaigns more strategic."
+
+setting_army_speed_disabled:0 "Disabled (Default)"
+setting_army_speed_disabled_desc:0 ""
+
+naval_speed_10:0 "Difficulty"
+naval_speed_20:0 "Difficulty"
+naval_speed_30:0 "Difficulty"
+naval_speed_40:0 "Difficulty"
+naval_speed_50:0 "Difficulty"
+naval_speed_60:0 "Difficulty"
+naval_speed_70:0 "Difficulty"
+naval_speed_80:0 "Difficulty"
+naval_speed_90:0 "Difficulty"
+naval_speed_100:0 "Difficulty"
+
+rule_naval_speed_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Naval Speed"
+setting_naval_speed_10:0 "10% Reduction"
+setting_naval_speed_10_desc:0 "The speed of naval movement is reduced by 10%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_20:0 "20% Reduction"
+setting_naval_speed_20_desc:0 "The speed of naval movement is reduced by 20%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_30:0 "30% Reduction"
+setting_naval_speed_30_desc:0 "The speed of naval movement is reduced by 30%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_40:0 "40% Reduction"
+setting_naval_speed_40_desc:0 "The speed of naval movement is reduced by 40%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_50:0 "50% Reduction"
+setting_naval_speed_50_desc:0 "The speed of naval movement is reduced by 50%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_60:0 "60% Reduction"
+setting_naval_speed_60_desc:0 "The speed of naval movement is reduced by 60%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_70:0 "70% Reduction"
+setting_naval_speed_70_desc:0 "The speed of naval movement is reduced by 70%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_80:0 "80% Reduction"
+setting_naval_speed_80_desc:0 "The speed of naval movement is reduced by 80%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_90:0 "90% Reduction"
+setting_naval_speed_90_desc:0 "The speed of naval movement is reduced by 90%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_100:0 "95% Reduction"
+setting_naval_speed_100_desc:0 "The speed of naval movement is reduced by 95%, adding further difficulty when traveling by sea."
+
+setting_naval_speed_disabled:0 "Disabled (Default)"
+setting_naval_speed_disabled_desc:0 ""
+
+fatal_casualties_10:0 "Difficulty"
+fatal_casualties_20:0 "Difficulty"
+fatal_casualties_30:0 "Difficulty"
+fatal_casualties_40:0 "Difficulty"
+fatal_casualties_50:0 "Difficulty"
+fatal_casualties_60:0 "Difficulty"
+fatal_casualties_70:0 "Difficulty"
+fatal_casualties_80:0 "Difficulty"
+fatal_casualties_90:0 "Difficulty"
+fatal_casualties_100:0 "Difficulty"
+
+rule_fatal_casualties_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Fatal Casualties"
+setting_fatal_casualties_10:0 "10% Increase"
+setting_fatal_casualties_10_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 10%, making battles more deadly."
+
+setting_fatal_casualties_20:0 "20% Increase"
+setting_fatal_casualties_20_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 20%, making battles more deadly."
+
+setting_fatal_casualties_30:0 "30% Increase"
+setting_fatal_casualties_30_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 30%, making battles more deadly."
+
+setting_fatal_casualties_40:0 "40% Increase"
+setting_fatal_casualties_40_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 40%, making battles more deadly."
+
+setting_fatal_casualties_50:0 "50% Increase"
+setting_fatal_casualties_50_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 50%, making battles more deadly."
+
+setting_fatal_casualties_60:0 "60% Increase"
+setting_fatal_casualties_60_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 60%, making battles more deadly."
+
+setting_fatal_casualties_70:0 "70% Increase"
+setting_fatal_casualties_70_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 70%, making battles more deadly."
+
+setting_fatal_casualties_80:0 "80% Increase"
+setting_fatal_casualties_80_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 80%, making battles more deadly."
+
+setting_fatal_casualties_90:0 "90% Increase"
+setting_fatal_casualties_90_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 90%, making battles more deadly."
+
+setting_fatal_casualties_100:0 "100% Increase"
+setting_fatal_casualties_100_desc:0 "The number of fatal casualties in combat is increased by a multiplier of 100%, making battles more deadly."
+
+setting_fatal_casualties_disabled:0 "Disabled (Default)"
+setting_fatal_casualties_disabled_desc:0 ""
+
+max_combat_roll_10:0 "Difficulty"
+max_combat_roll_20:0 "Difficulty"
+max_combat_roll_30:0 "Difficulty"
+max_combat_roll_40:0 "Difficulty"
+max_combat_roll_50:0 "Difficulty"
+max_combat_roll_60:0 "Difficulty"
+max_combat_roll_70:0 "Difficulty"
+max_combat_roll_80:0 "Difficulty"
+max_combat_roll_90:0 "Difficulty"
+max_combat_roll_100:0 "Difficulty"
+
+rule_max_combat_roll_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Combat Roll"
+setting_max_combat_roll_10:0 "+1 Increase"
+setting_max_combat_roll_10_desc:0 "The max combat roll for commander advantage is increased by 1, adding more uncertainty to battles."
+
+setting_max_combat_roll_20:0 "+2 Increase" 
+setting_max_combat_roll_20_desc:0 "The max combat roll for commander advantage is increased by 2, adding more uncertainty to battles."
+
+setting_max_combat_roll_30:0 "+3 Increase"
+setting_max_combat_roll_30_desc:0 "The max combat roll for commander advantage is increased by 3, adding more uncertainty to battles."
+
+setting_max_combat_roll_40:0 "+4 Increase"
+setting_max_combat_roll_40_desc:0 "The max combat roll for commander advantage is increased by 4, adding more uncertainty to battles."
+
+setting_max_combat_roll_50:0 "+5 Increase"
+setting_max_combat_roll_50_desc:0 "The max combat roll for commander advantage is increased by 5, adding more uncertainty to battles."
+
+setting_max_combat_roll_60:0 "+6 Increase"
+setting_max_combat_roll_60_desc:0 "The max combat roll for commander advantage is increased by 6, adding more uncertainty to battles."
+
+setting_max_combat_roll_70:0 "+7 Increase"
+setting_max_combat_roll_70_desc:0 "The max combat roll for commander advantage is increased by 7, adding more uncertainty to battles."
+
+setting_max_combat_roll_80:0 "+8 Increase"
+setting_max_combat_roll_80_desc:0 "The max combat roll for commander advantage is increased by 8, adding more uncertainty to battles."
+
+setting_max_combat_roll_90:0 "+9 Increase"
+setting_max_combat_roll_90_desc:0 "The max combat roll for commander advantage is increased by 9, adding more uncertainty to battles."
+
+setting_max_combat_roll_100:0 "+10 Increase"
+setting_max_combat_roll_100_desc:0 "The max combat roll for commander advantage is increased by 10, adding more uncertainty to battles."
+
+setting_max_combat_roll_disabled:0 "Disabled (Default)"
+setting_max_combat_roll_disabled_desc:0 ""
+
+rule_information_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Game Rules"
+rule_information_miv_2_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Mod Compatibility"
+setting_information_miv_enabled:0 "Information"
+setting_information_miv_enabled_desc:0 "MIV allows game rules to be adjusted even after a game begins. Some game rules may require saving the game and reloading it for the changes to apply."
+setting_information_miv_2_enabled:0 "Information"
+setting_information_miv_2_enabled_desc:0 "MIV is achievement compatible, save-game compatible, and works with other overhauls and total conversion mods."
+
+siege_effectiveness_10:0 "Difficulty"
+siege_effectiveness_20:0 "Difficulty"
+siege_effectiveness_30:0 "Difficulty"
+siege_effectiveness_40:0 "Difficulty"
+siege_effectiveness_50:0 "Difficulty"
+siege_effectiveness_60:0 "Difficulty"
+siege_effectiveness_70:0 "Difficulty"
+siege_effectiveness_80:0 "Difficulty"
+siege_effectiveness_90:0 "Difficulty"
+siege_effectiveness_100:0 "Difficulty"
+
+rule_siege_effectiveness_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Siege Effectiveness"
+setting_siege_effectiveness_10:0 "10% Increase"
+setting_siege_effectiveness_10_desc:0 "The siege progress value for siege weapons is increased by 10%, speeding up sieges significantly."
+
+setting_siege_effectiveness_20:0 "20% Increase"
+setting_siege_effectiveness_20_desc:0 "The siege progress value for siege weapons is increased by 20%, speeding up sieges significantly."
+
+setting_siege_effectiveness_30:0 "30% Increase"
+setting_siege_effectiveness_30_desc:0 "The siege progress value for siege weapons is increased by 30%, speeding up sieges significantly."
+
+setting_siege_effectiveness_40:0 "40% Increase"
+setting_siege_effectiveness_40_desc:0 "The siege progress value for siege weapons is increased by 40%, speeding up sieges significantly."
+
+setting_siege_effectiveness_50:0 "50% Increase"
+setting_siege_effectiveness_50_desc:0 "The siege progress value for siege weapons is increased by 50%, speeding up sieges significantly."
+
+setting_siege_effectiveness_60:0 "60% Increase"
+setting_siege_effectiveness_60_desc:0 "The siege progress value for siege weapons is increased by 60%, speeding up sieges significantly."
+
+setting_siege_effectiveness_70:0 "70% Increase"
+setting_siege_effectiveness_70_desc:0 "The siege progress value for siege weapons is increased by 70%, speeding up sieges significantly."
+
+setting_siege_effectiveness_80:0 "80% Increase"
+setting_siege_effectiveness_80_desc:0 "The siege progress value for siege weapons is increased by 80%, speeding up sieges significantly."
+
+setting_siege_effectiveness_90:0 "90% Increase"
+setting_siege_effectiveness_90_desc:0 "The siege progress value for siege weapons is increased by 90%, speeding up sieges significantly."
+
+setting_siege_effectiveness_100:0 "100% Increase"
+setting_siege_effectiveness_100_desc:0 "The siege progress value for siege weapons is increased by 100%, speeding up sieges significantly."
+
+setting_siege_effectiveness_disabled:0 "Disabled (Default)"
+setting_siege_effectiveness_disabled_desc:0 ""
+
+innovation_speed_10:0 "Difficulty"
+innovation_speed_20:0 "Difficulty"
+innovation_speed_30:0 "Difficulty"
+innovation_speed_40:0 "Difficulty"
+innovation_speed_50:0 "Difficulty"
+innovation_speed_60:0 "Difficulty"
+innovation_speed_70:0 "Difficulty"
+innovation_speed_80:0 "Difficulty"
+innovation_speed_90:0 "Difficulty"
+innovation_speed_100:0 "Difficulty"
+
+rule_innovation_speed_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Innovation Speed"
+setting_innovation_speed_10:0 "10% Increase"
+setting_innovation_speed_10_desc:0 "The base cultural fascination chance is increased by 10%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_20:0 "20% Increase"
+setting_innovation_speed_20_desc:0 "The base cultural fascination chance is increased by 20%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_30:0 "30% Increase"
+setting_innovation_speed_30_desc:0 "The base cultural fascination chance is increased by 30%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_40:0 "40% Increase"
+setting_innovation_speed_40_desc:0 "The base cultural fascination chance is increased by 40%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_50:0 "50% Increase"
+setting_innovation_speed_50_desc:0 "The base cultural fascination chance is increased by 50%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_60:0 "60% Increase"
+setting_innovation_speed_60_desc:0 "The base cultural fascination chance is increased by 60%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_70:0 "70% Increase"
+setting_innovation_speed_70_desc:0 "The base cultural fascination chance is increased by 70%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_80:0 "80% Increase"
+setting_innovation_speed_80_desc:0 "The base cultural fascination chance is increased by 80%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_90:0 "90% Increase"
+setting_innovation_speed_90_desc:0 "The base cultural fascination chance is increased by 90%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_100:0 "100% Increase"
+setting_innovation_speed_100_desc:0 "The base cultural fascination chance is increased by 100%, allowing for quicker progression through the eras."
+
+setting_innovation_speed_disabled:0 "Disabled (Default)"
+setting_innovation_speed_disabled_desc:0 ""
+
+rule_miv_ask_to_end_war_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Vassal Aggression"
+setting_miv_ask_to_end_war_enabled:0 "Enabled"
+setting_miv_ask_to_end_war_enabled_desc:0 "A liege can ask a vassal to stop one of their offensive wars in exchange for some form of compensation."
+setting_miv_ask_to_end_war_disabled:0 "Disabled"
+setting_miv_ask_to_end_war_disabled_desc:0 ""
+
+miv_stop_attacker_vassal_war_interaction:0 "Ask to Stop Vassal War"
+miv_stop_vassal_war_negotiation:2 "A [liege|e] can ask a [vassal|e] to stop one of their [wars|e] in exchange for a payment of [gold|e] or by leveraging a [hook|e]."
+ASK_STOP_VASSAL_WAR:0 "[TARGET_CHARACTER.GetShortUIName] must have a positive opinion of you."
+
+rule_maa_reinforcement_rate_miv_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Men-at-Arms Losses"
+setting_maa_reinforcement_rate_miv_enabled:0 "Slower Reinforcement"
+setting_maa_reinforcement_rate_miv_enabled_desc:0 "Men-at-Arms regiments replenish 5% strength per month instead of 10%, which makes casualties more impactful."
+setting_maa_reinforcement_rate_miv_disabled:0 "Disabled (Default)"
+setting_maa_reinforcement_rate_miv_disabled_desc:0 ""
+
+rule_tax_contribution_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Tax Contribution"
+
+setting_tax_contribution_disabled:0 "Disabled (Default)"
+setting_tax_contribution_disabled_desc:0 ""
+
+setting_tax_contribution_10r:0 "10% Reduction"
+setting_tax_contribution_10r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 10%."
+
+setting_tax_contribution_20r:0 "20% Reduction"
+setting_tax_contribution_20r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 20%."
+
+setting_tax_contribution_30r:0 "30% Reduction"
+setting_tax_contribution_30r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 30%."
+
+setting_tax_contribution_40r:0 "40% Reduction"
+setting_tax_contribution_40r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 40%."
+
+setting_tax_contribution_50r:0 "50% Reduction"
+setting_tax_contribution_50r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 50%."
+
+setting_tax_contribution_60r:0 "60% Reduction"
+setting_tax_contribution_60r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 60%."
+
+setting_tax_contribution_70r:0 "70% Reduction"
+setting_tax_contribution_70r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 70%."
+
+setting_tax_contribution_80r:0 "80% Reduction"
+setting_tax_contribution_80r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 80%."
+
+setting_tax_contribution_90r:0 "90% Reduction"
+setting_tax_contribution_90r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 90%."
+
+setting_tax_contribution_100r:0 "95% Reduction"
+setting_tax_contribution_100r_desc:0 "The percentage of taxes that vassals provide to their liege is reduced by a multiplier of 95%."
+
+tax_contribution_10r:0 "Difficulty"
+tax_contribution_20r:0 "Difficulty"
+tax_contribution_30r:0 "Difficulty"
+tax_contribution_40r:0 "Difficulty"
+tax_contribution_50r:0 "Difficulty"
+tax_contribution_60r:0 "Difficulty"
+tax_contribution_70r:0 "Difficulty"
+tax_contribution_80r:0 "Difficulty"
+tax_contribution_90r:0 "Difficulty"
+tax_contribution_100r:0 "Difficulty"
+
+rule_miv_oathbreakers_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Oathbreakers"
+setting_miv_oathbreakers_enabled:0 "Enabled"
+setting_miv_oathbreakers_enabled_desc:0 "Vassals who hate their liege can attempt to betray them during a war, becoming oathbreakers, a punishable offense."
+setting_miv_oathbreakers_disabled:0 "Disabled"
+setting_miv_oathbreakers_disabled_desc:0 ""
+
+miv_oathbreaker:0 "Oathbreaker"
+
+interactive_oathbreaker_tooltip:0 "[CHARACTER.GetShortUIName|V] ([CHARACTER.GetPrimaryTitle.GetNameNoTier]) might betray [CHARACTER.GetHerHis] liege. (#clickable Oathbreaker#!)"
+
+WILL_BECOME_OATHBREAKER: "Will become an Oathbreaker: $VALUE|=+0$"
+
+interactive_oathbreaker_notification:0 "This vassal has betrayed their liege in a war and became an #clickable Oathbreaker#!, a punishable offense."
+
+miv_oathbreaker_defects:0 "Vassal Betrays Liege"
+
+levy_contribution_75r:0 "Bannermen Obligations"
+
+rule_bannermen_mode_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Bannermen"
+setting_bannermen_mode_enabled:0 "Enabled"
+setting_bannermen_mode_enabled_desc:0 "Vassals provide 50% fewer levies but are obligated to join their liege when called to war, otherwise they are branded as oathbreakers, a punishable offense."
+setting_bannermen_mode_disabled:0 "Disabled (Default)"
+setting_bannermen_mode_disabled_desc:0 ""
+
+interactive_bannermen_mode_decision:0 "Call the Banners"
+interactive_bannermen_mode_decision_desc:0 "As their liege, my vassals have sworn an oath to defend me in times of peace and war. It is time to see what their words are worth."
+interactive_bannermen_mode_decision_tooltip:0 "Call on your [vassals|e] to join your [wars|e]."
+interactive_bannermen_mode_decision_confirm:0 "Send my orders"
+
+interactive_bannermen_mode_decision_effect:0 "All of your [vassals|e] will be called to join your current [wars|e], and those that refuse are branded as #clickable Oathbreakers#!."
+
+interactive_oathbreaker_bannermen_notification:0 "This vassal has refused their liege's call to arms and became an #clickable Oathbreaker#!."
+miv_oathbreaker_bannermen_defects:0 "Vassal Breaks Oath"
+
+interactive_bannermen_mode_tooltip:0 "#Bold #V $VALUE|0$#!#! other vassals can be called to honor their bannermen obligations."
+
+interactive_compatibility_disabled_tooltip:0 "#X This feature has been disabled for compatibility with other mods!#!"
+
+rule_bannermen_extended_mode_game_rules:0 "#clickable #Bold More Interactive Vassals#!#!: Vassal Bannermen"
+setting_bannermen_extended_mode_enabled:0 "Title Holders & Claimants"
+setting_bannermen_extended_mode_enabled_desc:0 "Vassals can call their own bannermen if they would lose or gain a title as a result of a war."
+setting_bannermen_extended_mode_2_enabled:0 "Kingdom-tier Vassals"
+setting_bannermen_extended_mode_2_enabled_desc:0 "In addition to title holders & claimants, kingdom-tier vassals can call their own bannermen after joining a war."
+setting_bannermen_extended_mode_3_enabled:0 "Duchy-tier Vassals"
+setting_bannermen_extended_mode_3_enabled_desc:0 "In addition to all of the previous rules, duchy-tier vassals and up can call their own bannermen after joining a war."
+setting_bannermen_extended_mode_disabled:0 "Disabled (Default)"
+setting_bannermen_extended_mode_disabled_desc:0 ""

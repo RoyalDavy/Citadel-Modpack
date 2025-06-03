@@ -1,0 +1,73 @@
+﻿dynn_vanity_Robin = {
+	pattern = "pattern_shield_02.dds"
+	color1 = "agot_red"
+	color2 = "agot_white"
+	color3 = "black"
+	colored_emblem = {
+		texture = "vl_true.dds"
+		color1 = "agot_black"
+		color2 = "agot_red"
+		color3 = "agot_white"
+		instance = {
+			position = { 0.500000 0.460000 }
+			scale = { -0.435000 0.435000 }
+			depth = 8.010000
+		}
+	}
+	colored_emblem = {
+		texture = "ce_border_shield_engrailed_02.dds"
+		color1 = "agot_red"
+		instance = {
+			scale = { 0.780000 0.780000 }
+			depth = 9.010000
+		}
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "agot_yellow"
+		instance = {
+			position = { 0.750000 0.750000 }
+			scale = { 0.200000 0.200000 }
+		}
+		instance = {
+			position = { 0.250000 0.750000 }
+			scale = { 0.200000 0.200000 }
+			depth = 1.010000
+		}
+		instance = {
+			position = { 0.160000 0.095000 }
+			scale = { 0.200000 0.200000 }
+			depth = 2.010000
+		}
+		instance = {
+			position = { 0.840000 0.095000 }
+			scale = { 0.200000 0.200000 }
+			depth = 3.010000
+		}
+		instance = {
+			position = { 0.840000 0.460000 }
+			scale = { 0.200000 0.200000 }
+			depth = 4.010000
+		}
+		instance = {
+			position = { 0.160000 0.460000 }
+			scale = { 0.200000 0.200000 }
+			depth = 5.010000
+		}
+		instance = {
+			position = { 0.500000 0.895000 }
+			scale = { 0.200000 0.200000 }
+			depth = 6.010000
+		}
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "agot_yellow"
+		color2 = "agot_black"
+		instance = {
+			position = { 0.500000 0.095000 }
+			scale = { 0.200000 0.200000 }
+			depth = 7.010000
+		}
+	}
+}

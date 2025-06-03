@@ -1,0 +1,66 @@
+﻿agot_can_trade_artifacts_trigger = {
+	at_can_trade_artifacts_trigger = yes
+	trigger_if = {
+		limit = { is_ai = yes }
+		highest_held_title_tier >= tier_county
+		trigger_if = {
+			limit = { exists = global_var:agot_artifact_keeper }
+			NOT = { this = global_var:agot_artifact_keeper }
+		}
+	}
+}
+
+agot_ai_may_sell_artifact_trigger = {
+	# Save buyer and seller
+	save_temporary_scope_as = seller
+	global_var:agot_artifact_keeper = { save_temporary_scope_as = buyer }
+
+	# Has artifacts that the merchant could buy
+	has_variable_list = agot_owned_artifacts
+	variable_list_size = { name = agot_owned_artifacts value > 0 }
+
+	# The buyer can be sold artifacts to by the seller at the moment
+	scope:buyer = {
+		at_can_sell_artifact_to_trigger = { PARTY = scope:seller }
+	}
+}
+
+agot_ai_may_buy_artifact_trigger = {
+	# Save buyer and seller
+	save_temporary_scope_as = buyer
+	global_var:agot_artifact_keeper = { save_temporary_scope_as = seller }
+
+	# Not at war
+	is_at_war = no
+
+	# The seller can be bought artifacts from by the buyer at the moment
+	scope:seller = {
+		at_can_buy_artifact_from_trigger = { PARTY = scope:buyer }
+	}
+}
+
+agot_artifact_can_be_sold_trigger = {
+	at_artifact_can_be_sold_trigger = yes
+	at_artifact_can_be_bought_by_trigger = { BUYER = global_var:agot_artifact_keeper }
+}
+
+agot_artifact_can_be_destroyed_trigger = {
+	at_artifact_can_be_destroyed_trigger = yes
+}
+
+agot_should_be_knight_idle_trigger = {
+	portrait_wear_armor_trigger = yes
+	OR = {
+		AND = {
+			portrait_wear_armor_trigger = yes
+			is_at_war = no
+		}
+		is_at_war = yes
+		AND = {
+			is_knight = yes
+			liege = {
+				is_at_war = yes
+			}
+		}
+	}
+}

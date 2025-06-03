@@ -1,0 +1,56 @@
+﻿############################          LORATH            ############################
+####################################################################################
+
+### Main
+############################
+dynn_H_ghar = {
+	name = "dynn_H_ghar" #Jaqen H'ghar
+	culture = "lorathi"
+}
+dynn_D_han = {
+	name = "dynn_D_han"
+	culture = "lorathi"
+}
+
+### Modcanon Houses
+############################
+dynn_Naylan = {
+	name = "dynn_Naylan"
+	culture = "lorathi"
+}
+dynn_Reltis = {
+	name = "dynn_Reltis"
+	culture = "lorathi"
+}
+dynn_Oloryon = {
+	name = "dynn_Oloryon"
+	culture = "lorathi"
+}
+dynn_Lathtis = {
+	name = "dynn_Lathtis"
+	culture = "lorathi"
+}
+dynn_Vazollen = {
+	name = "dynn_Vazollen"
+	culture = "lorathi"
+}
+dynn_H_ghai = {
+	name = "dynn_H_ghai"
+	culture = "lorathi"
+}
+dynn_Kaldorys = {
+	name = "dynn_Kaldorys"
+	culture = "lorathi"
+}
+dynn_Dalthor = {
+	name = "dynn_Dalthor"
+	culture = "lorathi"
+}
+dynn_N_ghan = {
+	name = "dynn_N_ghan"
+	culture = "lorathi"
+}
+dynn_Delyios = {
+	name = "dynn_Delyios"
+	culture = "lorathi"
+}

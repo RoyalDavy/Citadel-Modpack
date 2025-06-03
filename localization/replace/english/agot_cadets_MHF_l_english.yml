@@ -1,0 +1,11 @@
+﻿l_english:
+
+#Cadet Prefix Houses
+CadetPrefix_Bricker:0 "Brix"
+
+#Cadet Suffix Houses
+CadetSuffix_Bricker:0 "bricker"
+
+#Cadet Symbols
+CadetSigil_Brick:0 "brick"
+CadetSigil_Wall:0 "wall"

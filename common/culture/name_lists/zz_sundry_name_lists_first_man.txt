@@ -1,0 +1,1068 @@
+﻿### THE NORTH
+name_list_northman = {
+
+	dynasty_names = {
+		{ "dynn_Wolfe" } { "dynn_Orland" } { "dynn_Algrey" } { "dynn_Thicketh" } { "dynn_Holham" }
+		{ "dynn_Thelly" } { "dynn_Ryegate" } { "dynn_Hooton" } { "dynn_Colwyn" } { "dynn_Loom" }
+		{ "dynn_Flinn" } { "dynn_Gorrey" } { "dynn_Icemark" } { "dynn_Farrows" } { "dynn_Linden" }
+		{ "dynn_Tymber" } { "dynn_Bordon" } { "dynn_Pall" } { "dynn_Peale" } { "dynn_Rossell" }
+		{ "dynn_Weale" } { "dynn_Kedge" } { "dynn_Sables" } { "dynn_Nobley" } { "dynn_Spring" }
+		{ "dynn_Barrows" } { "dynn_Hatcher" } { "dynn_Hallomere" } { "dynn_Graunce" } { "dynn_Ashem" }
+	}
+
+	male_names = {
+		15 = {
+			Brandon Edric Willam Halys Harrion
+			Royce Rickard Jorah Beron Jon Theon
+		}
+		80 = {
+			Aberdolf Alaric Albett Alfyn Alton Alwin Arden Arthor
+			Arnolf Aron Arston Artos Asher Abel Alyn
+			Balder Belden Belthasar Benfred Benjen Barthogan
+			Benjicot Bennard Benton Beren Berrican Blane
+			Boras Bowen Bannen Bartimus Byam Beric
+			Calon Cavan Cayn Cedric Cley Connold Corbett
+			Corin Cregard Chayle Cregan
+			Damon Dannel Darrion Daryn Daveth Denys Desmond Desmyn
+			Devyn Donnel Donnis Denner Dorren Duncan Dywen Donnor Domeric
+			Ebbert Ebben Eckard Edderion Edrick Edwyle Edwyn Elbart Elric
+			Elfram Ellard Elwood Erren Errold Ethan Eyron Edmund Enger Eddard
+			Farlen Farris Fulk
+			Galbart Gared Garion Gariss Gaven Gerhard 
+			Gregor Gryff Garth Gladden Gerren Gawen
+			Hallis Hareth Harkon Harlon Harmond Harwin Howland Hother
+			Harwood Helman Henly Heward Hothor Hullen Hugo Horas
+			Jaremy Jarett Jonnel Jonos Jeor Joron Jeren Jory Joseth Josera Jon Jojen
+			Karl Kyle Karlon
+			Larence Leobald Lonnel Lorick Ludd Lew Lucas Lucan Lucifer Lorgen Lothor Luton
+			Mallador Maron Marek Mark Marlin Martyn Mathell Maynard Medger
+			Merald Mickon Morgan Morick Mors Mycah Mohor Myles Malcolm
+			Namond Norren
+			Ondrew Owen Olyvar Osmund Osric
+			Patrek
+			Quenton
+			Ramsay Raynard Rickon Robard Robb Robett Robin Roderick Rodrik
+			Rodwell Rogar Roger Ronnel Roose Royland Rylen Ryon Rymund
+			Steffon
+			Theo Thermund Tomard Theomore Torren Torghen Thorren Torrhen
+			Varly Vayon Veron
+			Walton Wayn Wydron Wynton Wylis Warren
+			Yoren
+		}
+		5 = { #simpler names
+			Tym Wyl Ned Pate Shadd Skittrick Porther Quent Rawney Hal
+			Jacks Dacks Nage Kedge Watt Lark Finn Gage Ben Mikken Barth Harry
+			Sherrit Bran Kear Grenn Hamish Hoarfrost Will Murch Billy Derek Conn
+		}
+	}
+	female_names = {
+		15 = {
+			Lyanna Alys Barbrey Arya Sara Mira Myranda Berena Melissa Erena Branda Lysara
+		}
+		80 = {
+			Aisling Alanna Alarra Albetta Alla Alybeth Alysane Aregelle Arra Arrana Arsa Asha Ashlynne Amarei Amabel Agnes Arwyn
+			Barba Bella Benessa Benya Bessa Bethany Branna Brenda
+			Clerissa Corenna Cylla Cyrelle Cassana Carellen
+			Dalla Dalonne Darra Darya Derissa Donella Donna Doreen
+			Eddara Elena Elsera Elyn Ethel Eyla Emberlei Elyana
+			Faye Frella Frenelle Frenya Freyda Fryda Fryn
+			Garenna Garra Gilesa Gilliane Girane Grisella Gwyn Gwenys
+			Hella Hollys
+			Jarana Jessamyn Jeyne Jocelyn Joncella Jonelle Joranna Jorelle Joslena Jyana Jyzene
+			Kella Kerena Kyra
+			Leona Lunella Lyanne Lyarra Lyessa Lynara Lyra Lysa
+			Maege Malene Malerra Mara Margaret Mariah Marian Marna Marya Meghan Melara Melantha Meliana Merise Mina Morah Morgana Morna Moryne Mycelle Mylarra 
+			Nella Nera
+			Owella
+			Palla Petra
+			Raya Robyn Ryessa Roslin
+			Sabetha Salissa Sansa Sarra Serena Shyra Sybelle Sallei
+			Tyalla Tyrene
+			Vivian
+			Wylla Wynafryd
+		}
+		5 = {
+			Lya Danny Ros Tansy Beth Jez Zei Willow Violet Maisie Bandy Dacey Lacey Nolla Mya Joy Aly
+		}
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		{ name = "mercenary_company_wolf_pack" }
+		{ name = "mercenary_company_winter_sons" }
+		{ name = "mercenary_company_company_of_the_grim" }
+		{ name = "mercenary_company_wandering_wolves" }
+		{ name = "mercenary_company_extra_mouths" }
+	}
+}
+
+name_list_crannogman = {
+
+	dynasty_names = {
+		{ "dynn_Wett" } { "dynn_Slough" } { "dynn_Brownmyre" } { "dynn_Longreed" } { "dynn_Greenmyre" }
+		{ "dynn_Downpeat" } { "dynn_Neckman" } { "dynn_Mudder" } { "dynn_Frogg" } { "dynn_Bogborn" }
+		{ "dynn_Mossmyre" } { "dynn_Bogwell" } { "dynn_Grue" } { "dynn_Willot" } { "dynn_Mudcoast" }
+		{ "dynn_Hayle" } { "dynn_Cavett" } { "dynn_Mossby" } { "dynn_Frogpool" } { "dynn_Gloombough" }
+		{ "dynn_Hycks" } { "dynn_Blackpeat" } { "dynn_Fogg" } { "dynn_Creepfoot" } { "dynn_Frogby" }
+		{ "dynn_Peatby" } { "dynn_Mudfoote" } { "dynn_Travett" } { "dynn_Dankreeds" } { "dynn_Fennels" }
+	}
+
+	male_names = {
+		15 = {
+			Jojen Howland Bowen Chayle Dywen Creylen Wayland
+			Ebben Rylen
+		}
+		80 = {
+			Aberdolf Alaric Alfyn Alton Alwin Arden Alyn
+			Arnolf Aron Arston Asher Abel Albett Arthor Artos
+			Balder Belden Belthasar Benfred Barthogan Benjen Byam
+			Bennard Benton Blane Beren Benjicot Brandon Berrican
+			Boras Bannen Bartimus Beron Beric
+			Cavan Cayn Cedric Connold Corbett
+			Corin Calon Cley Cregard Cregan
+			Damon Dannel Darrion Daryn Daveth Denys Desmond Desmyn
+			Devyn Dorren Domeric Donnor Donnis Denner Duncan Donnel
+			Ebbert Eckard Edric Edrick Edwyle Edwyn Elbart Ethan Edderion
+			Elfram Ellard Elwood Erren Errold Eyron Edmund Enger Eddard Elric
+			Farris Fulk Farlen
+			Garion Gariss Gerhard Gregor Gared Gaven
+			Gryff Garth Gladden Gerren Gawen Galbart
+			Hallis Harkon Harlon Harmond Harwin Halys Harrion Hareth
+			Harwood Helman Henly Heward Hothor Hullen Horas Hother Hugo
+			Jaremy Jarett Jonnel Joron Jeren Jory Joseth Jorah Jeor Jon Josera Jonos
+			Karl Kyle Karlon
+			Larence Leobald Lonnel Lorick Lew Lucas Lucan Lucifer Lorgen Luton Ludd Lothor Lenyl Lark
+			Mallador Maron Marek Mark Marlin Martyn Mathell Maynard Medger
+			Merald Morick Mors Mycah Mohor Myles Mickon Malcolm Morgan
+			Namond Norren
+			Ondrew Olyvar Osmund Osric Owen
+			Patrek
+			Quenton
+			Ramsay Raynard Rickon Robard Robb Robin Roderick Rodrik Rickard
+			Rodwell Rogar Roger Roose Royland Rymund Royce Robett Ryon Ronnel
+			Steffon Sherrit
+			Thermund Tomard Theomore Torghen Torrhen Theon Thorren Theo Torren Tristifer Tristan
+			Varly Veron Vayon
+			Walton Wayn Wydron Wynton Wylis Warren Willam
+			Yoren
+		}
+		5 = { #simpler names
+			Tym Wyl Pate Shadd Skittrick Porther Quent Rawney Ned Barth
+			Jacks Dacks Nage Kedge Watt Finn Gage Ben Mikken Kear Harry
+			Bran Grenn Hamish Hoarfrost Murch Will Derek Conn
+			Billy Hal Crey
+		}
+	}
+	female_names = {
+		15 = {
+			Meera Jyana Shyra Arwyn Doreen Eyla Willow Raya Salissa Lyessa
+		}
+		80 = {
+			Aisling Alanna Alarra Albetta Alla Alybeth Alys Alysane Aregelle Arra Arrana Arsa Arya Asha Amarei Amabel Agnes Ashlynne
+			Barba Barbrey Bella Benessa Benya Berena Bessa Bethany Branda Branna Brenda
+			Clerissa Corenna Cylla Cyrelle Cassana Carellen
+			Dalla Dalonne Darra Darya Derissa Donella Donna
+			Eddara Elena Elsera Elyn Erena Ethel Emberlei Elyana
+			Faye Frella Frenelle Frenya Freyda Fryda Fryn
+			Garenna Garra Gilesa Gilliane Girane Grisella Gwyn Gwenys
+			Hella Hollys
+			Jarana Jessamyn Jeyne Jocelyn Joncella Jonelle Joranna Jorelle Joslena Jyana Jyzene
+			Kella Kerena Kyra
+			Leona Lunella Lyanna Lyanne Lyarra Lynara Lyra Lysa Lysara
+			Maege Malene Malerra Mara Margaret Mariah Marian Marna Marya Meghan Melara Melantha Meliana Melissa Merise Mina Mira Morah Morgana Morna Moryne Mycelle Mylarra Myranda
+			Nella Nera
+			Owella
+			Palla Petra
+			Robyn Ryessa Roslin
+			Sabetha Sansa Sara Sarra Serena Sybelle Sallei
+			Tyalla Tyrene
+			Vivian
+			Wylla Wynafryd
+		}
+		5 = {
+			Lya Danny Ros Tansy Beth Jez Zei Violet Maisie Bandy Dacey Lacey Nolla Mya Joy Aly
+		}
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		{ name = "mercenary_company_frog_spears" }
+		{ name = "mercenary_company_frog_spears" }
+		{ name = "mercenary_company_frog_spears" }
+		{ name = "mercenary_company_frog_spears" }
+		{ name = "mercenary_company_frog_spears" }
+	}
+}
+
+name_list_wolfswood_clansman = {
+
+	dynasty_names = {
+		{ "dynn_Wolfe" } { "dynn_Orland" } { "dynn_Algrey" } { "dynn_Thicketh" } { "dynn_Holham" }
+		{ "dynn_Thelly" } { "dynn_Ryegate" } { "dynn_Hooton" } { "dynn_Colwyn" } { "dynn_Loom" }
+		{ "dynn_Flinn" } { "dynn_Gorrey" } { "dynn_Icemark" } { "dynn_Farrows" } { "dynn_Linden" }
+		{ "dynn_Tymber" } { "dynn_Bordon" } { "dynn_Pall" } { "dynn_Peale" } { "dynn_Rossell" }
+		{ "dynn_Weale" } { "dynn_Kedge" } { "dynn_Sables" } { "dynn_Nobley" } { "dynn_Spring" }
+		{ "dynn_Barrows" } { "dynn_Hatcher" } { "dynn_Hallomere" } { "dynn_Graunce" } { "dynn_Ashem" }
+	}
+
+	male_names = {
+		15 = {
+			Elric Jeor Donnis Robett Gregor
+			Ethan Josera Calon Gared Galbart
+		}
+		70 = {
+			Aberdolf Alaric Alfyn Alton Alwin Arden Alyn
+			Arnolf Aron Arston Artos Asher Abel Albett Arthor
+			Balder Belden Belthasar Benfred Barthogan Benjen
+			Bennard Benton Berrican Blane Brandon Benjicot
+			Boras Bowen Bannen Bartimus Byam Beron Beric Beren
+			Cavan Cayn Cedric Cley Connold Corbett Cregan
+			Corin Cregard Chayle
+			Damon Dannel Darrion Daryn Daveth Denys Desmond Desmyn
+			Devyn Donnel Denner Dorren Domeric Donnor Dywen Duncan
+			Ebbert Ebben Eckard Edderion Edric Edrick Edwyle Edwyn Elbart
+			Elfram Ellard Elwood Erren Errold Eyron Edmund Enger Eddard
+			Farris Fulk Farlen
+			Garion Gariss Gaven Gerhard 
+			Gryff Garth Gladden Gerren Gawen
+			Hallis Harkon Harlon Harmond Harwin Halys Harrion Howland Hugo
+			Harwood Helman Henly Heward Hothor Hullen Horas Hother Hareth
+			Jaremy Jarett Jonnel Jonos Joron Jeren Jory Joseth Jorah Jojen Jon
+			Karl Kyle Karlon
+			Larence Leobald Lonnel Lorick Ludd Lew Lucas Lucan Lucifer Lorgen Lothor Luton
+			Mallador Maron Marek Mark Marlin Martyn Mathell Maynard Medger
+			Merald Morgan Morick Mors Mycah Mohor Myles Mickon Malcolm
+			Namond Norren
+			Ondrew Owen Olyvar Osmund Osric
+			Patrek
+			Quenton
+			Ramsay Raynard Rickon Robard Robb Robin Roderick Rodrik Rickard
+			Rodwell Rogar Roger Ronnel Roose Royland Rylen Rymund Royce Ryon
+			Steffon
+			Thermund Tomard Theomore Torren Torghen Torrhen Theon Theo Thorren
+			Varly Vayon Veron
+			Walton Wayn Wydron Wynton Wylis Warren Willam
+			Yoren
+		}
+		15 = { #simpler names
+			Tym Wyl Ned Pate Shadd Skittrick Porther Quent Rawney Hal
+			Jacks Dacks Nage Kedge Watt Lark Finn Gage Ben Mikken Barth Harry
+			Sherrit Bran Kear Grenn Hamish Hoarfrost Murch Will Billy Derek Conn
+		}
+	}
+	female_names = {
+		15 = {
+			Lyanna Lyra Dacey Lacey Maege Barba Branna Donella Alysane Jorelle Marna Gwyn
+		}
+		70 = {
+			Aisling Alanna Alarra Albetta Alla Alybeth Alys Aregelle Arra Arrana Arsa Arya Asha Ashlynne Amarei Amabel Agnes Arwyn
+			Barbrey Bella Benessa Benya Berena Bessa Bethany Branda Brenda
+			Clerissa Corenna Cylla Cyrelle Cassana Carellen
+			Dalla Dalonne Darra Darya Derissa Donna Doreen
+			Eddara Elena Elsera Elyn Erena Ethel Eyla Emberlei Elyana
+			Faye Frella Frenelle Frenya Freyda Fryda Fryn
+			Garenna Garra Gilesa Gilliane Girane Grisella Gwenys
+			Hella Hollys
+			Jarana Jessamyn Jeyne Jocelyn Joncella Jonelle Joranna Joslena Jyana Jyzene
+			Kella Kerena Kyra
+			Leona Lunella Lyanne Lyarra Lyessa Lynara Lysa Lysara
+			Malene Malerra Mara Margaret Mariah Marian Marya Meghan Melara Melantha Meliana Melissa Merise Mina Mira Morah Morgana Morna Moryne Mycelle Mylarra Myranda
+			Nella Nera
+			Owella
+			Palla Petra
+			Raya Robyn Ryessa Roslin
+			Sabetha Salissa Sansa Sara Sarra Serena Shyra Sybelle Sallei
+			Tyalla Tyrene
+			Vivian
+			Wylla Wynafryd
+		}
+		15 = {
+			Lya Danny Ros Tansy Beth Jez Zei Willow Violet Maisie Bandy Nolla Mya Joy Aly
+		}
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+name_list_hill_clansman = {
+
+	dynasty_names = {
+		{ "dynn_Wolfe" } { "dynn_Orland" } { "dynn_Algrey" } { "dynn_Thicketh" } { "dynn_Holham" }
+		{ "dynn_Thelly" } { "dynn_Ryegate" } { "dynn_Hooton" } { "dynn_Colwyn" } { "dynn_Loom" }
+		{ "dynn_Flinn" } { "dynn_Gorrey" } { "dynn_Icemark" } { "dynn_Farrows" } { "dynn_Linden" }
+		{ "dynn_Tymber" } { "dynn_Bordon" } { "dynn_Pall" } { "dynn_Peale" } { "dynn_Rossell" }
+		{ "dynn_Weale" } { "dynn_Kedge" } { "dynn_Sables" } { "dynn_Nobley" } { "dynn_Spring" }
+		{ "dynn_Barrows" } { "dynn_Hatcher" } { "dynn_Hallomere" } { "dynn_Graunce" } { "dynn_Ashem" }
+	}
+
+	male_names = {
+		15 = {
+			Denner Brandon Jon Ned Hugo Kear Owen Duncan Malcolm Theo Torren Lothor
+			Morgan Norren Artos Donnel Ronnel
+		}
+		70 = {
+			Aberdolf Alaric Alfyn Alton Alwin Arden Alyn
+			Arnolf Aron Arston Asher Abel Albett Arthor
+			Balder Belden Belthasar Benfred Barthogan Benjen
+			Bennard Benton Blane Beren Benjicot Berrican
+			Boras Bowen Bannen Bartimus Byam Beron Beric
+			Cavan Cayn Cedric Connold Corbett Cregan
+			Corin Chayle Calon Cley Cregard
+			Damon Dannel Darrion Daryn Daveth Denys Desmond Desmyn
+			Devyn Dorren Domeric Donnor Donnis Dywen
+			Ebbert Ebben Eckard Edderion Edric Edrick Edwyle Edwyn Elbart Ethan
+			Elfram Ellard Elwood Erren Errold Eyron Edmund Enger Eddard Elric
+			Farris Fulk Farlen
+			Garion Gariss Gerhard Gregor Gared Gaven
+			Gryff Garth Gladden Gerren Gawen Galbart
+			Hallis Harkon Harlon Harmond Harwin Halys Harrion Hareth
+			Harwood Helman Henly Heward Hothor Hullen Horas Hother Howland
+			Jaremy Jarett Jonnel Jonos Joron Jeren Jory Joseth Jorah Josera Jeor Jojen
+			Karl Kyle Karlon
+			Larence Leobald Lonnel Lorick Lew Lucas Lucan Lucifer Lorgen Luton Ludd
+			Mallador Maron Marek Mark Marlin Martyn Mathell Maynard Medger
+			Merald Morick Mors Mycah Mohor Myles Mickon
+			Namond
+			Ondrew Olyvar Osmund Osric
+			Patrek
+			Quenton
+			Ramsay Raynard Rickon Robard Robb Robin Roderick Rodrik Rickard
+			Rodwell Rogar Roger Roose Royland Rylen Rymund Royce Robett Ryon
+			Steffon
+			Thermund Tomard Theomore Torghen Torrhen Theon Thorren
+			Varly Vayon Veron
+			Walton Wayn Wydron Wynton Wylis Warren Willam
+			Yoren
+		}
+		15 = { #simpler names
+			Tym Wyl Pate Shadd Skittrick Porther Quent Rawney Hal Barth
+			Jacks Dacks Nage Kedge Watt Lark Finn Gage Ben Mikken Harry
+			Sherrit Bran Grenn Hamish Hoarfrost Murch Will Derek Conn Billy
+		}
+	}
+	female_names = {
+		15 = {
+			Danny Aisling Robyn Aly Frenya Marna Lya Donella Sarra Brenda Arya Gwenys Bandy Tansy
+		}
+		70 = {
+			Alanna Alarra Albetta Alla Alybeth Alys Alysane Aregelle Arra Arrana Arsa Arya Asha Ashlynne Amarei Amabel Agnes Arwyn
+			Barba Barbrey Bella Benessa Benya Berena Bessa Bethany Branda Branna
+			Clerissa Corenna Cylla Cyrelle Cassana Carellen
+			Dalla Dalonne Darra Darya Derissa Donna Doreen
+			Eddara Elena Elsera Elyn Erena Ethel Eyla Emberlei Elyana
+			Faye Frella Frenelle Freyda Fryda Fryn
+			Garenna Garra Gilesa Gilliane Girane Grisella Gwyn
+			Hella Hollys
+			Jarana Jessamyn Jeyne Jocelyn Joncella Jonelle Joranna Jorelle Joslena Jyana Jyzene
+			Kella Kerena Kyra
+			Leona Lunella Lyanna Lyanne Lyessa Lynara Lyra Lysa Lysara
+			Maege Malene Malerra Mara Margaret Mariah Marian Marya Meghan Melara Melantha Meliana Melissa Merise Mina Mira Morah Morgana Morna Moryne Mycelle Mylarra Myranda
+			Nella Nera
+			Owella
+			Palla Petra
+			Raya Ryessa Roslin
+			Sabetha Salissa Sansa Sara Serena Shyra Sybelle Sallei
+			Tyalla Tyrene
+			Vivian
+			Wylla Wynafryd
+		}
+		15 = {
+			Ros Beth Jez Zei Willow Violet Maisie Dacey Lacey Nolla Mya Joy
+		}
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+### WILDLINGS
+name_list_wildling = {
+
+	dynasty_names = {
+		{ "dynn_Boarshaper" } { "dynn_Bridgeshield" } { "dynn_Skullarm" } { "dynn_Sealcut" } { "dynn_Crowbane" }
+		{ "dynn_Freeskull" } { "dynn_Egelbone" } { "dynn_Shieldblood" } { "dynn_Varabane" } { "dynn_Sternhell" }
+		{ "dynn_Spearwarrior" } { "dynn_Skywillow" } { "dynn_Manwatcher" } { "dynn_Redtree" } { "dynn_Bloodmember" }
+		{ "dynn_Weirbar" } { "dynn_Wolfkiller" } { "dynn_Songmask" } { "dynn_Highwolf" } { "dynn_Torbow" }
+		{ "dynn_Woodsmane" } { "dynn_Goreshield" } { "dynn_Warriorkin" } { "dynn_Woodskinner" } { "dynn_Songwarrior" }
+		{ "dynn_Burningboar" } { "dynn_Wolfmember" } { "dynn_Starwhisper" } { "dynn_Shadeface" } { "dynn_Sternsun" }
+		{ "dynn_Oldhorn" } { "dynn_Greenchief" } { "dynn_Redbone" } { "dynn_Sealtamer" } { "dynn_Pikehead" }
+		{ "dynn_Whitekiller" } { "dynn_Axehunt" } { "dynn_Bloodconn" } { "dynn_Skytree" } { "dynn_Boarhunter" }
+		{ "dynn_Icerage" } { "dynn_Heartcut" } { "dynn_Blackgaze" } { "dynn_Marawatcher" } { "dynn_Hallowclaw" }
+		{ "dynn_Weirspear" } { "dynn_Thannkin" } { "dynn_Lockmask" } { "dynn_Flintwood" } { "dynn_Drynmane" }
+	}
+
+	male_names = {
+		90 = {
+			Alfyn Arson Arthor Alder
+			Bael Borroq Brogg Bodger Billy Bran Ben
+			Craster Calor Conn Cley Cayn Calor
+			Devyn Doss Dan Del Dormund Dryn Denner Donnel
+			Ethan Eyron Eldiss
+			Farlen
+			Gavin Gendel Gerrick Gorne Gorm Grigg
+			Halleck Harle Howd Haggon Hugo Hubb
+			Joramun Jarl Jax Joss
+			Kyleg Kear Koss Kem
+			Lenyl Ludd Lothor Lorgen Lommy Lorren Lew
+			Mance Morgan Marek Maron Murch Mord
+			Norren Nage
+			Orell Owen
+			Quenn
+			Quort
+			Raymun Ryk Ren Robin Raff
+			Soren Sylas Stygg
+			Tormund Toregg Torwynd Torghen Theo
+			Varamyr Varly
+			Wex Watt Willit Wayn
+			Ygon Yoren
+		}
+		10 = {
+			Bump Lump Clump Chunk Butts Leathers Mittens
+			Pelter Lodger Scarf Chisel Tinders Antlers
+			Herring Kettle Dodger Dog Patch Scraps Rags Hump
+			Tuffs Bellow Crumbler Pockets Cutter Runner
+			Cotter Lurk Drummer Hopper Duster Otter
+			Stoat Bear Wolf Hart Biter Skinner
+		}
+	}
+	female_names = {
+		90 = {
+			Arra
+			Briar Bandy Bell Briony
+			Cress
+			Dalla Dyah Danny Daisy
+			Errok Elma
+			Ferny Frenya Fira
+			Gilly Grisella
+			Harma Hali Holly Heather Hazel
+			Ivy
+			Lily Lavender
+			Morna Maris Meha Munda Myrtle Marigold Mallow
+			Nettles
+			Osha
+			Poppy Pansy
+			Ragwyle Rowan Ros
+			Sage Sharna
+			Thistle Tansy Tess
+			Val
+			Willow
+			Ygritte Yarrow
+		}
+		10 = {
+			Mole Squirrel Hare Honey Venom Marmot Doe Sparrow
+			Shrike Moth Bumble Cat Mink Fox Fowl Rabbit Fawn
+			Silk Thorns Feathers Fleece Catch Turnip Weasel
+		}
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+name_list_thenn = {
+
+	dynasty_names = {
+		{ "dynn_Rhenn" } { "dynn_Stynn" } { "dynn_Vartt" } { "dynn_Celrnn" } { "dynn_Mreinn" }
+		{ "dynn_Riird" } { "dynn_Tiind" } { "dynn_Siild" } { "dynn_Eemr" } { "dynn_Aarlk" }
+		{ "dynn_Rhenn" } { "dynn_Stynn" } { "dynn_Vartt" } { "dynn_Celrnn" } { "dynn_Mreinn" }
+		{ "dynn_Riird" } { "dynn_Tiind" } { "dynn_Siild" } { "dynn_Eemr" } { "dynn_Aarlk" }
+	}
+
+	male_names = {
+		Abelorn Arnolor Arrek Aberdolf Alerrik Alfyn Alton Alwen Arnolf Aron Artos Adbrek Agil Aleyk Aragrath
+		Ardomor Asher Adrak Aggar Alvyn Ambrode Andarrik Artag Arthor Bael Borroq Beor Bagyr Bormyr Botolf
+		Byrk Braesi Botolor Balder Barthogan Belden Belthasar Benfred Beron Beregan Blayn Boras Bowen Berrandon
+		Balder Brendel Baur Bhagga Bhurt Bodger Bryn Brogg Brolor Brok Beron Boremun Craster Daggan Dhan Dimett
+		Dumkal Dolf Doss Dralme Dryn Dywen Dagmar Dagor Donnor Drennan Dunstan Dykk Dannel Darrek Darrhen Daveth
+		Dosmun Domarrik Donnis Donnor Davorn Drald Eykhard Elbart Elfram Elhard Errhen Errold
+		Eython Eyron Eyk Erne Errok Eyron Eyvun Elderrik Farlen Farris Fulk Fergon Fradwyr Fralegg Galbart Gareth
+		Gariss Gaven Gerhard Grygor Gryff Galon Garmon Gelmar Goren Gormun Gorold Gran Gunnar Gylbert Gyles Ginyr
+		Galt Gunthor Gurn Gumor Ghael Gatrel Ghilbag Gareth Godferrik Gorm Grenn Grigg Gaven Gendel Gerrek Grunnor
+		Gorne Gils Gamlon Gerren Golmer Gestel Haerag Hallek Hake Harl Harlan Harlon Harmun Harrald Harron Harwyn
+		Herrok Horgan Hrothgar Haggon Harkul Hrankar Hadd Hafrim Hamming Hrogos Hoden Hall Haggon Holger Howd Hrodog
+		Hurras Hybuk Halder Hallis Harreth Harmen Hother Harkon Harlon Harwen Helmar Jarreth
+		Jeor Jonos Jorah Joron Joseth Harl Harrald Askol Arnor Alfarn Arn Alvi Anun Aurek Jagga Jaggot Janog Jolf
+		Jeynd Jolk Jagni Jorakul Joraval Joramun Jarl Eldiss Eldred Emmen Andahar Jaroth Jeor Jojen Jorik Jormyn
+		Joron Josera Kadwyl Kerrek Kragorn Kalon Kavan Kayn Kley Konnold Korbett Kregan Kreghard Kalor Cheyk Chegga Konn
+		Koratt Krawn Krittark Kromm Karlon Kedge Karlon Kodran Kormak Kell Kemmett Kenned Kored Korrhen Kullon Kvort
+		Kragorn Kyleg Kimett Krammag Krellek Keld Kolf Kret Kurmor Laros Lorek Lenn Loboda Lodos Lorrhen Lonn Lam
+		Maddorn Maern Milgen Marek Mallador Mathell Maynhard Medger Merald Morgan Mors Myken Manfryd Maron Meldred
+		Melderrik Mellek Modolor Manni Mors Mak Meldun Moreyk Nammen Norrhen Naregg Naroda Norfryd Norjen Norne Nute
+		Orell Orell Orryn Owen Ornmyr Orren Orm Ottar Osarrik Ewon Othgar Ravos Rodmar Roderrik Roggon Rognar Roryn
+		Rurrik Rus Rymolf Raymun Raynhard Rykhard Robhard Roderrik Rogar Rylorn Rettun Rigg Rade Rherd Ravorn Ruskyr
+		Ryk Rykor Rolomyr Shagga Stamm Stydar Sygol Staun Sherrit Sigfryd Sigmun Sygerrik Sygren Skyte Steffar Stygg
+		Sylas Symmen Sigorn Skagni Skar Skarnyr Skarolf Skaval Soren Steig Stek Stylner Stuve Styr Skyrnor Svynar
+		Stavorn Stiv Tarl Theon Theron Feor Thergon Drystefer Dryston Tymor Theon Thermun Tomhard Torrhen Toregg
+		Tynog Traggan Traggoth Thael Tym Ulf Ymar Uradrag Ulgrim Uller Hurek Hurragon Hurrathon Hurzen Valmun Valorn
+		Varamyr Vayon Veron Vurald Dunor Thrain Tirenyr Throst Tokyr Fyrbun Bermot Waldon Werlag Wyl Wulfgar Yon Wallen
+		Wendel Wayn Wylam Ygon
+	}
+	female_names = {
+		Agara Araela Athala Agaja Amahna Arlna Abni Agmunra Arrsa Arrana Asarra Ana Asa Ayssi Arrika
+		Alanna Alarra Arra Arrana Arsa Arya Asha Alla Alrya Arwyn Asha Barba Barbrey Bella
+		Benessa Benya Berena Bessa Bethana Bronda Barba Benya Bhega
+		Bailorna Beinerra Bhurta Barrya Barrsa Barrana Brella Brear Chella Kortah Kromma Cholvi
+		Korah Kegna Dalla Dalonne Darya Derissa Dili Dete Dags Disa Eba Elenei
+		Elserra Elyn Erena Ethel Eyla Errsa Errya Esgred Estred Falla Frida Faye Frella Frenelle
+		Frenya Freyda Fryda Fryn Ferny Frenya Frynne Fanna Fryda Garenna Garra Gilesa Gilliane Girane
+		Grisella Gwyn Gerda Gerrika Ghaela Gremma Gella Gerta Gretchel Grisella Gudrun Gwin Gwynesse
+		Gysella Gnila Gneya Ghulmi Gharle Harma Harra Helya Hakye Hagneh Hina Haiga Honna Harra Hegga
+		Helya Herrika Hilda Inga Ingra Jarana Jessamyn Jeyne Jocelyn Joncella Jonelle Joranna Jorelle
+		Joslena Jheka Jiyr Jonna Johssi Jhena Jonna Jonnela Jorelle Jyanna Katla Keryn Katrina
+		Kella Kerena Kyra Kella Kera Kerena Kyra Korenna Larrya Larrana Larransa Lyssa Liya Lyna Latyu
+		Lunella Lyanna Lyarra Lyessa Lynara Lyra Maege Malene Meghan Melarra Melessa Merrise Mina
+		Myrra Morrah Morgana Morryne Myrrenda Maeva Malora Margot Megga Mera Meredyth Morissa Morna
+		Marei Moreg Morra Munda Mhella Metu Meri Millga Meha Narya Nella Nera Nella Nerra Nessa
+		Oena Oaha Orenna Orsa Orra Oshara Palla Perra Ranni Rhiannyn Rhonda Riga Rina Roslin Ryella Ransa
+		Raly Rakya Ryka Ryloka Roka Raya Raya Robyn Ryessa Rokah Riyga Regwal Sabetha Salissa Shyra Sallei
+		Shaella Shera Shierle Sif Siglind Siglynd Sigrid Snela Sona Sarra Skali Skyka Skiyre Siyri Sygea
+		Skagleka Syga Sygarra Syganna Sygaly Skeyga Syri Soyni Syansa Talla Tanda Toraka Tekkeda Tarya Tansa
+		Theyna Ulfara Ulfhilla Unella Hurriga Vykunna Varrya Val Varka Wylla Wynafryd Yara Ynys Ygritte
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	patronym_prefix_male = "dynnpat_pre_sonof"
+	patronym_suffix_male = "dynnpat_post_sonof_zh"
+	patronym_prefix_female = "dynnpat_pre_daughterof"
+	patronym_suffix_female = "dynnpat_post_daughterof_zh"
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+name_list_frozen_shore = {
+
+	dynasty_names = {
+		{ "dynn_Ibarg" } { "dynn_Latag" } { "dynn_Frebgi" } { "dynn_Mubroch" } { "dynn_Slumnir" }
+		{ "dynn_Mibgan" } { "dynn_Nokrus" }
+		{ "dynn_Variok" } { "dynn_Drufum" } { "dynn_Trasak" } { "dynn_Jalog" } { "dynn_Redsog" }
+		{ "dynn_Oskus" } { "dynn_Lemgar" } { "dynn_Crewdyr" } { "dynn_Hukal" } { "dynn_Vaom" }
+		{ "dynn_Gladwor" } { "dynn_Ukor" } { "dynn_Tringi" } { "dynn_Varok" }
+	}
+
+	male_names = {
+		Great_Walrus
+		Little_Fox Flying_Fox Red_Fox Black_Fox White_Fox Bitter_Fox Hungry_Fox Running_Fox Small_Fox Big_Fox Cunning_Fox Swift_Fox Young_Fox Old_Fox Cold_Fox Brave_Fox Crazy_Fox
+		Fox_Eyes Fox_Feet Fox_Face Fox_Nose Laughing_Fox Dark_Fox Dead_Fox Great_Fox Lying_Fox
+		Dark_Hare Blue_Hare Swift_Hare Red_Hare Black_Hare White_Hare Scared_Hare Little_Hare Young_Hare Old_Hare Jumping_Hare Gray_Hare Snow_Hare Mischief_Hare Horny_Hare Nipping_Hare
+		Hare_Brain Harefoot Harecock Hare_Ears Hard_Hare Great_Hare
+		Big_Bear Blue_Bear Red_Bear Black_Bear White_Bear Hungry_Bear Old_Bear Young_Bear Fat_Bear Small_Bear Brave_Bear Raging_Bear Broken_Bear Running_Bear Bear_Claw Bear_Fang
+		Blue_Bear Bitter_Bear Bear_Belly Bear_Ass Bear_Backed Cold_Bear Death_Bear Hairy_Bear Laughing_Bear Bright_Bear Great_Bear Crazy_Bear
+		Little_Deer Rain_Deer Red_Deer Black_Deer White_Deer Small_Deer Cunning_Deer Young_Deer Startled_Deer Raging_Deer Quick_Deer Swift_Deer Leaping_Deer Weeping_Deer
+		Dancing_Deer Singing_Deer Blue_Deer Fear_Deer Deer_Hunter	Dead_Deer Great_Deer
+		Fat_Whale Old_Whale Black_Whale White_Whale Red_Whale Cold_Whale Deep_Whale Wise_Whale Wet_Whale Whale_Tooth Slow_Whale Laughing_Whale Whale_Eater Whale_Hunter Great_Whale
+		Soaring_Eagle Old_Eagle Little_Eagle Young_Eagle Flying_Eagle Hunting_Eagle Red_Eagle Eagle_Talon Eagle_Eyes Ice_Eagle Relentless_Eagle Swooping_Eagle Crying_Eagle Lonely_Eagle
+		Proud_Eagle Diving_Eagle Falling_Eagle Laughing_Eagle Great_Eagle
+		Stalking_Cat Pouncing_Cat Cat_Clawed Cat_Eyes Bitter_Cat Running_Cat Cunning_Cat Young_Cat Old_Cat Brave_Cat Crazy_Cat Blue_Cat Yellow_Cat Red_Cat Black_Cat Leaping_Cat Savage_Cat
+		Prowling_Cat Snow_Cat Tree_Cat Ice_Cat Crouching_Cat Bad_Cat Great_Cat Long_Cat
+		Hungry_Shark White_Shark Red_Shark Blue_Shark Young_Shark Cold_Shark Grinning_Shark Shark_Tooth Shark_Face Shark_Eater Shark_Rider Shark_Hunter Ice_Shark Death_Shark Shark_Eyes Great_Shark
+		Soaring_Hawk Old_Hawk Little_Hawk Young_Hawk Flying_Hawk Hunting_Hawk Red_Hawk Hawk_Taloned Hawk_Eyes Ice_Hawk Hungry_Hawk Swooping_Hawk Proud_Hawk Falling_Hawk Sharp_Hawk Fierce_Hawk
+		Hawk_Eater Hawk_Hunter Brave_Hawk Hard_Hawk Lone_Hawk Bad_Hawk Great_Hawk Long_Hawk Crazy_Hawk
+		White_Gull Blue_Gull Red_Gull Yellow_Gull Snow_Gull Ice_Gull Wet_Gull Crying_Gull Cawing_Gull Gull_Hunter Gull_Eyes Hungry_Gull Searching_Gull Flying_Gull Laughing_Gull Gull_Eater	Great_Gull	
+		Dark_Squirrel Hairy_Squirrel Squirrel_Hunter Squirrel_Eater Snow_Squirrel Ice_Squirrel Cunning_Squirrel Hiding_Squirrel Blue_Squirrel White_Squirrel Laughing_Squirel Flying_Squirrel Great_Squirrel
+		Yellow_Squirrel Red_Squirrel Squirrley_Squirrel Squirrel_Eyes Searching_Squirrel Long_Squirrel Lying_Squirrel
+		Coiled_Snake Snake_Eyes Hungry_Snake Sneaking_Snake Snake_Eater Red_Snake White_Snake Blue_Snake Yellow_Snake Black_Snake Dancing_Snake Hissing_Snake Snake_Spine Snake_Eater 
+		Snow_Snake Ice_Snake Watching_Snake Snake_Belly Vile_Snake Young_Snake Old_Snake Great_Snake Long_Snake Lying_Snake
+		Slippery_Eel Blue_Eel Ice_Eel Snow_Eel Eel_Eater Swimming_Eel Red_Eel White_Eel Black_Eel Striking_Eel Hidden_Eel Slimy_Eel Eel_Fingers Eel_Face Eel_Toothed Great_Eel
+		Goat_Jumper Jumping_Goat Stubborn_Goat Stupid_Goat Goat_Eater Stumbling_Goat Sturdy_Goat Mountain_Goat Snow_Goat Ice_Goat Goat_Lover  Proud_Goat Horny_Goat Drunk_Goat
+		Old_Goat Young_Goat Small_Goat Big_Goat Goat_Stink Great_Goat Crazy_Goat Lying_Goat
+		Old_Mammoth Big_Mammoth Young_Mammoth Small_Mammoth Red_Mammoth Blue_Mammoth White_Mammoth Black_Mammoth Yellow_Mammoth Snow_Mammoth Ice_Mammoth Lonely_Mammoth Proud_Mammoth Fierce_Mammoth
+		Brave_Mammoth Charging_Mammoth Thunder_Mammoth Death_Mammoth Hidden_Mammoth Raging_Mammoth Laughing_Mammoth Mountain_Mammoth Mammoth_Hunter Mammoth_Eater Mammoth_Stench Great_Mammoth
+		Little_Shadowcat Hungry_Shadowcat Stalking_Shadowcat Young_Shadowcat Old_Shadowcat Raging_Shadowcat Leaping_Shadowcat Red_Shadowcat Black_Shadowcat Blue_Shadowcat White_Shadowcat Proud_Shadowcat
+		Fierce_Shadowcat Ice_Shadowcat Shadowcat_Hunter Shadowcat_Eyes Shadowcat_Shadow Shadowcat_Fang Lone_Shadowcat Running_Shadowcat Shadowcat_Eater Great_Shadowcat
+		Old_Wolf Young_Wolf Little_Wolf Big_Wolf Running_Wolf Blue_Wolf Gray_Wolf Black_Wolf Red_Wolf Yellow_Wolf Ice_Wolf Snow_Wolf Fierce_Wolf Brave_Wolf Loyal_Wolf Wolf_Eyes Wolf_Ears
+		Wolf_Nose Wolf_Eater Wolf_Hunter Leaping_Wolf Stalking_Wolf Hunting_Wolf Lone_Wolf Proud_Wolf Swift_Wolf Wolf_Claw Death_Wolf Wolf_Fang Savage_Wolf Howling_Wolf Bad_Wolf Great_Wolf
+		Old_Dog Young_Dog Little_Dog Big_Dog Running_Dog Blue_Dog Gray_Dog Black_Dog Red_Dog Yellow_Dog Ice_Dog Snow_Dog Fierce_Dog Brave_Dog Loyal_Dog Dog_Eyes Dog_Ears Dog_Nose Great_Dog
+		Dog_Eater Dog_Hunter Leaping_Dog Hunting_Dog Lone_Dog Proud_Dog Swift_Dog Howling_Dog Death_Dog Sled_Dog Humping_Dog Laughing_Dog Dead_Dog Bad_Dog Good_Dog Crazy_Dog Lying_Dog
+		Old_Boar Young_Boar Little_Boar Big_Boar Charging_Boar Blue_Boar Gray_Boar Black_Boar Red_Boar Yellow_Boar Ice_Boar Snow_Boar Brave_Boar Boar_Hide Angry_Boar Savage_Boar Great_Boar
+		Boar_Hunter Boar_Eater Laughing_Boar Bad_Boar Crazy_Boar Ragged_Boar Mean_Boar Ragged_Dog Mean_Dog Ragged_Wolf Mean_Wolf Woeful_Wolf
+		Old_Elk Young_Elk Little_Elk Big_Elk Wise_Elk Lone_Elk Proud_Elk Blue_Elk Charging_Elk Gray_Elk Black_Elk Red_Elk Yellow_Elk Ice_Elk Snow_Elk Noble_Elk Horned_Elk Elk_Eater Great_Elk
+		Stalking_Weasel Weasel_Eyes Shifty_Weasel Cunning_Weasel Young_Weasel Cowardly_Weasel Weasel_Eater Old_Weasel Blue_Weasel Red_Weasel Gray_Weasel White_Weasel Yellow_Weasel Ice_Weasel
+		Snow_Weasel Laughing_Weasel Great_Weasel Long_Weasel Lying_Weasel
+		Old_Owl Young_Owl Little_Owl Wise_Owl Lone_Owl Proud_Owl Night_Owl Flying_Owl Swooping_Owl Owl_Eyes Hooting_Owl Blue_Owl Black_Owl Gray_Owl White_Owl Red_Owl Ice_Owl Snow_Owl
+		Knowing_Owl Watching_Owl Seeing_Owl Dark_Owl Great_Owl Crazy_Owl
+		Old_Aurochs Young_Aurochs Little_Aurochs Big_Aurochs Charging_Aurochs Great_Aurochs Proud_Aurochs Fierce_Aurochs Brave_Aurochs Angry_Aurochs Blue_Aurochs Gray_Aurochs Red_Aurochs
+		Black_Aurochs White_Aurochs Ice_Aurochs Snow_Aurochs Lonely_Aurochs Laughing_Aurochs Green_Aurochs
+		Slippery_Otter Old_Otter Young_Otter Little_Otter Darting_Otter Sneaking_Otter Swimming_Otter Laughing_Otter Otter_Eater Great_Otter Crazy_Otter
+		Fierce_Wolverine Angry_Wolverine Hungry_Wolverine Death_Wolverine Charging_Wolverine Old_Wolverine Young_Wolverine Little_Wolverine Blue_Wolverine Red_Wolverine White_Wolverine Yellow_Wolverine
+		Black_Wolverine Night_Wolverine Laughing_Wolverine Snow_Wolverine Ice_Wolverine Wolverine_Teeth Wolverine_Claws Wolverine_Eyes Wolverine_Eater Great_Wolverine 
+		Old_Walrus Young_Walrus Wise_Walrus Big_Walrus Little_Walrus Charging_Walrus Fat_Walrus Rolling_Walrus Thick_Walrus Laughing_Walrus Proud_Walrus Blue_Walrus White_Walrus
+		Black_Walrus Gray_Walrus Ice_Walrus Snow_Walrus Lonely_Walrus Dancing_Walrus Crazy_Walrus	Lying_Walrus Hungry_Walrus Raging_Walrus Woeful_Walrus Ragged_Walrus Mean_Walrus
+	}
+	female_names = {
+		Little_Fox Flying_Fox Red_Fox Black_Fox White_Fox Leaping_Fox Dancing_Fox Running_Fox Small_Fox Pretty_Fox Cunning_Fox Swift_Fox Young_Fox Singing_Fox Cold_Fox Crazy_Fox
+		Fox_Eyes Fox_Feet Fox_Face Fox_Nose Fox_Tailed Laughing_Fox Fierce_Fox Darting_Fox Precious_Fox Playful_Fox Lying_Fox
+		Dark_Rabbit Blue_Rabbit Swift_Rabbit Red_Rabbit Black_Rabbit White_Rabbit Scared_Rabbit Little_Rabbit Young_Rabbit Smart_Rabbit Jumping_Rabbit Gray_Hare Snow_Hare Mischief_Hare Horny_Hare 
+		Nipping_Rabbit Rabid_Rabbit Rabbit_Feet Rabbit_Ears Rabbit_Nose Rabbit_Tail Darting_Rabbit Easy_Rabbit Precious_Rabbit Playful_Rabbit Crazy_Rabbit Lying_Rabbit
+		Little_Fawn Rainy_Fawn Red_Fawn Black_Fawn White_Fawn Small_Fawn Pretty_Fawn Young_Fawn Lonely_Fawn Lovely_Fawn Proud_Fawn Swift_Fawn Leaping_Fawn Weeping_Fawn Prancing_Fawn
+		Dancing_Fawn Singing_Fawn Dainty_Fawn Blue_Fawn Fierce_Fawn Precious_Fawn Playful_Fawn Bad_Fawn Good_Fawn Crazy_Fawn Lying_Fawn
+		Little_Bird Singing_Bird Flying_Bird Snow_Bird Black_Bird Blue_Bird Yellow_Bird Lost_Bird Lonely_Bird Young_Bird Small_Bird Darting_Bird Pretty_Bird Brown_Bird	Dainty_Bird Bird_Eater
+		Flying_Bird Falling_Bird Laughing_Bird Bright_Bird Precious_Bird Dark_Bird Bad_Bird Good_Bird Crazy_Bird Lying_Bird
+		Stalking_Cat Pouncing_Cat Cat_Clawed Cat_Eyes Bitter_Cat Running_Cat Cunning_Cat Young_Cat Old_Cat Brave_Cat Crazy_Cat Blue_Cat Yellow_Cat Red_Cat Black_Cat Leaping_Cat Savage_Cat
+		Prowling_Cat Snow_Cat Tree_Cat Ice_Cat Precious_Cat Bad_Cat Crazy_Cat Lying_Cat
+		Stalking_Kitten Pouncing_Kitten Kitten_Clawed Kitten_Eyes Dancing_Kitten Swift_Kitten Hiding_Kitten Crying_Kitten Pretty_Kitten Brave_Kitten Crazy_Kitten Blue_Kitten White_Kitten Red_Kitten 
+		Black_Kitten Leaping_Kitten Laughing_Kitten Pleading_Kitten Ice_Kitten Snow_Kitten Precious_Kitten Dark_Kitten Playful_Kitten
+		White_Gull Blue_Gull Red_Gull Yellow_Gull Snow_Gull Ice_Gull Wet_Gull Crying_Gull Cawing_Gull Darting_Gull Gull_Eyes Hungry_Gull Searching_Gull Flying_Gull Laughing_Gull Pretty_Gull
+		Soaring_Falcon Pretty_Falcon Little_Falcon Young_Falcon Flying_Falon Red_Falcon Falcon_Taloned Falcon_Nose Ice_Falon Dancing_Falon Swooping_Falcon Proud_Falcon Falling_Falcon Sharp_Falon 
+		Fierce_Falcon Falcon_Eater Falcon_Hunter Brave_Falcon Precious_Falcon
+		Dark_Squirrel Hairy_Squirrel Squirrel_Hunter Squirrel_Eater Snow_Squirrel Ice_Squirrel Cunning_Squirrel Hiding_Squirrel Blue_Squirrel White_Squirrel Laughing_Squirel Flying_Squirrel 
+		Yellow_Squirrel Red_Squirrel Squirrley_Squirrel Squirrel_Eyes Pretty_Squirrel Searching_Squirrel Playful_Squirrel Crazy_Squirrel Lying_Squirrel
+		Coiled_Snake Snake_Eyes Hungry_Snake Sneaking_Snake Snake_Eater Red_Snake White_Snake Blue_Snake Yellow_Snake Black_Snake Dancing_Snake Hissing_Snake Snake_Spine Snake_Eater 
+		Snow_Snake Ice_Snake Watching_Snake Snake_Belly Sinuous_Snake Writhing_Snake Vile_Snake Bad_Snake Crazy_Snake Lying_Snake
+		Slippery_Eel Blue_Eel Ice_Eel Snow_Eel Eel_Eater Sinuous_Eel Red_Eel White_Eel Black_Eel Striking_Eel Hidden_Eel Writhing_Eel Eel_Fingers Eel_Face Eel_Sucker Eel_Toothed
+		Young_Mink Slippery_Mink Sinuous_Mink Writhing_Mink Brave_Mink Little_Mink Dancing_Mink Pretty_Mink Mink_Eyes Mink_Nose Mischevious_Mink Mink_Eater Mink_Hunter Ice_Mink Snow_Mink
+		Red_Mink Blue_Mink White_Mink Black_Mink Hidden_Mink Cunning_Mink Crying_Mink Laughing_Mink Yawning_Mink Dainty_Mink Elegant_Mink Precious_Mink
+		Slippery_Seal Darting_Seal Laughing_Steel Dancing_Seal Sleek_Seal Swimming_Seal Blue_Seal White_Seal Red_Seal Yellow_Seal Black_Seal Young_Seal Little_Seal Small_Seal Dainty_Seal
+		Seal_Eater Seal_Hunter Precious_Seal Hidden_Seal Seal_Belly Dark_Seal Bad_Seal Crazy_Seal
+		Little_Shadowcat Hungry_Shadowcat Stalking_Shadowcat Young_Shadowcat Old_Shadowcat Raging_Shadowcat Leaping_Shadowcat Red_Shadowcat Black_Shadowcat Blue_Shadowcat White_Shadowcat Proud_Shadowcat
+		Fierce_Shadowcat Ice_Shadowcat Shadowcat_Eyes Shadowcat_Shadow Shadowcat_Fang Lone_Shadowcat Running_Shadowcat Pretty_Shadowcat Precious_Shadowcat
+		Pretty_Wolf Young_Wolf Little_Wolf Prancing_Wolf Darting_Wolf Blue_Wolf Gray_Wolf Black_Wolf Red_Wolf Yellow_Wolf Ice_Wolf Snow_Wolf Fierce_Wolf Brave_Wolf Loyal_Wolf Wolf_Eyes Wolf_Ears
+		Wolf_Nose Precious_Wolf Leaping_Wolf Dancing_Wolf Dainty_Wolf Playful_Wolf Wolf_Claw Wolf_Fang Howling_Wolf Crazy_Wolf Lying_Wolf
+		Pretty_Puppy Young_Puppy Little_Puppy Running_Puppy Gray_Puppy Snow_Puppy Loyal_Puppy Puppy_Eyes 
+		Puppy_Ears Puppy_Eater Precious_Puppy Crying_Puppy
+		Young_Owl Little_Owl Wise_Owl Lone_Owl Proud_Owl Night_Owl Flying_Owl Swooping_Owl Owl_Eyes Hooting_Owl Blue_Owl Black_Owl Gray_Owl White_Owl Red_Owl Ice_Owl Snow_Owl
+		Knowing_Owl Watching_Owl Seeing_Owl Dark_Owl
+		Slippery_Otter Pretty_Otter Young_Otter Little_Otter Darting_Otter Sneaking_Otter Swimming_Otter Laughing_Otter Blue_Otter Red_Otter Gray_Otter White_Otter Yellow_Otter Ice_Otter Snow_Otter
+		Otter_Eater Otter_Eyes Otter_Nose Wet_Otter Precious_Otter Playful_Otter
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+name_list_mountain_clansman = {
+
+	dynasty_names = {
+		{ "dynn_Battag" } { "dynn_Hrovvar" } { "dynn_Kridor" } { "dynn_Jorattag" } { "dynn_Drorras" }
+		{ "dynn_Thonar" } { "dynn_Krukkan" } { "dynn_Arador" } { "dynn_Ardovvan" } { "dynn_Krummar" }
+		{ "dynn_Srakha" } { "dynn_Drarrag" } { "dynn_Hrogah" } { "dynn_Stavrak" } { "dynn_Sruthor" }
+		{ "dynn_Hrosar" } { "dynn_Darkha" } { "dynn_Jorrag" } { "dynn_Druvak" } { "dynn_Barattag" }
+	}
+
+	male_names = {
+		Adbrek Agil Ale Aragrath Ardomor Arik
+		Baurgard Bhagga Bhurt Bodger Brine Brogg Brolor Brok 
+		Calor Cheyk Cenn Conn Coratt Crawn Crittark Cromm
+		Daggan Dhan Dimett Dumkal Dolf Doss Dralme Dryn Dywen
+		Eik Eirk Erne Errok Eyron
+		Galt Gunthor Gurn Gumor Granroc Ghael Gatrel Ghilbag
+		Haggon Holger Howd Hrodog Hurras Hybuk
+		Jagga Jaggot Janog Jolf Jeind Jolk
+		Kyleg Kimett Krammag Krellec Keld Kolf Kret Kurmor
+		Lenn Lonn Lam
+		Mats Marn Milgen
+		Quort
+		Rettun Rigg Rade Rherd Ravorn Ruskir
+		Shagga Soren Stamm Steidar Sygol Staun
+		Timett Toregg Torghen Torrek Tinog Traggan Traggoth Thael Torren
+		Ulf Umar Uradrag
+		Ygon
+	}
+	female_names = {
+		Adilla Agmunra Arrya Aly Arrsa Arrana Asarra Ana Asa Abni Ayssi
+		Brella Brearr
+		Chella Cholvi Corah Ceyri Cortah Cera Cigna
+		Dili Dete Dags
+		Eeba
+		Ferny Frenya Frynne Ferni Fanna
+		Gnila Gneya Ghulmi Gharle
+		Harma Harra Helya Hakye Hagneh Hina Haiga
+		Johssi Jheka Jiyr
+		Latyu
+		Mhella Maabs Metu Meri
+		Oena Orra Oaha
+		Rokah Riyga Regwal
+		Skeyga Skali Scika Skiyre Siyri
+		Val
+		Zata
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	patronym_prefix_male = "dynnpat_pre_sonof"
+	patronym_suffix_male = "dynnpat_post_sonof_zh"
+	patronym_prefix_female = "dynnpat_pre_daughterof"
+	patronym_suffix_female = "dynnpat_post_daughterof_zh"
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+name_list_skagosi = {
+
+	dynasty_names = {
+		{ "dynn_Stonn" } { "dynn_Bolorn" } { "dynn_Varnkar" } { "dynn_Mordar" } { "dynn_Voror" }
+		{ "dynn_Marodr" } { "dynn_Araval" } { "dynn_Jarakul" } { "dynn_Gorne" } { "dynn_Domyr" }
+		{ "dynn_Rogamun" } { "dynn_Bolell" } { "dynn_Norgrim" } { "dynn_Drageir" } { "dynn_Crenmuar" }
+		{ "dynn_Stiggent" } { "dynn_Graw" } { "dynn_Carcer" } { "dynn_Gaugh" } { "dynn_Euryk" }
+	}
+
+	male_names = {
+		Abel Alfyn Arnolf Arrek Arthor
+		Balder Brendel Brogg
+		Dannel Darreck Daryn Derryk Devyn Dolf Dorren Dryn Durstyn Duttrick
+		Eddard Edrick Erik Erreck
+		Gared Gavin Gendel Gerrick Godfrik Gorm Gorne Grenn Grigg
+		Hagen Halder Halleck Hallis Harald Hareth Harle Harmond Henk Herryk Holger Hother
+		Jaroth Jeor Jojen Jorik Jormyn
+		Karl Karlon Kragorn Kyle Kyleg
+		Lars Lenyl Lorick Lorn Ludd
+		Marek Mikken Morick Mors
+		Norren
+		Orell Orryn Owen
+		Qhorin
+		Rickon Rodrik Rolfe Roryn
+		Sigorn Skittrick Soren Stavryn Stiv Stygg Styr Sylas
+		Thermund Toregg Tormund Torren Tym
+		Ulgrim
+		Wallen Wendel
+		Ygon
+	}
+	female_names = {
+		Abella Addila Alla Arra Arsa Arya Asha
+		Barba Benya Branna Brenna
+		Dacey Dalla Darra
+		Eddara
+		Frenya Fryda
+		Gerda
+		Harma Hilda
+		Katla Kella Kera Kerena Kyra
+		Mara Marna Megga Meha Moreg Morna Morra Munda
+		Nella Nera
+		Orenna Osha Owella
+		Raya
+		Sansa Sarra Sigrid
+		Wylla
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	patronym_prefix_male = "dynnpat_pre_sonof"
+	patronym_suffix_male = "dynnpat_post_sonof_zh"
+	patronym_prefix_female = "dynnpat_pre_daughterof"
+	patronym_suffix_female = "dynnpat_post_daughterof_zh"
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+name_list_first_man = {
+
+	dynasty_names = {
+		{ "dynn_Thely" } { "dynn_Gorey" } { "dynn_Bordon" } { "dynn_Pall" } { "dynn_Osbry" }
+		{ "dynn_Graunce" } { "dynn_Ashem" } { "dynn_Dirgewood" } { "dynn_Elester" } { "dynn_Blanis" }
+		{ "dynn_Walbridge" } { "dynn_Bardsley" } { "dynn_Eames" } { "dynn_Ottwell" } { "dynn_Sagramore" }
+		{ "dynn_Carnley" } { "dynn_Oakes" } { "dynn_Krey" } { "dynn_Morras" } { "dynn_Pikeglen" }
+	}
+
+	male_names = {
+		Agmund Asrim Aslak Arthor Anderrs Arn Agil Addrum Adard Addrak Akkehard Agymar Akarolf Adbrek Ale Aragrath Ardomor Arik Arald
+		Beinerr Byrgard Brangrim Bradderrik Baldyer Bersi Bygerrik Bal Baurgard Bhagga Bhurt Bodger Brine Brogg Brolor Brok Bagir Bormir
+		Calor Cheyk Conn Coratt Crawn Crittark Cromm Cygerrik Crygmarr Crygar Cryghaud Cenn
+		Dolf Dumgald Dralme Derrik Dygerrik Drald
+		Galt Gunthor Gurn Gyzerrik Gyzurrek Grith Gudlaug Gerrik Ghael Gremm Ghaud Geddarik Gumor Granroc Gatrel Ghilbag Grunnor
+		Holger Harrdbein Hallad Harrald Hrossborn Hegg Herrik Helgarrd Hybuk Hrolf Hygerrik Haggon Harkul Hrankar
+		Jaggot Jonn Jomar Jolf Jygerrik Jygmar Jaggot Jon Jagni Jorakul Joraval
+		Shagga Sygeh Skap Skeg Skaglek Skaggorin Skagrim Skaggus Skarolf Soren Stamm Steidar Sygol Staun Sigorn Skar Skarnir Skaval Steig Stek Stylner Stiv Styr Styrnor Svenar
+		Timett Torrek Torghen Tinog Traggan Traggoth Thael Torren Thorald Thorik Thrain Torenir
+		Ulf Umar Ulgrim Ulfar Utmar Uthor Uradrag
+	}
+	female_names = {
+		Adilla Agmunra Arrya Aly Arrsa Arrana Asarra Ana Asa Abni Ayssi Agara Arnhildr Athala
+		Beinerra Bhurta Barrya Barrsa Barrana Brella Brearr
+		Chella Cromma Cholvi Corah Ceyri Cortah Cera Cigna
+		Dumgalda Dags Dili Dete
+		Errika Eddara Errsa Errana Errya Efla Ela
+		Jonna Jomara Jolfa Johssi Jhena
+		Narrya Narrsa Narrana
+		Orrsa Orrana Orya Osharra Orra Oga Olma
+		Ransa Raly Raddera Ryka Ryloka Roka
+		Skagga Sygea Skagleka Syga Sygarra Syganna Sygarda Sygaly Sannsa Skeyga Syri Soyni Syansa
+		Toraka Tyosa Tekkeda Tarya Tansa Thesa
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	patronym_prefix_male = "dynnpat_pre_sonof"
+	patronym_suffix_male = "dynnpat_post_sonof_zh"
+	patronym_prefix_female = "dynnpat_pre_daughterof"
+	patronym_suffix_female = "dynnpat_post_daughterof_zh"
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+### SOUTH OF THE NECK
+name_list_clawman = {
+
+	dynasty_names = {
+		{ "dynn_Barren" } { "dynn_Whysper" } { "dynn_Freewood" } { "dynn_Bayman" } { "dynn_Point" }
+		{ "dynn_Batler" } { "dynn_Sentel" } { "dynn_Woodgarde" } { "dynn_Archyr" } { "dynn_Rackley" }
+		{ "dynn_Crackshield" } { "dynn_Cragby" } { "dynn_Fallow" } { "dynn_Knolley" } { "dynn_Peary" }
+		{ "dynn_Swayne" } { "dynn_Treemore" } { "dynn_Rooke" } { "dynn_Chayce" } { "dynn_Dyne" }
+		{ "dynn_Passland" } { "dynn_Agnell" } { "dynn_Hory" } { "dynn_Trayce" } { "dynn_Clayne" }
+		{ "dynn_Humblehide" } { "dynn_Farrowbone" } { "dynn_Pinebone" } { "dynn_Earthe" } { "dynn_Dyrk" }
+	}
+
+	male_names = {
+		Alan Alaric Alliser Anfred Arneld Arthor
+		Balman Bandon Banen Banfrey Barent Barre Barth Benedict Benjen Bennard Bennifer Bernarr Bolen Bonifer Brenett Bryndon
+		Clarence Clegg Clement
+		Dale Daryn Daved Denys Desmond Dick Dobber Donnel Duncan Durance Dywen
+		Eckard Edgar Edrick Edwell Edwyn Ellard Ethan Eustace
+		Florian Fredder
+		Garrick Gilbert Gregor Guncer
+		Hareth Harry Herman Hobb Howard Hullen
+		Jack Jaremy Jareth Jeomar Jon Jormun
+		Kennet
+		Laren Laurent Lewys Lothor Lucifer Luwin
+		Malcolm Manfrey Merrell Monford Morgan Mortimer
+		Orell Osbert Osfryd Osgood Osmund Osney Ossifer Oswald Oswell Oswyck Oswyn Owain
+		Patrek Paul Perkin
+		Qarl Qarlton
+		Raymun Renfred Rennifer Rickard Roben Robert Rodrik Rolland Rufus Rupert
+		Tarber Terrence Timmen Timmet Tomas Torbert Torren
+		Ulf Ulmer Ummet Urick Urreg
+		Victor
+		Wallace Warrick Wellard Wendel Whalon Willam Wynton
+		Yohnen Yoren Yorick Yorrald
+	}
+	female_names = {
+		Alanna Alarra Alayne Alerie Alessa Alys Alysanne Alyssa Amylla Andacey Arwyn
+		Barba Barra Beatrice Belarra Bethany Brella
+		Carol Catelyn
+		Dalera Dalla Danelle Daria Darla Denyse Dylla
+		Eldacey Elinor Elsie Ermesande Essie Evelyn
+		Falena Falyse Flora Freya
+		Glenna
+		Hanna Hazel
+		Jenette Jenna Jeyne
+		Larra Lonna Lyra
+		Maia Malene Marianne Marta Marya Mella Meredyth Moelle Morya
+		Onna
+		Sara Selyse Senelle Sharla
+		Tansy Tilly
+		Wella Wenda Willow Wylla
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}
+
+name_list_sisterman = {
+
+	dynasty_names = {
+		{ "dynn_Waves" } { "dynn_Carring" } { "dynn_Oldreaver" } { "dynn_Skies" } { "dynn_Nightman" }
+		{ "dynn_Greybite" } { "dynn_Webb" } { "dynn_Crabber" } { "dynn_Goatt" } { "dynn_Coldrin" }
+		{ "dynn_Wrought" } { "dynn_Boatwright" } { "dynn_Bolthouse" } { "dynn_Hardcastle" } { "dynn_Lowe" }
+		{ "dynn_Cerwood" } { "dynn_Rockham" } { "dynn_Coxworth" } { "dynn_Tavner" } { "dynn_Goodenow" }
+		{ "dynn_Dronton" } { "dynn_Dromonds" } { "dynn_Olderly" } { "dynn_Qowell" } { "dynn_Bandry" }
+		{ "dynn_Wetstone" } { "dynn_Systern" } { "dynn_Lightstone" } { "dynn_Darklight" } { "dynn_Bryne" }
+		{ "dynn_Rowmann" } { "dynn_Webley" } { "dynn_Horrent" } { "dynn_Stormlyte" } { "dynn_Highwave" }
+	}
+
+	male_names = {
+		Alaric Albar Alber Aldric Alesandor Alladar Alyard Alyn Andar Argos Arlon Armond Arnold Arnos Arran Arston Artos Astos Athan
+		Baldric Balon Bannon Banor Baran Bedryn Beldon Benarion Bendon Benedar Benfrey Bennard Berion Bermar Bowen Brendan Bryen
+		Cedric Cleyton Colemon Conrad Corwyn
+		Dalwyn Damon Dareon Darren Daston Dennard Denys Deros Dolen Domeric Donnel Donnor Dorik Dywen
+		Eddard Eddison Edmore Edmund Edric Elbert Elbyn Eldred Eldric Elron Elys Emond Eon Eyron
+		Gared Gelion Gerrick Gilbert Gilmer Godric Goran Gordon Gunthor Gyles
+		Haldon Hanlon Hanos Hanton Harkon Harlan Harodon Harrion Harrold Haryn Horton Hugo Humfrey
+		Janden Jasper Jaymar Jeron Jon Jonos Jonothor Jormar Joron Josten
+		Kelon Kelvyn Kennos
+		Leobar Leowyn Lobor Lothan Lucas Lyonel
+		Maladon Mallador Mandon Marlon Maron Martyn Marwyn Mathos Meric Merion Merton Morton Mychel
+		Nestor Norren
+		Ober Odron Odwell Ondrew Ondros Orlos Orren Orson Orton Orwell Osgood Osric Oswyck Othor Owen
+		Pelion Peron
+		Qarl Qarlon Qarlton Qhorin Quelion Quenton Qyburn Qyle
+		Raymar Rickon Robar Robert Rodrik Rogar Rolland Rollyn Ronnel Rorick Royce Ryckard Ryon
+		Sarion Sarmon Simon Steffon
+		Targon Theodar Theomar Theon Triston Tylos
+		Umbert Umfred Urlon Urston Urswyck Uthor
+		Vanyon Vardis Vayon Victor Vyron
+		Warrick Wayland Waymar Wydron Wyllem Wyllis Wynton
+		Yohn Yorbert Yoren Yorwyck
+	}
+	female_names = {
+		Alanna Alannis Alayne Alda Alera Alina Alora Alys Alyssa Amanda Andara Annara Anya Arelle Arrana Arria Arwen
+		Barba Barra Bellara Beriona Berra Bessa Branna Brenda Brynda
+		Carolei
+		Dacey Dancy Dandia Danisa Daria Delana Delanne Della Diana Donella
+		Edmerei Elanei Elesa Elina Elly Ellyn Elyra Emma Ethel
+		Gella Grenna Gretchel Gwenda
+		Isabel
+		Janesa Janna Jathany Jerane Jeyna Jonella Jorelle Jorena Jyrenna
+		Kalyra Karene Karolyn Kayla Kelanna Kelarra Kella Kerelle
+		Leonella Lyanna Lymaria Lyra
+		Maddy Mara Marei Marelle Marissa Marla Marlena Maronne Marsella Mavis Melyssa Mena Merisa Mina Mira Mya Mynalla Myra Myranda
+		Nessa
+		Obyra Olana Oryssa Osmerei
+		Parra Perra Polianne
+		Qyrene
+		Rienne Rolenna Rolessa
+		Sanora Sansa Sarra Serella Serena Sharra Shyra Simona Sylana Syrona
+		Theona
+		Unella Ursula
+		Wylera Wylla
+		Yenna Yolanda Yorena Ysilla
+	}
+	dynasty_of_location_prefix = "dynnp_of"
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}

@@ -1,0 +1,115 @@
+﻿dragon = {
+	alias = { dragons_plural }
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+dragon_type = {
+	alias = { }
+	parent = dragon
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+wild_dragon = {
+	alias = { wild_dragons }
+	parent = dragon_type
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+owned_dragon = {
+	alias = { owned_dragons }
+	parent = dragon_type
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+tamed_dragon = {
+	alias = { tamed_dragons }
+	parent = dragon_type
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+draconic_dread = {
+	alias = { }
+	parent = dragon
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+temperament = {
+	alias = { }
+	parent = dragon
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+taming_chance = {
+	alias = { }
+	parent = dragon
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+dragon_size = {
+	alias = { dragons_size }
+	parent = dragon
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+dragon_combat_effectiveness = {
+	alias = { }
+	parent = dragon
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+dragonpit = {
+	alias = { dragon_pit dragonpits }
+	parent = dragon
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+anti_dragon_maa = {
+	alias = { }
+	parent = men_at_arms
+	texture = "gfx/interface/icons/regimenttypes/scorpions.dds"
+}
+
+dragon_gender = {
+	alias = { }
+	parent = dragon
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+natural_dragonpit = {
+	alias = { natural_dragonpits }
+	parent = dragonpit
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+dragonblood = {
+	parent = dragon
+	texture = "gfx/interface/icons/message_feed/dynasty.dds"
+}
+
+authorized_tamer = {
+	parent = dragonpit
+	texture = "gfx/interface/icons/message_feed/law.dds"
+}
+
+dragonkeeper = {
+	alias = { dragonkeepers }
+	parent = dragon
+	texture = "gfx/interface/icons/message_feed/law.dds"
+}
+
+dragonpit_interactions = {
+	parent = dragonpit
+	texture = "gfx/interface/icons/traits/dragon.dds"
+}
+
+dragon_matriarch = {
+	alias = { dragon_matriarchs }
+	parent = dragon
+	texture = "gfx/interface/icons/icon_dragon.dds"
+}
+
+dragon_family_tree = {
+	alias = { dragon_family_trees }
+	parent = dragon
+	texture = "gfx/interface/icons/message_feed/dynasty.dds"
+}

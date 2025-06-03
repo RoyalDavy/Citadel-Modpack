@@ -1,0 +1,16 @@
+﻿captains_sword = {
+	slot = primary_armament
+	required_features = { blade_metal }
+	optional_features = {
+		# Dagger-specific:
+		blade_decoration hilt_decoration
+		# General decorations:
+		decoration_pattern decoration_material_inlay decoration_material_wire
+	}
+}
+
+skullPike = {
+	slot = miscellaneous
+	required_features = { }
+	optional_features = { }
+}

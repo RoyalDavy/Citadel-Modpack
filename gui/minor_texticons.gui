@@ -1,0 +1,443 @@
+texticon = {
+	icon = sarsfield_horse_archers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sarsfield_horse_archers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = royce_runesworn_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/royce_runesworn.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = grafton_gulltown_mariners_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/grafton_gulltown_mariners.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = shett_gullmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/shett_gullmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = manderly_house_manderly_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/manderly_house_manderly.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = velaryon_driftmark_marksmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/velaryon_driftmark_marksmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = forrester_ironwoodshieldmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/forrester_ironwoodshieldmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = bolton_flayed_men_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/bolton_flayed_men.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = bricker_brick_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/bricker_brick_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = clegane_cleganes_brigands_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/clegane_cleganes_brigands.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = reyne_miner_militia_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/reyne_miner_militia.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = celtigar_crabmen_tax_collectors_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/celtigar_crabmen_tax_collectors.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = iron_legion_icon_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/iron_legion.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = blackwood_blackwood_vale_bowmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/blackwood_blackwood_vale_bowmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = bracken_stone_hedge_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/bracken_stone_hedge_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = vypren_fenfolk_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/vypren_fenfolk.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = vance_vances_lances_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/vance_vances_lances.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = rowan_knights_of_the_golden_apple_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/rowan_knights_of_the_golden_apple.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = tarly_the_first_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/tarly_the_first.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = osgrey_steadfast_spears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/osgrey_steadfast_spears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = scales_vallscale_bailiffs_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/scales_vallscale_bailiffs.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = sunglass_sweetport_zealots_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sunglass_sweetport_zealots.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dayne_starfall_outriders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dayne_starfall_outriders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = wyl_boneway_ambushers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/wyl_boneway_ambushers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = yronwood_knights_of_the_gate_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/yronwood_knights_of_the_gate.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = uller_brimstone_bowmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/uller_brimstone_bowmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = redwyne_knights_of_the_vine_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/redwyne_knights_of_the_vine.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = hightower_the_tower_guard_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/hightower_the_tower_guard.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = florent_brightwater_swifts_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/florent_brightwater_swifts.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = roxton_roxtons_riders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/roxton_roxtons_riders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = ryswell_rillriders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/ryswell_rillriders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dustin_dismounted_barrow_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dustin_dismounted_barrow_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = mormont_bay_of_ice_fishermen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/mormont_bay_of_ice_fishermen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = hornwood_hornwood_rangers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/hornwood_hornwood_rangers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = umber_last_stand_berserkers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/umber_last_stand_berserkers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = flint_quarrymen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/flint_quarrymen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = darklyn_shadow_shields_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/darklyn_shadow_shields.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dondarrion_lightning_lancers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dondarrion_lightning_lancers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = roxton_roxtons_riders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/roxton_roxtons_riders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = caron_singing_arrows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/caron_singing_arrows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = drox_longbolt_quarrelers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/drox_longbolt_quarrelers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = lydden_highland_harriers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/lydden_highland_harriers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = farman_fair_isle_mariners_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/farman_fair_isle_mariners.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = crakehall_brindled_boars_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/crakehall_brindled_boars.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}	
+}

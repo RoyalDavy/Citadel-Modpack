@@ -1,0 +1,156 @@
+﻿acgot_cities_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_winter_horn_find.dds" #PLACEH0LDER #TODO
+	}
+	ai_check_interval = 0
+	
+	sort_order = 100
+	cooldown = { years = 10 }
+
+	desc = acgot_cities_decision_desc
+	selection_tooltip = acgot_cities_decision_tooltip
+	confirm_text = acgot_cities_decision_tooltip_confirm_text_desc
+
+	is_shown = {
+		is_incapable = no
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:found_the_horn_a
+			}
+		}
+		root.capital_province = {
+			geographical_region = world_westeros_beyond_the_wall
+		}
+	}
+	is_valid = {
+		custom_description = {
+			text = custom_agot_citie_3
+			root.capital_province = {
+				geographical_region = world_westeros_beyond_the_wall
+			}
+		}
+	}
+	is_valid_showing_failures_only = { 
+		is_adult = yes
+		is_imprisoned = no
+	}
+	
+	cost = {
+		gold = 50
+	}
+	
+	
+	
+
+	effect = {
+		custom_tooltip = custom_agot_citie_5
+		trigger_event = {
+			id = agot_cities.1000 
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+
+acgot_cities_2_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_winter_horn_blow.dds" #PLACEH0LDER #TODO
+	}
+	ai_check_interval = 0
+	
+	sort_order = 100
+
+	desc = acgot_cities_decision_2_desc
+	selection_tooltip = acgot_cities_decision_2_tooltip
+	confirm_text = acgot_cities_decision_tooltip_confirm_text_desc_2
+
+	is_shown = {
+		any_character_artifact = {
+			exists = this
+			has_variable = this_is_the_horn
+		}
+		is_incapable = no
+		is_imprisoned = no
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:found_the_horn_a
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blew_the_horn_a
+			}
+		}
+		
+		
+	}
+	
+	is_valid = {
+	
+		custom_description = {
+		
+			text = custom_agot_citie_2
+			AND = {
+				is_commanding_army = yes
+				location = { geographical_region = world_westeros_on_the_wall_cities }
+			}
+		}		
+	}
+
+	
+	effect = {
+		custom_tooltip = custom_agot_citie_4
+			
+		
+		trigger_event =  agot_cities.2000 
+		
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+# remove_buildings_debug = {
+# 	picture = "gfx/interface/illustrations/decisions/decision_winter_horn_blow.dds" #PLACEH0LDER #TODO
+# 	ai_check_interval = 0
+	
+# 	sort_order = 1000
+
+# 	desc = remove_buildings_desc
+# 	confirm_text = remove_buildings_ct
+
+# 	is_shown = {
+# 		is_ai = no
+# 	}
+
+	
+# 	effect = {
+# 		trigger_event = agot_cities.9900
+		
+# 	}
+
+# 	ai_potential = {
+# 		always = no
+# 	}
+
+# 	ai_will_do = {
+# 		base = 0
+# 	}
+
+
+
+
+# }

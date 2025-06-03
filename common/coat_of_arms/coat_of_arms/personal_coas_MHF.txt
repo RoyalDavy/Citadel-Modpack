@@ -1,0 +1,102 @@
+﻿##################################
+## Nickname Based Personal Coas ##
+##################################
+
+# Bricker
+
+dynn_Bricker_black_brick_personal_coa = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_silver"
+	color2 = "agot_black"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_silver"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "riverlands_mason_wall.dds"
+		color1 = "agot_black"
+		color2 = "agot_black"
+		instance = { position = { 0.475 0.525 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+}
+dynn_Bricker_white_brick_personal_coa = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_red_dark"
+	color2 = "agot_white"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_red_dark"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "riverlands_mason_wall.dds"
+		color1 = "agot_white"
+		color2 = "agot_white"
+		instance = { position = { 0.475 0.525 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+}
+dynn_Bricker_silver_brick_personal_coa = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_red_dark"
+	color2 = "agot_silver"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_red_dark"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "riverlands_mason_wall.dds"
+		color1 = "agot_silver"
+		color2 = "agot_silver"
+		instance = { position = { 0.475 0.525 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+}
+dynn_Bricker_bright_brick_personal_coa = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_silver"
+	color2 = "agot_gold"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_silver"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "riverlands_mason_wall.dds"
+		color1 = "agot_gold"
+		color2 = "agot_gold"
+		instance = { position = { 0.475 0.525 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+}
+dynn_Bricker_little_brick_personal_coa = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_silver"
+	color2 = "agot_red_dark"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_silver"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "ce_billet.dds"
+		color1 = "agot_red_dark"
+		color2 = "agot_red_dark"
+		instance = { position = { 0.5 0.5 } scale = { 0.5 0.5 } rotation = 0 }
+	}
+}
+dynn_Bricker_brick_wall_personal_coa = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_silver"
+	color2 = "agot_red_dark"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_silver"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "ce_stonehouse_1.dds"
+		color1 = "agot_red_dark"
+		color2 = "agot_silver"
+		instance = { position = { 0.475 0.525 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+}

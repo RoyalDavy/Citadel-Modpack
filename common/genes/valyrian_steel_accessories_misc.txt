@@ -1,0 +1,255 @@
+﻿special_genes = {
+
+
+	accessory_genes = {
+
+	#####################################
+	#									#
+	# 		  	   PROPS  		        #
+	#									#
+	#####################################
+
+
+
+	  props_valyrian = {
+		
+			no_props = {
+				index = 0
+				male = {
+				}
+				female = {
+				}
+				boy = {
+				}
+				girl = {
+				}
+			}
+
+	        grid = {
+	            index = 1
+	            male = {
+	                1 = debug_grid_01
+	            }
+	            female = male
+	            boy = male
+	            girl = male
+	        }
+	      
+			vs_sword_1_prop = {
+				index = 2
+				male = {
+					1 = vs_sword_1_prop
+				}
+				female = {
+					1 = vs_sword_1_prop	
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_sword_2_prop = {
+				index = 3
+				male = {
+					1 = vs_sword_2_prop
+				}
+				female = {
+					1 = vs_sword_2_prop	
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_sword_3_prop = {
+				index = 4
+				male = {
+					1 = vs_sword_3_prop
+				}
+				female = {
+					1 = vs_sword_3_prop	
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_dagger_1_prop = {
+				index = 5
+				male = {
+					1 = vs_dagger_1_prop
+				}
+				female = {
+					1 = vs_dagger_1_prop	
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_spear_1_prop = {
+				index = 6
+				male = {
+					1 = vs_spear_1_prop
+					1 = vs_spear_1_prop_right
+				}
+				female = {
+					1 = vs_spear_1_prop
+					1 = vs_spear_1_prop_right
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_mace_prop = {
+				index = 7
+				male = {
+					1 = vs_mace_prop
+				}
+				female = {
+					1 = vs_mace_prop
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_axe_prop = {
+				index = 8
+				male = {
+					1 = vs_axe_prop
+				}
+				female = {
+					1 = vs_axe_prop
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_sword_4_prop = {
+				index = 9
+				male = {
+					1 = vs_sword_4_prop
+				}
+				female = {
+					1 = vs_sword_4_prop	
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_halberd_prop = {
+				index = 10
+				male = {
+					1 = vs_halberd_prop
+					1 = vs_halberd_prop_right
+				}
+				female = {
+					1 = vs_halberd_prop
+					1 = vs_halberd_prop_right
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_mace_2_prop = {
+				index = 11
+				male = {
+					1 = vs_mace_2_prop
+				}
+				female = {
+					1 = vs_mace_2_prop
+				}
+				boy = male
+				girl = female
+			}
+
+			vs_sword_5_prop = {
+				index = 12
+				male = {
+					1 = vs_sword_5_prop
+				}
+				female = {
+					1 = vs_sword_5_prop	
+				}
+				boy = male
+				girl = female
+			}
+
+			dragon_horns_prop = {
+				index = 13
+				male = {
+					1 = dragon_horn_black_prop
+					1 = dragon_horn_red_prop
+					1 = dragon_horn_tan_prop
+					1 = dragon_horn_blackGold_prop
+					1 = dragon_horn_brown_prop
+					1 = dragon_horn_silver_prop
+
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+			dragon_horns_glow_prop = {
+				index = 14
+				male = {
+					1 = dragon_horn_black_glow_prop
+					1 = dragon_horn_red_glow_prop
+					1 = dragon_horn_tan_glow_prop
+					1 = dragon_horn_blackGold_glow_prop
+					1 = dragon_horn_brown_glow_prop
+					1 = dragon_horn_silver_glow_prop
+					1 = dragon_horn_black_glow_right_prop
+					1 = dragon_horn_red_glow_right_prop
+					1 = dragon_horn_tan_glow_right_prop
+					1 = dragon_horn_blackGold_glow_right_prop
+					1 = dragon_horn_brown_glow_right_prop
+					1 = dragon_horn_silver_glow_right_prop
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+			dragon_whip_prop = {
+				index = 15
+				male = {
+					1 = dragon_whip_black_prop
+					1 = dragon_whip_bronze_prop
+					1 = dragon_whip_silver_prop
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+			vs_goblet_prop = {
+				index = 16
+				male = {
+					1 = vs_goblet_prop
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+			valyrian_book_right = {
+				index = 17
+				male = {
+					1 = valyrian_book_01
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+
+			valyrian_paged_book = {
+				index = 18
+				male = {
+					1 = valyrian_paged_book_01_a
+				}
+				female = male
+				boy = male
+				girl = female
+			}
+		}
+	
+	}
+
+}

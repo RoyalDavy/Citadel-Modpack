@@ -1,0 +1,202 @@
+﻿#Events for statecraft lifestyle rank up
+
+namespace = stewardship_domain
+##################################
+# Culture Clash
+# 1073
+# by Sean Hughes
+##################################
+
+#One of your other-cultured counties longs to be ruled by a same-county lord.
+stewardship_domain.1073 = {
+	type = character_event
+	title = stewardship_domain.1073.t
+	desc = stewardship_domain.1073.desc
+	theme = stewardship_domain_focus
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = scope:target_ruler
+		animation = personality_honorable
+	}
+
+	trigger = {
+		NOT = { has_character_flag = had_event_stewardship_domain_1073 }
+		#Must hold a county...
+		any_held_title = {
+			tier = tier_county
+			#Which has a culture other than your own...
+			culture = {
+				NOT = { this = root.culture }
+				save_temporary_scope_as = border_province_culture
+				#AGOT Added to account for HV conversion rules
+				NAND = {
+					has_game_rule = agot_hv_conversion_offshoots
+					root.culture = culture:high_valyrian
+					root.capital_province = { geographical_region = world_westeros }
+					this = culture:westerosi_valyrian
+				}
+				NAND = {
+					has_game_rule = agot_hv_conversion_offshoots
+					root.culture = culture:high_valyrian
+					NOT = {
+						root.capital_province = { geographical_region = world_westeros }
+					}
+					this = culture:essosi_valyrian
+				}
+			}
+			#And is the same culture as one of the rulers who neighbors that county.
+			any_neighboring_county = {
+				holder ?= {
+					NOT = {this = root}
+					culture = scope:border_province_culture
+				}
+			}
+		}
+		#AGOT Added to account for HV conversion rules
+		NAND = {
+			culture = culture:high_valyrian
+			has_game_rule = agot_hv_conversion_disallowed
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		upweight_for_focus_modifier = { FOCUS = stewardship_domain_focus }
+	}
+
+	immediate = {
+		#AGOT Added to account for HV conversion rules
+		root.culture = { save_scope_as = new_culture }
+		if = {
+			limit = {
+				has_game_rule = agot_hv_conversion_offshoots
+				culture = culture:high_valyrian
+				location = { geographical_region = world_westeros }
+			}
+			culture:westerosi_valyrian = { save_scope_as = new_culture }
+		}
+		else_if = {
+			limit = {
+				has_game_rule = agot_hv_conversion_offshoots
+				culture = culture:high_valyrian
+				NOT = {
+					location = { geographical_region = world_westeros }
+				}
+			}
+			culture:essosi_valyrian = { save_scope_as = new_culture }
+		}
+		#AGOT End
+		add_character_flag = {
+			flag = had_event_stewardship_domain_1073
+			years = 5
+		}
+		add_character_flag = {
+			flag = had_recent_lifestyle_ongoing_event
+			years = ongoing_lifestyle_event_delay
+		}
+		random_held_title = {
+			#Find and save a county which meets the trigger requirements.
+			limit = {
+				tier = tier_county
+				culture = {
+					#AGOT Added to account for HV conversion rules
+					#NOT = { this = root.culture }
+					NOT = { this = scope:new_culture }
+					NAND = {
+						has_game_rule = agot_hv_conversion_offshoots
+						this = culture:high_valyrian
+						root.culture = culture:high_valyrian
+					}
+					save_temporary_scope_as = border_province_culture
+				}
+				any_neighboring_county = {
+					holder ?= {
+						NOT = {this = root}
+						culture = scope:border_province_culture
+					}
+				}
+			}
+			save_scope_as = target_county
+
+			#Save the target county's current culture.
+			culture = {
+				save_scope_as = target_county_culture
+			}
+
+			#Save the scope of a neighboring ruler who shares a culture with the target county.
+			random_neighboring_county = {
+				limit = {
+					holder ?= {
+						NOT = {this = root}
+						culture = scope:target_county_culture
+					}
+				}
+				holder = {
+					save_scope_as = target_ruler
+				}
+			}
+		}
+
+		# We have to save ourselves as a scope for effect localization.
+		save_scope_as = me
+	}
+
+	#Option A: Convince the county to adopt your culture instead. ###SUNDRY REMOVED
+
+	#Option C: Take a hands-off approach and let the county just keep doing their thing.
+	option = {
+		name = stewardship_domain.1073.c
+
+		scope:target_county = {
+			#Add a modifier which lowers unrest but makes it harder to change the county's culture.
+			add_county_modifier = {
+				modifier = governance_1073_conversion_resistance_modifier
+				years = 5
+			}
+			custom_tooltip = stewardship_domain.1073.c.warning
+		}
+
+		stress_impact = {
+			diligent = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+
+			ai_value_modifier = {
+				ai_compassion = 200
+				ai_energy = -200
+			}
+		}
+	}
+
+	#Option D: I am their ruler, they should be glad to serve me!
+	option = {
+		name = stewardship_domain.1073.d
+
+		#Gain prestige.
+		add_prestige = medium_prestige_gain
+
+
+		scope:target_county = {
+				add_county_modifier = {
+				modifier = governance_1073_traditions_disrespected_modifier
+				years = 5
+			}
+		}
+
+		stress_impact = {
+			humble = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+
+			ai_value_modifier = {
+				ai_boldness = 200
+				ai_greed = 100
+			}
+		}
+	}
+}

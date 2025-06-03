@@ -1,0 +1,11 @@
+﻿kingsguard_tab = {
+	is_shown = {
+		has_kingsguard = yes
+	}
+}
+
+#small_council_tab = {
+#	is_shown = {
+#		primary_title = title:e_the_iron_throne
+#	}
+#}

@@ -1,0 +1,4500 @@
+﻿ExtraRelationToMe = {
+	type = character
+
+
+	###################################
+	### Husbands and wives ############
+	###################################
+	text = {
+		trigger = {
+			scope:second = {
+				any_former_spouse = {
+					this = root
+				}
+				is_female = yes
+				is_alive = yes
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_ex_wife
+	}
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_former_spouse = {
+					this = root
+				}
+				is_male = yes
+				is_alive = yes
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_ex_husband
+	}
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_former_spouse = {
+					this = root
+				}
+				is_female = yes
+				is_alive = no
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_ex_wife_departed
+	}
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_former_spouse = {
+					this = root
+				}
+				is_male = yes
+				is_alive = no
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_ex_husband_departed
+	}
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_spouse = {
+					this = root
+				}
+				is_female = yes
+				is_alive = no
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_wife_departed
+	}
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_spouse = {
+					this = root
+				}
+				is_male = yes
+				is_alive = no
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_husband_departed
+	}
+
+	######################################
+	### Family directly below or above ###
+	######################################
+
+	text = {
+		localization_key = extra_relation_great_great_granddaughter
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_great_grandchild_of = root
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_great_grandson
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_great_grandchild_of = root
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grand_niece
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_nibling_of = root
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grand_nephew
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_nibling_of = root
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grand_niece
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_nibling_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grand_nephew
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_nibling_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_great_grand_niece
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_nibling_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_great_grand_nephew
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_nibling_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_great_grandmother
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						is_great_grandparent_of = root
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_great_grandfather
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						is_great_grandparent_of = root
+					}
+				}
+			}
+		}
+	}
+
+	######################################
+	### First column #####################
+	######################################
+	
+	text = {
+		localization_key = extra_relation_first_cousin_once_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_cousin_of_root_trigger = yes
+					}
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = extra_relation_first_cousin_once_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_cousin_of_root_trigger = yes
+					}
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = extra_relation_first_cousin_twice_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_cousin_of_root_trigger = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = extra_relation_first_cousin_twice_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_cousin_of_root_trigger = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = extra_relation_first_cousin_thrice_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_cousin_of_root_trigger = yes
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = extra_relation_first_cousin_thrice_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_cousin_of_root_trigger = yes
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	######################################
+	### Second column ####################
+	######################################
+
+	text = {
+		localization_key = extra_relation_grand_aunt
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_sibling = {
+					even_if_dead = yes
+					this = {
+						is_grandparent_of = root
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grand_uncle
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_sibling = {
+					even_if_dead = yes
+					this = {
+						is_grandparent_of = root
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_first_cousin_once_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_first_cousin_once_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							any_sibling = {
+								even_if_dead = yes
+								this = {
+									is_grandparent_of = root
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							any_sibling = {
+								even_if_dead = yes
+								this = {
+									is_grandparent_of = root
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_once_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_sibling = {
+											even_if_dead = yes
+											this = {
+												is_grandparent_of = root
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_once_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_sibling = {
+											even_if_dead = yes
+											this = {
+												is_grandparent_of = root
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_twice_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_sibling = {
+													even_if_dead = yes
+													this = {
+														is_grandparent_of = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_twice_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_sibling = {
+													even_if_dead = yes
+													this = {
+														is_grandparent_of = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_thrice_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_sibling = {
+															even_if_dead = yes
+															this = {
+																is_grandparent_of = root
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_thrice_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_sibling = {
+															even_if_dead = yes
+															this = {
+																is_grandparent_of = root
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	######################################
+	### Third column #####################
+	######################################
+
+	text = {
+		localization_key = extra_relation_great_grand_aunt
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_sibling = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grand_uncle
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_sibling = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_first_cousin_twice_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										is_grandparent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_first_cousin_twice_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										is_grandparent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_once_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_sibling = {
+									even_if_dead = yes
+									this = {
+										any_child = {
+											even_if_dead = yes
+											this = {
+												is_grandparent_of = root
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_second_cousin_once_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_sibling = {
+									even_if_dead = yes
+									this = {
+										any_child = {
+											even_if_dead = yes
+											this = {
+												is_grandparent_of = root
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_third_cousin_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_sibling = {
+											even_if_dead = yes
+											this = {
+												any_child = {
+													even_if_dead = yes
+													this = {
+														is_grandparent_of = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_third_cousin_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_sibling = {
+											even_if_dead = yes
+											this = {
+												any_child = {
+													even_if_dead = yes
+													this = {
+														is_grandparent_of = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_third_cousin_once_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_sibling = {
+													even_if_dead = yes
+													this = {
+														any_child = {
+															even_if_dead = yes
+															this = {
+																is_grandparent_of = root
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_third_cousin_once_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_sibling = {
+													even_if_dead = yes
+													this = {
+														any_child = {
+															even_if_dead = yes
+															this = {
+																is_grandparent_of = root
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_third_cousin_twice_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_sibling = {
+															even_if_dead = yes
+															this = {
+																any_child = {
+																	even_if_dead = yes
+																	this = {
+																		is_grandparent_of = root
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_third_cousin_twice_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_sibling = {
+															even_if_dead = yes
+															this = {
+																any_child = {
+																	even_if_dead = yes
+																	this = {
+																		is_grandparent_of = root
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_third_cousin_thrice_removed_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_parent = {
+															even_if_dead = yes
+															this = {
+																any_sibling = {
+																	even_if_dead = yes
+																	this = {
+																		any_child = {
+																			even_if_dead = yes
+																			this = {
+																				is_grandparent_of = root
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_third_cousin_thrice_removed_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_parent = {
+															even_if_dead = yes
+															this = {
+																any_sibling = {
+																	even_if_dead = yes
+																	this = {
+																		any_child = {
+																			even_if_dead = yes
+																			this = {
+																				is_grandparent_of = root
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	###################################
+	### In-laws directly below ########
+	###################################
+
+	text = {
+		localization_key = extra_relation_daughterinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_spouse = {
+					is_child_of = root
+				}
+			}
+		}
+	}
+	
+	text = {
+		localization_key = extra_relation_soninlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_spouse = {
+					is_child_of = root
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_granddaughterinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				is_granddaughterson_in_law_of_root_trigger = yes
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grandsoninlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				is_granddaughterson_in_law_of_root_trigger = yes
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_granddaughterinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				is_great_granddaughterson_in_law_of_root_trigger = yes
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grandsoninlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				is_great_granddaughterson_in_law_of_root_trigger = yes
+			}
+		}
+	}
+
+	###################################
+	### In-laws directly above ########
+	###################################
+
+	text = {
+		localization_key = extra_relation_motherinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_spouse = {
+							this = root
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_fatherinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_spouse = {
+							this = root
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grandmotherinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								any_spouse = {
+									this = root
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grandfatherinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								any_spouse = {
+									this = root
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grandmotherinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										any_spouse = {
+											this = root
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grandfatherinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										any_spouse = {
+											this = root
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	###################################
+	### In-laws diagonally below ######
+	###################################
+
+	text = {
+		localization_key = extra_relation_nieceinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				is_nibling_in_law_of_root_trigger = yes
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_nephewinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				is_nibling_in_law_of_root_trigger = yes
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grand_nieceinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_nibling_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grand_nephewinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_nibling_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grand_nieceinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_nibling_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grand_nephewinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_nibling_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_cousininlaw_female
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_sibling = {
+									this = {
+										is_parent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_cousininlaw_male
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_male = yes
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_sibling = {
+									this = {
+										is_parent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	###################################
+	### In-laws diagonally above ######
+	###################################
+
+	text = {
+		localization_key = extra_relation_auntinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						is_parent_sibling_of_root_trigger = yes
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_uncleinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						is_parent_sibling_of_root_trigger = yes
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grand_auntinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_grand_uncleinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grand_auntinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = yes
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										is_grandparent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	text = {
+		localization_key = extra_relation_great_grand_uncleinlaw
+		trigger = {
+			scope:second = {
+				NOT = { this = root }
+				NOT = { is_spouse_of = root }
+				NOT = { is_parent_of = root }
+				NOT = { is_grandparent_of = root }
+				NOT = { is_great_grandparent_of = root }
+				NOT = { is_child_of = root }
+				NOT = { is_grandchild_of = root }
+				NOT = { is_great_grandchild_of = root }
+				NOT = { is_sibling_of = root }
+				NOT = { is_sibling_child_of_root_trigger = yes }
+				NOT = { is_parent_sibling_of_root_trigger = yes }
+				NOT = { is_cousin_of_root_trigger = yes }
+				is_female = no
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										is_grandparent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+###################################
+### Husbands and wives ############
+###################################
+
+ExtraRelationExWife = {
+	type = character
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_former_spouse = {
+					this = root
+				}
+				is_female = yes
+				is_alive = yes
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_ex_wife_tooltip
+	}
+}
+
+ExtraRelationExHusband = {
+	type = character
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_former_spouse = {
+					this = root
+				}
+				is_male = yes
+				is_alive = yes
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_ex_husband_tooltip
+	}
+}
+
+ExtraRelationExWifeDeparted = {
+	type = character
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_former_spouse = {
+					this = root
+				}
+				is_female = yes
+				is_alive = no
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_ex_wife_departed_tooltip
+	}
+}
+
+ExtraRelationExHusbandDeparted = {
+	type = character
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_former_spouse = {
+					this = root
+				}
+				is_male = yes
+				is_alive = no
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_ex_husband_departed_tooltip
+	}
+}
+
+ExtraRelationWifeDeparted = {
+	type = character
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_spouse = {
+					this = root
+				}
+				is_female = yes
+				is_alive = no
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_wife_departed_tooltip
+	}
+}
+
+ExtraRelationHusbandDeparted = {
+	type = character
+
+	text = {
+		trigger = {
+			scope:second = {
+				any_spouse = {
+					this = root
+				}
+				is_male = yes
+				is_alive = no
+				is_concubine = no
+			}
+		}
+		localization_key = extra_relation_husband_departed_tooltip
+	}
+}
+
+ExtraRelationGreatGreatGranddaughter = {
+	type = character
+
+	######################################
+	### Family directly below or above ###
+	######################################
+
+	text = {
+		localization_key = extra_relation_great_great_granddaughter_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_great_grandchild_of = root
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGreatGrandson = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_great_grandson_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_great_grandchild_of = root
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandNiece = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grand_niece_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_nibling_of = root
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandNephew = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grand_nephew_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_nibling_of = root
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandNiece = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grand_niece_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_nibling_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandNephew = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grand_nephew_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_nibling_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGreatGrandNiece = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_great_grand_niece_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_nibling_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGreatGrandNephew = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_great_grand_nephew_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_nibling_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGreatGrandmother = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_great_grandmother_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						is_great_grandparent_of = root
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGreatGrandfather = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_great_grandfather_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						is_great_grandparent_of = root
+					}
+				}
+			}
+		}
+	}
+}
+
+######################################
+### First column #####################
+######################################
+
+ExtraRelationFirstCousinOnceRemovedFemale = {
+	type = character
+	
+	text = {
+		localization_key = extra_relation_first_cousin_once_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_cousin_of_root_trigger = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinOnceRemovedMale = {
+	type = character
+	
+	text = {
+		localization_key = extra_relation_first_cousin_once_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						is_cousin_of_root_trigger = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinTwiceRemovedFemale = {
+	type = character
+	
+	text = {
+		localization_key = extra_relation_first_cousin_twice_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_cousin_of_root_trigger = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinTwiceRemovedMale = {
+	type = character
+	
+	text = {
+		localization_key = extra_relation_first_cousin_twice_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_cousin_of_root_trigger = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinThriceRemovedFemale = {
+	type = character
+	
+	text = {
+		localization_key = extra_relation_first_cousin_thrice_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_cousin_of_root_trigger = yes
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinThriceRemovedMale = {
+	type = character
+	
+	text = {
+		localization_key = extra_relation_first_cousin_thrice_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_cousin_of_root_trigger = yes
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+######################################
+### Second column ####################
+######################################
+
+ExtraRelationGrandAunt = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grand_aunt_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_sibling = {
+					even_if_dead = yes
+					this = {
+						is_grandparent_of = root
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandUncle = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grand_uncle_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_sibling = {
+					even_if_dead = yes
+					this = {
+						is_grandparent_of = root
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinOnceRemovedFemaleB = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_first_cousin_once_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinOnceRemovedMaleB = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_first_cousin_once_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							any_sibling = {
+								even_if_dead = yes
+								this = {
+									is_grandparent_of = root
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							any_sibling = {
+								even_if_dead = yes
+								this = {
+									is_grandparent_of = root
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinOnceRemovedFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_once_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_sibling = {
+											even_if_dead = yes
+											this = {
+												is_grandparent_of = root
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinOnceRemovedMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_once_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_sibling = {
+											even_if_dead = yes
+											this = {
+												is_grandparent_of = root
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinTwiceRemovedFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_twice_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_sibling = {
+													even_if_dead = yes
+													this = {
+														is_grandparent_of = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinTwiceRemovedMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_twice_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_sibling = {
+													even_if_dead = yes
+													this = {
+														is_grandparent_of = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinThriceRemovedFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_thrice_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_sibling = {
+															even_if_dead = yes
+															this = {
+																is_grandparent_of = root
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinThriceRemovedMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_thrice_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_sibling = {
+															even_if_dead = yes
+															this = {
+																is_grandparent_of = root
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandAunt = {
+	type = character
+
+	######################################
+	### Third column #####################
+	######################################
+
+	text = {
+		localization_key = extra_relation_great_grand_aunt_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_sibling = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandUncle = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grand_uncle_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_sibling = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinTwiceRemovedFemaleB = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_first_cousin_twice_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										is_grandparent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFirstCousinTwiceRemovedMaleB = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_first_cousin_twice_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										is_grandparent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinOnceRemovedFemaleB = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_once_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_sibling = {
+									even_if_dead = yes
+									this = {
+										any_child = {
+											even_if_dead = yes
+											this = {
+												is_grandparent_of = root
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSecondCousinOnceRemovedMaleB = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_second_cousin_once_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_sibling = {
+									even_if_dead = yes
+									this = {
+										any_child = {
+											even_if_dead = yes
+											this = {
+												is_grandparent_of = root
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationThirdCousinFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_third_cousin_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_sibling = {
+											even_if_dead = yes
+											this = {
+												any_child = {
+													even_if_dead = yes
+													this = {
+														is_grandparent_of = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationThirdCousinMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_third_cousin_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_sibling = {
+											even_if_dead = yes
+											this = {
+												any_child = {
+													even_if_dead = yes
+													this = {
+														is_grandparent_of = root
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationThirdCousinOnceRemovedFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_third_cousin_once_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_sibling = {
+													even_if_dead = yes
+													this = {
+														any_child = {
+															even_if_dead = yes
+															this = {
+																is_grandparent_of = root
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationThirdCousinOnceRemovedMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_third_cousin_once_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_sibling = {
+													even_if_dead = yes
+													this = {
+														any_child = {
+															even_if_dead = yes
+															this = {
+																is_grandparent_of = root
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationThirdCousinTwiceRemovedFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_third_cousin_twice_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_sibling = {
+															even_if_dead = yes
+															this = {
+																any_child = {
+																	even_if_dead = yes
+																	this = {
+																		is_grandparent_of = root
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationThirdCousinTwiceRemovedMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_third_cousin_twice_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_sibling = {
+															even_if_dead = yes
+															this = {
+																any_child = {
+																	even_if_dead = yes
+																	this = {
+																		is_grandparent_of = root
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationThirdCousinThriceRemovedFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_third_cousin_thrice_removed_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_parent = {
+															even_if_dead = yes
+															this = {
+																any_sibling = {
+																	even_if_dead = yes
+																	this = {
+																		any_child = {
+																			even_if_dead = yes
+																			this = {
+																				is_grandparent_of = root
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationThirdCousinThriceRemovedMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_third_cousin_thrice_removed_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_parent = {
+					even_if_dead = yes
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										any_parent = {
+											even_if_dead = yes
+											this = {
+												any_parent = {
+													even_if_dead = yes
+													this = {
+														any_parent = {
+															even_if_dead = yes
+															this = {
+																any_sibling = {
+																	even_if_dead = yes
+																	this = {
+																		any_child = {
+																			even_if_dead = yes
+																			this = {
+																				is_grandparent_of = root
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+###################################
+### In-laws directly below ########
+###################################
+
+ExtraRelationDaughterinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_daughterinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_spouse = {
+					is_child_of = root
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationSoninlaw = {
+	type = character
+	
+	text = {
+		localization_key = extra_relation_soninlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_spouse = {
+					is_child_of = root
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandDaughterinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_granddaughterinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				is_granddaughterson_in_law_of_root_trigger = yes
+			}
+		}
+	}
+}
+
+ExtraRelationGrandSoninlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grandsoninlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				is_granddaughterson_in_law_of_root_trigger = yes
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandDaughterinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_granddaughterinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				is_great_granddaughterson_in_law_of_root_trigger = yes
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandSoninlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grandsoninlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				is_great_granddaughterson_in_law_of_root_trigger = yes
+			}
+		}
+	}
+}
+
+###################################
+### In-laws directly above ########
+###################################
+
+ExtraRelationMotherinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_motherinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_spouse = {
+							this = root
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationFatherinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_fatherinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_spouse = {
+							this = root
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandmotherinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grandmotherinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								any_spouse = {
+									this = root
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandfatherinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grandfatherinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								any_spouse = {
+									this = root
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandmotherinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grandmotherinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										any_spouse = {
+											this = root
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandfatherinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grandfatherinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_child = {
+					even_if_dead = yes
+					this = {
+						any_child = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										any_spouse = {
+											this = root
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+###################################
+### In-laws diagonally below ######
+###################################
+
+ExtraRelationNieceinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_nieceinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				is_nibling_in_law_of_root_trigger = yes
+			}
+		}
+	}
+}
+
+ExtraRelationNephewinlaw= {
+	type = character
+
+	text = {
+		localization_key = extra_relation_nephewinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				is_nibling_in_law_of_root_trigger = yes
+			}
+		}
+	}
+}
+
+ExtraRelationGrandNieceinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grand_nieceinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_nibling_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandNephewinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grand_nephewinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								is_nibling_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandNieceinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grand_nieceinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_nibling_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandNephewinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grand_nephewinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_parent = {
+									even_if_dead = yes
+									this = {
+										is_nibling_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationCousininlawFemale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_cousininlaw_female_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_sibling = {
+									this = {
+										is_parent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationCousininlawMale = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_cousininlaw_male_tooltip
+		trigger = {
+			scope:second = {
+				is_male = yes
+				any_spouse = {
+					this = {
+						any_parent = {
+							even_if_dead = yes
+							this = {
+								any_sibling = {
+									this = {
+										is_parent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+	###################################
+	### In-laws diagonally above ######
+	###################################
+	
+ExtraRelationAuntinlaw = {
+	type = character
+
+
+	text = {
+		localization_key = extra_relation_auntinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						is_parent_sibling_of_root_trigger = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationUncleinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_uncleinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						is_parent_sibling_of_root_trigger = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandAuntinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grand_auntinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGrandUncleinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_grand_uncleinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								is_grandparent_of = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandAuntinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grand_auntinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = yes
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										is_grandparent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ExtraRelationGreatGrandUncleinlaw = {
+	type = character
+
+	text = {
+		localization_key = extra_relation_great_grand_uncleinlaw_tooltip
+		trigger = {
+			scope:second = {
+				is_female = no
+				any_spouse = {
+					even_if_dead = yes
+					this = {
+						any_sibling = {
+							even_if_dead = yes
+							this = {
+								any_child = {
+									even_if_dead = yes
+									this = {
+										is_grandparent_of = root
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

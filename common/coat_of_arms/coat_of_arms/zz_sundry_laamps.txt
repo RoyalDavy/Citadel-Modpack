@@ -1,0 +1,25 @@
+dynn_Hoat = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_grey_light
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=agot_black_light
+		color2=rgb { 73 21 34 }
+		color3=rgb { 73 21 34 }
+		texture="rl_weller.dds"
+		instance={
+			scale={ -0.700000 0.700000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_lilac
+		texture="north_bolton_blood.dds"
+		instance={
+			depth=1.010000
+		}
+
+	}
+}

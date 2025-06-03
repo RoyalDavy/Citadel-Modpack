@@ -1,0 +1,303 @@
+﻿admiral = {
+	texture = "gfx/interface/icons/combat_effects/recently_disembarked_advantage.dds"
+	parent = councillor
+}
+
+castellan = {
+	texture = "gfx/interface/icons/message_feed/law.dds"
+	parent = councillor
+}
+
+maester = {
+	alias = { maesters }
+	texture = "gfx/interface/icons/message_feed/court_physician.dds"
+	parent = councillor
+}
+
+kingsguard = {
+	texture = "gfx/interface/icons/character_interactions/icon_kingsguard.dds"
+	parent = councillor
+}
+
+reaving = {
+	texture = "gfx/interface/icons/struggle_types/struggle_btw_phase_hostility.dds"
+	parent = activity
+}
+
+monastery_holding = {
+	alias = { monastery monasteries monastery_holdings }
+	parent = holding_type
+	texture = "gfx/interface/icons/holding_types_tab/monastery_holding.dds"
+}
+
+pirate_den_holding = {
+	alias = { pirate_den pirate_dens pirate_den_holdings }
+	parent = holding_type
+	texture = "gfx/interface/icons/faith/custom_faith_8.dds"
+}
+
+ruin_holding = {
+	alias = { ruin ruins ruin_holdings }
+	parent = holding_type
+	texture = "gfx/interface/icons/icon_holding_ruin.dds"
+}
+
+ruin_reconstruction = {
+	alias = { reconstruction reconstruction_effort }
+	parent = holding_type
+	texture = "gfx/interface/icons/character_interactions/inspiration.dds"
+}
+
+bastard_house = {
+	texture = "gfx/interface/icons/message_feed/dynasty.dds"
+	alias = { bastard_branch bastard_branches bastard_houses }
+}
+
+agot_dynastic_stability = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+}
+
+agot_legitimate_house = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+}
+
+agot_legitimate_house_the_north_remembers = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+	parent = agot_legitimate_house
+}
+
+agot_legitimate_house_iron_price = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+	parent = agot_legitimate_house
+}
+
+agot_personal_coa = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+}
+
+agot_mw_mega_wars = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+}
+
+agot_mw_royalists = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+	parent = agot_mw_mega_wars
+}
+
+agot_mw_neutrals = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+	parent = agot_mw_mega_wars
+}
+
+agot_mw_rebels = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+	parent = agot_mw_mega_wars
+}
+
+agot_mw_take_main_titles = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+	parent = agot_mw_mega_wars
+}
+
+agot_mw_expel_character = {
+	texture = gfx/interface/icons/message_feed/titles.dds
+	parent = agot_mw_mega_wars
+}
+
+story_content_robert_baratheon_282 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_rhaegar_targaryen_282 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_aerys_targaryen_282 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_tywin_lannister_282 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_eddard_stark_282 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_aegon_targaryen_259 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_maelys_blackfyre_259 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_viserys_targaryen_109 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_daemon_targaryen_109 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_corlys_velaryon_109 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_craghas_drahar_109 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_tytos_lannister_259 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_roger_reyne_259 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_maekar_targaryen_233 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+# Defiance of Duskendale 8277
+story_content_aerys_targaryen_277 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_rhaegar_targaryen_277 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_denys_darklyn_277 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_tywin_lannister_277 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+# Laughing Storm Rebellion 8239
+story_content_lyonel_baratheon_239 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_aegon_v_239 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_bloodraven_239 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_bittersteel_239 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_garlan_tyrell_239 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+story_content_runceford_redwyne_239 = {
+	texture = "gfx/interface/icons/court_position_types/champion_court_position.dds"
+	shown_in_encyclopedia = no
+}
+nw_govt = {
+	texture = "gfx/interface/icons/government_types/nights_watch_government.dds"
+	parent = government
+	alias = { nw_govt_i }
+}
+pirate_govt = {
+	texture = "gfx/interface/icons/government_types/pirate_government.dds"
+	parent = government
+	alias = { pirate_govt_i }
+}
+citadel_govt = {
+	texture = "gfx/interface/icons/government_types/the_citadel_government.dds"
+	parent = government
+	alias = { citadel_govt_i }
+}
+kg_govt = {
+	texture = "gfx/interface/icons/government_types/kingsguard_government.dds"
+	parent = government
+	alias = { kg_govt_i }
+}
+command_govt = {
+	texture = "gfx/interface/icons/government_types/command_government.dds"
+	parent = government
+	alias = { command_govt_i }
+}
+silent_sisters_govt = {
+	texture = "gfx/interface/icons/government_types/silent_sister_government.dds"
+	parent = government
+	alias = { silent_sisters_govt_i }
+}
+host_govt = {
+	texture = "gfx/interface/icons/government_types/feudal_government.dds"
+	parent = government
+	alias = { host_govt_i }
+}
+ruins_govt = {
+	texture = "gfx/interface/icons/government_types/ruins_government.dds"
+	parent = government
+	alias = { ruins_govt_i }
+}
+agot_spoils_of_war = {
+	texture = "gfx/interface/icons/war_score/icon_war_score_battles.dds"
+	parent = war
+}
+agot_bank = {
+	texture = "gfx/interface/icons/message_feed/money.dds"
+	alias = { agot_banking agot_banks }
+}
+agot_bank_director = {
+	texture = "gfx/interface/icons/message_feed/money.dds"
+	parent = agot_bank
+	alias = { agot_bank_directors }
+}
+agot_bank_profits = {
+	texture = "gfx/interface/icons/message_feed/money.dds"
+	parent = agot_bank
+	alias = { agot_bank_profit }
+}
+agot_bank_expenses = {
+	texture = "gfx/interface/icons/message_feed/money.dds"
+	parent = agot_bank
+	alias = { agot_bank_expense }
+}
+agot_bank_interest_rate = {
+	texture = "gfx/interface/icons/message_feed/money.dds"
+	parent = agot_bank
+	alias = { agot_bank_interest_rate_l agot_bank_interest_rates agot_bank_interest_rates_l }
+}
+agot_bank_risk_level = {
+	texture = "gfx/interface/icons/message_feed/money.dds"
+	parent = agot_bank
+	alias = { agot_bank_risk_level_l agot_bank_risk_levels agot_bank_risk_levels_l }
+}
+agot_bank_dividend_level = {
+	texture = "gfx/interface/icons/message_feed/money.dds"
+	parent = agot_bank
+	alias = { agot_bank_dividends agot_bank_dividend_level_l }
+}
+agot_ranger_camp = {
+	texture = "gfx/interface/icons/map_icons/map_icon_camp.dds"
+	alias = { agot_ranger_camps }
+	parent = domicile
+}
+agot_ranger_mission = {
+	texture = "gfx/interface/icons/message_feed/contract.dds"
+	alias = { agot_ranger_mission_plural }
+}
+agot_ranger_mission_plural = {
+	texture = "gfx/interface/icons/message_feed/contract.dds"
+	alias = { agot_ranger_mission }
+}
+agot_bastard_surnames = {
+	texture = "gfx/interface/icons/traits/bastard.dds"
+	parent = bastard
+	alias = { agot_surname }
+}
+chariot_cavalry = {
+	parent = men_at_arms
+}

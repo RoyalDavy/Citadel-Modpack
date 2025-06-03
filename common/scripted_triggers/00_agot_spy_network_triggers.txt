@@ -1,0 +1,9 @@
+﻿# spy network triggers
+
+agot_court_eligible_for_spy_network = {
+	NOR = {
+		has_trait = ruin
+		has_trait = nightswatch
+		has_trait = nightswatch_temp
+	}
+}

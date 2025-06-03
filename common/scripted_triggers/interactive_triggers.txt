@@ -1,0 +1,155 @@
+﻿interactive_liege_vassal_check_trigger = {
+	custom_description = {
+		text = "basic_ally_can_join_because_liege_or_vassals"
+		subject = scope:recipient
+		trigger_if = {
+			limit = {
+				scope:actor = {
+					is_defender_in_war = scope:target
+				}
+			}
+			scope:recipient = {
+				NOR = {
+					any_liege_or_above = {
+						is_attacker_in_war = scope:target
+					}
+					any_vassal = {
+						is_attacker_in_war = scope:target
+					}
+					AND = {
+						any_vassal_or_below = {
+							is_attacker_in_war = scope:target
+						}
+						NOT = {
+							scope:actor = {
+								target_is_liege_or_above = scope:recipient
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				scope:actor = {
+					is_attacker_in_war = scope:target
+				}
+			}
+			scope:recipient = {
+				NOR = {
+					any_liege_or_above = {
+						is_defender_in_war = scope:target
+					}
+					any_vassal_or_below = {
+						is_defender_in_war = scope:target
+					}
+				}
+			}
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+}
+
+can_potentially_call_ally_trigger = {
+	# Can never call vassals to your own wars (their obligations are met via taxes and levies!)
+	custom_description = {
+		text = cannot_call_vassal_to_war
+		OR = {
+			$JOINER$ = { NOT = { is_vassal_or_below_of = $WARRIOR$ }}
+			$JOINER$ = { is_vassal_or_below_of = $WARRIOR$ }
+		}
+	}
+}
+
+# faction
+interactive_common_can_character_join_trigger = {
+	common_character_validity_trigger = {
+		FACTION_TARGET = $FACTION_TARGET$
+	}
+	is_adult = yes
+	NOT = { has_truce = $FACTION_TARGET$ }
+	$FACTION_TARGET$ = {
+		NOT = { has_strong_hook = root }
+	}
+
+	OR = {
+		is_ai = no
+		NOR = {
+			has_relation_lover = $FACTION_TARGET$ 
+			has_relation_friend = $FACTION_TARGET$ 
+		}
+	}
+
+	$FACTION_TARGET$.highest_held_title_tier > tier_county
+
+	custom_description = {
+		text = character_has_faction_disabling_modifier
+		character_has_faction_disabling_modifier_trigger = yes
+	}
+}
+
+# This checks for DLC using the following trigger: has_dlc_feature = roads_to_power
+vassal_follows_directive_trigger = {
+	$VASSAL$ = { save_temporary_scope_as = directive_vassal }
+	$LIEGE$ = { save_temporary_scope_as = directive_liege }
+	scope:directive_vassal = {
+		OR = {
+			trigger_if = {
+				limit = {
+					has_dlc_feature = roads_to_power
+				}
+				custom_tooltip = {
+					text = has_admin_gov
+					government_allows = administrative
+				}
+			}
+			opinion = {
+				value >= 25
+				target = scope:directive_liege
+			}
+			has_trait = trusting
+			has_trait = loyal
+			scope:directive_liege = { has_relation_friend = scope:directive_vassal }
+			scope:directive_liege = { has_relation_lover = scope:directive_vassal }
+			scope:directive_liege = { has_strong_hook = scope:directive_vassal }
+			scope:directive_liege = { has_perk = absolute_control_perk }
+			scope:directive_liege = { has_perk = honored_to_serve_perk }
+			scope:directive_liege = { has_realm_law = crown_authority_3 }
+			scope:directive_liege = { legitimacy_level = 5 }
+		}
+	}
+}
+
+# Sometimes we disable these events for specific characters.
+harm_game_rule_enablement_trigger = {
+	# Disable entirely if harm_safe.
+	trigger_if = {
+		limit = { has_game_rule = harm_safe }
+		always = no
+	}
+	# harm_target_player_only
+	trigger_else_if = {
+		limit = { has_game_rule = harm_target_player_only }
+		is_ai = no
+	}
+	# harm_target_ai_only
+	trigger_else_if = {
+		limit = { has_game_rule = harm_target_ai_only }
+		# is_ai = yes
+		always = no
+	}
+	# harm_target_all
+	trigger_else = { always = yes }
+	# Never just kill the player if it'd utterly game-over them.
+	trigger_if = {
+		limit = { is_ai = no }
+		# Either because they have no heir.
+		exists = player_heir
+		# Or because they have an heir they can't survive with.
+		player_heir.dynasty ?= dynasty
+	}
+	# Immortals do not receive harm events, as they would be inevitably killed by them over a long enough period of time.
+	NOT = { has_trait = immortal }
+}

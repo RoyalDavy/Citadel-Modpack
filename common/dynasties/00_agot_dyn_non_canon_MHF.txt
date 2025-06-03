@@ -1,0 +1,8 @@
+﻿###
+### Non-Canon
+###
+dynn_Bricker = {
+	name = "dynn_Bricker"
+	culture = "riverlander"
+	motto = dynn_Bricker_motto # Built to Last
+}

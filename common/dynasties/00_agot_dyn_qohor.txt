@@ -1,0 +1,60 @@
+﻿############################           QOHOR            ############################
+####################################################################################
+
+### Main
+############################
+dynn_Hoat = {
+	name = "dynn_Hoat"
+	culture = "qohorik"
+}
+dynn_Mott = {
+	name = "dynn_Mott"
+	culture = "qohorik"
+}
+
+### Modcanon Houses
+############################
+dynn_Zhander = {
+	name = "dynn_Zhander"
+	culture = "qohorik"
+}
+dynn_Reymnos = {
+	name = "dynn_Reymnos"
+	culture = "qohorik"
+}
+dynn_Togott = {
+	name = "dynn_Togott"
+	culture = "qohorik"
+}
+dynn_Baroat = {
+	name = "dynn_Baroat"
+	culture = "qohorik"
+}
+dynn_Qarit = {
+	name = "dynn_Qarit"
+	culture = "qohorik"
+}
+dynn_Nartos = {
+	name = "dynn_Nartos"
+	culture = "qohorik"
+}
+dynn_Voatar = {
+	name = "dynn_Voatar"
+	culture = "qohorik"
+}
+dynn_Taladorys = {
+	name = "dynn_Taladorys"
+	culture = "qohorik"
+}
+dynn_Ragat = {
+	name = "dynn_Ragat"
+	culture = "qohorik"
+}
+dynn_Rolgott = {
+	name = "dynn_Rolgott"
+	culture = "qohorik"
+}
+dynn_Malavott = {
+	name = "dynn_Malavott"
+	culture = "qohorik"
+}

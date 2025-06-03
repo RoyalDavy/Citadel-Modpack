@@ -1,0 +1,1017 @@
+﻿### Essos
+
+agot_tradition_essosi_valyrian = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = diplomat.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:essosi_valyrian
+			any_parent_culture_or_above = {
+				this = culture:essosi_valyrian
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_black_wall_chariots = yes
+	}
+
+	character_modifier = {
+		different_culture_opinion = 10
+		elephant_cavalry_maintenance_mult = -0.10
+		monthly_piety_gain_per_dread_mult = 0.1
+		domain_tax_different_faith_mult = 0.1
+		monthly_influence = 0.5
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_volantene = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = laurel.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:volantene
+			any_parent_culture_or_above = {
+				this = culture:volantene
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_tiger_cloaks = yes
+	}
+
+	character_modifier = {
+		pikemen_maintenance_mult = -0.1
+		different_culture_opinion = 10
+		monthly_prestige_gain_per_dread_mult = 0.1
+		domain_tax_different_faith_mult = 0.1
+		army_siege_value_mult = 0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_braavosi = {
+	category = regional
+
+	layers = {
+		0 = steward
+		1 = mediterranean
+		4 = state_ransoming.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:braavosi
+			any_parent_culture_or_above = {
+				this = culture:braavosi
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_purple_sailors = yes
+	}
+
+	character_modifier = {
+		different_faith_opinion = 10
+		skirmishers_damage_add = 10
+		monthly_influence = 0.1
+		levy_reinforcement_rate = 0.1
+		coastal_advantage = 5
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_pentoshi = {
+	category = regional
+
+	layers = {
+		0 = steward
+		1 = mediterranean
+		4 = council.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:pentoshi
+			any_parent_culture_or_above = {
+				this = culture:pentoshi
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_indentured_legion = yes
+	}
+
+	character_modifier = {
+		skirmishers_maintenance_mult = 0.1
+		courtier_and_guest_opinion = 10
+		monthly_income_mult = 0.1
+		owned_personal_scheme_success_chance_add = 10
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_myrish = {
+	category = regional
+
+	layers = {
+		0 = steward
+		1 = mediterranean
+		4 = artisan.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:myrish
+			any_parent_culture_or_above = {
+				this = culture:myrish
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_myrish_crossbows = yes
+		shrewd_trait_more_valued = yes
+		city_holdings_more_dev = yes
+		better_workshop_bonuses = yes
+	}
+
+	character_modifier = {
+		archers_damage_add = 10
+		abduct_scheme_phase_duration_add = -10
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_tyroshi = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = ship.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:tyroshi
+			any_parent_culture_or_above = {
+				this = culture:tyroshi
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_ornate_helms = yes
+		better_smith_buildings = yes
+		city_holdings_more_levies = yes
+	}
+
+	character_modifier = {
+		pikemen_damage_add = 10
+		courtier_opinion = 10
+		murder_scheme_phase_duration_add = -10
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_lyseni = {
+	category = regional
+
+	layers = {
+		0 = intrigue
+		1 = mediterranean
+		4 = greeting.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:lyseni
+			any_parent_culture_or_above = {
+				this = culture:lyseni
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_weeping_guard = yes
+		next_level_trade_ports = yes
+		city_holdings_more_taxes = yes
+	}
+
+	character_modifier = {
+		close_relative_opinion = 10
+		heavy_infantry_damage_add = 10
+		seduce_scheme_phase_duration_add = -10
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_hartalari = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = malleable_subjects.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:hartalari
+			any_parent_culture_or_above = {
+				this = culture:hartalari
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_disputant_scouts = yes
+		better_farm_estate_bonuses = yes
+	}
+
+	character_modifier = {
+		light_cavalry_screen_add = 10
+		different_culture_opinion = 10
+		controlled_province_advantage = 10
+		hostile_raid_time = 0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_andal = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = western
+		4 = viking.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:andal
+			any_parent_culture_or_above = {
+				this = culture:andal
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_star_carved = yes
+	}
+
+	character_modifier = {
+		same_faith_opinion = 10
+		heavy_infantry_damage_add = 10
+		men_at_arms_recruitment_cost = -0.1
+		enemy_terrain_advantage = -2
+		uncontrolled_province_advantage = 2
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_andalosi = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = western
+		4 = speech.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:andalosi
+			any_parent_culture_or_above = {
+				this = culture:andalosi
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_qarlons_fallen = yes
+	}
+
+	character_modifier = {
+		same_faith_opinion = 10
+		skirmishers_screen_add = 10
+		retreat_losses = -0.1
+		faith_conversion_piety_cost_mult = 0.1
+		army_siege_value_mult = -0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_lorathi = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = western
+		4 = speech.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:lorathi
+			any_parent_culture_or_above = {
+				this = culture:lorathi
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_moroshi_pikes = yes
+		city_holding_fort_level_bonus = yes
+		better_farm_bonuses = yes
+	}
+
+	province_modifier = {
+		garrison_size = 0.10
+	}
+
+	character_modifier = {
+		guest_opinion = 10
+		pikemen_maintenance_mult = -0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_norvoshi = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = western
+		4 = jirga.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:norvoshi
+			any_parent_culture_or_above = {
+				this = culture:norvoshi
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_stair_guard = yes
+		outposts_building_bonuses = yes
+	}
+
+	character_modifier = {
+		religious_vassal_opinion = 10
+		heavy_infantry_damage_add = 10
+		controlled_province_advantage = 2
+		men_at_arms_limit = 2
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_qohorik = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = western
+		4 = forest.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:qohorik
+			any_parent_culture_or_above = {
+				this = culture:qohorik
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_cohort_of_the_three_thousand = yes
+		better_smith_buildings = yes
+	}
+
+	character_modifier = {
+		monthly_piety_gain_per_dread_mult = 0.01
+		ignore_opinion_of_different_faith = yes
+		defender_advantage = 2
+		pikemen_screen_add = 10
+		intimidated_vassal_tax_contribution_mult = 0.1
+		men_at_arms_cap = 2
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_astapori = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = indian
+		4 = noble.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:astapori
+			any_parent_culture_or_above = {
+				this = culture:astapori
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_unsullied = yes
+	}
+
+	character_modifier = {
+		pikemen_maintenance_mult = -0.1
+		glory_hound_opinion = 10
+		martial_per_piety_level = 1
+		levy_maintenance = -0.025
+		monthly_tyranny = 0.025
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_yunkish = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = indian
+		4 = noble.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:yunkish
+			any_parent_culture_or_above = {
+				this = culture:yunkish
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_collared_bows = yes
+	}
+
+	character_modifier = {
+		archers_screen_add = 10
+		parochial_opinion = 10
+		diplomacy_per_piety_level = 1
+		build_speed = -0.025
+		domain_tax_same_faith_mult = 0.025
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_meereenese = {
+	category = regional
+
+	layers = {
+		0 = steward
+		1 = indian
+		4 = noble.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:meereenese
+			any_parent_culture_or_above = {
+				this = culture:meereenese
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_pit_fighters = yes
+	}
+
+	character_modifier = {
+		heavy_infantry_maintenance_mult = -0.1
+		courtly_opinion = 10
+		stewardship_per_piety_level = 1
+		build_gold_cost = -0.025
+		monthly_court_grandeur_change_mult = 0.025
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_ghiscari = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = indian
+		4 = fight.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:ghiscari
+			any_parent_culture_or_above = {
+				this = culture:ghiscari
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_lockstep_legion = yes
+	}
+
+	character_modifier = {
+		pikemen_maintenance_mult = -0.1
+		pikemen_toughness_add = 10
+		opinion_of_male_rulers = 10
+		men_at_arms_limit = 2
+		men_at_arms_cap = 2
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_rhoynish = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = indian
+		4 = speech.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:rhoynish
+			any_parent_culture_or_above = {
+				this = culture:rhoynish
+			}
+		}
+	}
+
+	parameters = {
+		unlock_maa_mother_sworn = yes
+	}
+
+	character_modifier = {
+		independent_ruler_opinion = 10
+		skirmishers_screen_add = 10
+		owned_hostile_scheme_success_chance_add = -10
+		defender_advantage = 2
+		diplomatic_range_mult = 0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_chroyanar = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = indian
+		4 = greeting.dds
+	}
+
+	is_shown = {
+		always = no
+	}
+
+	parameters = {
+		unlock_maa_festival_guards = yes
+	}
+
+	character_modifier = {
+		powerful_vassal_opinion = 10
+		heavy_infantry_toughness_add = 10
+		no_water_crossing_penalty = yes
+		same_heritage_county_advantage_add = 2
+		army_pursuit_mult = 0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_mellar = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = indian
+		4 = svamp.dds
+	}
+
+	is_shown = {
+		always = no
+	}
+
+	parameters = {
+		unlock_maa_flower_spears = yes
+	}
+
+	character_modifier = {
+		same_culture_opinion = 10
+		pikemen_maintenance_mult = 0.1
+		wetlands_construction_gold_cost = -0.15
+		wetlands_holding_construction_gold_cost = -0.15
+		wetlands_attrition_mult = -0.1
+		wetlands_development_growth_factor = 0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_qhoynar = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = indian
+		4 = beacon_of_learning.dds
+	}
+
+	is_shown = {
+		always = no
+	}
+
+	parameters = {
+		unlock_maa_green_daggers = yes
+	}
+
+	character_modifier = {
+		different_faith_opinion = 10
+		skirmishers_damage_add = 10
+		skirmishers_max_size_add = 2
+		character_travel_speed_mult = 0.1
+		no_disembark_penalty = yes
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_sarhar = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = indian
+		4 = ceremony.dds
+	}
+
+	is_shown = {
+		always = no
+	}
+
+	parameters = {
+		unlock_maa_garden_guard = yes
+	}
+
+	character_modifier = {
+		same_faith_opinion = 10
+		heavy_infantry_maintenance_mult = -0.1
+		coastal_advantage = 2
+		accolade_glory_gain_mult = 0.1
+		retreat_losses = -0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
+agot_tradition_sarar = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = indian
+		4 = garden_architects.dds
+	}
+
+	is_shown = {
+		always = no
+	}
+
+	parameters = {
+		unlock_maa_grey_spears = yes
+	}
+
+	character_modifier = {
+		opinion_of_female_rulers = 10
+		pikemen_damage_add = 10
+		naval_movement_speed_mult = 0.10
+		martial_per_prestige_level = 2
+		cultural_head_acceptance_gain_mult = 0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}

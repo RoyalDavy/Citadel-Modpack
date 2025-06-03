@@ -1,0 +1,34 @@
+﻿l_english:
+
+ accolade_maa_archers_wild:0 "Retinue Archers"
+ accolade_maa_skirmishers_wild:0 "Retinue Skirmishers"
+ accolade_maa_pikes_wild:0 "Retinue Pikemen"
+ accolade_maa_outriders_wild:0 "Retinue Outriders"
+ accolade_maa_vanguards_wild:0 "Retinue Vanguard"
+ accolade_maa_lancers_wild:0 "Retinue Heavy Cavalry"
+ accolade_maa_crossbowers_wild:0 "Retinue Crossbowmen"
+ 
+  accolade_maa_archers_wild_flavor:1 "[retinue_maa|E]\n#F These elite archers are no rabble of poachers: they are relentlessly drilled to rain arrows accurately and at great speed.#!"
+ accolade_maa_skirmishers_wild_flavor:1 "[retinue_maa|E]\n#F A mix of lightly-equipped elite warriors and seasoned mercenary raiders, feared for their skill at ambushes and unconventional warfare.#!"
+ accolade_maa_pikes_wild_flavor:1 "[retinue_maa|E]\n#F Bedecked in fine armor and bearing long pikes, these infantrymen form the unbreakable core of their liege's army.#!"
+ accolade_maa_outriders_wild_flavor:1 "[retinue_maa|E]\n#F Atop swift steeds, these elite horsemen can outrun any foe and strike always where least expected and least welcome.#!"
+ accolade_maa_vanguards_wild_flavor:1 "[retinue_maa|E]\n#F Afforded pride of place in the thick of the fight, these disciplined and resplendent heavy infantry are a force few foes can withstand.#!"
+ accolade_maa_lancers_wild_flavor:1 "[retinue_maa|E]\n#F Coursing into the fray with thunderous clamor and true nobility, the serried ranks of these horsemen inspire a terrible awe on any battlefield.#!"
+ accolade_maa_crossbowers_wild_flavor:1 "[retinue_maa|E]\n#F Knight or knave: any can be pierced through by the carefully-placed iron bolts of these highly-trained crossbow-wielders.#!"
+
+
+ accolade_maa_archers_watch:0 "Retinue Archers"
+ accolade_maa_skirmishers_watch:0 "Retinue Skirmishers"
+ accolade_maa_pikes_watch:0 "Retinue Pikemen"
+ accolade_maa_outriders_watch:0 "Retinue Outriders"
+ accolade_maa_vanguards_watch:0 "Retinue Vanguard"
+ accolade_maa_lancers_watch:0 "Retinue Heavy Cavalry"
+ accolade_maa_crossbowers_watch:0 "Retinue Crossbowmen"
+  
+ accolade_maa_archers_watch_flavor:1 "[retinue_maa|E]\n#F These elite archers are no rabble of poachers: they are relentlessly drilled to rain arrows accurately and at great speed.#!"
+ accolade_maa_skirmishers_watch_flavor:1 "[retinue_maa|E]\n#F A mix of lightly-equipped elite warriors and seasoned mercenary raiders, feared for their skill at ambushes and unconventional warfare.#!"
+ accolade_maa_pikes_watch_flavor:1 "[retinue_maa|E]\n#F Bedecked in fine armor and bearing long pikes, these infantrymen form the unbreakable core of their liege's army.#!"
+ accolade_maa_outriders_watch_flavor:1 "[retinue_maa|E]\n#F Atop swift steeds, these elite horsemen can outrun any foe and strike always where least expected and least welcome.#!"
+ accolade_maa_vanguards_watch_flavor:1 "[retinue_maa|E]\n#F Afforded pride of place in the thick of the fight, these disciplined and resplendent heavy infantry are a force few foes can withstand.#!"
+ accolade_maa_lancers_watch_flavor:1 "[retinue_maa|E]\n#F Coursing into the fray with thunderous clamor and true nobility, the serried ranks of these horsemen inspire a terrible awe on any battlefield.#!"
+ accolade_maa_crossbowers_watch_flavor:1 "[retinue_maa|E]\n#F Knight or knave: any can be pierced through by the carefully-placed iron bolts of these highly-trained crossbow-wielders.#!"

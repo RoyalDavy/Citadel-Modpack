@@ -1,0 +1,31 @@
+﻿## AGOT Cities ADDED FILE - File relating to historical artifacts ##
+### Horn Of Winter ###
+vs_winter_horn_template = {
+	can_equip = { always = yes }
+	can_benefit = { is_capable_adult = yes }
+	fallback = {
+		#always = yes
+	}
+	unique = yes
+	ai_score = {
+		value = 0
+	}
+}
+
+castamere_throne_template = {
+	can_equip = {
+		custom_tooltip = {
+			text = claimed_castamere_desc
+			is_alive = yes
+		}
+		capital_province = title:b_castamere.title_province
+	}
+	can_benefit = {
+	}
+	fallback = {
+	}
+	unique = yes
+	ai_score = {
+		value = 100
+	}
+}

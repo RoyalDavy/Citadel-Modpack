@@ -1,0 +1,7 @@
+﻿msg_barony_pillaged = {
+	icon = "siege"
+	title = event_message_title
+	desc = event_message_effect
+	style = bad
+	soundeffect = @msg_bad_soundeffect
+}

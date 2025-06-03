@@ -1,0 +1,22 @@
+﻿is_command_county = {
+	OR = {
+		this = title:c_the_shadow_tower
+		this = title:c_eastwatch
+		this = title:b_the_nightfort
+		this = title:b_icemark
+		this = title:b_deep_lake
+		this = title:b_queensgate
+		this = title:b_oakenshield
+		this = title:b_woodswatch_by_the_pool
+		this = title:b_westwatch_by_the_bridge
+		this = title:b_sentinel_stand
+		this = title:b_greyguard
+		this = title:b_stonedoor
+		this = title:b_hoarfrost_hill
+		this = title:b_sable_hall
+		this = title:b_rimegate
+		this = title:b_long_barrow
+		this = title:b_the_torches
+		this = title:b_greenguard
+	}
+}

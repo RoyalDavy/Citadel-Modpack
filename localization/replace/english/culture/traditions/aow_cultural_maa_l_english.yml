@@ -1,0 +1,70 @@
+﻿l_english:
+
+ #Barony MAA
+ culture_parameter_unlock_maa_twins_guards:0 "Can recruit [GetMaA('twins_guards').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_raventree_bows:0 "Can recruit [GetMaA('raventree_bows').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_stone_hedge_footmen:0 "Can recruit [GetMaA('stone_hedge_footmen').GetName] as [men_at_arms|E]"
+ 
+ #House Targaryen MAA
+ culture_parameter_unlock_maa_dragon_knights:0 "Can recruit [GetMaA('dragon_knights').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_dragon_bows:0 "Can recruit [GetMaA('dragon_bows').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_dragon_scouts:0 "Can recruit [GetMaA('dragon_scouts').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_dragon_spears:0 "Can recruit [GetMaA('dragon_spears').GetName] as [men_at_arms|E]"
+ 
+ #Ironborn MAA
+ culture_parameter_unlock_maa_iron_bows:0 "Can recruit [GetMaA('iron_bows').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_iron_pikes:0 "Can recruit [GetMaA('iron_pikes').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_iron_riders:0 "Can recruit [GetMaA('iron_riders').GetName] as [men_at_arms|E]"
+ 
+ #Riverlands MAA
+ culture_parameter_unlock_maa_river_footmen:0 "Can recruit [GetMaA('river_footmen').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_river_scouts:0 "Can recruit [GetMaA('river_scouts').GetName] as [men_at_arms|E]"
+ 
+ #The North MAA
+ culture_parameter_unlock_maa_winter_knights:0 "Can recruit [GetMaA('winter_knights').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_winter_guards:0 "Can recruit [GetMaA('winter_guards').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_dread_spears:0 "Can recruit [GetMaA('dread_spears').GetName] as [men_at_arms|E]"
+ 
+ #The Vale MAA
+ culture_parameter_unlock_maa_vale_guards:0 "Can recruit [GetMaA('vale_guards').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_vale_archers:0 "Can recruit [GetMaA('vale_archers').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_vale_pikes:0 "Can recruit [GetMaA('vale_pikes').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_vale_knights:0 "Can recruit [GetMaA('vale_knights').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_vale_footmen:0 "Can recruit [GetMaA('vale_footmen').GetName] as [men_at_arms|E]"
+  
+ #The Westerlands
+ culture_parameter_unlock_maa_westerland_billmen:0 "Can recruit [GetMaA('westerland_billmen').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_westerland_footmen:0 "Can recruit [GetMaA('westerland_footmen').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_westerland_knights:0 "Can recruit [GetMaA('westerland_knights').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_castelry_rock_knights:0 "Can recruit [GetMaA('castelry_rock_knights').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_clegane_footmen:0 "Can recruit [GetMaA('clegane_footmen').GetName] as [men_at_arms|E]"
+ 
+ #The Stormlands
+ culture_parameter_unlock_maa_storm_footmen:0 "Can recruit [GetMaA('storm_footmen').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_marcher_footmen:0 "Can recruit [GetMaA('marcher_footmen').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_storm_pikes:0 "Can recruit [GetMaA('storm_pikes').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_storm_bows:0 "Can recruit [GetMaA('storm_bows').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_rainwood_hunters:0 "Can recruit [GetMaA('rainwood_hunters').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_storm_wardens:0 "Can recruit [GetMaA('storm_wardens').GetName] as [men_at_arms|E]"
+ 
+ #The Reach MAA
+ culture_parameter_unlock_maa_reach_marcher:0 "Can recruit [GetMaA('reach_marcher').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_highgarden_knights:0 "Can recruit [GetMaA('highgarden_knights').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_reach_pikes:0 "Can recruit [GetMaA('reach_pikes').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_reach_swords:0 "Can recruit [GetMaA('reach_swords').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_reach_scouts:0 "Can recruit [GetMaA('reach_scouts').GetName] as [men_at_arms|E]"
+ 
+ #Dorne
+ culture_parameter_unlock_maa_sand_archers:0 "Can recruit [GetMaA('sand_archers').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_sun_knights:0 "Can recruit [GetMaA('sun_knights').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_stone_scouts:0 "Can recruit [GetMaA('stone_scouts').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_starfall_guardians:0 "Can recruit [GetMaA('starfall_guardians').GetName] as [men_at_arms|E]"
+ 
+ #Oldtown
+ culture_parameter_unlock_maa_hightower_guards:0 "Can recruit [GetMaA('hightower_guards').GetName] as [men_at_arms|E]"
+ 
+ #King's Landing
+ culture_parameter_unlock_maa_gold_cloaks:0 "Can recruit [GetMaA('gold_cloaks').GetName] as [men_at_arms|E]"
+
+  
+

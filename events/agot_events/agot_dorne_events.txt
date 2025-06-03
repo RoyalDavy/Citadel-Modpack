@@ -1,0 +1,71 @@
+﻿namespace = agot_dorne
+
+agot_dorne.0001 = { # Oberyn/Ellaria
+	title = agot_dorne.0001.t
+	desc = agot_dorne.0001.desc
+	orphan = yes #called in history files
+	theme = romance_scheme
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = character:Uller_6
+		animation = flirtation_left
+	}
+
+	trigger = {
+		character:Uller_6 = {
+			is_alive = yes
+		}
+	}
+
+	immediate = {
+		character:Uller_6 = { save_scope_as = Ellaria }
+	}
+
+	option = {
+		name = agot_dorne.0001.a
+		set_relation_lover = character:Uller_6
+		set_relation_paramour = character:Uller_6
+		if = {
+			limit = {
+				AND = {
+					root = { is_landed = yes}
+					scope:Ellaria = { is_landed = no }
+					NOT = {
+						scope:Ellaria = { is_courtier_of = root }
+					}
+				}
+			}
+			add_courtier ?= scope:Ellaria
+		}
+		else_if = {
+			limit = {
+				AND = {
+					root = { is_landed = no }
+					scope:Ellaria = { is_landed = no }
+					NOT = {
+						scope:Ellaria = { is_courtier_of = title:k_dorne.holder }
+					}
+				}
+			}
+			title:k_dorne.holder = { add_courtier ?= scope:Ellaria }
+		}
+		scope:Ellaria = {
+			add_trait = paramour
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = agot_dorne.0001.b
+		scope:Ellaria = {
+			remove_trait = refusing_marriage
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}

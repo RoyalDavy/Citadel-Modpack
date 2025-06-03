@@ -1,0 +1,16 @@
+﻿disfigurement_visibility = {
+	
+	categories = {
+		tweaks
+	}
+	
+	default = masks_off
+	masks_off = {
+
+	}
+	
+	masks_on = {
+	
+	}
+
+}

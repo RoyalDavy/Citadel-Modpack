@@ -1,0 +1,17 @@
+﻿on_game_start = {
+	on_actions = {
+		kt_on_start
+	}
+}
+
+kt_on_start = {
+	effect = {
+		if = {
+			limit = { NOT = { has_global_variable = knight_trees_destroyed } }
+			set_global_variable = {
+				name = knight_trees_destroyed
+				value = 0
+			}
+		}
+	}
+}

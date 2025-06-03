@@ -1,0 +1,152 @@
+﻿GAME_OVER_CANNOT_PLAY_RUINS = {
+	first = GAME_OVER_CANNOT_PLAY_RUINS
+	third = GAME_OVER_CANNOT_PLAY_RUINS
+}
+
+GAME_OVER_CANNOT_PLAY_NW_VASSAL = {
+	first = GAME_OVER_CANNOT_PLAY_NW_VASSAL
+	third = GAME_OVER_CANNOT_PLAY_NW_VASSAL
+}
+
+AGOT_CANNOT_SWEAR_FEALTY_TO_PRE_WAR_LIEGE = {
+	first = AGOT_CANNOT_SWEAR_FEALTY_TO_PRE_WAR_LIEGE
+}
+
+DESIGNATE_HEIR_HAS_CHILD = {
+	first = DESIGNATE_HEIR_HAS_CHILD
+	third = DESIGNATE_HEIR_HAS_CHILD
+}
+
+agot_proclaim_it = {
+	first = I_PROCLAIM_IT
+}
+
+agot_proclaim_pk = {
+	first = I_PROCLAIM_PK
+}
+
+form_btw_must_end_struggle_trigger = {
+	first_not = FORM_BTW_MUST_END_STRUGGLE_TRIGGER
+}
+
+not_primary_title_kingdom_trigger = {
+	first_not = NOT_PRIMARY_TITLE_KINGDOM_TRIGGER
+}
+
+agot_expose_true_parentage_decision_requirement = {
+	first = agot_expose_true_parentage_decision_requirement_yes
+}
+
+rv_no_revenge_target_trigger = {
+	first = rv_no_revenge_target
+}
+
+agot_white_harbor_trigger = {
+	first = agot_wh_mint_loc
+	first_not = agot_wh_mint_loc
+	third = agot_wh_mint_loc
+	third_not = agot_wh_mint_loc
+}
+
+has_slavery_law_cooldown = {
+	first_not = SLAVERY_LAW_IS_ON_COOLDOWN
+}
+
+slavery_criminal_under_faith = {
+	first_not = SLAVERY_CRIMINAL_UNDER_FAITH
+}
+
+has_dragonpit_law_cooldown = {
+	first_not =	DRAGONPIT_LAW_IS_ON_COOLDOWN
+}
+
+look_into_flames_decision_no_cooldown_requirement = {
+	first = look_into_flames_decision_no_cooldown
+}
+
+agot_stolen_artifact_from_artifact_keeper_dec_trigger = {
+	first = agot_stolen_artifact_from_artifact_keeper_dec_desc
+	first_not = agot_stolen_artifact_from_artifact_keeper_dec_desc
+}
+
+agot_not_wilding_desc_trigger = {
+	first = agot_not_wilding_desc_trigger_desc
+	first_not = agot_not_wilding_desc_trigger_desc
+}
+
+hof_ask_for_claim_must_higher_one_tier = {
+	first = hof_ask_for_claim_must_higher_one_tier_desc
+	first_not = hof_ask_for_claim_must_higher_one_tier_desc
+}
+
+cannot_grant_small_council_as_vassal = {
+	third_not = CANNOT_GRANT_OWN_SC_VASSAL_THIRD
+}
+
+is_available = {
+	third = is_available_desc_third
+	third_not = NOT_is_available_desc_third
+}
+
+agot_holy_site_fallback_trigger = {
+	global_not = NOT_agot_holy_site_fallback_trigger
+}
+
+agot_braavos_trigger = {
+	third_not = NOT_agot_braavos_trigger
+}
+
+holy_site_faith_of_the_seven_trigger = {
+	global_not = NOT_holy_site_faith_of_the_seven_trigger
+}
+
+title_uses_legitimate_house_mechanic = {
+	global = agot_has_legitimate_house_trigger_global
+	global_not = agot_has_no_legitimate_house_trigger_global
+	third = agot_has_legitimate_house_trigger_third
+	third_not = agot_has_no_legitimate_house_trigger_third
+}
+
+title_is_held_by_legitimate_house = {
+	global = agot_is_held_by_legitimate_house_trigger_global
+	global_not = agot_is_not_held_by_legitimate_house_trigger_global
+	third = agot_is_held_by_legitimate_house_trigger_third
+	third_not = agot_is_not_held_by_legitimate_house_trigger_third
+}
+
+title_is_not_held_by_legitimate_house = {
+	global = agot_is_not_held_by_legitimate_house_trigger_global
+	global_not = agot_is_held_by_legitimate_house_trigger_global
+	third = agot_is_not_held_by_legitimate_house_trigger_third
+	third_not = agot_is_held_by_legitimate_house_trigger_third
+}
+
+title_current_house_can_become_legitimate = {
+	global = agot_current_house_can_become_legitimate_trigger_global
+	global_not = agot_current_house_cannot_become_legitimate_trigger_global
+	third = agot_current_house_can_become_legitimate_trigger_third
+	third_not = agot_current_house_cannot_become_legitimate_trigger_third
+}
+
+is_legitimate_house_of_primary_title = {
+	global = agot_is_legitimate_house_of_primary_title_trigger_global
+	global_not = agot_is_not_legitimate_house_of_primary_title_trigger_global
+	first = agot_is_legitimate_house_of_primary_title_trigger_first
+	first_not = agot_is_not_legitimate_house_of_primary_title_trigger_first
+}
+
+agot_grant_title_blocked = {
+	third_not = agot_grant_title_blocked
+}
+
+agot_can_afford_faceless_child_price = {
+	third = agot_can_afford_faceless_child_price_trigger_third
+}
+
+agot_can_afford_faceless_artifact_price = {
+	third = agot_can_afford_faceless_artifact_price_trigger_third
+}
+
+agot_can_afford_faceless_blood_price = {
+	third = agot_can_afford_faceless_blood_price_trigger_third
+}

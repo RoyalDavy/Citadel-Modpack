@@ -1,0 +1,33 @@
+﻿#KG Custom Loc
+LP_FEUDAL_TITLE = {
+	type = character
+
+	text = { # Principality
+		trigger = {
+			agot_kingdom_tier_is_real_kingdom_trigger = yes
+			OR = {
+				culture = { has_cultural_pillar = heritage_rhoynish }
+				AND = {
+					dynasty ?= dynasty:dynn_Targaryen
+					liege.dynasty ?= dynasty:dynn_Targaryen
+				}
+			}
+		}
+		localization_key = kingdom_lp_feudal_independent_rhoynish
+	}
+
+	text = { # Lord Paramountcy
+		trigger = {
+			agot_kingdom_tier_is_real_kingdom_trigger = no
+		}
+		localization_key = kingdom_lp_feudal_default
+	}
+
+	text = { # Kingdom
+		trigger = {
+			agot_kingdom_tier_is_real_kingdom_trigger = yes
+			NOT = { culture = { has_cultural_pillar = heritage_rhoynish } }
+		}
+		localization_key = empire_lp_feudal_default
+	}
+}

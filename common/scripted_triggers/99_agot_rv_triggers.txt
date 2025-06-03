@@ -1,0 +1,52 @@
+﻿rv_rescue_potential_check = {
+	OR = {
+		any_heir = {
+			is_imprisoned = yes
+		}
+		any_relation = {
+			type = lover
+			is_imprisoned = yes
+		}
+		any_relation = {
+			type = friend
+			is_imprisoned = yes
+		}
+		any_relation = {
+			type = esr_family_friend
+			is_imprisoned = yes
+		}
+		any_spouse = {
+			is_imprisoned = yes
+		}
+		any_close_family_member = {
+			OR = {
+				is_imprisoned = yes
+				any_consort = {
+					reverse_has_opinion_modifier = {
+						modifier = forced_me_concubine_marriage_opinion
+						target = prev
+					}
+				}
+			}
+		}
+		any_extended_family_member = {
+			OR = {
+				is_imprisoned = yes
+				any_consort = {
+					reverse_has_opinion_modifier = {
+						modifier = forced_me_concubine_marriage_opinion
+						target = prev
+					}
+				}
+			}
+		}
+		any_former_spouse = {
+			any_consort = {
+				reverse_has_opinion_modifier = {
+					modifier = forced_me_concubine_marriage_opinion
+					target = prev
+				}
+			}
+		}
+	}
+}

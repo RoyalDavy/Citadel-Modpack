@@ -1,0 +1,5 @@
+﻿dragon_flight = {
+	effect_2d = {
+		reference = "gfx/interface/illustrations/event_scenes/Dragon Event_1.bk2"
+	}
+}

@@ -1,0 +1,27 @@
+﻿l_english: 
+ must_upgrade_moat_cailin:0 "Moat Cailin Special Building must first be upgraded to Level 7"
+
+ building_planky_town_special: "Planky Town"
+ building_planky_town_special_desc: "The Planky Town is the largest and most populous settlement in Dorne and serves as its chief harbor.\n\nIt sits at the mouth of the Greenblood, with planks instead of streets lending to its name and many of the houses, halls, and shops being made of poleboats, barges, and merchant ships lashed together with hempen rope and floating on the tide.\n\nThe trading galleys of the Free Cities are known to call upon Planky Town and the elusive orphans of the Greenblood trade with merchants from across the narrow sea at the Planky Town."
+ building_type_planky_town_special: "Planky Town"
+
+ building_karhold_0l: "The Grey Motte"
+ building_karhold_01_desc: "Karhold was a strong fortress even before Karlon Start took possession. Situated atop two massive hills and connected by a great hemp and hewn lumber bridge, the castles are provided formidable natural defenses.\n\nThen, of course, there's the massive walls."
+ building_type_karhold_01_special: "Karhold Keep"
+
+
+ rule_use_cow_moat_cailin: "#V #bold COW-AGOT#!#!: Moat Cailin 3D Model"
+ setting_yes_use_cow_moat_cailin: "Use COW-AGOT"
+ setting_yes_use_cow_moat_cailin_desc: "#P Default#!: Uses the models from COW-AGOT for Moat Cailin as it is rebuilt."
+ setting_no_use_cow_moat_cailin: "Use AGOT"
+ setting_no_use_cow_moat_cailin_desc: "Moat Cailin will use 3D models made by the AGOT mod instead of the model from COW-AGOT as you rebuild it."
+
+
+ rule_use_cow_runestone: "#V #bold COW-AGOT#!#!: Runestone Modifiers"
+ setting_yes_use_cow_runestone: "Use COW-AGOT"
+ setting_yes_use_cow_runestone_desc: "#P Default#!: Runstone gets an additional +1 gold, a 30% county tax multipler, and a 20% county development multipler added to the modifiers from AGOT."
+ setting_no_use_cow_runestone: "Use AGOT"
+ setting_no_use_cow_runestone_desc: "Runestune gets its normal modifiers as set by AGOT."
+
+
+

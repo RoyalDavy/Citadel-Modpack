@@ -1,0 +1,19 @@
+﻿l_english:
+
+ light_footmen_wild:0 "Free Folk Skirmishers" 
+ light_footmen_wild_flavor:0 "#F These wildling warriors are skilled with melee weapons and pose a serious threat to heavily armored opponents, easily finding weak spots in their defenses.#!"
+ 
+ bowmen_wild:0 "Free Folk Bowmen" 
+ bowmen_wild_flavor:0 "#F Skillful wildling archers fill the air with arrows, devastating the foremost enemy troops.#!"
+ 
+ light_horsemen_wild:0 "Free Folk Horsemen"
+ light_horsemen_wild_flavor:0 "#F Light and swift, these horsemen are excellent at flanking, and devastating when pursuing routed enemies.#!"
+ 
+ pikemen_unit_wild:0 "Free Folk Spearmen" 
+ pikemen_unit_wild_flavor:0 "#F Closing the formation, these fearsome fighters with long spears form blank walls of spears that will stop any cavalry.#!"
+ 
+ armored_footmen_wild:0 "Free Folk Footmen" 
+ armored_footmen_wild_flavor:0 "#F Heavily armed and well-trained, these troops specialize in smashing massed infantry.#!"
+ 
+ armored_horsemen_wild:0 "Free Folk Cavalry" 
+ armored_horsemen_wild_flavor:0 "#F Heavily armed and armored, these horsemen dominate warfare in the open plains.#!"

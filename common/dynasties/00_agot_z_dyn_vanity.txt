@@ -1,0 +1,221 @@
+﻿############################        VANITY HOUSES       ############################
+####################################################################################
+
+### CK3AGOT Team
+############################
+dynn_vanity_Robin = {
+	name = "dynn_vanity_Robin"
+	culture = stormlander
+}
+dynn_Aranys = {
+	name = "dynn_Aranys"
+	culture = "high_valyrian"
+	motto = "dynn_Aranys_motto" #Higher We Soar
+}
+
+### CK2AGOT Team
+############################
+dynn_vanity_Knuckey = {
+	name = "dynn_vanity_Knuckey"
+	culture = reachman
+}
+dynn_vanity_Pandred = {
+	name = "dynn_vanity_Pandred"
+		culture = reachman
+}
+dynn_vanity_Clohessy = {
+	name = "dynn_vanity_Clohessy"
+		culture = reachman
+}
+dynn_vanity_Foxheart = {
+	name = "dynn_vanity_Foxheart"
+	culture = reachman
+	motto = dynn_vanity_Foxheart_motto # We Hunt in Snow
+}
+dynn_vanity_Loch = {
+	name = "dynn_vanity_Loch"
+	culture = reachman
+}
+dynn_vanity_MillerR = {
+	name = "dynn_Miller"
+	culture = westerman
+}
+dynn_vanity_Graymarch = {
+	name = "dynn_vanity_Graymarch"
+	 culture = westerman
+}
+dynn_vanity_Trevelyan = {
+	name = "dynn_vanity_Trevelyan"
+	culture = salt_dornish
+}
+dynn_vanity_Minshull = {
+	name = "dynn_vanity_Minshull"
+	culture = stormlander
+}
+dynn_vanity_Gosling = {
+	name = "dynn_vanity_Gosling"
+	culture = riverlander
+}
+dynn_vanity_Albanese = {
+	name = "dynn_vanity_Albanese"
+	culture = riverlander
+}
+dynn_vanity_Noyan = {
+	name = "dynn_vanity_Noyan"
+	culture = riverlander
+}
+dynn_vanity_Hamilton = {
+	name = "dynn_vanity_Hamilton"
+	culture = northman
+}
+dynn_vanity_Trent = {
+	name = "dynn_vanity_Trent"
+	culture = northman
+}
+
+############################          CONTESTS          ############################
+####################################################################################
+
+### Royal Progress CK3 Contest Winners
+############################
+dynn_Loreley = { # Royal Progress 1
+	name = "dynn_Loreley"
+	culture = "sisterman"
+	motto = dynn_Loreley_motto # All Drowned, All Devoured
+}
+dynn_Covenne = { # Royal Progress 2
+	name = "dynn_Covenne"
+	culture = "marcher"
+	motto = dynn_Covenne_motto # Heard by the Unwise
+}
+dynn_Clyffhoof = { # Royal Progress 3
+	name = "dynn_Clyffhoof"
+	culture = "stone_dornish"
+	motto = dynn_Clyffhoof_motto # Ever Upward
+}
+dynn_Tetting = { # Royal Progress 4
+	name = "dynn_Tetting"
+	culture = "westerman"
+	motto = dynn_Tetting_motto # Through Death and Fire
+}
+dynn_Ashtyde = { # Royal Progress 5
+	name = "dynn_Ashtyde"
+	culture = "northman"
+	motto = dynn_Ashtyde_motto # The Wind Yet Howls
+}
+dynn_Whitebow = { # Royal Progress 6
+	name = "dynn_Whitebow"
+	culture = "riverlander"
+	motto = dynn_Whitebow_motto # We Stalk The Night
+}
+dynn_Redsteel = { # Royal Progress 7
+	name = "dynn_Redsteel"
+	culture = "stone_dornish"
+	motto = dynn_Redsteel_motto # The Vultures Bleed (fox)
+}
+dynn_Moil = { # Royal Progess 8
+	name = "dynn_Moil"
+	culture = "northman"
+	motto = dynn_Moil_motto # We Build, We Feast (fox)
+}
+dynn_Dunkel = { # Royal Progess 9
+	name = "dynn_Dunkel"
+	culture = "crownlander"
+	motto = dynn_Dunkel_motto # Throught Hammer and Stone
+}
+dynn_Whitewood = { # Royal Progess 10
+	name = "dynn_Whitewood"
+	culture = "reachman"
+	motto = dynn_Whitewood_motto # We Cut To The Bone
+}
+dynn_Dule = { # Royal Progess 11
+	name = "dynn_Dule"
+	culture = "reachman"
+	motto = dynn_Dule_motto # We Do Not Weep
+}
+dynn_Rennock = { # Royal Progess 12
+	name = "dynn_Rennock"
+	culture = "stormlander"
+	motto = dynn_Rennock_motto # In Our Sights
+}
+dynn_Moonfell = { # Royal Progess 13
+	name = "dynn_Moonfell"
+	culture = "valeman"
+	motto = dynn_Moonfell_motto # Light Ever Gleaming
+}
+dynn_Rust = { # Royal Progess 14
+	name = "dynn_Rust"
+	culture = "riverlander"
+	motto = dynn_Rust_motto # Guided By Tides
+}
+dynn_Voyald = { # Royal Progess 15
+	name = "dynn_Voyald"
+	culture = "westerman"
+	motto = dynn_Voyald_motto # We See Clear
+}
+dynn_Talbot = { # Royal Progess 16
+	name = "dynn_Talbot"
+	culture = "reachman"
+	motto = dynn_Talbot_motto # One Loyal, Never Again
+}
+
+### First CK2 AAR Competition
+############################
+dynn_Badics = { #EtzelHoveri
+	name = "dynn_Badics"
+	culture = valeman
+}
+dynn_Saul = { #Nicholias
+	name = "dynn_Saul"
+	culture = valeman
+}
+dynn_Back = { #Andarias
+	name = "dynn_Back"
+	culture = valeman
+}
+
+### Second CK2 AAR Competition
+############################
+dynn_vanity_Valkyn = { #Jimthepocket
+	name = "dynn_vanity_Valkyn"
+	culture = andal
+}
+dynn_vanity_Dea = { #Deaghaidh
+	name = "dynn_vanity_Dea"
+	culture = andal
+}
+#dynn_vanity_Darkholme = { #Kingslayer
+#	name = "dynn_vanity_Darkholme" #A yellow tiger on a green and red background
+#	culture = andal
+#}
+dynn_vanity_Grammaton = { #Pande
+	name = "dynn_vanity_Grammaton"
+	culture = andal
+}
+dynn_vanity_Black = { #Blackbishop (NW)
+	name = "dynn_vanity_Black"
+	culture = andal
+}
+dynn_vanity_Coenigct = { #cyrileom (NW)
+	name = "dynn_vanity_Coenigct"
+	culture = andal
+}
+dynn_vanity_Dimaechrus = { #xoatl (NW)
+	name = "dynn_vanity_Dimaechrus"
+	culture = andal
+}
+dynn_vanity_Droughtwell = { #Gogkti  (NW)
+	name = "dynn_vanity_Droughtwell"
+	culture = sand_dornish
+}
+dynn_vanity_Durante = { #KaiserBenjamin (NW)
+	name = "dynn_vanity_Durante"
+	culture = andal
+}
+
+### Third CK2 AAR Competition
+############################
+dynn_Vunatis = { #AlfredtheLion
+	name = "dynn_Vunatis"
+	culture = lyseni
+}

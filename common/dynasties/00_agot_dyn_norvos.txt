@@ -1,0 +1,85 @@
+﻿############################          NORVOS            ############################
+####################################################################################
+
+### Main
+############################
+dynn_Golathis = {
+	name = "dynn_Golathis" #Historian
+	culture = "norvoshi"
+}
+dynn_Hotah = {
+	name = "dynn_Hotah"
+	culture = "norvoshi"
+}
+
+### Modcanon Houses
+############################
+dynn_Nyelossos = {
+	name = "dynn_Nyelossos"
+	culture = "norvoshi"
+}
+dynn_Daryth = {
+	name = "dynn_Daryth"
+	culture = "norvoshi"
+}
+dynn_Morvdys = {
+	name = "dynn_Morvdys"
+	culture = "norvoshi"
+}
+dynn_Narlan = {
+	name = "dynn_Narlan"
+	culture = "norvoshi"
+}
+dynn_Votyris = {
+	name = "dynn_Votyris"
+	culture = "norvoshi"
+}
+dynn_Falos = {
+	name = "dynn_Falos"
+	culture = "norvoshi"
+}
+dynn_Golden_Axe_Order = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Golden_Axe_Order"
+	culture = "norvoshi"
+}
+dynn_Black_Axe_Order = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Black_Axe_Order"
+	culture = "norvoshi"
+}
+dynn_Order_of_Nyel = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Order_of_Nyel"
+	culture = "norvoshi"
+}
+dynn_Order_of_the_Bear = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Order_of_the_Bear"
+	culture = "norvoshi"
+}
+dynn_Order_of_Service = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Order_of_Service"
+	culture = "norvoshi"
+}
+dynn_Iron_Order = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Iron_Order"
+	culture = "norvoshi"
+}
+dynn_Order_of_War = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Order_of_War"
+	culture = "norvoshi"
+}
+dynn_White_Beard_Order = {
+	prefix = "dynnp_of_the"
+	name = "dynn_White_Beard_Order"
+	culture = "norvoshi"
+}
+dynn_Inspiration_Order = {
+	prefix = "dynnp_of_the"
+	name = "dynn_Inspiration_Order"
+	culture = "norvoshi"
+}

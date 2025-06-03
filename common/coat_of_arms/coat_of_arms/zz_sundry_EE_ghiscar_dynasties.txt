@@ -1,0 +1,1006 @@
+﻿dynn_Loraq = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 179 159 125 }
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=agot_brown_dark
+		color2=agot_red
+		texture="ce_tawney.dds"
+		instance={
+			position={ 0.720000 0.550000 }
+			scale={ -0.750000 1.000000 }
+			rotation=300
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_brown_dark
+		color2=agot_red
+		color3=agot_grey
+		texture="ce_tawney.dds"
+		instance={
+			position={ 0.280000 0.550000 }
+			scale={ 0.750000 1.000000 }
+			depth=1.010000
+			rotation=60
+		}
+
+	}
+}
+
+dynn_Galare = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_green
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=agot_orange_light
+		color2=agot_orange_light
+		color3=agot_orange_light
+		texture="ce_harpy_2head.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.800000 0.800000 }
+		}
+
+	}
+}
+
+dynn_Reznak = {
+	pattern="pattern_solid.dds"
+	color1=agot_orange
+	color2=yellow
+	color3=green
+	colored_emblem={
+		color1=agot_white
+		texture="tyrosh_title_sphinx.dds"
+		instance={
+			scale={ -0.900000 0.900000 }
+		}
+
+	}
+}
+
+dynn_Eraz = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 49 29 86 }
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=yellow
+		texture="ce_leaf_palm_02.dds"
+		instance={
+			position={ 0.370000 0.520000 }
+			scale={ -0.850000 0.850000 }
+			rotation=330
+		}
+
+		instance={
+			position={ 0.630000 0.520000 }
+			scale={ 0.850000 0.850000 }
+			depth=1.010000
+			rotation=30
+		}
+
+	}
+}
+
+dynn_Rhaezn = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 164 119 53 }
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=agot_russet
+		color2=agot_red_dark
+		color3=agot_white
+		texture="do_offal_aurochs.dds"
+		instance={
+			position={ 0.500000 0.710000 }
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_black
+		color3=agot_black
+		texture="ce_lark.dds"
+		instance={
+			position={ 0.500000 0.290000 }
+			scale={ 0.850000 0.850000 }
+		}
+
+	}
+}
+
+dynn_Yunzak = {
+	pattern="pattern_solid.dds"
+	color1=agot_black_light
+	color2=yellow
+	color3=blue
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		color2=agot_mud_red
+		color3=agot_white
+		texture="re_vulantis.dds"
+	}
+}
+
+dynn_Mazlaq = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 47 45 145 }
+	color2=yellow
+	color3=black
+	colored_emblem={
+		color1=yellow
+		color2=agot_black
+		texture="ce_spider.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.800000 0.800000 }
+		}
+
+	}
+}
+
+dynn_Nakloz = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 71 36 36 }
+	color2=yellow
+	color3=black
+	colored_emblem={
+		color1=rgb { 94 35 54 }
+		texture="vale_bleaker.dds"
+		instance={
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_black
+		color3=agot_grey_light
+		texture="asoiaf_spear_skulls.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.850000 0.850000 }
+		}
+
+		instance={
+			position={ 0.220000 0.480000 }
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+		instance={
+			position={ 0.780000 0.480000 }
+			scale={ 0.700000 0.700000 }
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Grazlar = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 39 75 43 }
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=agot_orange_light
+		texture="ce_sun_01.dds"
+		instance={
+			position={ 0.280000 0.200000 }
+			scale={ 0.300000 0.300000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_silver
+		color2=agot_black
+		color3=agot_white
+		texture="riverlands_haynes_sheep.dds"
+		instance={
+			position={ 0.500000 0.600000 }
+			scale={ -0.800000 0.800000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Ullhor = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_red_dark
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=agot_black
+		color2=rgb { 141 79 51 }
+		color3=agot_white
+		texture="asoiaf_harpy.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_black
+		texture="historical_plain.dds"
+		instance={
+			position={ 0.950000 0.500000 }
+			scale={ 0.300000 1.000000 }
+		}
+
+		instance={
+			position={ 0.050000 0.500000 }
+			scale={ -0.300000 1.000000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Pahl = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 194 116 173 }
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=agot_white
+		color2=agot_white
+		texture="do_trevanion.dds"
+		instance={
+			position={ 0.500000 0.470000 }
+			scale={ -0.800000 0.800000 }
+		}
+
+	}
+}
+
+dynn_Qaggaz = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 70 37 20 }
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=yellow
+		color2=rgb { 196 153 34 }
+		color3=agot_black
+		texture="re_marchment.dds"
+		instance={
+			position={ 0.500000 0.470000 }
+			scale={ 0.800000 -0.800000 }
+		}
+
+	}
+}
+
+dynn_Jaghaz = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 65 63 63 }
+	color2=blue
+	color3=yellow
+	color4=yellow
+	colored_emblem={
+		color1=rgb { 255 255 255 }
+		color2=agot_black
+		color3=rgb { 196 153 34 }
+		texture="rl_renn_spear.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.900000 0.900000 }
+			depth=2.010000
+			rotation=40
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_black
+		texture="pirate_forryl_skull.dds"
+		instance={
+			position={ 0.700000 0.680000 }
+			scale={ 0.450000 0.450000 }
+		}
+
+		instance={
+			position={ 0.300000 0.250000 }
+			scale={ 0.450000 0.450000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Grazdan = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 26 42 58 }
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=white
+		texture="ce_portcullis_1.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+}
+
+dynn_Ahlaq = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 139 119 59 }
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=rgb { 142 141 156 }
+		color2=agot_black
+		texture="do_veckryn_locust.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+}
+
+dynn_Hazkar = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 79 150 215 }
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=agot_black
+		color2=agot_black
+		texture="asoiaf_hound.dds"
+		instance={
+			scale={ -0.800000 0.800000 }
+		}
+
+	}
+}
+
+dynn_Zhak = {
+	pattern="pattern_solid.dds"
+	color1=agot_orange
+	color2=yellow
+	color3=blue
+	colored_emblem={
+		color1=white
+		color2=agot_black
+		texture="no_burley_knife.dds"
+		instance={
+			position={ 0.550000 0.470000 }
+			scale={ -0.800000 0.800000 }
+			rotation=325
+		}
+
+		instance={
+			position={ 0.450000 0.470000 }
+			scale={ 0.800000 0.800000 }
+			depth=1.010000
+			rotation=35
+		}
+
+	}
+}
+
+dynn_Faez = {
+	pattern="pattern_vertical_split_01.dds"
+	color1=rgb { 144 117 35 }
+	color2=agot_green
+	color3=red
+	colored_emblem={
+		color1=agot_white
+		color2=agot_black
+		color3=agot_red
+		texture="asoiaf_arrowhead.dds"
+		instance={
+			position={ 0.700000 0.470000 }
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_black
+		color3=agot_white
+		texture="asoiaf_arrowhead.dds"
+		instance={
+			position={ 0.300000 0.470000 }
+			scale={ -0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Ghazeen = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 46 154 148 }
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=agot_white
+		color2=agot_black
+		texture="asoiaf_chains_diagonal.dds"
+		instance={
+			position={ 0.500000 0.750000 }
+			scale={ 1.000000 -1.000000 }
+		}
+
+		instance={
+			position={ 0.500000 0.250000 }
+			depth=1.010000
+		}
+
+		instance={
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Naqqan = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 61 111 41 }
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=agot_black
+		color2=agot_black
+		texture="ce_religion_jain_generic.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+		}
+
+	}
+}
+
+dynn_Zherzyn = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 68 16 33 }
+	color2=yellow
+	color3=blue
+	colored_emblem={
+		color1=agot_cream
+		texture="asoiaf_mountains_1.dds"
+		instance={
+			position={ 0.500000 0.450000 }
+			scale={ 0.600000 0.600000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_bone
+		color2=rgb { 68 16 33 }
+		texture="asoiaf_mountains_1.dds"
+		instance={
+			position={ 0.500000 0.450000 }
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Myraq = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 71 36 36 }
+	color2=yellow
+	color3=black
+	colored_emblem={
+		color1=agot_black_light
+		color2=agot_grey_light
+		color3=agot_grey_light
+		texture="west_merchant_belt.dds"
+		instance={
+			scale={ -0.600000 0.600000 }
+			depth=1.010000
+			rotation=90
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_violet_light
+		texture="historical_plain.dds"
+		instance={
+			scale={ 1.000000 0.600000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black_light
+		color2=agot_grey_light
+		texture="ce_sword_01.dds"
+		instance={
+			scale={ 0.600000 0.600000 }
+			rotation=40
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 94 35 54 }
+		color2=agot_black
+		texture="asoiaf_castle_2.dds"
+		instance={
+			depth=3.010000
+		}
+
+	}
+}
+
+dynn_Rhazdar = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 196 153 34 }
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=rgb { 58 102 51 }
+		color2=rgb { 58 102 51 }
+		color3=agot_grey_light
+		texture="ce_persian_lion.dds"
+		instance={
+			scale={ -0.850000 0.850000 }
+			rotation=50
+		}
+
+	}
+}
+
+dynn_Dhazak = {
+	pattern="pattern_horizontal_split_02.dds"
+	color1=agot_russet
+	color2=agot_black
+	color3=black
+	colored_emblem={
+		color1=agot_black
+		texture="ce_clarion.dds"
+		instance={
+			position={ 0.700000 0.600000 }
+			scale={ -0.600000 0.600000 }
+		}
+
+		instance={
+			position={ 0.300000 0.600000 }
+			scale={ 0.600000 0.600000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Kandaq = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_charcoal
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=rgb { 134 35 34 }
+		texture="lys_tear.dds"
+		instance={
+			position={ 0.500000 0.300000 }
+			scale={ 0.350000 0.350000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_grey_light
+		color2=agot_white
+		texture="ce_india_small_dagger.dds"
+		instance={
+			position={ 0.720000 0.300000 }
+			scale={ -0.500000 0.500000 }
+			depth=2.010000
+			rotation=20
+		}
+
+		instance={
+			position={ 0.280000 0.300000 }
+			scale={ 0.500000 0.500000 }
+			depth=3.010000
+			rotation=340
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_mena_chalice_khanja.dds"
+		instance={
+			position={ 0.500000 0.750000 }
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Merreq = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 52 10 24 }
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=white
+		texture="vale_seasons_summer.dds"
+		instance={
+			position={ 0.500000 0.270000 }
+			scale={ 0.500000 0.500000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_ophiotaurus.dds"
+		instance={
+			position={ 0.700000 0.630000 }
+			scale={ -0.550000 0.550000 }
+			depth=1.010000
+			rotation=3
+		}
+
+		instance={
+			position={ 0.300000 0.630000 }
+			scale={ 0.550000 0.550000 }
+			depth=2.010000
+			rotation=357
+		}
+
+	}
+}
+
+dynn_Quazzar = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_yellow
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=rgb { 81 31 31 }
+		texture="vale_mullyn_wheel.dds"
+		instance={
+			scale={ 0.880000 0.880000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 81 31 31 }
+		color2=agot_black
+		texture="ce_african_frame_05.dds"
+		instance={
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Uhlez = {
+	pattern="pattern__solid_designer.dds"
+	color1=black
+	color2=yellow
+	color3=blue
+	colored_emblem={
+		color1=rgb { 199 93 88 }
+		texture="vale_jesper_vase.dds"
+		instance={
+			scale={ 0.800000 0.800000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="vale_ran_cammon_dots.dds"
+		instance={
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Yherizan = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_indigo
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=white
+		color2=agot_black
+		color3=agot_black
+		texture="ce_huma.dds"
+		instance={
+			position={ 0.680000 0.700000 }
+			scale={ 0.380000 0.380000 }
+		}
+
+		instance={
+			position={ 0.320000 0.700000 }
+			scale={ -0.380000 0.380000 }
+			depth=1.010000
+		}
+
+		instance={
+			position={ 0.770000 0.200000 }
+			scale={ -0.380000 0.380000 }
+			depth=2.010000
+		}
+
+		instance={
+			position={ 0.230000 0.200000 }
+			scale={ 0.380000 0.380000 }
+			depth=4.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		color2=agot_black
+		texture="ce_religion_pagan_zunist.dds"
+		instance={
+			position={ 0.500000 0.430000 }
+			scale={ 0.400000 0.400000 }
+			depth=3.010000
+		}
+
+	}
+}
+
+dynn_Ghezn = {
+	pattern="pattern__solid_designer.dds"
+	color1=black
+	color2=yellow
+	color3=blue
+	colored_emblem={
+		color1=rgb { 199 93 88 }
+		texture="vale_jesper_vase.dds"
+		instance={
+			scale={ 0.800000 0.800000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="vale_ran_cammon_dots.dds"
+		instance={
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Riznahz = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 74 43 130 }
+	color2=blue
+	colored_emblem={
+		color1=rgb { 94 162 101 }
+		color2=agot_scarlet
+		texture="re_redwyne.dds"
+		instance={
+			scale={ -1.000000 1.000000 }
+		}
+
+	}
+}
+
+dynn_Qarghiz = {
+	pattern="pattern_vertical_stripes_01.dds"
+	color1=rgb { 17 45 72 }
+	color2=rgb { 44 125 120 }
+	color3=black
+	colored_emblem={
+		color1=yellow
+		texture="pirate_forryl_sun.dds"
+		instance={
+			scale={ 0.800000 0.800000 }
+		}
+
+	}
+}
+
+dynn_Larhak = {
+	pattern="pattern_solid.dds"
+	color1=agot_black_light
+	color2=yellow
+	color3=black
+	colored_emblem={
+		color1=yellow
+		color2=agot_red
+		texture="cl_slynt.dds"
+		instance={
+			scale={ -0.650000 0.650000 }
+			depth=1.010000
+		}
+
+		instance={
+			scale={ 0.650000 0.650000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		color2=agot_red
+		texture="asoiaf_crown_2.dds"
+		instance={
+			position={ 0.500000 0.200000 }
+			scale={ 0.300000 0.300000 }
+		}
+
+	}
+}
+
+dynn_zo_Dharaq = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 139 119 59 }
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=rgb { 142 141 156 }
+		color2=agot_black
+		texture="do_veckryn_locust.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+}
+
+dynn_Dhozai = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_violet
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=yellow
+		texture="re_marchment.dds"
+		instance={
+			position={ 0.500000 0.470000 }
+			scale={ 0.700000 -0.700000 }
+		}
+
+	}
+}
+
+dynn_zo_Qazdahl = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_black
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=agot_green_light
+		color2=agot_black
+		texture="ce_cray.dds"
+		instance={
+			scale={ -1.000000 1.000000 }
+		}
+
+	}
+
+}
+
+dynn_Bezzlar = {
+	pattern="pattern_barruly_10.dds"
+	color1=agot_brown_dark
+	color2=agot_grey_dark
+	color3=black
+	colored_emblem={
+		color1=yellow
+		texture="ce_shape_moon_1.dds"
+		instance={
+			position={ 0.500000 0.200000 }
+			scale={ 0.300000 0.300000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_cream
+		color2=rgb { 196 153 34 }
+		color3=agot_rust
+		texture="do_sanders_furnace.dds"
+		instance={
+			position={ 0.500000 0.700000 }
+			scale={ 0.500000 0.500000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_cream
+		color2=agot_black
+		texture="ce_gryphon_wing.dds"
+		instance={
+			position={ 0.730000 0.300000 }
+			scale={ -0.500000 0.500000 }
+			depth=2.010000
+		}
+
+		instance={
+			position={ 0.270000 0.300000 }
+			scale={ 0.500000 0.500000 }
+			depth=3.010000
+		}
+
+	}
+}
+
+dynn_Taraq = {
+	pattern="pattern_solid.dds"
+	color1=agot_black_light
+	color2=yellow
+	color3=red
+	colored_emblem={
+		color1=rgb { 186 66 106 }
+		color2=agot_red_dark
+		texture="ce_sun_02.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+}
+
+dynn_Grazdhan = {
+	pattern="pattern_solid.dds"
+	color1=rgb { 46 46 84 }
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=rgb { 46 142 55 }
+		texture="re_tyrell.dds"
+		instance={
+			position={ 0.500000 0.700000 }
+			scale={ 0.500000 0.500000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 151 53 40 }
+		texture="re_tyrell.dds"
+		instance={
+			position={ 0.250000 0.300000 }
+			scale={ 0.500000 0.500000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 48 100 150 }
+		texture="re_tyrell.dds"
+		instance={
+			position={ 0.750000 0.300000 }
+			scale={ 0.500000 0.500000 }
+			depth=1.010000
+		}
+
+	}
+}

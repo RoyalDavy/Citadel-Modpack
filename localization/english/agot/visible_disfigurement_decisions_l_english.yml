@@ -1,0 +1,10 @@
+﻿l_english:
+ don_mask_decision:0 "Wear the Mask"
+ don_mask_decision_desc:0 "This disfigurement I am cursed with undermines my authority as ruler. I will conceal the weakness of my flesh with a mask of unyielding metal!"
+ don_mask_decision_tooltip:0 "You will don a dread-inspiring mask to conceal your disfigurement."
+ don_mask_decision_confirm:0 "Bring me the mask!"
+
+ remove_mask_decision:0 "Remove the Mask"
+ remove_mask_decision_desc:0 "I can no longer hide myself from the world. My subjects will see the true face of their ruler!"
+ remove_mask_decision_tooltip:0 "You remove the mask, revealing your disfigured visage."
+ remove_mask_decision_confirm:0 "Remove the mask!"

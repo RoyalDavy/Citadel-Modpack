@@ -1,0 +1,1047 @@
+﻿###Volantis
+
+dynn_Isnardo = {
+	pattern="pattern_bend_02.dds"
+	color1=agot_blue_light
+	color2=agot_yellow
+	color3=green
+	colored_emblem={
+		color1=agot_black
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_yellow
+		color2=agot_black
+		texture="asoiaf_sun_1.dds"
+		instance={
+			scale={ 0.580000 0.580000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_black
+		texture="st_flamingheart_rhllor.dds"
+		instance={
+			position={ 0.500000 0.520000 }
+			scale={ 0.415000 0.415000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.850000 0.850000 }
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Nefatis = {
+	pattern="pattern_horizontal_split_02.dds"
+	color1=rgb { 53 37 160 }
+	color2=agot_white
+	color3=red
+	colored_emblem={
+		color1=agot_white
+		texture="ce_laurels.dds"
+		instance={
+			position={ 0.500000 0.650000 }
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_white
+		texture="re_purpleheart.dds"
+		instance={
+			position={ 0.500000 0.230000 }
+			scale={ -1.000000 1.000000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Olivirana = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_black_light
+	color2=rgb { 27 154 117 }
+	color3=rgb { 209 130 1 }
+	colored_emblem={
+		color1=rgb { 209 130 1 }
+		texture="historical_plain.dds"
+		instance={
+			scale={ 0.580000 1.000000 }
+			depth=5.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black_light
+		texture="historical_plain.dds"
+		instance={
+			position={ 0.080000 0.250000 }
+			scale={ 0.250000 0.250000 }
+		}
+
+		instance={
+			position={ 0.920000 0.250000 }
+			scale={ 0.250000 0.250000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_grey
+		color2=agot_black
+		texture="ce_stonehouse_3.dds"
+		instance={
+			position={ 0.500000 0.640000 }
+			depth=4.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_bronze
+		color2=agot_black_light
+		color3=agot_burgundy
+		texture="iron_freeborn.dds"
+		instance={
+			position={ 0.500000 0.320000 }
+			scale={ -0.600000 0.600000 }
+			depth=2.010000
+		}
+
+		instance={
+			position={ 0.500000 0.320000 }
+			scale={ 0.600000 0.600000 }
+			depth=3.010000
+		}
+
+	}
+}
+
+dynn_Marsiglio  = {
+	pattern="val_pattern_21.dds"
+	color1=agot_black_light
+	color2=rgb { 141 127 127 }
+	color3=agot_burgundy
+	colored_emblem={
+		color1=rgb { 174 126 57 }
+		color2=agot_black
+		texture="do_brook_marigold_1.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+}
+
+dynn_Lomberys = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 13 68 53 }
+	color2=agot_bronze
+	color3=rgb { 92 153 211 }
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		color2=agot_green
+		color3=agot_green
+		texture="vale_chase_sea.dds"
+		instance={
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_bone
+		texture="tyrosh_title_shell.dds"
+		instance={
+			position={ 0.325000 0.500000 }
+			scale={ -0.700000 0.700000 }
+			rotation=330
+		}
+
+		instance={
+			position={ 0.665000 0.500000 }
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+			rotation=30
+		}
+
+	}
+}
+
+dynn_Stogarys = {
+	pattern="val_pattern_11.dds"
+	color1=agot_gold
+	color2=agot_blue_sky
+	color3=agot_red
+	colored_emblem={
+		color1=agot_brown_light
+		color2=agot_black
+		color3=agot_black_light
+		texture="asoiaf_porcupine.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.550000 0.550000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 154 176 0 }
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.800000 0.800000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=rgb { 196 153 34 }
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.850000 0.850000 }
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Rulloros = {
+	pattern="val_pattern_31.dds"
+	color1=agot_brown_dark
+	color2=rgb { 113 85 0 }
+	color3=agot_indigo
+	colored_emblem={
+		color1=agot_black
+		color2=rgb { 99 158 119 }
+		color3=agot_white
+		texture="ce_flint2_1_eye_single.dds"
+		instance={
+			position={ 0.480000 0.450000 }
+			scale={ 0.350000 0.350000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_burgundy
+		texture="ce_circle_mask.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_black
+		color3=agot_white
+		texture="asoiaf_lizard_lion.dds"
+		instance={
+			position={ 0.500000 0.505000 }
+			scale={ -0.600000 0.600000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_black
+		color3=agot_white
+		texture="ce_circle_mask.dds"
+		instance={
+			scale={ -0.750000 0.750000 }
+			depth=3.010000
+		}
+
+	}
+}
+
+dynn_Rannovar = {
+	pattern="pattern_horizontal_stripes_01.dds"
+	color1=rgb { 196 153 34 }
+	color2=agot_black
+	color3=red
+	colored_emblem={
+		color1=agot_orange
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.850000 0.850000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_orange
+		color3=agot_black
+		texture="stormlands_peck_swallow.dds"
+		instance={
+			scale={ -0.280000 0.280000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_black
+		texture="asoiaf_sun_1.dds"
+		instance={
+			scale={ 0.500000 0.500000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+			depth=3.010000
+		}
+
+	}
+}
+
+dynn_Paenymion = {
+	pattern="val_pattern_13.dds"
+	color1=agot_blue_dark
+	color2=agot_blue_light
+	color3=blue
+	colored_emblem={
+		color1=agot_black
+		color2=rgb { 196 153 34 }
+		texture="ce_religion_custom_faith_5.dds"
+		instance={
+			position={ 0.500000 0.520000 }
+			scale={ -0.900000 0.900000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_orange_light
+		texture="historical_plain.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 1.000000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Vhassar = {
+	pattern="pattern_solid.dds"
+	color1=agot_green_dark
+	color2=yellow
+	color3=black
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.950000 0.950000 }
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_green_dark
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_grey_dark
+		color2=agot_black
+		color3=black
+		texture="asoiaf_scales.dds"
+		instance={
+			depth=4.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		texture="ce_wreath_circle.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.600000 0.600000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_orange_light
+		color2=agot_black
+		color3=agot_black
+		texture="vale_seasons_summer.dds"
+		instance={
+			position={ 0.500000 0.490000 }
+			scale={ 0.550000 0.550000 }
+		}
+
+	}
+}
+
+dynn_Volnyros = {
+	pattern="pattern_vertical_split_01.dds"
+	color1=agot_green
+	color2=rgb { 196 153 34 }
+	color3=blue
+	colored_emblem={
+		color1=agot_white
+		texture="vale_seasons_summer.dds"
+		instance={
+			position={ 0.800000 0.180000 }
+			scale={ -0.300000 0.300000 }
+		}
+
+		instance={
+			position={ 0.200000 0.180000 }
+			scale={ 0.300000 0.300000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_white
+		color3=agot_grey
+		texture="rl_landseer.dds"
+		instance={
+			position={ 0.500000 0.540000 }
+			scale={ 0.850000 0.850000 }
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Qhaedar = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_indigo
+	color2=agot_black
+	color3=agot_grey_light
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		texture="rl_charlton_1.dds"
+		instance={
+			position={ 0.500000 0.565000 }
+			scale={ 0.510000 0.650000 }
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		texture="historical_plain.dds"
+		instance={
+			scale={ 0.430000 1.000000 }
+			depth=5.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 236 236 236 }
+		color2=rgb { 196 153 34 }
+		color3=agot_orange
+		texture="cl_white.dds"
+		instance={
+			scale={ 1.250000 1.250000 }
+			depth=4.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		color2=agot_black
+		color3=agot_white
+		texture="ce_stonehouse_3.dds"
+		instance={
+			position={ 0.500000 0.550000 }
+			scale={ 0.400000 0.400000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_indigo
+		texture="rl_charlton_1.dds"
+		instance={
+			position={ 0.500000 0.565000 }
+			scale={ 0.440000 0.580000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 236 236 236 }
+		color2=rgb { 236 236 236 }
+		color3=rgb { 236 236 236 }
+		texture="asoiaf_fireburst.dds"
+		instance={
+			position={ 0.500000 0.520000 }
+			scale={ 0.150000 0.150000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Maegyr = {
+	pattern="val_pattern_28.dds"
+	color1=agot_red
+	color2=agot_orange
+	color3=black
+	colored_emblem={
+		color1=agot_black
+		texture="historical_plain.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 1.000000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_gold
+		color2=agot_gold
+		color3=agot_black
+		texture="ce_tiger.dds"
+		instance={
+			position={ 0.505000 0.500000 }
+			scale={ -0.900000 0.900000 }
+		}
+
+	}
+}
+
+dynn_Vaelaros = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 196 153 34 }
+	color2=agot_black
+	color3=red
+	colored_emblem={
+		color1=agot_white
+		color2=agot_red
+		texture="ce_circle_mask.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		texture="ce_circle_mask.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_grey
+		color2=rgb { 255 255 255 }
+		color3=agot_blue_sky
+		texture="rl_vance_atranta_1.dds"
+		instance={
+			position={ 0.500000 0.520000 }
+			scale={ -0.800000 0.800000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		texture="historical_plain.dds"
+		instance={
+			scale={ 0.400000 1.000000 }
+			depth=3.010000
+		}
+
+	}
+}
+
+dynn_Kirines = {
+	pattern="val_pattern_12.dds"
+	color1=agot_blue
+	color2=agot_blue_light
+	color3=blue
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		texture="ce_circle_mask.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_blue_dark
+		texture="ce_circle_mask.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_mud_red
+		color2=rgb { 196 153 34 }
+		texture="vale_woodhull_ship.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+}
+
+dynn_Votar = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_black
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=white
+		texture="historical_plain.dds"
+		instance={
+			position={ 0.500000 0.460000 }
+			scale={ 0.650000 0.650000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_white
+		color3=agot_black
+		texture="rl_banbeck_dragon.dds"
+		instance={
+			position={ 0.500000 0.450000 }
+			scale={ -0.500000 0.500000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		texture="historical_plain.dds"
+		instance={
+			position={ 0.500000 0.460000 }
+			scale={ 0.600000 0.600000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Staegone = {
+	pattern="pattern__solid_designer.dds"
+	color1=agot_red
+	color2=agot_bronze
+	color3=rgb { 92 153 211 }
+	colored_emblem={
+		color1=agot_white
+		color2=agot_white
+		color3=agot_black
+		texture="asoiaf_eye_outlined.dds"
+		instance={
+			position={ 0.500000 0.320000 }
+			scale={ 0.250000 0.250000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_white
+		texture="asoiaf_snake.dds"
+		instance={
+			position={ 0.360000 0.500000 }
+			scale={ -0.900000 0.900000 }
+			depth=2.010000
+			rotation=340
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_black
+		texture="asoiaf_snake.dds"
+		instance={
+			position={ 0.640000 0.500000 }
+			scale={ 0.900000 0.900000 }
+			depth=1.010000
+			rotation=20
+		}
+
+	}
+}
+
+dynn_Tagaros = {
+	pattern="val_pattern_20.dds"
+	color1=agot_indigo
+	color2=agot_black
+	color3=agot_violet_light
+	colored_emblem={
+		color1=agot_white
+		color2=agot_white
+		color3=agot_white
+		texture="vale_auldryn.dds"
+		instance={
+			position={ 0.500000 0.460000 }
+			scale={ -0.950000 -0.950000 }
+		}
+
+	}
+}
+
+dynn_Nogarys = {
+	pattern="val_pattern_22.dds"
+	color1=agot_smoke
+	color2=agot_black_light
+	color3=agot_blue_sky
+	colored_emblem={
+		color1=rgb { 5 27 63 }
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.850000 0.850000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_blue_sky
+		color2=agot_white
+		color3=agot_white
+		texture="b_Dragon10.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ -0.500000 0.500000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Qoheros = {
+	pattern="pattern_barry_06.dds"
+	color1=agot_black
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=agot_black
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_red
+		color2=agot_red
+		color3=agot_black
+		texture="asoiaf_kraken_eye.dds"
+		instance={
+			position={ 0.500000 0.490000 }
+			scale={ -0.500000 0.500000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_red_dark
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.800000 0.800000 }
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Mataeryon = {
+	pattern="pattern_gironny_1.dds"
+	color1=agot_black
+	color2=agot_grey
+	color3=red
+	colored_emblem={
+		color1=rgb { 116 57 145 }
+		texture="ce_circle_mask.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		texture="asoiaf_serpent_nine_headed.dds"
+		instance={
+			scale={ 0.600000 0.600000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_black
+		color3=agot_white
+		texture="ce_circle_mask.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Menarios = {
+	pattern="pattern_solid.dds"
+	color1=agot_black_light
+	color2=white
+	color3=green
+	colored_emblem={
+		color1=rgb { 196 153 34 }
+		color2=agot_black
+		color3=agot_red_light
+		texture="asoiaf_spear_bloody_tip.dds"
+		instance={
+			position={ 0.520000 0.500000 }
+			scale={ 0.700000 0.700000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_red_light
+		color2=agot_white
+		texture="asoiaf_star_shooting.dds"
+		instance={
+			position={ 0.500000 0.150000 }
+			scale={ 0.650000 0.650000 }
+			rotation=15
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=rgb { 196 153 34 }
+		color3=agot_black
+		texture="asoiaf_lamb_goblet_2.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=1.010000
+		}
+
+	}
+}
+
+dynn_Dhogaros = {
+	pattern="val_pattern_17.dds"
+	color1=rgb { 55 101 75 }
+	color2=agot_black
+	color3=agot_red
+	colored_emblem={
+		color1=agot_green
+		texture="historical_plain.dds"
+		instance={
+			depth=4.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_silver
+		color2=agot_black
+		color3=agot_black
+		texture="cl_chelsted_dagger.dds"
+		instance={
+			scale={ 0.800000 0.800000 }
+			depth=1.010000
+			rotation=90
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_black
+		color2=agot_silver
+		texture="ce_hammer_01.dds"
+		instance={
+			scale={ 0.600000 0.600000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_green
+		color2=agot_black
+		texture="re_penny.dds"
+		instance={
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 165 169 133 }
+		texture="historical_plain.dds"
+		instance={
+			scale={ 1.000000 0.650000 }
+			depth=2.010000
+		}
+
+	}
+}
+
+dynn_Dynion = {
+	pattern="val_pattern_20.dds"
+	color1=agot_blue_light
+	color2=agot_black
+	color3=agot_green_light
+	colored_emblem={
+		color1=agot_white
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.900000 0.900000 }
+			depth=2.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=rgb { 130 53 0 }
+		texture="historical_shield.dds"
+		instance={
+			scale={ 0.850000 0.850000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=agot_white
+		color2=agot_white
+		texture="reach_averdyre_fruittree.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+}
+
+dynn_Edoryen = {
+	pattern="pattern__solid_designer.dds"
+	color1=rgb { 55 85 3 }
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=yellow
+		color2=agot_black
+		texture="rl_pond_cattail.dds"
+		instance={
+			position={ 0.800000 0.480000 }
+			scale={ 0.750000 0.750000 }
+		}
+
+		instance={
+			position={ 0.200000 0.480000 }
+			scale={ 0.750000 0.750000 }
+			depth=1.010000
+		}
+
+		instance={
+			position={ 0.700000 0.480000 }
+			scale={ 0.750000 0.750000 }
+			depth=2.010000
+		}
+
+		instance={
+			position={ 0.300000 0.480000 }
+			scale={ 0.750000 0.750000 }
+			depth=3.010000
+		}
+
+		instance={
+			position={ 0.600000 0.480000 }
+			scale={ 0.750000 0.750000 }
+			depth=4.010000
+		}
+
+		instance={
+			position={ 0.400000 0.480000 }
+			scale={ 0.750000 0.750000 }
+			depth=5.010000
+		}
+
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.750000 0.750000 }
+			depth=6.010000
+		}
+
+	}
+}

@@ -1,0 +1,210 @@
+﻿namespace = sundry_arsenal_decision_event
+
+##########################################
+# Wardrobe
+##########################################
+sundry_arsenal_decision_event.0001 = {
+	type = character_event
+	title = sundry_arsenal_decision_event.0001.t
+	desc = sundry_arsenal_decision_event.0001.desc
+	theme = default
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	#Crownlander
+	option = {
+		name = sundry_arsenal.crownlander
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = crownlander_armor
+		}
+	}
+
+	#Stormlander
+	option = {
+		name = sundry_arsenal.stormlander
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = stormlander_armor
+		}
+	}
+
+	#Reachman
+	option = {
+		name = sundry_arsenal.reachman
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = reachman_armor
+		}
+	}
+
+	#Honeywiner
+	option = {
+		name = sundry_arsenal.honeywiner
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = honeywiner_armor
+		}
+	}
+
+	#Westerman
+	option = {
+		name = sundry_arsenal.westerman
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = westerman_armor
+		}
+	}
+
+	#Riverman
+	option = {
+		name = sundry_arsenal.riverman
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = riverman_armor
+		}
+	}
+
+	#Valeman
+	option = {
+		name = sundry_arsenal.valeman
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = valeman_armor
+		}
+	}
+	
+	#Northman
+	option = {
+		name = sundry_arsenal.northman
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = northman_armor
+		}
+	}
+	
+	#Ironborn
+	option = {
+		name = sundry_arsenal.ironborn
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = ironborn_armor
+		}
+	}
+	
+	#More
+	option = {
+		name = sundry_arsenal.more_armors
+		trigger_event = sundry_arsenal_decision_event.0002
+	}
+	
+	#Clothing Remover
+	option = {
+		trigger = {
+			sundry_has_armor = yes
+		}
+		name = sundry_arsenal_decision_event.0001.a
+		sundry_remove_armor_effect = yes
+	}
+
+	#Nevermind
+	option = {
+		name = sundry_arsenal_decision_event.0001.b
+	}
+}
+	
+sundry_arsenal_decision_event.0002 = {
+	type = character_event
+	title = sundry_arsenal_decision_event.0002.t
+	desc = sundry_arsenal_decision_event.0002.desc
+	theme = default
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	#Stone Dornish
+	option = {
+		name = sundry_arsenal.stone_dornish
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = stone_dornish_armor
+		}
+	}
+	
+	#Sand Dornish
+	option = {
+		name = sundry_arsenal.sand_dornish
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = sand_dornish_armor
+		}
+	}
+	
+	#Salt Dornish
+	option = {
+		name = sundry_arsenal.salt_dornish
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = salt_dornish_armor
+		}
+	}
+	
+	#Essosi
+	option = {
+		name = sundry_arsenal.essosi
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = essosi_armor
+		}
+	}
+	
+	#Crannogman
+	option = {
+		name = sundry_arsenal.crannogman
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = crannogman_armor
+		}
+	}
+	
+	#Valyrian
+	option = {
+		name = sundry_arsenal.valyrian
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = valyrian_armor
+		}
+	}
+	
+	#Pirate
+	option = {
+		name = sundry_arsenal.pirate
+		sundry_remove_armor_effect = yes
+		add_character_modifier = {
+			modifier = pirate_armor
+		}
+	}
+	
+	#Back
+	option = {
+		name = sundry_arsenal.back
+		trigger_event = sundry_arsenal_decision_event.0001
+	}
+
+	#Clothing Remover
+	option = {
+		trigger = {
+			sundry_has_armor = yes
+		}
+		name = sundry_arsenal_decision_event.0001.a
+		sundry_remove_armor_effect = yes
+	}
+
+	#Nevermind
+	option = {
+		name = sundry_arsenal_decision_event.0001.b
+	}
+}

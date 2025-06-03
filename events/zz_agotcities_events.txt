@@ -1,0 +1,438 @@
+﻿namespace = agot_cities
+
+# Castamere Throne
+agot_cities.5000 = {
+	type = character_event
+	title = agot_cities.5000.t
+	desc = agot_cities.5000.desc
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = cp:councillor_castellan
+		animation = personality_bold
+	}
+	
+	theme = crown
+
+	immediate = {
+		random_artifact = {
+			limit = { has_variable = red_rain_artifact }
+			save_scope_as = red_artifact
+		}
+	}
+	 
+	option = {
+		name = agot_cities.5000.a
+
+		remove_short_term_gold = 500
+
+		house = { add_house_artifact_claim = scope:red_artifact }
+						
+		create_artifact = {
+			name = castamere_throne_name
+			description = castamere_throne_desc
+			type = throne_special
+			visuals = castamere_throne_visuals
+			modifier = gilded_throne_modifier
+			rarity = illustrious					
+			decaying = no
+			save_scope_as = new_artifact
+			show_as_tooltip = {
+				scope:new_artifact = { 
+					set_owner = root 
+				}
+			} 
+			
+		}
+		
+		scope:new_artifact = { 
+			set_variable = {
+				name = this_is_the_red_gold_throne
+				value = yes
+			}		
+		}
+		
+		hidden_effect = {
+		
+			send_interface_toast = {
+				title = agot_cities_5000.t
+				custom_tooltip = agot_cities_5000.ct
+				left_icon = root
+				right_icon = scope:new_artifact
+			}
+		}
+	}	
+	
+	option = {
+		name = agot_cities.5000.c
+		add_gold = 700
+	}
+}
+
+
+# SEARCH FOR THE HORN
+agot_cities.1000 = {
+	type = character_event
+	title = agot_cities.1000.t
+	desc = agot_cities.1000.desc
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = cp:councillor_castellan
+		animation = personality_bold
+	}
+	
+	theme = hunting
+	
+	override_background = { event_background = agot_frozen_forest }
+
+	immediate = {
+		
+	}
+
+	
+	 
+	option = {
+		name = agot_cities.1000.a
+		
+		random_list = {
+		100 = {
+				desc = agot_cities.1000.a1				
+			}
+		0 = {
+				desc = agot_cities.1000.a2
+								
+							
+				modifier = {
+					add = 5
+					highest_held_title_tier = tier_duchy
+				}			
+				modifier = {
+					add = 10
+					highest_held_title_tier = tier_kingdom
+				}	
+				modifier = {
+					add = 15
+					highest_held_title_tier = tier_empire
+				}
+				modifier = {
+					add = 3
+					has_trait = brave
+				}
+				modifier = {
+					add = 3
+					has_trait = ambitious
+				}
+				modifier = {
+					add = 5
+					has_trait = diligent
+				}
+				modifier = {
+					add = 5
+					has_trait = generous
+				}
+				modifier = {
+					add = 5
+					has_trait = gregarious
+				}
+				modifier = {
+					add = 3
+					has_trait = zealous
+				}
+				modifier = {
+					add = 1
+					has_trait = temperate
+				}
+				modifier = {
+					add = 5
+					has_trait = winter_soldier
+				}
+				modifier = {
+					add = 3
+					has_trait = rough_terrain_expert
+				}
+				modifier = {
+					add = 5
+					has_trait = organizer
+				}
+				modifier = {
+					add = 5
+					has_trait = intellect_good_3
+				}
+				modifier = {
+					add = 3
+					has_trait = intellect_good_2
+				}
+				modifier = {
+					add = 1
+					has_trait = intellect_good_1
+				}
+				modifier = {
+					add = 5
+					has_trait = scholar
+				}
+				
+							
+				create_artifact = {
+					name = horn_winter_name
+					description = horn_winter_desc
+					type = miscellaneous
+					visuals = vs_winter_horn_visuals
+					modifier = aegon_iv_crown_modifier
+					rarity = illustrious					
+					decaying = no
+					save_scope_as = new_artifact
+					show_as_tooltip = {
+						scope:new_artifact = { 
+							set_owner = root 
+						}
+					} 
+					
+				}
+				
+				scope:new_artifact = { 
+					set_variable = {
+						name = this_is_the_horn
+						value = yes
+					}		
+				}
+				
+				hidden_effect = {
+				
+					send_interface_toast = {
+						title = horn_winter.1000.t
+						custom_tooltip = horn_winter.1000.ct
+						root = {
+							add_character_flag = found_the_horn
+						}
+						add_to_global_variable_list = {
+							name = unavailable_unique_decisions
+							target = flag:found_the_horn_a
+						}	
+						left_icon = root
+						right_icon = scope:new_artifact
+					}
+				}
+			}
+		}
+	} 
+	
+	option = {
+		name = agot_cities.1000.z
+		add_gold = 50
+	}
+}
+
+
+#TRIGGER THE FALL
+
+agot_cities.2000 = {
+	hidden = yes
+	orphan = yes
+
+
+	immediate = {
+		trigger_event = {
+			id = agot_cities.3000
+			days = 5
+		}
+		add_character_flag = is_in_diplomacy_foreign_special_event
+		add_character_flag = is_in_diplomacy_family_special_event
+		add_character_flag = is_in_diplomacy_majesty_special_event
+		add_character_flag = is_in_martial_special_event
+		add_character_flag = is_in_stewardship_domain_special_event
+		add_character_flag = is_in_stewardship_duty_special_event
+		add_character_flag = is_in_stewardship_wealth_special_event
+		add_character_flag = is_in_intrigue_special_event
+		add_character_flag = is_in_learning_special_event
+		if = {
+			limit = {
+				AND = {
+					location = { geographical_region = world_westeros }
+					is_ai = no
+				}
+			}
+			pan_camera_to_title = title:b_castle_black
+		}
+		play_music_cue = CK3AGOT_wall_collapse_the_others
+	}
+}
+
+# COLLAPSE THE WALL
+agot_cities.3000 = {
+	type = character_event
+	title = agot_cities.1000.t
+	desc = agot_cities.1000.desc
+	theme = default
+
+	immediate = {
+		remove_character_flag = is_in_diplomacy_foreign_special_event
+		remove_character_flag = is_in_diplomacy_family_special_event
+		remove_character_flag = is_in_diplomacy_majesty_special_event
+		remove_character_flag = is_in_martial_special_event
+		remove_character_flag = is_in_stewardship_domain_special_event
+		remove_character_flag = is_in_stewardship_duty_special_event
+		remove_character_flag = is_in_stewardship_wealth_special_event
+		remove_character_flag = is_in_intrigue_special_event
+		remove_character_flag = is_in_learning_special_event
+		root = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blew_the_horn_a
+			}
+		}
+		title:c_castle_black = {			
+			random_county_province = {
+				limit = { barony = title:b_castle_black  }
+				set_holding_type = ruin_holding
+				add_building = large_ruin_01
+				add_special_building = special_the_wall_damaged
+								
+			}
+		}
+		title:c_castle_black = {			
+			every_county_province = {
+				limit = { NOT = { barony = title:b_castle_black  } }
+				set_holding_type = ruin_holding
+				add_building = small_ruin_01
+							
+			}
+		}
+		
+		title:c_the_shadow_tower = {
+			every_county_province = {
+				set_holding_type = ruin_holding
+				add_building = small_wall_ruin_01
+				
+			}
+		}
+		title:c_eastwatch = {
+			every_county_province = {
+				set_holding_type = ruin_holding
+				add_building = small_ruin_01
+				
+			}
+		}
+		
+	}
+
+	widgets = {
+		widget = {
+			gui = "window_particle_wallcollapse_start_widget"
+			container = "custom_widgets_container"
+			controller = default
+			setup_scope = { }
+		}
+	}
+	# This won't actually ever be shown.
+	option = {
+		name = agot_cities.1000.a
+	}
+}
+
+agot_cities.9999 = {
+	type = character_event
+	title = bittersteel_event_01.t
+	desc = bittersteel_event_01.desc
+	theme = dynasty
+	
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = cp:councillor_castellan
+		animation = personality_bold
+	}
+	
+	trigger = {
+		is_ai = no
+	}
+	
+	option = {
+		name = bittersteel_event_01.a
+		custom_tooltip = bittersteel_event_01.a.tt
+		
+		hidden_effect = {
+			house = { save_scope_as = house }
+			hidden_effect = { set_house = character:Targaryen_13.house }
+			scope:house = {
+				every_house_member = {
+					set_house = character:Targaryen_13.house
+				}
+			}
+			every_held_title = {
+				set_coa = dynasty:dynn_Targaryen
+			}
+			
+			add_to_global_variable_list = {
+	 			name = unavailable_unique_decisions
+	 			target = flag:bittersteel_decision
+ 			}
+		}
+	}
+	
+	option = {
+		name = bittersteel_event_01.b
+		custom_tooltip = bittersteel_event_01.b.tt
+		
+		hidden_effect = {
+			house = { save_scope_as = house }
+			hidden_effect = { set_house = character:Blackfyre_1.house }
+			scope:house = {
+				every_house_member = {
+					set_house = character:Blackfyre_1.house
+				}
+			}
+			every_held_title = {
+				set_coa = character:Blackfyre_1.house
+			}
+			
+			add_to_global_variable_list = {
+	 			name = unavailable_unique_decisions
+	 			target = flag:bittersteel_decision
+ 			}
+		}
+	}
+	
+	option = {
+		name = bittersteel_event_01.c
+		custom_tooltip = bittersteel_event_01.c.tt
+		
+		hidden_effect = {		
+			
+			add_to_global_variable_list = {
+	 			name = unavailable_unique_decisions
+	 			target = flag:bittersteel_decision
+ 			}
+		}
+	}
+
+}
+
+agot_cities.9900 ={
+	type = character_event
+	title = agot_cities.1000.t
+	desc = agot_cities.1000.desc
+	theme = default
+	immediate = {
+		
+	}
+
+	
+	
+	option = {
+		name = do_it_desc
+		
+		title:b_castamere.title_province = {			
+			remove_building = castamere_06
+			add_special_building = 24castamere_03		
+		}
+	}
+}

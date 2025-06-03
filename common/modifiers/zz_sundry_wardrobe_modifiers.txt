@@ -1,0 +1,62 @@
+﻿andal_style = {
+	icon = mask_positive
+	attraction_opinion = 10
+	sway_scheme_phase_duration_add = -10
+}
+
+northman_style = {
+	icon = mask_positive
+	attraction_opinion = 5
+	monthly_county_control_growth_add = 5
+}
+
+crannogman_style = {
+	icon = mask_positive
+	attraction_opinion = -20
+	enemy_hostile_scheme_phase_duration_add = 10
+}
+
+ironborn_style = {
+	icon = mask_positive
+	attraction_opinion = -5
+	general_opinion = -10
+	monthly_dread = 0.10
+}
+
+stone_dornish_style = {
+	icon = mask_positive
+	attraction_opinion = 10
+	scheme_secrecy = 10
+}
+
+sand_dornish_style = {
+	icon = mask_positive
+	attraction_opinion = 10
+	scheme_secrecy = 10
+}
+
+salt_dornish_style = {
+	icon = mask_positive
+	attraction_opinion = 10
+	scheme_secrecy = 10
+}
+
+essosi_style = {
+	icon = mask_positive
+	attraction_opinion = 15
+	scheme_secrecy = 10
+}
+
+valyrian_style = {
+	icon = mask_positive
+	attraction_opinion = 20
+	general_opinion = -20
+	monthly_prestige_gain_mult = 0.10
+}
+
+pirate_style = {
+	icon = mask_positive
+	attraction_opinion = 10
+	general_opinion = -5
+	monthly_dread = 0.05
+}

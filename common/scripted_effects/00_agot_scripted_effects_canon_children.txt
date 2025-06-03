@@ -1,0 +1,705 @@
+﻿# STORY SETUP EFFECTS
+
+agot_canon_children_setup_father_effect = {
+	$FATHER$ = {
+		if = {
+			limit = { NOT = { has_inactive_trait = $FATHER_TRAIT$ } }
+			make_trait_inactive = $FATHER_TRAIT$
+		}
+		save_scope_as = canon_father
+	}
+}
+
+agot_canon_children_setup_mother_effect = {
+	$FATHER$ = { save_scope_as = canon_father }
+
+	if = { # Mother has historical ID
+		limit = {
+			$MOTHER$ ?= {
+				exists = yes
+				is_alive = yes
+			}
+		}
+		$MOTHER$ = { save_scope_as = canon_mother }
+	}
+	else = { # Mother is canon child
+		agot_canon_children_get_canon_child_scope_effect = {
+			TRAIT = $MOTHER_TRAIT$
+			SCOPE = canon_mother
+		}
+	}
+
+	scope:canon_mother ?= { # Setup mother
+		if = {
+			limit = { is_pregnant = yes }
+			end_pregnancy = yes
+		}
+
+		if = {
+			limit = { NOT = { has_inactive_trait = $MOTHER_TRAIT$ } }
+			make_trait_inactive = $MOTHER_TRAIT$
+		}
+
+		if = {
+			limit = { always = $PREVENT_PREGNANCY$ }
+
+			add_character_flag = { # For renewing the prevent pregnancy flag
+				flag = canon_children_should_prevent_pregnancy
+			}
+
+			add_character_flag = {
+				flag = canon_children_prevent_pregnancy
+				months = agot_canon_children_pregnancy_modifier_duration
+			}
+		}
+
+		scope:canon_father = {
+			add_to_variable_list = {
+				name = canon_mothers
+				target = scope:canon_mother
+			}
+		}
+	}
+}
+
+agot_canon_children_setup_real_father_effect = {
+	$FATHER$ = { save_scope_as = canon_father }
+
+	if = { # Real father has historical ID
+		limit = {
+			$REAL_FATHER$ ?= {
+				exists = yes
+				is_alive = yes
+			}
+		}
+		$REAL_FATHER$ = { save_scope_as = canon_real_father }
+	}
+	else = { # Real father is canon child
+		agot_canon_children_get_canon_child_scope_effect = {
+			TRAIT = $REAL_FATHER_TRAIT$
+			SCOPE = canon_real_father
+		}
+	}
+
+	scope:canon_real_father ?= { # Setup real father
+		if = {
+			limit = { NOT = { has_inactive_trait = $REAL_FATHER_TRAIT$ } }
+			make_trait_inactive = $REAL_FATHER_TRAIT$
+		}
+
+		scope:canon_father = {
+			set_variable = {
+				name = $REAL_FATHER_VAR$
+				value = scope:canon_real_father
+			}
+		}
+	}
+}
+
+agot_canon_children_on_owner_death_effect = {
+	end_story = yes
+}
+
+agot_canon_children_get_canon_child_scope_effect = {
+	random_in_global_list = {
+		variable = agot_born_canon_children_scopes
+		limit = { has_inactive_trait = $TRAIT$ }
+		save_scope_as = $SCOPE$
+	}
+}
+
+agot_canon_children_get_canon_mother_scope_effect = {
+	random_in_list = {
+		variable = canon_mothers
+		limit = { has_inactive_trait = $TRAIT$ }
+		save_scope_as = $SCOPE$
+	}
+}
+
+agot_canon_children_get_character_scope_effect = {
+	if = {
+		limit = {
+			$TARGET$ ?= {
+				exists = yes
+				is_alive = yes
+			}
+		}
+		$TARGET$ = { save_scope_as = $SCOPE$ }
+	}
+	else = {
+		agot_canon_children_get_canon_child_scope_effect = {
+			TRAIT = $TRAIT$
+			SCOPE = $SCOPE$
+		}
+	}
+}
+
+
+# PREGNANCY EFFECTS
+
+agot_canon_children_force_pregnancy_basic_effect = {
+	agot_canon_children_force_pregnancy_effect = {
+		CHILD_FLAG = $CHILD_FLAG$
+		IS_FEMALE = $IS_FEMALE$
+		FATHER = root.story_owner
+		BIRTH_FLAG = birth_will_go_smoothly
+	}
+}
+
+agot_canon_children_force_bastard_pregnancy_basic_effect = {
+	agot_canon_children_force_bastard_pregnancy_effect = {
+		CHILD_FLAG = $CHILD_FLAG$
+		IS_FEMALE = $IS_FEMALE$
+		FATHER = root.story_owner
+		REAL_FATHER = $REAL_FATHER$
+		REAL_FATHER_KNOWS = $REAL_FATHER_KNOWS$
+		KNOWN_BASTARD = $KNOWN_BASTARD$
+		BIRTH_FLAG = birth_will_go_smoothly
+	}
+}
+
+agot_canon_children_force_stillborn_pregnancy_basic_effect = {
+	agot_canon_children_force_pregnancy_effect = {
+		CHILD_FLAG = $CHILD_FLAG$
+		IS_FEMALE = $IS_FEMALE$
+		FATHER = root.story_owner
+		BIRTH_FLAG = birth_will_be_stillborn
+	}
+}
+
+agot_canon_children_force_pregnancy_effect = {
+	if = {
+		limit = {
+			is_alive = yes
+			is_pregnant = no
+		}
+
+		agot_canon_children_force_pregnancy_shared_effect = {
+			CHILD_FLAG = $CHILD_FLAG$
+			IS_FEMALE = $IS_FEMALE$
+			FATHER = $FATHER$
+			REAL_FATHER = $FATHER$
+			BIRTH_FLAG = $BIRTH_FLAG$
+			IS_BASTARD = no
+			KNOWN_BASTARD = no
+		}
+	}
+}
+
+agot_canon_children_force_bastard_pregnancy_effect = {
+	if = {
+		limit = { always = $REAL_FATHER_KNOWS$ }
+		add_character_flag = {
+			flag = planning_to_confess_to_real_father
+			months = agot_canon_children_pregnancy_duration_months
+		}
+	}
+
+	$FATHER$ = {
+		add_character_flag = { # Keep assumed father from finding out about bastardry
+			flag = agot_father_will_not_suspect_pregnancy
+			months = agot_canon_children_pregnancy_duration_months
+		}
+	}
+
+	agot_canon_children_force_pregnancy_shared_effect = {
+		CHILD_FLAG = $CHILD_FLAG$
+		IS_FEMALE = $IS_FEMALE$
+		FATHER = $FATHER$
+		REAL_FATHER = $REAL_FATHER$
+		BIRTH_FLAG = $BIRTH_FLAG$
+		IS_BASTARD = yes
+		KNOWN_BASTARD = $KNOWN_BASTARD$
+	}
+}
+
+agot_canon_children_force_pregnancy_shared_effect = {
+	$FATHER$ = { save_scope_as = canon_father }
+	$REAL_FATHER$ = { save_scope_as = canon_real_father }
+
+	if = { # Trigger marriage if parents are still betrothed (AI)
+		limit  = {
+			is_ai = yes
+			betrothed = scope:canon_father
+		}
+		marry = scope:canon_father
+	}
+
+	add_character_flag = {
+		flag = agot_is_pregnant
+		months = agot_canon_children_pregnancy_duration_months
+	}
+
+	add_character_flag = {
+		flag = $BIRTH_FLAG$
+		months = agot_canon_children_pregnancy_duration_months
+	}
+
+	set_variable = {
+		name = agot_pregnancy_child
+		value = flag:$CHILD_FLAG$
+		months = agot_canon_children_pregnancy_duration_months
+	}
+
+	# Trigger pregnancy
+	if = {
+		limit = {
+			always = $IS_BASTARD$
+			exists = primary_spouse
+		}
+
+		make_pregnant_no_checks = {
+			father = scope:canon_real_father
+			number_of_children = 1
+			known_bastard = $KNOWN_BASTARD$
+		}
+	}
+	else = {
+		make_pregnant_no_checks = {
+			father = scope:canon_real_father
+			number_of_children = 1
+		}
+	}
+
+	# Set pregnancy gender
+	set_local_variable = {
+		name = pregnancy_is_female
+		value = no
+	}
+	random = {
+		chance = 0
+		modifier = {
+			add = {
+				value = 0
+				if = {
+					limit = { always = $IS_FEMALE$ }
+					add = agot_canon_children_female_female_chance
+				}
+				else = {
+					add = agot_canon_children_male_female_chance
+				}
+			}
+		}
+		set_local_variable = {
+			name = pregnancy_is_female
+			value = yes
+		}
+	}
+	if = {
+		limit = { always = local_var:pregnancy_is_female }
+		trigger_event = {
+			id = agot_canon_children_events.0002
+			days = 278
+		}
+		if = {
+			limit = { has_character_flag = agot_birth_child_will_be_stillborn }
+			add_character_flag = {
+				flag = stillborn_girl
+				months = 9
+			}
+		}
+	}
+	else = {
+		trigger_event = {
+			id = agot_canon_children_events.0003
+			days = 278
+		}
+		if = {
+			limit = { has_character_flag = agot_birth_child_will_be_stillborn }
+			add_character_flag = {
+				flag = stillborn_boy
+				months = 9
+			}
+		}
+	}
+}
+
+agot_canon_children_life_cycle_effect = {
+	# Start/extend natural pregnancy blocker as long as conditions are met
+	if = {
+		limit = {
+			NOT = {
+				agot_canon_children_had_child_trigger = {
+					ID = $FINAL_CHILD_ID$
+					MOTHER = $MOTHER$
+					TRAIT = $FINAL_CHILD_TRAIT$
+				}
+			}
+			$MOTHER$ = {
+				has_character_flag = canon_children_should_prevent_pregnancy
+			}
+		}
+
+		$MOTHER$ = {
+			add_character_flag = {
+				flag = canon_children_prevent_pregnancy
+				months = agot_canon_children_pregnancy_modifier_duration
+			}
+		}
+	}
+	# End story if cycle is finished
+	# TODO: This is not the right place to do it when there are multiple mothers
+	# else = {
+	# 	end_story = yes
+	# }
+}
+
+
+# GUARDIAN EFFECTS
+
+agot_canon_children_get_guardian_scope_effect = {
+	if = {
+		limit = {
+			any_relation = {
+				type = guardian
+				always = yes
+			}
+		}
+		random_relation = {
+			type = guardian
+			save_scope_as = guardian
+		}
+	}
+}
+
+agot_canon_children_get_any_guardian_scope_effect = {
+	if = {
+		limit = {
+			any_relation = {
+				type = guardian
+				always = yes
+			}
+		}
+		random_relation = {
+			type = guardian
+			save_scope_as = guardian
+		}
+	}
+	else_if = {
+		limit = { any_parent = { is_alive = yes } }
+		random_parent = { save_scope_as = guardian }
+	}
+	else_if = {
+		limit = {
+			exists = host
+		}
+		host = { random_courtier = { save_scope_as = guardian } }
+	}
+}
+
+agot_canon_children_schedule_guardian_effect = {
+	if = {
+		limit = {
+			# Only set canon guardian if the child's liege is close family
+			scope:child.liege ?= { is_close_family_of = scope:child }
+		}
+
+		scope:child = {
+			save_scope_as = ward
+
+			if = {
+				limit = {
+					trigger_if = {
+						limit = { exists = employer }
+						employer = this
+					}
+				}
+				save_scope_as = ward_liege
+			}
+			else = {
+				this.liege = { save_scope_as = ward_liege }
+			}
+
+
+			if = {
+				limit = { is_male = yes }
+				$GUARDIAN_MALE$ = { save_scope_as = guardian }
+			}
+			else = {
+				$GUARDIAN_FEMALE$ = { save_scope_as = guardian }
+			}
+
+			scope:guardian = {
+				if = {
+					limit = {
+						trigger_if = {
+							limit = { exists = employer }
+							employer = this
+						}
+					}
+					save_scope_as = guardian_liege
+				}
+				else = {
+					this.liege = { save_scope_as = guardian_liege  }
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							agot_canon_children_can_become_guardian = {
+								WARD = scope:ward
+								WARD_LIEGE = scope:ward_liege
+								GUARDIAN_LIEGE = scope:guardian_liege
+							}
+						}
+						agot_canon_children_should_use_liege_as_guardian_for_heir_trigger = no
+					}
+
+					clear_saved_scope = guardian
+				}
+			}
+		}
+
+		if = {
+			limit = { exists = scope:guardian }
+
+			scope:ward = {
+				set_variable = {
+					name = canon_guardian
+					value = scope:guardian
+				}
+			}
+			scope:ward_liege = {
+				# Assign the actor as guardian if child is primary heir
+				if = {
+					limit = { always = $USE_LIEGE_FOR_HEIR$ }
+					save_scope_value_as = { name = use_liege_for_heir value = yes }
+				}
+
+				# Convert faith/culture
+				save_scope_value_as = { name = convert_culture value = $CONVERT_CULTURE$ }
+				save_scope_value_as = { name = convert_faith value = $CONVERT_FAITH$ }
+
+				trigger_event = {
+					on_action = agot_canon_children_assign_canon_guardian
+					years = agot_canon_children_guardian_year
+				}
+			}
+		}
+	}
+}
+
+agot_canon_children_set_guardian_effect = {
+	scope:guardian_liege = {
+		save_scope_as = actor
+		$GUARDIAN$ = { save_scope_as = guardian }
+
+		send_interface_message = {
+			type = event_generic_neutral
+			title = educate_child_interaction_notification
+			left_icon = scope:guardian
+			right_icon = scope:ward
+			educate_child_interaction_effect = yes
+			show_as_tooltip = {
+				scope:ward = {
+					if = {
+						limit = { exists = var:ward_travelling_to_guardian }
+						custom_tooltip = ward_departs_tt
+					}
+					else_if = {
+						limit = { exists = scope:guardian.var:guardian_travelling_to_ward }
+						scope:guardian = { custom_tooltip = guardian_departs_tt }
+					}
+					else = {
+						set_relation_guardian = scope:guardian
+					}
+				}
+			}
+		}
+	}
+}
+
+agot_canon_children_stark_guardian_effect = {
+	# TODO: Pick new septa/maester if the holders of these titles changed
+	agot_canon_children_schedule_guardian_effect = {
+		GUARDIAN_FEMALE = character:Tully_hh_4 # Septa Mordane
+		GUARDIAN_MALE = character:Stark_hh_1 # Maester Luwin
+		USE_LIEGE_FOR_HEIR = yes
+		CONVERT_CULTURE = no
+		CONVERT_FAITH = no
+	}
+}
+
+agot_canon_children_baratheon_1_guardian_effect = {
+	agot_canon_children_schedule_guardian_effect = {
+		GUARDIAN_FEMALE = scope:mother # Cersei
+		GUARDIAN_MALE = scope:mother # Cersei
+		USE_LIEGE_FOR_HEIR = no
+		CONVERT_CULTURE = no
+		CONVERT_FAITH = no
+	}
+}
+
+
+# TRAIT EFFECTS
+
+agot_canon_children_schedule_trait_effect = {
+	if = {
+		limit = { has_game_rule = agot_canon_children_traits_enabled }
+
+		set_local_variable = {
+			name = target_trait
+			value = $TRAIT$
+		}
+
+		if = { # Scheduling one or more traits will prevent any trait events from naturally occurring
+			limit = { NOT = { has_character_flag = agot_has_canon_traits } }
+			add_character_flag = agot_has_canon_traits
+		}
+
+		switch = {
+			trigger = local_var:target_trait
+
+			# Personality traits
+			flag:brave = { trigger_event = { id = agot_child_personality_events.0001 years = $AGE$ } }
+			flag:craven = { trigger_event = { id = agot_child_personality_events.0002 years = $AGE$ } }
+			flag:calm = { trigger_event = { id = agot_child_personality_events.0003 years = $AGE$ } }
+			flag:wrathful = { trigger_event = { id = agot_child_personality_events.0004 years = $AGE$ } }
+			flag:chaste = { trigger_event = { id = agot_child_personality_events.0005 years = $AGE$ } }
+			flag:lustful = { trigger_event = { id = agot_child_personality_events.0006 years = $AGE$ } }
+			flag:content = { trigger_event = { id = agot_child_personality_events.0007 years = $AGE$ } }
+			flag:ambitious = { trigger_event = { id = agot_child_personality_events.0008 years = $AGE$ } }
+			flag:diligent = { trigger_event = { id = agot_child_personality_events.0009 years = $AGE$ } }
+			flag:lazy = { trigger_event = { id = agot_child_personality_events.0010 years = $AGE$ } }
+			flag:forgiving = { trigger_event = { id = agot_child_personality_events.0011 years = $AGE$ } }
+			flag:vengeful = { trigger_event = { id = agot_child_personality_events.0012 years = $AGE$ } }
+			flag:generous = { trigger_event = { id = agot_child_personality_events.0013 years = $AGE$ } }
+			flag:greedy = { trigger_event = { id = agot_child_personality_events.0014 years = $AGE$ } }
+			flag:gregarious = { trigger_event = { id = agot_child_personality_events.0015 years = $AGE$ } }
+			flag:shy = { trigger_event = { id = agot_child_personality_events.0016 years = $AGE$ } }
+			flag:honest = { trigger_event = { id = agot_child_personality_events.0017 years = $AGE$ } }
+			flag:deceitful = { trigger_event = { id = agot_child_personality_events.0018 years = $AGE$ } }
+			flag:humble = { trigger_event = { id = agot_child_personality_events.0019 years = $AGE$ } }
+			flag:arrogant = { trigger_event = { id = agot_child_personality_events.0020 years = $AGE$ } }
+			flag:just = { trigger_event = { id = agot_child_personality_events.0021 years = $AGE$ } }
+			flag:arbitrary = { trigger_event = { id = agot_child_personality_events.0022 years = $AGE$ } }
+			flag:patient = { trigger_event = { id = agot_child_personality_events.0023 years = $AGE$ } }
+			flag:impatient = { trigger_event = { id = agot_child_personality_events.0024 years = $AGE$ } }
+			flag:temperate = { trigger_event = { id = agot_child_personality_events.0025 years = $AGE$ } }
+			flag:gluttonous = { trigger_event = { id = agot_child_personality_events.0026 years = $AGE$ } }
+			flag:trusting = { trigger_event = { id = agot_child_personality_events.0027 years = $AGE$ } }
+			flag:paranoid = { trigger_event = { id = agot_child_personality_events.0028 years = $AGE$ } }
+			flag:zealous = { trigger_event = { id = agot_child_personality_events.0029 years = $AGE$ } }
+			flag:cynical = { trigger_event = { id = agot_child_personality_events.0030 years = $AGE$ } }
+			flag:compassionate = { trigger_event = { id = agot_child_personality_events.0031 years = $AGE$ } }
+			flag:callous = { trigger_event = { id = agot_child_personality_events.0032 years = $AGE$ } }
+			flag:sadistic = { trigger_event = { id = agot_child_personality_events.0033 years = $AGE$ } }
+			flag:fickle = { trigger_event = { id = agot_child_personality_events.0034 years = $AGE$ } }
+			flag:stubborn = { trigger_event = { id = agot_child_personality_events.0035 years = $AGE$ } }
+			# flag:eccentric = { trigger_event = { id = agot_child_personality_events.0036 years = $AGE$ } }
+
+			# Childhood personality
+			flag:curious = { trigger_event = { id = agot_child_personality_events.1000 years = $AGE$ } }
+			flag:rowdy = { trigger_event = { id = agot_child_personality_events.1001 years = $AGE$ } }
+			flag:bossy = { trigger_event = { id = agot_child_personality_events.1002 years = $AGE$ } }
+			flag:charming = { trigger_event = { id = agot_child_personality_events.1003 years = $AGE$ } }
+			flag:pensive = { trigger_event = { id = agot_child_personality_events.1004 years = $AGE$ } }
+		}
+	}
+}
+
+agot_canon_children_add_trait_effect = {
+	agot_canon_children_get_guardian_scope_effect = yes
+
+	if = {
+		limit = {
+			is_ai = yes
+			trigger_if = {
+				limit = {
+					$TRAIT$ = { has_trait_category = personality }
+					exists = scope:guardian
+				}
+				scope:guardian = { is_ai = yes }
+			}
+			trigger_if = {
+				limit = {
+					$TRAIT$ = { has_trait_category = childhood }
+				}
+				scope:father = { is_ai = yes }
+			}
+		}
+		add_trait = $TRAIT$
+	}
+	else = {
+		trigger_event = {
+			on_action = $ON_ACTION$
+		}
+	}
+}
+
+
+# BIRTH EFFECTS
+
+agot_canon_children_after_birth_effect = {
+	if = {
+		limit = { is_male = yes }
+		change_first_name = $NAME_MALE$
+	}
+	else_if = {
+		limit = { is_female = yes }
+		change_first_name = $NAME_FEMALE$
+	}
+
+	#add_character_flag = $FLAG$
+	make_trait_inactive = $TRAIT$
+	copy_inheritable_appearance_from = character:$DNA$
+
+	add_to_global_variable_list = { # For retrieving scopes (scopes become unavailable on death)
+		name = agot_born_canon_children_scopes
+		target = this
+	}
+}
+
+agot_canon_children_clear_genetic_traits_effect = {
+	remove_trait = beauty_bad_1
+	remove_trait = beauty_bad_2
+	remove_trait = beauty_bad_3
+	remove_trait = beauty_good_1
+	remove_trait = beauty_good_2
+	remove_trait = beauty_good_3
+	remove_trait = intellect_bad_1
+	remove_trait = intellect_bad_2
+	remove_trait = intellect_bad_3
+	remove_trait = intellect_good_1
+	remove_trait = intellect_good_2
+	remove_trait = intellect_good_3
+	remove_trait = physique_bad_1
+	remove_trait = physique_bad_2
+	remove_trait = physique_bad_3
+	remove_trait = physique_good_1
+	remove_trait = physique_good_2
+	remove_trait = physique_good_3
+	remove_trait = lunatic_genetic
+	remove_trait = possessed_genetic
+	remove_trait = depressed_genetic
+	remove_trait = fecund
+	remove_trait = clubfooted
+	remove_trait = hunchbacked
+	remove_trait = lisping
+	remove_trait = stuttering
+	remove_trait = dwarf
+	remove_trait = giant
+	remove_trait = inbred
+	remove_trait = pure_blooded
+	remove_trait = spindly
+	remove_trait = scaly
+	remove_trait = albino
+	remove_trait = wheezing
+	remove_trait = bleeder
+	remove_trait = infertile
+	remove_trait = weak
+	remove_trait = wheezing
+	remove_trait = bleeder
+	remove_trait = great_pox
+	remove_trait = early_great_pox
+	remove_trait = lovers_pox
+	remove_trait = ill
+	remove_trait = the_mark #AGOT trait
+}
+
+#agot_canon_children_give_bastard_nickname_effect = {
+#	if = {
+#		limit = { has_trait = bastard }
+#		make_trait_inactive = $SURNAME$
+#	}
+#}

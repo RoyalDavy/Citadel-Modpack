@@ -1,0 +1,98 @@
+﻿DragonSkullGetDragonKiller = {
+	type = artifact
+
+	text = {
+		trigger = {
+			var:killer = var:dragon
+		}
+		localization_key = agot_empty
+	}
+
+	text = {
+		localization_key = agot_artifact_dragon_skull_slain
+	}
+
+}
+
+DragonSkullGetDragonRider = {
+	type = artifact
+
+	text = {
+		trigger = {
+			has_variable = famous_rider
+		}
+		localization_key = agot_artifact_dragon_skull_famous_past_rider
+	}
+
+	text = {
+		trigger = {
+			has_variable = rider
+		}
+		localization_key = agot_artifact_dragon_skull_past_rider
+	}
+
+	text = {
+		localization_key = agot_empty
+	}
+}
+
+DragonBinderReadValyrian = {
+	type = character
+
+	text = {
+		trigger = {
+			knows_language = language_valyrian
+		}
+		localization_key = agot_dragonbinder_read_valyrian
+	}
+
+	text = {
+		localization_key = agot_empty
+	}
+}
+
+DragonHornForgedBy = {
+	type = artifact
+
+	text = {
+		trigger = {
+			NOT = { has_variable = creator }
+		}
+		localization_key = agot_artifact_dragon_horn_old_valyria
+	}
+
+	text = {
+		localization_key = agot_artifact_dragon_horn_after_doom
+	}
+
+}
+
+DragonSkullIsSmallSkull = {
+	type = artifact
+
+	text = {
+		trigger = {
+			has_artifact_feature = dragon_skull_size_small
+		}
+		localization_key = agot_empty
+	}
+
+	text = {
+		localization_key = agot_artifact_dragon_skull_wall_ornament
+	}
+
+}
+
+GetCandleMagic = {
+	type = artifact
+
+	text = {
+		trigger = {
+			global_var:magic_level = 0
+		}
+		localization_key = agot_glass_candle_unlit_desc
+	}
+	text = {
+		localization_key = agot_glass_candle_lit_desc
+	}
+}

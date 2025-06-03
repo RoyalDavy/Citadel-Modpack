@@ -1,0 +1,25 @@
+﻿l_english:
+reforge_runic_armor_decision:0 "Summon the Bronzesmiths of Runestone"
+reforge_runic_armor_decision_desc: "For centuries, the ancient bronze plate armours have been the pride of House [GetDynastyByID('dynn_Royce').GetName], each set inscribed with ancient runes of protection. The runes are thought to make their wearers immune to injury, but the truth of this claim has been called into question, however, as quite a few Royces have died wearing them.\n\nTo don such a sacred artifact, one must seek the masterful hands of [GetTitleByKey('b_runestone').GetNameNoTier]'s bronzesmiths, whose skills have been refined and passed down through countless generations. The fitting of these armours is a delicate art, as the bronzed breastplates are believed to hold the enigmatic power within each etched rune, power they believe could be lost with the slightest misstep.\n\nThis is a task beyond the reach of common tools and simple breastplate stretchers. It requires precision, reverence, and a deep understanding of the old ways."
+reforge_runic_armor_t: "The Runic Refitting Ritual"
+reforge_runic_armor_decision_tooltip_1: "Choose to undertake this solemn ritual, and wear the Runic Armour that has safeguarded your house since the Age of Heroes."
+reforge_runic_armor_decision_tooltip_2: "House Royce have several sets of ancient bronze plate armour inscribed with runes that are thought to make their wearers immune to injury."
+reforge_runic_armor_decision_tooltip_4: "You may recieve a Bronze Runic Armour [inventory_artifact|E]"
+
+reforge_runic_armor_decision_confirm: "Send for the Bronzesmiths"
+
+reforge_runic_armor_0001_c_desc: "As the wind whispers through the halls of [GetTitleByKey('b_runestone').GetNameNoTier], the clanging of metal upon metal rings out from the forges.\n\nToday marks a momentous occasion: the fitting of your Runic Armour. The Master Bronzesmith, [smith.GetFirstName], his face illuminated by the forge's fiery glow, arrives in your presence, his hands as firm as the ancient traditions he upholds.\n\n'My [ROOT.Char.GetLadyLord]', he begins with a bow, 'the time has come to align the runes with your measure.'\nHe unveils the bronze breastplate, its runes shimmering faintly as if recognizing their true bearer.\n\n'Let us proceed with care', the smith continues. 'The bronze is alive with the whispers of the First Men. To wear this is to walk in their strength, to be shielded by their wisdom.'"
+
+reforge_runic_armor_0001_tt: "[smith.GetFirstName] will attempt to alter the ancient runic bronze breastplate to your measure"
+reforge_runic_armor_0001_b_tt: "You will cancel the fitting and your gold will be refunded"
+
+reforge_runic_armor_0001_a: "Return safely [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('smith'))]..."
+reforge_runic_armor_0001_b: "Work your craft, [smith.GetName]"
+reforge_runic_armor_0001_c: "Perhaps now is not the time for a fitting"
+
+reforge_runic_armor_0002_a_desc: "As dusk falls over [GetTitleByKey('b_runeport').GetNameNoTier], the ancient stone circle bathed in the golden glow of torchlight comes alive.\n[smith.GetName], his face aglow with pride and sweat, presents you with the Runic Armour. The bronze plates, now perfectly contoured to your form, catch the flickering light, casting runes that dance across the old stones.\n\n'My [ROOT.Char.GetLadyLord]', he says, his voice echoing off the stones, 'the spirits of our forebears have guided my hand. Your armour is ready.'\n\nHe assists you in donning the breastplate, each piece aligning with a satisfying precision. As the bronze encases you, the runes pulse with a deep, resonant power, as if the very spirits of the armor's makers stand with you.\n\nThe Bronzesmith steps back, his work complete, leaving you cloaked in the legacy of your ancestors, ready to face whatever the fates may hold."
+reforge_runic_armor_0002_a: "You've outdone yourself [smith.GetFirstName]."
+
+reforge_runic_armor_0003_a_desc: "Your steps echo through the corridors of [GetTitleByKey('b_runestone').GetNameNoTier], a sinking feeling growing with each moment. Pushing open the doors to the armory, a cold silence greets you.\n\nScattered across the cold floor lies the Runic Armour, once your family's pride, now a desecrated shell of its former glory. The runes, imbued with ancient strength, are now marred by clumsy hammer-strokes, their power seeping away like mist in the morning sun.\n\n[smith.GetFirstName], charged with the sacred task, is nowhere to be found. Shame, it seems, has a swifter step than honour.\nThe empty forge and tools left in disarray speak a clear yet silent tale of a craftsman who could not bear the weight of his failure.\n\nThe silence is a void, filled only by the echo of a heritage now tarnished."
+reforge_runic_armor_0003_a: "This will not be forgotten. 'We Remember'."
+

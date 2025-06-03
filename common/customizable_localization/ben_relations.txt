@@ -1,0 +1,189 @@
+﻿SisterCharacterIntroduction = {
+	type = character
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth < root.year_of_birth
+			has_game_rule = younger_siblings
+		}
+		localization_key = YoungerSisterCharacterIntroduction
+	}
+
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth > root.year_of_birth
+			has_game_rule = older_siblings
+		}
+		localization_key = OlderSisterCharacterIntroduction
+	}
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth < root.year_of_birth
+			has_game_rule = little_siblings
+		}
+		localization_key = LittleSisterCharacterIntroduction
+	}
+
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth > root.year_of_birth
+			has_game_rule = big_siblings
+		}
+		localization_key = BigSisterCharacterIntroduction
+	}
+	
+	text = { 
+		trigger = {
+			scope:target.year_of_birth = root.year_of_birth
+		}
+		localization_key = TwinSisterCharacterIntroduction
+	}
+	
+	text = {
+		localization_key = relation_sister_normal
+		trigger = { always = yes }
+		fallback = yes
+	}
+}
+
+HalfSisterCharacterIntroduction = {
+	type = character
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth < root.year_of_birth
+			has_game_rule = younger_siblings
+		}
+		localization_key = YoungerHalfSisterCharacterIntroduction
+	}
+
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth > root.year_of_birth
+			has_game_rule = older_siblings
+		}
+		localization_key = OlderHalfSisterCharacterIntroduction
+	}
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth < root.year_of_birth
+			has_game_rule = little_siblings
+		}
+		localization_key = LittleHalfSisterCharacterIntroduction
+	}
+
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth > root.year_of_birth
+			has_game_rule = big_siblings
+		}
+		localization_key = BigHalfSisterCharacterIntroduction
+	}
+	
+	text = {
+		localization_key = relation_halfsister_normal
+		trigger = { always = yes }
+		fallback = yes
+	}
+}
+
+BrotherCharacterIntroduction = {
+	type = character
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth < root.year_of_birth
+			has_game_rule = younger_siblings
+		}
+		localization_key = YoungerBrotherCharacterIntroduction
+	}
+
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth > root.year_of_birth
+			has_game_rule = older_siblings
+		}
+		localization_key = OlderBrotherCharacterIntroduction
+	}
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth < root.year_of_birth
+			has_game_rule = little_siblings
+		}
+		localization_key = LittleBrotherCharacterIntroduction
+	}
+
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth > root.year_of_birth
+			has_game_rule = big_siblings
+		}
+		localization_key = BigBrotherCharacterIntroduction
+	}
+	
+	text = { 
+		trigger = {
+			scope:target.year_of_birth = root.year_of_birth
+		}
+		localization_key = TwinBrotherCharacterIntroduction
+	}
+	
+	text = {
+		localization_key = relation_brother_normal
+		trigger = { always = yes }
+		fallback = yes
+	}
+}
+
+HalfBrotherCharacterIntroduction = {
+	type = character
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth < root.year_of_birth
+			has_game_rule = younger_siblings
+		}
+		localization_key = YoungerHalfBrotherCharacterIntroduction
+	}
+
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth > root.year_of_birth
+			has_game_rule = older_siblings
+		}
+		localization_key = OlderHalfBrotherCharacterIntroduction
+	}
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth < root.year_of_birth
+			has_game_rule = little_siblings
+		}
+		localization_key = LittleHalfBrotherCharacterIntroduction
+	}
+
+
+	text = { 
+		trigger = {
+			scope:target.year_of_birth > root.year_of_birth
+			has_game_rule = big_siblings
+		}
+		localization_key = BigHalfBrotherCharacterIntroduction
+	}
+
+	text = {
+		localization_key = relation_halfbrother_normal
+		trigger = { always = yes }
+		fallback = yes
+	}
+}

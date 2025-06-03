@@ -1,0 +1,126 @@
+﻿#Setup
+asoiaf_westeros_culture_fix_effect = {
+	title:k_the_vale = {
+		every_de_jure_county = {
+			limit = { NOT = { culture = culture:sisterman } }
+			set_county_culture = culture:valeman
+		}
+	}
+	culture:valeman = { add_culture_tradition = agot_tradition_moonman }
+	title:k_the_reach = {
+		every_de_jure_county = {
+			set_county_culture = culture:reachman
+		}
+	}
+	culture:reachman = { add_culture_tradition = agot_tradition_honeywiner }
+	title:k_the_stormlands = {
+		every_de_jure_county = {
+			set_county_culture = culture:stormlander
+		}
+	}
+	culture:stormlander = { add_culture_tradition = tradition_stand_and_fight }
+	title:k_the_north = {
+		every_de_jure_county = {
+			limit = {
+				NOR = { culture = culture:crannogman culture = culture:hill_clansman culture = culture:skagosi }
+			}
+			set_county_culture = culture:northman
+		}
+	}
+	culture:northman = { add_culture_tradition = agot_tradition_wolfswood_clansman }
+	culture:riverlander = { add_culture_tradition = tradition_hunters }
+	#culture:ironborn = { add_culture_tradition = tradition_ruling_caste }
+	culture:ironborn = { add_culture_tradition = tradition_isolationist }
+	culture:westerman = { add_culture_tradition = tradition_fp2_state_ransoming }
+	culture:crownlander = {
+		add_culture_tradition = tradition_chivalry
+		add_culture_tradition = tradition_loyal_soldiers
+	}
+	culture:salt_dornish = { add_culture_tradition = tradition_eye_for_an_eye }
+	culture:sand_dornish = { add_culture_tradition = tradition_eye_for_an_eye }
+	culture:stone_dornish = { add_culture_tradition = tradition_martial_admiration }
+	culture:high_valyrian = { add_culture_tradition = tradition_poetry }
+	culture:westerosi_valyrian = { add_culture_tradition = tradition_welcoming }
+	every_living_character = {
+		if = { #Vale block
+			limit = {
+				OR = {
+					culture = culture:moonman
+					culture = culture:fingerman
+				}
+			}
+			set_culture = culture:valeman
+		}
+		if = { #Reach block (minus the Marchers)
+			limit = {
+				OR = {
+					culture = culture:vineman
+					culture = culture:shieldman
+					culture = culture:honeywiner
+				}
+			}
+			set_culture = culture:reachman
+		}
+		if = { #North block
+			limit = {
+				OR = {
+					culture = culture:barrowman
+					culture = culture:krakenman
+					culture = culture:harborman
+					culture = culture:wolfswood_clansman
+					culture = culture:bearman
+				}
+			}
+			set_culture = culture:northman
+		}
+		if = { #Reachman Marcher block
+			limit = {
+				OR = {
+					OR = { #here to account for members of their dynasty that are outside of the Reach on game start
+						dynasty ?= dynasty:dynn_Tarly
+						dynasty ?= dynasty:dynn_Peake
+					}
+					AND = {
+						culture = culture:marcher
+						location = {
+							geographical_region = world_westeros_the_reach
+						}
+					}
+				}
+			}
+			set_culture = culture:reachman
+		}
+		if = { #Stormlander Marcher block
+			exists = dynasty
+			limit = {
+				OR = {
+					OR = { #here to account for members of their dynasty that are outside of the Stormlands on game start
+						dynasty ?= dynasty:dynn_Lonmouth
+						dynasty ?= dynasty:dynn_Dondarrion
+						dynasty ?= dynasty:dynn_Cole
+						dynasty ?= dynasty:dynn_Selmy
+						dynasty ?= dynasty:dynn_Horpe
+						dynasty ?= dynasty:dynn_Swann
+						dynasty ?= dynasty:dynn_Caron
+					}
+					AND = {
+						culture = culture:marcher
+						location = {
+							geographical_region = world_westeros_the_stormlands
+						}
+					}
+				}
+			}
+			set_culture = culture:stormlander
+		}
+	}
+	#title:c_dragonstone = { #AGOT temporarily sets it as high val now. Once they remove it, re-enable this
+	#	set_county_culture = culture:high_valyrian
+	#}
+	title:c_high_tide = {
+		set_county_culture = culture:high_valyrian
+	}
+	title:c_driftmark = {
+		set_county_culture = culture:high_valyrian
+	}
+}

@@ -1,0 +1,13 @@
+﻿agot_8284_6_2_scenario_setup = {
+	#Gendry, errors if you try to do it in history
+	character:Baratheon_rs_1 = {
+		add_secret = {
+			type = secret_unmarried_illegitimate_child
+			target = character:Baratheon_9
+		}
+	}
+
+	### CANON CHILDREN STORY CYCLE SETUP ###
+	agot_canon_children_setup_story_cycles_effect = yes
+	######
+}

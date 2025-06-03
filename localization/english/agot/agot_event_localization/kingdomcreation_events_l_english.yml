@@ -1,0 +1,133 @@
+﻿l_english:
+ #Duskendale
+ morevohnkingdoms.0002.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0002.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_riverlands$ and $k_the_stormlands$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0002.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0003.t:0 "The $kingdom$ of [duskendale_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0003.start.desc:0 "After many diplomatic and strategic plays, the lowlands have fallen under the rule of [duskendale_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0003.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', duskendale_uniter)] [duskendale_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0003.former.desc:0 "[duskendale_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0003.end.desc:0 "has declared [duskendale_uniter.GetHerselfHimself] 'the [duskendale_uniter.GetLadyLord|U] of [duskendale_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[duskendale_uniter.GetHerHis|U] name will surely live on for centuries, but will [duskendale_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_the_riverlands$ are merely waiting for a moment of weakness."
+ #DREADFORT
+ morevohnkingdoms.0004.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0004.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_north$ and $k_the_vale$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0004.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0005.t:0 "The $kingdom$ of [dreadfort_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0005.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [dreadfort_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0005.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', dreadfort_uniter)] [dreadfort_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0005.former.desc:0 "[dreadfort_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0005.end.desc:0 "has declared [dreadfort_uniter.GetHerselfHimself] 'the [dreadfort_uniter.GetLadyLord|U] of [dreadfort_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[dreadfort_uniter.GetHerHis|U] name will surely live on for centuries, but will [dreadfort_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_the_north$ are merely waiting for a moment of weakness."
+
+ morevohnkingdoms.0006.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0006.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_north$ and $k_the_vale$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0006.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0007.t:0 "The $kingdom$ of [runestone_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0007.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [runestone_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0007.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', runestone_uniter)] [runestone_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0007.former.desc:0 "[runestone_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0007.end.desc:0 "has declared [runestone_uniter.GetHerselfHimself] 'the [runestone_uniter.GetLadyLord|U] of [runestone_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[runestone_uniter.GetHerHis|U] name will surely live on for centuries, but will [runestone_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_the_north$ are merely waiting for a moment of weakness."
+  
+ morevohnkingdoms.0008.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0008.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_north$ and $k_the_riverlands$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0008.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0009.t:0 "The $kingdom$ of [the_neck_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0009.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [the_neck_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0009.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', the_neck_uniter)] [the_neck_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0009.former.desc:0 "[the_neck_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0009.end.desc:0 "has declared [the_neck_uniter.GetHerselfHimself] 'the [the_neck_uniter.GetLadyLord|U] of [the_neck_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[the_neck_uniter.GetHerHis|U] name will surely live on for centuries, but will [the_neck_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_the_north$ are merely waiting for a moment of weakness."
+ 
+ morevohnkingdoms.0010.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0010.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_reach$ and $k_the_stormlands$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0010.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0011.t:0 "The $kingdom$ of [stone_and_sky_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0011.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [stone_and_sky_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0011.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', stone_and_sky_uniter)] [stone_and_sky_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0011.former.desc:0 "[stone_and_sky_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0011.end.desc:0 "has declared [stone_and_sky_uniter.GetHerselfHimself] 'the [stone_and_sky_uniter.GetLadyLord|U] of [stone_and_sky_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[stone_and_sky_uniter.GetHerHis|U] name will surely live on for centuries, but will [stone_and_sky_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_the_dorne$ are merely waiting for a moment of weakness."
+ 
+ morevohnkingdoms.0012.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0012.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_riverlands$ and $k_the_westerlands$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0012.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0013.t:0 "The $kingdom$ of [banefort_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0013.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [banefort_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0013.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', banefort_uniter)] [banefort_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0013.former.desc:0 "[banefort_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0013.end.desc:0 "has declared [banefort_uniter.GetHerselfHimself] 'the [banefort_uniter.GetLadyLord|U] of [banefort_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[banefort_uniter.GetHerHis|U] name will surely live on for centuries, but will [banefort_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_the_westerlands$ are merely waiting for a moment of weakness."
+ 
+ morevohnkingdoms.0014.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0014.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_dorne$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0014.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0015.t:0 "The $kingdom$ of [the_marches_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0015.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [the_marches_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0015.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', the_marches_uniter)] [the_marches_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0015.former.desc:0 "[the_marches_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0015.end.desc:0 "has declared [the_marches_uniter.GetHerselfHimself] 'the [the_marches_uniter.GetLadyLord|U] of [the_marches_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[the_marches_uniter.GetHerHis|U] name will surely live on for centuries, but will [the_marches_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_the_westerlands$ are merely waiting for a moment of weakness."
+
+ morevohnkingdoms.0016.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0016.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_riverlands$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0016.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0017.t:0 "The $kingdom$ of [the_claw_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0017.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [the_claw_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0017.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', the_claw_uniter)] [the_claw_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0017.former.desc:0 "[the_claw_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0017.end.desc:0 "has declared [the_claw_uniter.GetHerselfHimself] 'the [the_claw_uniter.GetLadyLord|U] of [the_claw_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[the_claw_uniter.GetHerHis|U] name will surely live on for centuries, but will [the_claw_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_the_westerlands$ are merely waiting for a moment of weakness."
+
+ morevohnkingdoms.0018.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0018.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_stormlands$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0018.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0019.t:0 "The $kingdom$ of [the_hook_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0019.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [the_hook_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0019.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', the_hook_uniter)] [the_hook_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0019.former.desc:0 "[the_hook_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0019.end.desc:0 "has declared [the_hook_uniter.GetHerselfHimself] 'the [the_hook_uniter.GetLadyLord|U] of [the_hook_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[the_hook_uniter.GetHerHis|U] name will surely live on for centuries, but will [the_hook_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_dragonstone$ are merely waiting for a moment of weakness."
+    
+ morevohnkingdoms.0020.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0020.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_vale$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0020.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0021.t:0 "The $kingdom$ of [the_sisters_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0021.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [the_sisters_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0021.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', the_sisters_uniter)] [the_sisters_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0021.former.desc:0 "[the_sisters_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0021.end.desc:0 "has declared [the_sisters_uniter.GetHerselfHimself] 'the [the_sisters_uniter.GetLadyLord|U] of [the_sisters_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[the_sisters_uniter.GetHerHis|U] name will surely live on for centuries, but will [the_sisters_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_dragonstone$ are merely waiting for a moment of weakness."
+ 
+ morevohnkingdoms.0022.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0022.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_vale$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0022.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0023.t:0 "The $kingdom$ of [gulltownTK_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0023.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [gulltownTK_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0023.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', gulltownTK_uniter)] [gulltownTK_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0023.former.desc:0 "[gulltownTK_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0023.end.desc:0 "has declared [gulltownTK_uniter.GetHerselfHimself] 'the [gulltownTK_uniter.GetLadyLord|U] of [gulltownTK_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[gulltownTK_uniter.GetHerHis|U] name will surely live on for centuries, but will [gulltownTK_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_dragonstone$ are merely waiting for a moment of weakness."
+    
+
+ morevohnkingdoms.0024.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0024.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_vale$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0024.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0025.t:0 "The $kingdom$ of [crossing_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0025.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [crossing_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0025.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', crossing_uniter)] [crossing_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0025.former.desc:0 "[crossing_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0025.end.desc:0 "has declared [crossing_uniter.GetHerselfHimself] 'the [crossing_uniter.GetLadyLord|U] of [crossing_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[crossing_uniter.GetHerHis|U] name will surely live on for centuries, but will [crossing_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_dragonstone$ are merely waiting for a moment of weakness."
+ 
+ morevohnkingdoms.0026.t:0 "The $kingdom$ of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ morevohnkingdoms.0026.desc:0 "Despite the strength of our mighty neighbors, our dynasty has managed to carve out a realm of its own between the $k_the_vale$. After a large donation, our liege has decided to elevate our status from a mere $duchy$ to a $kingdom$.\n\nSurely, nothing will endanger the existance of this realm between those two giants!"
+ morevohnkingdoms.0026.a:0 "This is the dawn of a new era."
+
+ morevohnkingdoms.0027.t:0 "The $kingdom$ of [oldtown_uniter.GetPrimaryTitle.GetNameNoTier]"
+ morevohnkingdoms.0027.start.desc:0 "After many diplomatic and strategic plays, the Red Lands have fallen under the rule of [oldtown_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ morevohnkingdoms.0027.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', oldtown_uniter)] [oldtown_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0027.former.desc:0 "[oldtown_uniter.GetTitledFirstName]"
+ morevohnkingdoms.0027.end.desc:0 "has declared [oldtown_uniter.GetHerselfHimself] 'the [oldtown_uniter.GetLadyLord|U] of [oldtown_uniter.GetPrimaryTitle.GetNameNoTierNoTooltip].'\n\n[oldtown_uniter.GetHerHis|U] name will surely live on for centuries, but will [oldtown_uniter.GetHerHis] realm stand the test of time? Surely, the $e_the_iron_throne$ and $k_dragonstone$ are merely waiting for a moment of weakness."
+ 

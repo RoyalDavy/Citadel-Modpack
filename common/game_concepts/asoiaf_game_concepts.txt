@@ -1,0 +1,4 @@
+﻿asoiaf_canon_children_concept = {
+	texture = gfx/interface/icons/currencies/icon_dynasty_prestige_03.dds
+}
+#texture = gfx/interface/icons/character_interactions/child.dds

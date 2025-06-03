@@ -1,0 +1,271 @@
+﻿###############################
+### AGOT GENERIC NICKNAMES  ###
+###############################
+
+nick_the_warrior  = {}
+nick_greysteel  = {}
+nick_fireball  = {}
+nick_hardstone  = {}
+nick_breakspear  = {}
+nick_oakenfist  = {}
+nick_greatheart  = {}
+nick_ironheart = {}
+nick_the_neveryield  = {}
+nick_greycloak  = {}
+nick_longspear  = {}
+nick_shieldbreaker  = {}
+nick_shieldsmasher = {}
+nick_thunderbolt  = {}
+nick_the_steelskin = {}
+nick_the_woe  = {}
+nick_the_morningstar  = {}
+nick_oakenshield  = {}
+nick_blacksword  = {}
+nick_widowmaker  = {}
+nick_bloodborn  = {}
+nick_starfire  = {}
+nick_the_windrider  = {}
+nick_swiftspur = {}
+nick_battleborn = {}
+nick_swordbiter = {}
+nick_the_painter = {}
+
+nick_the_awful = {}
+nick_the_brute = {}
+nick_the_beast = {}
+nick_hard = { is_prefix = yes }
+nick_the_demon = {}
+nick_the_monster = {}
+nick_the_slaughterer = {}
+nick_the_fiend = {}
+
+nick_the_anvil = {}
+nick_the_tactician = {}
+nick_the_trebuchet = {}
+nick_the_warlord = {}
+nick_the_battlemaster = {}
+nick_the_stone = { is_prefix = yes }
+
+nick_silvertongue = {}
+nick_the_affable = {}
+nick_the_jovial = {}
+nick_the_jolly = {}
+nick_the_merry = {}
+
+nick_the_reader = {}
+nick_the_learned = {}
+nick_the_scholar = {}
+nick_the_scribe = {}
+nick_the_lettered = {}
+nick_the_erudite = {}
+
+nick_the_golden = {}
+nick_gold_hands = {}
+nick_the_brilliant = {}
+nick_the_exact = {}
+nick_the_administrator = {}
+nick_the_treasurer = {}
+nick_pennylover = {}
+
+nick_the_shadow = {}
+nick_the_dagger = {}
+nick_the_whisperer = {}
+nick_the_wily = {}
+nick_the_fox = {}
+nick_the_spider = {}
+nick_the_cunning = {}
+nick_moonshadow = {}
+
+nick_the_handsome = {}
+nick_brightsmile = {}
+nick_the_splendid = {}
+
+nick_the_fair = {}
+nick_pretty = { is_prefix = yes }
+nick_the_beautiful = {}
+nick_the_beauty = {}
+nick_the_comely = {}
+nick_easy_eyes = {}
+
+nick_the_ugly = {}
+nick_the_homely = {}
+nick_the_hideous = {}
+nick_the_grotesque = {}
+nick_the_beauty_ironic = {}
+
+nick_the_mountain = {}
+nick_the_titan = {}
+nick_the_mighty = {}
+nick_the_giant = {}
+nick_bonebreaker = {}
+nick_the_minotaur = {}
+nick_thunderhead = {}
+nick_rampage = {}
+nick_the_goliath = {}
+nick_the_small_ironic = {}
+
+nick_the_sot = {}
+nick_the_drunken = {}
+nick_the_fermented = {}
+nick_the_souse = {}
+
+nick_the_ruthless = {}
+nick_the_merciless = {}
+nick_the_heartless = {}
+nick_stoneheart = {}
+
+nick_the_tormentor = {}
+nick_the_mutilator = {}
+nick_the_depraved = {}
+nick_the_monster = {}
+nick_the_cruel = {}
+nick_the_terrible = {}
+nick_the_monstrous = {}
+nick_the_weeper = {}
+nick_the_barber = {}
+nick_redhand = {}
+nick_redarm = {}
+nick_the_twisted = {}
+nick_the_soulless = {}
+nick_the_red_smile = {}
+nick_the_tickler = {}
+
+nick_the_brave = {}
+nick_the_fearless = {}
+nick_the_daring = {}
+nick_the_bold = {}
+nick_the_tenacious = {}
+nick_the_resolute = {}
+
+nick_the_gallant = {}
+nick_the_valiant = {}
+nick_the_mettle = {}
+nick_the_stalwart = {}
+nick_silverspur = {}
+
+nick_the_strong = {}
+nick_the_bull = {}
+nick_the_brawny = {}
+nick_the_robust = {}
+nick_the_hearty = {}
+nick_the_durable = {}
+
+nick_the_wild = {}
+nick_the_rash = {}
+nick_the_fierce = {}
+nick_the_feral = {}
+
+nick_the_arrogant = {}
+nick_the_haughty = {}
+
+nick_the_mule = {}
+nick_the_defiant = {}
+nick_the_inflexible = {}
+
+nick_the_grim = {}
+nick_the_sour = {}
+nick_the_morbid = {}
+nick_the_unsmiling = {}
+nick_the_grave = {}
+nick_the_stoic = {}
+
+nick_the_clubfoot = {}
+nick_the_lame = {}
+nick_the_limp  = {}
+nick_the_limper = {}
+
+nick_the_ruin = {}
+nick_the_ruined = {}
+nick_the_twisted = {}
+nick_the_broken= {}
+
+nick_the_mummer = {}
+nick_the_poet = {}
+nick_the_bard = {}
+nick_the_songbird = {}
+nick_the_singer = {}
+
+nick_the_knight = {}
+
+nick_the_dreamer = {}
+nick_the_seer = {}
+
+nick_the_bloodaxe = {}
+nick_the_reaver = {}
+nick_the_raider = {}
+nick_the_pillager = {}
+nick_red_sails = {}
+
+nick_the_drowned = {}
+nick_the_drownedknight = {}
+nick_the_damp = {}
+nick_salt_lungs = {}
+
+nick_the_red = {}
+nick_the_redknight = {}
+nick_the_firegazer = {}
+
+nick_the_paunch = {}
+nick_ironguts = {}
+nick_the_maneater = {}
+
+nick_the_guest = {}
+nick_maidensbane = {}
+nick_whoresbane = {}
+
+nick_the_sheep_lover = {}
+nick_corpse_licker = {}
+
+nick_the_necromancer = {}
+nick_the_warlock = {}
+nick_the_witch = {}
+
+nick_ninefingers = {}
+nick_the_scarred = {}
+nick_the_damaged = {}
+nick_woundworn = {}
+
+nick_the_queer = {}
+nick_the_peculiar = {}
+nick_the_odd = {}
+
+nick_the_green = {}
+nick_green_thumb = {}
+
+nick_the_short = {}
+nick_the_imp = {}
+nick_the_small = {}
+nick_the_flea = {}
+nick_the_tall_ironic = {}
+
+nick_silver = { is_prefix = yes }
+nick_the_silver = {}
+nick_silverhair = {}
+nick_palehair = {}
+
+nick_the_crow = {}
+nick_the_black_nightswatch = {}
+nick_blackcloak = {}
+nick_coldhands = {}
+nick_the_frostbitten = {}
+nick_snarkslayer = {}
+nick_the_slushboots = {}
+nick_the_grumkin_hunter = {}
+nick_wallpisser = {}
+nick_the_molestown_guest = {}
+
+nick_the_white = {}
+nick_the_pale = {}
+nick_the_alabaster = {}
+nick_the_ivory = {}
+nick_milkglass = {}
+nick_whiteshield = {}
+nick_whiteblood = {}
+nick_the_white_knight = {}
+nick_the_white_shadow = {}
+nick_the_white_bull = {}
+nick_the_snowman = {}
+nick_the_white_bastard = {}
+nick_the_white_worm = {}
+nick_the_white_wine = {}
+nick_wastecloak = {}

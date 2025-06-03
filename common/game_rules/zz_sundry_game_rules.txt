@@ -1,0 +1,23 @@
+﻿sundry_sigils_westeros_rule = {
+	default = sundry_sigils_westeros_rule_off
+	
+	sundry_sigils_westeros_rule_off = {
+		
+	}
+	
+	sundry_sigils_westeros_rule_on = {
+		
+	}
+}
+
+sundry_culture_names_rule = {
+	default = sundry_culture_names_rule_off
+	
+	sundry_culture_names_rule_off = {
+		
+	}
+	
+	sundry_culture_names_rule_on = {
+		
+	}
+}

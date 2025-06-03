@@ -1,0 +1,78 @@
+﻿name_list_lorathi = {
+
+	cadet_dynasty_names = {
+		"dynn_D_pst_han"
+	}
+
+	dynasty_names = {
+		{"dynn_D_pst_han"}
+		{ "dynn_Merion" }
+		"H'ghar"
+		"V'sor"
+		"Ishan"
+		"F'ghel"
+		"Rothis"
+		"Kalos"
+		"M'botah"
+		"Daelys"
+		"Miqash"
+	}
+
+	male_names = {
+		Abast Abo Anto Antogo Arago Areo Aro Arzago Arzero Aurio
+		Baldo Barbos Barnago Barzo Bello Beqqo Bhosos Bobhar Bosolo Bryzo Byan Bylar Byllo
+		Delgo Denzo Dhokoth Doro
+		Ferro
+		Gavano Gesso Gonaro Gorgoro Gorvot Goryar Gozanto Grego Gyraro
+		Horvo
+		Ilaro Izqoro
+		Jago Jaharo Jaharos Jaqen Jaqmaq Josto
+		Losorgo Lotho Lyrgo
+		Malo Manvero Marano Margo Marro Mazoro Melampo Mero Morgo Moroggo
+		Narbo Nelugo Noho
+		Obardo Ollo Orgodo Oro Orzogo Orzono
+		Qalgaro Qarlo Qarro Qavo Qollo Qonsano Qorado Qoso
+		Rallo Ranaro Rego Rogaro Roggo Roro Rovogo Rygaro
+		Sadoro Saloro Salozo Sanjaro Sarago Simago Sparal
+		Taggoro Tago Tantal Tedar Teddo Terro Tobho Toggoro Toqodo Torban Torgo Torgoro Tormo
+		Urho
+		Vabhoro Vaggoro Valano Valyro Valyro Vanarzo Varanq Vardo Vargan Vargo Vargoro Varro Vogarro Vogo Vogolo Vonoggoro Vorto Vosebo Vygo Vysso Vyto
+		Zandaro Zarqo Zenaro Zirnomo Zogro Zolgo Zontos Zosebho Zulano
+	}
+	female_names = {
+		S'vrone
+		Arana
+		Belia
+		Calla
+		Danara
+		Elora Emyria
+		Gylora
+		Irea
+		Jaqea Jyana
+		Karra Korra
+		Laressa Lianna Lotha
+		Melane Mera Mylla
+		Narbha Nohia
+		Ornela
+		Qarria
+		Ralla Rogga
+		Shana Syrea Syrella Shae
+		Torma
+	}
+
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 15
+	mat_grf_name_chance = 5
+	father_name_chance = 5
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 15
+	mother_name_chance = 5
+	
+	
+
+	mercenary_names = {
+		#{ name = "mercenary_company_teutonic_brotherhood" }
+	}
+}

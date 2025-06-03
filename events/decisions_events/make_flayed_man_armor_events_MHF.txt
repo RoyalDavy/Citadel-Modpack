@@ -1,0 +1,151 @@
+﻿namespace = make_flayed_man_armor
+
+make_flayed_man_armor.0001 = {
+	type = character_event
+	title = make_flayed_man_armor_t
+
+	theme = dynasty
+	override_background = armory
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = scope:smith
+
+	desc =  make_flayed_man_armor_0001_c_desc
+
+	option = {
+		trigger = {
+			scope:smith = {
+			}
+			is_landed = yes
+		}
+		name = make_flayed_man_armor_0001_b
+
+		custom_tooltip = make_flayed_man_armor_0001_tt
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger_event = {
+			id = make_flayed_man_armor.9999
+		}
+	}
+
+	###Changed my mind...
+	option = {
+		name = make_flayed_man_armor_0001_c
+
+		custom_tooltip = make_flayed_man_armor_0001_b_tt
+
+		remove_decision_cooldown = make_flayed_man_armor_decision
+
+		add_gold = 500
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+##Succeeds in making the Flayed Man Armour
+make_flayed_man_armor.0002 = {
+	type = character_event
+	title = make_flayed_man_armor_t
+	desc = make_flayed_man_armor_0002_a_desc
+
+	theme = dynasty
+	override_background = armory
+	left_portrait = {
+		character = root
+		animation = war_over_tie
+	}
+	
+	right_portrait = {
+		character = scope:smith
+		animation = throne_room_bow_1
+	}
+	immediate = {
+		
+		root = {
+			agot_create_artifact_vs_flayed_man_armor_effect = {
+				OWNER = this
+			}
+			dynasty = { add_dynasty_prestige = 250 }
+		}
+		scope:newly_created_artifact = {
+			add_artifact_history = {
+				type = given
+				actor = scope:smith
+				recipient = root
+			}
+		}
+
+		scope:smith = {
+			add_prestige = 250
+		}
+	}
+
+	artifact = { # To display the artifact in the event-window
+		target = scope:newly_created_artifact
+		position = lower_left_portrait
+	}
+
+	option = {
+		name = make_flayed_man_armor_0002_a
+	}
+}
+
+##Fails the crafting
+make_flayed_man_armor.0003 = {
+	type = character_event
+	title = make_flayed_man_armor_t
+	desc = make_flayed_man_armor_0003_a_desc
+	theme = dynasty
+	override_background = armory
+	left_portrait = {
+		character = root
+		animation = rage
+		triggered_outfit = {
+			outfit_tags = { western_commoner_outfit }
+		}
+	}
+
+	immediate = {
+		scope:smith = {
+			death = { death_reason = death_vanished }
+		}
+	}
+
+	option = {
+		name = make_flayed_man_armor_0003_a
+	}
+}
+
+make_flayed_man_armor.9999 = {
+	hidden = yes
+	immediate = {
+		if = {
+			random_list = {
+				## Smith succseeds
+				80 = {
+					trigger_event = {
+						id = make_flayed_man_armor.0002
+						days = {60 365}
+					}
+				}
+				## Smith fails
+				20 = {
+					trigger_event = {
+						id = make_flayed_man_armor.0003
+						days = {60 365}
+					}
+				}
+			}
+		}
+	}
+}

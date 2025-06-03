@@ -1,0 +1,26 @@
+﻿l_english:
+
+#Manderly Bake-Off decision
+great_northern_bakeoff_decision:0 "Arrange the Great Northern Bake Off"
+great_northern_bakeoff_decision_tooltip:0 "I need some decent pasties, send for Poul Woodholly!"
+great_northern_bakeoff_decision_desc:0 "I feel a great hankering for some pasties and pastries. \n\nI'll send for White Harbor's chief baker, Poul Woodholly, and we'll pitch the great baking tents on the outskirts of the city; just need to clear some of the larger rocks from the fields to fit the tent. \n\nBakers from all across [GetGeographicalRegion('world_westeros_the_north').GetName] will flock to White Harbor. It's high time we arrange the Great Northern Bake Off!"
+great_northern_bakeoff_decision_confirm:0 "On your marks, get set, BAKE!"
+great_northern_bakeoff_events.0001.t:0 "The Great Northern Bake Off"
+great_northern_bakeoff_events.0001.desc:0 "The Bake Off was a roaring success.\n\nBakers from all across [GetGeographicalRegion('world_westeros_the_north').GetName] participated, from [GetTitleByKey('c_last_hearth').GetNameNoTier] to the Neck. They conjured up the finest loaves and tarts; all under the judging stern eyes of renowned local baker, [GetTitleByKey('b_white_harbor').GetNameNoTier]'s own Poul Woodholly. Lord Manderly himself participated as a judge, and tasted every last pasty and pastry. At last a worthy winner was chosen, a #bold STAR BAKER#!.\n\nThis year the title went to a young lad from a small hamlet. The crowd cheered as the winner was presented, and every man, woman and child present shouted:\n\n"#italic DA STAR BAKER IN DA NORF! DA STAR BAKER IN DA NORF!#!"\n\nContent, and with  a full belly, you return to [GetTitleByKey('b_new_castle').GetNameNoTier], already looking forward to the next Great Northern Bake Off."
+great_northern_bakeoff_events.0001.a:0 "Time to return home..."
+
+#Bracken Warhorse decision
+bracken_warhorse_decision:0 "Visit the Stone Hedge stables"
+bracken_warhorse_decision_desc: "The [GetDynastyByID('dynn_Bracken').GetName]s are known as the finest horse-breeders in all of [GetGeographicalRegion('world_westeros_the_riverlands').GetName]. Their stables regularly produce the finest mares and stallions on both sides of the Trident, some fit for racing, others bred for war.\n\nPerhaps it is time to visit the stables to pick out a personal steed?\n\n#weak You can visit the [GetBuilding('stone_hedge_stables_01').GetName] and try to tame a Warhorse."
+bracken_warhorse_decision_tooltip: "You can visit the [GetBuilding('stone_hedge_stables_01').GetName] and try to tame a Warhorse."
+bracken_warhorse_decision_tooltip_1: "You might gain a [martial_lifestyle|E] [perk|E] and your own steed"
+bracken_warhorse_decision_tooltip_2: "You might sell a steed for [gold|E]"
+bracken_warhorse_decision_tooltip_3: "You might gain a [modifier|E] for your [knights|E], [light_cavalry|E] and [heavy_cavalry|E] [men_at_arms|E]"
+bracken_warhorse_decision_confirm: "Visit the stables"
+ 
+#Clegane Dog decision
+clegane_dog_decision:0 "Visit the Clegane's Keep Kennel"
+clegane_dog_decision_desc: "[GetScriptedCharacterByHistoryID('Clegane_1').GetName] was kennelmaster at [GetTitleByKey('c_casterly_rock').GetNameNoTier]. During one autumn year he saved [GetScriptedCharacterByHistoryID('Lannister_129').GetCharacterViewNameNicknamed] from a lioness, although he lost a leg and three dogs while doing so. Lord Tytos rewarded him with lands and a towerhouse. Ser Clegane's son was placed in Tytos's service as his squire. For his sigil Ser Clegane used the three dogs he lost saving Tytos, on the yellow of autumn grass.\n\nThe [GetDynastyByID('dynn_Clegane').GetName]s are known as the finest dog-breeders in all of [GetGeographicalRegion('world_westeros_the_westerlands').GetName]. Their kennel regularly produces the finest, fiercest, and most loyal hounds, some bred for hunting, others bred for war.\n\nPerhaps it is time to visit the kennel to pick out a loyal hound for myself?\n\n#weak You can visit the [GetBuilding('fang_hill_kennel_01').GetName] to adopt a [GetModifier('dog_story_modifier').GetName]."
+clegane_dog_decision_tooltip: "You can visit the [GetBuilding('fang_hill_kennel_01').GetName] to adopt a [GetModifier('dog_story_modifier').GetName]."
+clegane_dog_decision_confirm: "Visit the kennel"
+

@@ -1,0 +1,20 @@
+﻿##Controls ALL modifiers in the mod, will enable or disable NPC usage of clothing/weapons/anims
+tgc_enabled_rule = {
+	default  = tgc_enabled_enabled 
+	tgc_enabled_enabled = {}
+	tgc_enabled_disabled = {}
+}
+
+#Controls if blackfyre bastards/knights will use unique black and red armor
+tgc_blackfyre_rule = {
+	default  = tgc_blackfyre_enabled 
+	tgc_blackfyre_enabled = {}
+	tgc_blackfyre_disabled = {}
+}
+
+#Controls if Faegon's knights will use unique red and black armor
+tgc_faegon_rule = {
+	default  = tgc_faegon_enabled 
+	tgc_faegon_enabled = {}
+	tgc_faegon_disabled = {}
+}

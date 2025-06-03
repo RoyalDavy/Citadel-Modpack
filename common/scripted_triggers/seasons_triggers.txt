@@ -1,0 +1,89 @@
+﻿is_it_winter = {
+	any_character_situation = {
+		OR = {
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_winter_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_light_winter_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_cold_winter_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+		}
+	}
+}
+is_it_spring = {
+	any_character_situation = {
+		OR = {
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_spring_phase
+				situation_sub_region_has_county = $COUNTY$
+			}			
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_wet_spring_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_cool_spring_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_hot_spring_phase
+				situation_sub_region_has_county = $COUNTY$
+			}			
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_dry_spring_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+		}
+	}
+}
+is_it_summer = {
+	any_character_situation = {
+		OR = {
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_hot_summer_phase
+				situation_sub_region_has_county = $COUNTY$
+			}			
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_dry_summer_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_wet_summer_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_summer_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+		}
+	}	
+}
+is_it_autumn = {
+	any_character_situation = {
+		OR = {
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_wet_autumn_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_dry_autumn_phase
+				situation_sub_region_has_county = $COUNTY$
+			}		
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_cold_autumn_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+			any_situation_sub_region = {
+				sub_region_current_phase = seasons_autumn_phase
+				situation_sub_region_has_county = $COUNTY$
+			}
+		}
+	}
+}
+

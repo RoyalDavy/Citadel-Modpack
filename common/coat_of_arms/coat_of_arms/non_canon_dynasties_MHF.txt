@@ -1,0 +1,16 @@
+﻿dynn_Bricker = {
+	pattern = "pattern_solid.dds"
+	color1 = "agot_silver"
+	color2 = "agot_red_dark"
+	colored_emblem = {
+		texture = "ce_solidblock.dds"
+		color1 = "agot_silver"
+		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+	colored_emblem = {
+		texture = "ce_castlewall.dds"
+		color1 = "agot_red_dark"
+		color2 = "agot_red_dark"
+		instance = { position = { 0.5 0.650 } scale = { 1.1 1.1 } rotation = 0 }
+	}
+}

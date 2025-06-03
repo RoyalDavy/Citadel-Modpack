@@ -1,0 +1,101 @@
+﻿
+
+
+agot_immersion_vassal_join_war_effect = {
+
+											if = { limit = { scope:bannerlord = { is_attacker_in_war = scope:bannerlord_war
+															}
+													}
+													scope:bannerlord_war = { add_attacker = root }
+												else = {
+												add_defender = root
+												
+												}
+											}
+
+
+											scope:bannerlord = { add_opinion = {
+															modifier = agot_immersion_very_loyal_vassal
+															target = root
+														} 
+											}
+											root = { add_opinion = {
+															modifier = agot_immersion_called_to_war
+															target = scope:bannerlord
+														} 
+											}
+
+
+
+
+
+
+
+}
+
+
+agot_immersion_vassal_send_knights_effect = {
+
+scope:bannerlord = { add_opinion = {
+															modifier = agot_immersion_loyal_vassal
+															target = root
+														} 
+											}
+											root = { add_opinion = {
+															modifier = agot_immersion_called_to_war
+															target = scope:bannerlord
+														} 
+											}
+
+every_knight = {
+				limit = {
+					is_landed = no
+				}
+				add_to_list = bannermen_knights
+			}
+			
+		every_in_list = {
+							
+							list = bannermen_knights
+							liege.primary_title = { save_scope_as = original_liege }
+							primary_heir = { save_scope_as = backup_liege }
+							scope:bannerlord = { add_courtier = prev
+												 add_character_modifier = has_vassal_knight
+							}
+							create_story = {
+									type = agot_immersion_vassal_knight_story
+									save_scope_as = vassal_knight_story
+							}
+							
+							
+							scope:vassal_knight_story = {
+															set_variable = {
+																			name = original_liege
+																			value = scope:original_liege
+															}
+															
+															set_variable = {
+																			name = backup_liege
+																			value = scope:backup_liege
+															}
+							
+															set_variable = {
+																			name = bannerlord_war
+																			value = scope:bannerlord_war
+															}
+								
+							}
+						}
+						
+
+
+
+
+
+
+
+
+
+
+
+}

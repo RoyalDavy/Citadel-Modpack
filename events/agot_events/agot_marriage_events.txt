@@ -1,0 +1,74 @@
+﻿namespace = agot_marriage_on_action_events
+
+agot_marriage_on_action_events.0001 = {
+	hidden = yes
+
+	trigger = {
+		exists = mother
+		exists = father
+		NAND = {
+			mother = {
+				has_trait = incestuous
+			}
+			father = {
+				has_trait = incestuous
+			}
+		}
+		exists = primary_spouse
+		OR = {
+			AND = {
+				relation_with_character_is_incestuous_in_faith_trigger = { CHARACTER = primary_spouse FAITH = faith }
+				agot_adelphogamous_incest_allowed = no
+			}
+			primary_spouse = {
+				relation_with_character_is_incestuous_in_faith_trigger = { CHARACTER = primary_spouse FAITH = faith }
+				agot_adelphogamous_incest_allowed = no
+			}
+		}
+	}
+
+	option = {
+		if = {
+			limit = {
+				relation_with_character_is_incestuous_in_faith_trigger = { CHARACTER = primary_spouse FAITH = faith }
+				agot_adelphogamous_incest_allowed = no
+			}
+			add_trait = incestuous
+		}
+		primary_spouse = {
+			if = {
+				limit = {
+					relation_with_character_is_incestuous_in_faith_trigger = { CHARACTER = primary_spouse FAITH = faith }
+					agot_adelphogamous_incest_allowed = no
+				}
+				add_trait = incestuous
+			}
+		}
+	}
+}
+
+agot_marriage_on_action_events.0002 = { # Renly CoA event
+	hidden = yes
+
+	trigger = {
+		this = character:Baratheon_4
+		is_alive = yes
+		is_landed = yes
+		exists = scope:spouse
+		scope:spouse = {
+			dynasty ?= dynasty:dynn_Tyrell
+		}
+	}
+	immediate = {
+		set_house = house:house_BaratheonSE
+		every_child = {
+			set_house = house:house_BaratheonSE
+			every_child = {
+				set_house = house:house_BaratheonSE
+			}
+		}
+		every_held_title = {
+			set_coa = house:house_BaratheonSE
+		}
+	}
+}

@@ -1,0 +1,58 @@
+﻿##############################################################
+################# AGOT DATA BINDING MACROS ###################
+##############################################################
+
+######################
+# Language Detection #
+######################
+macro = {
+	description = "Requires the English language"
+	definition = "UsingEnglish"
+	replace_with = "EqualTo_string(Localize('YES'), 'Yes')"
+}
+macro = {
+	description = "Requires the French language"
+	definition = "UsingFrench"
+	replace_with = "EqualTo_string(Localize('YES'), 'Oui')"
+}
+macro = {
+	description = "Requires the Chinese language"
+	definition = "UsingChinese"
+	replace_with = "EqualTo_string(Localize('YES'), '是')"
+}
+
+#################
+# DLC Detection #
+#################
+macro = {
+	description = "Bookmark character requires RTP"
+	definition = "ShouldDisplayBookmarkCharacter"
+	replace_with = "Not(And(Not(HasDlcFeature('roads_to_power')), Or(BookmarkCharacter.GetGovernmentType.IsType( 'dummy_adventurer_govt_for_bms' ), BookmarkCharacter.GetGovernmentType.IsType( 'dummy_admin_govt_for_bms' ))))"
+}
+
+#################
+# Realm Law Tab #
+#################
+macro = {
+	description = "Realm laws filtered by government type"
+	definition = "ShouldDisplayRealmLawGroup"
+	replace_with = "And(GuiLawGroup.IsAvailable, Or(And(And(Or(IsLandlessAdventurer(Character), IsNWAdventurer(Character)), Not(GuiLawGroup.GetLawGroup.HasFlag('agot_slavery_law'))), Or(And(GetVariableSystem.Exists('bookmark_laws'), GuiLawGroup.GetLawGroup.HasFlag('all_realm_law')), And(Or(GetVariableSystem.Exists('bookmark_laws'), GetVariableSystem.Exists('bookmark_succession')), GuiLawGroup.GetLawGroup.HasFlag('realm_law')))), And(Not(Or(IsLandlessAdventurer(Character), IsNWAdventurer(Character))), Or(And(GetVariableSystem.Exists('bookmark_laws'), GuiLawGroup.GetLawGroup.HasFlag('all_realm_law')), And(Or(GetVariableSystem.Exists('bookmark_laws'), GetVariableSystem.Exists('bookmark_succession')), GuiLawGroup.GetLawGroup.HasFlag('realm_law'))))))"
+}
+
+#################
+# MAA Type View #
+#################
+macro = {
+	description = "Long-ass terrain filter"
+	definition = "ShouldDisplayTerrainIcon"
+	replace_with = "Or(Or(Or(Or(Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('plains')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('farmlands'))), Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('hills')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('mountains')))), Or(Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('desert')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('desert_mountains'))), Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('oasis')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('jungle'))))), Or(Or(Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('forest')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('taiga'))), Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('wetlands')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('steppe')))), Or(Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('floodplains')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('drylands'))), Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('urban')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('frozen_flats')))))), Or(Or(Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('glacier')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('canyon'))), Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('highlands')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('cloudforest')))), Or(ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('taiga_bog')), ObjectsEqual(RegimentTerrainModifier.GetTerrain.GetNameNoTooltip, Localize('the_bog')))))"
+}
+
+###############
+# County View #
+###############
+macro = {
+	description = "Requires the province has a non-ruin holding"
+	definition = "ProvinceIsNotRuin"
+	replace_with = "And(Not(HoldingView.GetCountyTitle.GetHolder.HasTrait(GetTrait('ruin').Self)), GetScriptedGui('agot_province_is_not_ruin').IsShown(GuiScope.SetRoot(HoldingView.GetProvince.MakeScope).End))"
+}

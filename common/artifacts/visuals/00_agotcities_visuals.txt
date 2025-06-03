@@ -1,0 +1,18 @@
+﻿## AGOT ADDED FILE - File regarding General AGOT Cities Artifacts visuals
+
+vs_winter_horn_visuals = {
+	icon = "vs_artifact_hornwinter.dds"
+	asset = {
+		reference = horn_of_winter_01_entity
+	}
+}
+
+castamere_throne_visuals = {
+	icon = "artifact_throneroom.dds"
+	asset = court_castamere_lion_throne_entity
+}
+
+blood_iron_visuals = {
+	icon = "artifact_blood_iron.dds"
+	asset = ep1_generic_rock_01_a_entity
+}

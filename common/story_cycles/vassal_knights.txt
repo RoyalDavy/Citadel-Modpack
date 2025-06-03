@@ -1,0 +1,165 @@
+﻿agot_immersion_vassal_knight_story = {
+	on_setup = {
+			
+	if = { limit = { story_owner = { is_married = no NOT = { has_trait = refusing_marriage } } }
+	story_owner = { add_trait = refusing_marriage
+					add_character_flag = vassal_knight_marriage_protection
+	}
+	}
+	
+	}
+	on_end = {}
+	on_owner_death = { end_story = yes }
+	
+	effect_group = {
+        days = 90
+
+	
+		
+		triggered_effect = {
+			trigger = { 
+						OR = { 
+								NOT = { exists = var:bannerlord_war  }
+								var:original_liege.holder = { is_at_war = yes }
+
+								}
+							}
+			effect = {
+			story_owner.liege = { remove_character_modifier = has_vassal_knight }
+			if = { limit = { exists = var:original_liege } 
+						var:original_liege.holder = { add_courtier = root.story_owner }
+			}
+			else_if = { limit = { exists = var:backup_liege}
+						var:backup_liege.holder = { add_courtier = root.story_owner }
+						}
+			story_owner = { if = { limit = { has_character_flag = vassal_knight_marriage_protection }
+			remove_trait = refusing_marriage 
+			remove_character_flag = vassal_knight_marriage_protection
+			}
+			}
+			end_story = yes
+			}
+			
+		}
+	
+
+		
+			}
+			
+}
+
+
+
+agot_immersion_disloyal_vassal_story = {
+	on_setup = {
+	story_owner = { add_character_flag = agot_immersion_disloyal_vassal }
+	
+	}
+	on_end = {}
+	on_owner_death = { make_story_owner = story_owner.primary_heir  }
+	
+	effect_group = {
+        days = 30
+
+	
+		
+		triggered_effect = {
+			trigger = { 
+						story_owner.liege = { is_at_war = no }
+						}
+			effect = {
+			story_owner = { remove_character_flag = agot_immersion_disloyal_vassal }
+			end_story = yes
+			
+			
+			}
+			
+		}
+	
+
+		
+			}
+			
+			triggered_effect = {
+			trigger = { 
+						story_owner = { agot_immersion_disloyal_vassal_relationship = no } 
+			}
+			effect = {
+			story_owner = { remove_character_flag = agot_immersion_disloyal_vassal }
+			end_story = yes
+			
+			
+			}
+			
+		}
+	
+
+		
+			}
+
+agot_immersion_loyal_vassal_story = {
+	on_setup = {
+	story_owner = { add_character_flag = agot_immersion_loyal_vassal }
+	
+	}
+	on_end = {}
+	on_owner_death = { make_story_owner = story_owner.primary_heir
+	story_owner.primary_heir = {  
+	add_character_flag = agot_immersion_loyal_vassal
+	
+	}
+	}
+	
+	effect_group = {
+        days = 30
+
+	
+		
+		triggered_effect = {
+			trigger = { 
+						story_owner.liege = { is_at_war = no }
+						}
+			effect = {
+			story_owner = { remove_character_flag = agot_immersion_loyal_vassal }
+			end_story = yes
+			
+			
+			}
+			
+		}
+	
+
+		
+			}
+			
+			triggered_effect = {
+			trigger = { 
+						story_owner = { agot_immersion_dutiful_vassal_relationship = no } 
+			}
+			effect = {
+			story_owner = { remove_character_flag = agot_immersion_loyal_vassal }
+			end_story = yes
+			
+			
+			}
+			
+		}
+	
+
+		
+			}
+			
+
+			
+	
+
+
+
+				
+			
+					
+					
+					
+					
+	
+		

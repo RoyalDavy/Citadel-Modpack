@@ -1,0 +1,77 @@
+﻿conquerors_inheritance = {
+	
+	categories = {
+		difficulty ai
+	}
+	
+	default = no_conquerors_inheritance # now defaults to no conqueror inheritance instead of primary heir
+
+	default_conquerors_inheritance = {
+
+	}
+	
+	primary_conquerors_inheritance = {
+	
+	}
+	
+	no_conquerors_inheritance = {
+	
+	}
+}
+
+conquerors_frequency = {
+	
+	categories = {
+		difficulty ai
+	}
+	
+	default = many_conquerors_frequency # now defaults to increased chance instead of normal
+
+	default_conquerors_frequency = {
+
+	}
+	
+	no_conquerors_frequency = {
+	
+	}
+	
+	few_conquerors_frequency = {
+	
+	}
+	
+	very_few_conquerors_frequency = {
+	
+	}
+	
+	many_conquerors_frequency = {
+	
+	}
+
+	strong_default_conquerors_frequency = {
+
+	}
+	
+	strong_few_conquerors_frequency = {
+	
+	}
+	
+	strong_very_few_conquerors_frequency = {
+	
+	}
+	
+	strong_many_conquerors_frequency = {
+	
+	}
+}
+
+ai_laamp_numbers = {
+	categories = { tweaks }
+
+	default = ai_laamp_numbers_25
+
+	ai_laamp_numbers_200 = { }
+	ai_laamp_numbers_150 = { }
+	ai_laamp_numbers_100 = { }
+	ai_laamp_numbers_50 = { }
+	ai_laamp_numbers_25 = { }
+}

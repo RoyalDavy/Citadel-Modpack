@@ -1,0 +1,112 @@
+﻿glass_candle_to_inventory = {
+	in_type = pedestal
+	in_visuals = glass_candle
+	out_type = glass_candle
+	out_visuals = glass_candle
+}
+glass_candle_to_court = {
+	in_type = glass_candle
+	in_visuals = glass_candle
+	out_type = pedestal
+	out_visuals = glass_candle
+}
+
+viserramirror_to_court = {
+	in_type = mirror
+	in_visuals = viserra_mirror
+	out_type = pedestal
+	out_visuals = viserra_mirror
+}
+viserramirror_to_inventory= {
+	in_type = pedestal
+	in_visuals = viserra_mirror
+	out_type = mirror
+	out_visuals = viserra_mirror
+}
+
+#dragondoll_01_to_court = {
+#	in_type = dragon_doll
+#	in_visuals = dragon_doll_01
+#	out_type = pedestal
+#	out_visuals = dragon_doll_01
+#}
+#dragondoll_01_to_inventory= {
+#	in_type = pedestal
+#	in_visuals = dragon_doll_01
+#	out_type = dragon_doll
+#	out_visuals = dragon_doll_01
+#}
+dragondoll_02_to_court = {
+	in_type = dragon_doll
+	in_visuals = dragon_doll_02
+	out_type = pedestal
+	out_visuals = dragon_doll_02
+}
+dragondoll_02_to_inventory= {
+	in_type = pedestal
+	in_visuals = dragon_doll_02
+	out_type = dragon_doll
+	out_visuals = dragon_doll_02
+}
+dragondoll_03_to_court = {
+	in_type = dragon_doll
+	in_visuals = dragon_doll_03
+	out_type = pedestal
+	out_visuals = dragon_doll_03
+}
+dragondoll_03_to_inventory= {
+	in_type = pedestal
+	in_visuals = dragon_doll_03
+	out_type = dragon_doll
+	out_visuals = dragon_doll_03
+}
+dragondoll_04_to_court = {
+	in_type = dragon_doll
+	in_visuals = dragon_doll_04
+	out_type = pedestal
+	out_visuals = dragon_doll_04
+}
+dragondoll_04_to_inventory= {
+	in_type = pedestal
+	in_visuals = dragon_doll_04
+	out_type = dragon_doll
+	out_visuals = dragon_doll_04
+}
+dragondoll_05_to_court = {
+	in_type = dragon_doll
+	in_visuals = dragon_doll_05
+	out_type = pedestal
+	out_visuals = dragon_doll_05
+}
+dragondoll_05_to_inventory= {
+	in_type = pedestal
+	in_visuals = dragon_doll_05
+	out_type = dragon_doll
+	out_visuals = dragon_doll_05
+}
+
+gold_leaves_to_court = {
+	in_type = miscellaneous_when_not_court
+	in_visuals = gold_leaves_visuals
+	out_type = pedestal
+	out_visuals = gold_leaves_visuals
+}
+gold_leaves_to_inventory= {
+	in_type = pedestal
+	in_visuals = gold_leaves_visuals
+	out_type = miscellaneous_when_not_court
+	out_visuals = gold_leaves_visuals
+}
+
+bors_skull_to_court = {
+	in_type = miscellaneous_when_not_court
+	in_visuals = bors_skull_visuals
+	out_type = pedestal
+	out_visuals = bors_skull_visuals
+}
+bors_skull_to_inventory= {
+	in_type = pedestal
+	in_visuals = bors_skull_visuals
+	out_type = miscellaneous_when_not_court
+	out_visuals = bors_skull_visuals
+}

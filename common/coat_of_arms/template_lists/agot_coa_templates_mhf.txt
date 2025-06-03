@@ -1,0 +1,1260 @@
+coat_of_arms_template_lists = {
+	# Root may be the set character, if in the ruler designer it will not exist yet but the saved scopes will so use them instead of checking the character
+	# scope:faith is the faith of the character, always set
+	# scope:culture is the culture of the character, always set
+	# scope:title is the primary title of the character, may be unset
+	all = {
+		# Simple catch all
+
+		3 = basic_charge_01
+		3 = basic_charge_01b
+		3 = basic_ordinary_01
+		3 = basic_ordinary_01_inverted
+
+		# European Paganism - Single, Circle, Senester
+		special_selection = {
+			trigger = {
+				coa_wildling_trigger = yes
+			}
+			# Weights are temps
+			16000 = basic_pagan_template
+			16000 = basic_pagan_template_inverted
+			8000 = basic_pagan_template_senester
+			8000 = basic_pagan_template_senester_inverted
+			3000 = geometrical_pagan_template
+			4000 = geometrical_pagan_template_inverted
+			3000 = geometrical_pagan_template_senester
+			2000 = circled_pagan_template
+			2000 = circled_pagan_template_inverted
+			2000 = circled_pagan_template_offset
+			2000 = circled_pagan_template_offset_inverted
+		}
+
+		#Indian
+		special_selection = {
+			trigger = {
+				coa_dornish_trigger = yes
+			}
+			50 = basic_charge_01
+			50 = basic_charge_01b
+			50 = basic_ordinary_01
+			50 = basic_ordinary_01_inverted
+			100 = indian_geometrical_template
+			100 = indian_geometrical_template_inverted
+			50 = indian_single_border_template
+			50 = indian_single_border_template_inverted
+			150 = circled_indian_template
+			150 = circled_indian_template_inverted
+			60  = circled_indian_template_offset
+			60  = circled_indian_template_offset_inverted
+		}
+		# India proper (to tone down those very cultural specific designs vs catch all)
+		special_selection = { # AGOT TODO Fix Code Block
+			trigger = {
+				coa_dornish_trigger = yes
+			}
+			100 = indian_single_template
+			100 = indian_single_template_inverted
+			100 = indian_single_template_senester
+			100 = indian_single_template_senester_inverted
+			100 = circled_indian_single_symbol_template
+			100 = circled_indian_single_symbol_template_inverted
+		}
+
+		# Feudal Europe
+		special_selection = {
+			trigger = {
+				coa_andal_trigger = yes
+			}
+			# A (main = charge)
+			# Rougly 50% of all cases, 50% of it being from bestiary, 50% of said bestiary being lions.
+			2500 = hr_single_charge_template
+			2500 = hr_single_charge_template_inverted
+			500 = hr_three_charges_template
+			500 = hr_three_charges_template_inverted
+			250 = hr_six_charges_template
+			250 = hr_six_charges_template_inverted
+			200 = hr_charge_under_chief_template
+			200 = hr_charge_under_chief_template_inverted
+			200 = hr_lion_semy_template
+			200 = hr_lion_semy_template_inverted
+			100 = hr_three_charges_in_pale_template
+			100 = hr_three_charges_in_pale_template_inverted
+			100 = hr_seven_charges_template
+			100 = hr_seven_charges_template_inverted
+			100 = hr_ten_charges_template
+			100 = hr_ten_charges_template_inverted
+			100 = hr_charge_and_canton_template
+			100 = hr_charge_and_canton_template_inverted
+			100 = hr_escutcheon_orle_template
+			100 = hr_escutcheon_orle_template_inverted
+			50 = hr_semy_template
+			50 = hr_semy_template_inverted
+			100 = hr_canton_template
+			100 = hr_canton_template_inverted
+			50 = hr_charge_canton_ermine_template
+			50 = hr_charge_canton_ermine_template_inverted
+			10 = hr_five_charges_template
+			10 = hr_five_charges_template_inverted
+			10 = hr_single_charge_on_mount_template
+			10 = hr_single_charge_on_mount_template_inverted
+			# Two charges in pale (ie Normandy)
+
+			# B (main = ordinaries & partitions)
+			# Roughly 50% of all cases : 50% divisions, 50% ordinaries (not counting any accompanying charge)
+			2500 = hr_geometrical_template
+			2500 = hr_geometrical_template_inverted
+			100 = hr_geometrical_field_canton_template
+			100 = hr_geometrical_field_canton_template_inverted
+			200 = hr_three_charges_in_bend_template
+			200 = hr_three_charges_in_bend_template_inverted
+			200 = hr_three_charges_in_chief_template
+			200 = hr_three_charges_in_chief_template_inverted
+			200 = hr_three_charges_in_fess_template
+			200 = hr_three_charges_in_fess_template_inverted
+			200 = hr_cross_ch_five_template
+			200 = hr_cross_ch_five_template_inverted
+			200 = hr_cross_acc_four_template
+			200 = hr_cross_acc_four_template_inverted
+			100 = hr_chevron_acc_three_template
+			100 = hr_chevron_acc_three_template_inverted
+			100 = hr_fess_acc_three_template
+			100 = hr_fess_acc_three_template_inverted
+			100 = hr_fess_acc_six_charges_template
+			100 = hr_fess_acc_six_charges_template_inverted
+			100 = hr_bend_acc_six_charges_template
+			100 = hr_bend_acc_six_charges_template_inverted
+			100 = hr_charge_issant_chief_template
+			100 = hr_charge_issant_chief_template_inverted
+			50 = hr_canton_ermine_template
+			50 = hr_canton_ermine_template_inverted
+
+			# C (mixed)
+			100 = hr_vair_template
+			100 = hr_ermine_template
+			100 = hr_charge_within_border_template
+			100 = hr_charge_within_border_template_inverted
+
+		}
+
+		############################### WALLEEEEERIAHHHH 
+		special_selection = {
+			trigger = {
+				coa_valyrian_trigger = yes
+			}
+			# A (main = charge)
+			# Rougly 50% of all cases, 50% of it being from bestiary, 50% of said bestiary being lions.
+			500 = valyrian_pattern_only
+			500 = valyrian_pattern_only2
+			500 = valyrian_pattern_only3
+			500 = valyrian_pattern_only4
+			500 = valyrian_pattern_only5
+			500 = valyrian_pattern_only6
+			300 = valyrian_with_blockout
+			300 = valyrian_with_blockout2
+			300 = valyrian_with_blockout3
+			300 = valyrian_with_blockout4
+			300 = valyrian_with_blockout5
+			300 = valyrian_with_blockout6
+#			500 = valyrian_with_blockout_inverted
+#			2500 = hr_single_charge_template
+#			2500 = hr_single_charge_template_inverted
+#			500 = hr_three_charges_template
+#			500 = hr_three_charges_template_inverted
+#			250 = hr_six_charges_template
+#			250 = hr_six_charges_template_inverted
+#			200 = hr_charge_under_chief_template
+#			200 = hr_charge_under_chief_template_inverted
+#			200 = hr_lion_semy_template
+#			200 = hr_lion_semy_template_inverted
+#			100 = hr_three_charges_in_pale_template
+#			100 = hr_three_charges_in_pale_template_inverted
+#			100 = hr_seven_charges_template
+#			100 = hr_seven_charges_template_inverted
+#			100 = hr_ten_charges_template
+#			100 = hr_ten_charges_template_inverted
+#			100 = hr_charge_and_canton_template
+#			100 = hr_charge_and_canton_template_inverted
+#			100 = hr_escutcheon_orle_template
+#			100 = hr_escutcheon_orle_template_inverted
+#			50 = hr_semy_template
+#			50 = hr_semy_template_inverted
+#			100 = hr_canton_template
+#			100 = hr_canton_template_inverted
+#			50 = hr_charge_canton_ermine_template_inverted
+#			10 = hr_five_charges_template
+#			10 = hr_five_charges_template_inverted
+#			10 = hr_single_charge_on_mount_template
+#			10 = hr_single_charge_on_mount_template_inverted
+			# Two charges in pale (ie Normandy)
+
+			# B (main = ordinaries & partitions)
+			# Roughly 50% of all cases : 50% divisions, 50% ordinaries (not counting any accompanying charge)
+#			2500 = hr_geometrical_template
+#			2500 = hr_geometrical_template_inverted
+#			100 = hr_geometrical_field_canton_template
+#			100 = hr_geometrical_field_canton_template_inverted
+#			200 = hr_three_charges_in_bend_template
+#			200 = hr_three_charges_in_bend_template_inverted
+#			200 = hr_three_charges_in_chief_template
+#			200 = hr_three_charges_in_chief_template_inverted
+#			200 = hr_three_charges_in_fess_template
+#			200 = hr_three_charges_in_fess_template_inverted
+#			200 = hr_cross_ch_five_template
+#			200 = hr_cross_ch_five_template_inverted
+#			200 = hr_cross_acc_four_template
+#			200 = hr_cross_acc_four_template_inverted
+#			100 = hr_chevron_acc_three_template
+#			100 = hr_chevron_acc_three_template_inverted
+#			100 = hr_fess_acc_three_template
+#			100 = hr_fess_acc_three_template_inverted
+#			100 = hr_fess_acc_six_charges_template
+#			100 = hr_fess_acc_six_charges_template_inverted
+#			100 = hr_bend_acc_six_charges_template
+#			100 = hr_bend_acc_six_charges_template_inverted
+#			100 = hr_charge_issant_chief_template
+#			100 = hr_charge_issant_chief_template_inverted
+#			50 = hr_canton_ermine_template
+#			50 = hr_canton_ermine_template_inverted
+
+			# C (mixed)
+#			100 = hr_vair_template
+#			100 = hr_ermine_template
+#			100 = hr_charge_within_border_template
+#			100 = hr_charge_within_border_template_inverted
+
+		}
+	}
+
+	religious_title = {
+		100 = religious_icon_01
+		100 = religious_icon_01_metal
+	}
+
+	factions = {
+		100 = faction_01
+	}
+
+	### AGOT ADDED
+
+	bastards = {
+		#1 = generic_bastard_bend_template # For houses not given special selections
+
+		# GENERIC TRIGGER FOR FIRST MEN HERITAGE
+		special_selection = {
+			trigger = {
+				NOT = {
+					dynasty = dynasty:dynn_Stark
+					dynasty = dynasty:dynn_Baratheon
+					dynasty = dynasty:dynn_Lannister
+					dynasty = dynasty:dynn_Tyrell
+					dynasty = dynasty:dynn_Martell
+					dynasty = dynasty:dynn_Greyjoy
+					dynasty = dynasty:dynn_Tully
+					dynasty = dynasty:dynn_Arryn
+					dynasty = dynasty:dynn_Targaryen
+					dynasty = dynasty:dynn_Fossoway
+					dynasty = dynasty:dynn_Redwyne
+					dynasty = dynasty:dynn_Rowan
+					dynasty = dynasty:dynn_Hightower
+					dynasty = dynasty:dynn_Florent
+					dynasty = dynasty:dynn_Osgrey
+					dynasty = dynasty:dynn_Webber
+					dynasty = dynasty:dynn_Mallister
+					dynasty = dynasty:dynn_Frey
+					dynasty = dynasty:dynn_Blackwood
+					dynasty = dynasty:dynn_Bracken
+					dynasty = dynasty:dynn_Whent
+					dynasty = dynasty:dynn_Piper
+					dynasty = dynasty:dynn_Darry
+					dynasty = dynasty:dynn_Ryger
+					dynasty = dynasty:dynn_Vypren
+					dynasty = dynasty:dynn_Mooton
+					dynasty = dynasty:dynn_Reed
+					dynasty = dynasty:dynn_Bolton
+					dynasty = dynasty:dynn_Ryswell
+					dynasty = dynasty:dynn_Lydden
+					dynasty = dynasty:dynn_Swyft
+					dynasty = dynasty:dynn_Payne
+					dynasty = dynasty:dynn_Brax
+					dynasty = dynasty:dynn_Crakehall
+					dynasty = dynasty:dynn_Clegane
+					dynasty = dynasty:dynn_Goodbrother
+					dynasty = dynasty:dynn_Drumm
+					dynasty = dynasty:dynn_Blacktyde
+					dynasty = dynasty:dynn_Harlaw
+					dynasty = dynasty:dynn_Royce
+					dynasty = dynasty:dynn_Corbray
+					dynasty = dynasty:dynn_Waynwood
+					dynasty = dynasty:dynn_Lynderly
+					dynasty = dynasty:dynn_Dayne
+					dynasty = dynasty:dynn_Uller
+					dynasty = dynasty:dynn_Dalt
+					dynasty = dynasty:dynn_Toland
+					dynasty = dynasty:dynn_Santagar
+					dynasty = dynasty:dynn_Bricker
+				}
+				culture = { has_cultural_pillar = heritage_first_man }
+			}
+			300 = first_men_generic_basic_template
+			300 = first_men_generic_bend_template
+		}
+		# GENERIC TRIGGER FOR ANDAL HERITAGE
+		special_selection = {
+			trigger = {
+				NOT = {
+					dynasty = dynasty:dynn_Stark
+					dynasty = dynasty:dynn_Baratheon
+					dynasty = dynasty:dynn_Lannister
+					dynasty = dynasty:dynn_Tyrell
+					dynasty = dynasty:dynn_Martell
+					dynasty = dynasty:dynn_Greyjoy
+					dynasty = dynasty:dynn_Tully
+					dynasty = dynasty:dynn_Arryn
+					dynasty = dynasty:dynn_Targaryen
+					dynasty = dynasty:dynn_Fossoway
+					dynasty = dynasty:dynn_Redwyne
+					dynasty = dynasty:dynn_Rowan
+					dynasty = dynasty:dynn_Hightower
+					dynasty = dynasty:dynn_Florent
+					dynasty = dynasty:dynn_Osgrey
+					dynasty = dynasty:dynn_Webber
+					dynasty = dynasty:dynn_Mallister
+					dynasty = dynasty:dynn_Frey
+					dynasty = dynasty:dynn_Blackwood
+					dynasty = dynasty:dynn_Bracken
+					dynasty = dynasty:dynn_Whent
+					dynasty = dynasty:dynn_Piper
+					dynasty = dynasty:dynn_Darry
+					dynasty = dynasty:dynn_Ryger
+					dynasty = dynasty:dynn_Vypren
+					dynasty = dynasty:dynn_Mooton
+					dynasty = dynasty:dynn_Reed
+					dynasty = dynasty:dynn_Bolton
+					dynasty = dynasty:dynn_Ryswell
+					dynasty = dynasty:dynn_Lydden
+					dynasty = dynasty:dynn_Swyft
+					dynasty = dynasty:dynn_Payne
+					dynasty = dynasty:dynn_Brax
+					dynasty = dynasty:dynn_Crakehall
+					dynasty = dynasty:dynn_Clegane
+					dynasty = dynasty:dynn_Goodbrother
+					dynasty = dynasty:dynn_Drumm
+					dynasty = dynasty:dynn_Blacktyde
+					dynasty = dynasty:dynn_Harlaw
+					dynasty = dynasty:dynn_Royce
+					dynasty = dynasty:dynn_Corbray
+					dynasty = dynasty:dynn_Waynwood
+					dynasty = dynasty:dynn_Lynderly
+					dynasty = dynasty:dynn_Dayne
+					dynasty = dynasty:dynn_Uller
+					dynasty = dynasty:dynn_Dalt
+					dynasty = dynasty:dynn_Toland
+					dynasty = dynasty:dynn_Santagar
+					dynasty = dynasty:dynn_Bricker
+				}
+				culture = { has_cultural_pillar = heritage_andal }
+			}
+			300 = andal_generic_basic_template
+			500 = andal_generic_bend_template
+			100 = andal_generic_canton_template
+		}
+		# GENERIC TRIGGER FOR IRONBORN HERITAGE
+		special_selection = {
+			trigger = {
+				NOT = {
+					dynasty = dynasty:dynn_Stark
+					dynasty = dynasty:dynn_Baratheon
+					dynasty = dynasty:dynn_Lannister
+					dynasty = dynasty:dynn_Tyrell
+					dynasty = dynasty:dynn_Martell
+					dynasty = dynasty:dynn_Greyjoy
+					dynasty = dynasty:dynn_Tully
+					dynasty = dynasty:dynn_Arryn
+					dynasty = dynasty:dynn_Targaryen
+					dynasty = dynasty:dynn_Fossoway
+					dynasty = dynasty:dynn_Redwyne
+					dynasty = dynasty:dynn_Rowan
+					dynasty = dynasty:dynn_Hightower
+					dynasty = dynasty:dynn_Florent
+					dynasty = dynasty:dynn_Osgrey
+					dynasty = dynasty:dynn_Webber
+					dynasty = dynasty:dynn_Mallister
+					dynasty = dynasty:dynn_Frey
+					dynasty = dynasty:dynn_Blackwood
+					dynasty = dynasty:dynn_Bracken
+					dynasty = dynasty:dynn_Whent
+					dynasty = dynasty:dynn_Piper
+					dynasty = dynasty:dynn_Darry
+					dynasty = dynasty:dynn_Ryger
+					dynasty = dynasty:dynn_Vypren
+					dynasty = dynasty:dynn_Mooton
+					dynasty = dynasty:dynn_Reed
+					dynasty = dynasty:dynn_Bolton
+					dynasty = dynasty:dynn_Ryswell
+					dynasty = dynasty:dynn_Lydden
+					dynasty = dynasty:dynn_Swyft
+					dynasty = dynasty:dynn_Payne
+					dynasty = dynasty:dynn_Brax
+					dynasty = dynasty:dynn_Crakehall
+					dynasty = dynasty:dynn_Clegane
+					dynasty = dynasty:dynn_Goodbrother
+					dynasty = dynasty:dynn_Drumm
+					dynasty = dynasty:dynn_Blacktyde
+					dynasty = dynasty:dynn_Harlaw
+					dynasty = dynasty:dynn_Royce
+					dynasty = dynasty:dynn_Corbray
+					dynasty = dynasty:dynn_Waynwood
+					dynasty = dynasty:dynn_Lynderly
+					dynasty = dynasty:dynn_Dayne
+					dynasty = dynasty:dynn_Uller
+					dynasty = dynasty:dynn_Dalt
+					dynasty = dynasty:dynn_Toland
+					dynasty = dynasty:dynn_Santagar
+					dynasty = dynasty:dynn_Bricker
+				}
+				culture = { has_cultural_pillar = heritage_ironborn }
+			}
+			300 = ironborn_generic_basic_template
+			300 = ironborn_generic_bend_template
+		}
+		# GENERIC TRIGGER FOR RHOYNAR HERITAGE
+		special_selection = {
+			trigger = {
+				NOT = {
+					dynasty = dynasty:dynn_Stark
+					dynasty = dynasty:dynn_Baratheon
+					dynasty = dynasty:dynn_Lannister
+					dynasty = dynasty:dynn_Tyrell
+					dynasty = dynasty:dynn_Martell
+					dynasty = dynasty:dynn_Greyjoy
+					dynasty = dynasty:dynn_Tully
+					dynasty = dynasty:dynn_Arryn
+					dynasty = dynasty:dynn_Targaryen
+					dynasty = dynasty:dynn_Fossoway
+					dynasty = dynasty:dynn_Redwyne
+					dynasty = dynasty:dynn_Rowan
+					dynasty = dynasty:dynn_Hightower
+					dynasty = dynasty:dynn_Florent
+					dynasty = dynasty:dynn_Osgrey
+					dynasty = dynasty:dynn_Webber
+					dynasty = dynasty:dynn_Mallister
+					dynasty = dynasty:dynn_Frey
+					dynasty = dynasty:dynn_Blackwood
+					dynasty = dynasty:dynn_Bracken
+					dynasty = dynasty:dynn_Whent
+					dynasty = dynasty:dynn_Piper
+					dynasty = dynasty:dynn_Darry
+					dynasty = dynasty:dynn_Ryger
+					dynasty = dynasty:dynn_Vypren
+					dynasty = dynasty:dynn_Mooton
+					dynasty = dynasty:dynn_Reed
+					dynasty = dynasty:dynn_Bolton
+					dynasty = dynasty:dynn_Ryswell
+					dynasty = dynasty:dynn_Lydden
+					dynasty = dynasty:dynn_Swyft
+					dynasty = dynasty:dynn_Payne
+					dynasty = dynasty:dynn_Brax
+					dynasty = dynasty:dynn_Crakehall
+					dynasty = dynasty:dynn_Clegane
+					dynasty = dynasty:dynn_Goodbrother
+					dynasty = dynasty:dynn_Drumm
+					dynasty = dynasty:dynn_Blacktyde
+					dynasty = dynasty:dynn_Harlaw
+					dynasty = dynasty:dynn_Royce
+					dynasty = dynasty:dynn_Corbray
+					dynasty = dynasty:dynn_Waynwood
+					dynasty = dynasty:dynn_Lynderly
+					dynasty = dynasty:dynn_Dayne
+					dynasty = dynasty:dynn_Uller
+					dynasty = dynasty:dynn_Dalt
+					dynasty = dynasty:dynn_Toland
+					dynasty = dynasty:dynn_Santagar
+					dynasty = dynasty:dynn_Bricker
+				}
+				culture = { has_cultural_pillar = heritage_rhoynish }
+			}
+			300 = rhoynar_generic_basic_template
+			50 = rhoynar_generic_bend_template
+		}
+		# GENERIC TRIGGER FOR VALYRIAN HERITAGE
+		special_selection = {
+			trigger = {
+				NOT = {
+					dynasty = dynasty:dynn_Stark
+					dynasty = dynasty:dynn_Baratheon
+					dynasty = dynasty:dynn_Lannister
+					dynasty = dynasty:dynn_Tyrell
+					dynasty = dynasty:dynn_Martell
+					dynasty = dynasty:dynn_Greyjoy
+					dynasty = dynasty:dynn_Tully
+					dynasty = dynasty:dynn_Arryn
+					dynasty = dynasty:dynn_Targaryen
+					dynasty = dynasty:dynn_Fossoway
+					dynasty = dynasty:dynn_Redwyne
+					dynasty = dynasty:dynn_Rowan
+					dynasty = dynasty:dynn_Hightower
+					dynasty = dynasty:dynn_Florent
+					dynasty = dynasty:dynn_Osgrey
+					dynasty = dynasty:dynn_Webber
+					dynasty = dynasty:dynn_Mallister
+					dynasty = dynasty:dynn_Frey
+					dynasty = dynasty:dynn_Blackwood
+					dynasty = dynasty:dynn_Bracken
+					dynasty = dynasty:dynn_Whent
+					dynasty = dynasty:dynn_Piper
+					dynasty = dynasty:dynn_Darry
+					dynasty = dynasty:dynn_Ryger
+					dynasty = dynasty:dynn_Vypren
+					dynasty = dynasty:dynn_Mooton
+					dynasty = dynasty:dynn_Reed
+					dynasty = dynasty:dynn_Bolton
+					dynasty = dynasty:dynn_Ryswell
+					dynasty = dynasty:dynn_Lydden
+					dynasty = dynasty:dynn_Swyft
+					dynasty = dynasty:dynn_Payne
+					dynasty = dynasty:dynn_Brax
+					dynasty = dynasty:dynn_Crakehall
+					dynasty = dynasty:dynn_Clegane
+					dynasty = dynasty:dynn_Goodbrother
+					dynasty = dynasty:dynn_Drumm
+					dynasty = dynasty:dynn_Blacktyde
+					dynasty = dynasty:dynn_Harlaw
+					dynasty = dynasty:dynn_Royce
+					dynasty = dynasty:dynn_Corbray
+					dynasty = dynasty:dynn_Waynwood
+					dynasty = dynasty:dynn_Lynderly
+					dynasty = dynasty:dynn_Dayne
+					dynasty = dynasty:dynn_Uller
+					dynasty = dynasty:dynn_Dalt
+					dynasty = dynasty:dynn_Toland
+					dynasty = dynasty:dynn_Santagar
+					dynasty = dynasty:dynn_Bricker
+				}
+				culture = { has_cultural_pillar = heritage_valyrian }
+			}
+			300 = valyrian_vyrwel_dragon_basic_template
+			300 = valyrian_vyrwel_dragon_bend_template
+			300 = valyrian_vyrwel_dragon_counterchange_template_01
+			300 = valyrian_generic_basic_template
+			300 = valyrian_generic_bend_template
+			50 = valyrian_generic_counterchange_template_01
+		}
+		#####################
+		## LORD PARAMOUNTS ##
+		#####################
+
+		# Stark
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Stark
+				NOT = {
+					house = house:house_Karstark
+				}
+			}
+			300 = stark_basic_bastard_template
+			#1 = stark_complex_bastard_template # Very rare since northern heraldry is RELATIVELY simple
+			500 = stark_bastard_bend_template
+			300 = stark_counterchanged_bastard_template
+		}
+		# Baratheon
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Baratheon
+			}
+			300 = baratheon_basic_bastard_template
+			#1 = baratheon_complex_bastard_template
+			500 = baratheon_bastard_bend_template
+			300 = baratheon_counterchanged_bastard_template
+		}
+		# Lannister
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Lannister
+			}
+			300 = lannister_basic_bastard_template
+			#1 = lannister_complex_bastard_template
+			500 = lannister_bastard_bend_template
+			300 = lannister_counterchanged_bastard_template
+		}
+		# Tyrell
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Tyrell
+			}
+			300 = tyrell_basic_bastard_template
+			#1 = tyrell_complex_bastard_template
+			500 = tyrell_bastard_bend_template
+			300 = tyrell_counterchanged_bastard_template
+		}
+		# Martell
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Martell
+			}
+			300 = martell_basic_bastard_template
+			#1 = martell_complex_bastard_template
+			500 = martell_bastard_bend_template
+			300 = martell_counterchanged_bastard_template
+		}
+		# Greyjoy
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Greyjoy
+			}
+			300 = greyjoy_basic_bastard_template
+			#1 = greyjoy_complex_bastard_template
+			500 = greyjoy_bastard_bend_template
+			300 = greyjoy_counterchanged_bastard_template
+		}
+		# Tully
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Tully
+			}
+			300 = tully_basic_bastard_template
+			500 = tully_bastard_bend_template
+			300 = tully_counterchanged_bastard_template
+		}
+		# Arryn
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Arryn
+			}
+			300 = arryn_basic_bastard_template
+			500 = arryn_bastard_bend_template
+			300 = arryn_counterchanged_bastard_template
+		}
+		# Targaryen
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Targaryen
+			}
+			300 = targaryen_basic_bastard_template
+			#1 = arryn_complex_bastard_template
+			500 = targaryen_bastard_bend_template
+			300 = targaryen_counterchanged_bastard_template
+		}
+
+		########################
+		## MINOR REACH HOUSES ##
+		########################
+
+		# Fossoway
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Fossoway
+			}
+			300 = fossoway_basic_bastard_template
+			500 = fossoway_bastard_bend_template
+			300 = fossoway_counterchanged_bastard_template
+		}
+		# Redwyne
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Redwyne
+			}
+			300 = redwyne_basic_bastard_template
+			500 = redwyne_bastard_bend_template
+			300 = redwyne_counterchanged_bastard_template
+		}
+		# Rowan
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Rowan
+			}
+			300 = rowan_basic_bastard_template
+			500 = rowan_bastard_bend_template
+			300 = rowan_counterchanged_bastard_template
+		}
+		# Hightower
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Hightower
+			}
+			300 = hightower_basic_bastard_template
+			500 = hightower_bastard_bend_template
+			300 = hightower_counterchanged_bastard_template
+		}
+		# Florent
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Florent
+			}
+			#300 = florent_basic_bastard_template
+			500 = florent_bastard_bend_template
+			#300 = florent_counterchanged_bastard_template
+		}
+		# Osgrey
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Osgrey
+			}
+			300 = osgrey_basic_bastard_template
+			500 = osgrey_bastard_bend_template
+			300 = osgrey_counterchanged_bastard_template
+		}
+		# Webber
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Webber
+			}
+			300 = webber_basic_bastard_template
+			500 = webber_bastard_bend_template
+			300 = webber_counterchanged_bastard_template
+		}
+
+		##############################
+		## MINOR RIVERLANDER HOUSES ##
+		##############################
+
+		# Mallister
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Mallister
+			}
+			300 = mallister_basic_bastard_template
+			500 = mallister_bastard_bend_template
+			300 = mallister_counterchanged_bastard_template
+		}
+
+		# Frey
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Frey
+			}
+			300 = frey_basic_bastard_template
+			500 = frey_bastard_bend_template
+			300 = frey_counterchanged_bastard_template
+		}
+
+		# Blackwood
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Blackwood
+			}
+			300 = blackwood_basic_bastard_template
+			500 = blackwood_bastard_bend_template
+			300 = blackwood_counterchanged_bastard_template
+		}
+
+		# Bracken
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Bracken
+			}
+			300 = bracken_basic_bastard_template
+			500 = bracken_bastard_bend_template
+			300 = bracken_counterchanged_bastard_template
+		}
+
+		# Whent
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Whent
+			}
+			300 = whent_basic_bastard_template
+			500 = whent_bastard_bend_template
+			300 = whent_counterchanged_bastard_template
+		}
+
+		# Piper
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Piper
+			}
+			300 = piper_basic_bastard_template
+			500 = piper_bastard_bend_template
+			300 = piper_counterchanged_bastard_template
+		}
+
+		# Darry
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Darry
+			}
+			300 = darry_basic_bastard_template
+			500 = darry_bastard_bend_template
+			300 = darry_counterchanged_bastard_template
+		}
+
+		# Ryger
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Ryger
+			}
+			300 = ryger_basic_bastard_template
+			500 = ryger_bastard_bend_template
+			300 = ryger_counterchanged_bastard_template
+		}
+		# Vypren
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Vypren
+			}
+			300 = vypren_basic_bastard_template
+			500 = vypren_bastard_bend_template
+			300 = vypren_counterchanged_bastard_template
+		}
+		# Mooton
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Mooton
+			}
+			300 = mooton_basic_bastard_template
+			500 = mooton_bastard_bend_template
+			300 = mooton_counterchanged_bastard_template
+		}
+
+		###########################
+		## MINOR NORTHERN HOUSES ##
+		###########################
+
+		# Karstark
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				house = house:house_Karstark
+			}
+			300 = karstark_basic_bastard_template
+			500 = karstark_bastard_bend_template
+			300 = karstark_counterchanged_bastard_template
+		}
+
+		# REED
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Reed
+			}
+			300 = reed_basic_bastard_template
+			500 = reed_bastard_bend_template
+			300 = reed_counterchanged_bastard_template
+		}
+
+		# Bolton
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Bolton
+			}
+			300 = bolton_basic_bastard_template
+			500 = bolton_bastard_bend_template
+			300 = bolton_counterchanged_bastard_template
+		}
+
+		# Ryswell
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Ryswell
+			}
+			300 = ryswell_basic_bastard_template
+			500 = ryswell_bastard_bend_template
+			300 = ryswell_counterchanged_bastard_template
+		}
+
+		#############################
+		## MINOR WESTERLAND HOUSES ##
+		#############################
+
+		# Lydden
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Lydden
+			}
+			300 = lydden_basic_bastard_template
+			500 = lydden_bastard_bend_template
+			300 = lydden_counterchanged_bastard_template
+		}
+
+		# Swyft
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Swyft
+			}
+			300 = swyft_basic_bastard_template
+			500 = swyft_bastard_bend_template
+			300 = swyft_counterchanged_bastard_template
+		}
+
+		# Payne
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Payne
+			}
+			300 = payne_basic_bastard_template
+			500 = payne_bastard_bend_template
+		}
+
+		# Brax
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Brax
+			}
+			300 = brax_basic_bastard_template
+			500 = brax_bastard_bend_template
+			300 = brax_counterchanged_bastard_template
+		}
+
+		# Crakehall
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Crakehall
+			}
+			500 = crakehall_bastard_bend_template
+		}
+
+		# Clegane (TRUMPET NOISE)
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Clegane
+			}
+			300 = clegane_basic_bastard_template
+			500 = clegane_bastard_bend_template
+			300 = clegane_counterchanged_bastard_template
+		}
+		
+		# Bricker
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Bricker
+			}
+			300 = bricker_basic_bastard_template
+			500 = bricker_bastard_bend_template
+			300 = bricker_counterchanged_bastard_template
+		}
+
+		###########################
+		## IRONBORN MINOR HOUSES ##
+		###########################
+
+		# GOODBROTHER
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Goodbrother
+			}
+			300 = goodbrother_basic_bastard_template
+			500 = goodbrother_bastard_bend_template
+		}
+		# DRUMM
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+
+				dynasty = dynasty:dynn_Drumm
+			}
+			300 = drumm_basic_bastard_template
+			500 = drumm_bastard_bend_template
+			300 = drumm_counterchanged_bastard_template
+		}
+		# Blacktyde
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Blacktyde
+			}
+			300 = blacktyde_basic_bastard_template
+			500 = blacktyde_bastard_bend_template
+		}
+		# Harlaw
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Harlaw
+			}
+			300 = harlaw_basic_bastard_template
+			500 = harlaw_bastard_bend_template
+		}
+
+		##########################
+		## VALEMAN MINOR HOUSES ##
+		##########################
+
+		# ROYCE
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Royce
+			}
+			300 = royce_basic_bastard_template
+			500 = royce_bastard_bend_template
+			300 = royce_counterchanged_bastard_template
+		}
+		# Corbray
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Corbray
+			}
+			400 = corbray_basic_bastard_template
+			700 = corbray_bastard_bend_template
+			100 = corbray_counterchanged_bastard_template
+		}
+		# Waynwood
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Waynwood
+			}
+			300 = waynwood_basic_bastard_template
+			500 = waynwood_bastard_bend_template
+			300 = waynwood_counterchanged_bastard_template
+		}
+		# Lynderly
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Lynderly
+			}
+			300 = lynderly_basic_bastard_template
+			500 = lynderly_bastard_bend_template
+			300 = lynderly_counterchanged_bastard_template
+		}
+
+		########################
+		## DORNE MINOR HOUSES ##
+		########################
+		# Dayne
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Dayne
+			}
+			300 = dayne_basic_bastard_template
+			500 = dayne_bastard_bend_template
+			300 = dayne_counterchanged_bastard_template
+		}
+		# Uller
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Uller
+			}
+			300 = uller_basic_bastard_template
+			500 = uller_bastard_bend_template
+		}
+		# Dalt
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Dalt
+			}
+			300 = dalt_basic_bastard_template
+			500 = dalt_bastard_bend_template
+			300 = dalt_counterchanged_bastard_template
+		}
+		# Toland
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Toland
+			}
+			300 = toland_basic_bastard_template
+			500 = toland_bastard_bend_template
+			300 = toland_counterchanged_bastard_template
+		}
+		# Santagar
+		special_selection = {
+			trigger = {
+				OR = {
+					has_trait = bastard
+					has_trait = bastard_founder
+				}
+				dynasty = dynasty:dynn_Santagar
+			}
+			300 = santagar_basic_bastard_template
+			500 = santagar_bastard_bend_template
+		}
+	}
+}

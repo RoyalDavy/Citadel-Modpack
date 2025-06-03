@@ -1,0 +1,78 @@
+﻿prince_lp_feudal_male_dorne = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	governments = { lp_feudal_government }
+	priority = 255
+	heritages = { heritage_rhoynish }
+	titles = { k_dorne }
+
+	flavourization_rules = {
+		spouse_takes_title = no
+	}
+}
+
+prince_lp_feudal_female_dorne = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = kingdom
+	governments = { lp_feudal_government }
+	priority = 255
+	heritages = { heritage_rhoynish }
+	titles = { k_dorne }
+
+	flavourization_rules = {
+		spouse_takes_title = no
+	}
+}
+
+prince_lp_kingdom_male = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	governments = { lp_feudal_government }
+	priority = 245
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+prince_lp_kingdom_female = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = kingdom
+	governments = { lp_feudal_government }
+	priority = 245
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+prince_lp_empire_male = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = empire
+	governments = { lp_feudal_government }
+	priority = 255
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}
+prince_lp_empire_female = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = empire
+	governments = { lp_feudal_government }
+	priority = 255
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+	}
+}

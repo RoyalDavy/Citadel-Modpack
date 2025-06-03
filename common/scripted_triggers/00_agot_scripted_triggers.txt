@@ -1,0 +1,1715 @@
+﻿is_human = {
+	NOT = { has_trait = dragon }
+	NOT = { has_trait = ruin }
+	NOT = { has_trait = agot_dummy_trait }
+	trigger_if = {
+		limit = { exists = top_liege }
+		NOT = {
+			top_liege = { has_trait = ruin }
+		}
+	}
+	trigger_if = {
+		limit = { exists = employer }
+		NOT = {
+			employer = { has_trait = ruin }
+		}
+		trigger_if = {
+			limit = { exists = employer.top_liege }
+			NOT = {
+				employer.top_liege = { has_trait = ruin }
+			}
+		}
+	}
+}
+
+agot_is_important_county = {
+	OR = {
+		agot_title_is_an_active_dragonpit = yes
+		any_county_province = { has_special_building = yes }
+	}
+}
+
+is_valid_lord_paramount = {
+	primary_title.tier = tier_kingdom
+	any_held_title = {
+		has_variable = is_lord_paramount
+	}
+}
+
+is_valid_paramountcy_realm = {
+	primary_title.tier = tier_empire
+	any_held_title = {
+		has_variable = is_paramountcy_realm
+	}
+}
+
+agot_is_feudal = {
+	OR = {
+		has_government = feudal_government
+		has_government = lp_feudal_government
+	}
+}
+
+agot_is_valid_lp_feudal_government_target = {
+	NOR = {
+		has_government = theocracy_government
+		has_government = ruins_government
+		has_government = republic_government
+		has_government = kingsguard_government
+		government_has_flag = government_is_administrative
+	}
+	capital_province ?= { has_holding_type = castle_holding }
+	OR = {
+		any_held_title = {
+			OR = {
+				has_variable = is_lord_paramount
+				has_variable = is_paramountcy_realm
+			}
+		}
+		AND = {
+			has_variable = pre_war_liege
+			OR = {
+				var:pre_war_liege.primary_title ?= {
+					OR = {
+						has_variable = is_paramountcy_realm
+						has_variable = is_lord_paramount
+					}
+				}
+				var:pre_war_liege.liege.primary_title ?= {
+					OR = {
+						has_variable = is_paramountcy_realm
+						has_variable = is_lord_paramount
+					}
+				}
+				AND = {
+					var:pre_war_liege ?= { has_variable = pre_war_liege }
+					var:pre_war_liege.var:pre_war_liege.primary_title ?= {
+						OR = {
+							has_variable = is_paramountcy_realm
+							has_variable = is_lord_paramount
+						}
+					}
+				}
+			}
+		}
+		any_liege_or_above = {
+			OR = {
+				any_held_title = {
+					OR = {
+						has_variable = is_lord_paramount
+						has_variable = is_paramountcy_realm
+					}
+				}
+				AND = {
+					has_variable = pre_war_liege
+					OR = {
+						var:pre_war_liege.primary_title ?= {
+							OR = {
+								has_variable = is_paramountcy_realm
+								has_variable = is_lord_paramount
+							}
+						}
+						var:pre_war_liege.liege.primary_title ?= {
+							OR = {
+								has_variable = is_paramountcy_realm
+								has_variable = is_lord_paramount
+							}
+						}
+						AND = {
+							var:pre_war_liege ?= { has_variable = pre_war_liege }
+							var:pre_war_liege.var:pre_war_liege.primary_title ?= {
+								OR = {
+									has_variable = is_paramountcy_realm
+									has_variable = is_lord_paramount
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+agot_is_valid_for_lp_feudal_govt_when_converting_from_admin = {
+	NOR = {
+		has_government = theocracy_government
+		has_government = ruins_government
+		has_government = republic_government
+		has_government = kingsguard_government
+	}
+	capital_province ?= { has_holding_type = castle_holding }
+	OR = {
+		any_held_title = {
+			OR = {
+				has_variable = is_lord_paramount
+				has_variable = is_paramountcy_realm
+			}
+		}
+		AND = {
+			has_variable = pre_war_liege
+			OR = {
+				var:pre_war_liege.primary_title ?= {
+					OR = {
+						has_variable = is_paramountcy_realm
+						has_variable = is_lord_paramount
+					}
+				}
+				var:pre_war_liege.liege.primary_title ?= {
+					OR = {
+						has_variable = is_paramountcy_realm
+						has_variable = is_lord_paramount
+					}
+				}
+				AND = {
+					var:pre_war_liege ?= { has_variable = pre_war_liege }
+					var:pre_war_liege.var:pre_war_liege.primary_title ?= {
+						OR = {
+							has_variable = is_paramountcy_realm
+							has_variable = is_lord_paramount
+						}
+					}
+				}
+			}
+		}
+		any_liege_or_above = {
+			OR = {
+				any_held_title = {
+					OR = {
+						has_variable = is_lord_paramount
+						has_variable = is_paramountcy_realm
+					}
+				}
+				AND = {
+					has_variable = pre_war_liege
+					OR = {
+						var:pre_war_liege.primary_title ?= {
+							OR = {
+								has_variable = is_paramountcy_realm
+								has_variable = is_lord_paramount
+							}
+						}
+						var:pre_war_liege.liege.primary_title ?= {
+							OR = {
+								has_variable = is_paramountcy_realm
+								has_variable = is_lord_paramount
+							}
+						}
+						AND = {
+							var:pre_war_liege ?= { has_variable = pre_war_liege }
+							var:pre_war_liege.var:pre_war_liege.primary_title ?= {
+								OR = {
+									has_variable = is_paramountcy_realm
+									has_variable = is_lord_paramount
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+agot_is_valid_pirate_government_target = {
+	is_landed = yes
+	NOR = {
+		has_government = theocracy_government
+		has_government = ruins_government
+		has_government = republic_government
+		has_government = kingsguard_government
+		government_has_flag = government_is_administrative
+	}
+	capital_province ?= {
+		AND = {
+			geographical_region = world_stepstones
+			has_holding_type = pirate_den_holding
+		}
+	}
+}
+
+agot_is_valid_free_city_government_target = {
+	is_landed = yes
+	NOR = {
+		has_government = theocracy_government
+		has_government = ruins_government
+		has_government = kingsguard_government
+	}
+	capital_province ?= {
+		OR = {
+			has_holding_type = city_holding
+			has_holding_type = castle_holding
+		}
+	}
+}
+
+agot_is_historical_free_city = {
+	OR = {
+		has_title = title:e_three_daughters
+		has_title = title:k_lys
+		has_title = title:k_myr
+		has_title = title:k_tyrosh
+		has_title = title:k_braavos
+		has_title = title:k_pentos
+	}
+}
+
+### Incest Triggers
+
+# scope must be a character
+agot_adelphogamous_incest_allowed = {
+	trigger_if = {
+		limit = { exists = dynasty }
+		dynasty = { has_variable = agot_allow_adelphogamous_incest }
+	}
+	trigger_else_if = {
+		limit = { exists = house }
+		house = { has_variable = agot_allow_adelphogamous_incest }
+	}
+	#trigger_else_if = { #AGOT TODO might be a valyrian parameter
+	#	limit = { exists = house }
+	#	culture = { has_cultural_parameter = allows_unrestricted_marriage }
+	#}
+	trigger_else = {
+		always = no
+	}
+}
+
+
+
+agot_is_valid_dyn_coa_target = {
+	agot_is_member_of_nights_watch = no
+	agot_is_non_westerosi_kingdom_or_empire = no
+	agot_is_landless_nw_character = no
+	any_held_title = {
+		NOR = {
+			is_holy_order = yes
+			is_mercenary_company = yes
+			is_head_of_faith = yes
+			this = title:d_the_silent_sisterhood
+			this = title:d_kingsguard
+		}
+	}
+}
+
+agot_is_non_westerosi_kingdom_or_empire = {
+	highest_held_title_tier >= tier_kingdom
+	any_held_title = {
+		any_in_de_jure_hierarchy = {
+			OR = {
+				this = title:e_pentos
+				this = title:e_three_daughters
+			}
+		}
+	}
+}
+
+agot_is_a_republic_title = {
+	OR = {
+		holder ?= { has_realm_law = free_city_election_succession_law }
+	}
+}
+
+agot_is_a_republic = {
+	OR = {
+		government_has_flag = government_is_free_city
+		has_government = republic_government
+	}
+}
+
+#only works for landed nights watch
+agot_is_member_of_nights_watch = {
+	exists = primary_title
+	OR = { # This block checks title hierarchy only
+		primary_title = title:k_the_wall
+		title:k_the_wall = {
+			is_de_jure_liege_or_above_target = prev.primary_title
+		}
+	}
+}
+
+agot_has_feudal_government_type = {
+	OR = {
+		has_government = feudal_government
+		has_government = lp_feudal_government
+	}
+}
+
+agot_wall_is_normal = {
+	has_variable = agot_wall_is_normal
+	NOT = {
+		agot_wall_has_fallen_left = yes
+		agot_wall_has_fallen_middle = yes
+		agot_wall_has_fallen_right = yes
+	}
+}
+
+agot_wall_has_fallen_left = {
+	has_variable = agot_wall_has_fallen_left
+}
+
+agot_wall_has_fallen_middle = {
+	has_variable = agot_wall_has_fallen_middle
+}
+
+agot_wall_has_fallen_right = {
+	has_variable = agot_wall_has_fallen_right
+}
+
+agot_KL_is_normal = {
+	NOT = {
+		has_variable = agot_KL_is_burning
+	}
+}
+
+agot_location_has_port = {
+	OR = {
+		has_building = common_tradeport_01
+		has_building = common_tradeport_02
+		has_building = common_tradeport_03
+		has_building = common_tradeport_04
+		has_building = common_tradeport_05
+		has_building = common_tradeport_06
+		has_building = common_tradeport_07
+		has_building = common_tradeport_08
+	}
+}
+
+### CULTURAL TYPE TRIGGERS ###
+# Wildling Trigger
+
+agot_is_wildling_culture = {
+	has_variable = wildling_culture
+}
+
+# All Westerosi Raiders Trigger
+agot_is_raiding_culture = {
+	OR = {
+		this = culture:forestman
+		this = culture:frozen_shoreman
+		this = culture:fangman
+		this = culture:ice_riverman
+		this = culture:hornfoot
+		this = culture:hill_clansman
+		this = culture:lakeman
+		this = culture:nightrunner
+		this = culture:thenn
+		this = culture:ironborn
+		this = culture:krakenman
+		any_parent_culture_or_above = {
+			OR = {
+				this = culture:forestman
+				this = culture:frozen_shoreman
+				this = culture:fangman
+				this = culture:ice_riverman
+				this = culture:hornfoot
+				this = culture:hill_clansman
+				this = culture:lakeman
+				this = culture:nightrunner
+				this = culture:thenn
+				this = culture:ironborn
+				this = culture:krakenman
+			}
+		}
+		has_cultural_pillar = heritage_ironborn
+		has_cultural_tradition = agot_tradition_wildling
+	}
+}
+
+
+### Other triggers ###
+
+agot_is_available_for_anything = {
+	custom_description = {
+		text = "whereabouts_unknown"
+		NOT = { has_character_flag = agot_is_at_unknown_place }
+	}
+}
+
+# Used for cadet creation decision
+
+agot_ancestors_ruled_primary_title = {
+	any_ancestor = {
+		count > 2  # Three ancestors had to have ruled before you
+		has_primary_title = root.primary_title # It had to be your primary title
+		primary_title.title_held_years >= 10 # Each had to have ruled for at least ten years.
+		dynasty = root.dynasty # Have to be in your dynasty
+		is_alive = no
+	}
+}
+
+agot_can_have_paramour = {
+	trigger_if = {
+		limit = {
+			OR = {
+				has_trait = nightswatch
+				has_trait = nightswatch_temp
+				has_trait = maester
+				has_trait = septon
+				has_trait = kingsguard
+				has_trait = dragon
+			}
+		}
+		always = no
+	}
+	trigger_else_if = {
+		limit = {
+			is_married = yes
+			is_male = yes
+		}
+		is_adult = yes
+		has_dynasty = yes
+		dynasty = {
+			any_dynasty_member = {
+				highest_held_title_tier >= tier_county
+			}
+		}
+		culture = {
+			has_cultural_parameter = can_have_paramours
+		}
+		OR = {
+			patrilinear_marriage = yes
+			primary_spouse.culture = {
+				has_cultural_parameter = can_have_paramours
+			}
+		}
+	}
+	trigger_else_if = {
+		limit = {
+			is_married = yes
+			is_female = yes
+		}
+		is_adult = yes
+		has_dynasty = yes
+		dynasty = {
+			any_dynasty_member = {
+				highest_held_title_tier >= tier_county
+			}
+		}
+		culture = {
+			has_cultural_parameter = can_have_paramours
+		}
+		OR = {
+			matrilinear_marriage = yes
+			primary_spouse.culture = {
+				has_cultural_parameter = can_have_paramours
+			}
+		}
+	}
+	trigger_else = {
+		is_adult = yes
+		has_dynasty = yes
+		dynasty = {
+			any_dynasty_member = {
+				highest_held_title_tier >= tier_county
+			}
+		}
+		culture = {
+			has_cultural_parameter = can_have_paramours
+		}
+	}
+}
+
+agot_can_add_paramour = {
+	agot_can_have_paramour = yes
+	NOT = {
+		any_relation = {
+			type = paramour
+		}
+	}
+}
+
+agot_can_be_paramour = {
+	is_married = no
+	is_betrothed = no
+	is_landed = no
+	NOR = {
+		any_relation = {
+			type = paramour
+		}
+		any_heir_title = {
+			exists = holder
+		}
+		has_trait = maester
+		has_trait = septon
+		has_trait = high_septon
+		has_trait = nightswatch
+		has_trait = nightswatch_temp
+		has_trait = kingsguard
+		has_trait = dragon
+	}
+}
+
+agot_is_westerosi_high_valyrian = {
+	culture = culture:high_valyrian
+	OR = {
+		AND = {
+			exists = capital_province
+			capital_province = { geographical_region = world_westeros }
+		}
+		AND = {
+			exists = court_owner.capital_province
+			court_owner.capital_province = { geographical_region = world_westeros }
+		}
+		AND = {
+			NAND = {
+				exists = capital_province
+				exists = court_owner.capital_province
+			}
+			location = { geographical_region = world_westeros }
+		}
+	}
+}
+
+agot_is_essosi_high_valyrian = {
+	culture = culture:high_valyrian
+	OR = {
+		AND = {
+			exists = capital_province
+			NOT = {
+				capital_province = { geographical_region = world_westeros }
+			}
+		}
+		AND = {
+			exists = court_owner.capital_province
+			NOT = {
+				court_owner.capital_province = { geographical_region = world_westeros }
+			}
+		}
+		NAND = {
+			exists = capital_province
+			exists = court_owner.capital_province
+			location = { geographical_region = world_westeros }
+		}
+	}
+}
+
+
+#MW Compatible
+agot_is_independent_ruler = {
+	custom_description = {
+		text = "is_independent_ruler"
+		AND = {
+			is_independent_ruler = yes
+			NOT = { has_variable = pre_war_liege }
+			NOT = { has_character_flag = bookmark_independent }
+		}
+	}
+}
+# For whenever someone needs a conventional check for independence, like petition liege/pay homage
+is_vanilla_independent_ruler = {
+	is_independent_ruler = yes
+}
+
+grrms_fave_houses_trigger = {
+	exists = dynasty
+	OR = {
+		dynasty = dynasty:dynn_Blackwood
+		dynasty = dynasty:dynn_Dayne
+		dynasty = dynasty:dynn_Velaryon
+		dynasty = dynasty:dynn_Hightower
+		#not actually grrm houses but historic targ marriage/engagements
+		dynasty = dynasty:dynn_Penrose
+		dynasty = dynasty:dynn_Royce
+		dynasty = dynasty:dynn_Rowan
+		dynasty = dynasty:dynn_Manderly
+		dynasty = dynasty:dynn_Plumm
+		dynasty = dynasty:dynn_Manwoody
+		dynasty = dynasty:dynn_Peake #Badger was here
+		dynasty = dynasty:dynn_Baratheon
+	}
+}
+
+agot_dragon_dream_scheme_discovery_trigger = {
+	is_scheme_exposed = no
+	exists = scope:target.host
+	NOT = { scope:target.host = scope:owner }
+	OR = {
+		scope:target = {
+			OR = {
+				has_character_flag = dragon_dreams
+				has_trait = dragon_dreams
+			}
+			NOT = { has_character_flag = dreamt }
+		}
+		scope:target = {
+			any_close_or_extended_family_member = {
+				age > 5
+				OR = {
+					has_character_flag = dragon_dreams
+					has_trait = dragon_dreams
+				}
+				NOT = { this = scope:owner }
+				NOT = { has_character_flag = dreamt }
+				save_temporary_opinion_value_as = {
+					name = opinion_of_target
+					target = scope:target
+				}
+				scope:opinion_of_target >= 0
+			}
+		}
+	}
+}
+
+agot_greensight_scheme_discovery_trigger = {
+	is_scheme_exposed = no
+	exists = scope:target.host
+	NOT = { scope:target.host = scope:owner }
+	OR = {
+		scope:target = {
+			OR = {
+				has_character_flag = greensight
+				has_trait = greensight
+			}
+			NOT = { has_character_flag = foreseen }
+		}
+		scope:target = {
+			any_close_or_extended_family_member = {
+				age > 5
+				OR = {
+					has_character_flag = greensight
+					has_trait = greensight
+				}
+				NOT = { this = scope:owner }
+				NOT = { has_character_flag = foreseen }
+				save_temporary_opinion_value_as = {
+					name = opinion_of_target
+					target = scope:target
+				}
+				scope:opinion_of_target >= 0
+			}
+		}
+	}
+}
+
+# Checks if a harm event can be blocked via dragon dreams/greensight
+agot_prevent_harm_event_with_foresight_trigger = {
+	trigger_if = {  # The player has a foresight trait
+		limit = {
+			age >= 5
+			OR = {
+				has_trait = dragon_dreams
+				has_trait = greensight
+			}
+		}
+	}
+	trigger_else = {  # Someone who would warn the player has a foresight trait
+		OR = {
+			any_close_or_extended_family_member = {
+				count > 0
+				OR = {
+					has_trait = dragon_dreams
+					has_trait = greensight
+				}
+				scope_is_close_to_root_trigger = yes
+				opinion = {
+					target = root
+					value >= neutral_opinion
+				}
+			}
+			any_relation = {
+				count > 0
+				type = friend
+				age >= 5
+				OR = {
+					has_trait = dragon_dreams
+					has_trait = greensight
+				}
+				scope_is_close_to_root_trigger = yes
+			}
+			any_relation = {
+				count > 0
+				type = best_friend
+				age >= 5
+				OR = {
+					has_trait = dragon_dreams
+					has_trait = greensight
+				}
+				scope_is_close_to_root_trigger = yes
+			}
+			any_relation = {
+				count > 0
+				type = lover
+				age >= 5
+				OR = {
+					has_trait = dragon_dreams
+					has_trait = greensight
+				}
+				scope_is_close_to_root_trigger = yes
+			}
+			any_relation = {
+				count > 0
+				type = soulmate
+				age >= 5
+				OR = {
+					has_trait = dragon_dreams
+					has_trait = greensight
+				}
+				scope_is_close_to_root_trigger = yes
+			}
+			any_relation = {
+				count > 0
+				type = paramour
+				age >= 5
+				OR = {
+					has_trait = dragon_dreams
+					has_trait = greensight
+				}
+				scope_is_close_to_root_trigger = yes
+			}
+		}
+	}
+}
+
+worthy_sword_of_the_morning_trigger = {
+	dynasty = dynasty:dynn_Dayne
+	OR = {
+		has_trait = education_martial_prowess_4
+		has_trait = education_martial_prowess_5
+		AND = {
+			is_agot_knight_trigger = yes
+			has_trait = lifestyle_blademaster
+			age < 16
+		}
+	}
+	prowess >= 20
+	OR = {
+		has_trait = just
+		has_trait = brave
+	}
+	NOR = {
+		has_trait = murderer
+		has_trait = kinslayer
+		has_trait = gluttonous
+		has_trait = greedy
+		has_trait = lazy
+		has_trait = callous
+		has_trait = sadistic
+		has_trait = deceitful
+		has_trait = drunkard
+		has_trait = craven
+		has_trait = arbitrary
+		has_trait = torturer
+		has_trait = physique_bad
+	}
+}
+
+agot_has_historical_events_trigger = {
+	OR = {
+		has_game_rule = agot_story_historical_events_historical_outcomes
+		has_game_rule = agot_story_historical_events_weighted_outcomes
+		has_game_rule = agot_story_historical_events_random_outcomes
+	}
+}
+
+agot_kingdom_tier_is_real_kingdom_trigger = {
+	has_government = lp_feudal_government
+	highest_held_title_tier = tier_kingdom
+	OR = {
+		#agot_has_contract_royal_privilege_trigger = yes
+		vassal_contract_has_flag = has_palatinate_contract
+		agot_is_independent_ruler = yes
+	}
+}
+
+agot_can_create_duchy_title = {
+	NAND = {
+		primary_title.tier = tier_county
+		has_variable = pre_war_liege
+		var:pre_war_liege.primary_title.tier = tier_duchy
+	}
+}
+
+can_improve_relationship_with_spouse_trigger = {
+	exists = primary_spouse
+	primary_spouse = { is_alive = yes }
+	NOR = {
+		AND = {
+			has_relation_lover = primary_spouse
+			num_of_relation_soulmate > 0
+		}
+		has_relation_soulmate = primary_spouse
+		has_relation_nemesis = primary_spouse
+	}
+}
+
+can_improve_relationship_with_family_member_trigger = {
+	save_temporary_scope_as = character_visiting_weirwood
+	any_close_family_member = {
+		is_alive = yes
+		in_diplomatic_range = scope:character_visiting_weirwood
+		NOR = {
+			has_relation_best_friend = scope:character_visiting_weirwood
+			has_relation_friend = scope:character_visiting_weirwood
+			has_relation_nemesis = scope:character_visiting_weirwood
+		}
+	}
+}
+
+can_gain_pet_trigger = {
+	NOR = {
+		has_character_modifier = cat_story_modifier
+		has_character_modifier = dog_story_modifier
+	}
+}
+
+agot_can_wear_crown_trigger = {
+	custom_tooltip = {
+		text = agot_is_independent_crown_tooltip_desc
+		OR = {
+			agot_is_independent_ruler = yes
+			primary_spouse ?= {
+				agot_is_independent_ruler = yes
+			}
+			father ?= {
+				agot_is_independent_ruler = yes
+			}
+			mother ?= {
+				agot_is_independent_ruler = yes
+			}
+			AND = {
+				highest_held_title_tier = tier_kingdom
+				vassal_contract_has_flag = has_palatinate_contract
+			}
+			AND = {
+				primary_title ?= { tier >= tier_kingdom }
+				any_character_war = {
+					using_cb = agot_independence_war
+					is_war_leader = root
+					is_attacker = root
+				}
+			}
+			has_character_flag = agot_claimant_king
+		}
+		OR = {
+			is_ai = no
+			AND = {
+				NOT = { government_has_flag = government_is_free_city }
+				NOT = { has_government = republic_government }
+			}
+		}
+	}
+	#Coronation Logic
+	trigger_if = {
+		limit = {
+			NOR = {
+				government_has_flag = government_is_free_city
+				has_government = republic_government
+			}
+			agot_is_independent_ruler = yes
+		}
+		custom_tooltip = {
+			text = must_be_crowned_tooltip_desc
+			NOT = {
+				has_inactive_trait = not_had_coronation
+				has_character_flag = not_had_coronation
+			}
+		}
+	}
+	trigger_else_if = {
+		limit = {
+			NOR = {
+				government_has_flag = government_is_free_city
+				has_government = republic_government
+			}
+			OR = {
+				primary_spouse ?= {
+					agot_is_independent_ruler = yes
+				}
+				father ?= {
+					agot_is_independent_ruler = yes
+				}
+				mother ?= {
+					agot_is_independent_ruler = yes
+				}
+			}
+		}
+		custom_tooltip = {
+			text = must_be_crowned_tooltip_desc
+			NOR = {
+				primary_spouse ?= {
+					OR = {
+						has_inactive_trait = not_had_coronation
+						has_character_flag = not_had_coronation
+					}
+				}
+				father ?= {
+					OR = {
+						has_inactive_trait = not_had_coronation
+						has_character_flag = not_had_coronation
+					}
+				}
+				mother ?= {
+					OR = {
+						has_inactive_trait = not_had_coronation
+						has_character_flag = not_had_coronation
+					}
+				}
+			}
+		}
+	}
+	trigger_else = {
+		always = yes
+	}
+	NOT = { has_trait = nightswatch }
+}
+
+agot_default_wear_crown_trigger = {
+	trigger_if = { #To ensure if crown is stolen, ruler will not wear crown unless manually equipped.
+		limit = {
+			involved_activity ?= {
+				OR = {
+					has_activity_type = activity_coronation
+					has_activity_type = activity_no_dlc_coronation
+				}
+				has_variable = misplaced_crown #Make sure the crown is stolen and not returned
+			}
+			has_character_flag = coronation_host #Make sure this is the host
+			is_alive = yes
+		}
+		any_character_artifact = {
+			artifact_slot_type = helmet
+			is_equipped = yes
+		}
+	}
+	trigger_else_if = {
+		limit = { is_alive = yes }
+		OR = {
+			AND = {
+				primary_title ?= { tier >= tier_kingdom }
+				any_character_war = {
+					using_cb = agot_independence_war
+					is_war_leader = root
+					is_attacker = root
+				}
+			}
+			has_character_flag = agot_claimant_king
+			AND = {
+				OR = {
+					primary_title ?= { tier >= tier_kingdom }
+					primary_spouse ?= {
+						primary_title ?= { tier >= tier_kingdom }
+					}
+				}
+				OR = {
+					AND = {
+						agot_is_independent_ruler = yes
+						NOR = {
+							has_inactive_trait = not_had_coronation
+							has_character_flag = not_had_coronation
+						}
+					}
+					primary_spouse ?= {
+						agot_is_independent_ruler = yes
+						NOR = {
+							has_inactive_trait = not_had_coronation
+							has_character_flag = not_had_coronation
+						}
+					}
+					AND = {
+						highest_held_title_tier = tier_kingdom
+						vassal_contract_has_flag = has_palatinate_contract
+						NOT = { primary_title ?= title:k_dragonstone }
+					}
+				}
+			}
+		}
+	}
+	trigger_else = {
+		OR = {
+			AND = {
+				primary_title.tier = tier_empire
+				NOR = {
+					has_inactive_trait = not_had_coronation
+					has_character_flag = not_had_coronation
+				}
+			}
+			has_primary_title = title:k_dorne
+			any_spouse = {
+				even_if_dead = yes
+				primary_title.tier = tier_empire
+				NOR = {
+					has_inactive_trait = not_had_coronation
+					has_character_flag = not_had_coronation
+				}
+			}
+		}
+	}
+	NOT = { government_has_flag = government_is_free_city }
+	NOT = { has_government = republic_government }
+}
+
+agot_hair_dye_potential_trigger = {
+	OR = {
+		has_character_flag = can_dye_hair
+		has_trait = fashionable
+		has_trait = eccentric
+		OR = {
+			culture = { has_cultural_pillar = heritage_ghiscari }
+			AND = {
+				culture = { has_cultural_pillar = heritage_valyrian }
+				NOT = {
+					culture = culture:high_valyrian
+					culture = culture:westerosi_valyrian
+					culture = culture:essosi_valyrian
+				}
+				culture = { is_hybrid_culture = no }
+				culture = { is_divergent_culture = no }
+			}
+			culture = { has_clothing_gfx = essosi_valyrian_clothing_gfx }
+		}
+	}
+}
+
+agot_has_dyed_hair = {
+	OR = {
+		has_inactive_trait = poppy_hair_dye
+		has_inactive_trait = asshaii_scarlet_hair_dye
+		has_inactive_trait = ghost_rose_hair_dye
+		has_inactive_trait = hibiscus_hair_dye
+		has_inactive_trait = aquan_red_hair_dye
+		has_inactive_trait = ghiscari_copper_hair_dye
+		has_inactive_trait = hranna_bloom_hair_dye
+		has_inactive_trait = melee_hair_dye
+		has_inactive_trait = bloodstone_red_hair_dye
+		has_inactive_trait = passioned_plea_hair_dye
+		has_inactive_trait = dragons_breath_hair_dye
+		has_inactive_trait = cut_crimson_hair_dye
+		has_inactive_trait = rich_madder_hair_dye
+		has_inactive_trait = womens_weapon_hair_dye
+		has_inactive_trait = maidens_game_hair_dye
+		has_inactive_trait = sarhoy_flush_hair_dye
+		has_inactive_trait = pennyroyal_hair_dye
+		has_inactive_trait = sweet_lotus_hair_dye
+		has_inactive_trait = oleander_heart_hair_dye
+		has_inactive_trait = panteras_bite_hair_dye
+		has_inactive_trait = lovers_blush_hair_dye
+		has_inactive_trait = sunset_on_the_narrows_hair_dye
+		has_inactive_trait = pink_graces_hair_dye
+		has_inactive_trait = wild_cherry_hair_dye
+		has_inactive_trait = twilight_ruby_hair_dye
+		has_inactive_trait = trueborn_hair_dye
+		has_inactive_trait = mountain_magenta_hair_dye
+		has_inactive_trait = pink_cardoon_hair_dye
+		has_inactive_trait = lord_of_the_seas_hair_dye
+		has_inactive_trait = nightshade_hair_dye
+		has_inactive_trait = secret_city_hair_dye
+		has_inactive_trait = lavender_haze_hair_dye
+		has_inactive_trait = winesink_hair_dye
+		has_inactive_trait = courtesan_locks_hair_dye
+		has_inactive_trait = thistles_touch_hair_dye
+		has_inactive_trait = lilac_dream_hair_dye
+		has_inactive_trait = dornish_plum_hair_dye
+		has_inactive_trait = archonite_hair_dye
+		has_inactive_trait = emperors_tune_hair_dye
+		has_inactive_trait = palemoon_hair_dye
+		has_inactive_trait = princely_hair_dye
+		has_inactive_trait = misty_cloud_hair_dye
+		has_inactive_trait = shade_of_the_evening_hair_dye
+		has_inactive_trait = spirit_of_sapphire_hair_dye
+		has_inactive_trait = winter_rose_hair_dye
+		has_inactive_trait = bluejay_hair_dye
+		has_inactive_trait = azure_crown_hair_dye
+		has_inactive_trait = shivering_ends_hair_dye
+		has_inactive_trait = melange_sea_hair_dye
+		has_inactive_trait = berry_mash_hair_dye
+		has_inactive_trait = mummers_mask_hair_dye
+		has_inactive_trait = coldsnap_hair_dye
+		has_inactive_trait = griffins_hide_hair_dye
+		has_inactive_trait = crashing_waves_hair_dye
+		has_inactive_trait = mermaids_flowers_hair_dye
+		has_inactive_trait = glittering_galley_hair_dye
+		has_inactive_trait = myrish_lace_hair_dye
+		has_inactive_trait = shadowmint_hair_dye
+		has_inactive_trait = seaglass_hair_dye
+		has_inactive_trait = jungles_welcome_hair_dye
+		has_inactive_trait = viridescent_charm_hair_dye
+		has_inactive_trait = clover_hair_dye
+		has_inactive_trait = merling_green_hair_dye
+		has_inactive_trait = imperial_jade_hair_dye
+		has_inactive_trait = evergreen_hair_dye
+		has_inactive_trait = cliffmoss_hair_dye
+		has_inactive_trait = wildfire_hair_dye
+		has_inactive_trait = selhoru_skies_hair_dye
+		has_inactive_trait = verdant_mane_hair_dye
+		has_inactive_trait = summer_emerald_hair_dye
+		has_inactive_trait = isles_venom_hair_dye
+		has_inactive_trait = olive_hair_dye
+		has_inactive_trait = pipers_grass_hair_dye
+		has_inactive_trait = yellow_toad_hair_dye
+		has_inactive_trait = evening_star_hair_dye
+		has_inactive_trait = lemon_cake_hair_dye
+		has_inactive_trait = goldenrod_hair_dye
+		has_inactive_trait = bees_wax_hair_dye
+		has_inactive_trait = honeywine_hair_dye
+		has_inactive_trait = rogare_gold_hair_dye
+		has_inactive_trait = aged_cheddar_hair_dye
+		has_inactive_trait = ambitious_amber_hair_dye
+		has_inactive_trait = saffron_hair_dye
+		has_inactive_trait = lantern_glow_hair_dye
+		has_inactive_trait = spiced_pumpkin_hair_dye
+		has_inactive_trait = peach_petals_hair_dye
+		has_inactive_trait = coastal_orange_hair_dye
+		has_inactive_trait = tigers_poise_hair_dye
+		has_inactive_trait = blood_orange_hair_dye
+		has_inactive_trait = coral_hair_dye
+		has_character_modifier = poppy_hair_dye
+		has_character_modifier = asshaii_scarlet_hair_dye
+		has_character_modifier = ghost_rose_hair_dye
+		has_character_modifier = hibiscus_hair_dye
+		has_character_modifier = aquan_red_hair_dye
+		has_character_modifier = ghiscari_copper_hair_dye
+		has_character_modifier = hranna_bloom_hair_dye
+		has_character_modifier = melee_hair_dye
+		has_character_modifier = bloodstone_red_hair_dye
+		has_character_modifier = passioned_plea_hair_dye
+		has_character_modifier = dragons_breath_hair_dye
+		has_character_modifier = cut_crimson_hair_dye
+		has_character_modifier = rich_madder_hair_dye
+		has_character_modifier = womens_weapon_hair_dye
+		has_character_modifier = maidens_game_hair_dye
+		has_character_modifier = sarhoy_flush_hair_dye
+		has_character_modifier = pennyroyal_hair_dye
+		has_character_modifier = sweet_lotus_hair_dye
+		has_character_modifier = oleander_heart_hair_dye
+		has_character_modifier = panteras_bite_hair_dye
+		has_character_modifier = lovers_blush_hair_dye
+		has_character_modifier = sunset_on_the_narrows_hair_dye
+		has_character_modifier = pink_graces_hair_dye
+		has_character_modifier = wild_cherry_hair_dye
+		has_character_modifier = twilight_ruby_hair_dye
+		has_character_modifier = trueborn_hair_dye
+		has_character_modifier = mountain_magenta_hair_dye
+		has_character_modifier = pink_cardoon_hair_dye
+		has_character_modifier = lord_of_the_seas_hair_dye
+		has_character_modifier = nightshade_hair_dye
+		has_character_modifier = secret_city_hair_dye
+		has_character_modifier = lavender_haze_hair_dye
+		has_character_modifier = winesink_hair_dye
+		has_character_modifier = courtesan_locks_hair_dye
+		has_character_modifier = thistles_touch_hair_dye
+		has_character_modifier = lilac_dream_hair_dye
+		has_character_modifier = dornish_plum_hair_dye
+		has_character_modifier = archonite_hair_dye
+		has_character_modifier = emperors_tune_hair_dye
+		has_character_modifier = palemoon_hair_dye
+		has_character_modifier = princely_hair_dye
+		has_character_modifier = misty_cloud_hair_dye
+		has_character_modifier = shade_of_the_evening_hair_dye
+		has_character_modifier = spirit_of_sapphire_hair_dye
+		has_character_modifier = winter_rose_hair_dye
+		has_character_modifier = bluejay_hair_dye
+		has_character_modifier = azure_crown_hair_dye
+		has_character_modifier = shivering_ends_hair_dye
+		has_character_modifier = melange_sea_hair_dye
+		has_character_modifier = berry_mash_hair_dye
+		has_character_modifier = mummers_mask_hair_dye
+		has_character_modifier = coldsnap_hair_dye
+		has_character_modifier = griffins_hide_hair_dye
+		has_character_modifier = crashing_waves_hair_dye
+		has_character_modifier = mermaids_flowers_hair_dye
+		has_character_modifier = glittering_galley_hair_dye
+		has_character_modifier = myrish_lace_hair_dye
+		has_character_modifier = shadowmint_hair_dye
+		has_character_modifier = seaglass_hair_dye
+		has_character_modifier = jungles_welcome_hair_dye
+		has_character_modifier = viridescent_charm_hair_dye
+		has_character_modifier = clover_hair_dye
+		has_character_modifier = merling_green_hair_dye
+		has_character_modifier = imperial_jade_hair_dye
+		has_character_modifier = evergreen_hair_dye
+		has_character_modifier = cliffmoss_hair_dye
+		has_character_modifier = wildfire_hair_dye
+		has_character_modifier = selhoru_skies_hair_dye
+		has_character_modifier = verdant_mane_hair_dye
+		has_character_modifier = summer_emerald_hair_dye
+		has_character_modifier = isles_venom_hair_dye
+		has_character_modifier = olive_hair_dye
+		has_character_modifier = pipers_grass_hair_dye
+		has_character_modifier = yellow_toad_hair_dye
+		has_character_modifier = evening_star_hair_dye
+		has_character_modifier = lemon_cake_hair_dye
+		has_character_modifier = goldenrod_hair_dye
+		has_character_modifier = bees_wax_hair_dye
+		has_character_modifier = honeywine_hair_dye
+		has_character_modifier = rogare_gold_hair_dye
+		has_character_modifier = aged_cheddar_hair_dye
+		has_character_modifier = ambitious_amber_hair_dye
+		has_character_modifier = saffron_hair_dye
+		has_character_modifier = lantern_glow_hair_dye
+		has_character_modifier = spiced_pumpkin_hair_dye
+		has_character_modifier = peach_petals_hair_dye
+		has_character_modifier = coastal_orange_hair_dye
+		has_character_modifier = tigers_poise_hair_dye
+		has_character_modifier = blood_orange_hair_dye
+		has_character_modifier = coral_hair_dye
+	}
+}
+
+agot_invalid_hair_overrides = {
+	OR = {
+		has_trait = albino
+		agot_has_dyed_hair = yes
+	}
+}
+
+agot_can_have_personal_arms_trigger = {
+	is_adult = yes
+	has_character_flag = has_personal_coa
+}
+
+agot_invalid_war_target = {
+	OR = {
+		has_title_law = magisterial_attached_titles_law
+	}
+}
+
+agot_is_important_artifact = {
+	OR = {
+		has_variable = historical_unique_artifact
+		has_variable = valyrian_steel
+		has_variable = dragon_egg
+	}
+}
+
+agot_artifact_can_take = {
+	NOR = {
+		has_variable = maesterwork
+		has_variable = historical_throne
+		has_variable = white_book
+		has_variable = agot_swiper_no_swiping
+	}
+}
+
+agot_valid_ai_gift = {
+	OR = {
+		rarity = common
+		rarity = masterwork
+	}
+	NOT = { agot_is_important_artifact = yes }
+	NOR = {
+		has_variable = agot_artifact_cannot_gift
+		has_variable = maesterwork
+	}
+}
+
+agot_valyrian_heterochromia = {
+	AND = {
+		has_trait = heterochromia_eyes
+		culture = { has_cultural_pillar = heritage_valyrian }
+		NOT = {
+			has_inactive_trait = heterochromia_blue1
+			has_inactive_trait = heterochromia_blue2
+			has_inactive_trait = heterochromia_green1
+			has_inactive_trait = heterochromia_green2
+			has_inactive_trait = heterochromia_grey
+			has_inactive_trait = heterochromia_black1
+			has_inactive_trait = heterochromia_black2
+			has_inactive_trait = heterochromia_brown1
+			has_inactive_trait = heterochromia_brown2
+			has_inactive_trait = heterochromia_brown3
+			has_inactive_trait = heterochromia_purple1
+			has_inactive_trait = heterochromia_purple2
+			has_inactive_trait = heterochromia_purple3
+			has_inactive_trait = heterochromia_purple4
+			has_inactive_trait = heterochromia_red
+			has_inactive_trait = heterochromia_gold
+		}
+	}
+}
+
+agot_heterochromia_no_overwrite = {
+	AND = {
+		has_trait = heterochromia_eyes
+		NOT = {
+			culture = { has_cultural_pillar = heritage_valyrian }
+			has_inactive_trait = heterochromia_blue1
+			has_inactive_trait = heterochromia_blue2
+			has_inactive_trait = heterochromia_green1
+			has_inactive_trait = heterochromia_green2
+			has_inactive_trait = heterochromia_grey
+			has_inactive_trait = heterochromia_black1
+			has_inactive_trait = heterochromia_black2
+			has_inactive_trait = heterochromia_brown1
+			has_inactive_trait = heterochromia_brown2
+			has_inactive_trait = heterochromia_brown3
+			has_inactive_trait = heterochromia_purple1
+			has_inactive_trait = heterochromia_purple2
+			has_inactive_trait = heterochromia_purple3
+			has_inactive_trait = heterochromia_purple4
+			has_inactive_trait = heterochromia_red
+			has_inactive_trait = heterochromia_gold
+		}
+	}
+}
+
+agot_has_inactive_heterochromia_trait_trigger = {
+	OR = {
+		has_inactive_trait = heterochromia_blue1
+		has_inactive_trait = heterochromia_blue2
+		has_inactive_trait = heterochromia_green1
+		has_inactive_trait = heterochromia_green2
+		has_inactive_trait = heterochromia_grey
+		has_inactive_trait = heterochromia_black1
+		has_inactive_trait = heterochromia_black2
+		has_inactive_trait = heterochromia_brown1
+		has_inactive_trait = heterochromia_brown2
+		has_inactive_trait = heterochromia_brown3
+		has_inactive_trait = heterochromia_red
+		has_inactive_trait = heterochromia_gold
+	}
+}
+
+agot_blind = {
+	AND = {
+		has_trait = blind
+		NOT = {
+			has_inactive_trait = aged
+		}
+	}
+}
+
+agot_aged = {
+	AND = {
+		has_trait = blind
+		has_inactive_trait = aged
+	}
+}
+
+agot_halfblind_battle = {
+	AND = {
+		has_trait = half_blind
+		has_inactive_trait = halfblind_scar
+	}
+}
+
+is_available_prisoner_for_sacrifice = {
+	is_ai = yes
+	is_adult = yes
+	is_human = yes
+	is_incapable = no
+}
+
+agot_any_available_family_for_sacrifice = {
+	OR = {
+		any_courtier = {
+			is_available_ai = yes
+			is_close_family_of = root
+			NOT = { has_relation_soulmate = root }
+		}
+		any_prisoner = {
+			is_ai = yes
+			is_human = yes
+			is_close_family_of = root
+			NOT = { has_relation_soulmate = root }
+		}
+	}
+}
+
+agot_secret_character_eligible = {
+	AND = {
+		is_alive = yes
+		is_playable_character = no
+		is_adult = no
+		is_married = no
+		is_concubine = no
+		NOT = { has_trait = bastard }
+		NOT = { has_trait = denounced }
+		NOT = { has_trait = dragonrider }
+		NOT = {
+			any_relation = {
+				type = agot_dragon
+			}
+		}
+		is_human = yes
+	}
+}
+
+# In case we redefine magic later, I don't have to fix in other places
+agot_is_world_magic_trigger = {
+	global_var:magic_level > 0
+}
+
+agot_is_valid_laamp_coa_target = {
+	OR = {
+		this = title:d_laamp_Knight_Kings_Landing_5
+		this = title:d_laamp_Tall_1
+		this = title:d_laamp_Suggs_1
+		this = title:d_laamp_Seaworth_1
+		this = title:d_laamp_Knight_Kings_Landing_2
+		this = title:d_laamp_Knight_Stormlands_3
+		this = title:d_laamp_Knight_Pennytree_2
+		this = title:d_laamp_Knight_Riverlands_1
+		this = title:d_laamp_Frey_24
+		this = title:d_laamp_Knight_Vale_3
+		this = title:d_laamp_Knight_Vale_6
+		this = title:d_laamp_Knight_Westerlands_2
+		this = title:d_laamp_Knight_Iron_Isles_1
+		this = title:d_laamp_Osgrey_hh_1
+		this = title:d_laamp_Knight_Dorne_2
+		this = title:d_laamp_Knight_Dorne_3
+		this = title:d_laamp_Knight_North_1
+		this = title:d_laamp_merc_golden_company
+	}
+}
+
+# Female Inheritance Safety Triggers
+agot_legitimate_character = {
+	NOT = { has_trait = bastard }
+	NOT = { has_trait = bastard_founder }
+	NOT = { has_trait = disinherited }
+}
+
+agot_can_inherit = {
+	is_alive = yes
+	agot_legitimate_character = yes
+	agot_can_be_ruler = yes
+}
+
+agot_potential_heirs_trigger = {
+	agot_legitimate_character = yes
+	trigger_if = {
+		limit = { is_male = yes }
+		NOT = {
+			any_sibling = {
+				agot_can_inherit = yes
+				is_male = yes
+				age > prev.age
+			}
+		}
+	}
+	trigger_if = {
+		limit = { is_female = yes }
+		NOT = {
+			any_sibling = {
+				agot_can_inherit = yes
+				is_male = yes
+			}
+			any_sibling = {
+				agot_can_inherit = yes
+				is_female = yes
+				age > prev.age
+			}
+		}
+	}
+}
+
+agot_heir_character = {
+	is_alive = yes
+	house = scope:female_heir.house
+	this = scope:title_holder_house_member.primary_heir
+}
+
+agot_is_indirect_female_heir = {
+	save_temporary_scope_as = female_heir
+	is_lowborn = no
+	is_female = yes
+	exists = house
+	agot_can_inherit = yes
+	NOT = {
+		any_sibling = {
+			agot_can_inherit = yes
+			is_female = yes
+			age > scope:female_heir.age
+		}
+		any_sibling = {
+			agot_can_inherit = yes
+			is_male = yes
+			count >= 2
+		}
+	}
+	house = {
+		any_house_member = {
+			OR = {
+				is_parent_of = scope:female_heir
+				is_grandparent_of = scope:female_heir
+				is_great_grandparent_of = scope:female_heir
+			}
+			is_landed = yes
+			highest_held_title_tier >= tier_county
+			has_realm_law = male_preference_law
+			save_temporary_scope_as = title_holder_house_member
+		}
+	}
+	OR = {
+		#Character is the heir
+		scope:female_heir = scope:title_holder_house_member.primary_heir
+		#Father is the heir
+		AND = {
+			exists = father
+			father = { agot_heir_character = yes }
+			father = { agot_potential_heirs_trigger = yes }
+		}
+		#Father's father is the heir
+		AND = {
+			exists = father.father
+			father.father = { agot_heir_character = yes }
+			father = { agot_potential_heirs_trigger = yes }
+		}
+		#Father's mother is the heir
+		AND = {
+			exists = father.mother
+			father.mother = { agot_heir_character = yes }
+			father = { agot_potential_heirs_trigger = yes }
+		}
+		#Mother's mother is the heir
+		AND = {
+			exists = mother.mother
+			mother.mother = { agot_heir_character = yes }
+			mother = { agot_potential_heirs_trigger = yes }
+		}
+		#Mother's father is the heir
+		AND = {
+			exists = mother.father
+			mother.father = { agot_heir_character = yes }
+			mother = { agot_potential_heirs_trigger = yes }
+		}
+		#Mother is the heir
+		AND = {
+			exists = mother
+			mother = { agot_heir_character = yes }
+			mother = { agot_potential_heirs_trigger = yes }
+		}
+		#Sibling is the heir
+		AND = {
+			any_sibling = {
+				agot_heir_character = yes
+				NOT = { any_child = { agot_can_inherit = yes } }
+			}
+		}
+	}
+}
+
+agot_chequey_house_armor = {
+	OR = {
+		dynasty ?= dynasty:dynn_Staunton
+		dynasty ?= dynasty:dynn_Inchfield
+		dynasty ?= dynasty:dynn_Ferren
+		dynasty ?= dynasty:dynn_Payne
+		dynasty ?= dynasty:dynn_Holt
+		dynasty ?= dynasty:dynn_Mazin
+		dynasty ?= dynasty:dynn_Redding
+		dynasty ?= dynasty:dynn_Shett
+		dynasty ?= dynasty:dynn_Slynt
+	}
+	NOT = {
+		house ?= house:house_ShettGT
+	}
+}
+
+agot_pentos_braavos_treaty_character_trigger = {
+	has_character_modifier = agot_pentos_braavos_treaty
+}
+
+agot_believes_in_the_seven = {
+	faith = {
+		OR = {
+			has_doctrine = doctrine_pantheon_the_seven
+			has_doctrine = doctrine_pantheon_the_seven_old_gods
+			has_doctrine = doctrine_pantheon_the_seven_qarlon
+			has_doctrine = doctrine_pantheon_the_seven_baelor
+			has_doctrine = doctrine_pantheon_the_seven_drowned_god
+			has_doctrine = doctrine_pantheon_the_seven_valyrian
+		}
+	}
+}
+
+agot_can_afford_faceless_price = {
+	OR = {
+		agot_can_afford_faceless_gold_price = yes
+		agot_can_afford_faceless_child_price = yes
+		agot_can_afford_faceless_artifact_price = yes
+		agot_can_afford_faceless_blood_price = yes
+	}
+}
+
+agot_can_afford_faceless_gold_price = {
+	trigger_if = {
+		limit = {
+			NOT = { has_character_flag = faceless_payed_gold_price }
+		}
+		custom_tooltip = {
+			text = faceless_can_afford_gold_trigger_third
+			gold > 300
+		}
+	}
+	trigger_else = {
+		custom_tooltip = {
+			text = faceless_will_accept_gold_trigger_third
+			always = no
+		}
+	}
+}
+
+agot_can_afford_faceless_child_price = {
+	custom_tooltip = {
+		text = faceless_payed_child_price.tt
+		NOT = { has_character_flag = faceless_payed_child_price }
+	}
+	NOT = { has_character_flag = faceless_payed_child_price }
+	trigger_if = {
+		limit = {
+			any_child = {
+				count > 1
+			}
+			any_child = {
+				count <= 3
+			}
+		}
+
+		any_child = {
+			age <= 10
+			num_of_bad_genetic_traits = 0
+			OR = {
+				intrigue >= 5
+				martial >= 5
+			}
+		}
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+agot_can_afford_faceless_artifact_price = {
+	NOT = { has_character_flag = faceless_payed_artifact_price }
+	any_character_artifact = {
+		OR = {
+			has_variable = dragon_egg
+			has_variable = valyrian_steel
+			artifact_type = dragon_horn
+		}
+	}
+}
+
+agot_can_afford_faceless_blood_price = {
+	age < 50
+	NOR = {
+		has_trait = incapable
+		has_trait = depressed
+	}
+	num_of_bad_genetic_traits = 0
+}
+
+agot_pentos_braavos_treaty_prohibited_war_declaration_trigger = {
+	trigger_if = {
+		limit = {
+			exists = global_var:braavos_treaty
+			OR = {
+				$ACTOR$ = title:k_braavos.holder
+				$ACTOR$ = {
+					any_liege_or_above = {
+						this = title:k_braavos.holder
+					}
+				}
+			}
+		}
+		NOR = {
+			$RECIPIENT$ = title:k_pentos.holder
+			$RECIPIENT$ = {
+				any_liege_or_above = {
+					this = title:k_pentos.holder
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+﻿rf_sunset = {
+	graphical_faith = faith_of_the_seven_gfx
+	piety_icon_group = "christian"
+	hostility_doctrine = sunset_hostility_doctrine
+	doctrine_background_icon = core_tenet_banner_christian.dds
+}

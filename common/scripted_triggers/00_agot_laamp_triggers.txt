@@ -1,0 +1,10 @@
+﻿###########################
+### AGOT Laamp Triggers ###
+###########################
+
+#Checks if character is custom landless
+agot_is_landless_character = {
+	OR = {
+		agot_is_landless_nw_character = yes
+	}
+}

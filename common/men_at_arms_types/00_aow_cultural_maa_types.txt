@@ -1,0 +1,3664 @@
+# standard costs
+@maa_buy_cost = 150
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 5.0
+@cultural_maa_extra_ai_score = 80 # Equivalent to having 8 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+
+# Must be synced between files with the values located at "# Provisions Costs #".
+@provisions_cost_infantry_cheap = 3
+@provisions_cost_infantry_moderate = 7
+@provisions_cost_infantry_expensive = 12
+@provisions_cost_infantry_bankrupting = 15
+
+@provisions_cost_cavalry_cheap = 7
+@provisions_cost_cavalry_moderate = 15
+@provisions_cost_cavalry_expensive = 21
+@provisions_cost_cavalry_bankrupting = 30
+
+@provisions_cost_special_cheap = 6
+@provisions_cost_special_moderate = 12
+@provisions_cost_special_expensive = 18
+@provisions_cost_special_bankrupting = 24
+
+
+dragon_knights = {
+	type = heavy_cavalry
+
+	damage = 114
+	toughness = 38
+	pursuit = 28
+	screen = 10
+
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		farmlands = { pursuit = 10 }
+		majorroad_farmlands = { pursuit = 10 }
+		minorroad_farmlands = { pursuit = 10 }
+		plains = { pursuit = 10 }
+		majorroad_plains = { pursuit = 10 }
+		minorroad_plains = { pursuit = 10 }
+
+		highlands = { pursuit = 5 }
+		majorroad_highlands = { pursuit = 5 }
+		minorroad_highlands = { pursuit = 5 }
+
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+		steppe = { screen = -5 }
+		majorroad_steppe = { screen = -5 }
+		minorroad_steppe = { screen = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -20 pursuit = -20 }
+		majorroad_the_bog = { toughness = -20 pursuit = -20 }
+		minorroad_the_bog = { toughness = -20 pursuit = -20 }
+		desert = { screen = -10 }
+		majorroad_desert = { screen = -10 }
+		minorroad_desert = { screen = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { screen = -10 }
+		majorroad_drylands = { screen = -10 }
+		minorroad_drylands = { screen = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+		
+	counters = {
+		heavy_infantry = 1
+		skirmishers = 1
+		archers = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_dragon_knights }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = storm_knights_recruitment_cost }
+	low_maintenance_cost = { gold = storm_knights_low_maint_cost }
+	high_maintenance_cost = { gold = storm_knights_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_expensive
+
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = dragon_knights
+}
+
+dragon_bows = {
+	type = archers
+
+	damage = 46
+	toughness = 22
+	pursuit = 0
+	screen = 12
+
+	counters = {
+		heavy_cavalry = 1
+		heavy_infantry = 1
+	}
+
+	terrain_bonus = {
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		farmlands = { toughness = 10 }
+		majorroad_farmlands = { toughness = 10 }
+		minorroad_farmlands = { toughness = 10 }
+		plains = { toughness = 10 }
+		majorroad_plains = { toughness = 10 }
+		minorroad_plains = { toughness = 10 }
+
+		highlands = { toughness = 5 }
+		majorroad_highlands = { toughness = 5 }
+		minorroad_highlands = { toughness = 5 }
+
+		mountains = { toughness = -5 }
+		majorroad_mountains = { toughness = -5 }
+		minorroad_mountains = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga = { toughness = -5 }
+		majorroad_taiga = { toughness = -5 }
+		minorroad_taiga = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_dragon_bows }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = honeywine_quirrels_recruitment_cost }
+	low_maintenance_cost = { gold = honeywine_quirrels_low_maint_cost }
+	high_maintenance_cost = { gold = honeywine_quirrels_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = dragon_bows
+}
+
+dragon_scouts = {
+	type = light_cavalry
+	
+	damage = 30
+	toughness = 30
+	pursuit = 40
+	screen = 20
+	
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		farmlands = { pursuit = 10 }
+		majorroad_farmlands = { pursuit = 10 }
+		minorroad_farmlands = { pursuit = 10 }
+		plains = { pursuit = 10 }
+		majorroad_plains = { pursuit = 10 }
+		minorroad_plains = { pursuit = 10 }
+
+		highlands = { pursuit = 5 }
+		majorroad_highlands = { pursuit = 5 }
+		minorroad_highlands = { pursuit = 5 }
+
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+		steppe = { pursuit = -5 }
+		majorroad_steppe = { pursuit = -5 }
+		minorroad_steppe = { pursuit = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { pursuit = -5 }
+		majorroad_taiga_bog = { pursuit = -5 }
+		minorroad_taiga_bog = { pursuit = -5 }
+
+		the_bog = { pursuit = -10 }
+		majorroad_the_bog = { pursuit = -10 }
+		minorroad_the_bog = { pursuit = -10 }
+		desert = { pursuit = -10 }
+		majorroad_desert = { pursuit = -10 }
+		minorroad_desert = { pursuit = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { pursuit = -10 }
+		majorroad_drylands = { pursuit = -10 }
+		minorroad_drylands = { pursuit = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { pursuit = -10 }
+		majorroad_glacier = { pursuit = -10 }
+		minorroad_glacier = { pursuit = -10 }
+		frozen_flats = { pursuit = -10 }
+		majorroad_frozen_flats = { pursuit = -10 }
+		minorroad_frozen_flats = { pursuit = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+	
+	counters = {
+		archers = 1
+		skirmishers = 2
+		light_cavalry = 1
+	}
+	
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_dragon_scouts }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+	
+	buy_cost = { gold = light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+	
+	stack = 100
+	ai_quality = { value = culture_ai_weight_light_cavalry }
+	icon = dragon_scouts
+}
+
+dragon_spears = {
+	type = pikemen
+
+	damage = 22
+	toughness = 32
+	pursuit = 0
+	screen = 10
+
+	terrain_bonus = {
+		urban = { toughness = 10 }
+		majorroad_urban = { toughness = 10 }
+		minorroad_urban = { toughness = 10 }
+		forest = { screen = 10 }
+		majorroad_forest = { screen = 10 }
+		minorroad_forest = { screen = 10 }
+		plains = { screen = 10 }
+		majorroad_plains = { screen = 10 }
+		minorroad_plains = { screen = 10 }
+
+		taiga = { screen = 5 }
+		majorroad_taiga = { screen = 5 }
+		minorroad_taiga = { screen = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		mountains = { toughness = -5 }
+		majorroad_mountains = { toughness = -5 }
+		minorroad_mountains = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		steppe = { toughness = -10 }
+		majorroad_steppe = { toughness = -10 }
+		minorroad_steppe = { toughness = -10 }
+		taiga_bog = { toughness = -10 }
+		majorroad_taiga_bog = { toughness = -10 }
+		minorroad_taiga_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		heavy_cavalry = 2
+		camel_cavalry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_dragon_spears }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = stolen_spears_recruitment_cost }
+	low_maintenance_cost = { gold = stolen_spears_low_maint_cost }
+	high_maintenance_cost = { gold = stolen_spears_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = dragon_spears
+}
+
+iron_bows = {
+	type = archers
+
+	damage = 40
+	toughness = 24
+	pursuit = 10
+	screen = 6
+
+	counters = {
+		heavy_cavalry = 1
+		heavy_infantry = 1
+	}
+
+	terrain_bonus = {
+		urban = { toughness = 10 }
+		majorroad_urban = { toughness = 10 }
+		minorroad_urban = { toughness = 10 }
+		forest = { screen = 10 }
+		majorroad_forest = { screen = 10 }
+		minorroad_forest = { screen = 10 }
+		plains = { pursuit = 10 }
+		majorroad_plains = { pursuit = 10 }
+		minorroad_plains = { pursuit = 10 }
+
+		taiga = { screen = 5 }
+		majorroad_taiga = { screen = 5 }
+		minorroad_taiga = { screen = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		steppe = { toughness = -10 }
+		majorroad_steppe = { toughness = -10 }
+		minorroad_steppe = { toughness = -10 }
+		taiga_bog = { toughness = -10 }
+		majorroad_taiga_bog = { toughness = -10 }
+		minorroad_taiga_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 2 toughness = 2 }
+		harsh_winter = { damage = 4 toughness = 4 }
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_iron_bows }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = honeywine_quirrels_recruitment_cost }
+	low_maintenance_cost = { gold = honeywine_quirrels_low_maint_cost }
+	high_maintenance_cost = { gold = honeywine_quirrels_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = iron_bows
+}
+
+iron_pikes = {
+	type = pikemen
+
+	damage = 24
+	toughness = 30
+	pursuit = 0
+	screen = 10
+
+	terrain_bonus = {
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		urban = { toughness = 10 }
+		majorroad_urban = { toughness = 10 }
+		minorroad_urban = { toughness = 10 }
+
+		highlands = { toughness = 5 }
+		majorroad_highlands = { toughness = 5 }
+		minorroad_highlands = { toughness = 5 }
+
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga = { toughness = -5 }
+		majorroad_taiga = { toughness = -5 }
+		minorroad_taiga = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 2 toughness = 2 }
+		harsh_winter = { damage = 4 toughness = 4 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		heavy_cavalry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_iron_pikes }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = stolen_spears_recruitment_cost }
+	low_maintenance_cost = { gold = stolen_spears_low_maint_cost }
+	high_maintenance_cost = { gold = stolen_spears_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = iron_pikes
+}
+
+iron_riders = {
+	type = light_cavalry
+	
+	damage = 60
+	toughness = 30
+	pursuit = 30
+	screen = 20
+	
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		farmlands = { pursuit = 10 }
+		majorroad_farmlands = { pursuit = 10 }
+		minorroad_farmlands = { pursuit = 10 }
+		plains = { pursuit = 10 }
+		majorroad_plains = { pursuit = 10 }
+		minorroad_plains = { pursuit = 10 }
+
+		highlands = { pursuit = 5 }
+		majorroad_highlands = { pursuit = 5 }
+		minorroad_highlands = { pursuit = 5 }
+
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+		steppe = { pursuit = -5 }
+		majorroad_steppe = { pursuit = -5 }
+		minorroad_steppe = { pursuit = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { pursuit = -5 }
+		majorroad_taiga_bog = { pursuit = -5 }
+		minorroad_taiga_bog = { pursuit = -5 }
+
+		the_bog = { pursuit = -10 }
+		majorroad_the_bog = { pursuit = -10 }
+		minorroad_the_bog = { pursuit = -10 }
+		desert = { pursuit = -10 }
+		majorroad_desert = { pursuit = -10 }
+		minorroad_desert = { pursuit = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { pursuit = -10 }
+		majorroad_drylands = { pursuit = -10 }
+		minorroad_drylands = { pursuit = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { pursuit = -10 }
+		majorroad_glacier = { pursuit = -10 }
+		minorroad_glacier = { pursuit = -10 }
+		frozen_flats = { pursuit = -10 }
+		majorroad_frozen_flats = { pursuit = -10 }
+		minorroad_frozen_flats = { pursuit = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 2 toughness = 2 }
+		harsh_winter = { damage = 4 toughness = 4 }
+	}
+	
+	counters = {
+		archers = 1
+		skirmishers = 1
+		light_cavalry = 1
+	}
+	
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_iron_riders }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+	
+	stack = 50
+	ai_quality = { value = culture_ai_weight_light_cavalry }
+	icon = iron_riders
+}
+
+twins_guards = {
+	type = heavy_infantry
+
+	damage = 28
+	toughness = 32
+	pursuit = 0
+	screen = 12
+	
+	terrain_bonus = {
+		urban = { toughness = 10 }
+		majorroad_urban = { toughness = 10 }
+		minorroad_urban = { toughness = 10 }
+		forest = { screen = 10 }
+		majorroad_forest = { screen = 10 }
+		minorroad_forest = { screen = 10 }
+		plains = { screen = 10 }
+		majorroad_plains = { screen = 10 }
+		minorroad_plains = { screen = 10 }
+
+		taiga = { screen = 5 }
+		majorroad_taiga = { screen = 5 }
+		minorroad_taiga = { screen = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		mountains = { toughness = -5 }
+		majorroad_mountains = { toughness = -5 }
+		minorroad_mountains = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		steppe = { toughness = -10 }
+		majorroad_steppe = { toughness = -10 }
+		minorroad_steppe = { toughness = -10 }
+		taiga_bog = { toughness = -10 }
+		majorroad_taiga_bog = { toughness = -10 }
+		minorroad_taiga_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -2 toughness = -2 }
+		harsh_winter = { damage = -4 toughness = -4 }
+	}
+
+	counters = {
+		pikemen = 1
+		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_the_twins
+	}
+
+	buy_cost = { gold = dragonkeepers_recruitment_cost }
+	low_maintenance_cost = { gold = dragonkeepers_low_maint_cost }
+	high_maintenance_cost = { gold = dragonkeepers_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = twins_guards
+}
+
+winter_knights = {
+	type = heavy_cavalry
+
+	damage = 106
+	toughness = 36
+	pursuit = 20
+	screen = 10
+
+	terrain_bonus = {
+		steppe = { pursuit = 10 }
+		majorroad_steppe = { pursuit = 10 }
+		minorroad_steppe = { pursuit = 10 }
+		taiga = { screen = 10 }
+		majorroad_taiga = { screen = 10 }
+		minorroad_taiga = { screen = 10 }
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+
+		forest = { screen = 5 }
+		majorroad_forest = { screen = 5 }
+		minorroad_forest = { screen = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		oasis = { toughness = -5 }
+		majorroad_oasis = { toughness = -5 }
+		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { pursuit = -5 }
+		majorroad_desert_mountains = { pursuit = -5 }
+		minorroad_desert_mountains = { pursuit = -5 }
+		glacier = { toughness = -5 }
+		majorroad_glacier = { toughness = -5 }
+		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
+		majorroad_frozen_flats = { toughness = -5 }
+		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+	}
+
+	counters = {
+		heavy_infantry = 1
+		skirmishers = 1
+		archers = 1
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 8 toughness = 8 }
+		harsh_winter = { damage = 4 toughness = 4 }
+	}
+
+	can_recruit = {
+		has_title = title:b_winterfell
+	}
+
+	buy_cost = { gold = storm_knights_recruitment_cost }
+	low_maintenance_cost = { gold = storm_knights_low_maint_cost }
+	high_maintenance_cost = { gold = storm_knights_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_expensive
+
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = winter_knights
+}
+
+winter_guards = {
+	type = heavy_infantry
+
+	damage = 32
+	toughness = 32
+	pursuit = 0
+	screen = 12
+	
+	terrain_bonus = {
+		steppe = { toughness = 10 }
+		majorroad_steppe = { toughness = 10 }
+		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
+		majorroad_taiga = { toughness = 10 }
+		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
+		majorroad_taiga_bog = { toughness = 10 }
+		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
+		majorroad_wetlands = { toughness = 5 }
+		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
+		majorroad_cloudforest = { toughness = 5 }
+		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
+		majorroad_oasis = { toughness = -5 }
+		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		glacier = { toughness = -5 }
+		majorroad_glacier = { toughness = -5 }
+		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
+		majorroad_frozen_flats = { toughness = -5 }
+		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 8 toughness = 8 }
+		harsh_winter = { damage = 4 toughness = 4 }
+	}
+
+	counters = {
+		pikemen = 1
+		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_winterfell
+	}
+
+	buy_cost = { gold = dragonkeepers_recruitment_cost }
+	low_maintenance_cost = { gold = dragonkeepers_low_maint_cost }
+	high_maintenance_cost = { gold = dragonkeepers_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = winter_guards
+}
+
+dread_spears = {
+	type = pikemen
+
+	damage = 22
+	toughness = 28
+	pursuit = 0
+	screen = 10
+
+	terrain_bonus = {
+		steppe = { toughness = 10 }
+		majorroad_steppe = { toughness = 10 }
+		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
+		majorroad_taiga = { toughness = 10 }
+		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
+		majorroad_taiga_bog = { toughness = 10 }
+		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
+		majorroad_wetlands = { toughness = 5 }
+		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
+		majorroad_cloudforest = { toughness = 5 }
+		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
+		majorroad_oasis = { toughness = -5 }
+		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		glacier = { toughness = -5 }
+		majorroad_glacier = { toughness = -5 }
+		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
+		majorroad_frozen_flats = { toughness = -5 }
+		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 8 toughness = 8 }
+		harsh_winter = { damage = 4 toughness = 4 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		heavy_cavalry = 1
+		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_the_dreadfort
+	}
+
+	buy_cost = { gold = stolen_spears_recruitment_cost }
+	low_maintenance_cost = { gold = stolen_spears_low_maint_cost }
+	high_maintenance_cost = { gold = stolen_spears_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = dread_spears
+}
+
+vale_guards = {
+	type = heavy_infantry
+
+	damage = 32
+	toughness = 34
+	pursuit = 0
+	screen = 12
+	
+	terrain_bonus = {
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		farmlands = { toughness = 10 }
+		majorroad_farmlands = { toughness = 10 }
+		minorroad_farmlands = { toughness = 10 }
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		highlands = { toughness = 5 }
+		majorroad_highlands = { toughness = 5 }
+		minorroad_highlands	 = { toughness = 5 }
+
+		glacier = { toughness = -5 }
+		majorroad_glacier = { toughness = -5 }
+		minorroad_glacier = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		steppe = { toughness = -10 }
+		majorroad_steppe = { toughness = -10 }
+		minorroad_steppe = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 4 toughness = 4 }
+		harsh_winter = { damage = 2 toughness = 2 }
+	}	
+
+	counters = {
+		pikemen = 1.5
+		heavy_infantry = 1.5
+	}
+
+	can_recruit = {
+		has_title = title:b_the_bloody_gate
+	}
+
+	buy_cost = { gold = dragonkeepers_recruitment_cost }
+	low_maintenance_cost = { gold = dragonkeepers_low_maint_cost }
+	high_maintenance_cost = { gold = dragonkeepers_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = vale_guards
+}
+
+vale_archers = {
+	type = archers
+
+	damage = 38
+	toughness = 22
+	pursuit = 0
+	screen = 10
+
+	counters = {
+		heavy_infantry = 1
+		pikemen = 1
+		archers = 1
+	}
+
+	terrain_bonus = {
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		farmlands = { toughness = 10 }
+		majorroad_farmlands = { toughness = 10 }
+		minorroad_farmlands = { toughness = 10 }
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		highlands = { toughness = 5 }
+		majorroad_highlands = { toughness = 5 }
+		minorroad_highlands	 = { toughness = 5 }
+
+		glacier = { toughness = -5 }
+		majorroad_glacier = { toughness = -5 }
+		minorroad_glacier = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		steppe = { toughness = -10 }
+		majorroad_steppe = { toughness = -10 }
+		minorroad_steppe = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 4 toughness = 4 }
+		harsh_winter = { damage = 2 toughness = 2 }
+	}	
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_vale_archers }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = honeywine_quirrels_recruitment_cost }
+	low_maintenance_cost = { gold = honeywine_quirrels_low_maint_cost }
+	high_maintenance_cost = { gold = honeywine_quirrels_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = vale_archers
+}
+
+vale_pikes = {
+	type = pikemen
+
+	damage = 20
+	toughness = 30
+	pursuit = 0
+	screen = 10
+
+	terrain_bonus = {
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		farmlands = { toughness = 10 }
+		majorroad_farmlands = { toughness = 10 }
+		minorroad_farmlands = { toughness = 10 }
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		highlands = { toughness = 5 }
+		majorroad_highlands = { toughness = 5 }
+		minorroad_highlands	 = { toughness = 5 }
+
+		glacier = { toughness = -5 }
+		majorroad_glacier = { toughness = -5 }
+		minorroad_glacier = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		steppe = { toughness = -10 }
+		majorroad_steppe = { toughness = -10 }
+		minorroad_steppe = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 4 toughness = 4 }
+		harsh_winter = { damage = 2 toughness = 2 }
+	}	
+
+	counters = {
+		light_cavalry = 1
+		heavy_cavalry = 2
+		camel_cavalry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_vale_pikes }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = stolen_spears_recruitment_cost }
+	low_maintenance_cost = { gold = stolen_spears_low_maint_cost }
+	high_maintenance_cost = { gold = stolen_spears_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = vale_pikes
+}
+
+vale_knights = {
+	type = heavy_cavalry
+
+	damage = 118
+	toughness = 40
+	pursuit = 24
+	screen = 10
+
+	terrain_bonus = {
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		farmlands = { pursuit = 10 }
+		majorroad_farmlands = { pursuit = 10 }
+		minorroad_farmlands = { pursuit = 10 }
+
+		forest = { screen = 5 }
+		majorroad_forest = { screen = 5 }
+		minorroad_forest = { screen = 5 }
+		highlands = { pursuit = 5 }
+		majorroad_highlands = { pursuit = 5 }
+		minorroad_highlands = { pursuit = 5 }
+
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+		glacier = { toughness = -5 }
+		majorroad_glacier = { toughness = -5 }
+		minorroad_glacier = { toughness = -5 }
+
+		the_bog = { toughness = -20 pursuit = -20 }
+		majorroad_the_bog = { toughness = -20 pursuit = -20 }
+		minorroad_the_bog = { toughness = -20 pursuit = -20 }
+		desert = { screen = -10 }
+		majorroad_desert = { screen = -10 }
+		minorroad_desert = { screen = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { screen = -10 }
+		majorroad_drylands = { screen = -10 }
+		minorroad_drylands = { screen = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		steppe = { screen = -10 }
+		majorroad_steppe = { screen = -10 }
+		minorroad_steppe = { screen = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 4 toughness = 4 }
+		harsh_winter = { damage = 2 toughness = 2 }
+	}	
+
+	counters = {
+		heavy_infantry = 1
+		skirmishers = 1
+		archers = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_vale_knights }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = winged_knights_recruitment_cost }
+	low_maintenance_cost = { gold = winged_knights_low_maint_cost }
+	high_maintenance_cost = { gold = winged_knights_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_expensive
+
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = vale_knights
+}
+
+vale_footmen = {
+	type = heavy_infantry
+
+	damage = 30
+	toughness = 30
+	pursuit = 10
+	screen = 0
+	
+	terrain_bonus = {
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		farmlands = { toughness = 10 }
+		majorroad_farmlands = { toughness = 10 }
+		minorroad_farmlands = { toughness = 10 }
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		highlands = { toughness = 5 }
+		majorroad_highlands = { toughness = 5 }
+		minorroad_highlands	 = { toughness = 5 }
+
+		glacier = { toughness = -5 }
+		majorroad_glacier = { toughness = -5 }
+		minorroad_glacier = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		steppe = { toughness = -10 }
+		majorroad_steppe = { toughness = -10 }
+		minorroad_steppe = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 4 toughness = 4 }
+		harsh_winter = { damage = 2 toughness = 2 }
+	}	
+
+	counters = {
+		pikemen = 1
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_vale_footmen }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = winter_wolves_recruitment_cost }
+	low_maintenance_cost = { gold = winter_wolves_low_maint_cost }
+	high_maintenance_cost = { gold = winter_wolves_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = vale_footmen
+}
+
+raventree_bows = {
+	type = archers
+
+	damage = 40
+	toughness = 20
+	pursuit = 10
+	screen = 10
+
+	terrain_bonus = {
+		wetlands = { pursuit = 10 }
+		majorroad_wetlands = { pursuit = 10 }
+		minorroad_wetlands = { pursuit = 10 }
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		floodplains = { pursuit = 10 }
+		majorroad_floodplains = { pursuit = 10 }
+		minorroad_floodplains = { pursuit = 10 }
+		highlands = { pursuit = 10 }
+		majorroad_highlands = { pursuit = 10 }
+		minorroad_highlands = { pursuit = 10 }
+		forest = { screen = 10 }
+		majorroad_forest = { screen = 10 }
+		minorroad_forest = { screen = 10 }
+
+		taiga = { screen = 5 }
+		majorroad_taiga = { screen = 5 }
+		minorroad_taiga = { screen = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		mountains = { toughness = -5 }
+		majorroad_mountains = { toughness = -5 }
+		minorroad_mountains = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -2 toughness = -2 }
+		harsh_winter = { damage = -4 toughness = -4 }
+	}	
+
+	counters = { 
+		heavy_infantry = 1
+		heavy_cavalry = 1
+		archers = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_raventree_hall
+	}
+
+	buy_cost = { gold = river_bows_recruitment_cost }
+	low_maintenance_cost = { gold = river_bows_low_maint_cost }
+	high_maintenance_cost = { gold = river_bows_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = raventree_bows
+}
+
+river_footmen = {
+	type = heavy_infantry
+
+	damage = 32
+	toughness = 26
+	pursuit = 12
+	screen = 0
+	
+	terrain_bonus = {
+		wetlands = { pursuit = 10 }
+		majorroad_wetlands = { pursuit = 10 }
+		minorroad_wetlands = { pursuit = 10 }
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		floodplains = { pursuit = 10 }
+		majorroad_floodplains = { pursuit = 10 }
+		minorroad_floodplains = { pursuit = 10 }
+		highlands = { pursuit = 10 }
+		majorroad_highlands = { pursuit = 10 }
+		minorroad_highlands = { pursuit = 10 }
+		forest = { screen = 10 }
+		majorroad_forest = { screen = 10 }
+		minorroad_forest = { screen = 10 }
+
+		taiga = { screen = 5 }
+		majorroad_taiga = { screen = 5 }
+		minorroad_taiga = { screen = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		mountains = { toughness = -5 }
+		majorroad_mountains = { toughness = -5 }
+		minorroad_mountains = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -2 toughness = -2 }
+		harsh_winter = { damage = -4 toughness = -4 }
+	}	
+
+	counters = {
+		skirmishers = 1
+		pikemen = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_river_footmen }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = winter_wolves_recruitment_cost }
+	low_maintenance_cost = { gold = winter_wolves_low_maint_cost }
+	high_maintenance_cost = { gold = winter_wolves_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = river_footmen
+}
+
+stone_hedge_footmen = {
+	type = heavy_infantry
+
+	damage = 32
+	toughness = 28
+	pursuit = 8
+	screen = 12
+	
+	terrain_bonus = {
+		wetlands = { pursuit = 10 }
+		majorroad_wetlands = { pursuit = 10 }
+		minorroad_wetlands = { pursuit = 10 }
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		floodplains = { pursuit = 10 }
+		majorroad_floodplains = { pursuit = 10 }
+		minorroad_floodplains = { pursuit = 10 }
+		highlands = { pursuit = 10 }
+		majorroad_highlands = { pursuit = 10 }
+		minorroad_highlands = { pursuit = 10 }
+		forest = { screen = 10 }
+		majorroad_forest = { screen = 10 }
+		minorroad_forest = { screen = 10 }
+
+		taiga = { screen = 5 }
+		majorroad_taiga = { screen = 5 }
+		minorroad_taiga = { screen = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		mountains = { toughness = -5 }
+		majorroad_mountains = { toughness = -5 }
+		minorroad_mountains = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -2 toughness = -2 }
+		harsh_winter = { damage = -4 toughness = -4 }
+	}	
+
+	counters = {
+		heavy_infantry = 1
+		pikemen = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_stone_hedge
+	}
+
+	buy_cost = { gold = winter_wolves_recruitment_cost }
+	low_maintenance_cost = { gold = winter_wolves_low_maint_cost }
+	high_maintenance_cost = { gold = winter_wolves_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = stone_hedge_footmen
+}
+
+river_scouts = {
+	type = light_cavalry
+
+	damage = 20
+	toughness = 20
+	pursuit = 30
+	screen = 30
+
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		farmlands = { pursuit = 10 }
+		majorroad_farmlands = { pursuit = 10 }
+		minorroad_farmlands = { pursuit = 10 }
+		plains = { pursuit = 10 }
+		majorroad_plains = { pursuit = 10 }
+		minorroad_plains = { pursuit = 10 }
+
+		highlands = { pursuit = 5 }
+		majorroad_highlands = { pursuit = 5 }
+		minorroad_highlands = { pursuit = 5 }
+
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+		steppe = { pursuit = -5 }
+		majorroad_steppe = { pursuit = -5 }
+		minorroad_steppe = { pursuit = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { pursuit = -5 }
+		majorroad_taiga_bog = { pursuit = -5 }
+		minorroad_taiga_bog = { pursuit = -5 }
+
+		the_bog = { pursuit = -10 }
+		majorroad_the_bog = { pursuit = -10 }
+		minorroad_the_bog = { pursuit = -10 }
+		desert = { pursuit = -10 }
+		majorroad_desert = { pursuit = -10 }
+		minorroad_desert = { pursuit = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { pursuit = -10 }
+		majorroad_drylands = { pursuit = -10 }
+		minorroad_drylands = { pursuit = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { pursuit = -10 }
+		majorroad_glacier = { pursuit = -10 }
+		minorroad_glacier = { pursuit = -10 }
+		frozen_flats = { pursuit = -10 }
+		majorroad_frozen_flats = { pursuit = -10 }
+		minorroad_frozen_flats = { pursuit = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = { 
+		archers = 1 
+		skirmishers = 2
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_river_scouts }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = river_scouts
+}
+
+westerland_billmen = {
+	type = pikemen
+
+	damage = 24
+	toughness = 26
+	pursuit = 0
+	screen = 0
+
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		highlands = { pursuit = 10 }
+		majorroad_highlands = { pursuit = 10 }
+		minorroad_highlands = { pursuit = 10 }
+		forest = { pursuit = 10 }
+		majorroad_forest = { pursuit = 10 }
+		minorroad_forest = { pursuit = 10 }
+
+		mountains = { pursuit = 5 }
+		majorroad_mountains = { pursuit = 5 }
+		minorroad_mountains = { pursuit = 5 }
+		cloudforest = { pursuit = 5 }
+		majorroad_cloudforest = { pursuit = 5 }
+		minorroad_cloudforest = { pursuit = 5 }
+
+		steppe = { pursuit = -5 }
+		majorroad_steppe = { pursuit = -5 }
+		minorroad_steppe = { pursuit = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { pursuit = -5 }
+		majorroad_taiga_bog = { pursuit = -5 }
+		minorroad_taiga_bog = { pursuit = -5 }
+
+		the_bog = { pursuit = -10 }
+		majorroad_the_bog = { pursuit = -10 }
+		minorroad_the_bog = { pursuit = -10 }
+		desert = { pursuit = -10 }
+		majorroad_desert = { pursuit = -10 }
+		minorroad_desert = { pursuit = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { pursuit = -10 }
+		majorroad_drylands = { pursuit = -10 }
+		minorroad_drylands = { pursuit = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { pursuit = -10 }
+		majorroad_glacier = { pursuit = -10 }
+		minorroad_glacier = { pursuit = -10 }
+		frozen_flats = { pursuit = -10 }
+		majorroad_frozen_flats = { pursuit = -10 }
+		minorroad_frozen_flats = { pursuit = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		heavy_cavalry = 2
+		camel_cavalry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_westerland_billmen }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = stolen_spears_recruitment_cost }
+	low_maintenance_cost = { gold = stolen_spears_low_maint_cost }
+	high_maintenance_cost = { gold = stolen_spears_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = westerland_billmen
+}
+
+westerland_footmen = {
+	type = heavy_infantry
+
+	damage = 30
+	toughness = 32
+	pursuit = 0
+	screen = 12
+	
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		highlands = { pursuit = 10 }
+		majorroad_highlands = { pursuit = 10 }
+		minorroad_highlands = { pursuit = 10 }
+		forest = { pursuit = 10 }
+		majorroad_forest = { pursuit = 10 }
+		minorroad_forest = { pursuit = 10 }
+
+		mountains = { pursuit = 5 }
+		majorroad_mountains = { pursuit = 5 }
+		minorroad_mountains = { pursuit = 5 }
+		cloudforest = { pursuit = 5 }
+		majorroad_cloudforest = { pursuit = 5 }
+		minorroad_cloudforest = { pursuit = 5 }
+
+		steppe = { pursuit = -5 }
+		majorroad_steppe = { pursuit = -5 }
+		minorroad_steppe = { pursuit = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { pursuit = -5 }
+		majorroad_taiga_bog = { pursuit = -5 }
+		minorroad_taiga_bog = { pursuit = -5 }
+
+		the_bog = { pursuit = -10 }
+		majorroad_the_bog = { pursuit = -10 }
+		minorroad_the_bog = { pursuit = -10 }
+		desert = { pursuit = -10 }
+		majorroad_desert = { pursuit = -10 }
+		minorroad_desert = { pursuit = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { pursuit = -10 }
+		majorroad_drylands = { pursuit = -10 }
+		minorroad_drylands = { pursuit = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { pursuit = -10 }
+		majorroad_glacier = { pursuit = -10 }
+		minorroad_glacier = { pursuit = -10 }
+		frozen_flats = { pursuit = -10 }
+		majorroad_frozen_flats = { pursuit = -10 }
+		minorroad_frozen_flats = { pursuit = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		heavy_infantry = 1
+		pikemen = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_westerland_footmen }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = winter_wolves_recruitment_cost }
+	low_maintenance_cost = { gold = winter_wolves_low_maint_cost }
+	high_maintenance_cost = { gold = winter_wolves_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = westerland_footmen
+}
+
+westerland_knights = {
+	type = heavy_cavalry
+
+	damage = 110
+	toughness = 32
+	pursuit = 20
+	screen = 0
+
+	terrain_bonus = {
+		hills = { damage = 10 }
+		majorroad_hills = { damage = 10 }
+		minorroad_hills = { damage = 10 }
+		highlands = { damage = 10 }
+		majorroad_highlands = { damage = 10 }
+		minorroad_highlands = { damage = 10 }
+		forest = { screen = 10 }
+		majorroad_forest = { screen = 10 }
+		minorroad_forest = { screen = 10 }
+
+		mountains = { damage = 5 }
+		majorroad_mountains = { damage = 5 }
+		minorroad_mountains = { damage = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		steppe = { damage = -5 }
+		majorroad_steppe = { damage = -5 }
+		minorroad_steppe = { damage = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { pursuit = -5 }
+		majorroad_taiga_bog = { pursuit = -5 }
+		minorroad_taiga_bog = { pursuit = -5 }
+		desert_mountains = { damage = -5 }
+		majorroad_desert_mountains = { damage = -5 }
+		minorroad_desert_mountains = { damage = -5 }
+
+		the_bog = { pursuit = -20 toughness = -20 }
+		majorroad_the_bog = { pursuit = -20 toughness = -20 }
+		minorroad_the_bog = { pursuit = -20 toughness = -20 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}	
+
+	counters = {
+		heavy_infantry = 1
+		skirmishers = 1
+		archers = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_westerland_knights }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = summer_knights_recruitment_cost }
+	low_maintenance_cost = { gold = summer_knights_low_maint_cost }
+	high_maintenance_cost = { gold = summer_knights_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_expensive
+
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = lion_knights
+}
+
+castelry_rock_knights = {
+	type = heavy_cavalry
+
+	damage = 120
+	toughness = 40
+	pursuit = 18
+	screen = 12
+
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}	
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}	
+
+	counters = {
+		heavy_infantry = 1
+		light_cavalry = 2
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_casterly_rock
+	}
+
+	buy_cost = { gold = summer_knights_recruitment_cost }
+	low_maintenance_cost = { gold = summer_knights_low_maint_cost }
+	high_maintenance_cost = { gold = summer_knights_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_expensive
+
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = castelry_rock_knights
+}
+
+clegane_footmen = {
+	type = heavy_infantry
+
+	damage = 36
+	toughness = 26
+	pursuit = 14
+	screen = 0
+	
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		highlands = { pursuit = 10 }
+		majorroad_highlands = { pursuit = 10 }
+		minorroad_highlands = { pursuit = 10 }
+		forest = { pursuit = 10 }
+		majorroad_forest = { pursuit = 10 }
+		minorroad_forest = { pursuit = 10 }
+
+		mountains = { pursuit = 5 }
+		majorroad_mountains = { pursuit = 5 }
+		minorroad_mountains = { pursuit = 5 }
+		cloudforest = { pursuit = 5 }
+		majorroad_cloudforest = { pursuit = 5 }
+		minorroad_cloudforest = { pursuit = 5 }
+
+		steppe = { pursuit = -5 }
+		majorroad_steppe = { pursuit = -5 }
+		minorroad_steppe = { pursuit = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { pursuit = -5 }
+		majorroad_taiga_bog = { pursuit = -5 }
+		minorroad_taiga_bog = { pursuit = -5 }
+
+		the_bog = { pursuit = -10 }
+		majorroad_the_bog = { pursuit = -10 }
+		minorroad_the_bog = { pursuit = -10 }
+		desert = { pursuit = -10 }
+		majorroad_desert = { pursuit = -10 }
+		minorroad_desert = { pursuit = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { pursuit = -10 }
+		majorroad_drylands = { pursuit = -10 }
+		minorroad_drylands = { pursuit = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { pursuit = -10 }
+		majorroad_glacier = { pursuit = -10 }
+		minorroad_glacier = { pursuit = -10 }
+		frozen_flats = { pursuit = -10 }
+		majorroad_frozen_flats = { pursuit = -10 }
+		minorroad_frozen_flats = { pursuit = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		heavy_infantry = 1
+		pikemen = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_cleganes_keep
+	}
+
+	buy_cost = { gold = winter_wolves_recruitment_cost }
+	low_maintenance_cost = { gold = winter_wolves_low_maint_cost }
+	high_maintenance_cost = { gold = winter_wolves_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = clegane_footmen
+}
+
+storm_footmen = {
+	type = heavy_infantry
+
+	damage = 32
+	toughness = 32
+	pursuit = 0
+	screen = 12
+	
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		pikemen = 2
+		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_storm_footmen }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = winter_wolves_recruitment_cost }
+	low_maintenance_cost = { gold = winter_wolves_low_maint_cost }
+	high_maintenance_cost = { gold = winter_wolves_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = storm_footmen
+}
+
+storm_pikes = {
+	type = pikemen
+
+	damage = 22
+	toughness = 28
+	pursuit = 0
+	screen = 10
+
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		heavy_cavalry = 2
+		camel_cavalry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_storm_pikes }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = stolen_spears_recruitment_cost }
+	low_maintenance_cost = { gold = stolen_spears_low_maint_cost }
+	high_maintenance_cost = { gold = stolen_spears_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = storm_pikes
+}
+
+storm_bows = {
+	type = archers
+
+	damage = 40
+	toughness = 20
+	pursuit = 10
+	screen = 0
+
+	counters = {
+		heavy_cavalry = 1
+		heavy_infantry = 1
+	}
+
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = 2 toughness = 2 }
+		harsh_winter = { damage = 4 toughness = 4 }
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_storm_bows }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = honeywine_quirrels_recruitment_cost }
+	low_maintenance_cost = { gold = honeywine_quirrels_low_maint_cost }
+	high_maintenance_cost = { gold = honeywine_quirrels_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = storm_bows
+}
+
+rainwood_hunters = {
+	type = skirmishers
+
+	damage = 22
+	toughness = 24
+	pursuit = 24
+	screen = 10
+
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = { 
+		heavy_infantry = 1
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		OR = { 
+			has_title = title:b_rain_house
+			has_title = title:b_ironrod
+			has_title = title:b_greenstone
+			has_title = title:b_bluegrove
+			has_title = title:b_amberly
+			has_title = title:b_castle_corwin
+			has_title = title:b_paintwood
+			has_title = title:b_mintspoon
+			has_title = title:b_rains_neck_keep
+			has_title = title:b_swullock
+			has_title = title:b_tower_of_owls
+			has_title = title:b_white_owls_hallow
+			has_title = title:b_whitehead_watch
+			has_title = title:b_wailingkeep
+			has_title = title:b_bronzeaxe
+			has_title = title:b_armigan
+			has_title = title:b_seahold
+			has_title = title:b_woodhall
+		}
+	}
+
+	buy_cost = { gold = arbor_marines_recruitment_cost }
+	low_maintenance_cost = { gold = arbor_marines_low_maint_cost }
+	high_maintenance_cost = { gold = arbor_marines_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = rainwood_hunters
+}
+
+marcher_footmen = {
+	type = heavy_infantry
+
+	damage = 32
+	toughness = 34
+	pursuit = 10
+	screen = 0
+	
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		pikemen = 2
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		OR = { 
+			has_title = title:b_stonehelm
+			has_title = title:b_blackneck
+			has_title = title:b_lonmouth_hall
+			has_title = title:b_lontower
+			has_title = title:b_swellcrest
+			has_title = title:b_bayfall
+			has_title = title:b_blackhaven
+			has_title = title:b_bonewatch
+			has_title = title:b_forkbolt
+			has_title = title:b_deadmere
+			has_title = title:b_raven_rock
+			has_title = title:b_maids_scar
+			has_title = title:b_castle_greyhawk
+			has_title = title:b_kinehold
+			has_title = title:b_hobbtower
+			has_title = title:b_filch_march
+			has_title = title:b_harvest_hall
+			has_title = title:b_boldingfield
+			has_title = title:b_deaths_head
+			has_title = title:b_hawkmoth
+			has_title = title:b_ressview
+			has_title = title:b_shaker_hold
+			has_title = title:b_fieldmont
+			has_title = title:b_spikelet
+			has_title = title:b_nightsong
+			has_title = title:b_melody
+			has_title = title:b_sour_hill
+			has_title = title:b_nailstone
+			has_title = title:b_kingfeast
+			has_title = title:b_thrushcastle
+			has_title = title:b_sparenote
+			has_title = title:b_dead_rise_keep
+		}
+	}
+
+	buy_cost = { gold = winter_wolves_recruitment_cost }
+	low_maintenance_cost = { gold = winter_wolves_low_maint_cost }
+	high_maintenance_cost = { gold = winter_wolves_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = marcher_footmen
+}
+
+storm_wardens = {
+	type = heavy_infantry
+
+	damage = 36
+	toughness = 34
+	pursuit = 0
+	screen = 10
+	
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		heavy_infantry = 2
+		pikemen = 2
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_storms_end
+	}
+
+	buy_cost = { gold = dragonkeepers_recruitment_cost }
+	low_maintenance_cost = { gold = dragonkeepers_low_maint_cost }
+	high_maintenance_cost = { gold = dragonkeepers_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = storm_wardens
+}
+
+reach_marcher = {
+	type = heavy_infantry
+
+	damage = 34
+	toughness = 32
+	pursuit = 10
+	screen = 0
+	
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		pikemen = 2
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		OR = { 
+			has_title = title:b_starpike
+			has_title = title:b_marchrise
+			has_title = title:b_rutmark
+			has_title = title:b_torrentpeak
+			has_title = title:b_ant_hill
+			has_title = title:b_marchyng
+			has_title = title:b_leygood_keep
+			has_title = title:b_bellcross_hill
+			has_title = title:b_swellwood
+			has_title = title:b_strikes_roll
+			has_title = title:b_sunnypoint
+			has_title = title:b_castle_dywell
+			has_title = title:b_grandmercy
+			has_title = title:b_fieldcrest
+			has_title = title:b_glebecastle
+			has_title = title:b_archers_head
+			has_title = title:b_horn_hill
+			has_title = title:b_stride
+			has_title = title:b_mount_ambit
+			has_title = title:b_bowmans_keep
+			has_title = title:b_cornerstone
+			has_title = title:b_westmore
+			has_title = title:b_castle_russeting
+			has_title = title:b_sidestone
+			has_title = title:b_cresthaven
+			has_title = title:b_vernpeaks
+			has_title = title:b_twin_eagles
+			has_title = title:b_grennwhyte
+			has_title = title:b_blind_nest
+			has_title = title:b_sunwatch
+			has_title = title:b_covennes_hollow
+		}
+	}
+
+	buy_cost = { gold = winter_wolves_recruitment_cost }
+	low_maintenance_cost = { gold = winter_wolves_low_maint_cost }
+	high_maintenance_cost = { gold = winter_wolves_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = reach_marcher
+}
+
+highgarden_knights = {
+	type = heavy_cavalry
+
+	damage = 120
+	toughness = 38
+	pursuit = 22
+	screen = 10
+
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		farmlands = { pursuit = 10 }
+		majorroad_farmlands = { pursuit = 10 }
+		minorroad_farmlands = { pursuit = 10 }
+		plains = { pursuit = 10 }
+		majorroad_plains = { pursuit = 10 }
+		minorroad_plains = { pursuit = 10 }
+
+		highlands = { pursuit = 5 }
+		majorroad_highlands = { pursuit = 5 }
+		minorroad_highlands = { pursuit = 5 }
+
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+		steppe = { screen = -5 }
+		majorroad_steppe = { screen = -5 }
+		minorroad_steppe = { screen = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -20 pursuit = -20 }
+		majorroad_the_bog = { toughness = -20 pursuit = -20 }
+		minorroad_the_bog = { toughness = -20 pursuit = -20 }
+		desert = { screen = -10 }
+		majorroad_desert = { screen = -10 }
+		minorroad_desert = { screen = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { screen = -10 }
+		majorroad_drylands = { screen = -10 }
+		minorroad_drylands = { screen = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}	
+
+	counters = {
+		heavy_infantry = 1
+		heavy_cavalry = 1
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_highgarden
+	}
+
+	buy_cost = { gold = summer_knights_recruitment_cost }
+	low_maintenance_cost = { gold = summer_knights_low_maint_cost }
+	high_maintenance_cost = { gold = summer_knights_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_expensive
+
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = highgarden_knights
+}
+
+reach_pikes = {
+	type = pikemen
+
+	damage = 20
+	toughness = 32
+	pursuit = 0
+	screen = 8
+
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		light_cavalry = 2
+		heavy_cavalry = 1
+		camel_cavalry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_reach_pikes }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = stolen_spears_recruitment_cost }
+	low_maintenance_cost = { gold = stolen_spears_low_maint_cost }
+	high_maintenance_cost = { gold = stolen_spears_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = reach_pikes
+}
+
+reach_swords = {
+	type = heavy_infantry
+
+	damage = 32
+	toughness = 32
+	pursuit = 6
+	screen = 6
+	
+	terrain_bonus = {
+		cloudforest = { damage = 10 }
+		majorroad_cloudforest = { damage = 10 }
+		minorroad_cloudforest = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { damage = 5 }
+		majorroad_forest = { damage = 5 }
+		minorroad_forest = { damage = 5 }
+		taiga = { damage = 5 }
+		majorroad_taiga = { damage = 5 }
+		minorroad_taiga = { damage = 5 }
+		wetlands = { damage = 5 }
+		majorroad_wetlands = { damage = 5 }
+		minorroad_wetlands = { damage = 5 }
+
+		desert = { toughness = -5 }
+		majorroad_desert = { toughness = -5 }
+		minorroad_desert = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+		drylands = { toughness = -5 }
+		majorroad_drylands = { toughness = -5 }
+		minorroad_drylands = { toughness = -5 }
+		canyon = { toughness = -5 }
+		majorroad_canyon = { toughness = -5 }
+		minorroad_canyon = { toughness = -5 }
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+
+	counters = {
+		pikemen = 2
+		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_reach_swords }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = dragonkeepers_recruitment_cost }
+	low_maintenance_cost = { gold = dragonkeepers_low_maint_cost }
+	high_maintenance_cost = { gold = dragonkeepers_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = reach_swords
+}
+
+reach_scouts = {
+	type = light_cavalry
+	
+	damage = 30
+	toughness = 30
+	pursuit = 30
+	screen = 30
+	
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		farmlands = { pursuit = 10 }
+		majorroad_farmlands = { pursuit = 10 }
+		minorroad_farmlands = { pursuit = 10 }
+		plains = { pursuit = 10 }
+		majorroad_plains = { pursuit = 10 }
+		minorroad_plains = { pursuit = 10 }
+
+		highlands = { pursuit = 5 }
+		majorroad_highlands = { pursuit = 5 }
+		minorroad_highlands = { pursuit = 5 }
+
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+		steppe = { pursuit = -5 }
+		majorroad_steppe = { pursuit = -5 }
+		minorroad_steppe = { pursuit = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { pursuit = -5 }
+		majorroad_taiga_bog = { pursuit = -5 }
+		minorroad_taiga_bog = { pursuit = -5 }
+
+		the_bog = { pursuit = -10 }
+		majorroad_the_bog = { pursuit = -10 }
+		minorroad_the_bog = { pursuit = -10 }
+		desert = { pursuit = -10 }
+		majorroad_desert = { pursuit = -10 }
+		minorroad_desert = { pursuit = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { pursuit = -10 }
+		majorroad_drylands = { pursuit = -10 }
+		minorroad_drylands = { pursuit = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { pursuit = -10 }
+		majorroad_glacier = { pursuit = -10 }
+		minorroad_glacier = { pursuit = -10 }
+		frozen_flats = { pursuit = -10 }
+		majorroad_frozen_flats = { pursuit = -10 }
+		minorroad_frozen_flats = { pursuit = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+	
+	counters = {
+		archers = 1
+		skirmishers = 2
+		light_cavalry = 1
+	}
+	
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_reach_scouts }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+	
+	buy_cost = { gold = light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+	
+	stack = 100
+	ai_quality = { value = culture_ai_weight_light_cavalry }
+	icon = reach_scouts
+}
+
+sand_archers = {
+	type = archers
+	
+	damage = 30
+	toughness = 12
+	pursuit = 4
+	screen = 4
+	
+	terrain_bonus = {
+		desert = { damage = 10 }
+		majorroad_desert = { damage = 10 }
+		minorroad_desert = { damage = 10 }
+		desert_mountains = { toughness = 10 }
+		majorroad_desert_mountains = { toughness = 10 }
+		minorroad_desert_mountains = { toughness = 10 }
+		drylands = { damage = 10 }
+		majorroad_drylands = { damage = 10 }
+		minorroad_drylands = { damage = 10 }
+		canyon = { toughness = 10 }
+		majorroad_canyon = { toughness = 10 }
+		minorroad_canyon = { toughness = 10 }
+		oasis = { damage = 10 }
+		majorroad_oasis = { damage = 10 }
+		minorroad_oasis = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+
+		mountains = { toughness = 5 }
+		majorroad_mountains = { toughness = 5 }
+		minorroad_mountains = { toughness = 5 }
+
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga = { toughness = -5 }
+		majorroad_taiga = { toughness = -5 }
+		minorroad_taiga = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -6 toughness = -6 }
+		harsh_winter = { damage = -10 toughness = -10 }
+	}
+
+	counters = {
+		skirmishers = 1
+		archers = 1
+	}
+	
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_sand_archers }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = bowmen_recruitment_cost }
+	low_maintenance_cost = { gold = bowmen_low_maint_cost }
+	high_maintenance_cost = { gold = bowmen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+	
+	stack = 100
+	ai_quality = { 
+		value = culture_ai_weight_archers
+		value = counter_synergy_ai_weight_archers
+	}
+	icon = sand_archers
+}
+
+sun_knights = {
+	type = heavy_cavalry
+
+	damage = 112
+	toughness = 38
+	pursuit = 26
+	screen = 14
+
+	terrain_bonus = {
+		desert = { pursuit  = 10 }
+		majorroad_desert = { pursuit  = 10 }
+		minorroad_desert = { pursuit  = 10 }
+		desert_mountains = { pursuit  = 10 }
+		majorroad_desert_mountains = { pursuit  = 10 }
+		minorroad_desert_mountains = { pursuit  = 10 }
+		drylands = { pursuit  = 10 }
+		majorroad_drylands = { pursuit  = 10 }
+		minorroad_drylands = { pursuit  = 10 }
+		canyon = { pursuit  = 10 }
+		majorroad_canyon = { pursuit  = 10 }
+		minorroad_canyon = { pursuit  = 10 }
+		oasis = { pursuit  = 10 }
+		majorroad_oasis = { pursuit  = 10 }
+		minorroad_oasis = { pursuit  = 10 }
+		hills = { pursuit  = 10 }
+		majorroad_hills = { pursuit  = 10 }
+		minorroad_hills = { pursuit  = 10 }
+
+		mountains = { pursuit  = 5 }
+		majorroad_mountains = { pursuit  = 5 }
+		minorroad_mountains = { pursuit  = 5 }
+
+		steppe = { pursuit  = -5 }
+		majorroad_steppe = { pursuit  = -5 }
+		minorroad_steppe = { pursuit  = -5 }
+		taiga = { pursuit  = -5 }
+		majorroad_taiga = { pursuit  = -5 }
+		minorroad_taiga = { pursuit  = -5 }
+		taiga_bog = { pursuit  = -5 }
+		majorroad_taiga_bog = { pursuit  = -5 }
+		minorroad_taiga_bog = { pursuit  = -5 }
+
+		the_bog = { pursuit  = -10 }
+		majorroad_the_bog = { pursuit  = -10 }
+		minorroad_the_bog = { pursuit  = -10 }
+		glacier = { pursuit  = -10 }
+		majorroad_glacier = { pursuit  = -10 }
+		minorroad_glacier = { pursuit  = -10 }
+		frozen_flats = { pursuit  = -10 }
+		majorroad_frozen_flats = { pursuit  = -10 }
+		minorroad_frozen_flats = { pursuit  = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -6 toughness = -6 }
+		harsh_winter = { damage = -10 toughness = -10 }
+	}
+	
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_sun_knights }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	counters = {
+		heavy_infantry = 1
+		skirmishers = 1
+		archers = 1
+	}
+
+	buy_cost = { gold = summer_knights_recruitment_cost }
+	low_maintenance_cost = { gold = summer_knights_low_maint_cost }
+	high_maintenance_cost = { gold = summer_knights_high_maint_cost }
+	provision_cost = @provisions_cost_special_bankrupting
+
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = sun_knights
+}
+
+stone_scouts = {
+	type = skirmishers
+
+	damage = 24
+	toughness = 26
+	pursuit = 16
+	screen = 14
+
+	terrain_bonus = {
+		desert = { pursuit  = 10 }
+		majorroad_desert = { pursuit  = 10 }
+		minorroad_desert = { pursuit  = 10 }
+		desert_mountains = { pursuit  = 10 }
+		majorroad_desert_mountains = { pursuit  = 10 }
+		minorroad_desert_mountains = { pursuit  = 10 }
+		drylands = { pursuit  = 10 }
+		majorroad_drylands = { pursuit  = 10 }
+		minorroad_drylands = { pursuit  = 10 }
+		canyon = { pursuit  = 10 }
+		majorroad_canyon = { pursuit  = 10 }
+		minorroad_canyon = { pursuit  = 10 }
+		oasis = { pursuit  = 10 }
+		majorroad_oasis = { pursuit  = 10 }
+		minorroad_oasis = { pursuit  = 10 }
+		hills = { pursuit  = 10 }
+		majorroad_hills = { pursuit  = 10 }
+		minorroad_hills = { pursuit  = 10 }
+
+		mountains = { pursuit  = 5 }
+		majorroad_mountains = { pursuit  = 5 }
+		minorroad_mountains = { pursuit  = 5 }
+
+		steppe = { pursuit  = -5 }
+		majorroad_steppe = { pursuit  = -5 }
+		minorroad_steppe = { pursuit  = -5 }
+		taiga = { pursuit  = -5 }
+		majorroad_taiga = { pursuit  = -5 }
+		minorroad_taiga = { pursuit  = -5 }
+		taiga_bog = { pursuit  = -5 }
+		majorroad_taiga_bog = { pursuit  = -5 }
+		minorroad_taiga_bog = { pursuit  = -5 }
+
+		the_bog = { pursuit  = -10 }
+		majorroad_the_bog = { pursuit  = -10 }
+		minorroad_the_bog = { pursuit  = -10 }
+		glacier = { pursuit  = -10 }
+		majorroad_glacier = { pursuit  = -10 }
+		minorroad_glacier = { pursuit  = -10 }
+		frozen_flats = { pursuit  = -10 }
+		majorroad_frozen_flats = { pursuit  = -10 }
+		minorroad_frozen_flats = { pursuit  = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -6 toughness = -6 }
+		harsh_winter = { damage = -10 toughness = -10 }
+	}
+
+	counters = { 
+		heavy_infantry = 1
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_stone_scouts }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = stone_scouts
+}
+
+starfall_guardians = {
+	type = heavy_infantry
+
+	damage = 36
+	toughness = 34
+	pursuit = 0
+	screen = 10
+	
+	terrain_bonus = {
+		desert = { damage = 10 }
+		majorroad_desert = { damage = 10 }
+		minorroad_desert = { damage = 10 }
+		desert_mountains = { toughness = 10 }
+		majorroad_desert_mountains = { toughness = 10 }
+		minorroad_desert_mountains = { toughness = 10 }
+		drylands = { damage = 10 }
+		majorroad_drylands = { damage = 10 }
+		minorroad_drylands = { damage = 10 }
+		canyon = { toughness = 10 }
+		majorroad_canyon = { toughness = 10 }
+		minorroad_canyon = { toughness = 10 }
+		oasis = { damage = 10 }
+		majorroad_oasis = { damage = 10 }
+		minorroad_oasis = { damage = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+
+		mountains = { toughness = 5 }
+		majorroad_mountains = { toughness = 5 }
+		minorroad_mountains = { toughness = 5 }
+
+		steppe = { toughness = -5 }
+		majorroad_steppe = { toughness = -5 }
+		minorroad_steppe = { toughness = -5 }
+		taiga = { toughness = -5 }
+		majorroad_taiga = { toughness = -5 }
+		minorroad_taiga = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -6 toughness = -6 }
+		harsh_winter = { damage = -10 toughness = -10 }
+	}
+
+	counters = {
+		pikemen = 1
+		heavy_infantry = 2
+	}
+
+	can_recruit = {
+		has_title = title:b_starfall
+	}
+
+	buy_cost = { gold = dragonkeepers_recruitment_cost }
+	low_maintenance_cost = { gold = dragonkeepers_low_maint_cost }
+	high_maintenance_cost = { gold = dragonkeepers_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_bankrupting
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = starfall_guardians
+}
+
+hightower_guards = {
+	type = heavy_infantry
+
+	damage = 32
+	toughness = 36
+	pursuit = 6
+	screen = 6
+	
+	terrain_bonus = {
+		urban = { toughness = 10 }
+		majorroad_urban = { toughness = 10 }
+		minorroad_urban = { toughness = 10 }
+		forest = { screen = 10 }
+		majorroad_forest = { screen = 10 }
+		minorroad_forest = { screen = 10 }
+		plains = { screen = 10 }
+		majorroad_plains = { screen = 10 }
+		minorroad_plains = { screen = 10 }
+
+		taiga = { screen = 5 }
+		majorroad_taiga = { screen = 5 }
+		minorroad_taiga = { screen = 5 }
+		cloudforest = { screen = 5 }
+		majorroad_cloudforest = { screen = 5 }
+		minorroad_cloudforest = { screen = 5 }
+
+		mountains = { toughness = -5 }
+		majorroad_mountains = { toughness = -5 }
+		minorroad_mountains = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
+		majorroad_the_bog = { toughness = -10 }
+		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		steppe = { toughness = -10 }
+		majorroad_steppe = { toughness = -10 }
+		minorroad_steppe = { toughness = -10 }
+		taiga_bog = { toughness = -10 }
+		majorroad_taiga_bog = { toughness = -10 }
+		minorroad_taiga_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -6 toughness = -6 }
+		harsh_winter = { damage = -10 toughness = -10 }
+	}
+
+	counters = {
+		pikemen = 1
+		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		has_title = title:b_the_hightower
+	}
+
+	buy_cost = { gold = dragonkeepers_recruitment_cost }
+	low_maintenance_cost = { gold = dragonkeepers_low_maint_cost }
+	high_maintenance_cost = { gold = dragonkeepers_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = hightower_guards
+}
+#gold_cloaks = {
+#	type = heavy_infantry
+#
+#	damage = 28
+#	toughness = 32
+#	pursuit = 0
+#	screen = 10
+#	
+#	terrain_bonus = {
+#		urban = { toughness = 10 }
+#		majorroad_urban = { toughness = 10 }
+#		minorroad_urban = { toughness = 10 }
+#		forest = { screen = 10 }
+#		majorroad_forest = { screen = 10 }
+#		minorroad_forest = { screen = 10 }
+#		plains = { screen = 10 }
+#		majorroad_plains = { screen = 10 }
+#		minorroad_plains = { screen = 10 }
+#
+#		taiga = { screen = 5 }
+#		majorroad_taiga = { screen = 5 }
+#		minorroad_taiga = { screen = 5 }
+#		cloudforest = { screen = 5 }
+#		majorroad_cloudforest = { screen = 5 }
+#		minorroad_cloudforest = { screen = 5 }
+#
+#		mountains = { toughness = -5 }
+#		majorroad_mountains = { toughness = -5 }
+#		minorroad_mountains = { toughness = -5 }
+#
+#		the_bog = { toughness = -10 }
+#		majorroad_the_bog = { toughness = -10 }
+#		minorroad_the_bog = { toughness = -10 }
+#		desert = { toughness = -10 }
+#		majorroad_desert = { toughness = -10 }
+#		minorroad_desert = { toughness = -10 }
+#		desert_mountains = { toughness = -10 }
+#		majorroad_desert_mountains = { toughness = -10 }
+#		minorroad_desert_mountains = { toughness = -10 }
+#		drylands = { toughness = -10 }
+#		majorroad_drylands = { toughness = -10 }
+#		minorroad_drylands = { toughness = -10 }
+#		canyon = { toughness = -10 }
+#		majorroad_canyon = { toughness = -10 }
+#		minorroad_canyon = { toughness = -10 }
+#		steppe = { toughness = -10 }
+#		majorroad_steppe = { toughness = -10 }
+#		minorroad_steppe = { toughness = -10 }
+#		taiga_bog = { toughness = -10 }
+#		majorroad_taiga_bog = { toughness = -10 }
+#		minorroad_taiga_bog = { toughness = -10 }
+#		glacier = { toughness = -10 }
+#		majorroad_glacier = { toughness = -10 }
+#		minorroad_glacier = { toughness = -10 }
+#		frozen_flats = { toughness = -10 }
+#		majorroad_frozen_flats = { toughness = -10 }
+#		minorroad_frozen_flats = { toughness = -10 }
+#	}
+#	
+#	winter_bonus = {
+#		normal_winter = { damage = -6 toughness = -6 }
+#		harsh_winter = { damage = -12 toughness = -12 }
+#	}
+#
+#	counters = {
+#		pikemen = 1
+#		heavy_infantry = 1
+#	}
+#
+#	can_recruit = {
+#		OR = { 
+#			has_title = title:b_the_red_keep
+#			has_title = title:b_goldguard_heights 
+#		}
+#		NOT = { has_government = nights_watch_government }
+#	}
+#
+#	buy_cost = { gold = dragonkeepers_recruitment_cost }
+#	low_maintenance_cost = { gold = dragonkeepers_low_maint_cost }
+#	high_maintenance_cost = { gold = dragonkeepers_high_maint_cost }
+#
+#	stack = 100
+#	ai_quality = { value = @cultural_maa_extra_ai_score }
+#	icon = gold_cloaks
+#}
+
+

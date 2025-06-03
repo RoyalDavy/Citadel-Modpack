@@ -1,0 +1,4 @@
+﻿l_english:
+ dragonpit_everyone_law:0 "No one"
+ dragonpit_everyone_law_effects:0 "[dragons|E] in your [dragonpit|e] can be accessed by #warning no one#!"
+ DRAGONPIT_NO_ONE:0 "This dragon is in a [dragonpit|E] limited to just its holder and tamers with a permit"

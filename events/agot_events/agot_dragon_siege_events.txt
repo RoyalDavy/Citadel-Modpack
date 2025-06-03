@@ -1,0 +1,1348 @@
+﻿namespace = agot_dragon_siege
+
+# Rider selects siege intent
+agot_dragon_siege.0001 = {
+	type = character_event
+	title = agot_dragon_siege.0001.t
+	desc = {
+		desc = agot_dragon_siege.0001.desc_opening
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					list_size = { name = sieging_location_dragon_defenders value > 1 }
+				}
+				desc = agot_dragon_siege.0001.desc_defenders
+			}
+			triggered_desc = {
+				trigger = {
+					list_size = { name = sieging_location_dragon_defenders value = 1 }
+				}
+				desc = agot_dragon_siege.0001.desc_defender
+			}
+			triggered_desc = {
+				trigger = {
+					list_size = { name = sieging_location_dragon_owned value > 1 }
+				}
+				desc = agot_dragon_siege.0001.desc_owned
+			}
+			triggered_desc = {
+				trigger = {
+					list_size = { name = sieging_location_dragon_owned value = 1 }
+				}
+				desc = agot_dragon_siege.0001.desc_owned_single
+			}
+			desc = agot_dragon_siege.0001.desc_none
+		}
+	}
+	theme = dragon
+	override_background = {
+		reference = army_camp
+	}
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		is_current_dragonrider = yes # To prevent wierd order-of-operations issues if the dragon dies on same day
+		# To prevent trigger -> move on same tick making it siege the wrong province, check they're still in a valid siege
+		is_in_army = yes
+		OR = {
+			AND = {
+				is_commanding_army = yes
+				commanding_army = {
+					is_army_in_siege = yes
+				}
+			}
+			knight_army ?= { is_army_in_siege = yes }
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = used_dragon_sieged_today
+			days = 1
+		}
+		save_scope_as = sieging_rider
+		var:current_dragon = {
+			save_scope_as = sieging_dragon
+		}
+		if = {
+			limit = {
+				scope:sieging_rider = {
+					is_in_army = yes
+					OR = {
+						AND = {
+							is_commanding_army = yes
+							commanding_army = {
+								is_army_in_siege = yes
+							}
+						}
+						knight_army ?= { is_army_in_siege = yes }
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:sieging_rider = {
+						is_commanding_army = yes
+						commanding_army = {
+							is_army_in_siege = yes
+						}
+					}
+				}
+				commanding_army = {
+					location = {
+						save_scope_as = sieging_location
+					}
+				}
+			}
+			else = {
+				knight_army = {
+					location = {
+						save_scope_as = sieging_location
+					}
+				}
+			}
+		}
+		scope:sieging_location = {
+			if = {
+				limit ={
+					# Is controlled by the county owner
+					county.holder = barony_controller
+				}
+				# Check for dragon defenders
+				every_character_in_location = {
+					limit = {
+						OR = { # Either their holding or they work for them
+							this = scope:sieging_location.barony.holder
+							is_courtier_of = scope:sieging_location.barony.holder # Guests aren't that loyal I guess
+						}
+						is_current_dragonrider = yes # They are dragonrider
+						var:current_dragon = { # and dragon is in siege too
+							location = scope:sieging_location
+						}
+						NOT = { # and they have not fled this siege
+							scope:sieging_location.county = {
+								is_target_in_variable_list = {
+									name = agot_fled_dragonriders
+									target = prev
+								}
+							}
+						}
+					}
+					add_to_list = sieging_location_dragon_defenders
+				}
+				every_character_in_location = {
+					limit = {
+						has_trait = dragon
+						has_character_flag = owned_dragon
+						NOT = { exists = var:current_rider }
+					}
+					add_to_list = sieging_location_dragon_owned
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { list_size = { name = sieging_location_dragon_defenders value = 0 } }
+			}
+			ordered_in_list = { # Get largest first
+				list = sieging_location_dragon_defenders
+				order_by = var:current_dragon.dragon_combat_effectiveness
+				save_scope_as = defending_dragonrider
+				var:current_dragon = { save_scope_as = defending_dragon }
+			}
+			add_character_flag = {
+				flag = agot_dragon_siege_defenders_present
+				days = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = { list_size = { name = sieging_location_dragon_owned value = 0 } }
+			}
+			every_in_list = { # Get random for first pass
+				list = sieging_location_dragon_owned
+				save_scope_as = owned_dragon_present
+			}
+			every_in_list = { # Then get highest prowess
+				list = sieging_location_dragon_defenders
+				limit = {
+					dragon_combat_effectiveness >= scope:owned_dragon_present.dragon_combat_effectiveness
+				}
+				save_scope_as = owned_dragon_present
+			}
+			# Not currently used, for if we ever have wild vs ridden dragon duels
+			#add_character_flag = {
+			#	flag = agot_dragon_siege_owned_present
+			#	days = 1
+			#}
+		}
+	}
+
+	option = { # I will destroy easy targets
+		name = agot_dragon_siege.0001.a
+		flavor = agot_dragon_siege.0001.a.f
+		trigger = {
+			NOT = { has_character_flag = agot_dragon_siege_defenders_present }
+			scope:sieging_location = {
+				NOR = {
+					has_variable = dragon_siege_modifier_minor
+					has_variable = dragon_siege_modifier_medium
+					has_variable = dragon_siege_modifier_major
+					has_variable = dragon_siege_modifier_massive
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+		show_as_tooltip = {
+			agot_dragon_siege_effect_minor = yes
+		}
+		add_character_flag = {
+			flag = agot_minor_dragon_siege
+			days = 1
+		}
+		hidden_effect = {
+			random_list = {
+				95 = { # Success
+					modifier = {
+						add = {
+							value = scope:sieging_dragon.dragon_combat_effectiveness
+							multiply = 0.15
+						}
+					}
+					agot_dragon_siege_effect_minor = yes
+				}
+				5 = { # Success, but with consequences
+					modifier = {
+						add = {
+							value = scope:sieging_location.fort_level
+							multiply = 0.5
+						}
+					}
+					agot_dragon_siege_effect_minor = yes
+					random_list = {
+						50 = {
+							trigger_event = agot_dragon_siege.0004
+						}
+						50 = {
+							trigger_event = agot_dragon_siege.0005
+						}
+					}
+				}
+				0 = { # Failure
+					dragon_scorpion_siege_event_modifiers = yes
+					modifier = { # Reduced risk as it's the safest
+						factor = 0.5
+					}
+					random_list = {
+						50 = {
+							trigger_event = agot_dragon_siege.0009
+						}
+						50 = {
+							trigger_event = agot_dragon_siege.0010
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:sieging_location.barony.title_province = {
+					OR = {
+						fort_level >= 10
+						has_building_or_higher = workshops_05
+					}
+				}
+				location.county.culture = { has_innovation = innovation_agot_anti_dragon_fighting }
+			}
+			custom_tooltip = agot_dragon_siege.scorpion_1_warning
+		}
+		if = {
+			limit = {
+				scope:sieging_location.barony.title_province = {
+					OR = {
+						fort_level >= 20
+						has_building_or_higher = workshops_07
+					}
+				}
+				location.county.culture = { has_innovation = innovation_agot_anti_dragon_fighting }
+			}
+			custom_tooltip = agot_dragon_siege.scorpion_2_warning
+		}
+	}
+
+	option = { # I will burn a hole in their walls
+		name = agot_dragon_siege.0001.b
+		flavor = agot_dragon_siege.0001.b.f
+		trigger = {
+			NOT = { has_character_flag = agot_dragon_siege_defenders_present }
+			scope:sieging_location = {
+				NOR = {
+					has_variable = dragon_siege_modifier_medium
+					has_variable = dragon_siege_modifier_major
+					has_variable = dragon_siege_modifier_massive
+				}
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+		show_as_tooltip = {
+			agot_dragon_siege_effect_medium = yes
+		}
+		hidden_effect = {
+			random_list = {
+				90 = { # Success
+					modifier = {
+						add = {
+							value = scope:sieging_dragon.dragon_combat_effectiveness
+							multiply = 0.15
+						}
+					}
+					agot_dragon_siege_effect_medium = yes
+				}
+				10 = { # Success, but with consequences
+					modifier = {
+						add = {
+							value = scope:sieging_location.fort_level
+							multiply = 0.5
+						}
+					}
+					agot_dragon_siege_effect_medium = yes
+					random_list = {
+						1 = {
+							trigger_event = agot_dragon_siege.0004
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0005
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0006
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0007
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0008
+						}
+					}
+				}
+				0 = { # Failure
+					dragon_scorpion_siege_event_modifiers = yes
+					random_list = {
+						50 = {
+							trigger_event = agot_dragon_siege.0009
+						}
+						50 = {
+							trigger_event = agot_dragon_siege.0010
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:sieging_location.barony.title_province = {
+					OR = {
+						fort_level >= 10
+						has_building_or_higher = workshops_05
+					}
+				}
+				location.county.culture = { has_innovation = innovation_agot_anti_dragon_fighting }
+			}
+			custom_tooltip = agot_dragon_siege.scorpion_1_warning
+		}
+		if = {
+			limit = {
+				scope:sieging_location.barony.title_province = {
+					OR = {
+						fort_level >= 20
+						has_building_or_higher = workshops_07
+					}
+				}
+				location.county.culture = { has_innovation = innovation_agot_anti_dragon_fighting }
+			}
+			custom_tooltip = agot_dragon_siege.scorpion_2_warning
+		}
+	}
+
+	option = { # I will destroy all of their defenses
+		name = agot_dragon_siege.0001.c
+		flavor = agot_dragon_siege.0001.c.f
+		trigger = {
+			NOT = { has_character_flag = agot_dragon_siege_defenders_present }
+			scope:sieging_location = {
+				NOR = {
+					has_variable = dragon_siege_modifier_major
+					has_variable = dragon_siege_modifier_massive
+				}
+			}
+			var:current_dragon.dragon_combat_effectiveness >= level_five_dragon_combat
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				NOT = { has_trait = compassionate }
+				scope:sieging_location = {
+					barony.holder = {
+						has_relation_rival = scope:sieging_rider
+						location = scope:sieging_location
+					}
+				}
+			}
+		}
+		show_as_tooltip = {
+			agot_dragon_siege_effect_major = yes
+		}
+		hidden_effect = {
+			random_list = {
+				85 = { # Success
+					modifier = {
+						add = {
+							value = scope:sieging_dragon.dragon_combat_effectiveness
+							multiply = 0.15
+						}
+					}
+					agot_dragon_siege_effect_major = yes
+				}
+				15 = { # Success, but with consequences
+					modifier = {
+						add = {
+							value = scope:sieging_location.fort_level
+							multiply = 0.5
+						}
+					}
+					agot_dragon_siege_effect_major = yes
+					random_list = {
+						1 = {
+							trigger_event = agot_dragon_siege.0004
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0005
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0006
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0007
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0008
+						}
+					}
+				}
+				0 = { # Failure
+					dragon_scorpion_siege_event_modifiers = yes
+					random_list = {
+						50 = {
+							trigger_event = agot_dragon_siege.0009
+						}
+						50 = {
+							trigger_event = agot_dragon_siege.0010
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:sieging_location.barony.title_province = {
+					OR = {
+						fort_level >= 10
+						has_building_or_higher = workshops_05
+					}
+				}
+				location.county.culture = { has_innovation = innovation_agot_anti_dragon_fighting }
+			}
+			custom_tooltip = agot_dragon_siege.scorpion_1_warning
+		}
+		if = {
+			limit = {
+				scope:sieging_location.barony.title_province = {
+					OR = {
+						fort_level >= 20
+						has_building_or_higher = workshops_07
+					}
+				}
+				location.county.culture = { has_innovation = innovation_agot_anti_dragon_fighting }
+			}
+			custom_tooltip = agot_dragon_siege.scorpion_2_warning
+		}
+	}
+
+	option = { # I will *burn this place to the ground*
+		name = agot_dragon_siege.0001.d
+		flavor = agot_dragon_siege.0001.d.f
+		trigger = {
+			NOT = { has_character_flag = agot_dragon_siege_defenders_present }
+			scope:sieging_location = {
+				NOT = { has_variable = dragon_siege_modifier_massive }
+			}
+			var:current_dragon.dragon_combat_effectiveness >= level_eight_dragon_combat
+			# Don't do this if you're AI but your top liege is human
+			NAND = {
+				is_ai = yes
+				top_liege ?= {
+					is_ai = no
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 10
+				NOT = { has_trait = compassionate }
+				scope:sieging_location = {
+					barony.holder = {
+						has_relation_rival = scope:sieging_rider
+						location = scope:sieging_location
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = { # Cowards and compassionate people shouldn't
+					ai_boldness < -50
+					has_trait = compassionate
+				}
+			}
+		}
+		add_internal_flag = dangerous
+		show_as_tooltip = {
+			agot_dragon_siege_effect_massive = yes
+		}
+		hidden_effect = {
+			random_list = {
+				80 = { # Success
+					modifier = {
+						add = {
+							value = scope:sieging_dragon.dragon_combat_effectiveness
+							multiply = 0.15
+						}
+					}
+					agot_dragon_siege_effect_massive = yes
+				}
+				20 = { # Success, but with consequences
+					modifier = {
+						add = scope:sieging_location.fort_level
+					}
+					agot_dragon_siege_effect_massive = yes
+					random_list = {
+						1 = {
+							trigger_event = agot_dragon_siege.0004
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0005
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0006
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0007
+						}
+						1 = {
+							trigger_event = agot_dragon_siege.0008
+						}
+					}
+				}
+				0 = {
+					dragon_scorpion_siege_event_modifiers = yes
+					random_list = {
+						50 = {
+							trigger_event = agot_dragon_siege.0009
+						}
+						50 = {
+							trigger_event = agot_dragon_siege.0010
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:sieging_location.barony.title_province = {
+					OR = {
+						fort_level >= 10
+						has_building_or_higher = workshops_05
+					}
+				}
+				location.county.culture = { has_innovation = innovation_agot_anti_dragon_fighting }
+			}
+			custom_tooltip = agot_dragon_siege.scorpion_1_warning
+		}
+		if = {
+			limit = {
+				scope:sieging_location.barony.title_province = {
+					OR = {
+						fort_level >= 20
+						has_building_or_higher = workshops_07
+					}
+				}
+				location.county.culture = { has_innovation = innovation_agot_anti_dragon_fighting }
+			}
+			custom_tooltip = agot_dragon_siege.scorpion_2_warning
+		}
+	}
+
+	option = { # I will fight this dragon!
+		name = agot_dragon_siege.0001.e
+		flavor = agot_dragon_siege.0001.e.f
+		trigger = {
+			has_character_flag = agot_dragon_siege_defenders_present
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = -45
+				has_character_flag = agot_dragon_siege_defenders_present
+				NOT = { has_trait = brave } # Brave people are more likely to fight
+				scope:defending_dragon.dragon_combat_effectiveness >= var:current_dragon.dragon_combat_effectiveness
+			}
+			modifier = {
+				factor = 0
+				can_dragon_chomp = {
+					CHOMPING_DRAGON = var:current_dragon
+					CHOMPED_DRAGON = scope:defending_dragon
+				}
+			}
+		}
+		hidden_effect = {
+			scope:defending_dragonrider = {
+				trigger_event = agot_dragon_siege.0011
+			}
+		}
+	}
+
+	option = { # I will not attack
+		name = agot_dragon_siege.0001.f
+		flavor = agot_dragon_siege.0001.f.f
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 50
+				has_character_flag = agot_dragon_siege_defenders_present
+			}
+		}
+		remove_character_flag = used_dragon_sieged_today
+		remove_character_flag = agot_dragon_siege_defenders_present
+	}
+}
+
+# Perspective of besieged
+# I am burned from siege oh no
+agot_dragon_siege.0002 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0002.t
+	desc = {
+		desc = agot_dragon_siege.0002.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:sieging_dragon.dragon_size >= level_seven_dragon_size }
+				desc = agot_dragon_siege.0002.bigboi
+			}
+			random_valid = {
+				desc = agot_dragon_siege.0002.option1
+				desc = agot_dragon_siege.0002.option2
+				desc = agot_dragon_siege.0002.option3
+				desc = agot_dragon_siege.0002.option4
+			}
+		}
+		desc = agot_dragon_siege.0002.outro
+	}
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_fire"
+			container = "agot_shader_event_background"
+		}
+	}
+	right_portrait = {
+		character = root
+		animation = pain
+	}
+	left_portrait = {
+		character = scope:sieging_dragon
+	}
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		play_music_cue = CK3AGOT_dragon_burn_holding
+	}
+
+	option = {
+		name = agot_dragon_siege.0002.a
+		flavor = agot_dragon_siege.0002.a.f
+		add_trait = burned
+		add_trait_xp = {
+			trait = burned
+			value = {
+				integer_range = {
+					min = 10
+					max = 100
+				}
+			}
+		}
+	}
+}
+
+# I died from siege oh no
+agot_dragon_siege.0003 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0003.t
+	desc = {
+		desc = agot_dragon_siege.0002.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:sieging_dragon.dragon_size >= level_seven_dragon_size }
+				desc = agot_dragon_siege.0002.bigboi
+			}
+			random_valid = {
+				desc = agot_dragon_siege.0002.option1
+				desc = agot_dragon_siege.0002.option2
+				desc = agot_dragon_siege.0002.option3
+				desc = agot_dragon_siege.0002.option4
+			}
+		}
+		desc = agot_dragon_siege.0003.outro
+	}
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_fire"
+			container = "agot_shader_event_background"
+		}
+	}
+	right_portrait = {
+		character = root
+		animation = severelywounded
+	}
+	left_portrait = {
+		character = scope:sieging_dragon
+	}
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		play_music_cue = CK3AGOT_dragon_burn_holding
+	}
+
+	option = {
+		name = agot_dragon_siege.0003.a
+		flavor = agot_dragon_siege.0003.a.f
+		death = {
+			death_reason = death_dragon_siege
+			killer = scope:sieging_dragon
+		}
+		scope:sieging_dragon.var:current_rider = {
+			add_kinslayer_trait_or_nothing_effect = { VICTIM = root }
+		}
+	}
+}
+
+# Dragon siege consequences
+# I was shot with a stray arrow
+agot_dragon_siege.0004 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0004.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = agot_minor_dragon_siege
+				}
+				desc = agot_dragon_siege.0004.desc.minor
+			}
+			desc = agot_dragon_siege.0004.desc
+		}
+	}
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_fire"
+			container = "agot_shader_event_background"
+		}
+	}
+	right_portrait = {
+		character = root
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+
+	immediate = {
+		agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+		increase_wounds_no_death_effect = { REASON = dragon_siege_attacker }
+	}
+
+	option = {
+		name = agot_dragon_siege.0004.a
+		flavor = agot_dragon_siege.0004.a.f
+	}
+
+	after = {
+		agot_clear_dragon_animation_flags = yes
+	}
+}
+
+# Dragon was hit with a spear
+agot_dragon_siege.0005 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0005.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = agot_minor_dragon_siege
+				}
+				desc = agot_dragon_siege.0005.desc.minor
+			}
+			desc = agot_dragon_siege.0005.desc
+		}
+	}
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_fire"
+			container = "agot_shader_event_background"
+		}
+	}
+	right_portrait = {
+		character = root
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+
+	immediate = {
+		agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+		var:current_dragon = {
+			wound_dragon = yes
+		}
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+		}
+	}
+
+	option = {
+		name = agot_dragon_siege.0005.a
+		flavor = agot_dragon_siege.0005.a.f
+	}
+
+	after = {
+		agot_clear_dragon_animation_flags = yes
+	}
+}
+
+# Dragon was struck by a coordinated group of soldiers
+agot_dragon_siege.0006 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0006.t
+	desc = agot_dragon_siege.0006.desc
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_fire"
+			container = "agot_shader_event_background"
+		}
+	}
+	right_portrait = {
+		character = root
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+
+	immediate = {
+		agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+		var:current_dragon = {
+			hidden_effect = {
+				wound_dragon = yes
+			}
+			wound_dragon = yes
+		}
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+		}
+	}
+
+	option = {
+		name = agot_dragon_siege.0006.a
+		flavor = agot_dragon_siege.0006.a.f
+	}
+
+	after = {
+		agot_clear_dragon_animation_flags = yes
+	}
+}
+
+# I was hit with many arrows
+agot_dragon_siege.0007 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0007.t
+	desc = agot_dragon_siege.0007.desc
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_fire"
+			container = "agot_shader_event_background"
+		}
+	}
+	right_portrait = {
+		character = root
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+
+	immediate = {
+		agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+		hidden_effect = {
+			change_trait_rank = {
+				trait = wounded
+				rank = 1
+				max = 3
+			}
+		}
+		increase_wounds_effect = { REASON = dragon_siege_attacker }
+	}
+
+	option = {
+		name = agot_dragon_siege.0007.a
+		flavor = agot_dragon_siege.0007.a.f
+		trigger = {
+			is_alive = yes
+		}
+	}
+
+	option = {
+		name = agot_dragon_siege.0007.b
+		flavor = agot_dragon_siege.0007.b.f
+		trigger = {
+			is_alive = no
+		}
+	}
+
+	after = {
+		agot_clear_dragon_animation_flags = yes
+	}
+}
+
+# I was hit by a lucky spear throw
+agot_dragon_siege.0008 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0008.t
+	desc = agot_dragon_siege.0008.desc
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_smoke"
+			container = "agot_shader_event_background"
+		}
+	}
+	right_portrait = {
+		character = root
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+
+	immediate = {
+		agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+	}
+
+	option = {
+		name = agot_dragon_siege.0008.a
+		flavor = agot_dragon_siege.0008.a.f
+		death = {
+			death_reason = death_dragon_siege_attacker
+		}
+	}
+
+	after = {
+		agot_clear_dragon_animation_flags = yes
+	}
+}
+
+# Dragon was badly wounded by scorpion
+agot_dragon_siege.0009 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0009.t
+	desc = agot_dragon_siege.0009.desc
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_fire"
+			container = "agot_shader_event_background"
+		}
+	}
+	right_portrait = {
+		character = root
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+
+	immediate = {
+		agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+		var:current_dragon = {
+			hidden_effect = {
+				wound_dragon = yes
+			}
+			wound_dragon = yes
+		}
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+		}
+		custom_tooltip = agot_dragon_siege.ineffective
+	}
+
+	option = {
+		name = agot_dragon_siege.0009.a
+		flavor = agot_dragon_siege.0009.a.f
+	}
+
+	after = {
+		agot_clear_dragon_animation_flags = yes
+	}
+}
+
+# Dragon was shot down by scorpion
+agot_dragon_siege.0010 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0010.t
+	desc = agot_dragon_siege.0010.desc
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	widgets = {
+		widget = {
+			gui = "agot_shader_event_sparks"
+			container = "agot_shader_event_foreground"
+		}
+		widget = {
+			gui = "agot_shader_event_fire"
+			container = "agot_shader_event_background"
+		}
+	}
+
+	right_portrait = {
+		character = root
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+
+	immediate = {
+		agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+		var:current_dragon = {
+			death = {
+				death_reason = death_dragon_scorpion_siege
+			}
+		}
+		custom_tooltip = agot_dragon_siege.ineffective
+	}
+
+	option = {
+		name = agot_dragon_siege.0010.a
+		flavor = agot_dragon_siege.0010.a.f
+		death = {
+			death_reason = death_dragon_siege_attacker
+		}
+	}
+
+	after = {
+		agot_clear_dragon_animation_flags = yes
+	}
+}
+
+# I am dragonrider and I am defending from siege
+agot_dragon_siege.0011 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0011.t
+	desc = agot_dragon_siege.0011.desc
+	theme = war
+	override_background = {
+		reference = burning_building
+	}
+	right_portrait = {
+		character = root
+	}
+	lower_right_portrait = {
+		character = var:current_dragon
+	}
+	left_portrait = {
+		character = scope:sieging_dragon.var:current_rider
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+
+	immediate = {
+		scope:sieging_dragon.var:current_rider = {
+			agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+		}
+		scope:sieging_dragon = {
+			save_scope_as = enemy_dragon
+			var:current_rider = {
+				save_scope_as = sieging_dragonrider
+				save_scope_as = enemy_dragonrider
+			}
+		}
+	}
+
+	option = {
+		name = agot_dragon_siege.0011.a
+		flavor = agot_dragon_siege.0011.a.f
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 50
+				has_trait = brave
+			}
+			modifier = {
+				add = 50
+				var:current_dragon.dragon_combat_effectiveness >= scope:sieging_dragon.dragon_combat_effectiveness
+			}
+			modifier = {
+				factor = 0
+				can_dragon_chomp = {
+					CHOMPING_DRAGON = scope:sieging_dragon
+					CHOMPED_DRAGON = var:current_dragon
+				}
+			}
+		}
+		custom_tooltip = {
+			text = agot_dragon_combat.will_engage
+			configure_start_dragon_combat_effect = {
+				DSC_INITIATOR = scope:sieging_dragonrider
+				DSC_ATTACKER = scope:sieging_dragonrider
+				DSC_DEFENDER = root
+			}
+		}
+	}
+
+	option = {
+		name = agot_dragon_siege.0011.b
+		custom_tooltip = agot_dragon_siege.0011.b.f
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 50
+				has_trait = craven
+			}
+			modifier = {
+				add = 50
+				var:current_dragon.dragon_combat_effectiveness <= scope:sieging_dragon.dragon_combat_effectiveness
+			}
+		}
+		add_character_modifier = {
+			modifier = agot_fled_siege_on_dragon
+			years = 1
+		}
+		add_prestige = -200
+		if = {
+			limit = { is_ruler = yes }
+			add_legitimacy = -50
+		}
+		scope:sieging_location = {
+			county = {
+				add_to_variable_list = {
+					name = agot_fled_dragonriders
+					target = root
+				}
+				save_scope_as = clear_fled_rider_from
+			}
+		}
+		save_scope_as = clear_this_fled_rider
+		trigger_event = {
+			id = agot_dragon_siege.0012
+			years = 1
+		}
+		hidden_effect = {
+			scope:sieging_dragonrider = {
+				send_interface_toast = {
+					title = agot_dragon_siege.notify_sieger_of_fleeing.t
+					left_icon = root
+					right_icon = root.var:current_dragon
+					custom_tooltip = agot_dragon_siege.notify_sieger_of_fleeing.tt
+				}
+				remove_character_flag = used_dragon_sieged_today
+				remove_character_flag = agot_dragon_siege_defenders_present
+			}
+		}
+	}
+
+	after = {
+		scope:sieging_dragon.var:current_rider = {
+			agot_clear_dragon_animation_flags = yes
+		}
+	}
+}
+
+# Clear agot_fled_dragonriders from county maintainance event
+agot_dragon_siege.0012 = {
+	hidden = yes
+	immediate = {
+		scope:clear_fled_rider_from = {
+			remove_list_variable = {
+				name = agot_fled_dragonriders
+				target = scope:clear_this_fled_rider
+			}
+		}
+	}
+}
+
+# Dragon has fled from siege notification - owner
+agot_dragon_siege.0013 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0013.t
+	desc = agot_dragon_siege.0013.desc
+	theme = dragon
+	override_background = {
+		reference = burning_building
+	}
+	left_portrait = {
+		character = root
+		animation = loss_1
+	}
+	right_portrait = {
+		character = scope:sieging_rider
+		camera = camera_dragonrider_flying_event_front
+		animation = dragon_main
+		outfit_tags = { dragonrider }
+	}
+	lower_center_portrait = {
+		character = scope:fleeing_dragon
+	}
+
+	immediate = {
+		scope:sieging_rider = {
+			agot_set_dragon_animation_flag_effect = { FLAG = dragon_flying RIDING_DRAGON = yes }
+		}
+		scope:fleeing_dragon = {
+			agot_dragon_flees_province = yes
+		}
+		scope:new_location.county.holder = {
+			trigger_event = agot_dragon_siege.0014
+		}
+	}
+
+	option = {
+		name = agot_dragon_siege.0013.a
+		flavor = agot_dragon_siege.0013.a.f
+	}
+
+	after = {
+		scope:sieging_rider = {
+			agot_clear_dragon_animation_flags = yes
+		}
+	}
+}
+
+# Dragon has fled from siege notification - new host
+agot_dragon_siege.0014 = {
+	type = character_event
+	window = dragon_character_event
+	title = agot_dragon_siege.0014.t
+	desc = agot_dragon_siege.0014.desc
+	theme = dragon
+	override_background = {
+		reference = terrain_travel
+	}
+	right_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	left_portrait = {
+		character = scope:fleeing_dragon
+		camera = camera_dragon_event_left
+	}
+	lower_left_portrait = {
+		character = scope:sieging_location.barony.holder
+	}
+
+	immediate = {
+		show_as_tooltip = {
+			add_courtier = scope:fleeing_dragon
+		}
+	}
+
+	option = {
+		name = agot_dragon_siege.0014.a
+		flavor = agot_dragon_siege.0014.a.f
+	}
+}

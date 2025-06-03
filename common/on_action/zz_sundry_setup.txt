@@ -1,0 +1,125 @@
+﻿on_game_start = {
+	on_actions = {
+		sundry_start
+		sundry_sigils_westeros
+		sundry_coa_override
+		sundry_coa_fixes
+		sundry_faith_doctrine_edits
+		sundry_culture_presence
+		sundry_culture_presence_agot+
+		sundry_faith_presence
+		sundry_faith_presence_agot+
+		sundry_culture_edits
+		sundry_culture_names
+	}
+}
+
+sundry_start = {
+	effect = {
+		set_global_variable = {
+			name = sundry_enabled
+			value = yes
+		}
+		if = {
+			limit = {
+				exists = global_var:sundry_enabled
+			}
+		}
+	}
+}
+
+sundry_sigils_westeros = {
+	trigger = {
+		has_game_rule = sundry_sigils_westeros_rule_on
+	}
+	effect = {
+		sundry_sigils_westeros_effect = yes
+	}
+}
+
+sundry_coa_override = { #for coa that inexplicably refuse to be altered
+	trigger = {
+		has_game_rule = sundry_sigils_westeros_rule_on
+	}
+	effect = {
+		sundry_override_effect = yes
+	}
+}
+
+sundry_coa_fixes = { #for coa that inexplicably refuse to be altered
+	trigger = {
+		exists = global_var:sundry_enabled
+	}
+	effect = {
+		sundry_coa_fixes_effect = yes
+	}
+}
+
+sundry_faith_doctrine_edits = {
+	trigger = {
+		exists = global_var:sundry_enabled
+	}
+	effect = {
+		sundry_faith_doctrine_edits_effect = yes
+	}
+}
+
+sundry_culture_presence = {
+	trigger = {
+		exists = global_var:sundry_enabled
+	}
+	effect = {
+		sundry_culture_presence_effect = yes
+	}
+}
+
+sundry_culture_presence_agot+ = {
+	trigger = {
+		AND = {
+			exists = global_var:sundry_enabled
+			NOT = { has_game_rule = asoiaf_westeros_culture_fix_rule_on }
+		}
+	}
+	effect = {
+		sundry_culture_presence_agot+_effect = yes
+	}
+}
+
+sundry_faith_presence = {
+	trigger = {
+		exists = global_var:sundry_enabled
+	}
+	effect = {
+		sundry_faith_presence_effect = yes
+	}
+}
+
+sundry_faith_presence_agot+ = {
+	trigger = {
+		AND = {
+			exists = global_var:sundry_enabled
+			NOT = { has_game_rule = asoiaf_westeros_heresy_fix_rule_on }
+		}
+	}
+	effect = {
+		sundry_faith_presence_agot+_effect = yes
+	}
+}
+
+sundry_culture_edits = {
+	trigger = {
+		exists = global_var:sundry_enabled
+	}
+	effect = {
+		sundry_culture_edits_effect = yes
+	}
+}
+
+sundry_culture_names = {
+	trigger = {
+		has_game_rule = sundry_culture_names_rule_on
+	}
+	effect = {
+		sundry_culture_names_effect = yes
+	}
+}

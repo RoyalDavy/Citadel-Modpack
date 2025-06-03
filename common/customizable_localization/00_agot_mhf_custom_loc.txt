@@ -1,0 +1,36 @@
+﻿HistoricalBattleMHF = {
+	type = province
+
+	text = {
+		trigger = { this = province:3070 }
+		localization_key = historical_battle_butcher_at_boneroot
+	}
+}
+
+HistoricalBattleMHFDesc = {
+	type = province
+
+	text = {
+		trigger = { this = province:3070 }
+		localization_key = historical_battle_butcher_at_boneroot_desc
+	}	
+}
+
+CastleNameMHF = {
+	type = province
+
+	text = {
+		trigger = { this = province:3038 }
+		localization_key = brixhall_name
+	}
+}
+
+CastleMHFDesc = {
+	type = province 
+
+	text = {
+		trigger = { this = province:3038 }
+		localization_key = brixhall_desc
+	}
+
+}

@@ -1,0 +1,42 @@
+﻿captains_sword = {
+	icon = "artifact_captains_sword.dds"
+	asset = {
+		trigger = {
+			OR = {
+				employer ?= title:e_blackfyre_rebellion.holder
+				liege ?= title:e_blackfyre_rebellion.holder
+				this = title:e_blackfyre_rebellion.holder
+				house = house:house_Blackfyre
+			}
+		}
+		reference = tgc_sword_captain_blackfyre_entity
+	}
+	asset = {
+		reference = tgc_sword_captain_entity
+	}
+}
+
+captains_sword_court = {
+	icon = "artifact_captains_sword.dds"
+	asset = {
+		trigger = {
+			OR = {
+				employer ?= title:e_blackfyre_rebellion.holder
+				liege ?= title:e_blackfyre_rebellion.holder
+				this = title:e_blackfyre_rebellion.holder
+				house = house:house_Blackfyre
+			}
+		}
+		reference = tgc_sword_captain_sword_blackfyre_a_entity
+	}
+	asset = {
+		reference = tgc_sword_captain_sword_a_entity
+	}
+}
+
+skullPike_artifact = {
+	icon = "skullPike_artifact.dds"
+	asset = {
+		reference = skullPike_court_entity
+	}
+}

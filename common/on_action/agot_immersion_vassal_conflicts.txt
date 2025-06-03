@@ -1,0 +1,157 @@
+﻿on_war_started = {
+	on_actions = {
+		vassal_criminal_war_started
+		vassal_internal_conflict
+	
+	}
+}
+vassal_criminal_war_started = {
+	effect = {
+		if = { limit = { 
+				has_game_rule = agot_immersion_illegal_wars_on
+			war = {
+					NOR = {
+						using_cb = populist_war
+						using_cb = peasant_war
+					}
+				}
+
+		AND = {
+						scope:attacker = { is_independent_ruler = no }
+						scope:defender = { is_independent_ruler = no }
+						scope:defender.top_liege = scope:attacker.top_liege
+						}
+			NOT = { scope:attacker.liege = scope:defender }			
+						}
+				 
+				
+		scope:defender.liege = { trigger_event = {
+								id = immersive_vassal_wars.0001
+								days = { 30 60 }
+							} }
+		}
+	}
+}
+
+vassal_internal_conflict = {
+	effect = {
+		if = { limit = { 
+			has_game_rule = agot_immersion_internal_conflicts_on
+			war = {
+					NOR = {
+						using_cb = populist_war
+						using_cb = peasant_war
+					}
+				}
+
+		AND = {
+						scope:attacker = { is_independent_ruler = no }
+						scope:defender = { is_independent_ruler = no }
+						scope:defender.top_liege = scope:attacker.top_liege
+						}
+			 scope:attacker.liege = scope:defender 			
+						}
+				 
+				
+		scope:defender.liege = { 
+									create_story = {
+														type = internal_conflict_story
+														save_scope_as = internal_conflict_story
+													}
+											scope:internal_conflict_story = { 
+																		add_to_variable_list = {
+																			name = internal_conflict
+																			target = scope:war
+																		}
+																		set_variable = { name = internal_conflict_check value = scope:war}
+
+
+											}
+											}
+		
+		}
+	}
+}
+
+
+
+on_war_won_attacker = {
+	on_actions = {
+		#vassal_criminal_justice
+	}
+}
+
+on_war_won_defender = {
+	on_actions = {
+		vassal_criminal_punishment
+	}
+}
+
+on_war_white_peace = {
+	on_actions = {
+		vassal_criminal_punishment
+	}
+}
+
+on_war_invalidated = {
+	on_actions = {
+		#vassal_criminal_justice
+	}
+}
+
+vassal_criminal_justice = {
+	effect = {
+		if = { limit = { 
+						scope:defender.top_liege = scope:attacker.top_liege
+						scope:attacker = { any_owned_story = {	story_type = war_criminal_story	} } 
+					   } 
+	
+		scope:attacker = { save_scope_as = vassal_criminal }
+		scope:war = { every_war_attacker = { add_to_list = criminal_attackers }	} 
+		scope:war = { every_war_defender = { add_to_list = criminal_defenders }	} 
+		scope:defender = { save_scope_as = vassal_victim }
+		scope:defender.liege = { save_scope_as = vassal_victim_liege }
+		
+		scope:vassal_criminal = { 
+		trigger_event = {
+								id = immersive_vassal_wars.0099
+								days = 1
+							} }
+	
+						
+						}
+						
+		
+		
+		
+		
+		
+	}
+}
+
+
+vassal_criminal_punishment = {
+	effect = {
+		if = { limit = { 
+						scope:defender.top_liege = scope:attacker.top_liege
+						scope:attacker = { any_owned_story = {	story_type = war_criminal_story	} } 
+					   } 
+					   
+		imprison_character_effect = {
+			TARGET = scope:attacker
+			IMPRISONER = scope:defender.liege
+		}
+	
+	
+	
+						
+						}
+						
+		
+		
+		
+		
+		
+	}
+}
+

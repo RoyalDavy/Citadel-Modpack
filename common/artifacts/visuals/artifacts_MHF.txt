@@ -1,0 +1,46 @@
+﻿
+##################################################
+# Bows 
+##################################################
+
+longbow_MHF = {
+	icon = "artifact_weirwood_bow_and_arrow.dds"
+	asset = { # LONGBOW
+		trigger = {
+			artifact_should_use_gfx_type_trigger = { TYPE = indian_unit }
+		}
+		reference = ep2_indian_bow_01_a_portrait_entity
+	}
+	asset = { # BAMBOO
+		trigger = {
+			NOT = {
+				artifact_should_use_gfx_type_trigger = { TYPE = indian_unit }
+			}
+		}
+		reference = ep2_long_bow_01_a_portrait_entity
+	}
+}
+
+##################################################
+# Armors 
+##################################################
+
+runic_armor_MHF = {
+	icon = "artifact_royce_runic_armor.dds"
+	asset = m_clothes_spe_royce_war_nob_03_entity
+}
+
+flayed_man_armor_MHF = {
+	icon = "artifact_bolton_flayed_man_armor.dds"
+	asset = male_clothes_secular_valyrian_blackfyre_war_03_entity
+}
+
+##################################################
+# Filler 
+##################################################
+
+silver_nugget_MHF = {
+	icon = "silver_nugget_MHF.dds"
+	# Indian
+	asset = ep1_western_box_small_basic_01_a_entity
+}

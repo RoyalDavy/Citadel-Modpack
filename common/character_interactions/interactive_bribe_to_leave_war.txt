@@ -1,0 +1,213 @@
+﻿interactive_bribe_to_leave_war_interaction = {
+	common_interaction = yes
+	interface_priority = 68
+
+	category = interaction_category_diplomacy
+	desc = interactive_bribe_to_leave_war_desc
+	icon = alliance
+
+	force_notification = yes
+	greeting = positive
+	ai_min_reply_days = 0
+	ai_max_reply_days = 0
+	
+	is_shown = {
+		NOT = {
+			has_game_rule = bribe_to_leave_war_miv_disabled
+		}
+
+		scope:recipient = {
+			is_at_war = yes
+			is_landed = yes
+			
+			any_character_war = {
+				NOT = { is_civil_war = yes }
+
+				NOR = {
+					primary_attacker = scope:recipient
+					primary_defender = scope:recipient
+				}
+
+				primary_attacker = {
+					NOT = { is_allied_to = scope:recipient }
+				}
+				primary_defender = {
+					NOT = { is_allied_to = scope:recipient }
+				}
+
+				OR = {
+					AND = {
+						any_war_attacker = { this = scope:actor }
+						any_war_defender = { this = scope:recipient }
+					}
+					AND = {
+						any_war_attacker = { this = scope:recipient }
+						any_war_defender = { this = scope:actor }
+					}
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			every_character_war = {
+				limit = {
+					NOT = { is_civil_war = yes }
+
+					NOR = {
+						primary_attacker = scope:recipient
+						primary_defender = scope:recipient
+					}
+	
+					primary_attacker = {
+						NOT = { is_allied_to = scope:recipient }
+					}
+					primary_defender = {
+						NOT = { is_allied_to = scope:recipient }
+					}
+	
+					OR = {
+						AND = {
+							any_war_attacker = { this = scope:actor }
+							any_war_defender = { this = scope:recipient }
+						}
+						AND = {
+							any_war_attacker = { this = scope:recipient }
+							any_war_defender = { this = scope:actor }
+						}
+					}
+				}
+				scope:recipient = {
+					custom_description = {
+						text = interactive_bribe_to_leave_war_tooltip_text
+						subject = this
+						object = prev
+					}
+				}
+				hidden_effect = { remove_participant = scope:recipient }
+
+				if = {
+					limit = {
+						is_attacker = scope:recipient
+						NOT = { primary_attacker = scope:actor }
+					}
+					primary_attacker = { 
+						add_opinion = {
+							modifier = betrayed_me_opinion
+							target = scope:recipient
+							opinion = -25
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_defender = scope:recipient
+						NOT = { primary_defender = scope:actor }
+					}
+					primary_defender = { 
+						add_opinion = {
+							modifier = betrayed_me_opinion
+							target = scope:recipient
+							opinion = -25
+						}
+					}
+				}
+			}
+		}
+
+		scope:actor = {
+			if = {
+				limit = {
+					scope:gold = yes
+					gold > major_gold_value
+				}
+				pay_short_term_gold = {
+					target = scope:recipient
+					gold = major_gold_value
+				}
+			}
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+			if = {
+				limit = {
+					scope:prisoner = yes
+					scope:recipient = {
+						is_imprisoned_by = scope:actor
+					}
+				}
+				scope:recipient = {
+					release_from_prison = yes
+				}
+			}
+		}
+	}
+	
+	on_decline = {
+	}
+
+	send_option = {
+		is_valid = {
+			scope:actor.gold > scope:actor.major_gold_value
+		}
+		flag = gold
+		localization = interactive_political_maneuver_gold_option
+	}
+	send_option = {
+		is_valid = {
+			scope:actor = { has_usable_hook = scope:recipient }
+		}
+		flag = hook
+		localization = interactive_political_maneuver_hook_option
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				is_imprisoned_by = scope:actor
+			}
+		}
+		flag = prisoner
+		localization = interactive_political_maneuver_prisoner_option
+	}
+	send_options_exclusive = no
+
+	ai_accept = {
+		base = -50
+
+		# At 71 opinion, they'll join for free
+		opinion_modifier = {
+			opinion_target = scope:actor
+			multiplier = 0.7
+		}
+
+		opinion_modifier = {
+			opinion_target = scope:recipient.liege
+			multiplier = -0.25 # reduced impact
+		}
+
+		modifier = {
+			scope:gold = yes
+			add = 30
+			desc = interactive_political_maneuver_gold_tooltip
+		}
+
+		modifier = {
+			scope:hook = yes
+			add = 40
+			desc = interactive_political_maneuver_hook_tooltip
+		}
+
+		modifier = {
+			scope:prisoner = yes
+			add = 50
+			desc = interactive_political_maneuver_prisoner_tooltip
+		}
+	}
+	
+	ai_will_do = { base = 0 }
+}

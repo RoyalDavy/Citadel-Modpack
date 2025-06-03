@@ -1,0 +1,14 @@
+﻿d_rivers_head = {
+	6658.1.1 = {
+		holder = Bricker_49
+	}
+	6675.1.1 = {
+		holder = Bricker_47
+	}
+	6718.1.1 = {
+		holder = Bricker_46
+	}
+	7500.1.1 = {
+		holder = 0
+	}
+}

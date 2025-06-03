@@ -1,0 +1,240 @@
+﻿# Events for eyereplace
+
+namespace = eyereplace
+
+################################
+# Special Eye Gem Events
+################################
+
+# # First selection event
+# eyereplace.0001 = {
+# 	type = character_event
+# 	title = eyereplace.0001.t
+# 	desc = eyereplace.0001.desc
+# 	theme = stewardship
+
+# 	override_background = {
+# 		reference = market
+# 	}
+# 	left_portrait = root
+
+# 	option = {
+# 		name = eyereplace.0001.a	#First three gems
+# 		trigger_event = { id = eyereplace.0002 }
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0001.b	#Second set of gems
+# 		trigger_event = { id = eyereplace.0003 }
+
+# 	}
+# 	option = {
+# 		name = eyereplace.0001.c	#Final set of gems
+# 		trigger_event = { id = eyereplace.0004 }
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0001.d	#Nevermind...
+# 		add_gold = 100 # eye_replace_cost doesn't exist
+# 		remove_decision_cooldown = replace_eye_decision
+# 	}
+# }
+
+# # Sapphire, Ruby, Diamond Set
+# eyereplace.0002 = {
+# 	type = character_event
+# 	title = eyereplace.0001.t
+# 	desc = eyereplace.0002.desc
+# 	theme = stewardship
+
+# 	override_background = {
+# 		reference = market
+# 	}
+# 	left_portrait = root
+
+# 	option = {
+# 		name = eyereplace.0002.a	#Sapphire
+# 		add_character_flag = has_eyegem_saphire
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0002.b	#Ruby
+# 		add_character_flag = has_eyegem_red
+# 	}
+# 	option = {
+# 		name = eyereplace.0002.c	#Diamond
+# 		add_character_flag = has_eyegem_white
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0001.e	#I changed my mind, take me back to the gems!
+# 		trigger_event = { id = eyereplace.0001 } # Loopback to the menu
+# 	}
+# }
+
+# # Opal, Obsidian, Emerald
+# eyereplace.0003 = {
+# 	type = character_event
+# 	title = eyereplace.0001.t
+# 	desc = eyereplace.0003.desc
+# 	theme = stewardship
+
+# 	override_background = {
+# 		reference = market
+# 	}
+# 	left_portrait = root
+
+# 	option = {
+# 		name = eyereplace.0003.a	#Opal
+# 		add_character_flag = has_eyegem_blue
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0003.b	#Obsidian
+# 		add_character_flag = has_eyegem_black
+# 	}
+# 	option = {
+# 		name = eyereplace.0003.c	#Emerald
+# 		add_character_flag = has_eyegem_green
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0001.e	#I changed my mind, take me back to the gems!
+# 		trigger_event = { id = eyereplace.0001 } # Loopback to the main menu
+# 	}
+# }
+
+# # Citrine, Spessartite, Amethyst
+# eyereplace.0004 = {
+# 	type = character_event
+# 	title = eyereplace.0001.t
+# 	desc = eyereplace.0004.desc
+# 	theme = stewardship
+
+# 	override_background = {
+# 		reference = market
+# 	}
+# 	left_portrait = root
+
+# 	option = {
+# 		name = eyereplace.0004.a	#Citrine
+# 		add_character_flag = has_eyegem_yellow
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0004.b	#Spessartite
+# 		add_character_flag = has_eyegem_orange
+# 	}
+# 	option = {
+# 		name = eyereplace.0004.c	#Amethyst
+# 		add_character_flag = has_eyegem_purple
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0001.e	#I changed my mind, take me back to the gems!
+# 		trigger_event = { id = eyereplace.0001 } # Loopback to the main menu
+# 	}
+# }
+
+# Event that removes your gem and reverts to the pirate patch
+eyereplace.0005 = {
+	type = character_event
+	title = eyereplace.0001.t # Reuses the same loc
+	desc = eyereplace.0005.desc
+	theme = stewardship
+
+	override_background = {
+		reference = market
+	}
+	left_portrait = root
+
+	option = {
+		name = remove_facemask.0003.a
+		remove_character_flag = has_eyegem_red
+		remove_character_flag = has_eyegem_saphire
+		remove_character_flag = has_eyegem_white
+		remove_character_flag = has_eyegem_blue
+		remove_character_flag = has_eyegem_green
+		remove_character_flag = has_eyegem_black
+		remove_character_flag = has_eyegem_yellow
+		remove_character_flag = has_eyegem_orange
+		remove_character_flag = has_eyegem_purple
+	}
+	option = {
+		name = buy_facemask.0001.f
+		remove_decision_cooldown = remove_eye_gem_decision
+	}
+}
+
+# # Rebound event, go back to gem selection
+# eyereplace.0011 = {
+# 	type = character_event
+# 	orphan = yes
+# 	title = eyereplace.0001.t
+# 	desc = eyereplace.0011.desc
+# 	theme = stewardship
+
+# 	override_background = {
+# 		reference = market
+# 	}
+# 	left_portrait = root
+
+# 	option = {
+# 		name = eyereplace.0001.a	#First three gems - Sapphire, Ruby, Diamond Set
+# 		trigger_event = { id = eyereplace.0002 }
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0001.b	#Second set of gems - Opal, Obsidian, Emerald Set
+# 		trigger_event = { id = eyereplace.0003 }
+# 	}
+# 	option = {
+# 		name = eyereplace.0001.c	#Final set of gems - # Citrine, Spessartite, Amethyst
+# 		trigger_event = { id = eyereplace.0004 }
+# 	}
+
+# 	option = {
+# 		name = eyereplace.0001.d	#Nevermind...
+# 		remove_decision_cooldown = replace_eye_decision
+# 		add_gold = 100 # Refund them
+# 	}
+# }
+
+# # AI eye selection event - meant to be random
+# eyereplace.0999 = {
+# 	hidden = yes
+
+# 	immediate = {
+# 		random_list = {
+# 			10 = {
+# 				add_character_flag = has_eyegem_red
+# 			}
+# 			10 = {
+# 				add_character_flag = has_eyegem_saphire
+# 			}
+# 			10 = {
+# 				add_character_flag = has_eyegem_white
+# 			}
+# 			10 = {
+# 				add_character_flag = has_eyegem_blue
+# 			}
+# 			10 = {
+# 				add_character_flag = has_eyegem_green
+# 			}
+# 			10 = {
+# 				add_character_flag = has_eyegem_black
+# 			}
+# 			10 = {
+# 				add_character_flag = has_eyegem_yellow
+# 			}
+# 			10 = {
+# 				add_character_flag = has_eyegem_orange
+# 			}
+# 			10 = {
+# 				add_character_flag = has_eyegem_purple
+# 			}
+# 			10 = { add_gold = 100 } # They change their mind and get a refund
+# 		}
+# 	}
+# }
+

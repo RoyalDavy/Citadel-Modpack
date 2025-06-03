@@ -1,0 +1,2807 @@
+﻿############################   ROYAL PROGRESS WINNERS   ############################
+####################################################################################
+
+###### HOUSE LORELEY (id = dynn_Loreley)
+############################
+###
+###
+Loreley_34 = {
+	name = Lyanne # married Umfred Borrell
+	dynasty = dynn_Loreley
+	female = yes
+
+	religion = fots_seven
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_17
+	mother = Torrent_40
+
+	8201.1.1 = { birth = yes }
+	8267.1.1 = { death = yes }
+}
+Loreley_19 = {
+	name = Royce
+	dynasty = dynn_Loreley
+
+	religion = fots_seven
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_18
+	mother = Woodhull_48
+
+	8215.1.1 = { birth = yes }
+	8236.1.1 = { add_spouse = Borrell_29 } # Jorelle Borrell
+	8267.1.1 = { death = yes }
+}
+Loreley_20 = {
+	name = Qarl
+	dynasty = dynn_Loreley
+
+	religion = fots_seven
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_19
+	mother = Borrell_29
+
+	8236.1.1 = { birth = yes }
+	8260.1.1 = { add_spouse = Longthorpe_27 } # Ethel Longthorpe
+	8281.1.1 = { death = yes }
+}
+Loreley_41 = {
+	name = Dancy # married Lyn Torrent
+	dynasty = dynn_Loreley
+	female = yes
+
+	religion = fots_seven
+	culture = sisterman
+	father = Loreley_19
+	mother = Borrell_29
+
+	8241.1.1 = { birth = yes }
+}
+Loreley_31 = {
+	name = Danisa # married Horton Longthorpe
+	dynasty = dynn_Loreley
+	female = yes
+
+	religion = fots_seven
+	culture = sisterman
+	father = Loreley_19
+	mother = Borrell_29
+
+	8242.1.1 = { birth = yes }
+}
+Loreley_25 = {
+	name = Roger
+	dynasty = dynn_Loreley
+
+	religion = fots_seven
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_20
+	mother = Longthorpe_34
+
+	8262.1.1 = { birth = yes }
+	8282.1.1 = { add_spouse = Torrent_28 } # Mavis Torrent
+}
+Loreley_35 = {
+	name = Jon # married Melicent Borrell
+	dynasty = dynn_Loreley
+
+	religion = fots_seven
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_20
+	mother = Longthorpe_34
+
+	8264.1.1 = { birth = yes }
+}
+Loreley_26 = {
+	name = Robert
+	dynasty = dynn_Loreley
+
+	religion = fots_seven
+	culture = sisterman
+	trait = the_mark
+	trait = beauty_good_1
+	trait = twin
+
+	father = Loreley_25
+	mother = Torrent_28
+
+	8283.1.1 = { birth = yes }
+}
+Loreley_27 = {
+	name = Melusine
+	dynasty = dynn_Loreley
+	female = yes
+
+	religion = fots_seven
+	culture = sisterman
+	trait = the_mark
+	trait = beauty_good_1
+	trait = twin
+
+	father = Loreley_25
+	mother = Torrent_28
+
+	8283.1.1 = { birth = yes }
+}
+
+###### HOUSE COVENNE (id = dynn_Covenne)
+############################
+###
+###
+Covenne_1 = {
+	name = Igon # a lord
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_33
+	mother = Graves_32
+
+	trait = education_stewardship_3
+	trait = just
+	trait = patient
+	trait = temperate
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8233.11.16 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8250.1.1 = {
+		trait = knight
+		trait = shrewd
+	}
+	8255.1.1 = { add_spouse = Cobb_26 } # Desmera Cobb
+}
+### Issue of Igon
+Covenne_35 = {
+	name = Maris # married Willam Goode
+	dynasty = dynn_Covenne
+	female = yes
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_1
+	mother = Cobb_26
+
+	trait = education_stewardship_2
+	trait = generous
+	trait = zealous
+	trait = temperate
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8256.8.8 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+}
+Covenne_36 = {
+	name = Normund
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_1
+	mother = Cobb_26
+
+	trait = education_martial_3
+	trait = impatient
+	trait = trusting
+	trait = fickle
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8258.5.29 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8275.1.1 = {
+		trait = knight
+		add_spouse = Pommingham_11 # Samantha Pommingham
+	}
+	8282.11.25 = {
+		death = {
+			death_reason = death_battle # Battle of Ashford
+			killer = Baratheon_2 # Robert Baratheon
+		}
+	}
+}
+Covenne_37 = {
+	name = Alys # married Ryam Risley
+	dynasty = dynn_Covenne
+	female = yes
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_1
+	mother = Cobb_26
+
+	trait = education_diplomacy_2
+	trait = generous
+	trait = calm
+	trait = compassionate
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8262.10.26 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+}
+Covenne_38 = {
+	name = Bethany
+	dynasty = dynn_Covenne
+	female = yes
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_1
+	mother = Cobb_26
+
+	trait = education_diplomacy_2
+	trait = gregarious
+	trait = fickle
+	trait = ambitious
+	trait = bossy
+
+	disallow_random_traits = yes
+
+	8265.1.14 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+}
+### Issue of Normund
+Covenne_39 = {
+	name = Alekyne
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = homosexual
+
+	father = Covenne_36
+	mother = Pommingham_11
+
+	trait = education_stewardship_3
+	trait = intellect_good_1
+	trait = twin
+	trait = compassionate
+	trait = diligent
+	trait = shy
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8276.9.16 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_homosexual
+	}
+	8289.1.1 = {
+		effect = {
+			agot_set_as_ward_and_squire_history_effect = { KNIGHT = character:Meadows_47 } # Ormond Meadows
+		}
+	}
+	8294.1.1 = {
+		trait = knight
+		effect = {
+			agot_knighted_char_history_effect = { KNIGHT = character:Meadows_47 } # Ormond Meadows
+			if = {
+				limit = { character:Meadows_48 = { is_alive = yes } }
+				set_relation_lover = character:Meadows_48 # Warryn Meadows
+			}
+		}
+	}
+}
+Covenne_40 = {
+	name = Alester
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_36
+	mother = Pommingham_11
+
+	trait = education_martial_3
+	trait = twin
+	trait = brave
+	trait = humble
+	trait = stubborn
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8276.9.16 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8294.1.1 = {
+		trait = knight
+		trait = lifestyle_hunter
+		trait = military_engineer
+	}
+}
+Covenne_41 = {
+	name = Rhea
+	dynasty = dynn_Covenne
+	female = yes
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_36
+	mother = Pommingham_11
+
+	trait = education_diplomacy_3
+	trait = calm
+	trait = humble
+	trait = diligent
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8279.12.28 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+}
+
+### Junior branch, first cousins to Igon
+############################
+Covenne_42 = {
+	name = Gormon
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_34 # Emerick Covenne
+	mother = Sloane_30
+
+	trait = education_martial_2
+	trait = physique_good_1
+	trait = vengeful
+	trait = brave
+	trait = arrogant
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8239.3.19 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8256.1.1 = {
+		trait = knight
+		trait = lifestyle_hunter
+		trait = one_eyed
+	}
+	8257.1.1 = { add_spouse = Rodden_25 } # Elia Rodden
+}
+Covenne_43 = {
+	name = Lucas
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_34 # Emerick Covenne
+	mother = Sloane_30
+
+	trait = education_diplomacy_3
+	trait = calm
+	trait = gregarious
+	trait = forgiving
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8244.4.29 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8261.1.1 = {
+		trait = knight
+		trait = poet
+	}
+	8263.1.1 = { add_spouse = Oldflowers_26 } # Lia Oldflowers
+}
+### Issue of Gormon
+Covenne_44 = {
+	name = Myles
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_42
+	mother = Rodden_25
+
+	trait = education_martial_3
+	trait = intellect_good_1
+	trait = brave
+	trait = forgiving
+	trait = honest
+	trait = trusting
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8258.5.3 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8275.1.1 = { trait = knight }
+	8283.4.1 = {
+		death = {
+			death_reason = death_siege # Siege of Storm's End
+		}
+	}
+}
+Covenne_45 = {
+	name = Florence
+	dynasty = dynn_Covenne
+	female = yes
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_42
+	mother = Rodden_25
+
+	trait = education_diplomacy_1
+	trait = beauty_good_1
+	trait = stuttering
+	trait = shy
+	trait = compassionate
+	trait = temperate
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8260.7.12 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+}
+Covenne_46 = {
+	name = Parmen
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_42
+	mother = Rodden_25
+
+	trait = education_martial_2
+	trait = physique_bad_1
+	trait = albino
+	trait = wrathful
+	trait = ambitious
+	trait = deceitful
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	give_nickname = nick_the_pale
+
+	8264.10.13 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8281.1.1 = {
+		trait = knight
+		trait = shrewd
+	}
+}
+### Issue of Lucas
+Covenne_47 = {
+	name = Theo
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_43
+	mother = Oldflowers_26
+
+	trait = education_diplomacy_3
+	trait = lustful
+	trait = gregarious
+	trait = fickle
+	trait = bossy
+
+	disallow_random_traits = yes
+
+	8265.10.17 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8282.1.1 = { trait = knight }
+}
+Covenne_48 = {
+	name = Vortimer
+	dynasty = dynn_Covenne
+
+	religion = fots_seven
+	culture = marcher
+	sexuality = heterosexual
+
+	father = Covenne_43
+	mother = Oldflowers_26
+
+	trait = education_martial_2
+	trait = calm
+	trait = brave
+	trait = honest
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8268.9.15 = {
+		birth = yes
+		add_character_flag = sexuality_ensure_heterosexual
+	}
+	8285.1.1 = { trait = knight }
+}
+
+###### HOUSE CLYFFHOOF (id = dynn_Clyffhoof)
+############################
+###
+###
+Clyffhoof_1 = {
+	name = Jon
+	dynasty = dynn_Clyffhoof
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	8260.1.1 = { birth = yes }
+	8276.1.1 = { trait = knight }
+}
+
+###### HOUSE TETTING (id = dynn_Tetting)
+############################
+###
+###
+Tetting_1 = {
+	name = Willem # a lord
+	dynasty = dynn_Tetting
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_41
+	mother = Peckledon_31
+
+	trait = education_stewardship_3
+	trait = temperate
+
+	8213.1.1 = { birth = yes }
+	8229.1.1 = { trait = knight }
+	8232.1.1 = { add_spouse = Turnberry_25 } # Rosamund Turnberry
+	8263.1.1 = { death = yes }
+}
+Tetting_2 = {
+	name = Byron
+	dynasty = dynn_Tetting
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_41
+	mother = Peckledon_31
+
+	8216.1.1 = { birth = yes }
+	8232.1.1 = { trait = knight }
+	8235.1.1 = { add_spouse = Tetting_hh_2 } # Willow
+	8269.1.1 = { death = yes }
+}
+### Issue of Willem
+Tetting_3 = {
+	name = Elinor
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_1
+	mother = Turnberry_25
+
+	8235.1.1 = { birth = yes }
+	8255.1.1 = { trait = septon } # Septa
+}
+Tetting_4 = {
+	name = Colmar # a lord
+	dynasty = dynn_Tetting
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_1
+	mother = Turnberry_25
+
+	trait = education_martial_2
+
+	8237.1.1 = { birth = yes }
+	8253.1.1 = { trait = knight }
+	8255.1.1 = { add_spouse = Ruttiger_28 } # Alyssa Ruttiger
+	8278.1.1 = { death = yes }
+}
+Tetting_5 = {
+	name = Addam
+	dynasty = dynn_Tetting
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_1
+	mother = Turnberry_25
+
+	8240.1.1 = { birth = yes }
+	8256.1.1 = { trait = knight }
+}
+### Issue of Colmar
+Tetting_6 = {
+	name = Axell # a lord
+	dynasty = dynn_Tetting
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_4
+	mother = Ruttiger_28
+
+	8259.1.1 = { birth = yes }
+	8275.1.1 = { trait = knight }
+}
+Tetting_7 = {
+	name = Alys
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_4
+	mother = Ruttiger_28
+
+	8265.1.1 = { birth = yes }
+}
+### Issue of Byron
+Tetting_8 = {
+	name = Amory
+	dynasty = dynn_Tetting
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_2
+	mother = Tetting_hh_2
+
+	8236.1.1 = { birth = yes }
+	8252.1.1 = { trait = knight }
+	8255.1.1 = { add_spouse = Chaynes_38 } # Cass Chaynes
+}
+### Issue of Amory
+Tetting_9 = {
+	name = Duncan
+	dynasty = dynn_Tetting
+	dna = Tetting_9
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_8
+	mother = Chaynes_38
+
+	8258.1.1 = { birth = yes }
+	8274.1.1 = { trait = knight }
+}
+Tetting_10 = {
+	name = Hugh
+	dynasty = dynn_Tetting
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_8
+	mother = Chaynes_38
+
+	8261.1.1 = { birth = yes }
+	8277.1.1 = { trait = knight }
+}
+Tetting_11 = {
+	name = Elinor
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Tetting_8
+	mother = Chaynes_38
+
+	8264.1.1 = { birth = yes }
+}
+### Household
+Tetting_hh_2 = {
+	name = Willow # married Byron Tetting
+	female = yes
+
+	religion = fots_seven
+	culture = westerman
+
+	8216.1.1 = { birth = yes }
+	8264.1.1 = { death = yes }
+}
+
+###### HOUSE ASHTYDE (id = dynn_Ashtyde)
+############################
+###
+###
+Ashtyde_30 = {
+	name = Girane
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_29
+	mother = Ashtyde_rs_29
+
+	8227.1.1 = { birth = yes }
+	8274.1.1 = {
+		death = { death_reason = death_accident }
+	}
+}
+Ashtyde_31 = {
+	name = Duncan # a lord
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_29
+	mother = Ashtyde_rs_29
+
+	8230.1.1 = { birth = yes }
+	8246.1.1 = { add_spouse = Ashtyde_rs_31 }
+	8299.1.1 = {
+		trait = ill
+		death = { death_reason = death_ill }
+	}
+}
+Ashtyde_rs_31 = {
+	name = Arra
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8228.1.1 = { birth = yes }
+	8281.1.1 = { death = yes }
+}
+Ashtyde_32 = {
+	name = Farris
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_29
+	mother = Ashtyde_rs_29
+
+	8231.1.1 = { birth = yes }
+	8260.1.1 = { add_spouse = Ashtyde_rs_32 }
+	8270.1.1 = {
+		death = { death_reason = death_fire }
+	}
+}
+Ashtyde_rs_32 = {
+	name = Donna
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8237.1.1 = { birth = yes }
+	8291.1.1 = { death = yes }
+}
+Ashtyde_33 = {
+	name = Mark
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_29
+	mother = Ashtyde_rs_29
+
+	8234.1.1 = { birth = yes }
+	8259.1.1 = { add_spouse = Ashtyde_rs_33 }
+	8275.1.1 = { death = yes }
+}
+Ashtyde_rs_33 = {
+	name = Kerena
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8242.1.1 = { birth = yes }
+	8287.1.1 = { death = yes }
+}
+### Issue of Farris
+Ashtyde_34 = {
+	name = Elyn
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_32
+	mother = Ashtyde_rs_32
+
+	8263.1.1 = { birth = yes }
+}
+Ashtyde_35 = {
+	name = Moryne
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_32
+	mother = Ashtyde_rs_32
+
+	8267.1.1 = { birth = yes }
+	8291.1.1 = {
+		trait = ill
+		death = { death_reason = death_ill }
+	}
+}
+Ashtyde_36 = {
+	name = Jonelle
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_32
+	mother = Ashtyde_rs_32
+
+	8268.1.1 = { birth = yes }
+	8291.1.1 = {
+		death = { death_reason = death_drowned }
+	}
+}
+### Issue of Duncan
+Ashtyde_45 = {
+	name = Ellard # a lord
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_31
+	mother = Ashtyde_rs_31
+
+	8250.1.1 = { birth = yes }
+	8279.1.1 = { add_spouse = Ashtyde_rs_45 }
+}
+Ashtyde_rs_45 = {
+	name = Kyra
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8256.1.1 = { birth = yes }
+	8299.1.1 = { death = yes }
+}
+Ashtyde_46 = {
+	name = Robb
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_31
+	mother = Ashtyde_rs_31
+
+	8251.1.1 = { birth = yes }
+	8267.1.1 = { add_spouse = Ashtyde_rs_46 }
+}
+Ashtyde_rs_46 = {
+	name = Ashlynne
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8247.1.1 = { birth = yes }
+	8289.1.1 = { death = yes }
+}
+Ashtyde_1 = {
+	name = Jon
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+	
+	father = Ashtyde_31
+	mother = Ashtyde_rs_31
+
+	8252.1.1 = { birth = yes }
+}
+### Issue of Mark
+Ashtyde_37 = {
+	name = Hallis
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_33
+	mother = Ashtyde_rs_33
+
+	8261.1.1 = { birth = yes }
+	8289.1.1 = { add_spouse = Ashtyde_rs_37 }
+}
+Ashtyde_rs_37 = {
+	name = Jeyne
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8264.1.1 = { birth = yes }
+}
+Ashtyde_38 = {
+	name = Lyessa
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_33
+	mother = Ashtyde_rs_33
+
+	8263.1.1 = { birth = yes }
+}
+Ashtyde_39 = {
+	name = Hullen
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_33
+	mother = Ashtyde_rs_33
+
+	8265.1.1 = { birth = yes }
+	8281.1.1 = { add_spouse = Ashtyde_rs_39 }
+	8288.1.1 = { death = yes }
+}
+Ashtyde_rs_39 = {
+	name = Morah
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8257.1.1 = { birth = yes }
+	8285.1.1 = { death = yes }
+}
+Ashtyde_40 = {
+	name = Norren
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_33
+	mother = Ashtyde_rs_33
+
+	8268.1.1 = { birth = yes }
+	8291.1.1 = { add_spouse = Ashtyde_rs_40 }
+}
+Ashtyde_rs_40 = {
+	name = Bethany
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8273.1.1 = { birth = yes }
+}
+### Issue of Ellard
+Ashtyde_48 = {
+	name = Branna
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_45
+	mother = Ashtyde_rs_45
+
+	8280.1.1 = { birth = yes }
+}
+Ashtyde_49 = {
+	name = Ecton
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_45
+	mother = Ashtyde_rs_45
+
+	8281.1.1 = { birth = yes }
+}
+Ashtyde_50 = {
+	name = Arnolf
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_45
+	mother = Ashtyde_rs_45
+
+	8284.1.1 = { birth = yes }
+}
+Ashtyde_51 = {
+	name = Karl
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_45
+	mother = Ashtyde_rs_45
+
+	8286.1.1 = { birth = yes }
+}
+### Issue of Robb
+Ashtyde_47 = {
+	name = Brittany
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_46
+	mother = Ashtyde_rs_46
+
+	8271.1.1 = { birth = yes }
+}
+### Issue of Hullen
+Ashtyde_41 = {
+	name = Dalla
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_39
+	mother = Ashtyde_rs_39
+
+	8282.1.1 = { birth = yes }
+}
+### Issue of Hallis
+Ashtyde_42 = {
+	name = Hoarfrost
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_37
+	mother = Ashtyde_rs_37
+
+	8292.1.1 = { birth = yes }
+}
+Ashtyde_43 = {
+	name = Harwin
+	dynasty = dynn_Ashtyde
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_37
+	mother = Ashtyde_rs_37
+
+	8295.1.1 = { birth = yes }
+}
+### Issue of Norren
+Ashtyde_44 = {
+	name = Kyra
+	dynasty = dynn_Ashtyde
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Ashtyde_40
+	mother = Ashtyde_rs_40
+
+	8292.1.1 = { birth = yes }
+}
+
+###### HOUSE WHITEBOW (id = dynn_Whitebow)
+############################
+###
+###
+Whitebow_1 = {
+	name = Jon
+	dynasty = dynn_Whitebow
+
+	religion = old_gods_wnw
+	culture = riverlander
+
+	8252.1.1 = { birth = yes }
+}
+
+###### HOUSE REDSTEEL (id = dynn_Redsteel)
+############################
+###
+###
+Redsteel_1 = {
+	name = Daeron
+	dynasty = dynn_Redsteel
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_13
+
+	8205.1.1 = { birth = yes }
+	8221.1.1 = { trait = knight }
+	8276.1.1 = { death = yes }
+}
+### Issue of Daeron
+Redsteel_2 = {
+	name = Aron
+	dynasty = dynn_Redsteel
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_1
+
+	8232.1.1 = { birth = yes }
+	8248.1.1 = { trait = knight }
+	8260.1.1 = { add_spouse = Redsteel_rs_1 }
+}
+Redsteel_rs_1 = {
+	name = Mariah
+	female = yes
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	trait = education_stewardship_3
+
+	8233.1.1 = { birth = yes }
+}
+Redsteel_3 = {
+	name = Harrold
+	dynasty = dynn_Redsteel
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_1
+
+	8235.1.1 = { birth = yes }
+	8251.1.1 = { trait = knight }
+	8254.1.1 = { add_spouse = Redsteel_p_1 }
+}
+Redsteel_p_1 = {
+	name = Jeyne # placeholder wife
+	female = yes
+
+	religion = fots_seven
+	culture = salt_dornish
+
+	8235.1.1 = { birth = yes }
+}
+Redsteel_4 = {
+	name = Alarra
+	dynasty = dynn_Redsteel
+	female = yes
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_1
+
+	8238.1.1 = { birth = yes }
+}
+Redsteel_5 = {
+	name = Eric
+	dynasty = dynn_Redsteel
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_1
+
+	8241.1.1 = { birth = yes }
+	8261.1.1 = {
+		trait = maester_historical
+		effect = { agot_maester_starting_setup_history_effect = yes }
+	}
+}
+### Issue of Aron
+Redsteel_6 = {
+	name = Triston
+	dynasty = dynn_Redsteel
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_2
+	mother = Redsteel_rs_1
+
+	8261.1.1 = { birth = yes }
+	8279.1.1 = { trait = knight }
+	8280.1.1 = { add_spouse = Redsteel_p_2 }
+}
+Redsteel_7 = {
+	name = Rhonda
+	dynasty = dynn_Redsteel
+	female = yes
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_2
+	mother = Redsteel_rs_1
+
+	8262.1.1 = { birth = yes }
+}
+Redsteel_8 = {
+	name = Ryon
+	dynasty = dynn_Redsteel
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_2
+	mother = Redsteel_rs_1
+
+	8263.1.1 = { birth = yes }
+	8282.1.1 = { trait = knight }
+}
+Redsteel_9 = {
+	name = Rylla
+	dynasty = dynn_Redsteel
+	female = yes
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_2
+	mother = Redsteel_rs_1
+
+	8266.1.1 = { birth = yes }
+}
+Redsteel_10 = {
+	name = Roland
+	dynasty = dynn_Redsteel
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_2
+	mother = Redsteel_rs_1
+
+	8271.1.1 = { birth = yes }
+	8290.1.1 = { trait = knight }
+}
+Redsteel_p_2 = {
+	name = Jeyne # placeholder wife
+	female = yes
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	8261.1.1 = { birth = yes }
+}
+### Issue of Harrold
+Redsteel_11 = {
+	name = Alyssa
+	dynasty = dynn_Redsteel
+	female = yes
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_3
+	mother = Redsteel_p_1
+
+	8255.1.1 = { birth = yes }
+}
+### Issue of Triston
+Redsteel_12 = {
+	name = Arthur
+	dynasty = dynn_Redsteel
+
+	religion = fots_seven
+	culture = stone_dornish
+
+	father = Redsteel_6
+	mother = Redsteel_p_2
+
+	8281.1.1 = { birth = yes }
+}
+
+###### HOUSE MOIL (id = dynn_Moil)
+############################
+###
+###
+Moil_56 = {
+	name = Walton # a lord
+	dynasty = dynn_Moil
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_rs_55
+	mother = Moil_55
+
+	8233.1.1 = { birth = yes }
+	8249.1.1 = { add_spouse = Moil_rs_56 }
+	8270.1.1 = {
+		death = { death_reason = death_horse }
+	}
+}
+Moil_rs_56 = {
+	name = Eyla
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8225.1.1 = { birth = yes }
+	8280.1.1 = { death = yes }
+}
+Moil_57 = {
+	name = Dalla
+	dynasty = dynn_Moil
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_rs_55
+	mother = Moil_55
+
+	8237.1.1 = { birth = yes }
+	8291.1.1 = {
+		death = { death_reason = death_natural_causes }
+	}
+}
+Moil_58 = {
+	name = Donna
+	dynasty = dynn_Moil
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_rs_55
+	mother = Moil_55
+
+	8240.1.1 = { birth = yes }
+}
+Moil_59 = {
+	name = Benjen
+	dynasty = dynn_Moil
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_rs_55
+	mother = Moil_55
+
+	8242.1.1 = { birth = yes }
+	8258.1.1 = { add_spouse = Moil_rs_59 }
+	8279.1.1 = {
+		death = { death_reason = death_heart_attack }
+	}
+}
+Moil_rs_59 = {
+	name = Girane
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8236.1.1 = { birth = yes }
+	8295.1.1 = { death = yes }
+}
+Moil_60 = {
+	name = Katrina
+	dynasty = dynn_Moil
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_rs_55
+	mother = Moil_55
+
+	8246.1.1 = { birth = yes }
+}
+### Issue of Benjen
+Moil_61 = {
+	name = Dorren
+	dynasty = dynn_Moil
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_59
+	mother = Moil_rs_59
+
+	8261.1.1 = { birth = yes }
+	8283.1.1 = { add_spouse = Moil_rs_61 }
+	8285.1.1 = {
+		death = { death_reason = death_drowned }
+	}
+}
+Moil_rs_61 = {
+	name = Dacey
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8266.1.1 = { birth = yes }
+}
+Moil_62 = {
+	name = Denys
+	dynasty = dynn_Moil
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_59
+	mother = Moil_rs_59
+
+	8264.1.1 = { birth = yes }
+	8281.1.1 = { add_spouse = Moil_rs_62 }
+}
+Moil_rs_62 = {
+	name = Joslena
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8264.1.1 = { birth = yes }
+}
+### Issue of Denys
+Moil_68 = {
+	name = Kyle
+	dynasty = dynn_Moil
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_62
+	mother = Moil_rs_62
+
+	8284.1.1 = { birth = yes }
+}
+### Issue of Dorren
+Moil_63 = {
+	name = Lyarra
+	dynasty = dynn_Moil
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_61
+	mother = Moil_rs_61
+
+	8284.1.1 = { birth = yes }
+}
+### Issue of Walton
+Moil_64 = {
+	name = Lars # a lord
+	dynasty = dynn_Moil
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_56
+	mother = Moil_rs_56
+
+	8250.1.1 = { birth = yes }
+	8275.1.1 = { add_spouse = Moil_rs_64 }
+	8299.12.15 = {
+		death = {
+			death_reason = death_bloody_wedding # The Red Wedding
+			killer = Frey_1 # Walder Frey
+		}
+	}
+}
+Moil_rs_64 = {
+	name = Hilda
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8258.1.1 = { birth = yes }
+}
+Moil_65 = {
+	name = Darra
+	dynasty = dynn_Moil
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_56
+	mother = Moil_rs_56
+
+	8251.1.1 = { birth = yes }
+}
+### Issue of Lars
+Moil_66 = {
+	name = Dannel
+	dynasty = dynn_Moil
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_64
+	mother = Moil_rs_64
+
+	8278.1.1 = { birth = yes }
+	8296.1.1 = { add_spouse = Moil_rs_66 }
+	8299.12.15 = {
+		death = {
+			death_reason = death_bloody_wedding # The Red Wedding
+			killer = Frey_1 # Walder Frey
+		}
+	}
+}
+Moil_rs_66 = {
+	name = Lyanna
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	8279.1.1 = { birth = yes }
+}
+Moil_67 = {
+	name = Meghan # a lord
+	dynasty = dynn_Moil
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_64
+	mother = Moil_rs_64
+
+	8281.1.1 = { birth = yes }
+}
+### Issue of Dannel
+Moil_69 = {
+	name = Meghan
+	dynasty = dynn_Moil
+	female = yes
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_66
+	mother = Moil_rs_66
+
+	8297.1.1 = { birth = yes }
+}
+Moil_70 = {
+	name = Asher
+	dynasty = dynn_Moil
+
+	religion = old_gods_wnw
+	culture = northman
+
+	father = Moil_66
+	mother = Moil_rs_66
+
+	8299.1.1 = { birth = yes }
+}
+
+###### HOUSE DUNKEL (id = dynn_Dunkel)
+############################
+###
+###
+Dunkel_1 = {
+	name = Denys
+	dynasty = dynn_Dunkel
+
+	religion = fots_seven
+	culture = crownlander
+
+	father = Dunkel_19
+
+	8235.1.1 = { birth = yes }
+	8254.1.1 = { trait = knight }
+	8279.1.1 = { death = yes }
+}
+Dunkel_2 = {
+	name = Donnel
+	dynasty = dynn_Dunkel
+
+	religion = fots_seven
+	culture = crownlander
+
+	father = Dunkel_19
+
+	8238.1.1 = { birth = yes }
+	8256.1.1 = { trait = knight }
+	8290.1.1 = { death = yes }
+}
+### Issue of Denys
+Dunkel_3 = {
+	name = Dale
+	dynasty = dynn_Dunkel
+
+	religion = fots_seven
+	culture = crownlander
+
+	father = Dunkel_1
+
+	8256.1.1 = { birth = yes }
+	8275.1.1 = { trait = knight }
+}
+Dunkel_4 = {
+	name = Duncan
+	dynasty = dynn_Dunkel
+
+	religion = fots_seven
+	culture = crownlander
+
+	father = Dunkel_1
+
+	trait = education_intrigue_3
+	trait = diligent
+	trait = content
+
+	8260.1.1 = { birth = yes }
+	8280.1.1 = { trait = knight }
+}
+Dunkel_5 = {
+	name = Hendry
+	dynasty = dynn_Dunkel
+
+	religion = fots_seven
+	culture = crownlander
+
+	father = Dunkel_1
+
+	trait = education_martial_2
+	trait = impatient
+	trait = brave
+
+	8261.1.1 = { birth = yes }
+	8280.1.1 = { trait = knight }
+}
+### Issue of Donnel
+Dunkel_6 = {
+	name = Magnus
+	dynasty = dynn_Dunkel
+
+	religion = fots_seven
+	culture = crownlander
+
+	father = Dunkel_2
+
+	trait = education_martial_3
+	trait = arrogant
+	trait = brave
+
+	8257.1.1 = { birth = yes }
+	8275.1.1 = { trait = knight }
+}
+
+###### HOUSE WHITEWOOD (id = dynn_Whitewood)
+############################
+###
+###
+Whitewood_1 = {
+	name = Jon
+	dynasty = dynn_Whitewood
+
+	religion = fots_seven
+	culture = reachman
+
+	8252.1.1 = { birth = yes }
+}
+
+###### HOUSE DULE (id = dynn_Dule)
+############################
+###
+###
+Dule_33 = {
+	name = Rylla
+	dynasty = dynn_Dule
+	female = yes
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_24
+	mother = Varner_55
+
+	trait = beauty_good_1
+
+	8220.1.1 = { birth = yes }
+	8281.1.1 = { death = yes }
+}
+Dule_1 = {
+	name = Owen
+	dynasty = dynn_Dule
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_24
+	mother = Varner_55
+
+	trait = education_martial_3
+	trait = beauty_good_1
+	trait = strong
+	trait = brave
+	trait = gregarious
+	trait = authoritative
+	trait = bossy
+
+	disallow_random_traits = yes
+
+	8222.1.1 = { birth = yes }
+	8240.1.1 = { trait = knight }
+	8260.1.1 = { death = { death_reason = death_battle } }
+}
+Dule_34 = {
+	name = Florence
+	dynasty = dynn_Dule
+	female = yes
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_24
+	mother = Varner_55
+
+	trait = beauty_good_1
+
+	8225.1.1 = { birth = yes }
+	8245.1.1 = { trait = septon }
+	8268.1.1 = { death = yes }
+}
+### Issue of Owen
+Dule_2 = {
+	name = Robin
+	dynasty = dynn_Dule
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_1
+
+	trait = education_intrigue_2
+	trait = callous
+
+	8250.1.1 = { birth = yes }
+	8267.1.1 = { trait = knight }
+}
+Dule_3 = {
+	name = Jon
+	dynasty = dynn_Dule
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_1
+
+	trait = education_martial_2
+	trait = brave
+	trait = honest
+
+	8252.1.1 = { birth = yes }
+	8268.1.1 = { trait = knight }
+	8272.1.1 = { add_spouse = Dule_rs_3 }
+}
+Dule_rs_3 = {
+	name = Olene
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	8252.1.1 = { birth = yes }
+}
+Dule_4 = {
+	name = Alla
+	dynasty = dynn_Dule
+	female = yes
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_1
+
+	trait = twin
+
+	8259.1.1 = { birth = yes }
+}
+Dule_5 = {
+	name = Marian
+	dynasty = dynn_Dule
+	female = yes
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_1
+
+	trait = twin
+
+	8259.1.1 = { birth = yes }
+}
+### Issue of Owen
+Dule_6 = {
+	name = Gerold
+	dynasty = dynn_Dule
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_2
+
+	8276.1.1 = { birth = yes }
+	8294.1.1 = { trait = knight }
+}
+Dule_7 = {
+	name = Owen
+	dynasty = dynn_Dule
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_2
+
+	trait = rowdy
+
+	8281.1.1 = { birth = yes }
+	8298.1.1 = { trait = knight }
+}
+### Issue of Jon
+Dule_8 = {
+	name = Arthor
+	dynasty = dynn_Dule
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_3
+	mother = Dule_rs_3
+
+	8275.1.1 = { birth = yes }
+	8294.1.1 = { trait = knight }
+}
+
+### Bastard Branch
+############################
+Dule_27 = {
+	name = Arthor
+	# Bastard Dule Line
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_26
+
+	8239.1.1 = {
+		birth = yes
+		set_to_lowborn = yes
+		make_trait_inactive = surname_flowers
+	}
+	8290.1.1 = { death = yes }
+}
+### Issue of Arthor
+Dule_28 = {
+	name = Richard
+	# Bastard Dule Line
+
+	religion = fots_seven
+	culture = reachman
+
+	father = Dule_27
+
+	trait = arrogant
+	trait = brave
+
+	8260.1.1 = {
+		birth = yes
+		set_to_lowborn = yes
+		make_trait_inactive = surname_flowers
+	}
+}
+
+###### HOUSE RENNOCK (id = dynn_Rennock)
+############################
+###
+###
+Rennock_105 = {
+	name = Jaimena
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_rs_92
+	mother = Rennock_92
+
+	8206.1.1 = { birth = yes }
+	8242.1.1 = {
+		trait = pneumonic
+		death = { death_reason = death_pneumonic }
+	}
+}
+Rennock_106 = {
+	name = Royce
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_rs_92
+	mother = Rennock_92
+
+	8207.1.1 = { birth = yes }
+	8226.1.1 = { trait = knight }
+	8227.1.1 = {
+		death = { death_reason = death_horse }
+	}
+}
+Rennock_107 = {
+	name = Ysme
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_rs_92
+	mother = Rennock_92
+
+	8209.1.1 = { birth = yes }
+	8238.1.1 = {
+		death = { death_reason = death_mysterious }
+	}
+}
+Rennock_1 = {
+	name = Bryen # a lord
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_rs_92
+	mother = Rennock_92
+
+	8215.1.1 = { birth = yes }
+	8234.1.1 = { trait = knight }
+	8250.1.1 = { add_spouse = Rennock_rs_1 }
+	8278.1.1 = { death = yes }
+}
+Rennock_rs_1 = {
+	name = Floris
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	8228.1.1 = { birth = yes }
+}
+### Issue of Bryen
+Rennock_2 = {
+	name = Robin
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_1
+	mother = Rennock_rs_1
+
+	8256.1.1 = { birth = yes }
+	8273.1.1 = { add_spouse = Rennock_rs_2 }
+	8275.1.1 = { trait = knight }
+}
+Rennock_rs_2 = {
+	name = Jeyne
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	8258.1.1 = { birth = yes }
+}
+Rennock_3 = {
+	name = Maerie # married Lyonel Voyald
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_1
+	mother = Rennock_rs_1
+
+	8253.1.1 = { birth = yes }
+}
+Rennock_4 = {
+	name = Corwin
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_1
+	mother = Rennock_rs_1
+
+	8259.1.1 = { birth = yes }
+	8275.1.1 = { add_spouse = Rennock_rs_4 }
+	8279.1.1 = { trait = knight }
+}
+Rennock_rs_4 = {
+	name = Elaena
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	8260.1.1 = { birth = yes }
+}
+Rennock_5 = {
+	name = Armond
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_1
+	mother = Rennock_rs_1
+
+	8261.1.1 = { birth = yes }
+	8280.1.1 = { trait = knight }
+}
+### Issue of Robin
+Rennock_6 = {
+	name = Annara
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_2
+	mother = Rennock_rs_2
+
+	8274.1.1 = { birth = yes }
+}
+Rennock_7 = {
+	name = Humfrey
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_2
+	mother = Rennock_rs_2
+
+	8275.1.1 = { birth = yes }
+}
+Rennock_8 = {
+	name = Jasper
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_2
+	mother = Rennock_rs_2
+
+	trait = twin
+
+	8278.1.1 = { birth = yes }
+}
+Rennock_9 = {
+	name = Addam
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_2
+	mother = Rennock_rs_2
+
+	trait = twin
+
+	8278.1.1 = { birth = yes }
+}
+Rennock_10 = {
+	name = Wyl
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_2
+	mother = Rennock_rs_2
+
+	8281.1.1 = { birth = yes }
+}
+### Issue of Corwin
+Rennock_11 = {
+	name = Arlan
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_4
+
+	trait = bastard
+
+	8274.1.1 = { birth = yes }
+}
+Rennock_12 = {
+	name = Cedrik
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_4
+	mother = Rennock_rs_4
+
+	8275.1.1 = { birth = yes }
+}
+Rennock_13 = {
+	name = Cyrenna
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_4
+	mother = Rennock_rs_4
+
+	8277.1.1 = { birth = yes }
+}
+Rennock_14 = {
+	name = Baldric
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_4
+	mother = Rennock_rs_4
+
+	8279.1.1 = { birth = yes }
+}
+### Issue of Leobald
+Rennock_103 = {
+	name = Byron
+	dynasty = dynn_Rennock
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_99
+	mother = Rennock_rs_99
+
+	8222.1.1 = { birth = yes }
+	8241.1.1 = { trait = knight }
+	8281.1.1 = {
+		trait = ill
+		death = { death_reason = death_ill }
+	}
+}
+Rennock_104 = {
+	name = Arlaine
+	dynasty = dynn_Rennock
+	female = yes
+
+	religion = fots_seven
+	culture = stormlander
+
+	father = Rennock_99
+	mother = Rennock_rs_99
+
+	8224.1.1 = { birth = yes }
+	8293.1.1 = {
+		trait = ill
+		death = { death_reason = death_ill }
+	}
+}
+
+###### HOUSE MOONFELL (id = dynn_Moonfell)
+############################
+###
+###
+Moonfell_26 = {
+	name = Darryn
+	dynasty = dynn_Moonfell
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_25
+	mother = Devener_87
+
+	trait = education_stewardship_2
+	trait = greedy
+	trait = ambitious
+	trait = craven
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8199.1.1 = { birth = yes }
+	8215.1.1 = { trait = knight }
+	8220.1.1 = { add_spouse = Mullyn_48 } # Leona Mullyn
+	8246.1.1 = {
+		death = { death_reason = death_lost_at_sea }
+	}
+}
+Moonfell_38 = {
+	name = Harrold
+	dynasty = dynn_Moonfell
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_26
+	mother = Mullyn_48
+
+
+	8225.1.1 = { birth = yes }
+	8243.1.1 = { trait = knight }
+	8244.1.1 = { add_spouse = Chase_43 } # Anya Moonfell
+	8260.1.1 = { death = yes }
+}
+Moonfell_27 = {
+	name = Corlin
+	dynasty = dynn_Moonfell
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_26
+	mother = Mullyn_48
+
+	trait = education_martial_2
+	trait = just
+	trait = stubborn
+	trait = wrathful
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8233.1.1 = { birth = yes }
+	8249.1.1 = { add_spouse = Bretherick_73 } #Elene Bretherick
+	8251.1.1 = { trait = knight }
+	8282.1.1 = {
+		trait = nightswatch_historical
+		trait = kinslayer_3 # His Daughter
+		effect = {
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 48
+			}
+		}
+	}
+}
+### Issue of Harrold
+Moonfell_28 = {
+	name = Olyver
+	dynasty = dynn_Moonfell
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_38
+	mother = Chase_43
+
+	trait = education_stewardship_3
+	trait = greedy
+	trait = temperate
+	trait = diligent
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8245.1.1 = { birth = yes }
+	8265.1.1 = { trait = knight }
+	8274.1.1 = { add_spouse = Coldwater_56 } # Janna Coldwater
+}
+Moonfell_29 = {
+	name = Arlan
+	dynasty = dynn_Moonfell
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_38
+	mother = Chase_43
+
+	trait = education_stewardship_1
+	trait = lazy
+	trait = arbitrary
+	trait = trusting
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8255.1.1 = { birth = yes }
+	8275.1.1 = { trait = knight }
+	8277.1.1 = { trait = drunkard }
+	8289.6.1 = { death = { death_reason = death_battle } }
+}
+### Issue of Corlin
+Moonfell_30 = {
+	name = Jon
+	dynasty = dynn_Moonfell
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_27
+	mother = Bretherick_73
+
+	trait = twin
+
+	trait = education_martial_2
+	trait = impatient
+	trait = just
+	trait = brave
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8264.1.1 = { birth = yes }
+	8282.1.1 = { effect = { agot_set_as_ward_and_squire_history_effect = { KNIGHT = character:Moonfell_28 } } }
+	8284.1.1 = { trait = knight }
+	8292.1.1 = { add_spouse = Moonfell_32 } # Jeyne Moonfell
+}
+Moonfell_31 = {
+	name = Marsella
+	dynasty = dynn_Moonfell
+	female = yes
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_27
+	mother = Bretherick_73
+
+	trait = twin
+
+	trait = education_diplomacy_4
+	trait = compassionate
+	trait = honest
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8264.1.1 = { birth = yes }
+	8278.1.1 = { trait = lustful }
+	8282.1.1 = { death = { death_reason = death_murder_known killer = Moonfell_27 } }
+}
+### Issue of Olyver
+Moonfell_32 = {
+	name = Jeyne # married Jon Moonfell
+	dynasty = dynn_Moonfell
+	female = yes
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_28
+	mother = Coldwater_56
+
+	8276.1.1 = { birth = yes }
+}
+### Issue of Jon
+Moonfell_40 = {
+	name = Hugh
+	dynasty = dynn_Moonfell
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_30
+	mother = Moonfell_32
+
+	8294.1.1 = { birth = yes }
+}
+Moonfell_41 = {
+	name = Corlin
+	dynasty = dynn_Moonfell
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_30
+	mother = Moonfell_32
+
+	8295.1.1 = { birth = yes }
+}
+Moonfell_42 = {
+	name = Marsella
+	dynasty = dynn_Moonfell
+	female = yes
+
+	religion = fots_seven
+	culture = valeman
+
+	father = Moonfell_30
+	mother = Moonfell_32
+
+	8297.1.1 = { birth = yes }
+}
+
+
+###### HOUSE RUST (id = dynn_Rust)
+############################
+###
+###
+Rust_34 = {
+	name = Petyr
+	dynasty = dynn_Rust
+
+	religion = fots_seven
+	culture = riverlander
+
+	father = Rust_32
+	mother = Rust_rs_32
+
+	trait = education_diplomacy_1
+	trait = compassionate
+	trait = gregarious
+	trait = zealous
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8220.1.1 = { birth = yes }
+	8238.1.1 = { trait = knight }
+	8240.1.1 = { add_spouse = Rust_rs_34 }
+}
+Rust_rs_34 = {
+	name = Alyce
+	female = yes
+
+	religion = fots_seven
+	culture = riverlander
+
+	8225.1.1 = { birth = yes }
+}
+### Issue of Petyr
+Rust_35 = {
+	name = Edmund
+	dynasty = dynn_Rust
+
+	religion = fots_seven
+	culture = riverlander
+
+	father = Rust_34
+	mother = Rust_rs_34
+
+	trait = education_martial_2
+	trait = cynical
+	trait = ambitious
+	trait = brave
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8250.1.1 = { birth = yes }
+	8269.1.1 = { trait = knight }
+}
+Rust_36 = {
+	name = Betha
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = fots_seven
+	culture = riverlander
+
+	father = Rust_34
+	mother = Rust_rs_34
+
+	trait = education_diplomacy_2
+	trait = compassionate
+	trait = gregarious
+	trait = stubborn
+
+	8253.1.1 = { birth = yes }
+}
+Rust_37 = {
+	name = Alyn
+	dynasty = dynn_Rust
+
+	religion = fots_seven
+	culture = riverlander
+
+	father = Rust_34
+	mother = Rust_rs_34
+
+	trait = education_diplomacy_3
+	trait = zealous
+	trait = calm
+	trait = arrogant
+	trait = intellect_good_1
+
+	8257.1.1 = { birth = yes }
+	8276.1.1 = { trait = knight }
+}
+Rust_38 = {
+	name = Celeste
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = fots_seven
+	culture = riverlander
+
+	father = Rust_34
+	mother = Rust_rs_34
+
+	trait = education_stewardship_4
+	trait = trusting
+	trait = patient
+	trait = just
+
+	8260.1.1 = { birth = yes }
+}
+Rust_39 = {
+	name = Garrett
+	dynasty = dynn_Rust
+
+	religion = fots_seven
+	culture = riverlander
+
+	father = Rust_34
+	mother = Rust_rs_34
+
+	trait = education_martial_2
+	trait = humble
+	trait = diligent
+	trait = stubborn
+
+	8261.1.1 = { birth = yes }
+	8280.1.1 = { trait = knight }
+}
+
+###### HOUSE VOYALD (id = dynn_Voyald)
+############################
+###
+###
+Voyald_67 = {
+	name = Cerenna
+	dynasty = dynn_Voyald
+	female = yes
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Voyald_66
+	mother = Voyald_rs_66
+
+	8213.1.1 = { birth = yes }
+	8245.1.1 = { death = yes }
+}
+Voyald_1 = {
+	name = Gerold
+	dynasty = dynn_Voyald
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Voyald_66
+	mother = Voyald_rs_66
+
+	trait = education_martial_2
+	trait = arrogant
+	trait = wrathful
+	trait = trusting
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8215.1.1 = { birth = yes }
+	8234.1.1 = { trait = knight }
+	8280.1.1 = { death = yes }
+}
+### Issue of Gerold
+Voyald_2 = {
+	name = Harys
+	dynasty = dynn_Voyald
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Voyald_1
+
+	trait = education_martial_3
+	trait = honest
+	trait = brave
+	trait = zealous
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8239.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+Voyald_3 = {
+	name = Daemon
+	dynasty = dynn_Voyald
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Voyald_1
+
+	trait = education_learning_3
+	trait = cynical
+	trait = honest
+	trait = compassionate
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8244.1.1 = { birth = yes }
+	8266.1.1 = {
+		trait = maester_historical
+		effect = { agot_maester_starting_setup_history_effect = yes }
+	}
+}
+Voyald_4 = {
+	name = Lyonel
+	dynasty = dynn_Voyald
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Voyald_1
+
+	trait = education_diplomacy_2
+	trait = cynical
+	trait = diligent
+	trait = gregarious
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8246.1.1 = { birth = yes }
+	8266.1.1 = { trait = knight }
+	8273.1.1 = { add_spouse = Rennock_3 } # Maerie Rennock
+}
+Voyald_5 = {
+	name = Willam
+	dynasty = dynn_Voyald
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Voyald_1
+
+	trait = education_martial_2
+	trait = brave
+	trait = trusting
+	trait = honest
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8250.1.1 = { birth = yes }
+	8270.1.1 = { trait = knight }
+}
+### Issue of Lyonel
+Voyald_6 = {
+	name = Lucion
+	dynasty = dynn_Voyald
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Voyald_4
+	mother = Rennock_3
+
+	trait = twin
+
+	8275.1.1 = { birth = yes }
+}
+Voyald_7 = {
+	name = Lucas
+	dynasty = dynn_Voyald
+
+	religion = fots_seven
+	culture = westerman
+
+	father = Voyald_4
+	mother = Rennock_3
+
+	trait = twin
+
+	8275.1.1 = { birth = yes }
+}

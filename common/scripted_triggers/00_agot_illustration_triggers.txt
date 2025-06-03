@@ -1,0 +1,38 @@
+﻿agot_is_graphical_travelling_trigger = {
+	is_travelling = yes
+	agot_is_councillor_at_target_trigger = no
+}
+
+agot_get_graphical_host_trigger = {
+	trigger_if = {
+		limit = { has_variable = agot_councillor_target_court }
+		var:agot_councillor_target_court = { save_temporary_scope_as = graphical_host }
+	}
+	trigger_else_if = {
+		limit = { exists = host }
+		host = { save_temporary_scope_as = graphical_host }
+	}
+	trigger_else = {
+		always = yes
+	}
+}
+
+agot_graphical_wilderness_cloudforest_trigger = {
+	agot_is_cloudforest_terrain = yes
+}
+
+agot_graphical_wilderness_taiga_bog_trigger = {
+	OR = {
+		agot_is_taiga_bog_terrain = yes
+		agot_is_the_bog_terrain = yes
+	}
+}
+
+agot_graphical_wilderness_btw_trigger = {
+	geographical_region = world_westeros_beyond_the_wall
+	OR = {
+		agot_is_mountains_terrain = yes
+		agot_is_hills_terrain = yes
+		agot_is_taiga_terrain = yes
+	}
+}

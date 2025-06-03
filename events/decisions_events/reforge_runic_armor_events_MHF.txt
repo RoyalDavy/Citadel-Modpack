@@ -1,0 +1,153 @@
+﻿namespace = reforge_runic_armor
+
+reforge_runic_armor.0001 = {
+	type = character_event
+	title = reforge_runic_armor_t
+
+	theme = dynasty
+	override_background = armory
+	left_portrait = {
+		character = root
+		animation = war_over_tie
+		triggered_outfit = {
+			outfit_tags = { no_clothes }
+		}
+	}
+	right_portrait = scope:smith
+
+	desc = reforge_runic_armor_0001_c_desc
+
+	option = {
+		trigger = {
+			scope:smith = {
+			}
+			is_landed = yes
+		}
+		name = reforge_runic_armor_0001_b
+
+		custom_tooltip = reforge_runic_armor_0001_tt
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+			}
+		}
+		trigger_event = {
+			id = reforge_runic_armor.9999
+		}
+	}
+
+	###Changed my mind...
+	option = {
+		name = reforge_runic_armor_0001_c
+
+		custom_tooltip = reforge_runic_armor_0001_b_tt
+
+		remove_decision_cooldown = reforge_runic_armor_decision
+
+		add_gold = 500
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+##Succeeds in refitting the Runic Armour
+reforge_runic_armor.0002 = {
+	type = character_event
+	title = reforge_runic_armor_t
+	desc = reforge_runic_armor_0002_a_desc
+
+	theme = dynasty
+	override_background = fp1_runestone_circle
+	left_portrait = {
+		character = root
+		animation = war_over_tie
+	}
+	right_portrait = {
+		character = scope:smith
+		animation = throne_room_bow_1
+	}
+	immediate = {
+		root = {
+			agot_create_artifact_vs_runic_armor_effect = {
+				OWNER = this
+			}
+			dynasty = { add_dynasty_prestige = 250 }
+		}
+		scope:newly_created_artifact = {
+			add_artifact_history = {
+				type = given
+				actor = scope:smith
+				recipient = root
+			}
+		}
+
+		scope:smith = {
+			add_prestige = 250
+		}
+	}
+
+	artifact = { # To display the artifact in the event-window
+		target = scope:newly_created_artifact
+		position = lower_left_portrait
+	}
+
+	option = {
+		name = reforge_runic_armor_0002_a
+	}
+}
+
+##Does not return
+reforge_runic_armor.0003 = {
+	type = character_event
+	title = reforge_runic_armor_t
+	desc = reforge_runic_armor_0003_a_desc
+	theme = dynasty
+	override_background = armory
+	left_portrait = {
+		character = root
+		animation = disbelief
+		triggered_outfit = {
+			outfit_tags = { western_commoner_outfit }
+		}
+	}
+
+	immediate = {
+		scope:smith = {
+			death = { death_reason = death_vanished }
+		}
+	}
+
+	##Waymar is alive, and Yohn is alive and is the person funding him.
+	option = {
+		name = reforge_runic_armor_0003_a
+	}
+}
+
+reforge_runic_armor.9999 = {
+	hidden = yes
+	immediate = {
+		if = {
+			random_list = {
+				## Smith succseeds
+				90 = {
+					trigger_event = {
+						id = reforge_runic_armor.0002
+						days = {60 365}
+					}
+				}
+				## Smith fails
+				10 = {
+					trigger_event = {
+						id = reforge_runic_armor.0003
+						days = {60 365}
+					}
+				}
+			}
+		}
+	}
+}

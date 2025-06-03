@@ -1,0 +1,421 @@
+﻿interactive_political_maneuver_interaction = {
+	cooldown_against_recipient = { years = 1 }
+	common_interaction = yes
+	interface_priority = 68
+
+	category = interaction_category_diplomacy
+	icon = alliance
+	desc = interactive_political_maneuver_interaction_desc
+
+	ai_min_reply_days = 2
+	ai_max_reply_days = 5
+	greeting = positive
+	popup_on_receive = yes
+	pause_on_receive = yes
+
+	is_shown = {
+		NOT = {
+			has_game_rule = politics_miv_disabled
+		}
+
+		scope:recipient = {
+			max_military_strength > 100
+			is_landed = yes
+			NOT = { this = scope:actor }
+		}
+
+		OR = {
+			# actor is liege
+			AND = {
+				scope:recipient = {
+					is_vassal_or_below_of = scope:actor
+				}
+				scope:actor = {
+					is_at_war = yes
+					any_character_war = {
+						is_civil_war = yes
+						NOR = {
+							primary_attacker = scope:recipient
+							primary_defender = scope:recipient
+						}
+						primary_defender = scope:actor
+
+						NOT = {
+							AND = {
+								scope:actor = { is_at_war_with = prev.primary_attacker }
+								scope:recipient = { is_at_war_with = prev.primary_attacker }
+							}
+							AND = {
+								scope:actor = { is_at_war_with = prev.primary_defender }
+								scope:recipient = { is_at_war_with = prev.primary_defender }
+							}
+						}
+					}
+				}
+			}
+
+			# actor is fellow vassal (direct)
+			scope:recipient.liege = {
+				exists = liege
+				liege = scope:actor.liege
+				NOT = { liege = scope:actor }
+				
+				is_at_war = yes
+				any_character_war = {
+					is_civil_war = yes
+					NOR = {
+						primary_attacker = scope:recipient
+						primary_defender = scope:recipient
+					}
+					any_war_participant = { this = scope:actor }
+
+					NOT = {
+						AND = {
+							scope:actor = { is_at_war_with = prev.primary_attacker }
+							scope:recipient = { is_at_war_with = prev.primary_attacker }
+						}
+						AND = {
+							scope:actor = { is_at_war_with = prev.primary_defender }
+							scope:recipient = { is_at_war_with = prev.primary_defender }
+						}
+					}
+				}
+			}
+
+			# actor is fellow vassal (indirect)
+			scope:recipient = {
+				exists = liege
+				liege = scope:actor.liege
+				NOT = { liege = scope:actor }
+				
+				is_at_war = yes
+				any_character_war = {
+					is_civil_war = yes
+					NOR = {
+						primary_attacker = scope:recipient
+						primary_defender = scope:recipient
+					}
+					any_war_participant = { this = scope:actor }
+
+					NOT = {
+						AND = {
+							scope:actor = { is_at_war_with = prev.primary_attacker }
+							scope:recipient = { is_at_war_with = prev.primary_attacker }
+						}
+						AND = {
+							scope:actor = { is_at_war_with = prev.primary_defender }
+							scope:recipient = { is_at_war_with = prev.primary_defender }
+						}
+					}
+				}
+			}
+
+			# direct/indirect and recipient is neutral (vassal perspective)
+			AND = {
+				OR = {
+					scope:recipient = {
+						exists = liege
+						liege = scope:actor.liege
+						NOT = { liege = scope:actor }
+					}
+					scope:recipient.liege = {
+						exists = liege
+						liege = scope:actor.liege
+						NOT = { liege = scope:actor }
+					}
+				}
+				scope:actor = {
+					is_at_war = yes
+					any_character_war = {
+						is_civil_war = yes
+						NOR = {
+							primary_attacker = scope:recipient
+							primary_defender = scope:recipient
+						}
+						any_war_participant = { this = scope:actor }
+						NOT = { any_war_participant = { this = scope:recipient } }
+						any_war_attacker = { this = scope:actor } # not liege
+	
+						NOT = {
+							AND = {
+								scope:actor = { is_at_war_with = prev.primary_attacker }
+								scope:recipient = { is_at_war_with = prev.primary_attacker }
+							}
+							AND = {
+								scope:actor = { is_at_war_with = prev.primary_defender }
+								scope:recipient = { is_at_war_with = prev.primary_defender }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	cost = {
+	}
+
+	send_option = {
+		is_valid = {
+			scope:actor.gold > scope:actor.medium_gold_value
+		}
+		flag = gold
+		localization = interactive_political_maneuver_gold_option
+	}
+	send_option = {
+		is_valid = {
+			scope:actor.prestige > scope:actor.major_prestige_value
+		}
+		flag = prestige
+		localization = interactive_political_maneuver_prestige_option
+	}
+	send_option = {
+		is_valid = {
+			scope:actor = { has_usable_hook = scope:recipient }
+		}
+		flag = hook
+		localization = interactive_political_maneuver_hook_option
+	}
+	send_option = {
+		is_valid = {
+			scope:recipient = {
+				is_imprisoned_by = scope:actor
+			}
+		}
+		flag = prisoner
+		localization = interactive_political_maneuver_prisoner_option
+	}
+	send_option = {
+		is_valid = {
+			scope:actor = { is_allied_to = scope:recipient }
+		}
+		flag = alliance
+		localization = interactive_political_maneuver_alliance_option
+	}
+
+	send_options_exclusive = no
+
+	can_send = {
+		always = yes
+	}
+
+	on_send = {
+	}
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = interactive.0002
+
+			every_character_war = {
+				limit = {
+					is_civil_war = yes
+					NOR = {
+						primary_attacker = scope:recipient
+						primary_defender = scope:recipient
+					}
+					any_war_participant = { this = scope:actor }
+
+					NOT = {
+						AND = {
+							scope:actor = { is_at_war_with = prev.primary_attacker }
+							scope:recipient = { is_at_war_with = prev.primary_attacker }
+						}
+						AND = {
+							scope:actor = { is_at_war_with = prev.primary_defender }
+							scope:recipient = { is_at_war_with = prev.primary_defender }
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						any_war_attacker = { this = scope:recipient }
+					}
+					primary_attacker = {
+						add_opinion = {
+							target = scope:recipient
+							modifier = betrayed_me_opinion
+							opinion = -25
+						}
+					}
+					hidden_effect = {
+						remove_participant = scope:recipient
+					}
+				}
+				else_if = {
+					limit = {
+						any_war_defender = { this = scope:recipient }
+					}
+					primary_defender = {
+						add_opinion = {
+							target = scope:recipient
+							modifier = betrayed_me_opinion
+							opinion = -25
+						}
+					}
+					hidden_effect = {
+						remove_participant = scope:recipient
+					}
+				}
+
+				if = {
+					limit = {
+						any_war_attacker = { this = scope:actor }
+					}
+
+					scope:actor = {
+						if = {
+							limit = {
+								exists = joined_faction
+								exists = liege
+								liege = scope:recipient.liege # only add to faction if you share the same liege
+							}
+							show_as_tooltip = {
+								scope:recipient = { join_faction = scope:actor.joined_faction }
+							}
+							hidden_effect = {
+								scope:recipient = {
+									if = {
+										limit = { exists = joined_faction }
+										leave_faction = joined_faction
+									}
+								}
+								scope:recipient = { join_faction = scope:actor.joined_faction }
+							}
+						}
+					}
+
+					add_attacker = scope:recipient
+				}
+				else_if = {
+					limit = {
+						any_war_defender = { this = scope:actor }
+					}
+
+					scope:recipient = {
+						if = {
+							limit = { exists = joined_faction }
+							leave_faction = joined_faction
+						}
+					}
+
+					add_defender = scope:recipient
+				}
+			}
+		}
+
+		scope:actor = {
+			if = {
+				limit = {
+					scope:gold = yes
+					gold > medium_gold_value
+				}
+				pay_short_term_gold = {
+					target = scope:recipient
+					gold = medium_gold_value
+				}
+			}
+			if = {
+				limit = {
+					scope:prestige = yes
+					prestige > major_prestige_value
+				}
+				add_prestige = {
+					value = major_prestige_value
+					multiply = -1
+				}
+				scope:recipient = {
+					add_prestige = {
+						value = major_prestige_value
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:hook = yes
+					has_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+			if = {
+				limit = {
+					scope:prisoner = yes
+					scope:recipient = {
+						is_imprisoned_by = scope:actor
+					}
+				}
+				scope:recipient = {
+					release_from_prison = yes
+				}
+			}
+			if = {
+				limit = {
+					scope:alliance = yes
+					is_allied_to = scope:recipient
+				}
+				scope:recipient = {
+					add_opinion = {
+						modifier = ally_called_on_alliance_opinion
+						target = scope:actor
+						opinion = -10
+					}
+				}
+			}
+		}
+	}
+
+	on_decline = {
+	}
+
+	auto_accept = no
+
+	ai_will_do = { base = 0 }
+
+	ai_accept = {
+		base = -50
+
+		# At 84 opinion, they'll join for free
+		opinion_modifier = {
+			opinion_target = scope:actor
+			multiplier = 0.6
+		}
+
+		modifier = {
+			scope:recipient = { is_at_war_with = scope:actor }
+			add = {
+				value = -25
+			}
+			desc = interactive_political_maneuver_at_war_tooltip
+		}
+
+		modifier = {
+			scope:gold = yes
+			add = 15
+			desc = interactive_political_maneuver_gold_tooltip
+		}
+
+		modifier = {
+			scope:prestige = yes
+			add = 15
+			desc = interactive_political_maneuver_prestige_tooltip
+		}
+
+		modifier = {
+			scope:hook = yes
+			add = 50
+			desc = interactive_political_maneuver_hook_tooltip
+		}
+
+		modifier = {
+			scope:prisoner = yes
+			add = 50
+			desc = interactive_political_maneuver_prisoner_tooltip
+		}
+
+		modifier = {
+			scope:alliance = yes
+			add = 50
+			desc = interactive_political_maneuver_alliance_tooltip
+		}
+	}
+}

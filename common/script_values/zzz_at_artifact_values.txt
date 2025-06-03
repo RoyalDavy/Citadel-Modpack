@@ -1,0 +1,12 @@
+﻿at_short_term_gold_value = {
+	if = {
+		limit = {
+			exists = global_var:agot_artifact_keeper
+			this = global_var:agot_artifact_keeper
+		}
+		value = gold
+	}
+	else = {
+		value = short_term_gold
+	}
+}

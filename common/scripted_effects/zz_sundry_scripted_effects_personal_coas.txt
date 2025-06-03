@@ -1,0 +1,227 @@
+﻿agot_select_personal_coa_based_on_nickname_system = {
+	if = {
+		limit = {
+				has_game_rule = sundry_sigils_westeros_rule_on
+			}
+		switch = {
+			trigger = house
+			dynasty:dynn_Lannister.dynasty_founder.house = {
+				scope:actor = {
+					switch = {
+						trigger = has_nickname
+						nick_the_black_lion = { scope:recipient.house = { set_coa = dynn_Lannister_black_lion_personal_coa_02 } }
+						nick_the_white_lion = { scope:recipient.house = { set_coa = dynn_Lannister_white_lion_personal_coa_02 } }
+						nick_the_red_lion = { scope:recipient.house = { set_coa = dynn_Lannister_red_lion_personal_coa_02 } }
+					}
+				}
+			}
+			dynasty:dynn_Stark.dynasty_founder.house = {
+				scope:actor = {
+					switch = {
+						trigger = has_nickname
+						nick_the_black_wolf = { scope:recipient.house = { set_coa = dynn_Stark_black_wolf_personal_coa_02 } }
+						nick_the_white_wolf = { scope:recipient.house = { set_coa = dynn_Stark_white_wolf_personal_coa_02 } }
+						nick_the_red_wolf = { scope:recipient.house = { set_coa = dynn_Stark_red_wolf_personal_coa_02 } }
+					}
+				}
+			}
+			dynasty:dynn_Targaryen.dynasty_founder.house = {
+				scope:actor = {
+					switch = {
+						trigger = has_nickname
+						nick_the_white_dragon = { scope:recipient.house = { set_coa = dynn_Targaryen_white_dragon_personal_coa_02 } }
+					}
+				}
+			}
+			dynasty:dynn_Baratheon.dynasty_founder.house = {
+				scope:actor = {
+					switch = {
+						trigger = has_nickname
+						nick_the_white_stag = { scope:recipient.house = { set_coa = dynn_Baratheon_white_stag_personal_coa_02 } }
+						nick_the_red_stag = { scope:recipient.house = { set_coa = dynn_Baratheon_red_stag_personal_coa_02  } }
+					}
+				}
+			}
+			dynasty:dynn_Tyrell.dynasty_founder.house = {
+				scope:actor = {
+					switch = {
+						trigger = has_nickname
+						nick_the_black_rose = { scope:recipient.house = { set_coa = dynn_Tyrell_black_rose_personal_coa_02 } }
+						nick_the_white_rose = { scope:recipient.house = { set_coa = dynn_Tyrell_white_rose_personal_coa_02  } }
+						nick_the_red_rose = { scope:recipient.house = { set_coa = dynn_Tyrell_red_rose_personal_coa_02  } }
+					}
+				}
+			}
+			dynasty:dynn_Greyjoy.dynasty_founder.house = {
+				scope:actor = {
+					switch = {
+						trigger = has_nickname
+						nick_the_white_squid = { scope:recipient.house = { set_coa = dynn_Greyjoy_white_squid_personal_coa_02 } }
+						nick_the_red_squid = { scope:recipient.house = { set_coa = dynn_Greyjoy_red_squid_personal_coa_02  } }
+					}
+				}
+			}
+			dynasty:dynn_Tully.dynasty_founder.house = {
+				scope:actor = {
+					switch = {
+						trigger = has_nickname
+						nick_the_white_fish = { scope:recipient.house = { set_coa = dynn_Tully_white_fish_personal_coa_02 } }
+						nick_the_red_fish = { scope:recipient.house = { set_coa = dynn_Tully_red_fish_personal_coa_02  } }
+						nick_the_black_fish = { scope:recipient.house = { set_coa = bryden_blackfish_tully_personal_coa_02  } }
+					}
+				}
+			}
+			dynasty:dynn_Arryn.dynasty_founder.house = {
+				scope:actor = {
+					switch = {
+						trigger = has_nickname
+						nick_the_black_falcon = { scope:recipient.house = { set_coa = dynn_Arryn_black_falcon_personal_coa_02 } }
+						nick_the_red_falcon = { scope:recipient.house = { set_coa = dynn_Arryn_red_falcon_personal_coa_02  } }
+					}
+				}
+			}
+		}
+	}
+}
+
+agot_select_rhllor_personal_coa = {
+	if = {
+		limit = {
+				has_game_rule = sundry_sigils_westeros_rule_on
+			}
+		switch = {
+			trigger = house
+			dynasty:dynn_Stark.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Stark_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Bolton.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Bolton_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Glover.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Glover_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Ryswell.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Ryswell_rhllor_personal_coa_02 }
+			}
+			house:house_Karstark = {
+				scope:recipient.house = { set_coa = Karstark_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Tully.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Tully_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Blackwood.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Blackwood_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Bracken.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Bracken_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Frey.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Frey_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Arryn.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Arryn_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Redfort.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Redfort_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Corbray.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Corbray_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Royce.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Royce_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Greyjoy.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Greyjoy_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Harlaw.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Harlaw_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Drumm.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Drumm_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Saltcliffe.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Saltcliffe_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Targaryen.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Targaryen_rhllor_personal_coa_02 }
+			}
+			house:house_Blackfyre = {
+				scope:recipient.house = { set_coa = Blackfyre_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Velaryon.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Velaryon_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Celtigar.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Celtigar_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Baratheon.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Baratheon_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Dondarrion.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Dondarrion_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Estermont.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Estermont_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Selmy.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Selmy_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Lannister.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Lannister_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Reyne.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Reyne_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Brax.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Brax_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Clegane.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Clegane_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Tyrell.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Tyrell_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Hightower.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Hightower_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Florent.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Florent_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Rowan.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Rowan_rhllor_personal_coa_02 }
+			}
+			house:house_Martell = {
+				scope:recipient.house = { set_coa = Martell_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Dayne.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Dayne_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Toland.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Toland_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Yronwood.dynasty_founder.house = {
+				scope:recipient.house = { set_coa = Yronwood_rhllor_personal_coa_02 }
+			}
+		}
+	}
+}
+
+agot_select_special_rhllor_personal_coa = {
+	if = {
+		limit = {
+				has_game_rule = sundry_sigils_westeros_rule_on
+			}
+		switch = {
+			trigger = this
+			dynasty:dynn_Stark_7 = {
+				scope:recipient.house = { set_coa = Jonsnow_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Targaryen_96 = {
+				scope:recipient.house = { set_coa = Bloodraven_rhllor_personal_coa_02 }
+			}
+			dynasty:dynn_Targaryen_95 = {
+				scope:recipient.house = { set_coa = Bittersteel_rhllor_personal_coa_02 }
+			}
+		}
+	}
+}

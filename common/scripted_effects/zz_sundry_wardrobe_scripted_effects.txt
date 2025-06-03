@@ -1,0 +1,42 @@
+﻿sundry_remove_style_effect = {
+	if = {
+		limit = { has_character_modifier = andal_style }
+		remove_character_modifier = andal_style
+	}
+	else_if = {
+		limit = { has_character_modifier = northman_style }
+		remove_character_modifier = northman_style
+	}
+	else_if = {
+		limit = { has_character_modifier = crannogman_style }
+		remove_character_modifier = crannogman_style
+	}
+	else_if = {
+		limit = { has_character_modifier = ironborn_style }
+		remove_character_modifier = ironborn_style
+	}
+	else_if = {
+		limit = { has_character_modifier = stone_dornish_style }
+		remove_character_modifier = stone_dornish_style
+	}
+	else_if = {
+		limit = { has_character_modifier = sand_dornish_style }
+		remove_character_modifier = sand_dornish_style
+	}
+	else_if = {
+		limit = { has_character_modifier = salt_dornish_style }
+		remove_character_modifier = salt_dornish_style
+	}
+	else_if = {
+		limit = { has_character_modifier = valyrian_style }
+		remove_character_modifier = valyrian_style
+	}
+	else_if = {
+		limit = { has_character_modifier = essosi_style }
+		remove_character_modifier = essosi_style
+	}
+	else_if = {
+		limit = { has_character_modifier = pirate_style }
+		remove_character_modifier = pirate_style
+	}
+}

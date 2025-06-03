@@ -1,0 +1,59 @@
+﻿#grab_appropriate_chronicler_effect
+#grab_appropriate_bard_feast_effect - this one doesn't check if they're available, so it can be used in activities
+#grab_appropriate_bard_effect - this one checks if they're available
+#grab_mythical_founder_effect
+#disburse_hunt_legend_seeds
+#change_legend_quality_effect - This adjusts the quality of a legend using an invisible progress bar that goes from 0-100. When it hits 100, the legend increases one step in quality, if it dips below 0, the legend loses one step in quality
+#legend_completion_quality_flag_effect
+#legend_ending_rewards_heroic_effect
+#legend_ending_rewards_holy_effect
+#legend_ending_rewards_legitimizing_effect
+#legend_completion_type_flag_effect
+#get_appropriate_ancient_people - this looks for regionally appropriate ancient people for you to lay claim to
+# get_appropriate_exotic_location - Atlantis, Vinland, places of dubious historicity
+# generate_godly_descent_seed_support_effect - create a godly descent seed based on loc keys
+# generate_religion_descent_effect - generate a godly descent seed based on scopes
+# balancing_legend_global_var_effect
+
+mark_historical_legend_as_done = {
+	if = { # Dynastic legacy
+		limit = {
+			legend_property:founder ?= legend_owner.house.house_founder
+			legend_property:dynasty ?= legend_owner.dynasty
+			legend_property:title ?= legend_owner.primary_title
+		}
+		legend_owner.dynasty = {
+			set_variable = {
+				name = dynasty_legend_used
+				value = yes
+			}
+		}
+	}
+	if = { 
+		limit = {
+			legend_property:ancestor_flag ?= flag:bellos_bricker
+		}
+		set_global_variable = {
+			name = bellos_bricker_legend
+			value = yes
+		}
+	}
+	else_if = {
+		limit = {
+			legend_property:culture ?= culture:andal
+		}
+		set_global_variable = {
+			name = andal_heritage_legend
+			value = yes
+		}
+	}
+	else_if = {
+		limit = {
+			legend_property:culture ?= culture:first_man
+		}
+		set_global_variable = {
+			name = first_man_heritage_legend
+			value = yes
+		}
+	}
+}

@@ -1,0 +1,900 @@
+﻿namespace = agot_travel_events_mhf
+
+#Brixhall Start
+agot_travel_events_mhf.1000 = {
+	type = character_event
+	title = agot_travel_events_mhf.1000.t
+	desc = agot_travel_events_mhf.1000.desc
+	theme = travel
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {
+		location = province:3038 #Brixhall
+		current_travel_plan.travel_plan_owner = root
+		is_landed = yes
+		is_location_valid_for_travel_event_on_land = yes #Should not be needed...
+		NOT = { location.county.holder = root } #If I own it then it does not make sense to visit it.
+		NOT = {
+			any_memory = { #Did I come here before?
+				has_memory_type = agot_memory_interesting_area_explored
+				has_variable = exploration_location
+				var:exploration_location = root.location
+			}
+		}
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_travel_arrival
+		location = { save_scope_as = city_province }
+		title:b_brixhall.holder = { save_scope_as = brixhall_lord }
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1000.sept
+
+		current_travel_plan = {
+			delay_travel_plan = {
+				days = 2
+			}
+		}
+
+		trigger_event = agot_travel_events_mhf.1001
+
+		stress_impact = {
+			lazy = medium_stress_impact_loss
+			calm = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 2
+				has_trait = lazy
+			}
+			modifier = {
+				factor = 2
+				has_trait = calm
+			}
+			modifier = {
+				factor = 4
+				religion = religion:old_gods_religion
+			}
+			modifier = {
+				factor = 4
+				religion = religion:old_gods_religion
+				has_trait = zealous
+			}
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1000.tombs
+
+		current_travel_plan = {
+			delay_travel_plan = {
+				days = 2
+			}
+		}
+
+		hidden_effect = {
+			trigger_event = agot_travel_events_mhf.1004
+		}
+
+		stress_impact = {
+			humble = minor_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+			craven = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 2
+				has_trait = humble
+			}
+			modifier = {
+				factor = 2
+				has_trait = compassionate
+			}
+			modifier = {
+				factor = 0
+				has_trait = craven
+			}
+			modifier = {
+				factor = 2
+				learning > 10
+			}
+			modifier = {
+				factor = 2
+				learning > 20
+			}
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1000.silver_mine
+
+		current_travel_plan = {
+			delay_travel_plan = {
+				days = 2
+			}
+		}
+
+		trigger_event = agot_travel_events_mhf.1008
+
+		stress_impact = {
+			diligent = minor_stress_impact_loss
+			lifestyle_herbalist = medium_stress_impact_loss
+			lifestyle_gardener = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 4
+				OR = {
+					has_trait = lifestyle_herbalist
+					has_trait = lifestyle_gardener
+				}
+			}
+			modifier = {
+				factor = 2
+				has_trait = diligent
+			}
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1000.brixworth
+
+		trigger = {
+			is_adult = yes
+			NOT = { has_trait = celibate }
+		}
+
+		current_travel_plan = {
+			delay_travel_plan = {
+				days = 2
+			}
+		}
+
+		hidden_effect = {
+			create_character = {
+				template = brothel_character_template
+				location = root.location
+				save_scope_as = brothel_character
+			}
+		}
+
+		trigger_event = agot_travel_events_mhf.1009
+
+		stress_impact = {
+			lustful = medium_stress_impact_loss
+			rakish = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 25
+				has_trait = lustful
+			}
+			modifier = {
+				add = 25
+				has_trait = rakish
+			}
+			modifier = {
+				add = 25
+				has_trait = seducer
+			}
+			modifier = {
+				factor = 0
+				might_cheat_on_every_partner_trigger = no
+			}
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1000.opt_out
+
+		#This one just opts out
+		#No travel time loss
+
+		stress_impact = {
+			lifestyle_traveler = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	after = {
+		create_character_memory = {
+			type = agot_memory_interesting_area_explored
+		}
+		scope:new_memory = {
+			save_scope_as = exploration_memory
+		}
+		scope:exploration_memory = {
+			set_variable = {
+				name = exploration_location
+				value = scope:city_province
+			}
+		}
+	}
+}
+
+#Sept
+agot_travel_events_mhf.1001 = {
+	title = agot_travel_events_mhf.1001.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					religion = religion:faith_of_the_seven_religion
+				}
+				desc = agot_travel_events_mhf.1001.intro_faith_of_the_seven
+			}
+			desc = agot_travel_events_mhf.1001.intro_other
+		}
+		desc = agot_travel_events_mhf.1001.desc
+	}
+	type = character_event
+	theme = travel
+	override_background = {
+		reference = temple
+	}
+
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1001.a
+		trigger_event = agot_travel_events_mhf.1002
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1001.b
+		trigger_event = agot_travel_events_mhf.1003
+	}
+}
+
+#Sept Altar
+agot_travel_events_mhf.1002 = {
+	title = agot_travel_events_mhf.1002.t
+	desc = agot_travel_events_mhf.1002.desc
+	type = character_event
+	theme = travel
+	override_background = {
+		reference = temple
+	}
+
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1002.a
+		trigger = {
+			NOT = { religion = religion:faith_of_the_seven_religion }
+		}
+		set_character_faith = faith:the_seven_main
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1002.b
+		trigger = { religion = religion:faith_of_the_seven_religion }
+		add_piety = medium_piety_gain
+	}
+}
+
+#Sept Outside
+agot_travel_events_mhf.1003 = {
+	title = agot_travel_events_mhf.1003.t
+	desc = agot_travel_events_mhf.1003.desc
+	type = character_event
+	theme = travel
+	override_background = {
+		reference = market_west
+	}
+
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1003.a
+		add_stress = major_stress_loss
+	}
+}
+
+#Mausoleum
+agot_travel_events_mhf.1004 = {
+	title = agot_travel_events_mhf.1004.t
+	desc = agot_travel_events_mhf.1004.desc
+	type = character_event
+	theme = travel
+	override_background = { reference = agot_underground }
+
+	right_portrait = {
+		character = root
+		animation = lantern
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1004.a
+		hidden_effect = {
+			random_list = {
+				499 = {
+					trigger_event = agot_travel_events_mhf.1005
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_global_variable = winterfell_dragon_egg_found
+					}
+					modifier = {
+						dynasty = dynasty:dynn_Targaryen
+						add = 9
+					}
+
+					trigger_event = agot_travel_events_mhf.1007
+				}
+			}
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1004.b
+		hidden_effect = {
+			random_list = {
+				499 = {
+					trigger_event = agot_travel_events_mhf.1005
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_global_variable = winterfell_dragon_egg_found
+					}
+					modifier = {
+						dynasty = dynasty:dynn_Targaryen
+						add = 9
+					}
+
+					trigger_event = agot_travel_events_mhf.1007
+				}
+			}
+		}
+	}
+}
+
+#Mausoleum/Pay respects
+agot_travel_events_mhf.1005 = {
+	title = agot_travel_events_mhf.1005.t
+	desc = {
+		desc = agot_travel_events_mhf.1005.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					current_date > 6665.1.2
+					scope:bricker_ancestor = character:Bricker_49
+				}
+				desc = agot_travel_events_mhf.1005.bellos
+			}
+			triggered_desc = {
+				trigger = {
+					current_date > 6658.1.2
+					scope:bricker_ancestor = character:Bricker_48
+				}
+				desc = agot_travel_events_mhf.1005.baros
+			}
+			triggered_desc = {
+				trigger = {
+					current_date > 8000.5.2
+					scope:bricker_ancestor = character:Bricker_15
+				}
+				desc = agot_travel_events_mhf.1005.gregor
+			}
+			triggered_desc = {
+				trigger = {
+					current_date > 8042.9.2
+					scope:bricker_ancestor = character:Bricker_13
+				}
+				desc = agot_travel_events_mhf.1005.brus
+			}
+			triggered_desc = {
+				trigger = {
+					current_date > 8138.1.2 
+					scope:bricker_ancestor = character:Bricker_9
+				}
+				desc = agot_travel_events_mhf.1005.hendry
+			}
+			triggered_desc = {
+				trigger = {
+					current_date > 8168.1.2
+					scope:bricker_ancestor = character:Bricker_8
+				}
+				desc = agot_travel_events_mhf.1005.jon
+			}
+		}
+	}
+	type = character_event
+	theme = travel
+	override_background = { reference = agot_underground }
+
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	lower_left_portrait = {
+		character = scope:bricker_ancestor
+	}
+
+	immediate = {
+		random_list = {
+			15 = {
+				character:Bricker_49 = { save_scope_as = bricker_ancestor }
+			}
+			15 = {
+				character:Bricker_48 = { save_scope_as = bricker_ancestor }
+			}
+			20 = {
+				character:Bricker_15 = { save_scope_as = bricker_ancestor }
+			}
+			20 = {
+				character:Bricker_13 = { save_scope_as = bricker_ancestor }
+			}
+			15 = {
+				character:Bricker_9 = { save_scope_as = bricker_ancestor }
+			}
+			15 = {
+				character:Bricker_8 = { save_scope_as = bricker_ancestor }
+			}
+		}
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1005.a
+		trigger_event = agot_travel_events_mhf.1006
+		add_character_modifier = {
+			modifier = agot_visited_crypts_MHF
+			years = 1
+		}
+	}
+}
+
+#Mausoleum/Return
+agot_travel_events_mhf.1006 = {
+	title = agot_travel_events_mhf.1006.t
+	desc = agot_travel_events_mhf.1006.desc
+	type = character_event
+	theme = travel
+	override_background = { reference = agot_underground }
+
+	right_portrait = {
+		character = root
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1006.a
+	}
+}
+
+#Mausoleum/Dragon Egg
+agot_travel_events_mhf.1007 = {
+	title = agot_travel_events_mhf.1007.t
+	desc = agot_travel_events_mhf.1007.desc
+	type = character_event
+	theme = travel
+	override_background = { reference = agot_underground }
+
+	right_portrait = {
+		character = root
+		animation = ecstasy
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1007.a
+		ai_chance = 0
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1007.b
+		ai_chance = 100
+		set_global_variable = winterfell_dragon_egg_found
+		create_artifact_dragon_egg_red_effect = { OWNER = root }
+	}
+}
+
+#Silver mines
+agot_travel_events_mhf.1008 = {
+	title = agot_travel_events_mhf.1008.t
+	desc = agot_travel_events_mhf.1008.desc
+	type = character_event
+	theme = travel
+	override_background = { reference = fp3_cave }
+
+	right_portrait = {
+		character = root
+		animation = ecstasy
+	}
+	
+	option = {
+		name = agot_travel_events_mhf.1008.a
+		add_character_modifier = {
+			modifier = agot_visited_mines_MHF
+			years = 1
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1008.b
+		agot_create_artifact_silver_nugget_effect = { OWNER = root }
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1008.c
+		add_stress = medium_stress_loss
+	}
+}
+
+#Visit brothel
+agot_travel_events_mhf.1009 = {
+	title = agot_travel_events_mhf.1009.t
+	desc = agot_travel_events_mhf.1009.desc
+	type = character_event
+	theme = travel
+	override_background = {
+		reference = tavern
+	}
+	left_portrait = {
+		character = root 
+		animation = flirtation_left
+	}
+	right_portrait = {
+		character = scope:brothel_character
+		animation = love
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1009.a
+		had_sex_with_effect = {
+			CHARACTER = scope:brothel_character
+			PREGNANCY_CHANCE = seduce_pregnancy_chance
+		}
+
+		remove_short_term_gold = medium_gold_value
+
+		hidden_effect = {
+			random_list = {
+				50 = {}
+				50 = { add_trait = lovers_pox }
+			}
+		}
+
+		stress_impact = {
+			lustful = major_stress_impact_loss
+			rakish = major_stress_impact_loss
+			seducer = major_stress_impact_loss
+			chaste = major_stress_impact_gain
+			honorable = major_stress_impact_gain
+		}
+
+		ai_chance = 100
+	}
+
+	option = {
+		name = agot_travel_events_mhf.1009.b
+
+		hidden_effect = {
+			random_list = {
+				90 = {}
+				10 = { add_trait = drunkard }
+			}
+		}
+
+		stress_impact = {
+			gregarious = major_stress_impact_loss
+			lustful = medium_stress_impact_gain
+			rakish = medium_stress_impact_gain
+			seducer = medium_stress_impact_gain
+		}
+
+		ai_chance = 0
+	}
+}
+
+#Warlord's Rest Start
+agot_travel_events_mhf.2000 = {
+	type = character_event
+	title = agot_travel_events_mhf.2000.t
+	desc = agot_travel_events_mhf.2000.desc
+	theme = travel
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	trigger = {
+		location = province:2143 #Wayfarer's Rest
+		current_travel_plan.travel_plan_owner = root
+		is_landed = yes
+		is_location_valid_for_travel_event_on_land = yes #Should not be needed...
+		NOT = { location.county.holder = root } #If I own it then it does not make sense to visit it.
+		NOT = {
+			any_memory = { #Did I come here before?
+				has_memory_type = agot_memory_interesting_area_explored
+				has_variable = exploration_location
+				var:exploration_location = root.location
+			}
+		}
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_travel_arrival
+		location = { save_scope_as = city_province }
+		title:b_wayfarers_rest.holder = { save_scope_as = wayfarers_rest_lord }
+	}
+
+	option = {
+		name = agot_travel_events_mhf.2000.tombs
+
+		current_travel_plan = {
+			delay_travel_plan = {
+				days = 2
+			}
+		}
+
+		hidden_effect = {
+			trigger_event = agot_travel_events_mhf.2004
+		}
+
+		stress_impact = {
+			humble = minor_stress_impact_loss
+			compassionate = minor_stress_impact_loss
+			craven = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 2
+				has_trait = humble
+			}
+			modifier = {
+				factor = 2
+				has_trait = compassionate
+			}
+			modifier = {
+				factor = 0
+				has_trait = craven
+			}
+			modifier = {
+				factor = 2
+				learning > 10
+			}
+			modifier = {
+				factor = 2
+				learning > 20
+			}
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.2000.opt_out
+
+		#This one just opts out
+		#No travel time loss
+
+		stress_impact = {
+			lifestyle_traveler = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	after = {
+		create_character_memory = {
+			type = agot_memory_interesting_area_explored
+		}
+		scope:new_memory = {
+			save_scope_as = exploration_memory
+		}
+		scope:exploration_memory = {
+			set_variable = {
+				name = exploration_location
+				value = scope:city_province
+			}
+		}
+	}
+}
+
+#Mausoleum
+agot_travel_events_mhf.2004 = {
+	title = agot_travel_events_mhf.2004.t
+	desc = agot_travel_events_mhf.2004.desc
+	type = character_event
+	theme = travel
+	override_background = { reference = agot_underground }
+
+	right_portrait = {
+		character = root
+		animation = lantern
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.2004.a
+		hidden_effect = {
+			random_list = {
+				499 = {
+					trigger_event = agot_travel_events_mhf.2005
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_global_variable = winterfell_dragon_egg_found
+					}
+					modifier = {
+						dynasty = dynasty:dynn_Targaryen
+						add = 9
+					}
+
+					trigger_event = agot_travel_events_mhf.2007
+				}
+			}
+		}
+	}
+
+	option = {
+		name = agot_travel_events_mhf.2004.b
+		hidden_effect = {
+			random_list = {
+				499 = {
+					trigger_event = agot_travel_events_mhf.2005
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_global_variable = winterfell_dragon_egg_found
+					}
+					modifier = {
+						dynasty = dynasty:dynn_Targaryen
+						add = 9
+					}
+
+					trigger_event = agot_travel_events_mhf.2007
+				}
+			}
+		}
+	}
+}
+
+#Mausoleum/Pay respects
+agot_travel_events_mhf.2005 = {
+	title = agot_travel_events_mhf.2005.t
+	desc = {
+		desc = agot_travel_events_mhf.2005.intro
+		first_valid = {
+			triggered_desc = {
+				desc = agot_travel_events_mhf.2005.armistead
+			}
+		}
+	}
+	type = character_event
+	theme = travel
+	override_background = { reference = agot_underground }
+
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	lower_left_portrait = {
+		character = scope:vance_ancestor
+	}
+
+	immediate = {
+		random_list = {
+			100 = {
+				character:Vance_Wayfarers_Rest_11 = { save_scope_as = vance_ancestor }
+			}
+		}
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.2005.a
+		trigger_event = agot_travel_events_mhf.2006
+		add_character_modifier = {
+			modifier = agot_visited_warlords_rest_MHF
+			years = 1
+		}
+	}
+}
+
+#Mausoleum/Return
+agot_travel_events_mhf.2006 = {
+	title = agot_travel_events_mhf.2006.t
+	desc = agot_travel_events_mhf.2006.desc
+	type = character_event
+	theme = travel
+	override_background = { reference = agot_underground }
+
+	right_portrait = {
+		character = root
+	}
+
+	option = {
+		name = agot_travel_events_mhf.2006.a
+	}
+}
+
+#Mausoleum/Dragon Egg
+agot_travel_events_mhf.2007 = {
+	title = agot_travel_events_mhf.2007.t
+	desc = agot_travel_events_mhf.2007.desc
+	type = character_event
+	theme = travel
+	override_background = { reference = agot_underground }
+
+	right_portrait = {
+		character = root
+		animation = ecstasy
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = agot_travel_events_mhf.2007.a
+		ai_chance = 0
+	}
+
+	option = {
+		name = agot_travel_events_mhf.2007.b
+		ai_chance = 100
+		set_global_variable = winterfell_dragon_egg_found
+		create_artifact_dragon_egg_red_effect = { OWNER = root }
+	}
+}

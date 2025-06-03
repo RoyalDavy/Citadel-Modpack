@@ -1,0 +1,202 @@
+﻿namespace = agot_error_destroyer_9000
+
+#Ah Perry the platypus, behold my errordestroyerinator
+agot_error_destroyer_9000.1 = {
+	type = character_event
+	hidden = yes
+	trigger = {
+		OR = {
+			exists = var:agot_ha_neutral_list
+			exists = var:ev_culture
+			exists = var:wv_culture
+			exists = var:error_suppresser_1
+			exists = var:error_suppresser_2
+			exists = var:error_suppresser_3
+			exists = var:error_suppresser_4
+			exists = var:error_suppresser_5
+			exists = var:error_suppresser_6
+			exists = var:error_suppresser_7
+			exists = var:error_suppresser_8
+			exists = flag:running
+			exists = flag:finish
+			exists = flag:chose_loyalists
+			exists = flag:chose_rebels
+			exists = flag:fired
+			exists = flag:pay
+			exists = flag:rare_artifact
+			exists = flag:truth_revealed_robert
+			exists = flag:loyalist #used in AGOT debug mode for tracking
+			exists = flag:rebel #used in AGOT debug mode for tracking
+			exists = flag:independence #used in AGOT debug mode for tracking
+			exists = var:teats_name #used in loc
+			exists = var:greenborn_culture #used in loc
+			exists = var:ironborn_culture #used in loc
+			exists = flag:possessed_1 #used for flipped trait storage
+			exists = flag:fire_obsessed #used for flipped trait storage
+			exists = var:memory_location #used in loc
+			exists = flag:white_peace #MW outcome, no related events at this time
+			exists = var:emoBoy_sword_artifact
+			exists = var:past_riders # For dragon character gui display
+			exists = var:slain_dragon # For dragonslayer loc tracking
+			exists = var:kingsguard_sword_artifact
+			exists = var:bittersteel_skull_artifact
+			exists = var:maelys_skull_artifact
+			exists = var:daemon_blackfyre_skull_artifact
+			exists = var:iron_throne
+			exists = var:seastone_chair
+			exists = var:gilded_throne
+			exists = var:oakenseat
+			exists = var:painted_table
+			exists = var:high_seat_of_winter
+			exists = var:weirwood_throne
+			has_variable = possible_artifacts #used in gooey
+			exists = var:dragon_age # Used to display dragon genes
+			exists = var:ShownInvestProfit #used in loc
+			exists = var:ShownShares #used in loc
+			exists = var:show_loan #used in loc
+			exists = var:BankName #used in loc
+			exists = var:BankValue #used in loc
+			exists = var:InterestLevel #used in loc
+			exists = var:bank_name #used in loc
+
+			#terrain types, used in debug logging
+			exists = flag:plains
+			exists = flag:majorroad_plains
+			exists = flag:minorroad_plains
+			exists = flag:farmlands
+			exists = flag:majorroad_farmlands
+			exists = flag:minorroad_farmlands
+			exists = flag:hills
+			exists = flag:majorroad_hills
+			exists = flag:minorroad_hills
+			exists = flag:mountains
+			exists = flag:majorroad_mountains
+			exists = flag:minorroad_mountains
+			exists = flag:desert
+			exists = flag:majorroad_desert
+			exists = flag:minorroad_desert
+			exists = flag:desert_mountains
+			exists = flag:majorroad_desert_mountains
+			exists = flag:minorroad_desert_mountains
+			exists = flag:oasis
+			exists = flag:majorroad_oasis
+			exists = flag:minorroad_oasis
+			exists = flag:jungle
+			exists = flag:majorroad_jungle
+			exists = flag:minorroad_jungle
+			exists = flag:forest
+			exists = flag:majorroad_forest
+			exists = flag:minorroad_forest
+			exists = flag:taiga
+			exists = flag:majorroad_taiga
+			exists = flag:minorroad_taiga
+			exists = flag:wetlands
+			exists = flag:majorroad_wetlands
+			exists = flag:minorroad_wetlands
+			exists = flag:steppe
+			exists = flag:majorroad_steppe
+			exists = flag:minorroad_steppe
+			exists = flag:floodplains
+			exists = flag:majorroad_floodplains
+			exists = flag:minorroad_floodplains
+			exists = flag:drylands
+			exists = flag:majorroad_drylands
+			exists = flag:minorroad_drylands
+			exists = flag:frozen_flats
+			exists = flag:majorroad_frozen_flats
+			exists = flag:minorroad_frozen_flats
+			exists = flag:glacier
+			exists = flag:majorroad_glacier
+			exists = flag:minorroad_glacier
+			exists = flag:canyon
+			exists = flag:majorroad_canyon
+			exists = flag:minorroad_canyon
+			exists = flag:cloudforest
+			exists = flag:majorroad_cloudforest
+			exists = flag:minorroad_cloudforest
+			exists = flag:highlands
+			exists = flag:majorroad_highlands
+			exists = flag:minorroad_highlands
+			exists = flag:taiga_bog
+			exists = flag:majorroad_taiga_bog
+			exists = flag:minorroad_taiga_bog
+			exists = flag:urban
+			exists = flag:majorroad_urban
+			exists = flag:minorroad_urban
+			exists = flag:the_bog
+			exists = flag:majorroad_the_bog
+			exists = flag:minorroad_the_bog
+			exists = flag:hotsprings
+			exists = flag:majorroad_hotsprings
+			exists = flag:minorroad_hotsprings
+			exists = flag:sea
+			exists = flag:coastal_sea
+		}
+	}
+	immediate = {
+		save_scope_as = edit_scope #used in gooey
+		save_scope_as = dp_county #used in gooey
+		save_scope_as = object #used in gooey
+		set_variable = agot_event_window_wide
+		set_variable = relic
+		set_variable = kingsguard
+		set_variable = agot_is_kingsguard_member
+		set_variable = agot_is_kingsguard_commander
+		set_variable = nw_petition_202_deserters
+		set_variable = necklace_shieraseastar_artifact
+		set_variable = historical_slavery #set in history files
+		set_variable = agot_historical_march #set in history files
+		set_variable = { name = error_suppresser_1 value = flag:men_army }
+		set_variable = { name = error_suppresser_2 value = flag:men_add_to_pool }
+		set_variable = { name = error_suppresser_3 value = flag:supplies_army }
+		set_variable = { name = error_suppresser_4 value = flag:supplies_normal }
+		set_variable = { name = error_suppresser_5 value = flag:supplies_army_army_army }
+		set_variable = { name = error_suppresser_6 value = flag:supplies_army_army_pool }
+		set_variable = { name = error_suppresser_7 value = flag:supplies_normal_army_army }
+		set_variable = { name = error_suppresser_8 value = flag:supplies_normal_army_pool }
+		set_variable = { name = error_suppresser_8 value = flag:nothing_sad_emoji }
+		set_variable = { name = error_suppresser_9 value = flag:golden_legend }
+		set_variable = { name = error_suppresser_10 value = flag:finish }
+		set_variable = { name = error_suppresser_11 value = flag:religious } #unused in artifact creation
+		#aithnea to do, add unite the wildling tribes decision
+		set_variable = unite_the_wildling_tribes_decision
+		set_variable = unite_the_wildling_tribes_decision_title
+		add_character_flag = do_not_assign_strong_seed #set in character histories
+		add_character_flag = bookmark_independent #set in character histories
+		add_character_flag = intrigue_duel_on_attack #vanilla unused
+		add_character_flag = has_secret_identity #set in character histories
+		add_character_flag = historical_dragonseed #set in character histories
+		add_character_flag = historical_disinheritance #set in character histories
+		add_character_flag = bypass_councillor_gender_requirements #set in character histories
+		add_character_flag = good_queen #set in character histories
+		if = {
+			limit = {
+				exists = var:agot_ha_neutral_list
+				exists = var:error_suppresser_1
+				exists = var:error_suppresser_2
+				exists = var:error_suppresser_3
+				exists = var:error_suppresser_4
+				exists = var:error_suppresser_5
+				exists = var:error_suppresser_6
+				exists = var:error_suppresser_7
+				exists = var:error_suppresser_8
+				exists = var:error_suppresser_9
+				exists = var:error_suppresser_10
+				exists = var:error_suppresser_11
+				exists = var:dragon_egg_color
+			}
+			debug_log = ""
+		}
+
+		#Uber Known Stinky, ESR
+		set_variable = esr_murdered_lovers
+		set_variable = esr_murdered_soulmates
+		set_variable = esr_murdered_rivals
+		set_variable = esr_murdered_best_friends
+		set_variable = esr_murdered_nemeses
+		set_variable = esr_murdered_friends
+		set_variable = murdered_character
+
+		debug_log = "Errors purged, mission complete"
+	}
+}

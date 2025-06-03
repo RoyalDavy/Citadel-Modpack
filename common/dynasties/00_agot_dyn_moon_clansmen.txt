@@ -1,0 +1,61 @@
+﻿#Moonclans yeet
+
+# dynn_Tan_Annag = {
+# 	name = "dynn_Tan_Annag"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Kirdumyt = {
+# 	name = "dynn_Kirdumyt"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Vros_Arekludak = {
+# 	name = "dynn_Vros_Arekludak"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Dhirmyik = {
+# 	name = "dynn_Dhirmyik"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Rkaith = {
+# 	name = "dynn_Rkaith"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Nrayt = {
+# 	name = "dynn_Nrayt"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Aktrih = {
+# 	name = "dynn_Aktrih"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Rihmued = {
+# 	name = "dynn_Rihmued"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Vros_Tiknnag_Kreih = {
+# 	name = "dynn_Vros_Tiknnag_Kreih"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Khriyiik = {
+# 	name = "dynn_Khriyiik"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Nrih_Iseck = {
+# 	name = "dynn_Nrih_Iseck"
+# 	culture = mountain_clansman
+# }
+
+# dynn_Vros_Karyit = {
+# 	name = "dynn_Vros_Karyit"
+# 	culture = mountain_clansman
+# }

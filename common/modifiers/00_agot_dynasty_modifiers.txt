@@ -1,0 +1,34 @@
+﻿########################
+### Dynasty Modifiers ###
+########################
+
+
+## Major Dynasties
+
+valyrian_heritage_dynasty_modifier = {
+	icon = flame_positive
+	inbreeding_chance = -0.95
+	negate_health_penalty_add = 0.25
+}
+
+thrall_house_dynasty_modifier = {
+	icon = blood_negative
+	ironborn_opinion = -5
+}
+
+divided_dynasty_house_modifier = {
+	icon = blood_negative
+}
+
+bittersteel_modifier = {
+	icon = blood_negative
+}
+
+dragonrider_house_modifier = {
+	icon = beast_positive
+}
+
+walled_off_no_more_modifier = {
+	icon = social_positive
+	cultural_head_fascination_mult = 0.25
+}

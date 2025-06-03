@@ -1,0 +1,540 @@
+namespace = season_flavor_events
+
+
+
+#Landless Character encounters a farmer in the autumn, who's struggling
+#They can either give money to the farmer, and then recieve a letter saying thank you once winter comes
+#or they can take their stuff and then find out they died
+#or they can leave them alone, and find them either dead or almost dead, where they can then help
+#5% chance it's a secret lord, who then gives them a weak hook favor, and 1000 gold. 
+season_flavor_events.001 = {
+	title = season_flavor_events.001.t
+	desc = season_flavor_events.001.desc
+	type = character_event
+	
+	
+	trigger = {
+	#Only fires if in the Autumn
+		is_it_autumn = yes	
+		#check if landless
+	}
+
+	option = {
+		name = season_flavor_events.001.a
+		#do nothing, just say hi and walk past
+		#may run into them again, chance of almost dead or dead, and one last chance to help.
+		
+	}
+	option = {
+		name = season_flavor_events.001.b
+		#i'll help, give money
+	#	hidden_effect = {
+		#	trigger_event = {
+		#		id = placeholder for event of letter
+		#	}
+		#}
+		#Also have event for if they're a secret lord, gives you 1000 gold. 
+	}
+	#option = {
+	#	name = season_flavor_events.001.c
+		#steal from them
+		#will give you stress. 
+		#you'll later find out they died. 
+
+	#}
+
+}
+
+season_flavor_events.00125 = {
+	title = season_flavor_events.060.t
+	desc = season_flavor_events.060.desc
+	type = character_event
+	
+	#Peasant Tax
+	option = {
+		name = season_flavor_events.060.a
+		add_character_modifier = {
+			modifier = seasons_peasant_tax
+			years = 1
+		}
+		#later have it go to the let them eat cake event..
+	}
+
+	#Noble Tax
+	option = {
+		name = season_flavor_events.060.b
+		add_character_modifier = {
+			modifier = seasons_noble_tax
+			years = 1
+		}		
+	
+	}
+	#both!
+	option = {
+		name = season_flavor_events.060.d
+		add_character_modifier = {
+			modifier = seasons_all_tax
+			years = 1
+		}
+	}
+	#I've changed my mind
+	option = {
+		name = season_flavor_events.060.c
+	}
+}
+
+
+#We're hungrie m'lord
+#the peasants are hungry during winter. give them food? nah feck u ya bastard
+season_flavor_events.002 = {
+	title = season_flavor_events.002.t 
+	desc = season_flavor_events.002.desc
+	type = character_event
+	
+	trigger = {
+		is_it_winter = yes
+		
+	}
+	
+	immediate = {
+		#creates a peasant leader
+		#gives local culture, culture of capital, make sure to not let it be High Valyrian
+		#as that won't make sense. 
+		
+	
+	
+	
+	}
+	
+	
+	option = {
+		name = season_flavor_events.002.a
+		#I'll do what I can...
+	
+	
+	}
+	option = {
+		name = season_flavor_events.002.b
+		#Nothing I can do
+	}
+	option = {
+		name = season_flavor_events.002.c
+		#Something else??
+		#I'll see what I can do, pushes it back a month, 
+		
+	}
+	option = {
+		name = season_flavor_events.002.cruel
+		#Then I'll fucking kill you
+	
+	}
+	option = {
+		name = season_flavor_events.002.cake
+		#Let them eat cake she says just like Marie Antoinette built in remedyy
+		trigger = {
+			OR = {
+				#has had .003 event fire
+				AND = {
+					has_trait = eccentric
+					OR = {
+						has_trait = callous
+						has_trait = cruel
+						has_trait = arrogant
+						#CHECKS IF LEARNING AND DIPLO VERY LOW
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = season_flavor_events.007 #off with their 'eads then
+				days = { 22 250 } #may not even fire in the winter at all. 
+			}
+		}
+	}
+	option = {
+		name = season_flavor_events.002.callous
+		#I profoundly, do not care.
+		
+	}
+	option = {
+		name = season_flavor_events.002.compassionate
+		#Oh you poor things, let me help!
+	}
+	option = {
+		name = season_flavor_events.002.smart
+		#Let me help, I've got an idea. 
+	}
+	option = {
+		name = season_flavor_events.002.stockpilehas
+		#steward, just give them some stockpile. 
+	}
+}
+
+#Oh the luxuries of wealth...
+#Let them eat cake, she
+season_flavor_events.003 = {
+	title = season_flavor_events.003.t
+	desc = season_flavor_events.003.desc
+	type = character_event
+	
+	trigger = {
+		#CHECKS IF WEALTH > 500
+		#IF RANK IS >= DUKE
+		is_it_winter = yes
+		#Checks if .002 has fired this winter
+	}
+	
+	option = {
+		name = season_flavor_events.003.a
+		#Oh to be a Lord (or King if King)
+		hidden_effect = {
+			random_list = {
+				45 = {
+					trigger_event = {
+						id = season_flavor_events.002
+						days = { 5 200 }
+					}
+				
+				}
+				55 = {
+					#nothing 
+				}
+			}
+			#Set a flag for char that they partied
+		}
+	}
+	option = {
+		name = season_flavor_events.003.b 
+		#maybe not such a good idea
+		hidden_effect = {
+			random_list = {
+				85 = {
+					#nothing
+				}
+				15 = {
+					trigger_event = {
+						id = season_flavor_events.006
+						days = { 10 150 } 
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = season_flavor_events.003.c
+		#Invite the Peasants to Join!
+		trigger = {
+			OR = {
+				has_trait = compassionate
+				has_trait = eccentric
+			}
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = season_events.006
+				days = { 10 84 }
+			}
+		}
+	}
+
+}
+
+#Childhood Summer Event
+#If child, lets them play with other children
+#can get nickname sweet summer child. 
+season_flavor_events.004 = {
+	title = season_flavor_events.004.t
+	desc = season_flavor_events.004.desc
+	type = character_event
+	#add triggered desc for depressed or outgoing or shy and such
+	trigger = {
+		is_it_summer = yes
+		is_child = yes
+	}
+	
+	option = {
+		name = season_flavor_events.004.a
+		#Let's play!
+		
+	}
+	option = {
+		name = season_flavor_events.004.b
+		#whats the point 
+		trigger = {
+			OR = {
+				has_trait = depressed_1
+				has_trait = depressed_genetic
+			}
+		}
+	}
+	option = {
+		name = season_flavor_events.004.c
+		#Let's Read!
+		
+	}
+	
+}
+
+
+#Nickname Sweet Summer Child
+season_flavor_events.005 = {
+	title = season_flavor_events.005.t
+	desc = season_flavor_events.005.desc
+	type = character_event
+	trigger = {
+		is_it_summer = yes
+		#check if has happened yet.
+	}
+
+	immediate = {
+		hidden_effect = {
+			#Set characters child as the_child scope.
+			scope:the_child = {
+				set_nickname = nick_sweet_summer_child_1
+			}
+		}
+	}
+	option = {
+		name = season_flavor_events.005.a
+		#that's them!
+	}
+	option = {
+		name = season_flavor_events.005.b
+		#perhaps not..
+	}
+}
+
+season_flavor_events.006 = {
+#Peasants. Rejoice.
+	title = season_flavor_events.006.t
+	desc = season_flavor_events.006.desc
+	type = character_event
+
+	immediate = {
+		hidden_effect = {
+		
+			#Give Player a modifier for happy peasants
+			#happy peasants, happy life, maybe increased control? 
+			#maybe a tiny temp fancy lord opinion debuff?
+		
+		}
+	}
+
+}
+
+#Off with their heads (from let them eat cake) 
+season_flavor_events.007 = {
+	title = season_flavor_events.007.t
+	desc = season_flavor_events.007.desc
+	type = character_event
+	
+	trigger = {
+		is_it_winter = yes
+	}
+	
+	#this triggers peasant unrest, and if they choose to let them eat cake
+	#it'll be a peasant rebellion, if not they'll just get debuff modifiers 
+
+
+}
+
+
+
+
+
+###########################
+##Winter Isolation Events##
+##050 through 100		##
+###########################
+
+
+#Stuck in winter isolation, picks up a new hobby.
+season_flavor_events.050 = {
+	title = season_flavor_events.050.t
+	desc = season_flavor_events.050.desc
+	type = character_event
+	trigger = {
+		is_it_winter = yes
+	}
+	
+	option = {
+		name = season_flavor_events.050.a
+		#Let's dance - David Bowie
+
+	}
+	option = {
+		name = season_flavor_events.050.b
+		#Happy trees (paint)
+	
+	}
+	
+	option = {	
+		name = season_flavor_events.050.c
+		#let's workout!
+		#IS not lazy, or infirm, or otherwise disabled.
+	}
+	
+}
+
+#Sleep with Spouse
+season_flavor_events.051 = {
+	title = season_flavor_events.051.t
+	desc = season_flavor_events.051.desc
+	type = character_event
+	#Theme should be romance
+	trigger = {
+		is_winter = yes
+	}
+	#Check if they're married, they're both sexually attracted to eachother
+	#not chaste
+	#not already lovers or soul mates
+	#make sure that everything makes sense so as not to cause weird things
+	#is not already doing a romance/seduce scheme. 
+	#does not have a lover/soulmate already
+	
+	option = {
+		name = season_flavor_events.051.a
+		#Let's fuck. Or maybe. If both lustful, then yeah let's fuck.
+		#if not both lustful, then maybe start seduce scheme with a high bonus, 
+	}
+	option = {
+		name = season_flavor_events.051.b
+		#let's just do something, I'm bored. 
+		#and then they sleep together
+	}
+	option = {
+		name = season_flavor_events.051.c 
+		#maybe we should just hang out and listen to a story?
+		#leads to a second part event, where they can try to seduce
+		#25% chance they become friends. 
+	}
+}
+
+season_flavor_events.052 = {
+	title = season_flavor_events.052.t
+	desc = season_flavor_events.052.desc 
+	type = character_event
+	
+	#Part two of event above
+	trigger = {
+		is_it_winter
+	}
+}
+
+#do you wanna build a snowman?
+season_flavor_events.053 = {
+	title = season_flavor_events.053.t
+	desc = season_flavor_events.053.desc
+	type = character_event
+	
+	trigger = {
+		is_it_winter
+		#check if north of the reach and stormlands
+		#Check if has a sibling who's a child
+		#or if they're a child 
+		#or have a friend who is a child
+		#or they're eccentric
+		
+	
+	}
+	
+
+}
+
+season_flavor_events.054 = {
+	title = season_flavor_events.054.t
+	desc = season_flavor_events.054.desc
+	type = character_event
+	
+	trigger = {
+		is_it_winter
+	}
+	#Sibling or friend or someone asks you to play 
+	#in the snow with them. 
+	#if they say yes, then goes to 055
+	#if they say no, then just sad, and goes to 056 which tells you they said no. 
+
+
+}
+
+season_flavor_events.055 = {
+	title = season_flavor_events.055.t
+	desc = season_flavor_events.055.desc
+	type = character_event
+	#yeah let's play!! 
+	#goes to 057 where it's the play, if much younger then they may break it, so you can either be happy or sad about that
+
+
+}
+
+season_flavor_events.056 = {
+	title = season_flavor_events.056.t
+	desc = season_flavor_events.056.desc
+	type = character_event
+	#Nope! Let's not
+	#Chance of holding a grudge, but unlikely, because siblings don't usually hate eachother
+	#what do I know though my brother is fucking dead
+
+	
+
+}
+
+season_flavor_events.057 = {
+	title = season_flavor_events.057.t
+	desc = season_flavor_events.056.desc
+	type = character_event
+	#playing
+	#goes to 058 if breaks where either sad or laugh or nothing goes to 058
+	#if play and goes well, then chance of a follow up event 059 where
+	#in like a few decades they remember that, and if they aren't friends then they
+	#reconnect and become friends. 
+	
+
+
+}
+
+season_flavor_events.058 = {
+	title = season_flavor_events.058.t
+	desc = season_flavor_events.058.desc
+	type = character_event
+	#you broke it!
+	#3 options, oh well
+	#laugh
+	#oh sad :(
+
+}
+
+season_flavor_events.059 = {
+	title = season_flavor_events.059.t
+	desc = season_flavor_events.059.desc
+	type = character_event
+	#hey do you remember when we did that as kids?
+	#become friends, or just smile and remember
+	#or if mean person then say feck u
+	
+
+
+
+}
+
+###############################
+##End Winter Isolation Events##
+###############################
+
+
+#######################
+##Farm Related Events##
+##	  101 to 200	 ##
+#######################
+#Index : 
+# 101 : Bountiful harvest in autumn
+# 102 : not so bountiful harvest in autumn
+# 103 : prosperous summer, let's improve techniques
+# leads to 101 or 102
+# 101 or 102 can just fire on their own during autumn
+# 104 : gold bonus from good summer
+# 105 : start planting in the spring
+# Spring Floods 
+# 106 : Spring Flood Event, 
+

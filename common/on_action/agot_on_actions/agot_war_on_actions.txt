@@ -1,0 +1,514 @@
+﻿on_join_war_as_secondary = {
+	on_actions = {
+		agot_on_join_war_as_secondary_action
+	}
+}
+
+on_war_started = {
+	on_actions = {
+		loyalist_faction_action
+		agot_megawar_lite_action
+		agot_dynamic_claimant_kings_start
+		tenet_ritual_wars_check
+	}
+}
+
+on_war_won_attacker = {
+	on_actions = {
+		agot_kingsguard_employer_lost
+		agot_dynamic_claimant_kings_end
+		agot_spoils_demands
+		agot_war_won_attacker_on_action
+	}
+}
+
+on_war_won_defender = {
+	on_actions = {
+		agot_dynamic_claimant_kings_end
+		agot_war_won_defender_on_action
+	}
+}
+
+on_war_white_peace = {
+	on_actions = {
+		agot_dynamic_claimant_kings_end
+		agot_war_white_peace_on_action
+	}
+}
+
+on_war_invalidated = {
+	on_actions = {
+		agot_dynamic_claimant_kings_end
+		agot_war_invalidated_on_action
+	}
+}
+
+on_war_transferred = {
+	on_actions = {
+		agot_dynamic_claimant_kings_end
+	}
+}
+
+loyalist_faction_action = {
+	effect = {
+		if = {
+			limit = {
+				war = { NOT = {	using_cb = peasant_war } }
+
+				scope:attacker = {
+					NOT = {
+						AND = {
+							exists = joined_faction
+							joined_faction = { faction_is_type = peasant_faction }
+						}
+					}
+				}
+
+				scope:attacker = {
+					is_vassal_or_below_of = scope:defender
+				}
+
+				# scope:defender = {
+				# 	NOT = { has_character_flag = war_of_succession_leader }
+				# }
+			}
+
+			scope:defender = {
+				every_vassal = {
+					limit = {
+						highest_held_title_tier > tier_barony
+						NOT = { is_at_war_with = scope:defender }
+						NOT = { is_allied_to = scope:attacker }
+						NOT = { this = scope:attacker }
+						NOT = { is_allied_in_war = scope:defender }
+						NOT = { is_allied_in_war = scope:attacker }
+						OR = {
+							is_allied_to = scope:defender # an ally would join the loyalist faction but due to how factions work they can't
+							has_relation_friend = scope:defender # a friend would join the loyalist faction but due to how factions work they can't
+							AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction }
+							}
+						}
+						opinion = {
+							target = scope:defender
+							value > 20
+						}
+
+						#Bookmark Ignore List (Usually vassals who would join to a canon war as attacker against their liege without actual alliance)
+						#NPK Reyne Rebellion
+						NOT = { this = character:Tarbeck_30 }
+						NOT = { this = character:Tarbeck_27 }
+					}
+					scope:war = { add_defender = prev }
+				}
+			}
+			scope:attacker = {
+				if = {
+					limit = {
+						exists = joined_faction
+						joined_faction = { faction_is_type = agot_loyalist_faction }
+					}
+					leave_faction = joined_faction
+				}
+			}
+		}
+	}
+}
+
+agot_megawar_lite_action = {
+	effect = {
+		if = {
+			limit = {
+				war = { using_cb = agot_succession_war }
+
+				scope:attacker = {
+					has_character_flag = agot_megawar_lite
+					is_vassal_or_below_of = scope:defender
+				}
+
+				scope:defender = {
+					any_vassal_or_below = {
+						highest_held_title_tier > tier_barony
+						OR = {
+							NOT = { is_at_war_with = scope:defender }
+							NOT = { is_at_war_with = scope:attacker }
+						}
+						NOT = { this = scope:attacker }
+						NOT = { is_allied_in_war = scope:defender }
+						NOT = { is_allied_in_war = scope:attacker }
+						OR = {
+							has_character_flag = megawar_lite_joins_defender
+							has_character_flag = megawar_lite_joins_attacker
+						}
+					}
+				}
+			}
+
+			scope:defender = {
+				#Joining the Defender
+				every_vassal_or_below = {
+					limit = {
+						highest_held_title_tier > tier_barony
+						NOT = { is_at_war_with = scope:defender }
+						NOT = { this = scope:attacker }
+						NOT = { is_allied_in_war = scope:defender }
+						NOT = { is_allied_in_war = scope:attacker }
+						has_character_flag = megawar_lite_joins_defender
+					}
+					scope:war = { add_defender = prev }
+				}
+				#Joining the Attacker
+				every_vassal_or_below = {
+					limit = {
+						highest_held_title_tier > tier_barony
+						NOT = { is_at_war_with = scope:attacker }
+						NOT = { this = scope:attacker }
+						NOT = { is_allied_in_war = scope:defender }
+						NOT = { is_allied_in_war = scope:attacker }
+						has_character_flag = megawar_lite_joins_attacker
+					}
+					scope:war = { add_attacker = prev }
+				}
+			}
+			scope:attacker = {
+				if = {
+					limit = {
+						exists = joined_faction
+						joined_faction = { faction_is_type = agot_loyalist_faction }
+					}
+					leave_faction = joined_faction
+				}
+			}
+		}
+	}
+}
+
+agot_kingsguard_employer_lost = {
+	effect = {
+		scope:attacker = { save_scope_as = winner }
+		scope:defender = { save_scope_as = loser }
+		if = {
+			limit = {
+				scope:war = {
+					any_in_list = {
+						list = target_titles
+						has_variable = kingsguard
+						save_temporary_scope_as = temp_scope
+					}
+					scope:claimant ?= {
+						has_title = scope:temp_scope
+					}
+				}
+			}
+			scope:war = {
+				random_in_list = {
+					list = target_titles
+					limit = { has_variable = kingsguard }
+					save_scope_as = title_with_kg
+				}
+				scope:claimant = {
+					trigger_event = { id = agot_kingsguard.9100 days = 7 }
+				}
+			}
+		}
+	}
+}
+
+agot_dynamic_claimant_kings_start = {
+	trigger = {
+		scope:attacker = {
+			primary_title.tier < tier_empire
+			any_character_war = {
+				is_war_leader = scope:attacker
+				OR = {
+					using_cb = claim_cb
+					using_cb = agot_claim_cb
+					using_cb = agot_succession_war
+					using_cb = agot_claimant_faction_war
+					using_cb = agot_bastard_claimant_war
+					using_cb = agot_bastard_claimant_war_no_nickname
+				}
+				casus_belli = {
+					any_target_title = {
+						tier = tier_empire
+					}
+				}
+			}
+		}
+		scope:claimant = {
+			scope:claimant = scope:attacker
+		}
+		scope:defender = {
+			OR = {
+				has_government = feudal_government
+				has_government = lp_feudal_government
+			}
+		}
+	}
+	effect = {
+		scope:attacker = {
+			add_character_flag = agot_claimant_king
+		}
+	}
+}
+
+agot_dynamic_claimant_kings_end = {
+	trigger = {
+		scope:attacker = {
+			has_character_flag = agot_claimant_king
+			any_character_war = {
+				OR = {
+					using_cb = claim_cb
+					using_cb = agot_claim_cb
+					using_cb = agot_succession_war
+					using_cb = agot_claimant_faction_war
+					using_cb = agot_bastard_claimant_war
+					using_cb = agot_bastard_claimant_war_no_nickname
+				}
+			}
+		}
+	}
+	effect = {
+		scope:attacker = {
+			trigger_event = {
+				id = agot_claimant_king_events.0001
+				days = 1
+			}
+		}
+	}
+}
+
+agot_spoils_demands = {
+	trigger = {
+		has_multiple_players = no
+	}
+	effect = {
+		scope:attacker = { save_scope_as = winner }
+		scope:defender = { save_scope_as = loser }
+		if = {
+			limit = {
+				scope:war = {
+					any_in_list = {
+						list = target_titles
+						tier = tier_empire
+						save_temporary_scope_as = temp_scope
+					}
+					scope:claimant ?= {
+						has_title = scope:temp_scope
+					}
+				}
+			}
+			scope:claimant = {
+				save_scope_as = attacker
+			}
+			scope:war = {
+				ordered_war_attacker = {
+					limit = {
+						this != scope:attacker
+						save_temporary_scope_as = temp_scope
+						prev = {
+							war_contribution = {
+								target = scope:temp_scope
+								value >= 10
+							}
+						}
+					}
+					order_by = {
+						save_temporary_scope_as = char_temp
+						add = "scope:war.war_contribution(scope:char_temp)"
+					}
+					position = 0
+					save_scope_as = whiner_1
+					scope:whiner_1 = { trigger_event = { id = agot_war.0001 days = 8 } }
+				}
+				ordered_war_attacker = {
+					limit = {
+						this != scope:attacker
+						this != scope:whiner_1
+						save_temporary_scope_as = temp_scope
+						prev = {
+							war_contribution = {
+								target = scope:temp_scope
+								value >= 10
+							}
+						}
+					}
+					order_by = {
+						save_temporary_scope_as = char_temp
+						add = "scope:war.war_contribution(scope:char_temp)"
+					}
+					position = 1
+					save_scope_as = whiner_2
+					scope:whiner_2 = { trigger_event = { id = agot_war.0001 days = 9 } }
+				}
+				ordered_war_attacker = {
+					limit = {
+						this != scope:attacker
+						this != scope:whiner_1
+						this != scope:whiner_2
+						save_temporary_scope_as = temp_scope
+						prev = {
+							war_contribution = {
+								target = scope:temp_scope
+								value >= 10
+							}
+						}
+					}
+					order_by = {
+						save_temporary_scope_as = char_temp
+						add = "scope:war.war_contribution(scope:char_temp)"
+					}
+					position = 2
+					save_scope_as = whiner_3
+					scope:whiner_3 = { trigger_event = { id = agot_war.0001 days = 10 } }
+				}
+			}
+
+		}
+	}
+}
+
+tenet_ritual_wars_check = {
+	trigger = {
+		scope:attacker = {
+			faith = {
+				has_doctrine_parameter = wars_replaced_with_ritual_battles
+			}
+		}
+		scope:defender.faith = scope:attacker.faith
+	}
+	effect = {
+		scope:attacker = { trigger_event = agot_religion_events.3000 }
+	}
+}
+
+
+### Mega Wars
+
+# Set War Outcome for Mega War Story
+agot_war_won_attacker_on_action = {
+	trigger = {}
+	effect = {
+		agot_mw_set_mw_outcome = { SCENARIO = victory }
+	}
+}
+
+agot_war_won_defender_on_action = {
+	trigger = {}
+	effect = {
+		agot_mw_set_mw_outcome = { SCENARIO = victory }
+	}
+}
+
+agot_war_white_peace_on_action = {
+	trigger = {}
+	effect = {
+		agot_mw_set_mw_outcome = { SCENARIO = white_peace }
+	}
+}
+
+agot_war_invalidated_on_action = {
+	trigger = {}
+	effect = {
+		agot_mw_set_mw_outcome = { SCENARIO = invalidated }
+	}
+}
+
+agot_on_join_war_as_secondary_action = {
+	trigger = {
+		#scope:war = { # AGOT TODO; if unused, remove it!
+		#	OR = {
+		#		has_variable = pre_war_liege
+		#		any_liege_or_above = {
+		#			OR = {
+		#				agot_mw_crown_trigger = yes
+		#				has_variable = pre_war_liege
+		#				agot_mw_rebel_leader_trigger = yes
+		#			}
+		#		}
+		#	}
+		#}
+	}
+	effect = {
+		scope:war = {
+			if = {
+				limit = {
+					is_attacker = root
+					exists = scope:war.primary_attacker.var:pre_war_liege
+					scope:war.primary_attacker = { # If they're an attacker in a MW, they're always a rebel
+						any_owned_story = {
+							story_type = story_agot_mw_rebel
+							NOT = { is_target_in_variable_list = { name = mw_rebel_supporter_list target = root } } # don't execute if root already is in list
+						}
+					}
+				}
+
+				scope:war.primary_attacker = { # If they're an attacker in a MW, they're always a rebel
+					random_owned_story = {
+						limit = { story_type = story_agot_mw_rebel }
+						save_temporary_scope_as = mw_rebel_story_temp
+					}
+				}
+				scope:war.primary_attacker.var:pre_war_liege ?= {
+					save_temporary_scope_as = temp_pre_war_liege
+				}
+				if = {
+					limit = {
+						trigger_if = {
+							limit = { exists = scope:temp_pre_war_liege }
+							scope:temp_pre_war_liege.highest_held_title_tier >= tier_kingdom
+							root = {
+								highest_held_title_tier < tier_kingdom
+							}
+						}
+					}
+					root.liege = {
+						save_temporary_scope_as = temp_pre_war_liege
+					}
+				}
+				agot_mw_add_character_to_mw_list = {
+					CHARACTER_SCOPE = root
+					STORY_SCOPE = scope:mw_rebel_story_temp
+					LIST = mw_rebel_supporter_list
+					PRE_WAR_LIEGE_SCOPE = scope:temp_pre_war_liege
+				}
+			}
+			if = {
+				limit = {
+					is_attacker = root
+					exists = scope:war.primary_attacker.var:pre_war_liege
+					scope:war.primary_attacker= { # If they're an attacker in a MW, they're always a rebel
+						is_target_in_variable_list = { name = mw_rebel_supporter_list target = scope:war.primary_attacker.var:pre_war_liege }
+					}
+				}
+				scope:war.primary_attacker= {
+					random_owned_story = {
+						limit = { story_type = story_agot_mw_rebel }
+						save_temporary_scope_as = mw_rebel_story_temp
+					}
+				}
+				scope:war.primary_attacker.var:pre_war_liege = {
+					save_temporary_scope_as = temp_pre_war_liege
+				}
+				if = {
+					limit = {
+						scope:temp_pre_war_liege.highest_held_title_tier >= tier_kingdom
+						root = {
+							highest_held_title_tier < tier_kingdom
+						}
+					}
+					root.liege = {
+						save_temporary_scope_as = temp_pre_war_liege
+					}
+				}
+				agot_mw_add_character_to_mw_list = {
+					CHARACTER_SCOPE = root
+					STORY_SCOPE = scope:mw_rebel_story_temp
+					LIST = mw_rebel_supporter_list
+					PRE_WAR_LIEGE_SCOPE = scope:temp_pre_war_liege
+				}
+			}
+		}
+	}
+}

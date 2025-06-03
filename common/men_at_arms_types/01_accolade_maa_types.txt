@@ -1,0 +1,2127 @@
+﻿# standard costs
+@maa_buy_cost = 150
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 3.5
+@cultural_maa_extra_ai_score = 60 # Equivalent to having 6 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+
+# Must be synced between files with the values located at "# Provisions Costs #".
+@provisions_cost_infantry_cheap = 3
+@provisions_cost_infantry_moderate = 7
+@provisions_cost_infantry_expensive = 12
+@provisions_cost_infantry_bankrupting = 15
+
+@provisions_cost_cavalry_cheap = 7
+@provisions_cost_cavalry_moderate = 15
+@provisions_cost_cavalry_expensive = 21
+@provisions_cost_cavalry_bankrupting = 30
+
+@provisions_cost_special_cheap = 6
+@provisions_cost_special_moderate = 12
+@provisions_cost_special_expensive = 18
+@provisions_cost_special_bankrupting = 24
+
+### WESTEROS
+
+accolade_maa_archers = {
+	type = archers
+	icon = retinue_archer
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}	
+		any_active_accolade = { 
+			primary_type = {
+				this = accolade_type:archer_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 15
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {			   
+		hills = { damage = 20 toughness = 8 }
+		forest = { toughness = 8 screen = 8 }
+		taiga = { toughness = 8 screen = 8 }
+		#AGOT Added
+		majorroad_hills = { damage = 20 toughness = 8 }
+		minorroad_hills = { damage = 20 toughness = 8 }
+									   
+		majorroad_forest = { toughness = 8 screen = 8 }
+		minorroad_forest = { toughness = 8 screen = 8 }
+									  
+		majorroad_taiga = { toughness = 8 screen = 8 }
+		minorroad_taiga = { toughness = 8 screen = 8 }
+	}
+	
+	counters = {
+		skirmishers = 2
+	}
+
+	buy_cost = { gold = accolade_bowmen_recruitment_cost }
+	low_maintenance_cost = { gold = bowmen_low_maint_cost }
+	high_maintenance_cost = { gold = bowmen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+
+	max_sub_regiments = 8
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_archers
+		add = 50
+	}
+}
+
+accolade_maa_skirmishers = {
+	type = skirmishers
+	icon = retinue_skirmisher
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }	
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:skirmisher_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 20
+	toughness = 20
+	pursuit = 16
+	screen = 20
+	
+	terrain_bonus = {
+		forest = { damage = 8 toughness = 12 }
+		taiga = { damage = 8 toughness = 12 }
+		jungle = { damage = 8 toughness = 12 }
+		#AGOT Added
+		majorroad_forest = { damage = 8 toughness = 12 }
+		minorroad_forest = { damage = 8 toughness = 12 }
+									   
+		majorroad_taiga = { damage = 8 toughness = 12 }
+		minorroad_taiga = { damage = 8 toughness = 12 }
+										
+		majorroad_jungle = { damage = 8 toughness = 12 }
+		minorroad_jungle = { damage = 8 toughness = 12 }
+	}
+	
+	counters = {
+		heavy_infantry = 2
+	}
+
+
+	buy_cost = { gold = accolade_skirmisher_recruitment_cost }
+	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
+	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+
+	max_sub_regiments = 8
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_skirmishers
+		add = 50
+	}
+}
+
+accolade_maa_pikes = {
+	type = pikemen
+	icon = retinue_pikemen
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:pike_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 30
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		mountains = { toughness = 24 }
+		desert_mountains = { toughness = 24 }
+		hills = { toughness = 16 }
+		#AGOT Added
+		majorroad_mountains = { toughness = 24 }
+		minorroad_mountains = { toughness = 24 }
+									   
+		majorroad_desert_mountains = { toughness = 24 }
+		minorroad_desert_mountains = { toughness = 24 }
+							
+		majorroad_hills = { toughness = 16 }
+		minorroad_hills = { toughness = 16 }
+	}
+	
+	counters = {
+		light_cavalry = 2
+		heavy_cavalry = 2
+		camel_cavalry = 2
+		elephant_cavalry = 2
+	}
+
+	buy_cost = { gold = accolade_pikemen_recruitment_cost }
+	low_maintenance_cost = { gold = pikemen_low_maint_cost }
+	high_maintenance_cost = { gold = pikemen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_pikemen
+		add = 50
+	}
+}
+
+accolade_maa_outriders = {
+	type = light_cavalry
+	icon = retinue_outrider
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:outrider_attribute
+			}  
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 20
+	pursuit = 40
+	screen = 40
+	
+	terrain_bonus = {
+		plains = { damage = 30 }
+		drylands = { damage = 30 }
+		hills = { damage = -3 }
+		mountains = { damage = -5 pursuit = -10 }
+		desert_mountains = { damage = -8 pursuit = -10 }
+		wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
+		#AGOT Added
+		majorroad_plains = { damage = 30 }
+		minorroad_plains = { damage = 30 }
+							
+		majorroad_drylands = { damage = 30 }
+		minorroad_drylands = { damage = 30 }
+						 
+		majorroad_hills = { damage = -3 }
+		minorroad_hills = { damage = -3 }
+										   
+		majorroad_mountains = { damage = -5 pursuit = -10 }
+		minorroad_mountains = { damage = -5 pursuit = -10 }
+												  
+		majorroad_desert_mountains = { damage = -8 pursuit = -10 }
+		minorroad_desert_mountains = { damage = -8 pursuit = -10 }
+																	  
+		majorroad_wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
+		minorroad_wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
+	}
+	
+	counters = {
+		archers = 2
+	}
+
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+
+	buy_cost = { gold = accolade_light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_light_cavalry
+		add = 50
+	}
+}
+
+accolade_maa_vanguards = {
+	type = heavy_infantry
+	icon = retinue_vanguard
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:vanguard_attribute
+			}
+			accolade_rank >= 3
+		}
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	damage = 45
+	toughness = 35
+	pursuit = 0
+	screen = 0
+	
+	counters = {
+		pikemen = 2
+	}
+	
+	buy_cost = { gold = accolade_heavy_infantry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_heavy_infantry
+		add = 75
+	}
+}
+
+accolade_maa_lancers = {
+	type = heavy_cavalry
+	icon = retinue_lancer
+
+	can_recruit = {
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:lancer_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 200
+	toughness = 70
+	pursuit = 40
+	screen = 0
+	
+	terrain_bonus = {
+		drylands = { damage = 60 }
+		hills = { damage = -10 }
+		mountains = { damage = -35 }
+		desert_mountains = { damage = -35 }
+		wetlands = { damage = -35 toughness = -5 pursuit = -5 }
+		#AGOT Added
+		majorroad_plains = { damage = 60 }
+		minorroad_plains = { damage = 60 }
+							
+		majorroad_drylands = { damage = 60 }
+		minorroad_drylands = { damage = 60 }
+						  
+		majorroad_hills = { damage = -10 }
+		minorroad_hills = { damage = -10 }
+							  
+		majorroad_mountains = { damage = -35 }
+		minorroad_mountains = { damage = -35 }
+									 
+		majorroad_desert_mountains = { damage = -35 }
+		minorroad_desert_mountains = { damage = -35 }
+														 
+		majorroad_wetlands = { damage = -35 toughness = -5 pursuit = -5 }
+		minorroad_wetlands = { damage = -35 toughness = -5 pursuit = -5 }
+	}
+	
+	counters = {
+		archers = 2
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -10 }
+	}
+
+	buy_cost = { gold = accolade_heavy_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_expensive
+
+	max_sub_regiments = 6
+	
+	stack = 50
+	ai_quality = {
+		value = culture_ai_weight_heavy_cavalry
+		add = 100
+	}
+}
+
+accolade_maa_crossbowers = {
+	type = archers
+	icon = retinue_crossbowmen
+
+	can_recruit = {
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:crossbowmen_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 60
+	toughness = 30
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		hills = { damage = 20 }
+		plains = { toughness = -4 }
+		drylands = { toughness = -4 }
+		desert = { toughness = -4 }
+		#AGOT Added
+		majorroad_hills = { damage = 20 }
+		minorroad_hills = { damage = 20 }
+							 
+		majorroad_plains = { toughness = -4 }
+		minorroad_plains = { toughness = -4 }
+							   
+		majorroad_drylands = { toughness = -4 }
+		minorroad_drylands = { toughness = -4 }
+							 
+		majorroad_desert = { toughness = -4 }
+		minorroad_desert = { toughness = -4 }
+	}
+	
+	counters = {
+		heavy_infantry = 2
+		heavy_cavalry = 2
+		archer_cavalry = 1
+	}
+
+	buy_cost = { gold = accolade_crossbowmen_recruitment_cost }
+	low_maintenance_cost = { gold = crossbowmen_low_maint_cost }
+	high_maintenance_cost = { gold = crossbowmen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_archers
+		add = 100
+	}
+}
+
+accolade_maa_cameliers = {
+	type = camel_cavalry
+	icon = camel_riders
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:camelry_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 20
+	pursuit = 30
+	screen = 30
+	
+	terrain_bonus = {
+		desert = { damage = 40 toughness = 16 }
+		drylands = { damage = 30 toughness = 16 }
+		oasis = { damage = 30 }
+		floodplains = { damage = 10 }
+		hills = { damage = -5 }
+		desert_mountains = { damage = -5 pursuit = -5 }
+		mountains = { damage = -8 pursuit = -10 }
+		wetlands = { damage = -8 toughness = -5 pursuit = -10 screen = -10 }
+		#AGOT Added
+		majorroad_desert = { damage = 40 toughness = 16 }
+		minorroad_desert = { damage = 40 toughness = 16 }
+										   
+		majorroad_drylands = { damage = 30 toughness = 16 }
+		minorroad_drylands = { damage = 30 toughness = 16 }
+						 
+		majorroad_oasis = { damage = 30 }
+		minorroad_oasis = { damage = 30 }
+							   
+		majorroad_floodplains = { damage = 10 }
+		minorroad_floodplains = { damage = 10 }
+						 
+		majorroad_hills = { damage = -5 }
+		minorroad_hills = { damage = -5 }
+												 
+		majorroad_desert_mountains = { damage = -5 pursuit = -5 }
+		minorroad_desert_mountains = { damage = -5 pursuit = -5 }
+										   
+		majorroad_mountains = { damage = -8 pursuit = -10 }
+		minorroad_mountains = { damage = -8 pursuit = -10 }
+																	  
+		majorroad_wetlands = { damage = -8 toughness = -5 pursuit = -10 screen = -10 }
+		minorroad_wetlands = { damage = -8 toughness = -5 pursuit = -10 screen = -10 }
+	}
+	
+	counters = {
+		light_cavalry = 2
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -3 }
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+	
+	buy_cost = { gold = accolade_camel_rider_recruitment_cost }
+	low_maintenance_cost = { gold = camel_rider_low_maint_cost }
+	high_maintenance_cost = { gold = camel_rider_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_moderate
+
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_camels
+		add = 75
+	}
+}
+
+accolade_maa_elephantiers = {
+	type = elephant_cavalry
+	icon = war_elephants
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:elephantry_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 400
+	toughness = 100
+	pursuit = 0
+	screen = 0
+	
+	siege_value = 0.2
+	
+	terrain_bonus = {
+		jungle = { damage = 100 }
+		mountains = { damage = -100 }
+		desert_mountains = { damage = -100 }
+		wetlands = { damage = -150 toughness = -20 }
+		#AGOT Added
+		majorroad_jungle = { damage = 100 }
+		minorroad_jungle = { damage = 100 }
+							   
+		majorroad_mountains = { damage = -100 }
+		minorroad_mountains = { damage = -100 }
+									  
+		majorroad_desert_mountains = { damage = -100 }
+		minorroad_desert_mountains = { damage = -100 }
+											  
+		majorroad_wetlands = { damage = -150 toughness = -20 }
+		minorroad_wetlands = { damage = -150 toughness = -20 }
+	}
+	
+	counters = {
+		skirmishers = 2
+		heavy_infantry = 2
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -30 toughness = -5 }
+		harsh_winter = { damage = -60 toughness = -10 }
+	}
+
+	buy_cost = { gold = accolade_war_elephant_recruitment_cost }
+	low_maintenance_cost = { gold = war_elephant_low_maint_cost }
+	high_maintenance_cost = { gold = war_elephant_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_bankrupting
+	max_sub_regiments = 4
+	
+	stack = 25
+	hired_stack_size = 10
+	ai_quality = {
+		value = culture_ai_weight_elephants
+		add = 100
+	}
+}
+
+accolade_maa_horse_archers = {
+	type = archer_cavalry
+	icon = horse_archers
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:horse_archer_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 45
+	toughness = 20
+	pursuit = 40
+	screen = 30
+	
+	terrain_bonus = {
+		steppe = { damage = 45 }
+		plains = { damage = 20 }
+		drylands = { damage = 20 }
+		jungle = { damage = -20 pursuit = -20 }
+		wetlands = { damage = -30 pursuit = -30 }
+		mountains = { damage = -30 pursuit = -30 }
+		desert_mountains = { damage = -30 pursuit = -30 }
+		#AGOT Added
+		majorroad_steppe = { damage = 45 }
+		minorroad_steppe = { damage = 45 }
+						  
+		majorroad_plains = { damage = 20 }
+		minorroad_plains = { damage = 20 }
+							
+		majorroad_drylands = { damage = 20 }
+		minorroad_drylands = { damage = 20 }
+										 
+		majorroad_jungle = { damage = -20 pursuit = -20 }
+		minorroad_jungle = { damage = -20 pursuit = -20 }
+										   
+		majorroad_wetlands = { damage = -30 pursuit = -30 }
+		minorroad_wetlands = { damage = -30 pursuit = -30 }
+											
+		majorroad_mountains = { damage = -30 pursuit = -30 }
+		minorroad_mountains = { damage = -30 pursuit = -30 }
+												   
+		majorroad_desert_mountains = { damage = -30 pursuit = -30 }
+		minorroad_desert_mountains = { damage = -30 pursuit = -30 }
+	}
+	
+	counters = {
+		skirmishers = 2
+		heavy_infantry = 2
+	}
+
+	buy_cost = { gold = accolade_horse_archers_recruitment_cost }
+	low_maintenance_cost = { gold = horse_archers_low_maint_cost }
+	high_maintenance_cost = { gold = horse_archers_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+	max_sub_regiments = 5
+	
+	stack = 100
+	ai_quality = {
+		value = @cultural_maa_extra_ai_score
+		add = 100
+	}
+}
+
+
+### FREE FOLK
+
+
+accolade_maa_archers_wild = {
+	type = archers
+	icon = bowmen_wild
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }	
+		culture = {
+			OR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}	
+		any_active_accolade = { 
+			primary_type = {
+				this = accolade_type:archer_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 15
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		steppe = { toughness = 10 }
+		majorroad_steppe = { toughness = 10 }
+		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
+		majorroad_taiga = { toughness = 10 }
+		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
+		majorroad_taiga_bog = { toughness = 10 }
+		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+		glacier = { toughness = 10 }
+		majorroad_glacier = { toughness = 10 }
+		minorroad_glacier = { toughness = 10 }
+		frozen_flats = { toughness = 10 }
+		majorroad_frozen_flats = { toughness = 10 }
+		minorroad_frozen_flats = { toughness = 10 }		
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
+		majorroad_wetlands = { toughness = 5 }
+		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
+		majorroad_cloudforest = { toughness = 5 }
+		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
+		majorroad_oasis = { toughness = -5 }
+		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+	}
+
+	winter_bonus = {
+		normal_winter = { toughness = 5 }
+		harsh_winter = { toughness = 5 }
+	}
+
+	counters = {
+		skirmishers = 2
+	}
+
+	buy_cost = { gold = accolade_bowmen_recruitment_cost }
+	low_maintenance_cost = { gold = bowmen_low_maint_cost }
+	high_maintenance_cost = { gold = bowmen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+
+	max_sub_regiments = 8
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_archers
+		add = 50
+	}
+}
+
+accolade_maa_skirmishers_wild = {
+	type = skirmishers
+	icon = skirmishers_wild
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			OR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:skirmisher_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 20
+	toughness = 20
+	pursuit = 16
+	screen = 20
+	
+	terrain_bonus = {
+		steppe = { toughness = 10 }
+		majorroad_steppe = { toughness = 10 }
+		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
+		majorroad_taiga = { toughness = 10 }
+		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
+		majorroad_taiga_bog = { toughness = 10 }
+		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+		glacier = { toughness = 10 }
+		majorroad_glacier = { toughness = 10 }
+		minorroad_glacier = { toughness = 10 }
+		frozen_flats = { toughness = 10 }
+		majorroad_frozen_flats = { toughness = 10 }
+		minorroad_frozen_flats = { toughness = 10 }
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
+		majorroad_wetlands = { toughness = 5 }
+		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
+		majorroad_cloudforest = { toughness = 5 }
+		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
+		majorroad_oasis = { toughness = -5 }
+		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+	}
+
+	winter_bonus = {
+		normal_winter = { toughness = 5 }
+		harsh_winter = { toughness = 5 }
+	}
+	
+	counters = {
+		heavy_infantry = 2
+	}
+
+
+	buy_cost = { gold = accolade_skirmisher_recruitment_cost }
+	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
+	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+	
+	max_sub_regiments = 8
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_skirmishers
+		add = 50
+	}
+}
+
+accolade_maa_pikes_wild = {
+	type = pikemen
+	icon = pikemen_wild
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			OR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}	
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:pike_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 30
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		steppe = { toughness = 10 }
+		majorroad_steppe = { toughness = 10 }
+		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
+		majorroad_taiga = { toughness = 10 }
+		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
+		majorroad_taiga_bog = { toughness = 10 }
+		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+		glacier = { toughness = 10 }
+		majorroad_glacier = { toughness = 10 }
+		minorroad_glacier = { toughness = 10 }
+		frozen_flats = { toughness = 10 }
+		majorroad_frozen_flats = { toughness = 10 }
+		minorroad_frozen_flats = { toughness = 10 }		
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
+		majorroad_wetlands = { toughness = 5 }
+		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
+		majorroad_cloudforest = { toughness = 5 }
+		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
+		majorroad_oasis = { toughness = -5 }
+		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+	}
+	
+	winter_bonus = {
+		normal_winter = { toughness = 5 }
+		harsh_winter = { toughness = 5 }
+	}
+	
+	counters = {
+		light_cavalry = 2
+		heavy_cavalry = 2
+		camel_cavalry = 2
+		elephant_cavalry = 2
+	}
+
+	buy_cost = { gold = accolade_pikemen_recruitment_cost }
+	low_maintenance_cost = { gold = pikemen_low_maint_cost }
+	high_maintenance_cost = { gold = pikemen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+	
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_pikemen
+		add = 50
+	}
+}
+
+accolade_maa_outriders_wild = {
+	type = light_cavalry
+	icon = light_cavalry_wild
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			OR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}	
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:outrider_attribute
+			}  
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 20
+	pursuit = 40
+	screen = 40
+	
+	terrain_bonus = {
+		steppe = { toughness = 10 }
+		majorroad_steppe = { toughness = 10 }
+		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
+		majorroad_taiga = { toughness = 10 }
+		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
+		majorroad_taiga_bog = { toughness = 10 }
+		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
+		majorroad_forest = { toughness = 5 }
+		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
+		majorroad_wetlands = { toughness = 5 }
+		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
+		majorroad_cloudforest = { toughness = 5 }
+		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
+		majorroad_oasis = { toughness = -5 }
+		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
+		majorroad_desert_mountains = { toughness = -5 }
+		minorroad_desert_mountains = { toughness = -5 }
+
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+	}
+	
+	counters = {
+		archers = 2
+	}
+
+	buy_cost = { gold = accolade_light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+	
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_light_cavalry
+		add = 50
+	}
+}
+
+accolade_maa_vanguards_wild = {
+	type = heavy_infantry
+	icon = heavy_infantry_wild
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			OR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:vanguard_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+
+	damage = 45
+	toughness = 35
+	pursuit = 0
+	screen = 0
+	
+	winter_bonus = {
+		normal_winter = { toughness = 5 }
+		harsh_winter = { toughness = 5 }
+	}
+	
+	counters = {
+		pikemen = 2
+	}
+	
+	buy_cost = { gold = accolade_heavy_infantry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+	
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_heavy_infantry
+		add = 75
+	}
+}
+
+accolade_maa_lancers_wild = {
+	type = heavy_cavalry
+	icon = heavy_cavalry_wild
+
+	can_recruit = {
+		NOT = { has_government = nights_watch_government }		
+		culture = {
+			OR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:lancer_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 200
+	toughness = 70
+	pursuit = 40
+	screen = 0
+	
+	terrain_bonus = {
+		plains = { damage = 60 }
+		majorroad_plains = { damage = 60 }
+		minorroad_plains = { damage = 60 }
+		drylands = { damage = 60 }
+		majorroad_drylands = { damage = 60 }
+		minorroad_drylands = { damage = 60 }
+		hills = { damage = -10 }
+		majorroad_hills = { damage = -10 }
+		minorroad_hills = { damage = -10 }
+		mountains = { damage = -35 }
+		majorroad_mountains = { damage = -35 }
+		minorroad_mountains = { damage = -35 }
+		desert_mountains = { damage = -35 }
+		majorroad_desert_mountains = { damage = -35 }
+		minorroad_desert_mountains = { damage = -35 }
+		wetlands = { damage = -35 toughness = -5 pursuit = -5 }
+		majorroad_wetlands = { damage = -35 toughness = -5 pursuit = -5 }
+		minorroad_wetlands = { damage = -35 toughness = -5 pursuit = -5 }
+	}
+
+	counters = {
+		archers = 2
+	}
+
+	buy_cost = { gold = accolade_heavy_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	max_sub_regiments = 6
+	
+	stack = 50
+	ai_quality = {
+		value = culture_ai_weight_heavy_cavalry
+		add = 100
+	}
+}
+
+
+
+
+### NIGHTS WATCH
+
+accolade_maa_archers_watch = {
+	type = archers
+	icon = rangers
+
+	can_recruit = {
+		has_government = nights_watch_government	
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}	
+		any_active_accolade = { 
+			primary_type = {
+				this = accolade_type:archer_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 15
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		#AGOT Modified
+		#hills = { damage = 20 toughness = 8 }
+		#forest = { toughness = 8 screen = 8 }
+		#taiga = { toughness = 8 screen = 8 }
+
+		hills = { damage = 20 toughness = 8 }
+		majorroad_hills = { damage = 20 toughness = 8 }
+		minorroad_hills = { damage = 20 toughness = 8 }
+		forest = { toughness = 8 screen = 8 }
+		majorroad_forest = { toughness = 8 screen = 8 }
+		minorroad_forest = { toughness = 8 screen = 8 }
+		taiga = { toughness = 8 screen = 8 }
+		majorroad_taiga = { toughness = 8 screen = 8 }
+		minorroad_taiga = { toughness = 8 screen = 8 }
+	}
+
+	counters = {
+		skirmishers = 2
+	}
+
+	buy_cost = { gold = accolade_bowmen_recruitment_cost }
+	low_maintenance_cost = { gold = bowmen_low_maint_cost }
+	high_maintenance_cost = { gold = bowmen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap	
+
+	max_sub_regiments = 8
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_archers
+		add = 50
+	}
+}
+
+accolade_maa_skirmishers_watch = {
+	type = skirmishers
+	icon = eastwatch_sailors
+
+	can_recruit = {
+		has_government = nights_watch_government
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:skirmisher_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 20
+	toughness = 20
+	pursuit = 16
+	screen = 20
+	
+	terrain_bonus = {
+		#AGOT Modified
+		#forest = { damage = 8 toughness = 12 }
+		#taiga = { damage = 8 toughness = 12 }
+		#jungle = { damage = 8 toughness = 12 }
+
+		forest = { damage = 8 toughness = 12 }
+		majorroad_forest = { damage = 8 toughness = 12 }
+		minorroad_forest = { damage = 8 toughness = 12 }
+		taiga = { damage = 8 toughness = 12 }
+		majorroad_taiga = { damage = 8 toughness = 12 }
+		minorroad_taiga = { damage = 8 toughness = 12 }
+		jungle = { damage = 8 toughness = 12 }
+		majorroad_jungle = { damage = 8 toughness = 12 }
+		minorroad_jungle = { damage = 8 toughness = 12 }
+	}
+
+	counters = {
+		heavy_infantry = 2
+	}
+
+
+	buy_cost = { gold = accolade_skirmisher_recruitment_cost }
+	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
+	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
+	
+	max_sub_regiments = 8
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_skirmishers
+		add = 50
+	}
+}
+
+accolade_maa_pikes_watch = {
+	type = pikemen
+	icon = shadow_spears
+
+	can_recruit = {
+		has_government = nights_watch_government	
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:pike_attribute
+			} 
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 30
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		#AGOT Modified
+		#mountains = { toughness = 24 }
+		#desert_mountains = { toughness = 24 }
+		#hills = { toughness = 16 }
+
+		mountains = { toughness = 24 }
+		majorroad_mountains = { toughness = 24 }
+		minorroad_mountains = { toughness = 24 }
+		desert_mountains = { toughness = 24 }
+		majorroad_desert_mountains = { toughness = 24 }
+		minorroad_desert_mountains = { toughness = 24 }
+		hills = { toughness = 16 }
+		majorroad_hills = { toughness = 16 }
+		minorroad_hills = { toughness = 16 }
+	}
+
+	counters = {
+		light_cavalry = 2
+		heavy_cavalry = 2
+		camel_cavalry = 2
+		elephant_cavalry = 2
+	}
+
+	buy_cost = { gold = accolade_pikemen_recruitment_cost }
+	low_maintenance_cost = { gold = pikemen_low_maint_cost }
+	high_maintenance_cost = { gold = pikemen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap	
+
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_pikemen
+		add = 50
+	}
+}
+
+accolade_maa_outriders_watch = {
+	type = light_cavalry
+	icon = watch_trackers
+
+	can_recruit = {
+		has_government = nights_watch_government		
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:outrider_attribute
+			}  
+			accolade_rank >= 3
+		}
+	}
+	
+	damage = 30
+	toughness = 20
+	pursuit = 40
+	screen = 40
+	
+	terrain_bonus = {
+		#AGOT Modified
+		#plains = { damage = 30 }
+		#drylands = { damage = 30 }
+		#hills = { damage = -3 }
+		#mountains = { damage = -5 pursuit = -10 }
+		#desert_mountains = { damage = -8 pursuit = -10 }
+		#wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
+
+		plains = { damage = 30 }
+		majorroad_plains = { damage = 30 }
+		minorroad_plains = { damage = 30 }
+		drylands = { damage = 30 }
+		majorroad_drylands = { damage = 30 }
+		minorroad_drylands = { damage = 30 }
+		hills = { damage = -3 }
+		majorroad_hills = { damage = -3 }
+		minorroad_hills = { damage = -3 }
+		mountains = { damage = -5 pursuit = -10 }
+		majorroad_mountains = { damage = -5 pursuit = -10 }
+		minorroad_mountains = { damage = -5 pursuit = -10 }
+		desert_mountains = { damage = -8 pursuit = -10 }
+		majorroad_desert_mountains = { damage = -8 pursuit = -10 }
+		minorroad_desert_mountains = { damage = -8 pursuit = -10 }
+		wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
+		majorroad_wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
+		minorroad_wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
+	}
+	
+	counters = {
+		archers = 2
+	}
+
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+
+	buy_cost = { gold = accolade_light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
+
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_light_cavalry
+		add = 50
+	}
+}
+
+accolade_maa_vanguards_watch = {
+	type = heavy_infantry
+	icon = sworn_brothers
+
+	can_recruit = {
+		has_government = nights_watch_government	
+		culture = {
+			NOR= {	
+				this = culture:ice_riverman
+				any_parent_culture_or_above = {
+					this = culture:ice_riverman
+					}
+				this = culture:frozen_shoreman
+				any_parent_culture_or_above = {
+					this = culture:frozen_shoreman
+					}					
+				this = culture:fangman
+				any_parent_culture_or_above = {
+					this = culture:fangman
+					}					
+				this = culture:hornfoot
+				any_parent_culture_or_above = {
+					this = culture:hornfoot
+					}					
+				this = culture:forestman
+				any_parent_culture_or_above = {
+					this = culture:forestman
+					}					
+				this = culture:lakeman
+				any_parent_culture_or_above = {
+					this = culture:lakeman
+					}
+				this = culture:nightrunner
+				any_parent_culture_or_above = {
+					this = culture:nightrunner
+					}
+				this = culture:thenn
+				any_parent_culture_or_above = {
+					this = culture:thenn
+				}
+			}
+		}
+		any_active_accolade = {
+			primary_type = {
+				this = accolade_type:vanguard_attribute
+			}
+			accolade_rank >= 3
+		}
+	}
+
+	damage = 45
+	toughness = 35
+	pursuit = 0
+	screen = 0
+	
+	counters = {
+		pikemen = 2
+	}
+	
+	buy_cost = { gold = accolade_heavy_infantry_recruitment_cost }
+	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
+	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+	
+	max_sub_regiments = 6
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_heavy_infantry
+		add = 75
+	}
+}

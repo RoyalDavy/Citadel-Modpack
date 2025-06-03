@@ -1,0 +1,105 @@
+﻿agot_goad_interaction = {
+	category = interaction_category_hostile
+
+	desc = agot_goad_interaction_desc
+	icon = irritable
+	interface_priority = 60
+	use_diplomatic_range = yes
+
+	auto_accept = yes
+
+	cost = {
+		prestige = minor_prestige_value
+		piety = minor_piety_value
+	}
+
+	cooldown = { years = 2 }
+
+	on_accept = {
+
+	scope:actor = {
+		reverse_add_opinion = {
+			modifier = insulted_opinion
+			target = scope:recipient
+			opinion = -15
+		}
+
+			duel = {
+				skill = intrigue
+				target = scope:recipient
+
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 2.5
+						min = -35
+					}
+
+					send_interface_toast = {
+					title = goad.success_title
+						scope:recipient = {
+							add_character_modifier = {
+								modifier = agot_goaded
+								years = 3
+							}
+							add_character_flag = {
+								flag = been_goaded
+								years = 5
+							}
+						}
+					}
+				}
+				50 = { #failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -2.5
+						min = -35
+					}
+					send_interface_toast = {
+					title = goad.failure_title
+						add_stress = medium_stress_gain
+						if = {
+							limit = {
+								can_set_relation_potential_rival_trigger = { CHARACTER = scope:recipient }
+							}
+							random = {
+								chance = 25
+								set_relation_potential_rival = scope:recipient
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	ai_frequency = 12
+
+	ai_potential = { always = yes}
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		max = 3
+	}
+	is_shown = {
+		scope:actor = {
+			is_adult = yes
+			is_human = yes
+			NOR = {
+				has_trait = honest
+				has_trait = just
+				has_trait = compassionate
+				has_trait = shy
+			}
+			scope:recipient = { NOT = { is_courtier_of = scope:actor } }
+		}
+		scope:recipient = {
+			is_ai = yes
+			is_adult = yes
+			is_human = yes
+			NOT = {
+				has_character_flag = been_goaded
+			}
+		}
+		NOT = { scope:actor = scope:recipient }
+	}
+}

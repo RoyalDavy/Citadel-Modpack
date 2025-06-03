@@ -1,0 +1,126 @@
+﻿namespace = agot_house_maintenance
+
+agot_house_maintenance.1000 = {
+	type = character_event
+	title = agot_house_maintenance.1000.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						has_variable = ahm_temp
+					}
+				}
+				desc = agot_house_maintenance.1000.desc_none
+			}
+			triggered_desc = {
+				trigger = {
+					has_variable = ahm_temp
+				}
+				desc = agot_house_maintenance.1000.desc
+			}
+		}
+	}
+	theme = dynasty
+
+	right_portrait = root
+
+	widget = {
+		is_shown = {
+			is_ai = no
+			any_living_character = {
+				any_owned_story = {
+					story_type = story_cycle_house_feud
+					has_variable = house_feud_house
+				}
+			}
+		}
+		gui = "event_window_house_feuds"
+		container = "custom_widgets_container"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_living_character = {
+					any_owned_story = {
+						story_type = story_cycle_house_feud
+						has_variable = house_feud_house
+					}
+				}
+			}
+			set_variable = ahm_temp
+			every_living_character = {
+				limit = {
+					any_owned_story = {
+						story_type = story_cycle_house_feud
+						has_variable = house_feud_house
+					}
+				}
+				random_owned_story = {
+					limit = {
+						story_type = story_cycle_house_feud
+						has_variable = house_feud_house
+					}
+					save_scope_as = story
+					prev = {
+						set_variable = {
+							name = feud_viewer
+							value = scope:story
+						}
+					}
+				}
+				scope:story.var:house_feud_rival = {
+					if = {
+						limit = {
+							is_alive = no # House Feud story cycle doesn't update when house_feud_rival dies...
+						}
+						house.house_head ?= {
+							set_variable = feud_viewer_remove_duplicates
+						}
+					}
+					else = {
+						set_variable = feud_viewer_remove_duplicates
+					}
+				}
+				root = {
+					if = {
+						limit = {
+							prev = {
+								NOT = {
+									has_variable = feud_viewer_remove_duplicates
+								}
+							}
+						}
+						add_to_variable_list = {
+							name = possible_feuds
+							target = prev
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = global_events_settings.dismiss
+	}
+	option = {
+		name = global_events_settings.main_screen
+		trigger_event = global_events_settings.0001
+	}
+	after = {
+		if = {
+			limit = {
+				has_variable = ahm_temp
+			}
+			remove_variable = ahm_temp
+		}
+		every_in_list = {
+			variable = possible_feuds
+			remove_variable = feud_viewer
+			remove_variable = feud_viewer_remove_duplicates
+		}
+		clear_variable_list = possible_feuds
+	}
+}

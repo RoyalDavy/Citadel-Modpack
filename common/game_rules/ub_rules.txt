@@ -1,0 +1,9 @@
+﻿ub_best_friend_to_heir_friend = {
+	default = ub_best_friend_to_heir_friend_allowed
+
+	ub_best_friend_to_heir_friend_allowed = {
+	}
+
+	ub_best_friend_to_heir_friend_blocked = {
+	}
+}

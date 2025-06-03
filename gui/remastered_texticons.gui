@@ -1,0 +1,1304 @@
+texticon = {
+	icon = sea_watch_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sea_watch.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = redcloaks_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/redcloaks.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = greycloaks_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/greycloaks.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = cailin_archers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/cailin_archers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = watch_trackers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/watch_trackers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = westerlands_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/westerlands_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = westerland_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/westerland_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = holy_guard_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/holy_guard.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = ornate_helms_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/ornate_helms.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = unsullied_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/unsullied.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = collared_bows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/collared_bows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = pit_warriors_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/pit_warriors.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = iron_legion_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/iron_legion.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = iron_pikes_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/iron_pikes.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = iron_riders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/iron_riders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = iron_bows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/iron_bows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = indentured_legion_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/indentured_legion.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = cohort_of_the_three_thousand_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/cohort_of_the_three_thousand.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = myrish_crossbows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/myrish_crossbows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = vale_archers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/vale_archers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = bowmen_wild_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/bowmen_wild.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = pikemen_wild_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/pikemen_wild.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = heavy_infantry_wild_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/heavy_infantry_wild.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = heavy_cavalry_wild_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/heavy_cavalry_wild.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = retinue_skirmisher_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/retinue_skirmisher.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = retinue_archer_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/retinue_archer.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = retinue_outrider_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/retinue_outrider.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = retinue_pikemen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/retinue_pikemen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = retinue_vanguard_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/retinue_vanguard.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = retinue_lancer_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/retinue_lancer.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = retinue_crossbowmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/retinue_crossbowmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = cape_watch_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/cape_watch.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = wolfswood_hunters_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/wolfswood_hunters.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = winter_wolves_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/winter_wolves.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = winter_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/winter_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = winter_guards_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/winter_guards.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = winged_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/winged_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = westerosi_sellswords_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/westerosi_sellswords.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = westerland_footmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/westerland_footmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = westerland_billmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/westerland_billmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = weeping_guard_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/weeping_guard.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = warriors_sons_heavy_infantry_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/warriors_sons_heavy_infantry.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = warriors_sons_heavy_cav_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/warriors_sons_heavy_cav.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = vale_pikes_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/vale_pikes.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = vale_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/vale_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = vale_heavy_infantry_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/vale_heavy_infantry.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = vale_guards_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/vale_guards.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = vale_footmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/vale_footmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = unicorn_riders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/unicorn_riders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = twins_guards_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/twins_guards.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = trackers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/trackers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = sworn_brothers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sworn_brothers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = sun_spears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sun_spears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = sun_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sun_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = summer_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/summer_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = stormlands_heavy_infantry_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/stormlands_heavy_infantry.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = storm_wardens_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/storm_wardens.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = storm_pikes_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/storm_pikes.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = storm_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/storm_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = storm_footmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/storm_footmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = storm_bows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/storm_bows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = stone_scouts_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/stone_scouts.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = stone_hedge_footmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/stone_hedge_footmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = stolen_spears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/stolen_spears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = starfall_guardians_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/starfall_guardians.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = skirmishers_wild_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/skirmishers_wild.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = sistermen_pirates_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sistermen_pirates.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = she_bears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/she_bears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = shadow_spears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/shadow_spears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = seal_hunters_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/seal_hunters.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = sea_snakes_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sea_snakes.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = scorpions_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/scorpions.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = sarsfield_horse_archers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sarsfield_horse_archers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = horse_archers2_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/horse_archers2.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+texticon = {
+	icon = sand_steeds_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sand_steeds.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = sand_archers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/sand_archers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = royal_crossbowmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/royal_crossbowmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = riverlands_light_infantry_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/riverlands_light_infantry.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = river_scouts_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/river_scouts.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = river_footmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/river_footmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = river_bows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/river_bows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = reavers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/reavers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = reach_swords_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/reach_swords.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = reach_scouts_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/reach_scouts.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = reach_pikes_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/reach_pikes.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = reach_marcher_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/reach_marcher.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = reach_light_cavalry_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/reach_light_cavalry.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = raventree_bows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/raventree_bows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = rangers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/rangers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = rainwood_hunters_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/rainwood_hunters.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = purple_sailors_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/purple_sailors.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = poorfellow_skirmishers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/poorfellow_skirmishers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = pass_pikes_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/pass_pikes.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = outriders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/outriders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = northern_spears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/northern_spears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = misty_shields_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/misty_shields.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = marsh_walker_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/marsh_walker.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = marcher_footmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/marcher_footmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = lion_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/lion_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = light_cavalry_wild_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/light_cavalry_wild.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = hunters_of_the_moon_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/hunters_of_the_moon.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = house_guard_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/house_guard.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = honeywine_quirrels_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/honeywine_quirrels.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = hightower_guards_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/hightower_guards.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = highgarden_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/highgarden_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = greenblood_oars_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/greenblood_oars.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = green_hand_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/green_hand.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = gold_cloaks_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/gold_cloaks.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = finger_scouts_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/finger_scouts.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = elephant_cavalry_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/elephant_cavalry.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = eastwatch_sailors_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/eastwatch_sailors.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dread_spears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dread_spears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dragon_spears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dragon_spears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dragonkeepers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dragonkeepers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dragon_scouts_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dragon_scouts.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dragon_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dragon_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dragon_bows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dragon_bows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dornish_crossbows_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/dornish_crossbows.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = crownlands_spears_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/crownlands_spears.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = clegane_footmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/clegane_footmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = clan_champions_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/clan_champions.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = castelry_rock_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/castelry_rock_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = camel_riders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/camel_riders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = bronze_raiders_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/bronze_raiders.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = bloody_balesters_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/bloody_balesters.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = battering_ram_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/battering_ram.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = barrow_knights_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/barrow_knights.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = archers_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/archers.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = arbor_marines_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/arbor_marines.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = longbowmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/longbowmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}

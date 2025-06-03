@@ -1,0 +1,14 @@
+﻿agot_visited_crypts_MHF = {
+	icon = learning_positive
+	learning = 2
+}
+agot_visited_mines_MHF = {
+	icon = learning_positive
+	stewardship = 1
+	learning = 1
+}
+agot_visited_warlords_rest_MHF = {
+	icon = learning_positive
+	learning = 1
+	martial = 1
+}

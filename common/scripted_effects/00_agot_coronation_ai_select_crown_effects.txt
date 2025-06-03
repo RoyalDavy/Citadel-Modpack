@@ -1,0 +1,491 @@
+﻿ai_choose_crown_effect = {
+	$SELECTOR$ = {
+		save_scope_as = selector
+		every_character_artifact = {
+			limit = {
+				artifact_slot_type = helmet
+			}
+			add_to_temporary_list = possible_crowns
+		}
+	}
+	ordered_in_list = {
+		list = possible_crowns
+		order_by = {
+			value = 0
+			if = {
+				limit = {
+					OR = {
+						scope:selector = {  # Aegon I
+							is_character_targaryen_27 = yes
+						}
+						scope:selector = {  # Maegor the Cruel
+							is_character_targaryen_31 = yes
+						}
+						scope:selector = {  # Aegon II
+							is_character_targaryen_65 = yes
+						}
+						scope:selector = {  # Daeron I
+							is_character_targaryen_81 = yes
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_aegon_i_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Targaryen
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_aegon_i_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = { is_character_targaryen_30 = yes } # Aenys I
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_aenys_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Targaryen
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_aenys_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					OR = {
+						scope:selector = {
+							is_character_targaryen_35 = yes # Jaehaerys I
+						}
+						scope:selector = {
+							is_character_targaryen_60 = yes # Viserys I
+						}
+						scope:selector = {
+							is_character_targaryen_63 = yes # Rhaenyra Targaryen
+						}
+
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_jaehaerys_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Targaryen
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_jaehaerys_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					OR = {
+						scope:selector = {
+							is_character_targaryen_78 = yes # Aegon III
+						}
+
+						scope:selector = {
+							is_character_targaryen_69 = yes # Viserys II
+						}
+						scope:selector = {
+							is_character_targaryen_122 = yes # Aegon V
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_aegon_iii_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Targaryen
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_aegon_iii_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						is_character_targaryen_82 = yes # Baelor the Blessed
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_baelor_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					OR = {
+						scope:selector = {
+							is_character_targaryen_88 = yes # Aegon IV
+						}
+						scope:selector = {
+							is_character_targaryen_91 = yes # Daeron II
+						}
+						scope:selector = {
+							is_character_targaryen_108 = yes # Aerys I
+						}
+						scope:selector = {
+							is_character_targaryen_1 = yes  # Aerys II
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_aegon_iv_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Targaryen
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_aegon_iv_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					OR = {
+						scope:selector = {
+							is_character_targaryen_110 = yes # Maekar I
+						}
+						scope:selector = {
+							is_character_targaryen_127 = yes # Jaehaerys II
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_maekar_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Targaryen
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_maekar_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					OR = {
+						scope:selector = {
+							is_character_targaryen_9 = yes # Daenerys Targaryen
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = daenerys_crown_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Targaryen
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = daenerys_crown_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						is_character_baratheon_2 = yes # Robert Baratheon
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = robertI_crown_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Baratheon
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = robertI_crown_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					AND = {
+						scope:selector = {
+							is_character_baratheon_3 = yes # Stannis Baratheon
+							has_religion = religion:the_rhllor_religion
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = stannis_crown_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Baratheon
+						has_religion = religion:the_rhllor_religion
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = stannis_crown_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						is_character_baratheon_4 = yes # Renly Baratheon
+					}
+
+					any_in_list = {
+						list = possible_crowns
+						has_variable = renly_crown_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Baratheon
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = renly_crown_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						is_character_baratheon_5 = yes # Joffrey Baratheon
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = joffreyI_crown_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						dynasty ?= dynasty:dynn_Baratheon
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = joffreyI_crown_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						is_character_targaryen_94 = yes # Daemon I Blackfyre
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_daemonblackfyre_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						house ?= house:house_Blackfyre
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_daemonblackfyre_artifact
+					}
+				}
+				add = 1000
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						has_religion = religion:the_flames_religion
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = valyrian_crown1_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						OR = {
+							has_religion = religion:the_flames_religion
+							culture = { has_cultural_pillar = heritage_valyrian }
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = valyrian_crown2_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						OR = {
+							AND = {
+								is_ai = no
+								father ?= {
+									dynasty ?= dynasty:dynn_Targaryen
+									NOT = {
+										house = house:house_Blackfyre
+									}
+								}
+							}
+							AND = {
+								is_ai = no
+								mother ?= {
+									dynasty ?= dynasty:dynn_Targaryen
+									NOT = {
+										house = house:house_Blackfyre
+									}
+								}
+							}
+							dynasty ?= dynasty:dynn_Targaryen
+							NOT = {
+								house = house:house_Blackfyre
+							}
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = westerosi_valyrian_crown1_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						OR = {
+							AND = {
+								is_ai = no
+								father ?= {
+									dynasty ?= dynasty:dynn_Targaryen
+									NOT = {
+										house = house:house_Blackfyre
+									}
+								}
+							}
+							AND = {
+								is_ai = no
+								mother ?= {
+									dynasty ?= dynasty:dynn_Targaryen
+									NOT = {
+										house = house:house_Blackfyre
+									}
+								}
+							}
+							dynasty ?= dynasty:dynn_Targaryen
+							NOT = {
+								house = house:house_Blackfyre
+							}
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = westerosi_valyrian_crown2_artifact
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					scope:selector = {
+						OR = {
+							AND = {
+								is_ai = no
+								father ?= {
+									dynasty ?= dynasty:dynn_Velaryon
+								}
+							}
+							AND = {
+								is_ai = no
+								mother ?= {
+									dynasty ?= dynasty:dynn_Velaryon
+								}
+							}
+							dynasty ?= dynasty:dynn_Velaryon
+						}
+					}
+					any_in_list = {
+						list = possible_crowns
+						has_variable = crown_of_the_tides_artifact
+					}
+				}
+				add = 100
+			}
+		}
+		save_scope_as = selected_crown_for_coronation
+	}
+}

@@ -1,0 +1,57 @@
+﻿internal_conflict_story = {
+	on_setup = {
+			
+	
+	
+	}
+	on_end = {}
+	on_owner_death = { make_story_owner = story_owner.primary_heir }
+	
+	effect_group = {
+        days = 5
+
+	
+	triggered_effect = {
+			trigger = { 
+			
+			
+			var:internal_conflict_check = {  attacker_war_score > 50  } }	# otherwise, check for this trigger
+			effect = {
+			
+			#var:internal_conflict_check = { add_defender = primary_defender.liege  }
+			var:internal_conflict_check = { save_scope_as = internal_conflict }
+			story_owner = { trigger_event = internal_conflicts.0001 }
+			end_story = yes
+
+			}
+		}
+		
+		triggered_effect = {
+			trigger = { 
+						NOT = { exists = var:internal_conflict_check  } }
+			effect = {
+			
+			story_owner = { trigger_event = internal_conflicts.0002 }
+			end_story = yes
+			}
+			
+		}
+	
+
+		
+			}
+			
+			}
+			
+	
+
+
+
+				
+			
+					
+					
+					
+					
+	
+		

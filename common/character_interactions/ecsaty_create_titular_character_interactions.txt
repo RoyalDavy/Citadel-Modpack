@@ -1,0 +1,53 @@
+ecsaty_create_titular = {
+	category = interaction_category_diplomacy
+	desc = ecsaty_create_titular
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	target_type = title
+	target_filter = recipient_domain_titles
+	interface_priority = 79
+	
+	is_shown = {
+		scope:recipient = {
+			is_ruler = yes
+		}
+		scope:actor = {
+			is_ai = no
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		scope:actor = { is_ai = no }
+	}
+	
+	can_be_picked_title = {
+		scope:target = {
+			holder = scope:recipient
+		}
+	}
+	
+	auto_accept = yes
+	
+	on_auto_accept = {
+	}
+	
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = {scope:recipient = scope:actor}
+				trigger_event = ecsaty_create_titular.0020
+			} 
+			else_if = {
+				limit = {scope:recipient = {
+					primary_title.tier = tier_barony
+				}
+			}
+				trigger_event = ecsaty_create_titular.0001
+			}
+			else = {
+				trigger_event = ecsaty_create_titular.0025
+			}
+				
+		}
+	}
+}

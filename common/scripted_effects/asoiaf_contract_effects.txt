@@ -1,0 +1,183 @@
+﻿asoiaf_north_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 1
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+	vassal_contract_set_obligation_level = {
+		type = special_contract #Marcher
+		level = 2
+	}
+	if = {
+		limit = {
+			NOT = { root.faith = root.liege.faith }
+		}
+		vassal_contract_set_obligation_level = {
+			type = religious_rights
+			level = 1
+		}
+	}
+}
+
+asoiaf_riverlands_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 2
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+}
+
+asoiaf_vale_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 2
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+}
+
+asoiaf_iron_islands_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 1
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+	if = {
+		limit = {
+			NOT = { root.faith = root.liege.faith }
+		}
+		vassal_contract_set_obligation_level = {
+			type = religious_rights
+			level = 1
+		}
+	}
+}
+
+asoiaf_westerlands_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 3
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+}
+
+asoiaf_crownlands_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 2
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+}
+
+asoiaf_dragonstone_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+	vassal_contract_set_obligation_level = {
+		type = special_contract #Marcher
+		level = 2
+	}
+}
+
+asoiaf_reach_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 3
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+}
+
+asoiaf_stormlands_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 2
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+	vassal_contract_set_obligation_level = {
+		type = fortification_rights
+		level = 1
+	}
+}
+
+asoiaf_dorne_contract_effect = {
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_taxes
+		level = 1
+	}
+	vassal_contract_set_obligation_level = {
+		type = feudal_government_levies
+		level = 0
+	}
+	vassal_contract_set_obligation_level = {
+		type = title_revocation_rights
+		level = 1
+	}
+	vassal_contract_set_obligation_level = {
+		type = special_contract #Palatinate
+		level = 4
+	}
+}

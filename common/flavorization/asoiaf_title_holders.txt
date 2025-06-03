@@ -1,0 +1,47 @@
+﻿#Baron-tier
+baron_late_lord_male = {
+    type = character
+    gender = male
+	special = holder
+    tier = barony
+    priority = 300
+    governments = { feudal_government lp_feudal_government }
+    top_liege = no
+    flag = asoiaf_late_lord
+}
+
+#Count-tier
+count_late_lord_male = {
+    type = character
+    gender = male
+	special = holder
+    tier = county
+    priority = 300
+    governments = { feudal_government lp_feudal_government }
+    top_liege = no
+    flag = asoiaf_late_lord
+}
+
+#Duke-tier
+duke_late_lord_male = {
+    type = character
+    gender = male
+	special = holder
+    tier = duchy
+    priority = 300
+    governments = { feudal_government lp_feudal_government }
+    top_liege = no
+    flag = asoiaf_late_lord
+}
+
+#King-tier (LP government, so still a lord)
+king_late_lord_male = {
+    type = character
+    gender = male
+	special = holder
+    tier = kingdom
+    priority = 300
+    governments = { lp_feudal_government }
+    top_liege = no
+    flag = asoiaf_late_lord
+}

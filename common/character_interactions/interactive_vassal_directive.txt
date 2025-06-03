@@ -1,0 +1,468 @@
+﻿give_vassal_directive_interaction = {
+	category = interaction_category_vassal
+	icon = icon_scheme_challenge_status
+	common_interaction = yes
+	interface_priority = 65
+	desc = give_vassal_directive_interaction_desc
+
+	auto_accept = yes
+	
+	is_shown = {
+		scope:recipient = {
+			trigger_if = {
+				is_vassal_or_below_of = scope:actor
+			}
+			trigger_else = {
+				is_vassal_of = scope:actor
+			}
+			is_landed = yes
+			NOT = { government_has_flag = government_is_herder }
+			highest_held_title_tier >= tier_county
+			is_ai = yes
+		}
+	}
+	
+	is_valid = {
+		vassal_follows_directive_trigger = { VASSAL = scope:recipient LIEGE = scope:actor }
+	}
+	
+	is_valid_showing_failures_only = {
+		vassal_follows_directive_valid_trigger = { VASSAL = scope:recipient LIEGE = scope:actor }
+		scope:recipient = { is_physically_able = yes }
+	}
+	
+	send_option = {
+		flag = improve_development
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+			scope:recipient = {
+				highest_held_title_tier >= tier_duchy
+			}
+		}
+	}
+	
+	send_option = {
+		flag = train_commanders
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+		}
+	}
+	
+	send_option = {
+		flag = build_maa
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+		}
+	}
+	
+	send_option = {
+		flag = convert_faith
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+			scope:recipient = {
+				custom_tooltip = {
+					text = subrealm_has_county_of_other_faith
+					any_sub_realm_county = {
+						NOT = { faith = scope:recipient.faith }
+					}
+				}
+			}
+		}
+	}
+	
+	send_option = {
+		flag = convert_culture
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+			scope:recipient = {
+				custom_tooltip = {
+					text = subrealm_has_county_of_other_culture
+					any_sub_realm_county = {
+						NOT = { culture = scope:recipient.culture }
+					}
+				}
+			}
+		}
+	}
+	
+	send_option = {
+		flag = improve_cultural_acceptance
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+			scope:recipient = {
+				highest_held_title_tier >= tier_duchy
+				custom_tooltip = {
+					text = subrealm_has_county_of_other_culture
+					any_sub_realm_county = {
+						NOT = { culture = scope:recipient.culture }
+					}
+				}
+			}
+		}
+	}
+	
+	send_option = {
+		flag = building_focus_fortification
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+		}
+	}
+	
+	send_option = {
+		flag = building_focus_military
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+		}
+	}
+	
+	send_option = {
+		flag = building_focus_economy
+		is_shown = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_nomadic }
+			}
+		}
+		is_valid = {
+		}
+	}
+
+	send_option = {
+		flag = manage_fertility
+		is_shown = {
+			scope:recipient = {
+				government_has_flag = government_is_nomadic
+			}
+		}
+		is_valid = {
+		}
+	}
+	send_option = {
+		flag = explore_cultures
+		is_shown = {
+			scope:recipient = {
+				government_has_flag = government_is_nomadic
+			}
+		}
+		is_valid = {
+			scope:recipient = {
+				custom_tooltip = {
+					text = subrealm_has_county_of_other_culture
+					any_sub_realm_county = {
+						NOT = { culture = scope:recipient.culture }
+					}
+				}
+			}
+		}
+	}
+	send_option = {
+		flag = raid_innovation_intent
+		is_shown = {
+			scope:recipient = {
+				government_has_flag = government_is_nomadic
+			}
+		}
+		is_valid = {
+			custom_tooltip = {
+				text = has_any_directive
+				scope:recipient = {
+					NOT = {
+						has_character_flag = vassal_directive_raid_innovation_intent
+					}
+				}
+			}
+		}
+	}
+	send_option = {
+		flag = raid_herd_intent
+		is_shown = {
+			scope:recipient = {
+				government_has_flag = government_is_nomadic
+			}
+		}
+		is_valid = {
+		}
+	}
+
+	send_option = {
+		flag = remove_directive
+		is_shown = {
+		}
+		is_valid = {
+			custom_tooltip = {
+				text = has_any_directive
+				scope:recipient = {
+					OR = {
+						has_character_flag = vassal_directive_improve_development
+						has_character_flag = vassal_directive_train_commanders
+						has_character_flag = vassal_directive_build_maa
+						has_character_flag = vassal_directive_convert_faith
+						has_character_flag = vassal_directive_convert_culture
+						has_character_flag = vassal_directive_improve_cultural_acceptance
+						has_character_flag = vassal_directive_building_focus_fortification
+						has_character_flag = vassal_directive_building_focus_military
+						has_character_flag = vassal_directive_building_focus_economy
+						has_character_flag = vassal_directive_manage_fertility
+						has_character_flag = vassal_directive_explore_cultures
+						has_character_flag = vassal_directive_raid_innovation_intent
+						has_character_flag = vassal_directive_raid_herd_intent
+					}
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = {
+					OR = {
+						has_character_flag = vassal_directive_improve_development
+						has_character_flag = vassal_directive_train_commanders
+						has_character_flag = vassal_directive_build_maa
+						has_character_flag = vassal_directive_convert_faith
+						has_character_flag = vassal_directive_convert_culture
+						has_character_flag = vassal_directive_improve_cultural_acceptance
+						has_character_flag = vassal_directive_building_focus_fortification
+						has_character_flag = vassal_directive_building_focus_military
+						has_character_flag = vassal_directive_building_focus_economy
+						has_character_flag = vassal_directive_manage_fertility
+						has_character_flag = vassal_directive_explore_cultures
+						has_character_flag = vassal_directive_raid_innovation_intent
+						has_character_flag = vassal_directive_raid_herd_intent
+					}					
+				}
+				custom_tooltip = {
+					text = vassal_directive_remove_directive
+					remove_vassal_directives = yes
+				}
+			}
+			switch = {
+				trigger = yes
+				
+				scope:improve_development ?= {
+					custom_tooltip = {
+						text = vassal_directive_improve_development
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_improve_development
+					}
+				}
+				
+				scope:train_commanders ?= {
+					custom_tooltip = {
+						text = vassal_directive_train_commanders
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_train_commanders
+					}
+				}
+				
+				scope:build_maa ?= {
+					custom_tooltip = {
+						text = vassal_directive_build_maa
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_build_maa
+					}
+				}
+				
+				scope:convert_faith ?= {
+					custom_tooltip = {
+						text = vassal_directive_convert_faith
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_convert_faith
+					}
+				}
+				
+				scope:convert_culture ?= {
+					custom_tooltip = {
+						text = vassal_directive_convert_culture
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_convert_culture
+					}
+				}
+				
+				scope:improve_cultural_acceptance ?= {
+					custom_tooltip = {
+						text = vassal_directive_improve_cultural_acceptance
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_improve_cultural_acceptance
+					}
+				}
+				
+				scope:building_focus_fortification ?= {
+					custom_tooltip = {
+						text = vassal_directive_building_focus_fortification
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_building_focus_fortification
+					}
+				}
+				
+				scope:building_focus_military ?= {
+					custom_tooltip = {
+						text = vassal_directive_building_focus_military
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_building_focus_military
+					}
+				}
+				
+				scope:building_focus_economy ?= {
+					custom_tooltip = {
+						text = vassal_directive_building_focus_economy
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_building_focus_economy
+					}
+				}
+
+				scope:manage_fertility ?= {
+					custom_tooltip = {
+						text = vassal_directive_manage_fertility
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_manage_fertility
+					}
+				}
+				scope:explore_cultures ?= {
+					custom_tooltip = {
+						text = vassal_directive_explore_cultures
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_explore_cultures
+					}
+				}
+				scope:raid_innovation_intent ?= {
+					custom_tooltip = {
+						text = vassal_directive_raid_innovation_intent
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_raid_innovation_intent
+					}
+				}
+				scope:raid_herd_intent ?= {
+					custom_tooltip = {
+						text = vassal_directive_raid_herd_intent
+						remove_vassal_directives = yes
+						add_character_flag = vassal_directive_raid_herd_intent
+					}
+				}
+				
+				scope:remove_directive ?= {
+					custom_tooltip = {
+						text = vassal_directive_remove_directive
+						remove_vassal_directives = yes
+					}
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		highest_held_title_tier >= tier_kingdom
+	}
+	ai_targets = {
+		ai_recipients = vassals
+	}
+	ai_frequency = 1
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = 100
+			scope:improve_development ?= yes
+			scope:recipient = {
+				NOR = {
+					has_character_flag = vassal_directive_building_focus_economy
+					has_character_flag = vassal_directive_improve_development
+				}
+				OR = {
+					vassal_contract_has_flag = admin_theme_civilian
+					vassal_contract_has_flag = admin_theme_balanced
+				}
+			}
+		}
+
+		modifier = {
+			add = 100
+			scope:building_focus_economy ?= yes
+			scope:recipient = {
+				NOR = {
+					has_character_flag = vassal_directive_building_focus_economy
+					has_character_flag = vassal_directive_improve_development
+				}
+				OR = {
+					vassal_contract_has_flag = admin_theme_civilian
+					vassal_contract_has_flag = admin_theme_balanced
+				}
+			}
+		}
+
+		modifier = {
+			add = 100
+			scope:building_focus_fortification ?= yes
+			scope:recipient = {
+				NOR = {
+					has_character_flag = vassal_directive_building_focus_fortification
+					has_character_flag = vassal_directive_build_maa
+				}
+				vassal_contract_has_flag = admin_theme_frontier
+			}
+		}
+
+		modifier = {
+			add = 100
+			scope:build_maa ?= yes
+			scope:recipient = {
+				NOR = {
+					has_character_flag = vassal_directive_building_focus_fortification
+					has_character_flag = vassal_directive_building_focus_military
+					has_character_flag = vassal_directive_build_maa
+				}
+				OR = {
+					vassal_contract_has_flag = admin_theme_military
+					vassal_contract_has_flag = admin_theme_frontier
+				}
+			}
+		}
+
+		modifier = {
+			add = 100
+			scope:building_focus_military ?= yes
+			scope:recipient = {
+				NOR = {
+					has_character_flag = vassal_directive_building_focus_military
+					has_character_flag = vassal_directive_build_maa
+				}
+				OR = {
+					vassal_contract_has_flag = admin_theme_military
+					vassal_contract_has_flag = admin_theme_naval
+				}
+			}
+		}
+	}
+}

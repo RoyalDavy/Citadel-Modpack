@@ -1,0 +1,29 @@
+﻿councillor_gain_exp_effects = {
+    if = {
+        limit = { is_alive = yes }
+        
+        random = {
+            chance = 5
+            
+            if = {
+                limit = { has_trait = lifestyle_councillor }
+                
+                add_trait_xp = {
+                    trait = lifestyle_councillor
+                    track = $TRAIT_TRACK$
+                    value = {
+                        integer_range = {
+                            min = 2
+                            max = 8
+                        }
+                    }
+                }
+            }
+            else_if = {                
+                limit = { NOT = { has_trait = lifestyle_councillor } }
+
+                add_trait = lifestyle_councillor
+            }
+        }
+    }
+}

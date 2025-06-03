@@ -1,0 +1,27 @@
+﻿# collegeofcardinals = {
+# 	texture = "gfx/interface/collegecardinals/houseofcardinalsbutton.png"
+# 	#texture = "gfx/interface/icons/laws/crown_authority_0.dds"
+# 	parent = religion
+# 	alias = { }
+# }
+
+# praedictus = {
+# 	texture = "gfx/interface/collegecardinals/houseofcardinalsbutton.png"
+# 	#texture = "gfx/interface/icons/laws/crown_authority_0.dds"
+# 	parent = religion
+# 	alias = { }
+# }
+
+# papabile = {
+# 	texture = "gfx/interface/collegecardinals/houseofcardinalsbutton.png"
+# 	#texture = "gfx/interface/icons/laws/crown_authority_0.dds"
+# 	parent = religion
+# 	alias = { }
+# }
+
+# cardinal = {
+# 	texture = "gfx/interface/collegecardinals/houseofcardinalsbutton.png"
+# 	#texture = "gfx/interface/icons/laws/crown_authority_0.dds"
+# 	parent = religion
+# 	alias = { }
+# }

@@ -1,0 +1,105 @@
+﻿#DRAGONRIDERS
+is_character_targaryen_13_a = {
+	OR = {
+		AND = {
+			exists = character:Targaryen_13_A
+			this = character:Targaryen_13_A
+		}
+	}
+}
+is_character_targaryen_13_b = {
+	OR = {
+		AND = {
+			exists = character:Targaryen_13_B
+			this = character:Targaryen_13_B
+		}
+	}
+}
+is_character_targaryen_13_c = {
+	OR = {
+		AND = {
+			exists = character:Targaryen_13_C
+			this = character:Targaryen_13_C
+		}
+	}
+}
+is_character_targaryen_13_d = {
+	OR = {
+		AND = {
+			exists = character:Targaryen_13_D
+			this = character:Targaryen_13_D
+		}
+	}
+}
+is_character_targaryen_18 = {
+	OR = {
+		AND = {
+			exists = character:Targaryen_18
+			this = character:Targaryen_18
+		}
+	}
+}
+is_character_targaryen_19 = {
+	OR = {
+		AND = {
+			exists = character:Targaryen_19
+			this = character:Targaryen_19
+		}
+	}
+}
+is_character_targaryen_26 = {
+	OR = {
+		AND = {
+			exists = character:Targaryen_26
+			this = character:Targaryen_26
+		}
+	}
+}
+is_character_white_1 = {
+	OR = {
+		AND = {
+			exists = character:White_1
+			this = character:White_1
+		}
+	}
+}
+is_character_varezys_1 = {
+	OR = {
+		AND = {
+			exists = character:Varezys_1
+			this = character:Varezys_1
+		}
+	}
+}
+is_character_urnebar_1 = {
+	OR = {
+		AND = {
+			exists = character:Urnebar_1
+			this = character:Urnebar_1
+		}
+	}
+}
+is_character_sonaryen_1 = {
+	OR = {
+		AND = {
+			exists = character:Sonaryen_1
+			this = character:Sonaryen_1
+		}
+	}
+}
+is_character_mataeryon_1 = {
+	OR = {
+		AND = {
+			exists = character:Mataeryon_1
+			this = character:Mataeryon_1
+		}
+	}
+}
+is_character_belaerys_1 = {
+	OR = {
+		AND = {
+			exists = character:Belaerys_1
+			this = character:Belaerys_1
+		}
+	}
+}

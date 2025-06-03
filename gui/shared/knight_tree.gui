@@ -1,0 +1,11 @@
+###########################################################
+################# AGOT CHARACTER WINDOW ###################
+###########################################################
+
+types ButtonIcons
+{
+	type button_knight_tree = button_icon
+	{
+		texture = "gfx/interface/icons/flat_icons/multiple_people.dds"
+	}
+}

@@ -1,0 +1,107 @@
+﻿agot_proclamation_title_switch_effect = {
+	if = {
+		limit = {
+			exists = scope:new_empire_title
+			exists = scope:old_kingdom_title
+		}
+		scope:old_kingdom_title = { set_de_jure_liege_title = scope:new_empire_title }
+		get_title = scope:new_empire_title
+		clear_saved_scope = new_empire_title
+		clear_saved_scope = old_kingdom_title
+	}
+}
+
+agot_proclaim_kingdom_effect = {
+	switch = {
+		trigger = $SWITCH_TRIGGER$
+		title:k_dorne = {
+			title:e_dorne = { save_scope_as = new_empire_title }
+			title:k_dorne = { save_scope_as = old_kingdom_title }
+		}
+		title:k_the_iron_islands = {
+			title:e_the_iron_islands = { save_scope_as = new_empire_title }
+			title:k_the_iron_islands = { save_scope_as = old_kingdom_title }
+		}
+		title:k_the_north = {
+			title:e_the_north = { save_scope_as = new_empire_title }
+			title:k_the_north = { save_scope_as = old_kingdom_title }
+		}
+		title:k_the_reach = {
+			title:e_the_reach = { save_scope_as = new_empire_title }
+			title:k_the_reach = { save_scope_as = old_kingdom_title }
+		}
+		title:k_the_riverlands = {
+			title:e_the_riverlands = { save_scope_as = new_empire_title }
+			title:k_the_riverlands = { save_scope_as = old_kingdom_title }
+		}
+		title:k_the_stormlands = {
+			title:e_the_stormlands = { save_scope_as = new_empire_title }
+			title:k_the_stormlands = { save_scope_as = old_kingdom_title }
+		}
+		title:k_the_vale = {
+			title:e_the_vale = { save_scope_as = new_empire_title }
+			title:k_the_vale = { save_scope_as = old_kingdom_title }
+		}
+		title:k_the_westerlands = {
+			title:e_the_westerlands = { save_scope_as = new_empire_title }
+			title:k_the_westerlands = { save_scope_as = old_kingdom_title }
+		}
+	}
+	root = { agot_proclamation_title_switch_effect = yes }
+}
+
+agot_conquered_title_switch_effect = {
+	if = {
+		limit = {
+			exists = scope:new_kingdom_title
+			exists = scope:destroy_empire_title
+		}
+		get_title = scope:new_kingdom_title
+		destroy_title = scope:destroy_empire_title
+		scope:new_kingdom_title = { set_de_jure_liege_title = $NEW_LIEGE$ }
+		clear_saved_scope = new_kingdom_title
+		clear_saved_scope = destroy_empire_title
+	}
+}
+
+agot_conquered_kingdom_effect = {
+	switch = {
+		trigger = $SWITCH_TRIGGER$
+		title:e_dorne = {
+			title:e_dorne = { save_scope_as = destroy_empire_title }
+			title:k_dorne = { save_scope_as = new_kingdom_title }
+		}
+		title:e_the_iron_islands = {
+			title:e_the_iron_islands = { save_scope_as = destroy_empire_title }
+			title:k_the_iron_islands = { save_scope_as = new_kingdom_title }
+		}
+		title:e_the_north = {
+			title:e_the_north = { save_scope_as = destroy_empire_title }
+			title:k_the_north = { save_scope_as = new_kingdom_title }
+		}
+		title:e_the_reach = {
+			title:e_the_reach = { save_scope_as = destroy_empire_title }
+			title:k_the_reach = { save_scope_as = new_kingdom_title }
+		}
+		title:e_the_riverlands = {
+			title:e_the_riverlands = { save_scope_as = destroy_empire_title }
+			title:k_the_riverlands = { save_scope_as = new_kingdom_title }
+		}
+		title:e_the_stormlands = {
+			title:e_the_stormlands = { save_scope_as = destroy_empire_title }
+			title:k_the_stormlands = { save_scope_as = new_kingdom_title }
+		}
+		title:e_the_vale = {
+			title:e_the_vale = { save_scope_as = destroy_empire_title }
+			title:k_the_vale = { save_scope_as = new_kingdom_title }
+		}
+		title:e_the_westerlands = {
+			title:e_the_westerlands = { save_scope_as = destroy_empire_title }
+			title:k_the_westerlands = { save_scope_as = new_kingdom_title }
+		}
+	}
+	agot_conquered_title_switch_effect = { NEW_LIEGE = $NEW_LIEGE_TITLE$ }
+}
+
+
+

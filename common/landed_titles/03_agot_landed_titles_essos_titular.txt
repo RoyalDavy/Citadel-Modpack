@@ -1,0 +1,9 @@
+﻿k_golden_company = {
+	color = { 255 215 0 }
+	landless = yes
+	definite_form = yes
+
+	capital = c_goldfuror
+
+	can_create = { always = no }
+}

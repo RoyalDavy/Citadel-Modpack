@@ -1,0 +1,97 @@
+﻿create_artifact_captains_sword_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = captains_sword_name
+		description = artifact_captains_sword_description
+		template = general_unique_template
+		type = sword
+		visuals = captains_sword
+		wealth = 30
+		quality = 30
+		modifier = artifact_prowess_5_modifier
+		modifier = artifact_knight_effectiveness_5_modifier
+		modifier = artifact_enemy_hard_casualty_modifier_5_modifier
+		modifier = artifact_hard_casualty_modifier_5_modifier
+		modifier = artifact_knight_limit_2_modifier
+		modifier = artifact_knight_effectiveness_5_modifier
+
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = captains_sword
+		save_scope_as = epic
+
+		# add_artifact_history = {
+		# 	type = inherited
+		# 	date = 8009.1.1
+		# 	recipient = character:Qoherys_4
+		# }
+		
+	}
+}
+
+
+
+
+create_artifact_skullPike_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = skullPike_name
+		description = artifact_skullPike_description
+		template = general_unique_template
+		type = miscellaneous
+		visuals = skullPike_artifact
+		wealth = 90
+		quality = 90
+
+		modifier = artifact_monthly_prestige_5_modifier
+		modifier = artifact_mercenary_hire_cost_mult_4_modifier
+		modifier = artifact_men_at_arms_maintenance_8_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = skullPike
+		save_scope_as = epic	
+	}
+}
+
+
+
+
+tgc_artifacts_setup_effect = {
+	if = {
+		limit = { exists = title:d_laamp_merc_golden_company.holder }
+		title:d_laamp_merc_golden_company.holder = {
+			create_artifact_captains_sword_effect = { OWNER = title:d_laamp_merc_golden_company.holder }
+			if = {
+				limit = { 
+					character:Targaryen_95 = {
+						is_alive = no
+					}
+				}
+				create_artifact_skullPike_effect = { OWNER = title:d_laamp_merc_golden_company.holder }
+			}
+		}
+	}
+	else_if = {
+		limit = { exists = title:e_blackfyre_rebellion.holder }
+		title:e_blackfyre_rebellion.holder = {
+			create_artifact_captains_sword_effect = { OWNER = title:e_blackfyre_rebellion.holder }
+			create_artifact_skullPike_effect = { OWNER = title:e_blackfyre_rebellion.holder }
+		}
+	}
+}

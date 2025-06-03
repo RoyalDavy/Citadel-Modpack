@@ -1,0 +1,5 @@
+﻿border_disputes_restrictions_game_rules = {
+	default = full_border_restrictions
+	full_border_restrictions = { }
+	partial_border_restrictions = { }
+}

@@ -1,0 +1,313 @@
+﻿can_be_warrior_trigger_no_dragon = {
+	OR = {
+	is_adult = yes
+	AND = { 
+			is_male = yes
+			age >= 12
+			}
+			}
+	NOT = { has_trait = maester }
+	OR = {
+		can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = $ARMY_OWNER$ }
+		AND = {
+			$ARMY_OWNER$.culture = {
+				has_cultural_parameter = high_prowess_ignores_knight_restrictions
+			}
+			prowess >= 12
+		}
+		has_trait = education_martial_prowess
+	}
+}
+
+can_be_commander_basic_trigger = {
+	is_alive = yes
+	# AGOT Modified
+	#is_adult = yes
+	age >= 14
+	# End AGOT Modified
+	is_hostage = no
+	
+OR = {
+
+				## Government Exception
+				OR = {
+				scope:army_owner = { has_government = mercenary_government }
+				scope:army_owner = { has_government = holy_order_government }
+				scope:army_owner = { has_government = landless_adventurer_government }
+				}
+				
+				
+			### Close
+				AND = {
+					has_game_rule =  agot_immersion_commanders_only_close_family
+						OR = {
+					is_close_family_of = scope:army_owner
+					is_spouse_of = scope:army_owner
+					is_close_family_of = scope:army_owner
+					is_spouse_of = scope:army_owner
+					is_uncle_or_aunt_of = scope:army_owner
+					is_nibling_of  = scope:army_owner
+					#Brothers of spouse (like Stafford Lannister leading a host for Tywin during War of Five Kings.. although it doesn't work if the spouse is dead so stafford actually still isn't eligible.)
+					any_sibling = { is_spouse_of = scope:army_owner} 
+					#Non-Close Family Heirs (A Distant Cousin is set to inherit, like Denys the Darling. The heir and his family should be eligible for command.)
+					is_heir_of = scope:army_owner
+					any_sibling = { is_heir_of = scope:army_owner }
+					any_parent = { is_heir_of = scope:army_owner }
+					has_council_position = councillor_castellan
+					has_trait = kingsguard
+					is_diarch = yes  
+								}
+						}
+						
+				### Extended	
+					AND = {
+					has_game_rule =  agot_immersion_commanders_extended_family
+						OR = {
+							is_close_family_of = scope:army_owner
+							is_extended_family_of = scope:army_owner
+							is_spouse_of = scope:army_owner
+					#Brothers of spouse (like Stafford Lannister leading a host for Tywin during War of Five Kings.. although it doesn't work if the spouse is dead so stafford actually still isn't eligible.)
+					any_sibling = { is_spouse_of = scope:army_owner} 
+					#Non-Close Family Heirs (A Distant Cousin is set to inherit, like Denys the Darling. The heir and his family should be eligible for command.)
+					is_heir_of = scope:army_owner
+					any_sibling = { is_heir_of = scope:army_owner }
+					any_parent = { is_heir_of = scope:army_owner }
+					has_council_position = councillor_castellan
+					has_trait = kingsguard
+					is_diarch = yes  
+								}
+						}
+				### House
+					AND = {
+					has_game_rule =  agot_immersion_commanders_house_members
+						OR = {
+							house = scope:army_owner.house
+							is_close_family_of = scope:army_owner
+							is_extended_family_of = scope:army_owner
+							is_spouse_of = scope:army_owner
+					#Brothers of spouse (like Stafford Lannister leading a host for Tywin during War of Five Kings.. although it doesn't work if the spouse is dead so stafford actually still isn't eligible.)
+					any_sibling = { is_spouse_of = scope:army_owner} 
+					#Non-Close Family Heirs (A Distant Cousin is set to inherit, like Denys the Darling. The heir and his family should be eligible for command.)
+					is_heir_of = scope:army_owner
+					any_sibling = { is_heir_of = scope:army_owner }
+					any_parent = { is_heir_of = scope:army_owner }
+					has_council_position = councillor_castellan
+					has_trait = kingsguard
+					is_diarch = yes  
+								}
+						}
+					### Powerful Vassals
+					AND = {
+					has_game_rule =  agot_immersion_commanders_powerful_vassals
+						OR = {
+							is_powerful_vassal_of = scope:army_owner
+							is_close_family_of = scope:army_owner
+							is_extended_family_of = scope:army_owner
+							is_spouse_of = scope:army_owner
+					#Brothers of spouse (like Stafford Lannister leading a host for Tywin during War of Five Kings.. although it doesn't work if the spouse is dead so stafford actually still isn't eligible.)
+					any_sibling = { is_spouse_of = scope:army_owner} 
+					#Non-Close Family Heirs (A Distant Cousin is set to inherit, like Denys the Darling. The heir and his family should be eligible for command.)
+					is_heir_of = scope:army_owner
+					any_sibling = { is_heir_of = scope:army_owner }
+					any_parent = { is_heir_of = scope:army_owner }
+					has_council_position = councillor_castellan
+					has_trait = kingsguard
+					is_diarch = yes  
+								}
+						}	
+				### Vassals
+					AND = {
+					has_game_rule =  agot_immersion_commanders_vassals
+						OR = {
+							is_vassal_of = scope:army_owner
+							is_close_family_of = scope:army_owner
+							is_extended_family_of = scope:army_owner
+							is_spouse_of = scope:army_owner
+					#Brothers of spouse (like Stafford Lannister leading a host for Tywin during War of Five Kings.. although it doesn't work if the spouse is dead so stafford actually still isn't eligible.)
+					any_sibling = { is_spouse_of = scope:army_owner} 
+					#Non-Close Family Heirs (A Distant Cousin is set to inherit, like Denys the Darling. The heir and his family should be eligible for command.)
+					is_heir_of = scope:army_owner
+					any_sibling = { is_heir_of = scope:army_owner }
+					any_parent = { is_heir_of = scope:army_owner }
+					has_council_position = councillor_castellan
+					has_trait = kingsguard
+					is_diarch = yes  
+								}
+						}
+			### Noob Mode			
+				has_game_rule =  agot_immersion_commanders_vanilla
+				
+				
+						
+		
+		
+		
+		
+		
+			}
+	NOR = {
+		has_trait = incapable
+		AND = {
+			OR = {
+				has_trait = devoted
+				is_clergy = yes
+			}
+			NOR = {
+				has_trait = order_member # Order Members will fight for their faith even if their faith says no
+				faith = { has_doctrine_parameter = clergy_can_fight }
+				culture = { has_cultural_parameter = culture_clergy_can_fight }
+			}
+		}
+		
+		#AGOT Added
+		has_character_flag = agot_is_at_unknown_place
+		has_trait = maester
+		NOT = { is_human = yes } # TT error if trigger not formatted this way
+	}
+
+	OR = { # You can always lead your own armies
+		this = $ARMY_OWNER$
+		can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = $ARMY_OWNER$ }
+		#AGOT Added
+		has_trait = education_martial_prowess
+		is_current_dragonrider_warfare = yes
+	}
+
+	#AGOT Modified, players can be commanders if they haven't explicitly refused
+	# trigger_if = {
+	# 	limit = { $ARMY_OWNER$ = { is_ai = yes } }
+	# 	is_ai = yes
+	# }
+	OR = {
+		is_ai = yes
+		AND = {
+			OR = {
+				this = $ARMY_OWNER$
+				NOT = { has_character_flag = cannot_be_knight_and_commander }
+			}
+			is_travelling = no
+			NOT = { exists = involved_activity }
+		}	
+	}
+}
+
+agot_immersion_loyalist_vassal_relationship = {
+
+	OR = {
+						is_allied_to = liege
+						has_relation_friend = liege
+						has_relation_best_friend = liege
+						has_relation_lover = liege
+						has_relation_soulmate = liege	
+	
+						AND = {
+								exists = joined_faction
+								joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+						}
+						AND = {
+								is_close_or_extended_family_of = liege
+								opinion = {
+								target = liege
+								value >= 50 # vassals that like their scope:bannerlord stay loyal
+							}
+							}
+			
+	}
+
+}
+
+
+agot_immersion_dutiful_vassal_relationship = {
+	NOT = {
+								exists = joined_faction
+								
+						}
+
+	OR = {
+						### Honor
+					OR = {				AND = { 		opinion = {
+															target = liege
+															value >= 0 # vassals that like their scope:bannerlord stay loyal
+														}
+												ai_honor >= 50
+										}
+										ai_honor >= 100
+										
+					}
+						
+					has_dread_level_towards = {
+			target = liege
+			level = 2
+		}
+						
+							
+							
+						
+						
+						### Opinion
+	
+						
+						
+								opinion = {
+									target = liege
+									value >= 50 # vassals that like their scope:bannerlord stay loyal
+								}
+							
+			
+	}
+
+}
+
+agot_immersion_disloyal_vassal_relationship = {
+
+
+
+OR = {
+						has_relation_rival = liege
+						has_relation_nemesis = liege
+
+	
+						AND = {
+								exists = joined_faction
+								NOT = { joined_faction = { faction_is_type = agot_loyalist_faction } # crown loyalist faction always sides with scope:bannerlord
+						}
+						opinion = {
+									target = liege
+									value <= -50 # vassals that like their scope:bannerlord stay loyal
+								}
+			
+	}
+
+
+
+
+
+
+
+}
+
+
+#### OLD IMMERSIVE COMMANDER CRITERIA
+
+####OR = {
+####	
+####	#Regent. This technically doesn't specify that its the army leader's regent but I don't think it matters.
+####    is_diarch = yes    
+####    
+####    #Enable All Dynasty Members as Commanders
+####    #dynasty = scope:army_owner.dynasty
+####    
+####    has_trait = kingsguard
+####    is_close_family_of = scope:army_owner
+####    is_spouse_of = scope:army_owner
+####    is_uncle_or_aunt_of = scope:army_owner
+####    is_nibling_of  = scope:army_owner
+####    #Brothers of spouse (like Stafford Lannister leading a host for Tywin during War of Five Kings.. although it doesn't work if the spouse is dead so stafford actually still isn't eligible.)
+####    any_sibling = { is_spouse_of = scope:army_owner } 
+####    #Non-Close Family Heirs (A Distant Cousin is set to inherit, like Denys the Darling. The heir and his family should be eligible for command.)
+####    is_player_heir_of = scope:army_owner
+####    any_sibling = { is_player_heir_of = scope:army_owner }
+####    any_parent = { is_player_heir_of = scope:army_owner }
+####	
+####	
+####		}

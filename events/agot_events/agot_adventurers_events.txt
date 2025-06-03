@@ -1,0 +1,300 @@
+﻿namespace = agot_adventurers_events
+
+scripted_trigger valid_stepstones_adventurer = {
+	is_available_ai_adult = yes
+	is_alive = yes
+	is_playable_character = no
+	OR = {
+		any_heir_title = { count = 0 }
+		AND = {
+			save_temporary_scope_as = potential
+			any_heir_title = {
+				place_in_line_of_succession = {
+					target = scope:potential
+					value >= 3
+				}
+			}
+		}
+	}
+	OR = {
+		has_trait = education_martial_prowess_3
+		has_trait = education_martial_prowess_4
+		has_trait = education_martial_prowess_5
+	}
+	prowess > 20
+	martial > 15
+	ai_boldness > high_positive_boldness
+	NOR = {
+		has_trait = nightswatch
+		has_trait = kingsguard
+		has_trait = maester
+		has_trait = septon
+		has_trait = drowned_man
+		has_trait = red_priest
+		has_trait = bearded_priest
+	}
+}
+
+scripted_trigger valid_adventurer_target_trigger = {
+	holder = {
+		NOR = {
+			#Plus any places already being attacked.
+			top_liege = {
+				any_character_war = { using_cb = stepstones_adventurer_conquest }
+			}
+			#Or which have already earnt a ceasefire with this particular adventurer. Or any of their liege
+			OR = {
+				any_truce_holder = { this = scope:stepstones_adventurer }
+				any_liege_or_above = {
+					any_truce_holder = { this = scope:stepstones_adventurer }
+				}
+			}
+			#And finally anywhere that has earnt a little peace.
+			OR = {
+				has_character_modifier = proven_against_pirates_modifier
+				any_liege_or_above = { has_character_modifier = proven_against_pirates_modifier }
+			}
+		}
+		OR = {
+			is_ai = yes
+			#Filter out players, unless they're large enough to take the hit.
+			AND = {
+				is_ai = no
+				sub_realm_size >= 8
+			}
+		}
+		top_liege = {
+			NOT = { has_government = pirate_government }
+		}
+	}
+}
+
+scripted_effect stepstones_adventurer_start_war_effect = {
+	#Give the adventurer a dynamic title to tide them over.
+	create_dynamic_title = {
+		tier = duchy
+		name = STEPSTONES_ARMY_NEUTRAL_NAME
+	}
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	scope:new_title = {
+		set_capital_county = scope:adventurer_target
+		set_landless_title = yes
+		set_destroy_on_gain_same_tier = yes
+		set_no_automatic_claims = yes
+		set_can_be_named_after_dynasty = no
+		change_title_holder = {
+			holder = scope:stepstones_adventurer
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	scope:new_title = {
+		generate_coa = yes
+		set_variable = {
+			name = temporary_title
+			value = yes
+		}
+	}
+	#Declare the war.
+	scope:stepstones_adventurer = {
+		start_war = {
+			casus_belli = stepstones_adventurer_conquest
+			target = scope:adventurer_target.holder.top_liege
+			target_title = scope:adventurer_target.duchy
+		}
+	}
+	# Setup event troops.
+	scope:stepstones_adventurer = {
+		add_character_modifier = stepstones_adventurer_modifier
+		add_trait = adventurer
+		# Work out how many event troops we should give the adventurer for a 60:40 fight.
+		spawn_army = {
+			levies = {
+				add = {
+					#Base of 400.
+					add = scope:adventurer_target.holder.top_liege.max_military_strength
+					#Multiply that by the realm size of the target's top_liege.
+					multiply = 1.5
+					#Account for allies, adding more without just nullifying them.
+					scope:adventurer_target.holder.top_liege = {
+						every_ally = { add = this.max_military_strength }
+					}
+					#Cut it off so things don't get too ridiculous.
+					max = 8000
+					#Make sure all adventurers have a moderately respectable force.
+					min = 1000
+				}
+			}
+			inheritable = no
+			location = scope:adventurer_target.title_province
+			name = stepstones_adventurer_event_troops
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = westerosi_sellswords
+				stacks = {
+					value = 1
+					multiply = scope:adventurer_target.holder.top_liege.primary_title.tier
+				}
+			}
+			inheritable = yes
+			location = scope:adventurer_target.title_province
+			name = stepstones_adventurer_event_troops
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = stepstone_sailors
+				stacks = {
+					value = 1
+					multiply = scope:adventurer_target.holder.top_liege.primary_title.tier
+				}
+			}
+			inheritable = yes
+			location = scope:adventurer_target.title_province
+			name = stepstones_adventurer_event_troops
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = mangonel
+				stacks = 2
+			}
+			inheritable = yes
+			location = scope:adventurer_target.title_province
+			name = stepstones_adventurer_event_troops
+		}
+	}
+	# Loan a little gold in case they're in debt/to keep them going.
+	scope:stepstones_adventurer = { add_gold = stepstones_adventurer_efficacy_loan_value }
+}
+
+#	Startup event, delaying the initial cycle.
+agot_adventurers_events.0001 = {
+	scope = none
+	hidden = yes
+
+	immediate = {
+		trigger_event = {
+			id = agot_adventurers_events.0002
+			years = 5
+		}
+	}
+}
+
+agot_adventurers_events.0002 = {
+	scope = none
+	hidden = yes
+
+	immediate = {
+		#Launch the adventurer spawning events.
+		trigger_event = {
+			id = agot_adventurers_events.0003
+			days = { 0 365 }
+		}
+		#Trigger the next wave of events.
+		trigger_event = {
+			id = agot_adventurers_events.0002
+			days = { 1725 1910 }
+		}
+	}
+}
+
+agot_adventurers_events.0003 = {
+	scope = none
+	hidden = yes
+
+	immediate = {
+		random_living_character = {
+			limit = { valid_stepstones_adventurer = yes }
+			weight = {
+				base = 1
+				modifier = {
+					add = prowess
+				}
+				modifier = {
+					add = martial
+				}
+				modifier = {
+					add = 100
+					has_trait = ambitious
+				}
+				modifier = {
+					add = 50
+					has_trait = brave
+				}
+				modifier = {
+					add = 50
+					has_trait = bastard
+				}
+				modifier = {
+					add = 300
+					exists = character:Velaryon_5
+					this = character:Velaryon_5
+				}
+				modifier = {
+					add = 300
+					exists = character:Greyjoy_13
+					this = character:Greyjoy_13
+				}
+			}
+			save_scope_as = stepstones_adventurer
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:stepstones_adventurer }
+			}
+			random_county_in_region = {
+				region = world_stepstones
+				save_scope_as = stepstones_county
+			}
+			create_character = {
+				location = title:b_the_stash.title_province
+				template = stepstones_warrior_character
+				save_scope_as = stepstones_adventurer
+			}
+		}
+		##Check through the ordered western targets to see if a region needs a few more Norsemen.
+		###Iceland & the Northern Isles
+		if = {
+			limit = {
+				any_county_in_region = {
+					region = world_stepstones
+					valid_adventurer_target_trigger = yes
+				}
+			}
+			every_county_in_region = {
+				region = world_stepstones
+				limit = {
+					NOT = {
+						holder = { is_in_list = stepstones_targets_list }
+					}
+					valid_adventurer_target_trigger = yes
+				}
+				add_to_list = stepstones_targets_list
+			}
+			random_in_list = {
+				list = stepstones_targets_list
+				weight = {
+					modifier = { add = stepstones_adventurer_target_title_priority_value }
+				}
+				save_scope_as = adventurer_target
+			}
+		}
+
+		#SORT WAR
+		if = {
+			limit = { exists = scope:adventurer_target }
+			scope:stepstones_adventurer = { trigger_event = agot_adventurers_events.0004 }
+		}
+	}
+}
+
+#	Start the war (separate event to config scopes correctly).
+agot_adventurers_events.0004 = {
+	hidden = yes
+
+	immediate = { stepstones_adventurer_start_war_effect = yes }
+}

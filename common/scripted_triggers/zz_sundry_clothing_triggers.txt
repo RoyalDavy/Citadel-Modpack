@@ -1,0 +1,674 @@
+﻿### General triggers ###
+
+agot_has_artifact_equiped = {
+	any_equipped_character_artifact = {
+		exists = this
+		has_variable = $ARTIFACT_VARIABLE$
+	}
+}
+
+#RANK SPECIFIC
+
+agot_portrait_empire_close_family_trigger = {
+	exists = this
+	exists = liege
+	OR = {
+		is_sibling_of = liege
+		is_child_of = liege
+	}
+	liege = {
+		highest_held_title_tier >= tier_empire
+		portrait_$CULTURE_INPUT$_clothing_trigger = yes
+	}
+}
+
+agot_portrait_kingdom_close_family_trigger = {
+	exists = this
+	exists = liege
+	OR = {
+		is_sibling_of = liege
+		is_child_of = liege
+	}
+	liege = {
+		highest_held_title_tier >= tier_kingdom
+		portrait_$CULTURE_INPUT$_clothing_trigger = yes
+	}
+}
+
+agot_portrait_duchy_close_family_trigger = {
+	exists = this
+	exists = liege
+	OR = {
+		is_sibling_of = liege
+		is_child_of = liege
+	}
+	liege = {
+		highest_held_title_tier >= tier_duchy
+		portrait_$CULTURE_INPUT$_clothing_trigger = yes
+	}
+}
+
+agot_portrait_county_close_family_trigger = {
+	exists = this
+	exists = liege
+	OR = {
+		is_sibling_of = liege
+		is_child_of = liege
+	}
+	liege = {
+		highest_held_title_tier >= tier_county
+		portrait_$CULTURE_INPUT$_clothing_trigger = yes
+	}
+}
+
+agot_portrait_emperor_armor_trigger = {
+	OR = {
+		AND = {
+			highest_held_title_tier >= tier_empire
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		AND = {
+			portrait_accoladed_knight_trigger = yes
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		AND = {
+			agot_portrait_empire_close_family_trigger = { CULTURE_INPUT = $CULTURE_INPUT$ }
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		primary_spouse ?= {
+			highest_held_title_tier >= tier_empire
+			portrait_$CULTURE_INPUT$_clothing_spouse_trigger = yes
+		}
+	}
+	OR = {
+		has_character_flag = need_military_outfit
+		portrait_wear_armor_trigger = yes
+	}
+}
+
+agot_portrait_kingdom_armor_trigger = {
+	OR = {
+		AND = {
+			highest_held_title_tier >= tier_kingdom
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		AND = {
+			agot_portrait_kingdom_close_family_trigger = { CULTURE_INPUT = $CULTURE_INPUT$ }
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		primary_spouse ?= {
+			highest_held_title_tier >= tier_kingdom
+			portrait_$CULTURE_INPUT$_clothing_spouse_trigger = yes
+		}
+	}
+	OR = {
+		has_character_flag = need_military_outfit
+		portrait_wear_armor_trigger = yes
+	}
+}
+
+agot_portrait_duchy_armor_trigger = {
+	OR = {
+		AND = {
+			highest_held_title_tier >= tier_duchy
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		AND = {
+			agot_portrait_duchy_close_family_trigger = { CULTURE_INPUT = $CULTURE_INPUT$ }
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		primary_spouse ?= {
+			highest_held_title_tier >= tier_duchy
+			portrait_$CULTURE_INPUT$_clothing_spouse_trigger = yes
+		}
+	}
+	OR = {
+		has_character_flag = need_military_outfit
+		portrait_wear_armor_trigger = yes
+	}
+}
+
+agot_portrait_county_armor_trigger = {
+	OR = {
+		AND = {
+			highest_held_title_tier >= tier_county
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		AND = {
+			agot_portrait_county_close_family_trigger = { CULTURE_INPUT = $CULTURE_INPUT$ }
+			portrait_$CULTURE_INPUT$_clothing_trigger = yes
+		}
+		primary_spouse ?= {
+			highest_held_title_tier >= tier_county
+			portrait_$CULTURE_INPUT$_clothing_spouse_trigger = yes
+		}
+	}
+	OR = {
+		has_character_flag = need_military_outfit
+		portrait_wear_armor_trigger = yes
+	}
+}
+
+agot_portrait_high_armor_trigger = {
+	OR = {
+		agot_portrait_emperor_armor_trigger = { CULTURE_INPUT = $CULTURE_INPUT$ }
+		agot_portrait_kingdom_armor_trigger = { CULTURE_INPUT = $CULTURE_INPUT$ }
+		AND = {
+			exists = dynasty
+			dynasty.dynasty_prestige_level >= 4
+			agot_portrait_duchy_armor_trigger = { CULTURE_INPUT = $CULTURE_INPUT$ }
+		}
+	}
+}
+
+agot_portrait_low_armor_trigger = {
+	portrait_$CULTURE_INPUT$_clothing_trigger = yes
+	NOT = {
+		agot_portrait_high_armor_trigger = { CULTURE_INPUT = $CULTURE_INPUT$ }
+	}
+	OR = {
+		has_character_flag = need_military_outfit
+		portrait_wear_armor_trigger = yes
+	}
+}
+
+### ANDAL
+portrait_andal_clothing_trigger = {
+	#scope:culture = {
+	culture = {
+		portrait_andal_clothing_contents_trigger = yes
+	}
+}
+
+portrait_andal_clothing_spouse_trigger = {
+	culture = {
+		portrait_andal_clothing_contents_trigger = yes
+	}
+}
+
+portrait_andal_clothing_contents_trigger = {
+	OR = { # AGOT TODO We don't have special clothing added (to script) so we use andal clothing
+		# All Andal gfx; andal_clothing_gfx
+		has_clothing_gfx = andal_clothing_gfx
+
+		portrait_crownlander_clothing_contents_trigger = yes
+		portrait_reachman_clothing_contents_trigger = yes
+		portrait_honeywiner_clothing_contents_trigger = yes
+		portrait_vineman_clothing_contents_trigger = yes
+		portrait_riverlander_clothing_contents_trigger = yes
+		portrait_stormlander_clothing_contents_trigger = yes
+		portrait_valeman_clothing_contents_trigger = yes
+		portrait_moonman_clothing_contents_trigger = yes
+		portrait_westerman_clothing_contents_trigger = yes
+
+		# We don't have any clothing setup for them; for now they all use "western"
+		#portrait_valyrian_clothing_contents_trigger = yes
+	}
+}
+
+### Crownlander
+portrait_crownlander_clothing_trigger = {
+	scope:culture = {
+		portrait_crownlander_clothing_contents_trigger = yes
+	}
+}
+
+portrait_crownlander_clothing_spouse_trigger = {
+	culture = {
+		portrait_crownlander_clothing_contents_trigger = yes
+	}
+}
+
+portrait_crownlander_clothing_contents_trigger = {
+	has_clothing_gfx = crownlander_clothing_gfx
+}
+
+### Reachman
+portrait_reachman_clothing_trigger = {
+	scope:culture = {
+		portrait_reachman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_reachman_clothing_spouse_trigger = {
+	culture = {
+		portrait_reachman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_reachman_clothing_contents_trigger = {
+	has_clothing_gfx = reachman_clothing_gfx
+}
+
+### Honeywiner
+portrait_honeywiner_clothing_trigger = {
+	scope:culture = {
+		portrait_honeywiner_clothing_contents_trigger = yes
+	}
+}
+
+portrait_honeywiner_clothing_spouse_trigger = {
+	culture = {
+		portrait_honeywiner_clothing_contents_trigger = yes
+	}
+}
+
+portrait_honeywiner_clothing_contents_trigger = {
+	has_clothing_gfx = honeywiner_clothing_gfx
+}
+
+### Vineman
+portrait_vineman_clothing_trigger = {
+	scope:culture = {
+		portrait_vineman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_vineman_clothing_spouse_trigger = {
+	culture = {
+		portrait_vineman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_vineman_clothing_contents_trigger = {
+	has_clothing_gfx = vineman_clothing_gfx
+}
+
+### Riverlander
+portrait_riverlander_clothing_trigger = {
+	scope:culture = {
+		portrait_riverlander_clothing_contents_trigger = yes
+	}
+}
+
+portrait_riverlander_clothing_spouse_trigger = {
+	culture = {
+		portrait_riverlander_clothing_contents_trigger = yes
+	}
+}
+
+portrait_riverlander_clothing_contents_trigger = {
+	has_clothing_gfx = riverlander_clothing_gfx
+}
+
+### Stormlander
+portrait_stormlander_clothing_trigger = {
+	scope:culture = {
+		portrait_stormlander_clothing_contents_trigger = yes
+	}
+}
+
+portrait_stormlander_clothing_spouse_trigger = {
+	culture = {
+		portrait_stormlander_clothing_contents_trigger = yes
+	}
+}
+
+portrait_stormlander_clothing_contents_trigger = {
+	has_clothing_gfx = stormlander_clothing_gfx
+}
+
+### Valeman
+portrait_valeman_clothing_trigger = {
+	scope:culture = {
+		portrait_valeman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_valeman_clothing_spouse_trigger = {
+	culture = {
+		portrait_valeman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_valeman_clothing_contents_trigger = {
+	has_clothing_gfx = valeman_clothing_gfx
+}
+
+### Moonman
+portrait_moonman_clothing_trigger = {
+	scope:culture = {
+		portrait_moonman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_moonman_clothing_spouse_trigger = {
+	culture = {
+		portrait_moonman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_moonman_clothing_contents_trigger = {
+	has_clothing_gfx = moonman_clothing_gfx
+}
+
+### Westerman
+portrait_westerman_clothing_trigger = {
+	scope:culture = {
+		portrait_westerman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_westerman_clothing_spouse_trigger = {
+	culture = {
+		portrait_westerman_clothing_contents_trigger = yes
+	}
+}
+
+portrait_westerman_clothing_contents_trigger = {
+	has_clothing_gfx = westerman_clothing_gfx
+}
+
+## Stone Dornish
+portrait_stone_dornish_clothing_trigger = {
+	scope:culture = {
+		portrait_stone_dornish_clothing_contents_trigger = yes
+	}
+}
+
+portrait_stone_dornish_clothing_spouse_trigger = {
+	culture = {
+		portrait_stone_dornish_clothing_contents_trigger = yes
+	}
+}
+
+portrait_stone_dornish_clothing_contents_trigger = {
+	has_clothing_gfx = stone_dornish_clothing_gfx
+}
+
+## Salt Dornish
+portrait_salt_dornish_clothing_trigger = {
+	scope:culture = {
+		portrait_salt_dornish_clothing_contents_trigger = yes
+	}
+}
+
+portrait_salt_dornish_clothing_spouse_trigger = {
+	culture = {
+		portrait_salt_dornish_clothing_contents_trigger = yes
+	}
+}
+
+portrait_salt_dornish_clothing_contents_trigger = {
+	has_clothing_gfx = salt_dornish_clothing_gfx
+}
+
+## Sand Dornish
+portrait_sand_dornish_clothing_trigger = {
+	scope:culture = {
+		portrait_sand_dornish_clothing_contents_trigger = yes
+	}
+}
+
+portrait_sand_dornish_clothing_spouse_trigger = {
+	culture = {
+		portrait_sand_dornish_clothing_contents_trigger = yes
+	}
+}
+
+portrait_sand_dornish_clothing_contents_trigger = {
+	has_clothing_gfx = sand_dornish_clothing_gfx
+}
+
+## Rhoynar
+portrait_rhoynar_clothing_trigger = {
+	scope:culture = {
+		portrait_rhoynar_clothing_contents_trigger = yes
+	}
+}
+
+portrait_rhoynar_clothing_spouse_trigger = {
+	culture = {
+		portrait_rhoynar_clothing_contents_trigger = yes
+	}
+}
+
+portrait_rhoynar_clothing_contents_trigger = {
+	has_clothing_gfx = rhoynish_clothing_gfx
+}
+
+### DORNISH
+portrait_dornish_clothing_trigger = {
+	scope:culture = {
+		portrait_dornish_clothing_contents_trigger = yes
+	}
+}
+
+portrait_dornish_clothing_spouse_trigger = {
+	culture = {
+		portrait_dornish_clothing_contents_trigger = yes
+	}
+}
+
+portrait_dornish_clothing_contents_trigger = {
+	OR = {
+		has_clothing_gfx = rhoynish_clothing_gfx
+		has_clothing_gfx = stone_dornish_clothing_gfx
+		has_clothing_gfx = narrow_sea_clothing_gfx
+	}
+}
+
+### FIRST MEN
+portrait_first_man_clothing_trigger = {
+	scope:culture = {
+		portrait_first_man_clothing_contents_trigger = yes
+	}
+}
+
+portrait_first_man_clothing_spouse_trigger = {
+	culture = {
+		portrait_first_man_clothing_contents_trigger = yes
+	}
+}
+
+portrait_first_man_clothing_contents_trigger = {
+	has_clothing_gfx = first_man_clothing_gfx
+}
+
+### Northern Culture + First Man
+portrait_the_north_clothing_trigger = {
+	scope:culture = {
+		portrait_the_north_clothing_contents_trigger = yes
+	}
+}
+
+portrait_the_north_clothing_spouse_trigger = {
+	culture = {
+		portrait_the_north_clothing_contents_trigger = yes
+	}
+}
+
+portrait_the_north_clothing_contents_trigger = {
+	has_clothing_gfx = first_man_clothing_gfx
+}
+
+### IRONBORN
+portrait_ironborn_clothing_trigger = {
+	scope:culture = {
+		portrait_ironborn_clothing_contents_trigger = yes
+	}
+}
+
+portrait_ironborn_clothing_spouse_trigger = {
+	culture = {
+		portrait_ironborn_clothing_contents_trigger = yes
+	}
+}
+
+portrait_ironborn_clothing_contents_trigger = {
+	has_clothing_gfx = ironborn_clothing_gfx
+}
+
+### VALYRIAN
+portrait_valyrian_clothing_trigger = {
+	scope:culture = {
+		portrait_valyrian_clothing_contents_trigger = yes
+	}
+}
+
+portrait_valyrian_clothing_spouse_trigger = {
+	culture = {
+		portrait_valyrian_clothing_contents_trigger = yes
+	}
+}
+
+portrait_valyrian_clothing_contents_trigger = {
+	has_clothing_gfx = valyrian_clothing_gfx
+}
+
+portrait_essosi_valyrian_clothing_trigger = {
+	scope:culture = {
+		portrait_essosi_valyrian_clothing_contents_trigger = yes
+	}
+}
+
+portrait_essosi_valyrian_clothing_spouse_trigger = {
+	culture = {
+		portrait_essosi_valyrian_clothing_contents_trigger = yes
+	}
+}
+
+portrait_essosi_valyrian_clothing_contents_trigger = {
+	has_clothing_gfx = valyrian_clothing_gfx
+	NOT = {
+		this = culture:high_valyrian
+		this = culture:westerosi_valyrian
+	}
+}
+
+
+### WILDLING
+portrait_wildling_clothing_trigger = {
+	scope:culture = {
+		portrait_wildling_clothing_contents_trigger = yes
+	}
+}
+
+portrait_wildling_clothing_spouse_trigger = {
+	culture = {
+		portrait_wildling_clothing_contents_trigger = yes
+	}
+}
+
+portrait_wildling_clothing_contents_trigger = {
+	has_clothing_gfx = wildling_clothing_gfx
+}
+
+
+### Special triggers ###
+
+portrait_wear_rhaegar_armor_trigger = {
+	exists = this
+
+	any_equipped_character_artifact = {
+		has_variable = rhaegararmour
+	}
+	##Or block is vanilla wear_armor trigger, adjust if necessary.
+	OR = {
+		AND = {
+			is_ruler = yes
+			has_government = mercenary_government
+		}
+		is_commanding_army = yes
+		exists = knight_army
+		AND = {
+			is_knight = yes
+			is_councillor = no
+			OR = {
+				is_landed = no
+				liege = {
+					is_at_war = yes
+				}
+			}
+		}
+		AND = {
+			has_council_position = councillor_marshal
+			OR = {
+				is_landed = no
+				primary_title.tier < tier_kingdom
+			}
+		}
+		has_character_flag = is_currently_varangian
+		has_character_flag = single_combat_duel_armor
+	}
+}
+
+portrait_wear_ned_stark_armor_trigger = {
+	exists = this
+
+	any_equipped_character_artifact = {
+		has_artifact_modifier = vs_ice_modifier
+	}
+	##Or block is vanilla wear_armor trigger, adjust if necessary.
+	OR = {
+		AND = {
+			is_ruler = yes
+			has_government = mercenary_government
+		}
+		is_commanding_army = yes
+		exists = knight_army
+		AND = {
+			is_knight = yes
+			is_councillor = no
+			OR = {
+				is_landed = no
+				liege = {
+					is_at_war = yes
+				}
+			}
+		}
+		AND = {
+			has_council_position = councillor_marshal
+			OR = {
+				is_landed = no
+				primary_title.tier < tier_kingdom
+			}
+		}
+		has_character_flag = is_currently_varangian
+		has_character_flag = single_combat_duel_armor
+	}
+}
+
+portrait_wear_robert_armor_trigger = {
+	exists = this
+
+	any_equipped_character_artifact = {
+		has_variable = robertarmour
+	}
+	##Or block is vanilla wear_armor trigger, adjust if necessary.
+	OR = {
+		AND = {
+			is_ruler = yes
+			has_government = mercenary_government
+		}
+		is_commanding_army = yes
+		exists = knight_army
+		AND = {
+			is_knight = yes
+			is_councillor = no
+			OR = {
+				is_landed = no
+				liege = {
+					is_at_war = yes
+				}
+			}
+		}
+		AND = {
+			has_council_position = councillor_marshal
+			OR = {
+				is_landed = no
+				primary_title.tier < tier_kingdom
+			}
+		}
+		has_character_flag = is_currently_varangian
+		has_character_flag = single_combat_duel_armor
+	}
+}
+
+portrait_wear_skinchangers_second_pelt_trigger = {
+	exists = this
+
+	any_equipped_character_artifact = {
+		has_variable = skinchangers_second_pelt
+	}
+}

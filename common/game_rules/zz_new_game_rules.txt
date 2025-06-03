@@ -1,0 +1,8 @@
+﻿number_of_duchies = {
+	default = more_than_three
+	
+	more_than_three = { }
+	more_than_two = { }
+
+}
+

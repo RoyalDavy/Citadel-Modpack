@@ -1,0 +1,268 @@
+﻿#Historical
+agot_create_artifact_maelys_armor_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = maelys_armor_name
+		description = maelys_armor_description
+		type = armor_plate
+		visuals = maelys_armor_visuals
+		wealth = scope:wealth
+		quality = scope:quality
+		template = maelys_armor_template
+		history = {
+		}
+		modifier = maelys_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = { name = maelys_armor_artifact value = yes } #this connects the artefact to the 3D model via the 01_clothes.txt file under gfx/portraits/portrait_modifiers/
+		equip_artifact_to_owner_replace = yes
+	}
+
+	scope:owner.house = { #makes sense for House Targaryen to have a House claim on the armor that literally has their sigil on it
+		add_house_artifact_claim = scope:newly_created_artifact
+	}
+}
+
+agot_create_artifact_rhaegars_armor_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = rhaegars_armor_name
+		description = rhaegars_armor_description
+		type = armor_plate
+		visuals = rhaegars_armor_visuals
+		wealth = scope:wealth
+		quality = scope:quality
+		template = rhaegars_armor_template
+		history = {
+			type = created
+			date = 8278.1.1
+			recipient = character:Targaryen_3 #Rhaegar Targaryen (son of Aerys II)
+			location = province:4415
+		}
+		modifier = rhaegars_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = { name = rhaegar_armor value = yes } #this connects the artefact to the 3D model via the 01_clothes.txt file under gfx/portraits/portrait_modifiers/
+		equip_artifact_to_owner_replace = yes
+	}
+
+	scope:owner.house = { #makes sense for House Targaryen to have a House claim on the armor that literally has their sigil on it
+		add_house_artifact_claim = scope:newly_created_artifact
+	}
+}
+
+agot_create_artifact_roberts_armor_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_masterwork = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = roberts_armor_name
+		description = roberts_armor_description
+		type = armor_plate
+		visuals = roberts_armor_visuals
+		wealth = scope:wealth
+		quality = scope:quality
+		template = roberts_armor_template
+		history = {
+			type = created
+			date = 8278.1.1
+			recipient = character:Baratheon_2 #Robert Baratheon (son of Steffon)
+			location = province:4439
+		}
+		modifier = roberts_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = { name = robert_armor value = yes } #this connects the artefact to the 3D model via the 01_clothes.txt file under gfx/portraits/portrait_modifiers/
+		equip_artifact_to_owner_replace = yes
+	}
+
+	scope:owner.house = {
+		add_house_artifact_claim = scope:newly_created_artifact
+	}
+}
+
+agot_create_artifact_royce_runic_armor_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = royce_runic_armor_name
+		description = royce_runic_armor_description
+		type = armor_plate
+		visuals = royce_runic_armor_visuals
+		wealth = scope:wealth
+		quality = scope:quality
+		template = royce_runic_armor_template
+		history = {
+			type = created
+			date = 6334.1.1
+			recipient = character:Royce_11
+			location = province:2455
+		}
+		modifier = royce_runic_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = { name = royce_runic_armor_artifact value = yes } #this connects the artefact to the 3D model via the 01_clothes.txt file under gfx/portraits/portrait_modifiers/
+		set_variable = {
+			name = artifact_succession_title
+			value = title:c_runestone
+		}
+		equip_artifact_to_owner_replace = yes
+		add_artifact_title_history = {
+			target = title:c_runestone
+			date = 6334.1.2
+		}
+	}
+
+	scope:owner.house = {
+		add_house_artifact_claim = scope:newly_created_artifact
+	}
+}
+
+#Generic
+agot_create_artifact_valyrian_steel_armor_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = valyrian_steel_armor_name
+		description = valyrian_steel_armor_description
+		type = armor_plate
+		visuals = valyrian_steel_armor_visuals
+		wealth = scope:wealth
+		quality = scope:quality
+		template = valyrian_steel_armor_template
+		modifier = valyrian_steel_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		save_scope_as = epic #for loc
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = { name = valyrian_steel_armor_artifact value = yes } #this connects the artefact to the 3D model via the 01_clothes.txt file under gfx/portraits/portrait_modifiers/
+		set_variable = { name = valyrian_steel value = yes }
+		equip_artifact_to_owner_replace = yes
+	}
+}
+
+agot_create_artifact_decorated_dragon_plate_armor_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = decorated_dragon_plate_armor_name
+		description = decorated_dragon_plate_armor_description
+		type = armor_plate
+		visuals = decorated_dragon_plate_armor_visuals
+		wealth = scope:wealth
+		quality = scope:quality
+		template = decorated_dragon_plate_armor_template
+		modifier = decorated_dragon_plate_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		save_scope_as = epic #for loc
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = { name = decorated_dragon_plate_armor_artifact value = yes } #this connects the artefact to the 3D model via the 01_clothes.txt file under gfx/portraits/portrait_modifiers/
+		equip_artifact_to_owner_replace = yes
+	}
+}
+
+agot_create_artifact_skinchangers_second_pelt_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = skinchangers_second_pelt_name
+		description = skinchangers_second_pelt_description
+		type = armor_mail
+		visuals = skinchangers_second_pelt_visuals
+		wealth = scope:wealth
+		quality = scope:quality
+		template = skinchangers_second_pelt_template
+		modifier = skinchangers_second_pelt_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact = {
+		set_variable = {
+			name = skinchangers_second_pelt
+			value = yes
+		}
+		save_scope_value_as = {
+			name = skinchangers_second_pelt
+			value = yes
+		}
+	}
+}
+
+agot_create_artifact_kingsguard_armor_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_famed = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = kingsguard_armor_name
+		description = kingsguard_armor_description
+		type = armor_plate
+		visuals = kingsguard_armor_visuals
+		wealth = scope:wealth
+		quality = scope:quality
+		template = kingsguard_armor_template
+		modifier = kingsguard_armor_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = { name = kingsguard_armor value = yes } #this connects the artefact to the 3D model via the 01_clothes.txt file under gfx/portraits/portrait_modifiers/
+		equip_artifact_to_owner_replace = yes
+	}
+}

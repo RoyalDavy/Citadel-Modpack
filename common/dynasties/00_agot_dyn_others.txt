@@ -1,0 +1,40 @@
+﻿############################          OTHERS            ############################
+####################################################################################
+
+### Elden Ring
+############################
+dynn_Carian = {
+	name = "dynn_Carian"
+	culture = "riverlander"
+	motto = dynn_Carian_Motto #
+}
+dynn_Erdtree = {
+	name = "dynn_Erdtree"
+	culture = "reachman"
+	motto = dynn_Erdtree_Motto # Put These Foolish Ambitions To Rest
+}
+dynn_Loux = {
+	name = "dynn_Loux"
+	culture = "sand_dornish"
+	motto = dynn_Loux_Motto # Thy Strength Befits a Crown
+}
+
+### Ghiscari for export
+############################
+dynn_Ghezn = {
+	prefix = "dynnp_na"
+	name = "dynn_Ghezn"
+	culture = "ghiscari"
+}
+dynn_Merreq = {
+	prefix = "dynnp_zo"
+	name = "dynn_Merreq"
+	culture = "meereenese"
+}
+
+### Ibbenese for export
+############################
+dynn_Joth = {
+	name = "dynn_Joth"
+	culture = "ibbenese"
+}

@@ -1,0 +1,1478 @@
+﻿namespace = agot_look_into_flames
+
+#################################
+# LOOK INTO THE FLAMES DECISION #
+# 0001 - 0009                   #
+#################################
+scripted_trigger is_valid_kingsblood_offering = {
+	is_adult = yes
+	OR = {
+		any_held_title = {
+			tier >= tier_kingdom
+		}
+		any_parent = {
+			even_if_dead = yes
+			highest_held_title_tier >= tier_kingdom
+		}
+		any_close_family_member = {
+			is_grandparent_of = prev
+			even_if_dead = yes
+			highest_held_title_tier >= tier_kingdom
+		}
+	}
+}
+
+scripted_trigger faith_accepts_human_sacrifice = {
+	faith = {
+		OR = {
+			has_doctrine_parameter = gruesome_festivals_active
+			has_doctrine_parameter = human_sacrifice_active
+			has_doctrine = tenet_heart_of_fire
+		}
+	}
+}
+
+scripted_effect look_into_flames_cleanup_effect = {
+	if = {
+		limit = {
+			exists = var:offering
+		}
+		remove_variable = offering
+	}
+}
+
+agot_look_into_flames.0001 = {
+	type = character_event
+	title = agot_look_into_flames.0001.t
+	desc = agot_look_into_flames.0001.desc
+	theme = faith
+	override_background = {
+		reference = bp1_bonfire
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { ai_zeal <= high_negative_ai_value }
+			animation = personality_cynical
+		}
+		animation = personality_zealous
+	}
+	right_portrait = {
+		character = scope:red_priest
+		animation = personality_zealous
+	}
+
+	immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = red_priest
+		}
+		#Save potential target for the offering
+		if = {
+			limit = {
+				any_prisoner = {
+					is_valid_kingsblood_offering = yes
+				}
+			}
+			random_prisoner = {
+				limit = { is_valid_kingsblood_offering = yes }
+				save_scope_as = sacrifice_target
+			}
+		}
+	}
+
+	#There is power in king's blood...
+	option = {
+		trigger = { #A valid sacrifice target must exist for this option
+			exists = scope:sacrifice_target
+		}
+		name = agot_look_into_flames.0001.prisoner
+		set_variable = {
+			name = offering
+			value = flag:kingsblood
+		}
+
+		scope:sacrifice_target = {
+			death = {
+				death_reason = death_burned_witch
+				killer = root
+			}
+		}
+		add_kinslayer_trait_or_nothing_effect = { VICTIM = scope:sacrifice_target }
+		execute_opinion_effect = { VICTIM = scope:sacrifice_target EXECUTIONER = root }
+
+		#Custom tooltips to prevent spam
+		custom_tooltip = agot_look_into_flames.0001.prisoner.tt
+		custom_tooltip = agot_look_into_flames.0001.prisoner.tt.a
+		hidden_effect = {
+			#Vassals that do not have same tenet or HumSac will HATE this
+			every_vassal_or_below = {
+				if = {
+					limit = {
+						has_trait = zealous
+						faith_accepts_human_sacrifice = yes
+					}
+					add_opinion = {
+						target = root
+						modifier = respect_opinion
+						opinion = 10
+					}
+				}
+				if = {
+					limit = {
+						NOT = { faith_accepts_human_sacrifice = yes }
+					}
+					add_opinion = {
+						target = root
+						modifier = cruelty_opinion
+						opinion = -30
+					}
+				}
+			}
+			#Zealous vassals of same religion might approve
+			every_courtier_or_guest = {
+				if = {
+					limit = {
+						has_trait = zealous
+						faith_accepts_human_sacrifice = yes
+					}
+					add_opinion = {
+						target = root
+						modifier = respect_opinion
+						opinion = 10
+					}
+				}
+				if = {
+					limit = {
+						NOT = { faith_accepts_human_sacrifice = yes }
+					}
+					add_opinion = {
+						target = root
+						modifier = cruelty_opinion
+						opinion = -30
+					}
+				}
+			}
+		}
+		add_dread = medium_dread_gain
+
+		add_character_flag = {
+			flag = look_into_flames_cooldown
+			days = 1825
+		}
+
+		stress_impact = {
+			compassionate = major_stress_impact_gain
+			sadistic = major_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_zeal = 3
+				ai_compassion = -2
+				ai_boldness = 2
+				ai_honor = -0.5
+			}
+			modifier = {
+				factor = 0
+				NOR = {
+					has_trait = zealous
+					has_trait = callous
+					has_trait = ambitious
+					has_trait = sadistic
+				}
+			}
+		}
+	}
+
+	#Burn peasants as an offering
+	option = {
+		name = agot_look_into_flames.0001.peasants
+		set_variable = {
+			name = offering
+			value = flag:peasants
+		}
+		capital_county ?= {
+			add_county_modifier = {
+				modifier = burned_commoners
+				years = 5
+			}
+		}
+
+		custom_tooltip = agot_look_into_flames.0001.peasants.tt
+		custom_tooltip = agot_look_into_flames.0001.peasants.tt.a
+		hidden_effect = {
+			every_courtier_or_guest = {
+				if = {
+					limit = {
+						has_trait = zealous
+						faith_accepts_human_sacrifice = yes
+					}
+					add_opinion = {
+						target = root
+						modifier = respect_opinion
+						opinion = 10
+					}
+				}
+				if = {
+					limit = {
+						NOT = { faith_accepts_human_sacrifice = yes }
+					}
+					add_opinion = {
+						target = root
+						modifier = cruelty_opinion
+						opinion = -15
+					}
+				}
+			}
+		}
+		add_dread = minor_dread_gain
+
+		add_character_flag = {
+			flag = look_into_flames_cooldown
+			days = 1825
+		}
+
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			sadistic = medium_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_zeal = 2
+				ai_compassion = -2
+				ai_boldness = 2
+				ai_honor = -0.25
+			}
+			modifier = {
+				factor = 0
+				NOR = {
+					has_trait = zealous
+					has_trait = callous
+					has_trait = ambitious
+					has_trait = sadistic
+				}
+			}
+		}
+	}
+
+	#Burn false idols as an offering
+	option = {
+		name = agot_look_into_flames.0001.false_idols
+		custom_tooltip = agot_look_into_flames.0001.false_idols.tt
+		set_variable = {
+			name = offering
+			value = flag:false_idols
+		}
+
+		add_character_flag = {
+			flag = look_into_flames_cooldown
+			days = 1825
+		}
+
+		remove_short_term_gold = medium_gold_value
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_zeal = 1
+			}
+			modifier = {
+				add = -50
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				short_term_gold < medium_gold_value_check
+			}
+		}
+	}
+
+	#No offerings this time
+	option = {
+		name = agot_look_into_flames.0001.a
+		custom_tooltip = agot_look_into_flames.0001.a.tt
+		set_variable = {
+			name = offering
+			value = flag:none
+		}
+
+		add_character_flag = {
+			flag = look_into_flames_cooldown
+			days = 1825
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_zeal = -2
+				ai_boldness = -1
+				ai_compassion = 1
+
+			}
+		}
+
+	}
+
+	#Cancel, I'll do it another time
+	option = {
+		name = agot_look_into_flames.0001.b
+		remove_character_flag = look_into_flames_cooldown
+		add_piety_no_experience = 100 #Refund piety cost
+
+		ai_chance = { #AI shouldn't opt out
+			base = 0
+		}
+	}
+
+	# Any type of offering unlocks the ability to gain 1 skill point permanently
+	# Choosing peasants or king's blood offering can additionally lead to fire obsessed
+
+	after = {
+		if = {
+			limit = { has_character_flag = look_into_flames_cooldown }
+
+			#Determine if vision or no vision
+			hidden_effect = {
+				random_list = {
+					#First, can ROOT anything be seen in the flames?
+					#Purposefully stacked against player has a reason to see a vision
+					20 = { #Yes!
+						#Priest influences the outcome/helps understand visions, higher learning = skilled priest might read something in the flames
+						compare_modifier = {
+							value = {
+								value = scope:red_priest.learning
+								multiply = 2
+							}
+						}
+						#Better chance if priest is mystic
+						modifier = {
+							add = 40
+							scope:red_priest = {
+								has_trait = lifestyle_mystic
+							}
+						}
+						modifier = {
+							add = 40
+							scope:red_priest = {
+								has_trait = lifestyle_mystic
+								has_trait_xp = {
+									trait = lifestyle_mystic
+									value >50
+								}
+							}
+						}
+						modifier = {
+							add = 40
+							scope:red_priest = {
+								has_trait = lifestyle_mystic
+								has_trait_xp = {
+									trait = lifestyle_mystic
+									value >=100
+								}
+							}
+						}
+						#Chance increase per level of devotion
+						modifier = {
+							add = 30
+							piety_level > 5
+						}
+						modifier = {
+							add = 30
+							piety_level > 4
+						}
+						modifier = {
+							add = 20
+							piety_level > 3
+						}
+						#Burned peasants
+						modifier = {
+							add = 40
+							var:offering ?= flag:peasants
+						}
+						#False idols offering
+						modifier = {
+							add = 20
+							var:offering ?= flag:false_idols
+						}
+						#Zealous characters are more likely to have a 'vision'
+						modifier = {
+							add = 60
+							has_trait = zealous
+						}
+						#Lunatic can see whatever they want
+						modifier = {
+							add = 60
+							OR = {
+								has_trait = lunatic_genetic
+								has_trait = lunatic_1
+							}
+						}
+						#Fire obsessed is much more likely to see something
+						modifier = {
+							add = 100
+							has_trait = fire_obsessed
+						}
+
+						###Determine content of the visions, the flames reveal:
+						random_list = {
+							#Something real
+							5 = { #5% chance if burned peasants, 20% if burned someone of king's blood
+								trigger = {
+									OR = {
+										var:offering ?= flag:kingsblood
+										var:offering ?= flag:peasants
+									}
+								}
+								modifier = {
+									add = 15
+									var:offering ?= flag:kingsblood
+								}
+
+								#Character sees actual vision: reveal hostile scheme
+								trigger_event = agot_look_into_flames.0008
+							}
+							95 = {
+								modifier = {
+									add = -15
+									var:offering ?= flag:kingsblood
+								}
+								random_list = {
+									10 = { #Diplo vision
+										modifier = {
+											add = 20
+											has_lifestyle = diplomacy_lifestyle
+										}
+										trigger_event = agot_look_into_flames.0003
+									}
+									10 = { #Martial vision
+										modifier = {
+											add = 20
+											has_lifestyle = martial_lifestyle
+										}
+										trigger_event = agot_look_into_flames.0004
+									}
+									10 = { #Stewardship vision
+										modifier = {
+											add = 20
+											has_lifestyle = stewardship_lifestyle
+										}
+										trigger_event = agot_look_into_flames.0005
+									}
+									10 = { #Intrigue vision
+										modifier = {
+											add = 20
+											has_lifestyle = intrigue_lifestyle
+										}
+										trigger_event = agot_look_into_flames.0006
+									}
+									10 = { #Learning vision
+										modifier = {
+											add = 20
+											has_lifestyle = learning_lifestyle
+										}
+										trigger_event = agot_look_into_flames.0007
+									}
+								}
+							}
+						}
+					}
+					# Red Priest sees nothing beyond the flames
+					80 = { #No...
+						modifier = { #Cynical characters would take much more convincing of any effects...
+							add = 120
+							has_trait = cynical
+						}
+						modifier = { #Less likely to see anything if low devotion
+							add = 60
+							piety_level < 1
+						}
+						modifier = { #King's blood offering nullifies this outcome
+							factor = 0
+							var:offering ?= flag:kingsblood
+						}
+						trigger_event = agot_look_into_flames.0002
+					}
+				}
+			}
+		}
+	}
+}
+
+#No visions
+agot_look_into_flames.0002 = {
+	type = character_event
+	title = agot_look_into_flames.0002.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { var:offering = flag:none } }
+				desc = agot_look_into_flames.0002.offering_desc
+			}
+			desc = agot_look_into_flames.0002.desc
+		}
+	}
+	theme = faith
+	override_background = {
+		reference = bp1_bonfire
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { ai_zeal <= high_negative_ai_value }
+			animation = eyeroll
+		}
+		triggered_animation = {
+			trigger = { ai_zeal >= high_positive_ai_value }
+			animation = worry
+		}
+		animation = boredom
+	}
+	right_portrait = {
+		character = scope:red_priest
+		animation = personality_zealous
+	}
+
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { has_trait = zealous }
+						desc = agot_look_into_flames.0002.zealous
+					}
+					triggered_desc = {
+						trigger = { has_trait = cynical }
+						desc = agot_look_into_flames.0002.cynical
+					}
+					desc = agot_look_into_flames.0002.a
+				}
+			}
+		}
+		look_into_flames_cleanup_effect = yes
+
+		stress_impact = {
+			cynical = medium_stress_impact_loss
+			zealous = medium_stress_impact_gain
+		}
+	}
+}
+
+#A strange shadow in the dark
+agot_look_into_flames.0003 = {
+	type = character_event
+	title = agot_look_into_flames.0003.t
+	desc = {
+		desc = agot_look_into_flames.vision_intro_desc
+		desc = agot_look_into_flames.0003.desc
+		desc = agot_look_into_flames.vision_outro_desc
+	}
+
+	immediate = {
+		if = {
+			limit = { has_trait = cynical }
+			add_stress = medium_stress_impact_gain
+		}
+	}
+
+	theme = faith
+	override_background = {
+		reference = bp1_bonfire
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { ai_zeal <= high_negative_ai_value }
+			animation = fear
+		}
+		triggered_animation = {
+			trigger = { ai_zeal >= high_positive_ai_value }
+			animation = personality_zealous
+		}
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:red_priest
+		animation = personality_zealous
+	}
+
+	#A friend...
+	option = {
+		name = agot_look_into_flames.0003.a
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					left_icon = root
+					add_diplomacy_skill = 1
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					left_icon = root
+					add_character_modifier = {
+						modifier = flames_visions_friendship
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_lifestyle = diplomacy_lifestyle
+			}
+			modifier = {
+				add = 50
+				has_trait = gregarious
+			}
+			modifier = {
+				add = 50
+				has_trait = lifestyle_reveler
+			}
+			modifier = {
+				add = 25
+				has_trait = trusting
+			}
+		}
+	}
+	#... or a foe?
+	option = {
+		name = agot_look_into_flames.0003.b
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_intrigue_skill = 1
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_ominous_visions
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_lifestyle = intrigue_lifestyle
+			}
+			modifier = {
+				add = 50
+				has_trait = paranoid
+			}
+			modifier = {
+				add = 50
+				has_trait = craven
+			}
+			modifier = {
+				add = 25
+				has_trait = shy
+			}
+		}
+	}
+
+	after = {
+		look_into_flames_cleanup_effect = yes
+	}
+}
+
+#Martial vision
+agot_look_into_flames.0004 = {
+	type = character_event
+	title = agot_look_into_flames.0004.t
+	desc = {
+		desc = agot_look_into_flames.vision_intro_desc
+		desc = agot_look_into_flames.0004.desc
+		desc = agot_look_into_flames.vision_outro_desc
+	}
+	theme = faith
+	override_background = {
+		reference = bp1_bonfire
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { ai_zeal <= high_negative_ai_value }
+			animation = fear
+		}
+		triggered_animation = {
+			trigger = { ai_zeal >= high_positive_ai_value }
+			animation = personality_zealous
+		}
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:red_priest
+		animation = personality_zealous
+	}
+
+	immediate = {
+		if = {
+			limit = { has_trait = cynical }
+			add_stress = medium_stress_impact_gain
+		}
+	}
+
+	#Martial inspiration
+	option = {
+		name = agot_look_into_flames.0004.a
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				if = {
+					limit = { NOT = { has_trait = holy_warrior } }
+					add_trait = holy_warrior
+				}
+				else = {
+					send_interface_toast = {
+						title = agot_look_into_flames.0003.tt
+						add_martial_skill = 1
+					}
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_of_conquest
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_lifestyle = martial_lifestyle
+			}
+			modifier = {
+				add = 50
+				has_trait = brave
+			}
+			modifier = {
+				add = 50
+				has_trait = ambitious
+			}
+			modifier = {
+				add = 50
+				has_trait = wrathful
+			}
+			modifier = {
+				add = -50
+				has_trait = humble
+			}
+		}
+	}
+	#Steer away from strife
+	option = {
+		name = agot_look_into_flames.0004.b
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				if = {
+					limit = { NOT = { has_trait = cautious_leader } }
+					add_trait = cautious_leader
+				}
+				else = {
+					send_interface_toast = {
+						title = agot_look_into_flames.0003.tt
+						add_diplomacy_skill = 1
+					}
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_of_reconciliation
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_lifestyle = diplomacy_lifestyle
+			}
+			modifier = {
+				add = 50
+				has_trait = compassionate
+			}
+			modifier = {
+				add = 50
+				has_trait = lazy
+			}
+			modifier = {
+				add = 50
+				has_trait = content
+			}
+		}
+	}
+
+	after = {
+		look_into_flames_cleanup_effect = yes
+	}
+}
+
+#A castle turned into golden embers
+agot_look_into_flames.0005 = {
+	type = character_event
+	title = agot_look_into_flames.0005.t
+	desc = {
+		desc = agot_look_into_flames.vision_intro_desc
+		desc = agot_look_into_flames.0005.desc
+		desc = agot_look_into_flames.vision_outro_desc
+	}
+	theme = faith
+	override_background = {
+		reference = bp1_bonfire
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { ai_zeal <= high_negative_ai_value }
+			animation = fear
+		}
+		triggered_animation = {
+			trigger = { ai_zeal >= high_positive_ai_value }
+			animation = personality_zealous
+		}
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:red_priest
+		animation = personality_zealous
+	}
+
+	immediate = {
+		if = {
+			limit = { has_trait = cynical }
+			add_stress = medium_stress_impact_gain
+		}
+	}
+
+	#Echo of future fortune
+	option = {
+		name = agot_look_into_flames.0005.a
+		custom_tooltip = agot_look_into_flames.0005.a.tt
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_stewardship_skill = 1
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_fortune
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_lifestyle = diplomacy_lifestyle
+			}
+			modifier = {
+				add = 50
+				has_trait = ambitious
+			}
+			modifier = {
+				add = 50
+				has_trait = diligent
+			}
+			modifier = {
+				add = 50
+				has_trait = greedy
+			}
+			modifier = {
+				add = -50
+				has_trait = temperate
+			}
+			modifier = {
+				add = -50
+				has_trait = humble
+			}
+		}
+	}
+	#A glimpse of a fallen empire
+	option = {
+		name = agot_look_into_flames.0005.b
+		custom_tooltip = agot_look_into_flames.0005.b.tt
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_learning_skill = 1
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_glimpse_of_past
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_lifestyle = learning_lifestyle
+			}
+			modifier = {
+				add = 50
+				has_trait = scholar
+			}
+			modifier = {
+				add = 50
+				has_trait = content
+			}
+			modifier = {
+				add = 50
+				has_trait = lazy
+			}
+		}
+	}
+
+	after = {
+		look_into_flames_cleanup_effect = yes
+	}
+}
+
+#Daggers and shadows
+agot_look_into_flames.0006 = {
+	type = character_event
+	title = agot_look_into_flames.0006.t
+	desc = {
+		desc = agot_look_into_flames.vision_intro_desc
+		desc = agot_look_into_flames.0006.desc
+		desc = agot_look_into_flames.vision_outro_desc
+	}
+	theme = faith
+	override_background = {
+		reference = bp1_bonfire
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { ai_zeal <= high_negative_ai_value }
+			animation = fear
+		}
+		triggered_animation = {
+			trigger = { ai_zeal >= high_positive_ai_value }
+			animation = personality_zealous
+		}
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:red_priest
+		animation = personality_zealous
+	}
+
+	immediate = {
+		if = {
+			limit = { has_trait = cynical }
+			add_stress = medium_stress_impact_gain
+		}
+	}
+
+	#Better be careful...
+	option = {
+		name = agot_look_into_flames.0006.a
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_intrigue_skill = 1
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_lurking_dangers
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_trait = paranoid
+			}
+			modifier = {
+				add = 50
+				has_trait = lazy
+			}
+			modifier = {
+				add = 50
+				has_trait = content
+			}
+		}
+	}
+
+	#Time to strike!
+	option = {
+		name = agot_look_into_flames.0006.b
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_intrigue_skill = 1
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_hostile_schemes
+						years = 5
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_trait = ambitious
+			}
+			modifier = {
+				add = 50
+				has_trait = vengeful
+			}
+			modifier = {
+				add = 50
+				has_trait = arbitrary
+			}
+			modifier = {
+				add = -50
+				has_trait = just
+			}
+			modifier = {
+				add = -50
+				has_trait = compassionate
+			}
+		}
+	}
+
+	after = {
+		look_into_flames_cleanup_effect = yes
+	}
+}
+
+#Learning vision
+agot_look_into_flames.0007 = {
+	type = character_event
+	title = agot_look_into_flames.0007.t
+	desc = {
+		desc = agot_look_into_flames.vision_intro_desc
+		desc = agot_look_into_flames.0007.desc
+		desc = agot_look_into_flames.vision_outro_desc
+	}
+	theme = faith
+	override_background = {
+		reference = bp1_bonfire
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { ai_zeal <= high_negative_ai_value }
+			animation = fear
+		}
+		triggered_animation = {
+			trigger = { ai_zeal >= high_positive_ai_value }
+			animation = personality_zealous
+		}
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:red_priest
+		animation = personality_zealous
+	}
+
+	immediate = {
+		if = {
+			limit = { has_trait = cynical }
+			add_stress = medium_stress_impact_gain
+		}
+	}
+
+	#Answers lie deeper in the flames!
+	option = {
+		name = agot_look_into_flames.0007.a
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				if = {
+					limit = {
+						NOT = { has_trait = lifestyle_mystic }
+					}
+					add_trait = lifestyle_mystic
+				}
+				else_if = {
+					limit = {
+						has_trait = lifestyle_mystic
+						has_trait_xp = {
+							trait = lifestyle_mystic
+							value < 100
+						}
+					}
+					send_interface_toast = {
+						title = agot_look_into_flames.0003.tt
+						add_trait_xp = {
+							trait = lifestyle_mystic
+							value = 20
+						}
+					}
+				}
+				else = {
+					send_interface_toast = {
+						title = agot_look_into_flames.0003.tt
+						add_learning_skill = 1
+					}
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_studying_prophecies
+					}
+				}
+			}
+		}
+
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_trait = zealous
+			}
+			modifier = {
+				add = 50
+				has_trait = theologian
+			}
+		}
+	}
+	#Answers lie in ancient tomes!
+	option = {
+		name = agot_look_into_flames.0007.b
+		random_list = {
+			10 = {
+				trigger = {
+					OR = {
+						var:offering ?= flag:kingsblood
+						var:offering ?= flag:peasants
+					}
+					NOT = { has_trait = fire_obsessed }
+				}
+				add_trait = fire_obsessed
+			}
+			15 = {
+				trigger = { NOT = { var:offering ?= flag:none } }
+				if = {
+					limit = {
+						NOT = { has_trait = shrewd }
+					}
+					add_trait = shrewd
+				}
+				else = {
+					send_interface_toast = {
+						title = agot_look_into_flames.0003.tt
+						add_learning_skill = 1
+					}
+				}
+			}
+			85 = {
+				send_interface_toast = {
+					title = agot_look_into_flames.0003.tt
+					add_character_modifier = {
+						modifier = flames_visions_studying_scriptures
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = 50
+				has_trait = cynical
+			}
+			modifier = {
+				add = 50
+				has_trait = scholar
+			}
+		}
+	}
+
+	after = {
+		look_into_flames_cleanup_effect = yes
+	}
+}
+
+#REVEAL SECRETS
+agot_look_into_flames.0008 = {
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:scheme }
+				desc = agot_look_into_flames.0008.t.scheme
+			}
+			desc = agot_look_into_flames.0008.t
+		}
+	}
+	desc = {
+		desc = agot_look_into_flames.0008.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = scope:scheme } }
+				desc = agot_look_into_flames.0008.no_scheme_desc
+			}
+			triggered_desc = {
+				trigger = { scope:scheme ?= { scheme_type = murder } }
+				desc = agot_look_into_flames.0008.scheme_murder_desc
+			}
+			triggered_desc = {
+				trigger = { scope:scheme ?= { scheme_type = abduct } }
+				desc = agot_look_into_flames.0008.scheme_abduction_desc
+			}
+			triggered_desc = {
+				trigger = { scope:scheme ?= { scheme_type = steal_back_artifact } }
+				desc = agot_look_into_flames.0008.scheme_steal_artifact_desc
+			}
+			triggered_desc = {
+				trigger = { exists = scope:scheme }
+				desc = agot_look_into_flames.0008.scheme_fallback_desc
+			}
+			desc = agot_look_into_flames.0008.no_scheme_desc
+		}
+	}
+	theme = faith
+	override_background = {
+		reference = bp1_bonfire
+	}
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { exists = scope:scheme }
+			animation = fear
+		}
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:red_priest
+		animation = worry
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_targeting_scheme = {
+					hostile_scheme_trigger = yes
+					is_scheme_exposed = no
+				}
+			}
+			save_scope_as = target
+			random_targeting_scheme = {
+				limit = {
+					hostile_scheme_trigger = yes
+					is_scheme_exposed = no
+				}
+				save_scope_as = scheme
+				scheme_owner = {
+					save_scope_as = owner
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+			trigger = { exists = scope:scheme }
+			text = agot_look_into_flames.0008.b
+		}
+		name = {
+			trigger = { NOT = { exists = scope:scheme } }
+			text = agot_look_into_flames.0008.a
+		}
+		if = { #A scheme exists against me
+			limit = { exists = scope:scheme }
+			hidden_effect = { #Don't show it twice in the tooltip, but needed for the interface_message
+				scope:scheme = {
+					expose_scheme = yes
+				}
+			}
+			show_as_tooltip = {
+				scope:owner = {
+					add_dread = minor_dread_gain
+				}
+				if = {
+					limit = {
+						scope:scheme = {
+							scheme_type = murder
+						}
+					}
+					attempted_murder_opinion_effect = {
+						VICTIM = scope:target
+						MURDERER = scope:owner
+					}
+				}
+				if = {
+					limit = { #Double check since it seems the scheme sometimes hangs around as a scope
+						exists = scope:scheme
+						exists = scope:scheme.scheme_target_character
+					}
+					scope:scheme = {
+						end_scheme = yes
+					}
+				}
+			}
+			scope:owner = {
+				trigger_event = { #Delayed cause for some reason root won't get the interface_message without it
+					id = hostile_scheme_discovery.3003
+					days = 1
+				}
+			}
+		}
+		else = { #No hostile scheme exists at this moment
+			add_character_modifier = {
+				modifier = flames_visions_falsehoods_revealed
+				years = 5
+			}
+		}
+	}
+
+	after = {
+		look_into_flames_cleanup_effect = yes
+	}
+}

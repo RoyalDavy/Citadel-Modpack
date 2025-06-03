@@ -1,0 +1,32 @@
+﻿namespace = agot_canon_children_events
+
+agot_canon_children_events.0001 = {
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_inactive_trait = surname_flowers
+			}
+			make_trait_active = surname_flowers
+			remove_trait = surname_flowers
+			make_trait_inactive = surname_storm
+		}
+	}
+}
+
+agot_canon_children_events.0002 = {
+	hidden = yes
+
+	immediate = {
+		set_pregnancy_gender = female
+	}
+}
+
+agot_canon_children_events.0003 = {
+	hidden = yes
+
+	immediate = {
+		set_pregnancy_gender = male
+	}
+}

@@ -1,0 +1,317 @@
+﻿# Years
+agot_canon_children_guardian_year = 3
+agot_canon_children_trait_1_year = 9
+agot_canon_children_trait_2_year = 11
+agot_canon_children_trait_3_year = 13
+agot_canon_children_trait_4_year = 14
+
+# Intervals
+agot_canon_children_stories_cycle_months = 4
+agot_canon_children_pregnancies_cycle_months = 4
+agot_canon_children_pregnancy_duration_months = 10
+
+agot_canon_children_pregnancy_modifier_duration = { value = agot_canon_children_pregnancies_cycle_months add = 1 }
+
+# Gender chances
+agot_canon_children_female_female_chance = {
+	value = 0
+	if = {
+		limit = { has_game_rule = agot_canon_children_gender_accurate }
+		add = { value = 100 }
+	}
+	else_if = {
+		limit = { has_game_rule = agot_canon_children_gender_semi_accurate }
+		add = { value = 75 }
+	}
+	else_if = {
+		limit = { has_game_rule = agot_canon_children_gender_random }
+		add = { value = 50 }
+	}
+	else = {
+		add = { value = 0 }
+	}
+}
+
+agot_canon_children_male_female_chance = {
+	value = 0
+	if = {
+		limit = { has_game_rule = agot_canon_children_gender_accurate }
+		add = { value = 0 }
+	}
+	else_if = {
+		limit = { has_game_rule = agot_canon_children_gender_semi_accurate }
+		add = { value = 25 }
+	}
+	else_if = {
+		limit = { has_game_rule = agot_canon_children_gender_random }
+		add = { value = 50 }
+	}
+	else = {
+		add = { value = 100 }
+	}
+}
+
+# Birth years
+# TODO: Delaying births based on conditions (TOJ, rebellion ended, marriage, etc)
+
+# Stark
+agot_canon_children_birth_year_brandon_stark = 8262
+agot_canon_children_birth_year_brandon_stark_min = { value = agot_canon_children_birth_year_brandon_stark add = -1 }
+
+agot_canon_children_birth_year_eddard_stark = 8263
+agot_canon_children_birth_year_eddard_stark_min = { value = agot_canon_children_birth_year_eddard_stark add = -1 }
+
+agot_canon_children_birth_year_benjen_stark = 8267
+agot_canon_children_birth_year_benjen_stark_min = { value = agot_canon_children_birth_year_benjen_stark add = -1 }
+
+agot_canon_children_birth_year_lyanna_stark = 8266
+agot_canon_children_birth_year_lyanna_stark_min = { value = agot_canon_children_birth_year_lyanna_stark add = -1 }
+
+agot_canon_children_birth_year_robb_stark = 8283
+agot_canon_children_birth_year_robb_stark_min = { value = agot_canon_children_birth_year_robb_stark add = -1 }
+
+agot_canon_children_birth_year_sansa_stark = 8286
+agot_canon_children_birth_year_sansa_stark_min = { value = agot_canon_children_birth_year_sansa_stark add = -1 }
+
+agot_canon_children_birth_year_arya_stark = 8289
+agot_canon_children_birth_year_arya_stark_min = { value = agot_canon_children_birth_year_arya_stark add = -1 }
+
+agot_canon_children_birth_year_bran_stark = 8290
+agot_canon_children_birth_year_bran_stark_min = { value = agot_canon_children_birth_year_bran_stark add = -1 }
+
+agot_canon_children_birth_year_rickon_stark = 8295
+agot_canon_children_birth_year_rickon_stark_min = { value = agot_canon_children_birth_year_rickon_stark add = -1 }
+
+# Baratheon
+agot_canon_children_birth_year_robert_baratheon = 8262
+agot_canon_children_birth_year_robert_baratheon_min = { value = agot_canon_children_birth_year_robert_baratheon add = -1 }
+
+agot_canon_children_birth_year_stannis_baratheon = 8264
+agot_canon_children_birth_year_stannis_baratheon_min = { value = agot_canon_children_birth_year_stannis_baratheon add = -1 }
+
+agot_canon_children_birth_year_renly_baratheon = 8277
+agot_canon_children_birth_year_renly_baratheon_min = { value = agot_canon_children_birth_year_renly_baratheon add = -1 }
+
+agot_canon_children_birth_year_joffrey_baratheon = 8286
+agot_canon_children_birth_year_joffrey_baratheon_min = { value = agot_canon_children_birth_year_joffrey_baratheon add = -1 }
+
+agot_canon_children_birth_year_myrcella_baratheon = 8290
+agot_canon_children_birth_year_myrcella_baratheon_min = { value = agot_canon_children_birth_year_myrcella_baratheon add = -1 }
+
+agot_canon_children_birth_year_tommen_baratheon = 8291
+agot_canon_children_birth_year_tommen_baratheon_min = { value = agot_canon_children_birth_year_tommen_baratheon add = -1 }
+
+agot_canon_children_birth_year_edric_storm = 8287
+agot_canon_children_birth_year_edric_storm_min = { value = agot_canon_children_birth_year_edric_storm add = -1 }
+
+agot_canon_children_birth_year_gendry_baratheon = 8284
+agot_canon_children_birth_year_gendry_baratheon_min = { value = agot_canon_children_birth_year_gendry_baratheon add = -1 }
+
+agot_canon_children_birth_year_mya_stone = 8281
+agot_canon_children_birth_year_mya_stone_min = { value = agot_canon_children_birth_year_mya_stone add = -1 }
+
+agot_canon_children_birth_year_bella_baratheon = 8283
+agot_canon_children_birth_year_bella_baratheon_min = { value = agot_canon_children_birth_year_bella_baratheon add = -1 }
+
+agot_canon_children_birth_year_barra_baratheon = 8298
+agot_canon_children_birth_year_barra_baratheon_min = { value = agot_canon_children_birth_year_barra_baratheon add = -1 }
+
+agot_canon_children_birth_year_shireen_baratheon = 8289
+agot_canon_children_birth_year_shireen_baratheon_min = { value = agot_canon_children_birth_year_shireen_baratheon add = -1 }
+
+# Lannister
+agot_canon_children_birth_year_cersei_lannister  = 8266
+agot_canon_children_birth_year_cersei_lannister_min = { value = agot_canon_children_birth_year_cersei_lannister add = -1 }
+
+agot_canon_children_birth_year_tyrion_lannister = 8273
+agot_canon_children_birth_year_tyrion_lannister_min = { value = agot_canon_children_birth_year_tyrion_lannister add = -1 }
+
+agot_canon_children_birth_year_joy_hill = 8288
+agot_canon_children_birth_year_joy_hill_min = { value = agot_canon_children_birth_year_joy_hill add = -1 }
+
+# Tully
+# agot_canon_children_birth_year_edmund_tully  = 8260
+# agot_canon_children_birth_year_edmund_tully_min = { value = agot_canon_children_birth_year_edmund_tully add = -1 }
+
+# agot_canon_children_birth_year_denys_tully  = 8262
+# agot_canon_children_birth_year_denys_tully_min = { value = agot_canon_children_birth_year_denys_tully add = -1 }
+
+agot_canon_children_birth_year_catelyn_tully  = 8265
+agot_canon_children_birth_year_catelyn_tully_min = { value = agot_canon_children_birth_year_catelyn_tully add = -1 }
+
+agot_canon_children_birth_year_lysa_tully  = 8267
+agot_canon_children_birth_year_lysa_tully_min = { value = agot_canon_children_birth_year_lysa_tully add = -1 }
+
+agot_canon_children_birth_year_edmure_tully  = 8273
+agot_canon_children_birth_year_edmure_tully_min = { value = agot_canon_children_birth_year_edmure_tully add = -1 }
+
+# agot_canon_children_birth_year_patrek_tully  = 8280
+# agot_canon_children_birth_year_patrek_tully_min = { value = agot_canon_children_birth_year_patrek_tully add = -1 }
+
+# Tarly
+agot_canon_children_birth_year_samwell_tarly = 8283
+agot_canon_children_birth_year_samwell_tarly_min = { value = agot_canon_children_birth_year_samwell_tarly add = -1 }
+
+agot_canon_children_birth_year_talla_tarly = 8284
+agot_canon_children_birth_year_talla_tarly_min = { value = agot_canon_children_birth_year_talla_tarly add = -1 }
+
+agot_canon_children_birth_year_samantha_tarly = 8285
+agot_canon_children_birth_year_samantha_tarly_min = { value = agot_canon_children_birth_year_samantha_tarly add = -1 }
+
+agot_canon_children_birth_year_sansara_tarly = 8286
+agot_canon_children_birth_year_sansara_tarly_min = { value = agot_canon_children_birth_year_sansara_tarly add = -1 }
+
+agot_canon_children_birth_year_dickon_tarly = 8288
+agot_canon_children_birth_year_dickon_tarly_min = { value = agot_canon_children_birth_year_dickon_tarly add = -1 }
+
+# Arryn
+agot_canon_children_birth_year_robert_arryn = 8292
+agot_canon_children_birth_year_robert_arryn_min = { value = agot_canon_children_birth_year_robert_arryn add = -1 }
+
+# Westerling
+agot_canon_children_birth_year_jeyne_westerling = 8283
+agot_canon_children_birth_year_jeyne_westerling_min = { value = agot_canon_children_birth_year_jeyne_westerling add = -1 }
+
+# Tyrell
+agot_canon_children_birth_year_willas_tyrell = 8276
+agot_canon_children_birth_year_willas_tyrell_min = { value = agot_canon_children_birth_year_willas_tyrell add = -1 }
+
+agot_canon_children_birth_year_garlan_tyrell = 8277
+agot_canon_children_birth_year_garlan_tyrell_min = { value = agot_canon_children_birth_year_garlan_tyrell add = -1 }
+
+agot_canon_children_birth_year_loras_tyrell = 8282
+agot_canon_children_birth_year_loras_tyrell_min = { value = agot_canon_children_birth_year_loras_tyrell add = -1 }
+
+agot_canon_children_birth_year_margaery_tyrell = 8283
+agot_canon_children_birth_year_margaery_tyrell_min = { value = agot_canon_children_birth_year_margaery_tyrell add = -1 }
+
+# Martell
+agot_canon_children_birth_year_arianne_martell = 8276
+agot_canon_children_birth_year_arianne_martell_min = { value = agot_canon_children_birth_year_arianne_martell add = -1 }
+
+agot_canon_children_birth_year_quentyn_martell = 8281
+agot_canon_children_birth_year_quentyn_martell_min = { value = agot_canon_children_birth_year_quentyn_martell add = -1 }
+
+agot_canon_children_birth_year_trystane_martell = 8287
+agot_canon_children_birth_year_trystane_martell_min = { value = agot_canon_children_birth_year_trystane_martell add = -1 }
+
+# Poole
+agot_canon_children_birth_year_jeyne_poole = 8286
+agot_canon_children_birth_year_jeyne_poole_min = { value = agot_canon_children_birth_year_jeyne_poole add = -1 }
+
+# Cassel
+agot_canon_children_birth_year_beth_cassel = 8288
+agot_canon_children_birth_year_beth_cassel_min = { value = agot_canon_children_birth_year_beth_cassel add = -1 }
+
+# Dayne
+agot_canon_children_birth_year_edric_dayne = 8287
+agot_canon_children_birth_year_edric_dayne_min = { value = agot_canon_children_birth_year_edric_dayne add = -1 }
+
+# Payne
+agot_canon_children_birth_year_podrick_payne = 8287
+agot_canon_children_birth_year_podrick_payne_min = { value = agot_canon_children_birth_year_podrick_payne add = -1 }
+
+# Reed
+agot_canon_children_birth_year_meera_reed = 8283
+agot_canon_children_birth_year_meera_reed_min = { value = agot_canon_children_birth_year_meera_reed add = -1 }
+
+agot_canon_children_birth_year_jojen_reed = 8285
+agot_canon_children_birth_year_jojen_reed_min = { value = agot_canon_children_birth_year_jojen_reed add = -1 }
+
+# Manderly
+agot_canon_children_birth_year_wynafryd_manderly = 8280
+agot_canon_children_birth_year_wynafryd_manderly_min = { value = agot_canon_children_birth_year_wynafryd_manderly add = -1 }
+
+agot_canon_children_birth_year_wylla_manderly = 8284
+agot_canon_children_birth_year_wylla_manderly_min = { value = agot_canon_children_birth_year_wylla_manderly add = -1 }
+
+# Karstark
+agot_canon_children_birth_year_harrion_karstark = 8275
+agot_canon_children_birth_year_harrion_karstark_min = { value = agot_canon_children_birth_year_harrion_karstark add = -1 }
+
+agot_canon_children_birth_year_eddard_karstark = 8278
+agot_canon_children_birth_year_eddard_karstark_min = { value = agot_canon_children_birth_year_eddard_karstark add = -1 }
+
+agot_canon_children_birth_year_torrhen_karstark = 8281
+agot_canon_children_birth_year_torrhen_karstark_min = { value = agot_canon_children_birth_year_torrhen_karstark add = -1 }
+
+agot_canon_children_birth_year_alys_karstark = 8284
+agot_canon_children_birth_year_alys_karstark_min = { value = agot_canon_children_birth_year_alys_karstark add = -1 }
+
+# Forrester
+agot_canon_children_birth_year_rodrik_forrester = 8273
+agot_canon_children_birth_year_rodrik_forrester_min = { value = agot_canon_children_birth_year_rodrik_forrester add = -1 }
+
+agot_canon_children_birth_year_asher_forrester = 8278
+agot_canon_children_birth_year_asher_forrester_min = { value = agot_canon_children_birth_year_asher_forrester add = -1 }
+
+agot_canon_children_birth_year_mira_forrester = 8283
+agot_canon_children_birth_year_mira_forrester_min = { value = agot_canon_children_birth_year_mira_forrester add = -1 }
+
+agot_canon_children_birth_year_ethan_forrester = 8286
+agot_canon_children_birth_year_ethan_forrester_min = { value = agot_canon_children_birth_year_ethan_forrester add = -1 }
+
+agot_canon_children_birth_year_talia_forrester = 8286
+agot_canon_children_birth_year_talia_forrester_min = { value = agot_canon_children_birth_year_talia_forrester add = -1 }
+
+agot_canon_children_birth_year_ryon_forrester = 8290
+agot_canon_children_birth_year_ryon_forrester_min = { value = agot_canon_children_birth_year_ryon_forrester add = -1 }
+
+agot_canon_children_birth_year_josera_forrester = 8270
+agot_canon_children_birth_year_josera_forrester_min = { value = agot_canon_children_birth_year_josera_forrester add = -1 }
+
+agot_canon_children_birth_year_elsera_forrester = 8270
+agot_canon_children_birth_year_elsera_forrester_min = { value = agot_canon_children_birth_year_elsera_forrester add = -1 }
+
+# Hightower
+agot_canon_children_birth_year_baelor_hightower = 8255
+agot_canon_children_birth_year_baelor_hightower_min = { value = agot_canon_children_birth_year_baelor_hightower add = -1 }
+
+agot_canon_children_birth_year_malora_hightower = 8257
+agot_canon_children_birth_year_malora_hightower_min = { value = agot_canon_children_birth_year_malora_hightower add = -1 }
+
+agot_canon_children_birth_year_alerie_hightower = 8260
+agot_canon_children_birth_year_alerie_hightower_min = { value = agot_canon_children_birth_year_alerie_hightower add = -1 }
+
+# Targaryen
+agot_canon_children_birth_year_aemon_targaryen = 8094
+agot_canon_children_birth_year_aemon_targaryen_min = { value = agot_canon_children_birth_year_aemon_targaryen add = -1 }
+
+agot_canon_children_birth_year_rhaenyra_targaryen = 8097
+agot_canon_children_birth_year_rhaenyra_targaryen_min = { value = agot_canon_children_birth_year_rhaenyra_targaryen add = -1 }
+
+agot_canon_children_birth_year_baelon_targaryen = 8105
+agot_canon_children_birth_year_baelon_targaryen_min = { value = agot_canon_children_birth_year_baelon_targaryen add = -1 }
+
+agot_canon_children_birth_year_aegon_targaryen = 8107
+agot_canon_children_birth_year_aegon_targaryen_min = { value = agot_canon_children_birth_year_aegon_targaryen add = -1 }
+
+agot_canon_children_birth_year_helaena_targaryen = 8109
+agot_canon_children_birth_year_helaena_targaryen_min = { value = agot_canon_children_birth_year_helaena_targaryen add = -1 }
+
+agot_canon_children_birth_year_aemond_targaryen = 8110
+agot_canon_children_birth_year_aemond_targaryen_min = { value = agot_canon_children_birth_year_aemond_targaryen add = -1 }
+
+agot_canon_children_birth_year_daeron_targaryen = 8114
+agot_canon_children_birth_year_daeron_targaryen_min = { value = agot_canon_children_birth_year_daeron_targaryen add = -1 }
+
+agot_canon_children_birth_year_jacaerys_targaryen = 8114
+agot_canon_children_birth_year_jacaerys_targaryen_min = { value = agot_canon_children_birth_year_jacaerys_targaryen add = -1 }
+
+agot_canon_children_birth_year_lucerys_targaryen = 8115
+agot_canon_children_birth_year_lucerys_targaryen_min = { value = agot_canon_children_birth_year_lucerys_targaryen add = -1 }
+
+agot_canon_children_birth_year_joffrey_targaryen = 8117
+agot_canon_children_birth_year_joffrey_targaryen_min = { value = agot_canon_children_birth_year_joffrey_targaryen add = -1 }
+
+agot_canon_children_birth_year_aegon_targaryen_2 = 8120
+agot_canon_children_birth_year_aegon_targaryen_2_min = { value = agot_canon_children_birth_year_aegon_targaryen_2 add = -1 }
+
+agot_canon_children_birth_year_viserys_targaryen = 8122
+agot_canon_children_birth_year_viserys_targaryen_min = { value = agot_canon_children_birth_year_viserys_targaryen add = -1 }
+
+agot_canon_children_birth_year_visenya_targaryen = 8129
+agot_canon_children_birth_year_visenya_targaryen_min = { value = agot_canon_children_birth_year_visenya_targaryen add = -1 }
+
+agot_canon_children_birth_year_baela_targaryen = 8116
+agot_canon_children_birth_year_baela_targaryen_min = { value = agot_canon_children_birth_year_baela_targaryen add = -1 }

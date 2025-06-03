@@ -1,0 +1,86 @@
+﻿#AGoT:
+
+kingsguard_side_effect_cooldown = 365
+
+increased_peacetime_development_percentage = 125
+
+steward_develop_county_increased_peacetime_dev_tenet_bonus_monthly_increase = {
+	value = 0
+	if = {
+		limit = {
+			liege.faith = { has_doctrine_parameter = increased_peacetime_development }
+		}
+		add = steward_develop_county_base_total
+		multiply = {
+			add = increased_peacetime_development_percentage
+			divide = 100
+		}
+	}
+}
+
+#First Ranger Council Values
+
+#SCOUT - Envoy
+ranger_1_default_value = {
+	add = prowess
+	if = {
+		limit = { has_trait = august }
+		add = 15
+	}
+}
+#SCOUT - Wayfinder
+ranger_1_other_value = {
+	add = prowess
+	if = {
+		limit = { has_trait = lifestyle_traveler }
+		add = 15
+	}
+}
+#TRACKER - Provisioner
+ranger_2_default_value = {
+	add = prowess
+	if = {
+		limit = { has_trait = administrator }
+		add = 15
+	}
+}
+#TRACKER - Forager
+ranger_2_other_value = {
+	add = prowess
+	if = {
+		limit = { has_trait = lifestyle_hunter }
+		add = 15
+	}
+}
+#BLADEMASTER - Warbrand
+ranger_3_default_value = {
+	add = prowess
+	if = {
+		limit = { has_trait = winter_soldier }
+		add = 15
+	}
+}
+#BLADEMASTER - Ambusher
+ranger_3_other_value = {
+	add = prowess
+	if = {
+		limit = { has_trait = lifestyle_blademaster }
+		add = 15
+	}
+}
+#NIGHTGUARD - Shadow
+ranger_4_default_value = {
+	add = prowess
+	if = {
+		limit = { has_trait = schemer }
+		add = 15
+	}
+}
+#NIGHTGUARD - Watcher
+ranger_4_other_value = {
+	add = prowess
+	if = {
+		limit = { has_trait = overseer }
+		add = 15
+	}
+}

@@ -1,0 +1,43 @@
+﻿interactive_common_faction_modifiers = {
+	opinion_modifier = {
+		who = root
+		opinion_target = $FACTION_TARGET$ 
+		multiplier = $OPINION_MULTIPLIER$
+		max = $MAX_OPINION$
+		min = -1000
+	}
+
+	modifier = {
+		desc = "INTERACTIVE_AI_HONOR"
+		add = {
+			value = 0
+			add = { 
+				value = ai_honor
+				multiply = 3
+				min = -1000
+			}
+		}
+	}
+}
+
+nation_fracturing_faction_blockers = {
+	# If you have a claim on the title, you should create a claimant faction instead
+	modifier = {
+		add = -1000
+		OR = {
+			has_weak_claim_on = $FACTION_TARGET$.primary_title
+			has_claim_on = $FACTION_TARGET$.primary_title
+		}
+	}
+
+	# We don't want the AI to create it for a title below Kingdom
+	modifier = {
+		add = -1000
+		$FACTION_TARGET$.primary_title.tier < tier_kingdom
+	}
+
+	modifier = {
+		add = -1000
+		$FACTION_TARGET$ = { is_ai = yes }
+	}
+}

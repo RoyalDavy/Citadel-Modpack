@@ -1,0 +1,32 @@
+﻿namespace = ecsaty_destroy_title
+
+
+
+###############		confirmation		######################
+# ecsaty_destroy_title.0000 = {
+# 	type = character_event
+# 	title = ecsaty_destroy_title.0000.t
+# 	desc = ecsaty_destroy_title.0000.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = fear
+# 	}
+
+# 	option = {
+# 		name = ecsaty_destroy_title.0000.me
+# 		trigger_event = ecsaty_destroy_title.0001
+# 	}
+# 	option = {
+# 		name = ecsaty_destroy_title.back
+# 	}
+# }
+##############################################################
+
+ecsaty_destroy_title.0001 = {
+	hidden = yes
+
+	immediate = {
+		destroy_title = scope:target
+	}
+}

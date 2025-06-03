@@ -1,0 +1,11 @@
+﻿LATE_LORD_MALE = {
+	type = character
+
+	text = { # The Late Lord Corollary; AGOT+ added
+		trigger = {
+			has_character_flag = asoiaf_late_lord
+			is_landed = yes
+		}
+		localization_key = asoiaf_late_lord
+	}
+}

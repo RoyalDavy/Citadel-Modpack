@@ -1,0 +1,27 @@
+﻿@correct_culture_primary_score = 100
+@better_than_the_alternatives_score = 50
+@always_primary_score = 1000
+
+d_rivers_head = {
+	color = { 33 86 206 }
+	capital = c_whitebricks
+	can_create = { always = no }
+}
+
+k_torrentine_mhf = {
+	color = { 115 66 161 }
+	capital = c_starfall
+	can_create = { always = no }
+}
+
+k_the_arbor_mhf = {
+	color = { 84 4 36 }
+	capital = c_wynegarde
+	can_create = { always = no }
+}
+
+k_oldtown_mhf = {
+	color = { 145 174 145 }
+	capital = c_oldtown
+	can_create = { always = no }
+}

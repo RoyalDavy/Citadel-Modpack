@@ -1,0 +1,12 @@
+﻿mw_has_valid_proclamation_kingdom = {
+	OR = {
+		has_title = title:k_dorne
+		has_title = title:k_the_iron_islands
+		has_title = title:k_the_north
+		has_title = title:k_the_reach
+		has_title = title:k_the_riverlands
+		has_title = title:k_the_stormlands
+		has_title = title:k_the_vale
+		has_title = title:k_the_westerlands
+	}
+}

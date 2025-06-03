@@ -1,0 +1,27 @@
+﻿l_english:
+recover_lamentation_decision:0 "Recover Lamentation"
+recover_lamentation_decision_desc: "Fund an explorer to recover Lamentation, the ancestral sword of House Royce."
+recover_lamentation_t: "Recover Lamentation"
+recover_lamentation_decision_tooltip: "A trip to the Dragonpit is extremely dangerous, the place is well guarded and they don't like strangers digging around in the ruins, many who travel there do not return."
+recover_lamentation_decision_tooltip_1: "The expedition you send could lead to the recovery of Lamentation."
+recover_lamentation_decision_tooltip_2: "The expedition could also lead to the death of the explorer you send to the Dragonpit"
+recover_lamentation_decision_tooltip_3: "An explorer will travel to the Dragonpit in an attempt to recover Lamentation, the ancestral sword of House Royce."
+
+recover_lamentation_decision_confirm: "Prepare a ship for the journey."
+
+recover_lamentation_0001_a_desc: "It has been centuries since [william.GetFullName] lost Lamentation during the storming of the Dragonpit, which took place during the riot of King's Landing during the Dance of the Dragons. House [ROOT.Char.GetDynasty.GetBaseName] has been without a Valyrian Steel blade ever since.\n\nPerhaps it is time to attempt and recover the blade? My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('explorer'))] [explorer.GetFirstName] has long sought my permission to travel to the Dragonpit, for both glory and riches.\n\nThe trip will be both expensive and dangerous...but the rewards would be impressive."
+recover_lamentation_0001_c_desc: "It has been centuries since [william.GetFullName] lost Lamentation during the storming of the Dragonpit, which took place during the riot of King's Landing during the Dance of the Dragons. House [ROOT.Char.GetDynasty.GetBaseName] has been without a Valyrian Steel blade ever since.\n\nPerhaps it is time to attempt and recover the blade? There are few problems that gold cannot solve, with enough money...and daring adventureres...Lamentation could be recovered.\n\n[explorer.GetFirstName], a local captain has offered to lead the expedition.\n\nThe trip will be both expensive and dangerous...but the rewards would be impressive."
+
+recover_lamentation_0001_tt: "[explorer.GetFirstName] will travel to the Dragonpit and attempt to retrieve Lamentation"
+recover_lamentation_0001_b_tt: "You will cancel the expedition and your gold will be refunded"
+
+recover_lamentation_0001_a: "Return safely [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('explorer'))]..."
+recover_lamentation_0001_b: "Return safely, [explorer.GetName]"
+recover_lamentation_0001_c: "Perhaps now is not the time for a quest to the Dragonpit..."
+
+recover_lamentation_0002_a_desc: "Word of [explorer.GetFirstNamePossessive] return has worked its way to me. I rush to the docks of [GetTitleByKey('b_runeport').GetNameNoTier] and see that the crew is already unloading chests full of gold and other spoils from the ruins of the Dragonpit. \n\n[explorer.GetFirstName] approaches me with a Valyrian steel sword in hand. He bows and presents it to me. "Lamentation, my [ROOT.Char.GetLadyLord]. We found [william.GetFirstNamePossessive]  severed hand in the ruins, still clutching the sword... It is past time that the sword returns to House [ROOT.Char.GetDynasty.GetBaseName]."\n\nI take the sword into my hands.\n\nLamentation has finally returned home.\n\n"
+recover_lamentation_0002_a: "You've outdone yourself [explorer.GetFirstName]."
+
+recover_lamentation_0003_a_desc: "[explorer.GetFirstNamePossessive] expedition is long overdue. They were scheduled to have returned by now.\n\nI fear that something has gone terribly wrong in the Dragonpit...\n\n"
+recover_lamentation_0003_a: "That ruin has claimed another life..."
+
