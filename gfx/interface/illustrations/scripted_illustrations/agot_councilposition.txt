@@ -1,0 +1,106 @@
+﻿
+agot_chaplain = { #Works like a First Valid
+
+	#NORTHMEN
+
+	texture = { # FP1
+		trigger = {
+			religion = religion:the_pact_religion
+		}
+		reference = "event_scenes/fp1_tribal_temple.dds"
+	}
+
+	#IRONBORN
+
+	texture = {
+		trigger = {
+			religion = religion:the_ways_religion
+		}
+		reference = "council/ironborn/bg_ironborn_chaplain.dds"
+	}
+
+	#DEFAULTS - Has to be last to trigger
+
+	texture = {
+		reference = "council/default/bg_council_chaplain.dds"
+	}
+
+	environment = {
+		reference = "environment_event_temple"
+	}
+
+}
+
+
+
+#CASTELLAN
+agot_councilposition = { #Works like a First Valid
+
+	texture = {
+		trigger = {
+			has_council_position = councillor_chancellor
+			religion = religion:the_ways_religion
+		}
+		reference = "council/ironborn/bg_ironborn_chancellor.dds"
+	}
+
+	texture = { #warlike
+		trigger = {
+			has_council_position = councillor_castellan
+			martial >= diplomacy
+			martial  >= stewardship
+			martial  >= intrigue
+			martial >= learning
+		}
+		reference = "council/castellan/bg_council_castellan_martial.dds"
+	}
+
+	texture = { #diplomacy
+		trigger = {
+			has_council_position = councillor_castellan
+			diplomacy >= martial
+			diplomacy  >= stewardship
+			diplomacy  >= intrigue
+			diplomacy >= learning
+		}
+		reference = "council/castellan/bg_council_castellan_diplomacy.dds"
+	}
+
+	texture = { #stewardship
+		trigger = {
+			has_council_position = councillor_castellan
+			stewardship >= diplomacy
+			stewardship  >= martial
+			stewardship  >= intrigue
+			stewardship >= learning
+		}
+		reference = "council/castellan/bg_council_castellan_stewardship.dds"
+	}
+
+	texture = { #intrigue
+		trigger = {
+			has_council_position = councillor_castellan
+			intrigue >= diplomacy
+			intrigue >= martial
+			intrigue >= stewardship
+			intrigue >= learning
+		}
+		reference = "council/castellan/bg_council_castellan_intrigue.dds"
+	}
+
+	texture = { #learning
+		trigger = {
+			has_council_position = councillor_castellan
+			learning >= diplomacy
+			learning >= stewardship
+			learning >= intrigue
+			learning >= martial
+		}
+		reference = "council/castellan/bg_council_castellan_learning.dds"
+	}
+
+	texture = { #fallback
+		trigger = { has_council_position = councillor_castellan }
+		reference = "council/castellan/bg_council_castellan.dds"
+	}
+}

@@ -1,0 +1,634 @@
+﻿disfigured_vd = {
+	disfigured = {
+		traits = {
+			disfigured
+		}
+		trigger = {
+			trigger_if = {
+				limit = {
+					exists = root
+				}
+				root = {
+						has_character_modifier = masked_modifier
+					NOR = {
+						portrait_fp3_iranian_clothing_trigger = yes
+						portrait_fp3_turkic_clothing_trigger = yes
+					}
+				}
+			}
+		}
+		dna_modifiers = {
+			human = {
+				accessory = {
+					mode = add				
+					gene = special_headgear_face_mask
+					template = face_mask
+					value = 0.5
+				}
+				accessory = {
+					mode = add				
+					gene = beards
+					template = no_beard
+					value = 0.5
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_cheek_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_cheek_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_cheek_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_angle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_inner_shape
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_bend
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_outward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_eye_corner_depth
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_eye_fold_shape
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_eye_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_eye_upper_lid_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_curve
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_inner_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_outer_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_jaw_def
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_lower_lip_def
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_lower_lip_full
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_lower_lip_pad
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_lower_lip_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_philtrum_def
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_philtrum_shape
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_philtrum_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_upper_lip_def
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_upper_lip_full
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_upper_lip_profile
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_upper_lip_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_length
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_nostril_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_nostril_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_profile
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_ridge_angle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_ridge_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_tip_angle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_tip_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_tip_width
+					value = 0.0
+				}
+			}
+		}
+	}
+	
+	disfigured_fp3 = {
+		traits = {
+			disfigured
+		}
+		trigger = {
+			trigger_if = {
+				limit = {
+					exists = root
+				}
+				root = {
+					has_character_modifier = masked_modifier
+					OR = {
+						portrait_fp3_iranian_clothing_trigger = yes
+						portrait_fp3_turkic_clothing_trigger = yes
+					}
+				}
+			}
+		}
+
+		dna_modifiers = {
+			human = {
+				accessory = {
+					mode = add				
+					gene = special_headgear_face_mask
+					template = fp3_iranian_face_mask
+					value = 0.5
+				}
+				accessory = {
+					mode = add				
+					gene = beards
+					template = no_beard
+					value = 0.5
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_cheek_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_cheek_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_cheek_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_angle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_inner_shape
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_bend
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_outward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_ear_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_eye_corner_depth
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_eye_fold_shape
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_eye_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_eye_upper_lid_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_curve
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_inner_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_outer_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_forehead_brow_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_jaw_def
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_lower_lip_def
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_lower_lip_full
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_lower_lip_pad
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_lower_lip_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_philtrum_def
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_philtrum_shape
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_philtrum_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_upper_lip_def
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_upper_lip_full
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_upper_lip_profile
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_mouth_upper_lip_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_length
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_nostril_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_nostril_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_profile
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_ridge_angle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_ridge_width
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_tip_angle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_tip_forward
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply				
+					gene = gene_bs_nose_tip_width
+					value = 0.0
+				}
+			}
+		}
+	}
+
+	disfigured_ep3_golden_nose = {
+		traits = {
+			disfigured
+		}
+		trigger = {
+			trigger_if = {
+				limit = {
+					exists = root
+				}
+				root = {
+					AND = {
+						portrait_byzantine_clothing_trigger = yes
+						has_ep3_dlc_trigger = yes
+					}
+				}
+			}
+		}
+
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = add
+					gene = gene_scars_battle_3
+					value = 1.0
+					template = scars_battle_3
+				}
+				morph = {
+					mode = add
+					gene = gene_scars_disease
+					value = 1.0
+					template = scars_disease
+				}
+				accessory = {
+					mode = add				
+					gene = special_headgear_face_mask
+					template = ep3_golden_nose
+					value = 0.5
+				}		
+			}
+		}
+	}
+	
+	disfigured_unmasked = {
+		traits = {
+			disfigured
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = add
+					gene = gene_scars_battle_3
+					value = 1.0
+					template = scars_battle_3
+				}
+				morph = {
+					mode = add
+					gene = gene_scars_disease
+					value = 1.0
+					template = scars_disease
+				}
+			}
+		}
+	}
+
+	disfigured_replace_distrubing = {
+		traits = {
+			leper
+			scaly
+		}
+		trigger = {
+			should_show_disturbing_portrait_modifiers = no
+		}
+		base = disfigured
+	}
+}
+
+blind = {
+	blind = {
+		traits = {
+			blind
+		}
+		trigger = {
+			exists = root
+			NOT = {
+				has_character_modifier = masked_modifier
+			}
+		}
+		dna_modifiers = {
+			human = {
+				accessory = {
+					mode = add
+					gene = special_headgear_spectacles
+					template = blindfold
+					value = 0.5
+				}
+			}
+		}
+	}
+	temporarily_blind = {
+		base = blind
+		trigger = {
+			exists = root
+			has_character_flag = temporarily_blinded
+			NOT = {
+				has_character_modifier = masked_modifier
+			}
+		}
+	}
+	one_eyed = {
+		traits = {
+			one_eyed
+		}
+		trigger = {
+			exists = root
+			NOT = {
+				has_character_modifier = masked_modifier
+			}
+		}
+		dna_modifiers = {
+			human = {
+				accessory = {
+					mode = add
+					gene = special_headgear_spectacles
+					template = eye_patch
+					value = 0.5
+				}
+			}
+		}
+	}
+	temporarily_one_eyed = {
+		base = one_eyed
+		trigger = {
+			exists = root
+			has_character_flag = wears_fake_eye_patch
+			NOT = {
+				has_character_modifier = masked_modifier
+			}
+		}
+	}
+}

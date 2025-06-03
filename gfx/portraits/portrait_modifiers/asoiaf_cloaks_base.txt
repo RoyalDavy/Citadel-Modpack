@@ -1,0 +1,330 @@
+﻿asoiaf_cloaks = {
+
+	usage = game
+	selection_behavior = max
+	priority = 4
+
+	asoiaf_cloak_ironborn = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak #no big fur cloaks for ironborn (for now)
+				value = 0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 210
+				has_fp1_dlc_trigger = yes
+				OR = {
+					portrait_low_nobles_clothing_trigger = {
+						CULTURE_INPUT = ironborn
+					}
+					portrait_low_nobles_armor_trigger = {
+						CULTURE_INPUT = ironborn
+					}
+					portrait_high_nobles_clothing_trigger = {
+						CULTURE_INPUT = ironborn
+					}
+					portrait_high_nobles_armor_trigger = {
+						CULTURE_INPUT = ironborn
+					}
+				}
+				NOR = {
+					has_trait = nightswatch
+					has_trait = kingsguard
+				}
+				has_game_rule = asoiaf_new_dnas_iron_isles_rule_on #use dna rule until the ironborn clothes game rule has actual outfits to go with it
+			}
+		}
+	}
+
+	asoiaf_cloak_northmen = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = asoiaf_northern_cloaks
+				range = { 0.0 1.0 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 210
+				has_fp1_dlc_trigger = yes
+				OR = {
+					portrait_low_nobles_clothing_trigger = {
+						CULTURE_INPUT = the_north
+					}
+					portrait_low_nobles_armor_trigger = {
+						CULTURE_INPUT = the_north
+					}
+					portrait_high_nobles_clothing_trigger = {
+						CULTURE_INPUT = the_north
+					}
+					portrait_high_nobles_armor_trigger = {
+						CULTURE_INPUT = the_north
+					}
+				}
+				NOR = {
+					has_trait = nightswatch
+					has_trait = kingsguard
+				}
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+			}
+		}
+	}
+
+	asoiaf_cloak_gold_cloak_cloak = { #Gold Cloak cloak - for both courtiers and Commanders
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = asoiaf_gold_cloak_cloaks
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = { #should ALWAYS wear it if a courtier of Gold Cloak Commander and their culture allows martial for the gender
+				add = 2000
+                age >= 14
+				exists = liege
+				liege = {
+					has_court_position = goldcloaks_court_position
+					is_target_in_global_variable_list = {
+						name = agot_goldcloaks_founded
+						target = flag:goldcloaks_founded
+					}
+				}
+				OR = {
+					AND = {
+						is_female = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_female_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+					AND = {
+						is_male = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_male_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+            modifier = { #Commanders wears it if the Gold Cloak variable is true
+				add = 2000
+				has_court_position = goldcloaks_court_position
+				is_target_in_global_variable_list = {
+					name = agot_goldcloaks_founded
+					target = flag:goldcloaks_founded
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+			modifier = { #Aegor Bittersteel gets the good looking Gold Cloak when leading the Golden Company, since he doesn't wear the Golden Company armour in Jedi's mod
+				add = 2000
+				exists = character:Targaryen_95
+				this = character:Targaryen_95
+				character:Targaryen_95 ?= { has_title = title:d_laamp_merc_golden_company }
+			}
+			modifier = {
+				add = -3000
+				OR = {
+					should_be_naked_trigger = yes
+					has_trait = septon
+					has_trait = most_devout_member
+					has_trait = high_septon
+					has_trait = silent_sister
+					has_trait = red_priest
+					#has_trait = devoted
+					has_trait = drowned_man
+					has_trait = maester
+					has_trait = archmaester
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = lifestyle_nw_builder
+					has_trait = lifestyle_nw_ranger
+					has_trait = lifestyle_nw_steward
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+            modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+	
+	asoiaf_cloak_kingsguard_default = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = asoiaf_kingsguard_default_cloak
+				value = 1
+			}
+		}
+		weight = {
+            base = -100
+            modifier = {
+                add = 1000
+                OR = {
+					has_trait = kingsguard
+					any_equipped_character_artifact = { has_variable = kingsguard_armour }
+				}
+				#has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+				exists = global_var:app_enabled
+            }
+        }
+	}
+	
+	asoiaf_cloak_lannister_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = asoiaf_lannister_war_cloak
+				value = 1
+			}
+		}
+		weight = {
+            base = 0
+            modifier = {
+                add = 130
+				AND = {
+                    OR = { #Lannister westermen, crownlanders, and reachmen can have the special armour
+                        portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+						portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+						portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                    }
+					AND = {
+						NOT = { is_dynast = yes }
+						OR = {
+							dynasty ?= dynasty:dynn_Lannister
+							house ?= house:house_BaratheonKL
+						}
+					}
+                }
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+            }
+			modifier = {
+				add = 130
+				portrait_wear_lannister_armour_courtiers_trigger = yes
+			}
+			modifier = {
+				add = -1000
+				OR = {
+					has_trait = nightswatch
+					has_trait = kingsguard
+				}
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+			}
+        }
+	}
+	
+	asoiaf_western_kings_no_cloak = {
+		# outfit_tags = { rank_headgear } 
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = cloaks
+				template = no_cloak
+				value = 1
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				OR = {
+					portrait_western_clothing_trigger = yes
+					portrait_dde_hre_clothing_trigger = yes
+					AND = {
+						portrait_northern_clothing_trigger = yes
+						OR = {
+							portrait_fp1_norse_clothing_trigger = no
+							AND = {
+								portrait_fp1_norse_clothing_trigger = yes
+								NOR = {
+									government_has_flag = government_is_tribal
+									#AGOT Disabled
+									# religion = religion:germanic_religion
+								}
+							}
+						}
+					}
+					portrait_byzantine_clothing_trigger = yes
+				}
+				has_game_rule = asoiaf_monarchs_cloak_rule_on
+			}
+			modifier = {
+				factor = 0
+				exists = this
+				OR = {
+					is_adult = no
+					#AGOT Modified
+					# highest_held_title_tier < tier_kingdom
+					highest_held_title_tier < tier_empire
+					government_has_flag = government_is_theocracy
+					government_has_flag = government_is_republic
+					has_character_modifier = vow_of_poverty_modifier
+					# Deliberately not the "fully naked" one since dropping your cloak's intended even if nudity is disabled
+					should_be_naked_trigger = yes
+					portrait_wear_armor_trigger = yes
+					is_travelling = yes
+					involved_activity ?= { has_activity_type = activity_hunt }
+					AND = {
+						has_dlc_feature = elegance_of_the_empire
+						highest_held_title_tier = tier_empire
+						portrait_western_clothing_trigger = yes
+					}
+				}
+				AND = {
+					has_game_rule = asoiaf_monarchs_cloak_rule_on
+					NOT = {
+						involved_activity ?= { #they can wear it while attending a coronation ceremony
+							OR = {
+								has_activity_type = activity_coronation
+								has_activity_type = activity_no_dlc_coronation
+							}
+						}
+					}
+				}
+			}			
+		}
+	}
+}

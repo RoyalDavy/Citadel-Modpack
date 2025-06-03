@@ -1,0 +1,416 @@
+﻿pattern_textures = {
+	name = "blank_texture"
+	colormask	= "gfx/portraits/accessory_variations/textures/blank_masks.dds"
+	normal		= "gfx/portraits/accessory_variations/textures/sample_01_normal.dds"
+	properties	= "gfx/portraits/accessory_variations/textures/sample_01_properties.dds"
+}
+
+pattern_layout = {
+	name = "qolab_layout"
+	scale 		= { min = 0.1	max = 0.1 }
+	rotation 	= { min = 0	max = 0 }
+	offset 		= { x = { min = -0.1	max = -0.1 }    y = { min = 0	max = 0 } }
+}
+
+
+variation = {
+	name = "agot_qolab1"
+
+	# patterns are sampled using UV-set 2
+	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+
+	# Color palette textures are 16-wide and N-high.
+	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+	# First column will be masked by the red channel in the masks, second by the green, etc.
+	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/qolab1.dds" }
+}
+
+variation = {
+	name = "agot_qolab2"
+
+	# patterns are sampled using UV-set 2
+	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+
+	# Color palette textures are 16-wide and N-high.
+	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+	# First column will be masked by the red channel in the masks, second by the green, etc.
+	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/qolab3.dds" }
+}
+
+variation = {
+	name = "agot_qolab3"
+
+	# patterns are sampled using UV-set 2
+	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+
+	# Color palette textures are 16-wide and N-high.
+	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+	# First column will be masked by the red channel in the masks, second by the green, etc.
+	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/qolabrr.dds" }
+}
+
+variation = {
+	name = "agot_qolab4"
+
+	# patterns are sampled using UV-set 2
+	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+
+	# Color palette textures are 16-wide and N-high.
+	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+	# First column will be masked by the red channel in the masks, second by the green, etc.
+	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/qolabyr.dds" }
+}
+
+variation = {
+	name = "agot_qolab5"
+
+	# patterns are sampled using UV-set 2
+	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+
+	# Color palette textures are 16-wide and N-high.
+	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+	# First column will be masked by the red channel in the masks, second by the green, etc.
+	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/qolabpr.dds" }
+}
+
+variation = {
+	name = "agot_qolab6"
+
+	# patterns are sampled using UV-set 2
+	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "small_trim_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+
+	# Color palette textures are 16-wide and N-high.
+	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+	# First column will be masked by the red channel in the masks, second by the green, etc.
+	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/qolabwr.dds" }
+}
+
+variation = {
+	name = "agot_qolab7"
+
+	# patterns are sampled using UV-set 2
+	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+	pattern = {
+		weight = 1
+		#r,g,b,a here refers to the channels in the pattern_mask scripted in the entity
+		r = { textures = "blank_texture" layout = "qolab_layout" }
+		g = { textures = "blank_texture" layout = "small_trim_layout" }
+		b = { textures = "blank_texture" layout = "small_trim_layout" }
+		a = { textures = "blank_texture"	layout = "small_trim_layout" }
+	}
+
+	# Color palette textures are 16-wide and N-high.
+	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+	# First column will be masked by the red channel in the masks, second by the green, etc.
+	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/qolab2.dds" }
+}

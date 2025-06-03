@@ -1,0 +1,13 @@
+﻿# FLO ADDED : TEST
+male_body_webbing = {
+	entity = { entity = "male_body_webbing_entity" 	shared_pose_entity = torso }
+}
+female_body_webbing = {
+	entity = { entity = "female_body_webbing_entity" 	shared_pose_entity = torso }
+}
+agot_male_aerys_nails = {
+	entity = { entity = "agot_male_aerys_nails_entity" 	shared_pose_entity = torso }
+}
+maelys_head = {
+	entity = { entity = "maelys_head_entity" 	shared_pose_entity = head }
+}

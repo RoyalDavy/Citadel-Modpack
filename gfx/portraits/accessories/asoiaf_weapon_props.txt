@@ -1,0 +1,31 @@
+﻿asoiaf_jaimes_sword_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"        entity = "asoiaf_sword_jaimes_sword_entity" game_entity_override = weapon }
+}
+
+asoiaf_sword_krakenfall_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"        game_entity_override = weapon 	entity = "asoiaf_sword_krakenfall_entity" }
+}
+
+asoiaf_sword_ice_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		game_entity_override = weapon 	entity = "asoiaf_sword_ice_entity" }
+}
+
+asoiaf_sword_heartsbane_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		game_entity_override = weapon 	entity = "asoiaf_sword_heartsbane_entity" }
+}
+
+asoiaf_sword_longclaw_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		game_entity_override = weapon 	entity = "asoiaf_sword_longclaw_entity" }
+}
+
+asoiaf_sword_oathkeeper_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		game_entity_override = weapon 	entity = "asoiaf_sword_oathkeeper_entity" }
+}
+
+asoiaf_sword_widows_wail_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		game_entity_override = weapon 	entity = "asoiaf_sword_widows_wail_entity" }
+}
+
+asoiaf_sword_radzig_sword_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"        entity = "asoiaf_sword_radzig_sword_entity" game_entity_override = weapon }
+}

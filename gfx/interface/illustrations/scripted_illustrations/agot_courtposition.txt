@@ -1,0 +1,147 @@
+﻿
+agot_courtposition = {
+
+	texture = {
+		trigger = { has_court_position = master_of_horse_court_position }
+		reference = "agot_court/courtyard.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = master_of_hunt_court_position }
+		reference = "agot_court/hunt.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = executioner_court_position }
+		reference = "agot_court/gallows.dds"
+	}
+
+	texture = {
+		trigger = {
+			OR = {
+				has_court_position = seneschal_court_position
+				has_court_position = court_tutor_court_position
+			}
+		}
+		reference = "agot_court/study.dds"
+	}
+
+	texture = {
+		trigger = {
+			OR = {
+				has_court_position = maester_court_position
+				has_court_position = court_physician_court_position
+			}
+		}
+		reference = "agot_court/physician.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = court_jester_court_position }
+		reference = "agot_court/feast.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = keeper_of_swans_court_position }
+		reference = "agot_court/herald.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = lady_in_waiting_court_position }
+		reference = "agot_court/solar.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = antiquarian_court_position }
+		reference = "agot_court/smith.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = food_taster_court_position }
+		reference = "agot_court/kitchen.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = royal_architect_court_position }
+		reference = "agot_court/castle.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = cupbearer_court_position }
+		reference = "agot_court/feast.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = court_musician_court_position }
+		reference = "agot_court/tavern.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = court_poet_court_position }
+		reference = "agot_court/room.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = champion_court_position }
+		reference = "agot_court/throne.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = court_gardener_court_position }
+		reference = "agot_court/garden.dds"
+	}
+
+	texture = {
+		trigger = {
+			OR = {
+				has_court_position = septon_court_position
+				has_court_position = septa_court_position
+			}
+		}
+		reference = "agot_court/temple.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = gaoler_court_position }
+		reference = "agot_court/dungeon.dds"
+	}
+
+
+	texture = {
+		trigger = { has_court_position = harbormaster_court_position }
+		reference = "agot_court/docks.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = household_guard_court_position }
+		reference = "agot_court/armory.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = goldcloaks_court_position }
+		reference = "agot_court/market.dds"
+	}
+
+	texture = {
+		trigger = { has_court_position = bloodrider_court_position }
+		reference = "agot_court/armory.dds"
+	}
+
+	texture = {
+		trigger = {
+			NOR = {
+				has_court_position = seneschal_court_position
+				has_court_position = executioner_court_position
+				has_court_position = master_of_hunt_court_position
+				has_court_position = master_of_horse_court_position
+				has_court_position = court_jester_court_position
+				has_court_position = keeper_of_swans_court_position
+				has_court_position = lady_in_waiting_court_position
+				has_court_position = household_guard_court_position
+				has_court_position = goldcloaks_court_position
+				has_court_position = bloodrider_court_position
+			}
+		}
+		reference = "agot_court/study.dds"
+	}
+}

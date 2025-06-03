@@ -1,0 +1,198 @@
+﻿# These assets are then used in the genes (game/common/genes/..) at the bottom of the file.
+
+## Custom ##
+# AGOT TODO 3D: Custom Beards not in yet
+# male_beard_custom_01 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_01_entity }
+# }
+
+# male_beard_custom_02 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_02_entity }
+# }
+
+# male_beard_custom_03 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_03_entity }
+# }
+
+# male_beard_custom_04 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_04_entity }
+# }
+
+# male_beard_custom_05 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_05_entity }
+# }
+
+# male_beard_custom_06 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_06_entity }
+# }
+
+# male_beard_custom_07 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_07_entity }
+# }
+
+# male_beard_custom_08 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_08_entity }
+# }
+
+# male_beard_custom_09 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_09_entity }
+# }
+
+# male_beard_custom_10 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_10_entity }
+# }
+
+# male_beard_custom_11 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_11_entity }
+# }
+
+# male_beard_custom_12 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_12_entity }
+# }
+
+# male_beard_custom_13 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_13_entity }
+# }
+
+# male_beard_custom_14 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_14_entity }
+# }
+
+# male_beard_custom_15 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_15_entity }
+# }
+
+# male_beard_custom_16 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_16_entity }
+# }
+
+# male_beard_custom_17 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_17_entity }
+# }
+
+# male_beard_custom_18 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_18_entity }
+# }
+
+# male_beard_custom_19 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_19_entity }
+# }
+
+# male_beard_custom_20 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_20_entity }
+# }
+
+# male_beard_custom_21 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_21_entity }
+# }
+
+# male_beard_custom_22 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_22_entity }
+# }
+
+# male_beard_custom_23 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_23_entity }
+# }
+
+# male_beard_custom_24 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_24_entity }
+# }
+
+# male_beard_custom_25 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_25_entity }
+# }
+
+# male_beard_custom_26 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_26_entity }
+# }
+
+# male_beard_custom_27 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_27_entity }
+# }
+
+# male_beard_custom_28 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_28_entity }
+# }
+
+# male_beard_custom_29 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_29_entity }
+# }
+
+# male_beard_custom_30 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_30_entity }
+# }
+
+# male_beard_custom_31 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_31_entity }
+# }
+
+# male_beard_custom_32 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_32_entity }
+# }
+
+# male_beard_custom_33 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_33_entity }
+# }
+
+# male_beard_custom_34 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_34_entity }
+# }
+
+# male_beard_custom_35 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_35_entity }
+# }
+
+# male_beard_custom_36 = {
+# 	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+# 	entity = {  shared_pose_entity = head   entity = male_beard_custom_36_entity }
+# }
+
+beard_tywins_muttonchops = {
+	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+	entity = {  shared_pose_entity = head   entity = beard_tywins_muttonchops_entity }
+}
+
+male_beard_western_10_pointy = {
+	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+	entity = {  shared_pose_entity = head   entity = male_beard_western_10_pointy_entity }
+}
+
+male_agot_old_king_beard_01 = {
+	entity = { required_tags = "no_beard"			shared_pose_entity = head		 }
+	entity = {  shared_pose_entity = head   entity = male_agot_old_king_beard_01_entity }
+}

@@ -1,0 +1,82 @@
+﻿it_male_handchain = {
+	entity = { required_tags = ""		shared_pose_entity = head		entity = handchain_entity }
+}
+
+fem_it_male_handchain = {
+	entity = { required_tags = ""		shared_pose_entity = head		entity = fem_handchain_entity }
+}
+
+### Maester Chains
+
+male_headgear_maester_chain_1 = {
+	set_tags = ""
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_maester_chain_1_entity 	 }
+}
+male_headgear_maester_chain_2 = {
+	set_tags = ""
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_maester_chain_2_entity 	 }
+}
+male_headgear_maester_chain_3 = {
+	set_tags = ""
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_maester_chain_3_entity 	 }
+}
+male_headgear_maester_chain_4 = {
+	set_tags = ""
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_maester_chain_4_entity 	 }
+}
+male_headgear_grandmaester_chain = {
+	set_tags = ""
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_grandmaester_chain_entity 	 }
+}
+
+### Female Necklaces
+
+red_priest_necklace_sphere_01 = {
+	entity = { required_tags = ""			shared_pose_entity = head		entity = red_priest_necklace_sphere_01	 }
+}
+red_priest_necklace_square_01 = {
+	entity = { required_tags = ""			shared_pose_entity = head		entity = red_priest_necklace_square_01	 }
+}
+female_shieraseastar_necklace = {
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_shieraseastar_necklace_entity	 }
+}
+female_shieraseastar_necklace_02 = {
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_shieraseastar_necklace_02_entity	 }
+}
+female_westerosi_necklace_01 = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_westerosi_necklace_01_entity	 }
+}
+female_westerosi_necklace_02 = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_westerosi_necklace_02_entity	 }
+}
+female_westerosi_necklace_03 = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_westerosi_necklace_03_entity	 }
+}
+female_westerosi_necklace_03_rhaenyra = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_westerosi_necklace_03_rhaenyra_entity	 }
+}
+female_westerosi_necklace_03_alysanne = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_westerosi_necklace_03_alysanne_entity	 }
+}
+female_faithofseven_necklace_01 = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_faithofseven_necklace_01_entity	 }
+}
+female_faithofseven_necklace_02 = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_faithofseven_necklace_02_entity	 }
+}
+female_valyrian_necklace_01 = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_valyrian_necklace_01_entity	 }
+}
+female_valyrian_necklace_02 = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_valyrian_necklace_02_entity	 }
+}
+female_valyrian_necklace_03 = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = female_valyrian_necklace_03_entity	 }
+}
+pearl_necklace = {
+	entity = { required_tags = ""			shared_pose_entity = torso		entity = pearl_necklace_entity	 }
+}
+
+pearl_and_gem = {
+	entity = { required_tags = ""			shared_pose_entity = head		entity = pearl_and_gem_entity	 }
+}

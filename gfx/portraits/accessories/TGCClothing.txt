@@ -1,0 +1,108 @@
+﻿male_clothes_captainsArmor_01 = {
+        set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	entity = { required_tags = ""			shared_pose_entity = torso	entity = captainsArmor_entity }		
+}
+
+male_clothes_captainsArmorMetal_01 = {
+        set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	entity = { required_tags = ""			shared_pose_entity = torso	entity = captainsArmorMetal_entity }		
+}
+
+male_clothes_ornateVest_01 = {
+        set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	entity = { required_tags = ""			shared_pose_entity = torso	entity = ornateVest_entity }		
+}
+
+male_clothes_standardVest_01 = {
+        set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	entity = { required_tags = ""			shared_pose_entity = torso	entity = standardVest_entity }		
+}
+
+male_clothes_platedVest_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	entity = { required_tags = ""			shared_pose_entity = torso	entity = platedVest_entity }		
+}
+
+male_clothes_platedVest_chains_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+	entity = { required_tags = ""			shared_pose_entity = torso	entity = platedVest_chains_entity }		
+}
+
+##Black
+male_clothes_captainsArmor_black_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = captainsArmor_black_entity }		
+}
+
+male_clothes_captainsArmorMetal_black_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = captainsArmorMetal_black_entity }		
+}
+
+male_clothes_ornateVest_black_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = ornateVest_black_entity }		
+}
+
+male_clothes_standardVest_black_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = standardVest_black_entity }		
+}
+
+male_clothes_platedVest_black_01 = {
+set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = platedVest_black_entity }		
+}
+
+
+##Black
+male_clothes_captainsArmor_blackfyre_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = captainsArmor_blackfyre_entity }		
+}
+
+male_clothes_captainsArmorMetal_blackfyre_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = captainsArmorMetal_blackfyre_entity }		
+}
+
+male_clothes_ornateVest_blackfyre_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = ornateVest_blackfyre_entity }		
+}
+
+male_clothes_standardVest_blackfyre_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = standardVest_blackfyre_entity }		
+}
+
+male_clothes_platedVest_blackfyre_01 = {
+set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = platedVest_blackfyre_entity }		
+}
+
+##Black
+male_clothes_captainsArmor_blackfyreAlt_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = captainsArmor_blackfyreAlt_entity }		
+}
+
+male_clothes_captainsArmorMetal_blackfyreAlt_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = captainsArmorMetal_blackfyreAlt_entity }		
+}
+
+male_clothes_ornateVest_blackfyreAlt_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = ornateVest_blackfyreAlt_entity }		
+}
+
+male_clothes_standardVest_blackfyreAlt_01 = {
+	set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = standardVest_blackfyreAlt_entity }		
+}
+
+male_clothes_platedVest_blackfyreAlt_01 = {
+set_tags = "shrink_arms,shrink_chest,shrink_belly"
+entity = { required_tags = ""			shared_pose_entity = torso	entity = platedVest_blackfyreAlt_entity }		
+}

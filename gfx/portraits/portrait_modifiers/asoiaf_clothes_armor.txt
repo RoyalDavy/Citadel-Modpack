@@ -1,0 +1,558 @@
+﻿asoiaf_clothes_armor = { # All clothes triggers are found in 00_clothing_triggers.txt
+
+    usage = game
+    selection_behavior = weighted_random
+    priority = 4
+
+    asoiaf_clothing_gold_cloak_armour = { #Gold Cloak armour - for both courtiers and Captains
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = asoiaf_gold_cloak_clothes
+				value = 1
+			}
+		}
+        outfit_tags = { military_outfit }
+		weight = {
+			base = 0
+			modifier = { #should ALWAYS wear it if a courtier of Gold Cloak Captain and their culture allows martial for the gender
+				add = 2000
+                age >= 14
+				exists = liege
+				liege = {
+					has_court_position = goldcloaks_court_position
+					is_target_in_global_variable_list = {
+						name = agot_goldcloaks_founded
+						target = flag:goldcloaks_founded
+					}
+				}
+				OR = {
+					AND = {
+						is_female = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_female_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+					AND = {
+						is_male = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_male_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+            modifier = { #Captain wears it if the Gold Cloak variable is true
+				add = 2000
+				has_court_position = goldcloaks_court_position
+				is_target_in_global_variable_list = {
+					name = agot_goldcloaks_founded
+					target = flag:goldcloaks_founded
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+			modifier = {
+				add = -3000
+				OR = {
+					should_be_naked_trigger = yes
+					has_trait = septon
+					has_trait = most_devout_member
+					has_trait = high_septon
+					has_trait = silent_sister
+					has_trait = red_priest
+					#has_trait = devoted
+					has_trait = drowned_man
+					has_trait = maester
+					has_trait = archmaester
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = lifestyle_nw_builder
+					has_trait = lifestyle_nw_ranger
+					has_trait = lifestyle_nw_steward
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+            modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+
+	asoiaf_clothing_northern_armour = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = asoiaf_north_war_clothes #0.5 is lower limit of generic plate; 0.75 is lower limit of stark plate
+                range = { 0 0.62 } #not set to 0.75 so that the generic plate can be a bit rarer
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 105
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                    portrait_high_nobles_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                }
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+            }
+            modifier = {
+                add = 21        # So priests who are actively serving in a raised army as a commander or knight wear armor instead of priest robes
+                portrait_the_north_clothing_trigger = yes
+                portrait_wear_armor_currently_in_army_trigger = yes
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+            }
+            modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+        }
+    }
+    asoiaf_clothing_northern_armour_stark = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = asoiaf_north_war_clothes
+                value = 1
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+			modifier = {
+				add = 300
+				has_character_flag = needs_ned_armor #for Tower of Joy event scene
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+			}
+            modifier = {
+                add = 110 #to be higher than the base north armour value
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                    portrait_high_nobles_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                }
+				AND = { #heads of Stark dynasty Houses will always wear the stark sigil plate armour
+					is_house_head = yes
+					exists = dynasty
+					dynasty = dynasty:dynn_Stark
+					#NOT = { house = { character:Karstark_20.house } } #not working
+				}
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+            }
+            modifier = {
+                add = 21        # So priests who are actively serving in a raised army as a commander or knight wear armor instead of priest robes
+                portrait_the_north_clothing_trigger = yes
+                portrait_wear_armor_currently_in_army_trigger = yes
+				AND = { #heads of Stark dynasty Houses will always wear the stark sigil plate armour
+					is_house_head = yes
+					dynasty ?= dynasty:dynn_Stark
+					#NOT = { house = { character:Karstark_20.house } } #not working
+				}
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+            }
+			modifier = {
+				add = -1000
+				has_trait = kingsguard
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+			}
+            modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+        }
+    }
+	asoiaf_clothing_lannister_armour = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = asoiaf_lannister_war_clothes
+                value = 0
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+			modifier = {
+                add = 130
+				AND = {
+                    OR = { #Lannister westermen, crownlanders, and reachmen can have the special armour
+                        portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+						portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+						portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                    }
+					OR = {
+						dynasty ?= dynasty:dynn_Lannister
+						house ?= house:house_BaratheonKL
+					}
+                }
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+            }
+			modifier = {
+				add = 130
+				portrait_wear_lannister_armour_courtiers_trigger = yes
+			}
+			modifier = {
+				add = -1000
+				OR = {
+					has_trait = nightswatch
+					has_trait = kingsguard
+				}
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+			}
+            modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+        }
+    }
+	asoiaf_clothing_lannister_dynasty_head_armour = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = asoiaf_lannister_war_clothes
+                value = 0.6
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+			modifier = {
+                add = 140 #so it's slightly higher than the base Lannister armour value
+				AND = {
+                    OR = { #Lannister westermen, crownlanders, and reachmen can have the special armour
+                        portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+						portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+						portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                    }
+					OR = {
+						AND = {
+							is_dynast = yes
+							dynasty ?= dynasty:dynn_Lannister
+						}
+						AND = {
+							is_house_head = yes
+							house ?= house:house_BaratheonKL
+						}
+					}
+                }
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+            }
+            modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+    #HONEYWINER ARMOURS
+    asoiaf_clothing_hightower_armour = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = special_war_nobility_clothes
+                accessory = male_clothes_honeywiner_war_01
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = special_war_01_legwear
+                accessory = male_legwear_secular_honeywiner_war_01
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 145
+                exists = this
+                has_game_rule = asoiaf_westeros_culture_fix_rule_on
+                #OR = { #disabled for now so that when not in the House Head's court they'll show off Hightower heraldry
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = reachman
+                    }
+                #    agot_portrait_low_armor_trigger = {
+                #        CULTURE_INPUT = reachman
+                #    }
+                #}
+                OR = {
+                    AND = { #is a lord with capital in Honeywine or Arbor region
+                        is_landed = yes
+                        OR = {
+                            this.capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                            this.capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                        }
+                    }
+                    AND = { #is courtier of a lord with capital in Honeywine or Arbor region AND is either lowborn or of a House whose head is not landed (landed Houses use below parameter or use default Reachman armour)
+                        is_courtier = yes
+                        OR = {
+                            liege.capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                            liege.capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                        }
+                        OR = {
+                            is_lowborn = yes
+                            AND = {
+                                is_lowborn = no
+                                house.house_head ?= { is_landed = no }
+                            }
+                        }
+                    }
+                    AND = { #is member of a House whose head is Reachman and is landed in Honeywine or Arbor region
+                        is_lowborn = no
+                        house.house_head ?= {
+                            culture = culture:reachman
+                            is_landed = yes
+                            OR = {
+                                capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                                capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                            }
+                        }
+                    }
+                }
+                dynasty ?= dynasty:dynn_Hightower
+            }
+        }
+    }
+
+    asoiaf_clothing_honeywiner_armour = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = special_war_nobility_clothes
+                accessory = male_clothes_honeywiner_war_dynastic_01
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = special_war_01_legwear
+                accessory = male_legwear_secular_honeywiner_war_01
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 140
+                exists = this
+                has_game_rule = asoiaf_westeros_culture_fix_rule_on
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = reachman
+                }
+                OR = {
+                    AND = { #is a lord with capital in Honeywine or Arbor region
+                        is_landed = yes
+                        OR = {
+                            this.capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                            this.capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                        }
+                    }
+                    AND = { #is courtier of a lord with capital in Honeywine or Arbor region AND is either lowborn or of a House whose head is not landed (landed Houses use below parameter or use default Reachman armour)
+                        is_courtier = yes
+                        OR = {
+                            liege.capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                            liege.capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                        }
+                        OR = {
+                            is_lowborn = yes
+                            AND = {
+                                is_lowborn = no
+                                house.house_head ?= { is_landed = no }
+                            }
+                        }
+                    }
+                    AND = { #is member of a House whose head is Reachman and is landed in Honeywine or Arbor region
+                        is_lowborn = no
+                        house.house_head ?= {
+                            culture = culture:reachman
+                            is_landed = yes
+                            OR = {
+                                capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                                capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                            }
+                        }
+                    }
+                }
+                NOT = { dynasty ?= dynasty:dynn_Hightower } #the Hightower sigil has a different background colour, which looks odd
+            }
+        }
+    }
+
+    asoiaf_clothing_honeywiner_armour_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = special_war_nobility_clothes
+                accessory = male_clothes_honeywiner_war_dynastic_02
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = special_war_01_legwear
+                accessory = male_legwear_secular_honeywiner_war_01
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 130
+                exists = this
+                has_game_rule = asoiaf_westeros_culture_fix_rule_on
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = reachman
+                }
+                OR = {
+                    AND = { #is a lord with capital in Honeywine or Arbor region
+                        is_landed = yes
+                        OR = {
+                            this.capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                            this.capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                        }
+                    }
+                    AND = { #is courtier of a lord with capital in Honeywine or Arbor region AND is either lowborn or of a House whose head is not landed (landed Houses use below parameter or use default Reachman armour)
+                        is_courtier = yes
+                        OR = {
+                            liege.capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                            liege.capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                        }
+                        OR = {
+                            is_lowborn = yes
+                            AND = {
+                                is_lowborn = no
+                                house.house_head ?= { is_landed = no }
+                            }
+                        }
+                    }
+                    AND = { #is member of a House whose head is Reachman and is landed in Honeywine or Arbor region
+                        is_lowborn = no
+                        house.house_head ?= {
+                            culture = culture:reachman
+                            is_landed = yes
+                            OR = {
+                                capital_province = { geographical_region = asoiaf_world_westeros_honeywiner_lands }
+                                capital_province = { geographical_region = asoiaf_world_westeros_vineman_lands }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+﻿## these assets are then used in the genes (game/common/genes/..) at the bottom of the file. 
+
+#####################################
+#									#
+# 			ASOIAF  Legwear			#
+#									#
+#####################################
+
+## Crownlands ##
+
+male_legwear_asoiaf_crownlands_gold_cloak_legs = {
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_legwear_asoiaf_gold_cloak_legs }
+}
+female_legwear_asoiaf_crownlands_gold_cloak_legs = {
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = female_legwear_asoiaf_gold_cloak_legs }
+}
+
+## Northern ##
+
+male_legwear_secular_asoiaf_north_war_plate_legs = {
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_legwear_secular_asoiaf_north_war_plate_legs_entity }
+}
+
+## Westerlands ##
+
+male_legwear_secular_asoiaf_lannister_war_plate_2_legs = {
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_legwear_secular_asoiaf_lannister_war_plate_2_legs_entity }
+}
+
+## Kingsguard ##
+
+male_legwear_secular_asoiaf_kingsguard_default_legs = {
+	entity = { required_tags = ""		shared_pose_entity = torso		entity = male_legwear_secular_asoiaf_kingsguard_default_legs_entity }
+}

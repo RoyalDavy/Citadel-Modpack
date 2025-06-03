@@ -1,0 +1,1709 @@
+﻿
+#########################################################################################################################
+### EPE Cosmetic Eyeliner BARBERSHOP
+#########################################################################################################################
+## BARBERSHOP ##
+cosmetics_eyeliner = {
+	eyeliner_none = {
+		# empty
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = eyeliner_none
+				value = 1
+			}
+		}
+	}
+	######Iranian
+	eyeliner_iranian_1 = {
+		# iranian 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_iranian_2 = {
+		# iranian 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_iranian_3 = {
+		# iranian 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_iranian_4 = {
+		# iranian 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_iranian_5 = {
+		# iranian 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######Arabian
+	eyeliner_arabian_1 = {
+		# iranian 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = arabian_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_arabian_2 = {
+		# iranian 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = arabian_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_arabian_3 = {
+		# iranian 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = arabian_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_arabian_4 = {
+		# iranian 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = arabian_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_arabian_5 = {
+		# iranian 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = arabian_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######European
+	eyeliner_european_1 = {
+		# european 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = european_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_european_2 = {
+		# european 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = european_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_european_3 = {
+		# european 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = european_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_european_4 = {
+		# european 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = european_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_european_5 = {
+		# european 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = european_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######Byzantine
+	eyeliner_byzantine_1 = {
+		# byzantine 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = byzantine_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_byzantine_2 = {
+		# byzantine 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = byzantine_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_byzantine_3 = {
+		# byzantine 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = byzantine_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_byzantine_4 = {
+		# byzantine 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = byzantine_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_byzantine_5 = {
+		# byzantine 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = byzantine_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######Indian
+	eyeliner_indian_1 = {
+		# Indian 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = indian_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_indian_2 = {
+		# Indian 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = indian_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_indian_3 = {
+		# Indian 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = indian_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_indian_4 = {
+		# Indian 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = indian_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_indian_5 = {
+		# Indian 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = indian_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+}
+
+#########################################################################################################################
+### EPE Cosmetic Eyeshadow BARBERSHOP
+#########################################################################################################################
+## BARBERSHOP ##
+cosmetics_eyeshadow = {
+	eyeshadow_none = {
+		# empty
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = eyeshadow_none
+				value = 1
+			}
+		}
+	}
+	######Iranian
+	eyeliner_iranian_1 = {
+		# iranian 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = iranian_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_iranian_2 = {
+		# iranian 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = iranian_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_iranian_3 = {
+		# iranian 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = iranian_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_iranian_4 = {
+		# iranian 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = iranian_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_iranian_5 = {
+		# iranian 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = iranian_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######European
+	eyeliner_european_1 = {
+		# european 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = european_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_european_2 = {
+		# european 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = european_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_european_3 = {
+		# european 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = european_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_european_4 = {
+		# european 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = european_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_european_5 = {
+		# european 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = european_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######Byzantine
+	eyeliner_byzantine_1 = {
+		# byzantine 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_byzantine_2 = {
+		# byzantine 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_byzantine_3 = {
+		# byzantine 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_byzantine_4 = {
+		# byzantine 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	eyeliner_byzantine_5 = {
+		# byzantine 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+}
+
+#########################################################################################################################
+### EPE Cosmetic Foundation BARBERSHOP
+#########################################################################################################################
+## BARBERSHOP ##
+cosmetics_foundation = {
+	foundation_none = {
+		# empty
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = foundation_none
+				value = 1
+			}
+		}
+	}
+	######Iranian
+	foundation_iranian_1 = {
+		# iranian 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = iranian_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_iranian_2 = {
+		# iranian 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = iranian_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_iranian_3 = {
+		# iranian 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = iranian_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_iranian_4 = {
+		# iranian 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = iranian_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_iranian_5 = {
+		# iranian 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = iranian_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######European
+	foundation_european_1 = {
+		# european 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = european_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_european_2 = {
+		# european 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = european_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_european_3 = {
+		# european 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = european_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_european_4 = {
+		# european 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = european_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_european_5 = {
+		# european 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = european_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######Byzantine
+	foundation_byzantine_1 = {
+		# byzantine 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = byzantine_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_byzantine_2 = {
+		# byzantine 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = byzantine_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_byzantine_3 = {
+		# byzantine 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = byzantine_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_byzantine_4 = {
+		# byzantine 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = byzantine_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	foundation_byzantine_5 = {
+		# byzantine 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = byzantine_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+}
+
+#########################################################################################################################
+### EPE Cosmetic Blush BARBERSHOP
+#########################################################################################################################
+## BARBERSHOP ##
+cosmetics_blush = {
+	blush_none = {
+		# empty
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = blush_none
+				value = 1
+			}
+		}
+	}
+	######Iranian
+	blush_salt_dornish_1 = {
+		# iranian 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_salt_dornish_2 = {
+		# iranian 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_salt_dornish_3 = {
+		# iranian 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_salt_dornish_4 = {
+		# iranian 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_salt_dornish_5 = {
+		# iranian 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######European
+	blush_sand_dornish_1 = {
+		# european 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = european_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_sand_dornish_2 = {
+		# european 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = european_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_sand_dornish_3 = {
+		# european 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = european_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_sand_dornish_4 = {
+		# european 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = european_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_sand_dornish_5 = {
+		# european 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = european_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######Byzantine
+	blush_lyseni_1 = {
+		# byzantine 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = byzantine_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_lyseni_2 = {
+		# byzantine 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = byzantine_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_lyseni_3 = {
+		# byzantine 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = byzantine_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_lyseni_4 = {
+		# byzantine 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = byzantine_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	blush_lyseni_5 = {
+		# byzantine 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = byzantine_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+}
+
+#########################################################################################################################
+### EPE Cosmetic Lipcolor BARBERSHOP
+#########################################################################################################################
+## BARBERSHOP ##
+cosmetics_lipcolor = {
+	lipcolor_none = {
+		# empty
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = lipcolor_none
+				value = 1
+			}
+		}
+	}
+	######Iranian
+	lipcolor_salt_dornish_1 = {
+		# iranian 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = iranian_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_salt_dornish_2 = {
+		# iranian 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = iranian_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_salt_dornish_3 = {
+		# iranian 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = iranian_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_salt_dornish_4 = {
+		# iranian 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = iranian_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_salt_dornish_5 = {
+		# iranian 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = iranian_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######European
+	lipcolor_sand_dornish_1 = {
+		# european 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = european_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_sand_dornish_2 = {
+		# european 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = european_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_sand_dornish_3 = {
+		# european 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = european_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_sand_dornish_4 = {
+		# european 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = european_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_sand_dornish_5 = {
+		# european 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = european_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	######Byzantine
+	lipcolor_lyseni_1 = {
+		# byzantine 1
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_lyseni_2 = {
+		# byzantine 2
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 0.25
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_lyseni_3 = {
+		# byzantine 3
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 0.45
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_lyseni_4 = {
+		# byzantine 4
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 0.75
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_lyseni_5 = {
+		# byzantine 5
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+		}
+	}
+	lipcolor_shade_of_the_evening = {
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = misc_1
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_modifier = shade_of_the_evening
+			}
+		}
+	}
+}
+
+#########################################################################################################################
+#########################################################################################################################
+#########################################################################################################################
+### Experimental Spawning Example Script
+#########################################################################################################################
+# agot_makeup = {
+# 	usage = game
+# 	selection_behavior = weighted_random
+# 	fallback = no_makeup
+# 	no_makeup = {
+# 		dna_modifiers = {
+# 			##none
+# 		}
+# 	}
+# 	####Byzantine
+# 	agot_free_cities_low_nobles = {
+# 		dna_modifiers = {
+# 			########Makeup placeholder test#############
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_eyeliner
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_eyeshadow
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_lipcolor
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_blush
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_foundation
+# 				template = european_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			#############################################
+# 		}
+# 		weight = {
+# 			base = 0
+# 			modifier = {
+# 				add = 50
+# 				OR = {
+# 					AND = {
+# 						highest_held_title_tier = tier_county
+# 						NOR = {
+# 							# has_dynasty = no
+# 							AND = {
+# 								has_government = republic_government
+# 								primary_title.tier > 1
+# 							}
+# 							AND = {
+# 								is_ruler = yes
+# 								has_government = theocracy_government
+# 							}
+# 						}
+# 						portrait_essosi_valyrian_clothing_trigger = yes
+# 						# NOT = {
+# 						# 	has_game_rule = never_epe_makeup
+# 						# }
+# 					}
+# 					AND = {
+# 						exists = primary_spouse
+# 						OR = {
+# 							is_ruler = no
+# 							highest_held_title_tier = tier_barony
+# 						}
+# 						primary_spouse = {
+# 							highest_held_title_tier = tier_county
+# 							NOR = {
+# 								# has_dynasty = no
+# 								AND = {
+# 									has_government = republic_government
+# 									primary_title.tier > 1
+# 								}
+# 								AND = {
+# 									is_ruler = yes
+# 									has_government = theocracy_government
+# 								}
+# 							}
+# 							portrait_essosi_valyrian_clothing_spouse_trigger = yes
+# 							# NOT = {
+# 							# 	has_game_rule = never_epe_makeup
+# 							# }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	agot_free_cities_high_nobles = {
+# 		dna_modifiers = {
+# 			########Makeup placeholder test#############
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_eyeliner
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_eyeshadow
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_lipcolor
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_blush
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_foundation
+# 				template = european_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			#############################################
+# 		}
+# 		weight = {
+# 			base = 0
+# 			modifier = {
+# 				add = 50
+# 				OR = {
+# 					AND = {
+# 						OR = {
+# 							highest_held_title_tier = tier_duchy
+# 							AND = {
+# 								has_government = republic_government
+# 								primary_title.tier > 1
+# 							}
+# 							AND = {
+# 								is_ruler = yes
+# 								has_government = theocracy_government
+# 							}
+# 						}
+# 						NOT = {
+# 							AND = {
+# 								is_ruler = yes
+# 								has_government = mercenary_government
+# 							}
+# 						}						# Blocked for mercenaries
+# 						portrait_essosi_valyrian_clothing_trigger = yes
+# 						# NOT = {
+# 						# 	has_game_rule = never_epe_makeup
+# 						# }
+# 					}
+# 					AND = {
+# 						exists = primary_spouse
+# 						OR = {
+# 							is_ruler = no
+# 							highest_held_title_tier = tier_barony
+# 						}
+# 						primary_spouse = {
+# 							OR = {
+# 								highest_held_title_tier = tier_duchy
+# 								AND = {
+# 									has_government = republic_government
+# 									primary_title.tier > 1
+# 								}
+# 								AND = {
+# 									is_ruler = yes
+# 									has_government = theocracy_government
+# 								}
+# 							}
+# 							portrait_essosi_valyrian_clothing_spouse_trigger = yes
+# 							# NOT = {
+# 							# 	has_game_rule = never_epe_makeup
+# 							# }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	# byzantine_royalty = {
+# 	# 	dna_modifiers = {
+# 	# 		########Makeup placeholder test#############
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_eyeliner
+# 	# 			template = byzantine_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_eyeshadow
+# 	# 			template = byzantine_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_lipcolor
+# 	# 			template = byzantine_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_blush
+# 	# 			template = byzantine_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_foundation
+# 	# 			template = european_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		#############################################
+# 	# 	}
+# 	# 	weight = {
+# 	# 		base = 0
+# 	# 		modifier = {
+# 	# 			add = 50
+# 	# 			OR = {
+# 	# 				AND = {
+# 	# 					highest_held_title_tier = tier_kingdom
+# 	# 					NOR = {
+# 	# 						AND = {
+# 	# 							has_government = republic_government
+# 	# 							primary_title.tier > 1
+# 	# 						}
+# 	# 						AND = {
+# 	# 							is_ruler = yes
+# 	# 							has_government = theocracy_government
+# 	# 						}
+# 	# 					}
+# 	# 					portrait_essosi_valyrian_clothing_trigger = yes
+# 	# 					# NOT = {
+# 	# 					# 	has_game_rule = never_epe_makeup
+# 	# 					# }
+# 	# 				}
+# 	# 				AND = {
+# 	# 					exists = primary_spouse
+# 	# 					OR = {
+# 	# 						is_ruler = no
+# 	# 						highest_held_title_tier = tier_barony
+# 	# 					}
+# 	# 					primary_spouse = {
+# 	# 						highest_held_title_tier = tier_kingdom
+# 	# 						NOR = {
+# 	# 							AND = {
+# 	# 								has_government = republic_government
+# 	# 								primary_title.tier > 1
+# 	# 							}
+# 	# 							AND = {
+# 	# 								is_ruler = yes
+# 	# 								has_government = theocracy_government
+# 	# 							}
+# 	# 						}
+# 	# 						portrait_essosi_valyrian_clothing_spouse_trigger = yes
+# 	# 						# NOT = {
+# 	# 						# 	has_game_rule = never_epe_makeup
+# 	# 						# }
+# 	# 					}
+# 	# 				}
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# }
+# 	# byzantine_imperial = {
+# 	# 	dna_modifiers = {
+# 	# 		########Makeup placeholder test#############
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_eyeliner
+# 	# 			template = byzantine_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_eyeshadow
+# 	# 			template = byzantine_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_lipcolor
+# 	# 			template = byzantine_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_blush
+# 	# 			template = byzantine_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		morph = {
+# 	# 			mode = add
+# 	# 			gene = cosmetics_foundation
+# 	# 			template = european_1
+# 	# 			range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 	# 		}
+# 	# 		#############################################
+# 	# 	}
+# 	# 	weight = {
+# 	# 		base = 0
+# 	# 		modifier = {
+# 	# 			add = 50
+# 	# 			OR = {
+# 	# 				AND = {
+# 	# 					highest_held_title_tier = tier_empire
+# 	# 					NOR = {
+# 	# 						AND = {
+# 	# 							has_government = republic_government
+# 	# 							primary_title.tier > 1
+# 	# 						}
+# 	# 						AND = {
+# 	# 							is_ruler = yes
+# 	# 							has_government = theocracy_government
+# 	# 						}
+# 	# 					}
+# 	# 					portrait_essosi_valyrian_clothing_trigger = yes
+# 	# 					# NOT = {
+# 	# 					# 	has_game_rule = never_epe_makeup
+# 	# 					# }
+# 	# 				}
+# 	# 				AND = {
+# 	# 					exists = primary_spouse
+# 	# 					OR = {
+# 	# 						is_ruler = no
+# 	# 						highest_held_title_tier = tier_barony
+# 	# 					}
+# 	# 					primary_spouse = {
+# 	# 						highest_held_title_tier = tier_empire
+# 	# 						NOR = {
+# 	# 							AND = {
+# 	# 								has_government = republic_government
+# 	# 								primary_title.tier > 1
+# 	# 							}
+# 	# 							AND = {
+# 	# 								is_ruler = yes
+# 	# 								has_government = theocracy_government
+# 	# 							}
+# 	# 						}
+# 	# 						portrait_essosi_valyrian_clothing_spouse_trigger = yes
+# 	# 						# NOT = {
+# 	# 						# 	has_game_rule = never_epe_makeup
+# 	# 						# }
+# 	# 					}
+# 	# 				}
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# }
+# 	byzantine_war = {
+# 		dna_modifiers = {
+# 			########Makeup placeholder test#############
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_eyeliner
+# 				template = byzantine_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			morph = {
+# 				mode = add
+# 				gene = cosmetics_blush
+# 				template = european_1
+# 				range = { 0 1 } # For the randomness to work correctly				# For the randomness to work correctly
+# 			}
+# 			#############################################
+# 		}
+# 		weight = {
+# 			base = 0
+# 			modifier = {
+# 				add = 101
+# 				portrait_wear_armor_trigger = yes
+# 				portrait_essosi_valyrian_clothing_trigger = yes
+# 				# NOT = {
+# 				# 	has_game_rule = never_epe_makeup
+# 				# }
+# 			}
+# 		}
+# 	}
+# }
+

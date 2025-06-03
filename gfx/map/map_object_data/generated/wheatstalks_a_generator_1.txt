@@ -1,0 +1,9 @@
+﻿object={
+	name="wheatstalks_a_generator_1_0"
+	render_pass=Map
+	clamp_to_water_level=no
+	generated_content=yes
+	layer="grass_layer"
+	pdxmesh="wheatstalks_mesh"
+	count=0
+}

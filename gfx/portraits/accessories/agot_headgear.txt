@@ -1,0 +1,451 @@
+﻿# These assets are then used in the genes (game/common/genes/..) at the bottom of the file.
+
+#####################
+# A Game of Thrones # mfkers cant organize for shit - ALU
+#####################
+
+
+## Westerlands ##
+
+# War 03
+
+male_headgear_secular_westerlands_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_westerlands_war_03_entity 	 }
+}
+
+male_headgear_secular_westerlands_lannister_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_westerlands_lannister_war_03_entity 	 }
+}
+
+male_headgear_secular_westerlands_tywin_war = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_westerlands_tywin_war_entity 	 }
+}
+
+male_headgear_secular_westerlands_jimothy_war = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_westerlands_jimothy_war_entity 	 }
+}
+
+male_headgear_secular_riverlands_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_riverlands_war_03_entity 	 }
+}
+
+male_headgear_secular_vale_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_vale_war_04_entity 	 }
+}
+
+male_headgear_secular_vale_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_vale_war_03_entity 	 }
+}
+
+male_headgear_secular_reach_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_reach_war_03_entity 	 }
+}
+
+male_headgear_secular_reach_tyrell_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_reach_tyrell_war_03_entity 	 }
+}
+
+male_headgear_secular_reach_rowan_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_reach_rowan_war_03_entity 	 }
+}
+
+male_headgear_secular_valyrian_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_valyrian_war_04_entity 	 }
+}
+male_headgear_secular_royce_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_royce_war_03_entity 	 }
+}
+female_headgear_secular_royce_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_royce_war_03_entity 	 }
+}
+male_headgear_secular_kingsguard_war_01 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_kingsguard_war_01_entity 	 }
+}
+male_headgear_secular_kingsguard_war_02 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_kingsguard_war_02_entity 	 }
+}
+male_headgear_secular_valyrian_war_03_high = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_valyrian_war_03_high_entity 	 }
+}
+male_headgear_secular_valyrian_war_blackfyre_03_high = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_valyrian_war_blackfyre_03_high_entity 	 }
+}
+male_headgear_secular_valyrian_war_dynastic_03_high = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_valyrian_war_dynastic_03_high_entity 	 }
+}
+female_headgear_secular_valyrian_war_03_high = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_valyrian_war_03_high_entity 	 }
+}
+female_headgear_secular_valyrian_war_blackfyre_03_high = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_valyrian_war_blackfyre_03_high_entity 	 }
+}
+female_headgear_secular_valyrian_war_dynastic_03_high = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_valyrian_war_dynastic_03_high_entity 	 }
+}
+male_headgear_secular_valyrian_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_valyrian_war_03_entity 	 }
+}
+male_headgear_secular_valyrian_targaryen_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_valyrian_targaryen_war_03_entity 	 }
+}
+male_headgear_secular_valyrian_blackfyre_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_valyrian_blackfyre_war_03_entity 	 }
+}
+female_headgear_secular_valyrian_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_valyrian_war_03_entity 	 }
+}
+female_headgear_secular_valyrian_targaryen_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_valyrian_targaryen_war_03_entity 	 }
+}
+female_headgear_secular_valyrian_blackfyre_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_valyrian_blackfyre_war_03_entity 	 }
+}
+male_headgear_secular_stormlands_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_stormlands_war_04_entity 	 }
+}
+male_headgear_secular_stormlands_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear,agot_closed_helmet"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_stormlands_war_03_entity 	 }
+}
+male_headgear_secular_dorne_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_dorne_war_03_entity 	 }
+}
+male_headgear_secular_dorne_copper_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_dorne_copper_war_03_entity 	 }
+}
+male_headgear_secular_dorne_martell_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_dorne_martell_war_03_entity 	 }
+}
+male_headgear_secular_dorne_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_dorne_war_04_entity 	 }
+}
+male_headgear_secular_dorne_copper_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_dorne_copper_war_04_entity 	 }
+}
+male_headgear_secular_dorne_martell_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_secular_dorne_martell_war_04_entity 	 }
+}
+female_headgear_secular_dorne_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_dorne_war_03_entity 	 }
+}
+female_headgear_secular_dorne_copper_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_dorne_copper_war_03_entity 	 }
+}
+female_headgear_secular_dorne_martell_war_03 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_dorne_martell_war_03_entity 	 }
+}
+female_headgear_secular_dorne_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_dorne_war_04_entity 	 }
+}
+female_headgear_secular_dorne_copper_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_dorne_copper_war_04_entity 	 }
+}
+female_headgear_secular_dorne_martell_war_04 = {
+	set_tags = "helmet,cap,snug_headgear,agot_snug_headgear"
+	set_tags = "no_hair"
+	set_tags = "no_beard"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_secular_dorne_martell_war_04_entity 	 }
+}
+
+braavosi_hat_01_low = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_01_low_entity 	 }
+}
+
+female_braavosi_hat_01_low = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_01_low_entity 	 }
+}
+
+braavosi_hat_01 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_01_entity 	 }
+}
+
+female_braavosi_hat_01 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_01_entity 	 }
+}
+
+braavosi_hat_01_high = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_01_high_entity 	 }
+}
+
+female_braavosi_hat_01_high = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_01_high_entity 	 }
+}
+
+braavosi_hat_02 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_02_entity 	 }
+}
+
+female_braavosi_hat_02 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_02_entity 	 }
+}
+
+braavosi_hat_high_02 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_high_02_entity 	 }
+}
+
+female_braavosi_hat_high_02 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_high_02_entity 	 }
+}
+
+braavosi_hat_dynastic_02 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_dynastic_02_entity 	 }
+}
+
+female_braavosi_hat_dynastic_02 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_dynastic_02_entity 	 }
+}
+
+braavosi_hat_03 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_03_entity 	 }
+}
+
+female_braavosi_hat_03 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_03_entity 	 }
+}
+
+braavosi_hat_high_03 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_high_03_entity 	 }
+}
+
+female_braavosi_hat_high_03 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_high_03_entity 	 }
+}
+
+braavosi_hat_dynastic_03 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = braavosi_hat_dynastic_03_entity 	 }
+}
+
+female_braavosi_hat_dynastic_03 = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_braavosi_hat_dynastic_03_entity 	 }
+}
+
+saan_pirate_hat = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = saan_pirate_hat_entity 	 }
+}
+
+female_saan_pirate_hat = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_saan_pirate_hat_entity 	 }
+}
+
+saan_pirate_hat_dynastic = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = saan_pirate_hat_dynastic_entity 	 }
+}
+
+female_saan_pirate_hat_dynastic = {
+	set_tags = "cap,mask_hat,snug_headgear"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_saan_pirate_hat_dynastic_entity 	 }
+}
+
+#Reach Hood #1
+#Rhaenyra Default Dress Pattern Match
+female_reach_hood_01 = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_01_entity 	 }
+}
+
+#Rhaenyra Valyrian Dress Pattern Match
+female_reach_hood_01b = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_01b_entity 	 }
+}
+
+#Sleeved Bodice Match
+female_reach_hood_01c = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_01c_entity 	 }
+}
+
+#Sleeveless Bodice Match
+female_reach_hood_01d = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_01d_entity 	 }
+}
+
+#Sleeved Bodice Match Valyrian
+female_reach_hood_01e = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_01e_entity 	 }
+}
+
+#Sleeveless Bodice Match Valyrian
+female_reach_hood_01f = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_01f_entity 	 }
+}
+
+#Reach Hood #2
+#Rhaenyra Default Dress Pattern Match
+female_reach_hood_02 = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_02_entity 	 }
+}
+
+#Rhaenyra Valyrian Dress Pattern Match
+female_reach_hood_02b = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_02b_entity 	 }
+}
+
+#Sleeved Bodice Match
+female_reach_hood_02c = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_02c_entity 	 }
+}
+
+#Sleeveless Bodice Match
+female_reach_hood_02d = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_02d_entity 	 }
+}
+
+#Sleeved Bodice Match Valyrian
+female_reach_hood_02e = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_02e_entity 	 }
+}
+
+#Sleeveless Bodice Match Valyrian
+female_reach_hood_02f = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_02f_entity 	 }
+}
+
+#Viserra Reach Hood
+female_reach_hood_02g = {
+	set_tags = "reach_hood"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_reach_hood_02g_entity 	 }
+}

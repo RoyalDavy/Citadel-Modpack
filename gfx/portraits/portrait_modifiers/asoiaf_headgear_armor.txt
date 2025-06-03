@@ -1,0 +1,446 @@
+﻿asoiaf_headgear_armor = {
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 4
+
+	asoiaf_headgear_gold_cloak_helm_range = { #Gold Cloak helmets - SCALE for courtiers
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = asoiaf_gold_cloak_helms
+				range = { 0 1 }
+			}
+			accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = no_headgear
+                value = 1
+            }
+			accessory = {
+                mode = add
+                gene = additive_headgear
+                template = no_additive
+                value = 1
+            }
+			morph = {
+				mode = add
+				gene = gene_bs_ear_outward
+				template = ear_outward_neg
+				value = 1
+			}
+			morph = { #prevent forehead clipping
+				mode = replace
+				gene = gene_forehead_angle
+				template = forehead_angle_pos
+				value = 0.6
+			}
+		}
+		weight = {
+			base = 0
+			modifier = { #should ALWAYS wear it if a courtier of Gold Cloak Captain and their culture allows martial for the gender
+				add = 2000
+				age >= 14
+				exists = liege
+				liege = {
+					has_court_position = goldcloaks_court_position
+					is_target_in_global_variable_list = {
+						name = agot_goldcloaks_founded
+						target = flag:goldcloaks_founded
+					}
+				}
+				OR = {
+					AND = {
+						is_female = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_female_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+					AND = {
+						is_male = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_male_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+			modifier = { #should wear it if the vanilla portrait trigger says so (to account for tourneys, etc)
+				add = 2000
+				age >= 14
+				portrait_wear_helmet_trigger = yes
+				exists = liege
+				liege = {
+					has_court_position = goldcloaks_court_position
+					is_target_in_global_variable_list = {
+						name = agot_goldcloaks_founded
+						target = flag:goldcloaks_founded
+					}
+				}
+				OR = {
+					AND = {
+						is_female = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_female_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+					AND = {
+						is_male = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_male_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+			modifier = {
+				add = -3000
+				OR = {
+					should_be_naked_trigger = yes
+					has_trait = septon
+					has_trait = most_devout_member
+					has_trait = high_septon
+					has_trait = silent_sister
+					has_trait = red_priest
+					#has_trait = devoted
+					has_trait = drowned_man
+					has_trait = maester
+					has_trait = archmaester
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = lifestyle_nw_builder
+					has_trait = lifestyle_nw_ranger
+					has_trait = lifestyle_nw_steward
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+
+	asoiaf_headgear_gold_cloak_helm_open = { #Gold Cloak helmets - OPEN for Captains
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = asoiaf_gold_cloak_helms
+				value = 1
+			}
+			accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = no_headgear
+                value = 1
+            }
+			accessory = {
+                mode = add
+                gene = additive_headgear
+                template = no_additive
+                value = 1
+            }
+			morph = {
+				mode = add
+				gene = gene_bs_ear_outward
+				template = ear_outward_neg
+				value = 1
+			}
+			morph = { #prevent forehead clipping
+				mode = replace
+				gene = gene_forehead_angle
+				template = forehead_angle_pos
+				value = 0.6
+			}
+		}
+		weight = {
+			base = 0
+			modifier = { #Captain wears it only if the portrait trigger is true, or if the top liege is at war
+				add = 2000
+				has_court_position = goldcloaks_court_position
+				is_target_in_global_variable_list = {
+					name = agot_goldcloaks_founded
+					target = flag:goldcloaks_founded
+				}
+				OR = {
+					portrait_wear_helmet_trigger = yes
+					OR = {
+						top_liege ?= { is_at_war = yes }
+						liege ?= { is_at_war = yes }
+					}
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+
+	asoiaf_headgear_northern_plate = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = asoiaf_north_plate_helm
+				value = 1
+			}
+			accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = no_headgear
+                value = 1
+            }
+			accessory = {
+                mode = add
+                gene = additive_headgear
+                template = no_additive
+                value = 1
+            }
+			morph = {
+				mode = add
+				gene = gene_bs_ear_outward
+				template = ear_outward_neg
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				portrait_the_north_clothing_trigger = yes
+				NOT = { has_trait = kingsguard }
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+			}
+			modifier = {
+				add = 300
+				has_character_flag = needs_ned_armor #for Tower of Joy event scene
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+	asoiaf_headgear_rhaegar_armour = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = Valyrian_Helm_4
+				value = 1
+			}
+			accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = no_headgear
+                value = 1
+            }
+			accessory = {
+                mode = add
+                gene = additive_headgear
+                template = no_additive
+                value = 1
+            }
+			morph = {
+				mode = add
+				gene = gene_bs_ear_outward
+				template = ear_outward_neg
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				exists = this
+				any_equipped_character_artifact = { has_variable = rhaegararmour }
+				portrait_wear_helmet_trigger = yes
+				portrait_wear_armor_trigger = yes
+				NOR = { has_trait = kingsguard has_trait = nightswatch }
+			}
+			modifier = {
+				add = -1000
+				has_trait = kingsguard
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+	asoiaf_headgear_robert_armour = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = Stormlands_Helm_4
+				value = 1
+			}
+			accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = no_headgear
+                value = 1
+            }
+			accessory = {
+                mode = add
+                gene = additive_headgear
+                template = no_additive
+                value = 1
+            }
+			morph = {
+				mode = add
+				gene = gene_bs_ear_outward
+				template = ear_outward_neg
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				exists = this
+				any_equipped_character_artifact = { has_variable = robertarmour }
+				portrait_wear_helmet_trigger = yes
+				portrait_wear_armor_trigger = yes
+				NOR = { has_trait = kingsguard has_trait = nightswatch }
+			}
+			modifier = {
+				add = -1000
+				has_trait = kingsguard
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+	asoiaf_headgear_lannister_armour = {
+        dna_modifiers = {
+            accessory = {
+				mode = add
+				gene = headgear
+				template = asoiaf_lannister_plate_helm
+				range = { 0.34 1 } #to exclude the versions without the face protection
+			}
+			accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = no_headgear
+                value = 1
+            }
+			accessory = {
+                mode = add
+                gene = additive_headgear
+                template = no_additive
+                value = 1
+            }
+            morph = {
+				mode = add
+				gene = gene_bs_ear_outward
+				template = ear_outward_neg
+				value = 1
+			}
+			morph = {
+				mode = add
+				gene = gene_bs_ear_bend
+				template = ear_both_bend_pos
+				value = 0
+			}
+			morph = {
+				mode = replace
+				gene = gene_head_top_height
+				template = head_top_height_neg
+				value = 0.3
+			}
+			morph = {
+				mode = replace
+				gene = gene_head_top_width
+				template = head_top_height_neg
+				value = 0.3
+			}
+			#morph = { #to fix the ugly morphing
+			#	mode = modify
+			#	gene = gene_chin_forward
+			#	template = chin_forward_pos
+			#	value = 0.5
+			#}
+			#morph = { #to fix the ugly morphing
+			#	mode = modify
+			#	gene = gene_jaw_forward
+			#	template = jaw_forward_pos
+			#	value = 0.5
+			#}
+        }
+        weight = {
+            base = 0
+			modifier = {
+                add = 130
+				AND = {
+					portrait_wear_armor_trigger = yes
+					portrait_wear_helmet_trigger = yes
+                    OR = { #Lannister westermen, crownlanders, and reachmen can have the special armour
+						culture = culture:westerman
+						culture = culture:crownlander
+						culture = culture:reachman
+                    }
+					OR = {
+						dynasty ?= dynasty:dynn_Lannister
+						house ?= house:house_BaratheonKL
+					}
+                }
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+            }
+			modifier = {
+				add = 130
+				is_male = yes #until a female version of the armour is added
+				is_courtier = yes
+				is_foreign_court_guest = no #visitors don't get recruited into Lannister service by dint of existing
+				OR = {
+					liege.dynasty ?= dynasty:dynn_Lannister
+					liege.house ?= house:house_BaratheonKL
+				}
+				OR = { #must match the Lannister cultures that can wear this set above
+					liege.culture ?= culture:westerman
+					liege.culture ?= culture:crownlander
+					liege.culture ?= culture:reachman
+				}
+				culture = { has_cultural_pillar = heritage_andal } #Dornish just look odd with Lannister armour...
+				portrait_wear_armor_trigger = yes
+				portrait_wear_helmet_trigger = yes
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+			}
+			modifier = {
+				add = -1000
+				OR = {
+					has_trait = nightswatch
+					has_trait = kingsguard
+				}
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+        }
+    }
+}

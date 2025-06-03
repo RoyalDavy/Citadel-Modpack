@@ -1,0 +1,4 @@
+﻿#Parrot for Pirates
+agot_parrot = {
+	entity = {	required_tags = ""        node = "bn_h_neck_1"		entity = "agot_parrot_entity" }
+}

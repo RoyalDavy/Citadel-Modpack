@@ -1,0 +1,2344 @@
+﻿agot_dyed_hair_dna = {
+	usage = game
+
+	agot_poppy_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = poppy_hair_dye
+					has_character_modifier = poppy_hair_dye
+				}
+			}
+		}
+	}
+	agot_asshaii_scarlet_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.01
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = asshaii_scarlet_hair_dye
+					has_character_modifier = asshaii_scarlet_hair_dye
+				}
+			}
+		}
+	}
+	agot_ghost_rose_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.02
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = ghost_rose_hair_dye
+					has_character_modifier = ghost_rose_hair_dye
+				}
+			}
+		}
+	}
+	agot_hibiscus_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.03
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = hibiscus_hair_dye
+					has_character_modifier = hibiscus_hair_dye
+				}
+			}
+		}
+	}
+	agot_aquan_red_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.04
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = aquan_red_hair_dye
+					has_character_modifier = aquan_red_hair_dye
+				}
+			}
+		}
+	}
+	agot_ghiscari_copper_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.05
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = ghiscari_copper_hair_dye
+					has_character_modifier = ghiscari_copper_hair_dye
+				}
+			}
+		}
+	}
+	agot_hranna_bloom_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.06
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = hranna_bloom_hair_dye
+					has_character_modifier = hranna_bloom_hair_dye
+				}
+			}
+		}
+	}
+	agot_melee_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.07
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = melee_hair_dye
+					has_character_modifier = melee_hair_dye
+				}
+			}
+		}
+	}
+	agot_bloodstone_red_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.08
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = bloodstone_red_hair_dye
+					has_character_modifier = bloodstone_red_hair_dye
+				}
+			}
+		}
+	}
+	agot_passioned_plea_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.09
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = passioned_plea_hair_dye
+					has_character_modifier = passioned_plea_hair_dye
+				}
+			}
+		}
+	}
+	agot_dragons_breath_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.1
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = dragons_breath_hair_dye
+					has_character_modifier = dragons_breath_hair_dye
+				}
+			}
+		}
+	}
+	agot_cut_crimson_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.11
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = cut_crimson_hair_dye
+					has_character_modifier = cut_crimson_hair_dye
+				}
+			}
+		}
+	}
+	agot_rich_madder_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.12
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = rich_madder_hair_dye
+					has_character_modifier = rich_madder_hair_dye
+				}
+			}
+		}
+	}
+	agot_womens_weapon_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.13
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = womens_weapon_hair_dye
+					has_character_modifier = womens_weapon_hair_dye
+				}
+			}
+		}
+	}
+	agot_maidens_game_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.14
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = maidens_game_hair_dye
+					has_character_modifier = maidens_game_hair_dye
+				}
+			}
+		}
+	}
+	agot_sarhoy_flush_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.15
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = sarhoy_flush_hair_dye
+					has_character_modifier = sarhoy_flush_hair_dye
+				}
+			}
+		}
+	}
+	agot_pennyroyal_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.16
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = pennyroyal_hair_dye
+					has_character_modifier = pennyroyal_hair_dye
+				}
+			}
+		}
+	}
+	agot_sweet_lotus_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.17
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = sweet_lotus_hair_dye
+					has_character_modifier = sweet_lotus_hair_dye
+				}
+			}
+		}
+	}
+	agot_oleander_heart_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.18
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = oleander_heart_hair_dye
+					has_character_modifier = oleander_heart_hair_dye
+				}
+			}
+		}
+	}
+	agot_panteras_bite_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.19
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = panteras_bite_hair_dye
+					has_character_modifier = panteras_bite_hair_dye
+				}
+			}
+		}
+	}
+	agot_lovers_blush_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.2
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = lovers_blush_hair_dye
+					has_character_modifier = lovers_blush_hair_dye
+				}
+			}
+		}
+	}
+	agot_sunset_on_the_narrows_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.21
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = sunset_on_the_narrows_hair_dye
+					has_character_modifier = sunset_on_the_narrows_hair_dye
+				}
+			}
+		}
+	}
+	agot_pink_graces_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.22
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = pink_graces_hair_dye
+					has_character_modifier = pink_graces_hair_dye
+				}
+			}
+		}
+	}
+	agot_wild_cherry_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.23
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = wild_cherry_hair_dye
+					has_character_modifier = wild_cherry_hair_dye
+				}
+			}
+		}
+	}
+	agot_twilight_ruby_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.24
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = twilight_ruby_hair_dye
+					has_character_modifier = twilight_ruby_hair_dye
+				}
+			}
+		}
+	}
+	agot_trueborn_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.25
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = trueborn_hair_dye
+					has_character_modifier = trueborn_hair_dye
+				}
+			}
+		}
+	}
+	agot_mountain_magenta_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.26
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = mountain_magenta_hair_dye
+					has_character_modifier = mountain_magenta_hair_dye
+				}
+			}
+		}
+	}
+	agot_pink_cardoon_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.27
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = pink_cardoon_hair_dye
+					has_character_modifier = pink_cardoon_hair_dye
+				}
+			}
+		}
+	}
+	agot_lord_of_the_seas_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.28
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = lord_of_the_seas_hair_dye
+					has_character_modifier = lord_of_the_seas_hair_dye
+				}
+			}
+		}
+	}
+	agot_nightshade_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.29
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = nightshade_hair_dye
+					has_character_modifier = nightshade_hair_dye
+				}
+			}
+		}
+	}
+	agot_secret_city_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.3
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = secret_city_hair_dye
+					has_character_modifier = secret_city_hair_dye
+				}
+			}
+		}
+	}
+	agot_lavender_haze_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.31
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = lavender_haze_hair_dye
+					has_character_modifier = lavender_haze_hair_dye
+				}
+			}
+		}
+	}
+	agot_winesink_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.32
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = winesink_hair_dye
+					has_character_modifier = winesink_hair_dye
+				}
+			}
+		}
+	}
+	agot_courtesan_locks_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.33
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = courtesan_locks_hair_dye
+					has_character_modifier = courtesan_locks_hair_dye
+				}
+			}
+		}
+	}
+	agot_thistles_touch_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.34
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = thistles_touch_hair_dye
+					has_character_modifier = thistles_touch_hair_dye
+				}
+			}
+		}
+	}
+	agot_lilac_dream_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.35
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = lilac_dream_hair_dye
+					has_character_modifier = lilac_dream_hair_dye
+				}
+			}
+		}
+	}
+	agot_dornish_plum_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.36
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = dornish_plum_hair_dye
+					has_character_modifier = dornish_plum_hair_dye
+				}
+			}
+		}
+	}
+	agot_archonite_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.37
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = archonite_hair_dye
+					has_character_modifier = archonite_hair_dye
+				}
+			}
+		}
+	}
+	agot_emperors_tune_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.38
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = emperors_tune_hair_dye
+					has_character_modifier = emperors_tune_hair_dye
+				}
+			}
+		}
+	}
+	agot_palemoon_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.39
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = palemoon_hair_dye
+					has_character_modifier = palemoon_hair_dye
+				}
+			}
+		}
+	}
+	agot_princely_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.4
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = princely_hair_dye
+					has_character_modifier = princely_hair_dye
+				}
+			}
+		}
+	}
+	agot_misty_cloud_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.41
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = misty_cloud_hair_dye
+					has_character_modifier = misty_cloud_hair_dye
+				}
+			}
+		}
+	}
+	agot_shade_of_the_evening_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.42
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = shade_of_the_evening_hair_dye
+					has_character_modifier = shade_of_the_evening_hair_dye
+				}
+			}
+		}
+	}
+	agot_spirit_of_sapphire_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.43
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = spirit_of_sapphire_hair_dye
+					has_character_modifier = spirit_of_sapphire_hair_dye
+				}
+			}
+		}
+	}
+	agot_winter_rose_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.44
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = winter_rose_hair_dye
+					has_character_modifier = winter_rose_hair_dye
+				}
+			}
+		}
+	}
+	agot_bluejay_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.45
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = bluejay_hair_dye
+					has_character_modifier = bluejay_hair_dye
+				}
+			}
+		}
+	}
+	agot_azure_crown_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.46
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = azure_crown_hair_dye
+					has_character_modifier = azure_crown_hair_dye
+				}
+			}
+		}
+	}
+	agot_shivering_ends_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.47
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = shivering_ends_hair_dye
+					has_character_modifier = shivering_ends_hair_dye
+				}
+			}
+		}
+	}
+	agot_melange_sea_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.48
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = melange_sea_hair_dye
+					has_character_modifier = melange_sea_hair_dye
+				}
+			}
+		}
+	}
+	agot_berry_mash_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.49
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = berry_mash_hair_dye
+					has_character_modifier = berry_mash_hair_dye
+				}
+			}
+		}
+	}
+	agot_mummers_mask_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.5
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = mummers_mask_hair_dye
+					has_character_modifier = mummers_mask_hair_dye
+				}
+			}
+		}
+	}
+	agot_coldsnap_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.51
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = coldsnap_hair_dye
+					has_character_modifier = coldsnap_hair_dye
+				}
+			}
+		}
+	}
+	agot_griffins_hide_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.52
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = griffins_hide_hair_dye
+					has_character_modifier = griffins_hide_hair_dye
+				}
+			}
+		}
+	}
+	agot_crashing_waves_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.53
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = crashing_waves_hair_dye
+					has_character_modifier = crashing_waves_hair_dye
+				}
+			}
+		}
+	}
+	agot_mermaids_flowers_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.54
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = mermaids_flowers_hair_dye
+					has_character_modifier = mermaids_flowers_hair_dye
+				}
+			}
+		}
+	}
+	agot_glittering_galley_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.55
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = glittering_galley_hair_dye
+					has_character_modifier = glittering_galley_hair_dye
+				}
+			}
+		}
+	}
+	agot_myrish_lace_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.56
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = myrish_lace_hair_dye
+					has_character_modifier = myrish_lace_hair_dye
+				}
+			}
+		}
+	}
+	agot_shadowmint_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.57
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = shadowmint_hair_dye
+					has_character_modifier = shadowmint_hair_dye
+				}
+			}
+		}
+	}
+	agot_seaglass_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.58
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = seaglass_hair_dye
+					has_character_modifier = seaglass_hair_dye
+				}
+			}
+		}
+	}
+	agot_jungles_welcome_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.59
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = jungles_welcome_hair_dye
+					has_character_modifier = jungles_welcome_hair_dye
+				}
+			}
+		}
+	}
+	agot_viridescent_charm_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.6
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = viridescent_charm_hair_dye
+					has_character_modifier = viridescent_charm_hair_dye
+				}
+			}
+		}
+	}
+	agot_clover_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.61
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = clover_hair_dye
+					has_character_modifier = clover_hair_dye
+				}
+			}
+		}
+	}
+	agot_merling_green_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.62
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = merling_green_hair_dye
+					has_character_modifier = merling_green_hair_dye
+				}
+			}
+		}
+	}
+	agot_imperial_jade_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.63
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = imperial_jade_hair_dye
+					has_character_modifier = imperial_jade_hair_dye
+				}
+			}
+		}
+	}
+	agot_evergreen_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.64
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = evergreen_hair_dye
+					has_character_modifier = evergreen_hair_dye
+				}
+			}
+		}
+	}
+	agot_cliffmoss_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.65
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = cliffmoss_hair_dye
+					has_character_modifier = cliffmoss_hair_dye
+				}
+			}
+		}
+	}
+	agot_wildfire_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.66
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = wildfire_hair_dye
+					has_character_modifier = wildfire_hair_dye
+				}
+			}
+		}
+	}
+	agot_selhoru_skies_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.67
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = selhoru_skies_hair_dye
+					has_character_modifier = selhoru_skies_hair_dye
+				}
+			}
+		}
+	}
+	agot_verdant_mane_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.68
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = verdant_mane_hair_dye
+					has_character_modifier = verdant_mane_hair_dye
+				}
+			}
+		}
+	}
+	agot_summer_emerald_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.69
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = summer_emerald_hair_dye
+					has_character_modifier = summer_emerald_hair_dye
+				}
+			}
+		}
+	}
+	agot_isles_venom_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.7
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = isles_venom_hair_dye
+					has_character_modifier = isles_venom_hair_dye
+				}
+			}
+		}
+	}
+	agot_olive_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.71
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = olive_hair_dye
+					has_character_modifier = olive_hair_dye
+				}
+			}
+		}
+	}
+	agot_pipers_grass_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.72
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = pipers_grass_hair_dye
+					has_character_modifier = pipers_grass_hair_dye
+				}
+			}
+		}
+	}
+	agot_yellow_toad_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.73
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = yellow_toad_hair_dye
+					has_character_modifier = yellow_toad_hair_dye
+				}
+			}
+		}
+	}
+	agot_evening_star_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.74
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = evening_star_hair_dye
+					has_character_modifier = evening_star_hair_dye
+				}
+			}
+		}
+	}
+	agot_lemon_cake_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.75
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = lemon_cake_hair_dye
+					has_character_modifier = lemon_cake_hair_dye
+				}
+			}
+		}
+	}
+	agot_goldenrod_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.76
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = goldenrod_hair_dye
+					has_character_modifier = goldenrod_hair_dye
+				}
+			}
+		}
+	}
+	agot_bees_wax_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.77
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = bees_wax_hair_dye
+					has_character_modifier = bees_wax_hair_dye
+				}
+			}
+		}
+	}
+	agot_honeywine_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.78
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = honeywine_hair_dye
+					has_character_modifier = honeywine_hair_dye
+				}
+			}
+		}
+	}
+	agot_rogare_gold_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.79
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = rogare_gold_hair_dye
+					has_character_modifier = rogare_gold_hair_dye
+				}
+			}
+		}
+	}
+	agot_aged_cheddar_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.8
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = aged_cheddar_hair_dye
+					has_character_modifier = aged_cheddar_hair_dye
+				}
+			}
+		}
+	}
+	agot_ambitious_amber_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.81
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = ambitious_amber_hair_dye
+					has_character_modifier = ambitious_amber_hair_dye
+				}
+			}
+		}
+	}
+	agot_saffron_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.82
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = saffron_hair_dye
+					has_character_modifier = saffron_hair_dye
+				}
+			}
+		}
+	}
+	agot_lantern_glow_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.83
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = lantern_glow_hair_dye
+					has_character_modifier = lantern_glow_hair_dye
+				}
+			}
+		}
+	}
+	agot_spiced_pumpkin_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.84
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = spiced_pumpkin_hair_dye
+					has_character_modifier = spiced_pumpkin_hair_dye
+				}
+			}
+		}
+	}
+	agot_peach_petals_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.85
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = peach_petals_hair_dye
+					has_character_modifier = peach_petals_hair_dye
+				}
+			}
+		}
+	}
+	agot_coastal_orange_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.86
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = coastal_orange_hair_dye
+					has_character_modifier = coastal_orange_hair_dye
+				}
+			}
+		}
+	}
+	agot_tigers_poise_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.87
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = tigers_poise_hair_dye
+					has_character_modifier = tigers_poise_hair_dye
+				}
+			}
+		}
+	}
+	agot_blood_orange_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.88
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = blood_orange_hair_dye
+					has_character_modifier = blood_orange_hair_dye
+				}
+			}
+		}
+	}
+	agot_coral_hair_dye_dna = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.89
+				y = 1
+			}
+			morph = {
+				mode = modify_multiply
+				gene = hair_aging
+				value = 0
+				template = no_hair_aging
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_inactive_trait = coral_hair_dye
+					has_character_modifier = coral_hair_dye
+				}
+			}
+		}
+	}
+}

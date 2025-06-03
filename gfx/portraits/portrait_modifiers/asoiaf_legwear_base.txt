@@ -1,0 +1,308 @@
+﻿asoiaf_legwear = {
+	# interface_position = 1
+	usage = game
+	selection_behavior = max
+	priority = 5
+	
+	asoiaf_legwear_gold_cloak_legs = { #Gold Cloak legwear - for both courtiers and Commanders
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = asoiaf_gold_cloak_legs
+				value = 0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = { #should ALWAYS wear it if a courtier of Gold Cloak Commander and their culture allows martial for the gender
+				add = 2000
+                age >= 14
+				exists = liege
+				liege = {
+					has_court_position = goldcloaks_court_position
+					is_target_in_global_variable_list = {
+						name = agot_goldcloaks_founded
+						target = flag:goldcloaks_founded
+					}
+				}
+				OR = {
+					AND = {
+						is_female = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_female_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+					AND = {
+						is_male = yes
+						culture = {
+							OR = {
+								has_cultural_parameter = martial_custom_male_only_combatant
+								has_cultural_parameter = martial_custom_equal_combatant
+							}
+						}
+					}
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+            modifier = { #Commanders wears it if the Gold Cloak variable is true
+				add = 2000
+				has_court_position = goldcloaks_court_position
+				is_target_in_global_variable_list = {
+					name = agot_goldcloaks_founded
+					target = flag:goldcloaks_founded
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+			modifier = {
+				add = -3000
+				OR = {
+					should_be_naked_trigger = yes
+					has_trait = septon
+					has_trait = most_devout_member
+					has_trait = high_septon
+					has_trait = silent_sister
+					has_trait = red_priest
+					#has_trait = devoted
+					has_trait = drowned_man
+					has_trait = maester
+					has_trait = archmaester
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = lifestyle_nw_builder
+					has_trait = lifestyle_nw_ranger
+					has_trait = lifestyle_nw_steward
+				}
+				has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+			}
+            modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+
+	asoiaf_legwear_northern_armour = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = asoiaf_north_war_legs
+				range = { 0 0.8 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				portrait_wear_armor_trigger = yes
+				portrait_the_north_clothing_trigger = yes
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+	
+	asoiaf_legwear_northern_armour_stark = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = asoiaf_north_war_legs
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1100
+				has_character_flag = needs_ned_armor #for Tower of Joy event scene
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+			}
+			modifier = {
+                add = 1100
+				portrait_wear_armor_trigger = yes
+				portrait_the_north_clothing_trigger = yes
+				AND = { #heads of Stark dynasty Houses will always wear the stark sigil plate armour, and must have the accompanying plate legs
+					is_house_head = yes
+					exists = dynasty
+					dynasty = dynasty:dynn_Stark
+					#NOT = { house = { character:Karstark_20.house } } #not working
+				}
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+            }
+			modifier = {
+				add = -2000
+				has_trait = kingsguard
+				has_game_rule = asoiaf_new_clothes_north_rule_on
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+	
+	asoiaf_legwear_kingsguard_default = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = asoiaf_kingsguard_default_legs
+				value = 1 
+			}
+		}
+		weight = {
+			base = -100
+			modifier = {
+				add = 1000
+				OR = {
+					has_trait = kingsguard
+					any_equipped_character_artifact = { has_variable = kingsguard_armour }
+				}
+				#has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+				exists = global_var:app_enabled
+			}
+		}
+	}
+	
+	asoiaf_legwear_lannister_armour = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = asoiaf_lannister_war_legs
+				value = 1 
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+                add = 130
+				AND = {
+                    OR = { #Lannister westermen, crownlanders, and reachmen can have the special armour
+                        portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = westerman
+                        }
+						portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = crownlander
+                        }
+						portrait_commoner_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                        portrait_low_nobles_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                        portrait_high_nobles_armor_trigger = {
+                            CULTURE_INPUT = reachman
+                        }
+                    }
+					OR = {
+						dynasty ?= dynasty:dynn_Lannister
+						house ?= house:house_BaratheonKL
+					}
+                }
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+            }
+			modifier = {
+				add = 130
+				portrait_wear_lannister_armour_courtiers_trigger = yes
+			}
+			modifier = {
+				add = -1000
+				OR = {
+					has_trait = nightswatch
+					has_trait = kingsguard
+				}
+				has_game_rule = asoiaf_new_clothes_westerlands_rule_on
+			}
+			modifier = {
+				factor = 0
+				NOT =  { is_agot_plus_loaded_trigger = yes }
+			}
+		}
+	}
+	
+	asoiaf_legwear_rhaegar_armour = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = high_valyrian_war_legwear
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 300
+				any_equipped_character_artifact = { has_variable = rhaegararmour }
+				portrait_wear_armor_trigger = yes
+			}
+			modifier = {
+				add = -1000
+				has_trait = kingsguard
+			}
+		}
+	}
+
+	asoiaf_legwear_robert_armour = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = stormlands_war_04_legwear
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 300
+				any_equipped_character_artifact = { has_variable = robertarmour }
+				portrait_wear_armor_trigger = yes
+			}
+			modifier = {
+				add = -1000
+				has_trait = kingsguard
+			}
+		}
+	}
+
+	asoiaf_dragonkeepers = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = mena_war_legwear
+				value = 1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+                add = 250
+                has_court_position = head_dragonkeeper_court_position
+				has_game_rule = asoiaf_new_dnas_valyrian_rule_on
+            }
+		}
+	}
+}

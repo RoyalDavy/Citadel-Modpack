@@ -1,0 +1,21 @@
+﻿object={
+	name="tgc_tabletop"
+	render_pass=MapUnderTerrain
+	clamp_to_water_level=yes
+	generated_content=no
+	layer="map_table_layer_tgc"
+	entity="tgc_table_entity"
+	count=1
+	transform="4700.000000 -1.000000 3100.000000 0.000000 0.000000 0.000000 0.000000 5.000000 5.000000 5.000000
+"}
+
+object={
+	name="tgc_tabletop_props"
+	render_pass=MapUnderTerrain
+	clamp_to_water_level=yes
+	generated_content=no
+	layer="map_table_layer_tgc"
+	entity="tgc_table_props_entity"
+	count=1
+	transform="4700.000000 -1.000000 3100.000000 0.000000 0.000000 0.000000 0.000000 5.000000 5.000000 5.000000
+"}

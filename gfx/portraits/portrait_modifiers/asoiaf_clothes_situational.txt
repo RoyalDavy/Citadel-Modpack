@@ -1,0 +1,107 @@
+﻿asoiaf_clothes_situational = { # All clothes triggers are found in 00_clothing_triggers.txt
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 5
+
+	asoiaf_clothing_kingsguard_default = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = asoiaf_kingsguard_default_clothes
+				value = 1
+			}
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        weight = {
+            base = -100
+            modifier = {
+                add = 1000
+				OR = {
+					has_trait = kingsguard
+					any_equipped_character_artifact = { has_variable = kingsguard_armour }
+				}
+				#has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+				exists = global_var:app_enabled
+            }
+        }
+    }
+    asoiaf_clothing_rhaegar_armour = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = rhaegar_targaryen_nobility_clothes
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        weight = {
+            base = 0
+			modifier = {
+				add = 300
+				any_equipped_character_artifact = { has_variable = rhaegararmour }
+				portrait_wear_armor_trigger = yes
+			}
+			modifier = {
+				add = -1000
+				has_trait = kingsguard
+			}
+        }
+    }
+    asoiaf_clothing_robert_armour = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = robert_baratheon_war_clothes
+            }
+            morph = {
+                mode = modify_multiply
+                gene = gene_bs_bust
+                value = 0.8 # Setting this lower to reduce the exaggerated effect of large bust size when wearing clothes
+                template = bust_clothes
+            }
+        }
+        weight = {
+            base = 0
+			modifier = {
+				add = 300
+				any_equipped_character_artifact = { has_variable = robertarmour }
+				portrait_wear_armor_trigger = yes
+			}
+			modifier = {
+				add = -1000
+				has_trait = kingsguard
+			}
+        }
+    }
+    asoiaf_dragonkeepers = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = religious_jewish_high_clothes
+				value = 1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+                add = 250
+                has_court_position = head_dragonkeeper_court_position
+                has_game_rule = asoiaf_new_dnas_valyrian_rule_on
+            }
+		}
+	}
+}

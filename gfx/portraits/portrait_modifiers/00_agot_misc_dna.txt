@@ -1,0 +1,26 @@
+﻿agot_misc_dna = {
+	usage = game
+	agot_kissed_by_fire = {
+		dna_modifiers = {
+			color = {
+				gene = hair_color
+				mode = replace
+				x = 0.99
+				y = 0.5
+			}
+			color = {
+				gene = eye_color
+				mode = replace
+				x = 0.06
+				y = 0.40
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = portrait_kissed_by_fire
+			}
+		}
+	}
+}

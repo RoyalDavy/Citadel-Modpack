@@ -1,0 +1,31 @@
+﻿#Vanilla AGOT's loading screen info
+assassin = { priority = 10 }
+baghdad = { priority = 10 }
+castle = { priority = 10 }
+chess = { priority = 10 }
+council = { priority = 10 }
+court = { priority = 10 }
+duel = { priority = 10 } #replaced with correct sigil
+lady_shalott = { priority = 10 }
+new_basileus = { priority = 10 }
+persia = { priority = 10 }
+runestone = { priority = 10 }
+tournament = { priority = 10 }
+mpo_mongols = { priority = 100 }
+knightofthelaughingtree = { priority = 100 }
+
+#AGOT+'s loading screen info
+asoiaf_daenerys_dothraki_speech = { priority = 10 }
+asoiaf_dragonstone = { priority = 10 }
+asoiaf_eastwatch_by_the_sea = { priority = 10 }
+asoiaf_gates_to_valyria = { priority = 10 }
+asoiaf_golden_tooth = { priority = 10 }
+asoiaf_harrenhal_smoking = { priority = 10 }
+asoiaf_highpoint = { priority = 10 }
+asoiaf_kings_landing = { priority = 10 }
+asoiaf_mereen_gates = { priority = 10 }
+asoiaf_oldtown = { priority = 10 }
+asoiaf_sailing_in_westeros = {v}
+asoiaf_siege_of_riverrun = { priority = 10 }
+asoiaf_strongsong = { priority = 10 }
+asoiaf_yunkai = { priority = 10 }

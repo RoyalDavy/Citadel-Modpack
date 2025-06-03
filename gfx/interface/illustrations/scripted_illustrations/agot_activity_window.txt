@@ -1,0 +1,87 @@
+﻿
+# agot_activity_window = {
+# 	texture = {
+# 	trigger = {
+# 		has_variable = at_activity
+# 		var:at_activity = flag:feast
+# 	 }
+# 	reference = "activities/activity_feast.dds"
+# 	}
+
+# 	texture = {
+# 	trigger = {
+# 		has_variable = at_activity
+# 		var:at_activity = flag:hunt
+# 		 }
+# 	reference = "activities/activity_hunt.dds"
+# 	}
+
+
+# 	texture = {
+# 	trigger = {
+# 		has_variable = at_activity
+# 		var:at_activity = flag:reaving
+# 		 }
+# 	reference = "activities/activity_reaving.dds"
+# 	}
+
+# 	texture = {
+# 		trigger = {
+# 			has_variable = at_activity
+# 			var:at_activity = flag:rebuilding_castle
+# 		}
+# 		reference = "activities/activity_rebuilding_castle.dds"
+# 	}
+
+# 	texture = {
+# 	trigger = {
+# 		NOT = {
+# 			has_variable = at_activity
+# 		}
+# 	 }
+# 	reference = "activities/activity_default.dds"
+# 	}
+# }
+
+# agot_activity_window_icon = {
+# 	texture = {
+# 	trigger = {
+# 		has_variable = at_activity
+# 		var:at_activity = flag:feast
+# 	}
+# 	reference = "agot_activities/activity_feast.dds"
+# 	}
+
+# 	texture = {
+# 	trigger = {
+# 		has_variable = at_activity
+# 		var:at_activity = flag:hunt
+# 	}
+# 	reference = "agot_activities/activity_hunt.dds"
+# 	}
+
+# 	texture = {
+# 	trigger = {
+# 		has_variable = at_activity
+# 		var:at_activity = flag:reaving
+# 	}
+# 	reference = "agot_activities/activity_reaving.dds"
+# 	}
+
+# 	texture = {
+# 		trigger = {
+# 			has_variable = at_activity
+# 			var:at_activity = flag:rebuilding_castle
+# 		}
+# 		reference = "agot_activities/activity_rebuilding_castle.dds"
+# 	}
+
+# 	texture = {
+# 	trigger = {
+# 		NOT = {
+# 			has_variable = at_activity
+# 		}
+# 	 }
+# 	reference = "agot_activities/activity_default.dds"
+# 	}
+# }

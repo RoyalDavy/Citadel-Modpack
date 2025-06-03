@@ -1,0 +1,250 @@
+﻿greyscale = { #AGOT TODO Reimplement when files are fixed for visuals
+	#greyscale_1 = {} #greyscale covers small part of body (arm? hand?). death can be avoided with special early treatment (Shireen)
+	#greyscale_2 = {} #greyscale covers most of the body. death is likely unless you get emergency treatment from expertly trained physician
+	greyscale = { #greyscale covers whole body. death is guaranteed; it's too late
+		traits = {
+			greyscale
+		}
+		dna_modifiers = {
+			human = {
+				#morph = { # AGOT TODO gene does not exist!
+				#	mode = replace
+				#	gene = complexion
+				#	template = complexion_greyscale
+				#	value = 1.0
+				#}
+				morph = {
+					mode = add
+					gene = gene_agot_greyscale
+					value = 1.0
+					template = agot_greyscale
+				}
+				morph = {
+					mode = replace
+					gene = gene_body_hair
+					template = body_hair_sparse_low_stubble
+					value = 0.0
+				}
+				morph = {
+					mode = replace
+					gene = gene_eyebrows_shape
+					template = no_eyebrows
+					value = 0.0
+				}
+				morph = {
+					mode = replace
+					gene = gene_eyebrows_fullness
+					template = no_eyebrows
+					value = 0.0
+				}
+			}
+		}
+	}
+}
+
+shivers = {
+	shivers = {
+		traits = {
+			shivers
+		}
+		dna_modifiers = {
+			human = {
+				#morph = { # AGOT TODO gene does not exist!
+				#	mode = replace
+				#	gene = complexion
+				#	template = complexion_shade
+				#	value = 0.67 #too high and it looks like lipstick
+				#}
+				morph = {
+					mode = add
+					gene = gene_illness
+					value = 1.0
+					template = illness
+				}
+			}
+		}
+	}
+}
+
+#shade_of_the_evening = {
+#	shade_of_the_evening = {
+#		traits = {
+#			#shade_of_the_evening AGOT TODO trait does not exist yet
+#		}
+#		dna_modifiers = {
+#			human = {
+#				morph = { # AGOT TODO gene does not exist!
+#					mode = replace
+#					gene = complexion
+#					template = complexion_shade
+#					value = 0.7 #too high and it looks like lipstick
+#				}
+#			}
+#		}
+#	}
+#}
+
+the_mark = {
+	the_mark = {
+		traits = {
+			the_mark
+		}
+		dna_modifiers = {
+			human = {
+				accessory = {
+					mode = add
+					gene = body_webbing
+					template = webbing
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+burned = {
+	burned_hound = {
+		traits = {
+			burned
+			burned_3_history
+		}
+		trigger = {
+			this = character:Clegane_4 # Sandor Clegane
+			OR = {
+				has_trait = burned_3_history
+				has_trait_xp = {
+					trait = burned
+					track = burned
+					value > 99
+				}
+			}
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = add
+					gene = gene_agot_burned
+					template = agot_burned_hound
+					value = 1
+				}
+				accessory = {
+					mode = replace
+					gene = eye_accessory
+					template = bloodshot_eyes
+					value = 1
+				}
+			}
+		}
+	}
+	burned_1 = {
+		traits = {
+			burned
+		}
+		trigger = {
+			has_trait_xp = {
+				trait = burned
+				track = burned
+				value < 50
+			}
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = add
+					gene = gene_agot_burned
+					template = agot_burned_1
+					value = 1
+				}
+			}
+		}
+	}
+	burned_2 = {
+		traits = {
+			burned
+			burned_2_history
+		}
+		trigger = {
+			OR = {
+				AND = {
+					has_trait_xp = {
+						trait = burned
+						track = burned
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = burned
+						track = burned
+						value <= 100
+					}
+				}
+				has_trait = burned_2_history
+			}
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = add
+					gene = gene_agot_burned
+					template = agot_burned_2
+					value = 1
+				}
+				# accessory = {
+				# 	mode = replace
+				# 	gene = eye_accessory
+				# 	template = bloodshot_eyes
+				# 	value = 1
+				# }
+			}
+		}
+	}
+	burned_3 = {
+		traits = {
+			burned
+			burned_3_history
+		}
+		trigger = {
+			OR = {
+				has_trait = burned_3_history
+				has_trait_xp = {
+					trait = burned
+					track = burned
+					value > 100
+				}
+			}
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = add
+					gene = gene_agot_burned
+					template = agot_burned_3
+					value = 1
+				}
+				accessory = {
+					mode = replace
+					gene = eye_accessory
+					template = bloodshot_eyes
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+uncouth = {
+	uncouth = {
+		traits = {
+			uncouth
+		}
+		dna_modifiers = {
+			human = {
+				accessory = {
+					mode = add
+					gene = agot_uncouth
+					template = aerys_nails
+					value = 1
+				}
+			}
+		}
+	}
+}

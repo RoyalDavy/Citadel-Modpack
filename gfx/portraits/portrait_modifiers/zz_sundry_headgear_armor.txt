@@ -1,0 +1,5008 @@
+﻿headgear_armor = {
+
+    usage = game
+    selection_behavior = weighted_random
+    priority = 4
+
+    ## DDE HRE ##
+
+    dde_hre_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dde_hre_war
+                accessory = m_headgear_sec_dde_hre_war_nob_01_lo
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = dde_hre
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = dde_hre
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = dde_hre
+                    }
+                }
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes
+                NOT = { portrait_era3_trigger = yes }
+            }
+        }
+    }
+
+    dde_hre_war_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dde_hre_war
+                accessory = m_headgear_sec_dde_hre_war_nob_01_hi
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = dde_hre
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes
+                NOT = { portrait_era3_trigger = yes }
+            }
+        }
+    }
+
+    dde_hre_war_royalty = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dde_hre_war
+                accessory = m_headgear_sec_dde_hre_war_nob_01_roy
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = dde_hre
+                }
+                portrait_royalty_armor_trigger = {
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                NOT = { portrait_era3_trigger = yes } 
+            }
+		}
+	}
+
+## Western ##
+
+	western_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = western_war
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				portrait_war_nobles_helmet_trigger = {
+					CULTURE_INPUT = western 
+				}
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                portrait_era1_trigger = yes
+            }
+		}
+	}
+
+	ep2_western_era1_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era1_war_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 90
+				portrait_war_nobles_helmet_trigger = {
+					CULTURE_INPUT = western 
+				}
+				has_ep2_dlc_trigger = yes
+				portrait_era1_armor_trigger = yes
+			}
+		}
+	}
+
+	ep2_western_era2_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era2_war_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 90
+				portrait_war_nobles_helmet_trigger = {
+					CULTURE_INPUT = western 
+				}
+				has_ep2_dlc_trigger = yes
+                OR = {
+                    portrait_era2_armor_trigger = yes
+                    portrait_era3_armor_trigger = yes
+                }
+			}
+		}
+	}
+
+	ep2_western_era3_war_commoners = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era3_war_nobility
+				value = 0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 90
+				portrait_war_nobles_helmet_trigger = {
+					CULTURE_INPUT = western 
+				}
+                OR = {
+                    portrait_commoner_armor_trigger = { 
+                        CULTURE_INPUT = western
+                    }
+                    AND = {
+                        OR = {
+                            portrait_low_nobles_armor_trigger = { 
+                                CULTURE_INPUT = western
+                            }
+                            portrait_high_nobles_armor_trigger = { 
+                                CULTURE_INPUT = western
+                            }
+                        }
+                        portrait_wear_armor_currently_in_army_trigger = no
+                    }
+                }
+				has_ep2_dlc_trigger = yes
+				portrait_era3_trigger = yes # not using the armor trigger here because that was changed to be less historically accurate
+			}
+		}
+	}
+
+	ep2_western_era3_war_low_nobles = { # Greathelm
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era3_war_nobility
+				value = 0.5
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 90
+				portrait_war_nobles_helmet_trigger = {
+					CULTURE_INPUT = western 
+				}
+                portrait_low_nobles_armor_trigger = { 
+                    CULTURE_INPUT = western
+                }
+                portrait_wear_armor_currently_in_army_trigger = yes
+				has_ep2_dlc_trigger = yes
+				portrait_era3_trigger = yes # not using the armor trigger here because that was changed to be less historically accurate
+			}
+		}
+	}
+
+	ep2_western_era3_war_high_nobles = { # Greathelm with torse, mantle and crest
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era3_war_nobility
+				value = 1
+			}
+            accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = coa_crest
+                value = 1
+            }
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				portrait_war_nobles_helmet_trigger = {
+					CULTURE_INPUT = western 
+				}
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = western
+                }
+                portrait_wear_armor_currently_in_army_trigger = yes
+				has_ep2_dlc_trigger = yes
+				portrait_era3_trigger = yes # not using the armor trigger here because that was changed to be less historically accurate
+			}
+		}
+	}
+
+	ep2_western_era4_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = ep2_western_era4_war_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				portrait_war_nobles_helmet_trigger = {
+					CULTURE_INPUT = western 
+				}
+				has_ep2_dlc_trigger = yes
+				portrait_era4_armor_trigger = yes
+			}
+		}
+	}
+
+	#AGOT Disabled
+	# crusades_western_war = {
+	# 	dna_modifiers = {
+	# 		accessory = {
+	# 			mode = add
+	# 			gene = headgear
+	# 			template = crusades_western_war
+	# 			range = { 0 1 } # For the randomness to work correctly
+	# 		}
+	# 	}
+	# 	outfit_tags = { military_outfit }
+	# 	weight = {
+	# 		base = 0
+	# 		modifier = {
+	# 			add = 110
+	# 			portrait_wear_helmet_trigger = yes
+	# 			portrait_western_crusades_trigger = yes
+	# 		}
+	# 		modifier = {
+	# 			add = 110
+	# 			portrait_wear_helmet_trigger = yes
+	# 			portrait_ep2_disguised_woman_trigger = yes
+	# 		}
+	# 	}
+	# }
+
+## Byzantine ##
+
+    byzantine_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = byzantine_war
+                accessory = m_headgear_sec_byzantine_war_nob_01_lo
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = byzantine
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = byzantine
+                    }
+                }
+            }
+        }
+    }
+
+    byzantine_war_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = byzantine_war
+                accessory = m_headgear_sec_byzantine_war_nob_01_hi
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    byzantine_war_royalty = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = byzantine_war
+                accessory = m_headgear_sec_byzantine_war_nob_01_roy
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+                portrait_royalty_armor_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    ep2_byzantine_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_byzantine_war_nobility
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+                has_ep2_dlc_trigger = yes
+            }
+            modifier = {
+                factor = 0        # Not used if EP3 is active and we're in the wrong era
+                has_ep3_dlc_trigger = yes
+                OR = {
+                    portrait_era1_armor_trigger = yes
+                    portrait_era2_armor_trigger = yes
+                }
+            }
+        }
+    }
+
+    ep3_byzantine_era1_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep3_byzantine_era1_war_nobility
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+                has_ep3_dlc_trigger = yes
+                OR = {
+                    portrait_era1_armor_trigger = yes
+                    portrait_era2_armor_trigger = yes
+                }
+            }
+        }
+    }
+
+    ep3_byzantine_era2_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep3_byzantine_era2_war_nobility
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+                has_ep3_dlc_trigger = yes
+                OR = {
+                    portrait_era3_armor_trigger = yes
+                    portrait_era4_armor_trigger = yes
+                }
+            }
+        }
+    }
+
+    ## Indian ##
+
+    indian_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = indian_war
+                accessory = m_headgear_sec_indian_war_nob_01_lo
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = indian
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = indian
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = indian
+                    }
+                }
+            }
+        }
+    }
+
+    indian_war_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = indian_war
+                accessory = m_headgear_sec_indian_war_nob_01_hi
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = indian
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = indian
+                }
+            }
+        }
+    }
+
+    indian_war_royalty = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = indian_war
+                accessory = m_headgear_sec_indian_war_nob_01_roy
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 101
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = indian
+                }
+                portrait_royalty_armor_trigger = {
+                    CULTURE_INPUT = indian
+                }
+            }
+        }
+    }
+
+    ep2_indian_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_indian_war_nobility
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = indian
+                }
+                has_ep2_dlc_trigger = yes
+            }
+        }
+    }
+
+    ## MENA ##
+
+    mena_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = mena_war
+                range = { 0 0.49 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = mena
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = mena
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = mena
+                    }
+                }
+            }
+        }
+    }
+
+    mena_war_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = mena_war
+                range = { 0.51 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = mena
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = mena
+                }
+            }
+        }
+    }
+
+    ep2_mena_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_mena_war_nobility
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = mena
+                }
+                has_ep2_dlc_trigger = yes
+            }
+        }
+    }
+
+    ## DDE Abbasid ##
+
+    dde_abbasid_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dde_abbasid_war
+                accessory = m_headgear_sec_dde_abbasid_war_nob_01_lo
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = dde_abbasid
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = dde_abbasid
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = dde_abbasid
+                    }
+                }
+            }
+        }
+    }
+
+    dde_abbasid_war_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dde_abbasid_war
+                accessory = m_headgear_sec_dde_abbasid_war_nob_01_hi
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = dde_abbasid
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = dde_abbasid
+                }
+            }
+        }
+    }
+
+    ## Steppe ##
+
+    steppe_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = steppe_war
+                accessory = m_headgear_sec_steppe_war_nob_01_lo
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = steppe
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = steppe
+                    }
+                }
+            }
+        }
+    }
+
+    steppe_war_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = steppe_war
+                accessory = m_headgear_sec_steppe_war_nob_01_hi
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+            }
+        }
+    }
+
+    ep2_steppe_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_steppe_war_nobility
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+                has_ep2_dlc_trigger = yes
+            }
+        }
+    }
+
+    ## Northern ##
+
+    northern_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = northern_war
+                accessory = m_headgear_sec_northern_war_nob_01_lo
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = northern
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = northern
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = northern
+                    }
+                }
+            }
+        }
+    }
+
+    northern_war_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = northern_war
+                accessory = m_headgear_sec_northern_war_nob_01_hi
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 50
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = northern
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = northern
+                }
+            }
+        }
+    }
+
+## FP2 Fate of Iberia ##
+
+	fp2_iberian_muslim_war_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp2_muslim_war_nobility
+				accessory = m_headgear_sec_fp2_iberian_muslim_war_nob_01_lo
+			}
+		}
+		outfit_tags = { military_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 90 # slightly higher
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = fp2_iberian_muslim
+                }
+        		OR = {
+                    	portrait_commoner_armor_trigger = { 
+                        	CULTURE_INPUT = fp2_iberian_muslim
+                    	}
+                    	portrait_low_nobles_armor_trigger = {
+                        	CULTURE_INPUT = fp2_iberian_muslim
+                    	}
+        		}
+			}
+		}
+	}
+
+	fp2_iberian_muslim_war_high_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = fp2_muslim_war_nobility
+				accessory = m_headgear_sec_fp2_iberian_muslim_war_nob_01_hi
+			}
+		}
+		outfit_tags = { military_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 90 # slightly higher
+				portrait_war_nobles_fancy_helmet_trigger = yes
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = fp2_iberian_muslim
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = fp2_iberian_muslim
+                }
+            }
+        }
+    }
+
+    fp2_iberian_christian_war_low_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp2_christian_war_nobility
+                accessory = m_headgear_sec_fp2_iberian_christian_war_nob_01_lo
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 90 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = fp2_iberian_christian
+                }
+                OR = {
+                    portrait_commoner_armor_trigger = {
+                        CULTURE_INPUT = fp2_iberian_christian
+                    }
+                    portrait_low_nobles_armor_trigger = {
+                        CULTURE_INPUT = fp2_iberian_christian
+                    }
+                }
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                NOT = { 
+                	portrait_era3_trigger = yes
+                } 
+            }
+        }
+    }
+
+    fp2_iberian_christian_war_high_nobles = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp2_christian_war_nobility
+                accessory = m_headgear_sec_fp2_iberian_christian_war_nob_01_hi
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 90 # larger than the western war headgear
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = fp2_iberian_christian
+                }
+                portrait_high_nobles_armor_trigger = {
+                    CULTURE_INPUT = fp2_iberian_christian
+                }
+            }
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're not in the right era
+                has_ep2_dlc_trigger = yes   
+                NOT = { 
+                	portrait_era3_trigger = yes
+                } 
+            }
+        }
+    }
+
+    ## FP1 Norse ##
+
+    fp1_norse_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp1_war
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60 # slightly higher than northern
+                portrait_war_nobles_fancy_helmet_trigger = yes
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = fp1_norse
+                }
+            }
+        }
+    }
+
+    fp1_norse_war_common = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp1_war_common
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = fp1_norse
+                }
+            }
+        }
+    }
+
+    ## Sub-Saharan Africans ##
+
+    sub_saharan_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = mena_war
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                portrait_war_nobles_helmet_trigger = {
+                    CULTURE_INPUT = african
+                }
+            }
+        }
+    }
+
+	## AFR ##
+
+	afr_berber_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = afr_war
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 101 # slightly higher than mena
+                OR = {
+                    portrait_war_nobles_helmet_trigger = {
+                        CULTURE_INPUT = afr_berber
+                    }
+                    portrait_high_nobles_armor_trigger = {
+                        CULTURE_INPUT = afr_berber
+                    }
+                }
+            }
+        }
+	}
+
+	## POL ##
+
+	pol_west_slavic_era1_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = pol_war
+                accessory = m_headgear_sec_pol_era1_war_nob_01
+			}
+		}
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 101
+				OR = {
+					portrait_era1_armor_trigger = yes
+					portrait_era2_armor_trigger = yes
+				}
+                OR = {
+                    portrait_war_nobles_helmet_trigger = {
+                        CULTURE_INPUT = west_slavic
+                    }
+                    portrait_high_nobles_armor_trigger = {
+                        CULTURE_INPUT = west_slavic
+                    }
+                }
+            }
+            #AGOT Added
+            modifier = {
+                factor = 0
+            }
+        }
+	}
+		
+	pol_west_slavic_era3_war_low_nobles = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = pol_war
+                accessory = m_headgear_sec_pol_era3_war_nob_01
+			}
+		}
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+				portrait_era3_armor_trigger = yes
+				portrait_war_nobles_helmet_trigger = {
+					CULTURE_INPUT = west_slavic
+				}
+            }
+            #AGOT Added
+            modifier = {
+                factor = 0
+            }
+        }
+	}
+	
+	#pol_west_slavic_era3_war_high_nobles = {
+		#dna_modifiers = {
+			#accessory = {
+				#mode = add
+				#gene = headgear
+				#template = pol_war
+                #accessory = m_headgear_sec_pol_era3_war_nob_01
+			#}
+			#accessory = {
+				#mode = add
+				#gene = additive_headgear
+				#template = pol_crest
+                #range = { 0 1 } # For the randomness to work correctly
+			#}
+		#}
+        #outfit_tags = { military_outfit }
+        #weight = {
+            #base = 0
+            #modifier = {
+                #add = 101
+				#portrait_era3_armor_trigger = yes
+				#portrait_war_nobles_helmet_trigger = {
+					#CULTURE_INPUT = west_slavic
+				#}
+				#portrait_high_nobles_armor_trigger = {
+					#CULTURE_INPUT = west_slavic
+				#}
+            #}
+            #AGOT Added
+            #modifier = {
+                #factor = 0
+            #}
+        #}
+	#}
+	
+	pol_west_slavic_era4_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = pol_war
+                accessory = m_headgear_sec_pol_era4_war_nob_01
+			}
+		}
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 102 
+				portrait_era4_armor_trigger = yes
+                OR = {
+                    portrait_war_nobles_helmet_trigger = {
+                        CULTURE_INPUT = west_slavic
+                    }
+                    portrait_high_nobles_armor_trigger = {
+                        CULTURE_INPUT = west_slavic
+                    }
+                }
+            }
+            #AGOT Added
+            modifier = {
+                factor = 0
+            }
+        }
+	}
+	
+	#pol_west_slavic_era4_war_royalty = {
+		#dna_modifiers = {
+			#accessory = {
+				#mode = add
+				#gene = headgear
+				#template = pol_war
+                #accessory = m_headgear_sec_pol_era4_war_nob_01
+			#}
+			#accessory = {
+				#mode = add
+				#gene = additive_headgear
+				#template = pol_crown
+                #range = { 0 1 } # For the randomness to work correctly
+			#}
+		#}
+        #outfit_tags = { military_outfit }
+        #weight = {
+            #base = 0
+            #modifier = {
+                #add = 103
+				#portrait_era4_armor_trigger = yes
+				#OR = {
+					#portrait_royalty_armor_trigger = {
+						#CULTURE_INPUT = west_slavic
+					#}
+					#AND = {
+						#portrait_imperial_trigger = {
+							#CULTURE_INPUT = west_slavic
+						#}	
+						#OR = {
+							#has_character_flag = need_military_outfit
+							#portrait_wear_armor_trigger = yes
+						#}
+					#}
+				#}
+            #}
+            #AGOT Added
+            #modifier = {
+                #factor = 0
+            #}
+        #}
+	#}
+	
+	
+
+    ## FP3 Iranian ##
+    
+    fp3_iranian_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp3_iranian_war
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 60 # slightly higher than mena
+                OR = {
+                    portrait_war_nobles_helmet_trigger = {
+                        CULTURE_INPUT = fp3_iranian
+                    }
+                    portrait_high_nobles_armor_trigger = {
+                        CULTURE_INPUT = fp3_iranian
+                    }
+                }
+                has_fp3_dlc_trigger = yes
+            }
+        }
+    }
+
+    #AGOT Added
+
+    agot_headgear_nw = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 600
+                OR = {
+                    has_trait = nightswatch
+                    has_trait = nightswatch_temp
+                    has_trait = nightswatch_historical
+                }
+                OR = {
+                    NOT = { exists = character:Stark_13 }
+                    AND = {
+                        exists = character:Stark_13
+                        NOT = { this = character:Stark_13 }
+                    }
+                }
+            }
+        }
+    }
+
+    agot_headgear_maelys = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_targaryen_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                agot_has_artifact_equiped = { ARTIFACT_VARIABLE = maelys_armour_artifact }
+                portrait_wear_helmet_trigger = yes
+            }
+        }
+    }
+
+    agot_headgear_rhaegar = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_4
+                value = 1
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+				portrait_wear_rhaegar_armor_trigger = yes
+				portrait_wear_helmet_trigger = yes
+            }
+            modifier = {
+                add = 500
+				agot_has_artifact_equiped = { ARTIFACT_VARIABLE = rhaegar_armor }
+				portrait_wear_helmet_trigger = yes
+            }
+        }
+    }
+
+    agot_headgear_robert_baratheon = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Stormlands_Helm_4
+                value = 1
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                portrait_wear_armor_trigger = yes
+                exists = character:Baratheon_2
+                this = character:Baratheon_2
+                NOT = { has_trait = nightswatch }
+            }
+        }
+    }
+
+    agot_clothing_westerlander_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = westerlands_war
+                accessory = male_headgear_secular_westerlands_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 125
+                exists = this
+                is_male = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = westerman
+                    }
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = westerman
+                    }
+                }
+            }
+        }
+    }
+
+    agot_clothing_westerlander_lannister_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = westerlands_war
+                accessory = male_headgear_secular_westerlands_lannister_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 140
+                exists = this
+                is_male = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = westerman
+                    }
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = westerman
+                    }
+                }
+                dynasty ?= dynasty:dynn_Lannister
+            }
+        }
+    }
+
+    agot_clothing_westerlander_tywin_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = westerlands_war
+                accessory = male_headgear_secular_westerlands_tywin_war
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 145
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    AND = {
+                        exists = this
+                        is_character_lannister_1 = yes
+                        portrait_wear_armor_trigger = yes
+                    }
+                    AND = {
+                        exists = this
+                        is_character_lannister_120 = yes
+                        portrait_wear_armor_trigger = yes
+                    }
+                    AND = {
+                        is_male = yes
+                        prestige_level > 3
+                        has_title = title:c_casterly_rock
+                        dynasty = dynasty:dynn_Lannister
+                        portrait_wear_armor_trigger = yes
+                    }
+                    AND = {
+                        is_male = yes
+                        prowess >= 20
+                        has_title = title:c_casterly_rock
+                        dynasty = dynasty:dynn_Lannister
+                        portrait_wear_armor_trigger = yes
+                    }
+                }
+            }
+        }
+    }
+
+    agot_clothing_westerlander_jimothy_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = westerlands_war
+                accessory = male_headgear_secular_westerlands_jimothy_war
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 145
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    AND = {
+                        exists = this
+                        is_character_lannister_7 = yes
+                        portrait_wear_armor_trigger = yes
+                    }
+                    AND = {
+                        is_male = yes
+                        prowess >= 30
+                        dynasty = dynasty:dynn_Lannister
+                        portrait_wear_armor_trigger = yes
+                    }
+                }
+            }
+        }
+    }
+
+    agot_clothing_rowan_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Reach_Helm_3
+                accessory = male_headgear_secular_reach_tyrell_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 260
+                is_male = yes
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Rowan
+            }
+        }
+    }
+
+    agot_clothing_royce_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Royce_Helm_1
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 260
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Royce
+            }
+        }
+    }
+
+    agot_clothing_reachman_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Reach_Helm_3
+                accessory = male_headgear_secular_reach_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 125
+                exists = this
+                is_male = yes
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = reachman
+                }
+            }
+        }
+    }
+
+    agot_clothing_reachman_tyrell_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Reach_Helm_3
+                accessory = male_headgear_secular_reach_tyrell_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 140
+                exists = this
+                is_male = yes
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = reachman
+                }
+                dynasty ?= dynasty:dynn_Tyrell
+            }
+        }
+    }
+
+    agot_clothing_dornish_iron_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Dorne_Helm_3_Dynamic
+				range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 135
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = stone_dornish
+                    }
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = salt_dornish
+                    }
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = sand_dornish
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = stone_dornish
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = salt_dornish
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = sand_dornish
+                    }
+                }
+            }
+        }
+    }
+
+    agot_clothing_dornish_copper_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Dorne_Helm_3_Copper_Dynamic
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 135
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = salt_dornish
+                    }
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = sand_dornish
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = salt_dornish
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = sand_dornish
+                    }
+                }
+            }
+        }
+    }
+
+    agot_clothing_dornish_martell_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Dorne_Helm_3_Martell_Dynamic
+				range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 140
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = dornish
+                }
+                dynasty ?= dynasty:dynn_Martell
+            }
+        }
+    }
+
+    agot_clothing_stormlander_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Stormlands_Helm_3
+                value = 1
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 125
+                exists = this
+                is_male = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = stormlander
+                    }
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = stormlander
+                    }
+                }
+            }
+        }
+    }
+
+    agot_clothing_dragon_high_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_war_dynastic_03_high
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 140
+                exists = this
+                is_landed = yes
+                capital_county.title_province = { geographical_region = world_westeros }
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    AND = {
+                        agot_portrait_low_armor_trigger = {
+                            CULTURE_INPUT = valyrian
+                        }
+                        martial >= high_skill_rating
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valyrian
+                    }
+                }
+				NOR = {
+					has_culture = culture:braavosi
+					has_culture = culture:lorathi
+					has_culture = culture:norvoshi
+					has_culture = culture:qohorik
+					has_culture = culture:pentoshi
+					has_culture = culture:myrish
+					has_culture = culture:tyroshi
+					has_culture = culture:hartalari
+					has_culture = culture:lyseni
+					has_culture = culture:volantene
+				}
+            }
+        }
+    }
+
+    agot_clothing_dragon_high_targaryen_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_war_03_high
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 145
+                exists = this
+                OR = {
+                    AND = {
+                        agot_portrait_low_armor_trigger = {
+                            CULTURE_INPUT = valyrian
+                        }
+                        martial >= high_skill_rating
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valyrian
+                    }
+                }
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Targaryen
+            }
+        }
+    }
+
+    agot_clothing_dragon_high_blackfyre_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_war_blackfyre_03_high
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 150
+                exists = this
+                OR = {
+                    AND = {
+                        agot_portrait_low_armor_trigger = {
+                            CULTURE_INPUT = valyrian
+                        }
+                        martial >= high_skill_rating
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valyrian
+                    }
+                }
+                portrait_wear_helmet_trigger = yes
+                house = house:house_Blackfyre
+            }
+        }
+    }
+
+    agot_clothing_valyrian_low_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 125
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                portrait_valyrian_clothing_trigger = yes
+				NOR = {
+					has_culture = culture:braavosi
+					has_culture = culture:lorathi
+					has_culture = culture:norvoshi
+					has_culture = culture:qohorik
+					has_culture = culture:pentoshi
+					has_culture = culture:myrish
+					has_culture = culture:tyroshi
+					has_culture = culture:hartalari
+					has_culture = culture:lyseni
+					has_culture = culture:volantene
+				}
+            }
+        }
+    }
+
+    agot_clothing_valyrian_blackfyre_low_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_blackfyre_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 135
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                portrait_valyrian_clothing_trigger = yes
+                house = house:house_Blackfyre
+            }
+        }
+    }
+
+    agot_clothing_valyrian_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_war_dynastic_03_high
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 140
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    AND = {
+                        agot_portrait_low_armor_trigger = {
+                            CULTURE_INPUT = valyrian
+                        }
+                        martial >= high_skill_rating
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valyrian
+                    }
+                }
+				NOR = {
+					has_culture = culture:braavosi
+					has_culture = culture:lorathi
+					has_culture = culture:norvoshi
+					has_culture = culture:qohorik
+					has_culture = culture:pentoshi
+					has_culture = culture:myrish
+					has_culture = culture:tyroshi
+					has_culture = culture:hartalari
+					has_culture = culture:lyseni
+					has_culture = culture:volantene
+				}
+            }
+        }
+    }
+
+    agot_clothing_valyrian_targaryen_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_war_03_high
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 145
+                exists = this
+                OR = {
+                    AND = {
+                        agot_portrait_low_armor_trigger = {
+                            CULTURE_INPUT = valyrian
+                        }
+                        martial >= high_skill_rating
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valyrian
+                    }
+                }
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Targaryen
+            }
+        }
+    }
+
+    agot_clothing_valyrian_blackfyre_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_war_blackfyre_03_high
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 150
+                exists = this
+                OR = {
+                    AND = {
+                        agot_portrait_low_armor_trigger = {
+                            CULTURE_INPUT = valyrian
+                        }
+                        martial >= high_skill_rating
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valyrian
+                    }
+                }
+                portrait_wear_helmet_trigger = yes
+                house = house:house_Blackfyre
+            }
+        }
+    }
+
+    agot_clothing_vale_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                value = 1
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                is_male = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    portrait_valeman_clothing_trigger = yes
+                    portrait_moonman_clothing_trigger = yes
+                }
+            }
+        }
+    }
+
+    agot_clothing_vale_arryn_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_4
+                value = 1
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 205
+                exists = this
+                is_male = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valeman
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = moonman
+                    }
+                }
+                dynasty ?= dynasty:dynn_Arryn
+            }
+        }
+    }
+	
+    agot_clothing_braavos_armor_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_01_low
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = yes
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+	
+    agot_clothing_braavos_armor_low_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = saan_pirate_hat
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = yes
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+	
+    agot_clothing_braavos_armor_low_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = yes
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+
+    agot_clothing_braavos_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_01
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+	
+    agot_clothing_braavos_armor_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_02
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+	
+    agot_clothing_braavos_armor_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+	
+    agot_clothing_braavos_high_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_01_high
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+
+    agot_clothing_braavos_high_armor_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_high_02
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+	
+    agot_clothing_braavos_high_armor_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_high_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+	
+    agot_clothing_braavos_high_armor_4 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_dynastic_02
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+	
+    agot_clothing_braavos_high_armor_5 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_dynastic_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                exists = this
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_high_armor_trigger = {
+                    CULTURE_INPUT = braavosi
+                }
+            }
+        }
+    }
+
+    agot_clothing_skinchangers_military = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 400
+                exists = this
+                portrait_wear_skinchangers_second_pelt_trigger = yes
+                portrait_wear_helmet_trigger = yes
+            }
+        }
+    }
+	
+	#SUNDRY
+	
+	agot_clothing_bronze_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Royce_Helm_1
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 320
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+				OR = {
+					has_culture = culture:thenn
+					has_culture = culture:first_man
+				}
+            }
+        }
+    }
+	
+	agot_clothing_btw_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 290
+				OR = { 
+					location = { geographical_region = world_westeros_beyond_the_wall }
+					portrait_wildling_clothing_trigger = yes
+				}
+            }
+        }
+    }
+	
+	agot_clothing_btw_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+				location = { geographical_region = world_westeros_beyond_the_wall }
+            }
+        }
+    }
+	
+	agot_clothing_pirate_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = stepstones_pirate_hats
+                range = { 0 1 }
+            }
+
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 290
+				OR = {
+					has_government = pirate_government
+					top_liege = { has_government = pirate_government }
+				}
+				NOR = {
+					has_culture = culture:ironborn
+				}
+            }
+            modifier = {
+                add = 400
+				exists = this
+				OR = {
+					has_character_modifier = pirate_style
+					has_character_modifier = pirate_armor
+				}
+            }
+        }
+    }
+	
+	agot_clothing_pirate_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = stepstones_pirate_hats
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 290
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+				OR = {
+					has_government = pirate_government
+					top_liege = { has_government = pirate_government }
+				}
+				NOR = {
+					has_culture = culture:ironborn
+					has_culture = culture:krakenman
+					has_culture = culture:fangman
+					has_culture = culture:forestman
+					has_culture = culture:frozen_shoreman
+					has_culture = culture:hill_clansman
+					has_culture = culture:hornfoot
+					has_culture = culture:ice_riverman
+					has_culture = culture:lakeman
+					has_culture = culture:nightrunner
+					has_culture = culture:thenn
+					has_culture = culture:mountain_clansman
+					has_culture = culture:first_man
+					has_culture = culture:skagosi
+					has_culture = culture:sisterman
+				}
+            }
+            modifier = {
+                add = 400
+				exists = this
+				OR = {
+					has_character_modifier = pirate_style
+					has_character_modifier = pirate_armor
+				}
+            }
+        }
+    }
+	
+	agot_clothing_blackwood_house_head_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 260
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = riverlander
+                    }
+                }
+                dynasty ?= dynasty:dynn_Blackwood
+				is_house_head = yes
+            }
+        }
+    }
+	
+	agot_clothing_blackwood_house_heir_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02_01
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 255
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = riverlander
+                    }
+                }
+                dynasty ?= dynasty:dynn_Blackwood
+				OR = {
+					is_heir_of = title:d_blackwood_vale.holder
+					is_heir_of = title:k_the_riverlands.holder
+					is_heir_of = title:e_the_riverlands.holder
+					is_heir_of = title:e_the_iron_throne.holder
+				}
+            }
+        }
+    }
+	
+	agot_clothing_blackwood_house_heir_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 250
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = riverlander
+                    }
+                }
+                dynasty ?= dynasty:dynn_Blackwood
+            }
+        }
+    }
+	
+    agot_clothing_westerlander_armor_low_1 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+				range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                is_male = yes
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = westerman
+                }
+				is_lowborn = no
+            }
+        }
+    }
+	
+    agot_clothing_westerlander_armor_low_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Riverlands_Helm_3
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = westerman
+                }
+				is_lowborn = yes
+            }
+        }
+    }
+	
+    agot_clothing_westerlander_armor_low_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era3_war_nobility
+                accessory = m_headgear_sec_ep2_western_war_nob_01_com
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 205
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = westerman
+                }
+				OR = {
+					is_lowborn = yes
+					is_female = yes
+				}
+				has_ep2_dlc_trigger = yes
+            }
+        }
+    }
+	
+	agot_clothing_northern_armor_high_1 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 105
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                }
+				has_ep2_dlc_trigger = yes
+            }
+        }
+    }
+	
+	agot_clothing_northern_armor_high_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02_01
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 110
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                }
+				has_ep2_dlc_trigger = yes
+				is_landed = yes
+				is_ruler = yes
+            }
+        }
+    }
+	
+	agot_clothing_northern_armor_high_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02_01
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 110
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                }
+				has_ep2_dlc_trigger = yes
+				OR = {
+					is_heir_of = title:d_winterfell.holder
+					is_heir_of = title:d_the_dreadfort.holder
+					is_heir_of = title:d_karhold.holder
+					is_heir_of = title:d_frostfields.holder
+					is_heir_of = title:d_last_lands.holder
+					is_heir_of = title:d_the_northern_mountains.holder
+					is_heir_of = title:d_skagos.holder
+					is_heir_of = title:d_the_blackpines.holder
+					is_heir_of = title:d_the_wolfswood.holder
+					is_heir_of = title:d_sea_dragon_point.holder
+					is_heir_of = title:d_bear_island.holder
+					is_heir_of = title:d_grey_downs.holder
+					is_heir_of = title:d_edgewood.holder
+					is_heir_of = title:d_kings_course.holder
+					is_heir_of = title:d_stony_shore.holder
+					is_heir_of = title:d_the_rills.holder
+					is_heir_of = title:d_the_barrowlands.holder
+					is_heir_of = title:d_the_wolfswood.holder
+					is_heir_of = title:d_white_harbor.holder
+					is_heir_of = title:d_hornwood.holder
+					is_heir_of = title:d_everstead.holder
+					is_heir_of = title:d_crestview.holder
+					is_heir_of = title:d_keystone.holder
+					is_heir_of = title:d_silvereed.holder
+					is_heir_of = title:d_fever.holder
+					is_heir_of = title:d_lakelands.holder
+					is_heir_of = title:d_flints_finger.holder
+					is_heir_of = title:d_the_neck.holder
+					is_heir_of = title:k_the_north.holder
+				}
+            }
+        }
+    }
+	
+	agot_clothing_northern_armor_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = northern_war
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 105
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                }
+				has_pol_dlc_trigger = yes
+            }
+        }
+    }
+	
+	agot_clothing_ironborn_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp1_war
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 135
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = ironborn
+                    }
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = ironborn
+                    }
+                }
+            }
+        }
+    }
+	
+	agot_clothing_ironborn_high_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp1_war
+                accessory = male_headgear_secular_fp1_war_nobility_01
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 140
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = ironborn
+                    }
+                }
+				primary_title.tier >= tier_duchy
+				has_fp1_dlc_trigger = yes
+            }
+        }
+    }
+	
+	agot_clothing_ironborn_greyjoy_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp1_war
+                accessory = male_headgear_secular_fp1_war_nobility_01
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 145
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = ironborn
+                    }
+                }
+				dynasty ?= dynasty:dynn_Greyjoy
+				has_fp1_dlc_trigger = yes
+            }
+        }
+    }
+	
+	agot_clothing_crannogman_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+				range = { 0 1 }
+            }
+
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 210
+				has_culture = culture:crannogman
+            }
+        }
+    }
+	
+	agot_clothing_crannogman_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+				range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 220
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+				has_culture = culture:crannogman
+            }
+        }
+    }
+	
+	agot_clothing_mallister_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_4
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 250
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Mallister
+				is_male = yes
+				prowess >= 16
+				agot_portrait_high_armor_trigger = { CULTURE_INPUT = riverlander }
+            }
+        }
+    }
+	
+	agot_clothing_corbray_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_4
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 250
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Corbray
+				is_male = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valeman
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = fingerman
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = moonman
+                    }
+                }
+            }
+        }
+    }
+	
+	agot_clothing_connington_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_4
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 250
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Connington
+				is_male = yes
+				prowess >= 16
+				agot_portrait_high_armor_trigger = { CULTURE_INPUT = stormlander }
+            }
+        }
+    }
+	
+	agot_clothing_bolton_house_head_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 250
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Bolton
+				is_house_head = yes
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = the_north
+                    }
+                }
+            }
+        }
+    }
+	
+	agot_clothing_clegane_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = pol_war
+                accessory = m_headgear_sec_pol_era3_war_nob_01
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 250
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Clegane
+				has_pol_dlc_trigger = yes
+            }
+        }
+    }
+	
+    agot_clothing_arryn_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_4
+                value = 1
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 210
+                exists = this
+                is_male = yes
+                OR = {
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = valeman
+                    }
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = moonman
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = valeman
+                    }
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = moonman
+                    }
+                }
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Arryn
+            }
+        }
+    }
+	
+	agot_clothing_hedge_knight_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 290
+				is_agot_knight_trigger = yes
+				dynasty.dynasty_prestige_level <= 3
+				OR = {
+					is_landless_adventurer = yes
+					top_liege = { is_landless_adventurer = yes }
+				}
+            }
+        }
+    }
+	
+	agot_clothing_dornish_armor_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = afr_war
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 135
+                exists = this
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = stone_dornish
+                }
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+				has_afr_dlc_trigger = yes
+            }
+        }
+    }
+	
+    agot_clothing_baratheon_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Stormlands_Helm_4
+                value = 1
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+				OR = {
+					AND = {
+						add = 400
+						exists = this
+						is_male = yes
+						portrait_wear_armor_trigger = yes
+						portrait_wear_helmet_trigger = yes
+						dynasty ?= dynasty:dynn_Baratheon
+						is_house_head = yes
+					}
+					AND = {
+						add = 400
+						exists = this
+						is_male = yes
+						portrait_wear_armor_trigger = yes
+						portrait_wear_helmet_trigger = yes
+						dynasty ?= dynasty:dynn_Baratheon
+						prowess >= 25
+					}
+				}
+            }
+        }
+    }
+	
+	agot_clothing_free_cities_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = stepstones_pirate_hats
+				accessory = saan_pirate_hat_dynastic
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 300
+				exists = this
+				OR = {
+					has_culture = culture:pentoshi
+					has_culture = culture:myrish
+					has_culture = culture:tyroshi
+					has_culture = culture:lyseni
+					has_culture = culture:volantene
+					has_culture = culture:norvoshi
+					has_culture = culture:qohorik
+					has_culture = culture:lorathi
+					has_culture = culture:hartalari
+				}
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+            }
+        }
+    }
+	
+    agot_clothing_tarth_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = crusades_western_war
+                accessory = m_headgear_sec_crusades_western_war_nob_01_hi
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 250
+                exists = this
+                OR = {
+                    agot_portrait_high_armor_trigger = {
+                        CULTURE_INPUT = stormlander
+                    }
+                }
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                dynasty ?= dynasty:dynn_Tarth
+				has_ep2_dlc_trigger = yes
+            }
+        }
+    }
+	
+    agot_clothing_female_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 225
+                exists = this
+                is_female = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = crownlander }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = crownlander }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = reachman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = reachman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = honeywiner }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = honeywiner }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = vineman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = vineman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = shieldman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = shieldman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = stormlander }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = stormlander }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = marcher }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = marcher }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = riverlander }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = riverlander }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = moonman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = moonman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = valeman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = valeman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = fingerman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = fingerman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = westerman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = westerman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = harborman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = harborman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = andal }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = andalosi }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = the_north }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = the_north }
+				}
+            }
+        }
+    }
+	
+	agot_clothing_crownlander_armor_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Riverlands_Helm_3
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = crownlander
+                    }
+                }
+				has_fp2_dlc_trigger = no
+				is_lowborn = yes
+            }
+        }
+    }
+	
+	agot_clothing_crownlander_armor_low_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp2_christian_war_nobility
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+                OR = {
+                    agot_portrait_low_armor_trigger = {
+                        CULTURE_INPUT = crownlander
+                    }
+                }
+				has_fp2_dlc_trigger = yes
+				is_lowborn = yes
+            }
+        }
+    }
+	
+    agot_clothing_crownlander_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 210
+                exists = this
+                is_male = yes
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                OR = {
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = crownlander }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = crownlander }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_reachman_armor_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                is_male = yes
+				is_lowborn = no
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = reachman
+                }
+            }
+        }
+    }
+	
+    agot_clothing_reachman_armor_low_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Riverlands_Helm_3
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = reachman
+                }
+				has_fp2_dlc_trigger = no
+				is_lowborn = yes
+            }
+        }
+    }
+	
+    agot_clothing_reachman_armor_low_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp2_christian_war_nobility
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 205
+                exists = this
+                portrait_wear_helmet_trigger = yes
+                agot_portrait_low_armor_trigger = {
+                    CULTURE_INPUT = reachman
+                }
+				has_fp2_dlc_trigger = yes
+				is_lowborn = yes
+            }
+        }
+    }
+	
+	agot_clothing_riverman_armor_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Riverlands_Helm_3
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+				agot_portrait_low_armor_trigger = { CULTURE_INPUT = riverlander }
+				has_ep2_dlc_trigger = no
+				is_lowborn = yes
+            }
+        }
+    }
+	
+	agot_clothing_riverman_armor_low_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era3_war_nobility
+                accessory = m_headgear_sec_ep2_western_war_nob_01_com
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 205
+                portrait_wear_armor_trigger = yes
+                portrait_wear_helmet_trigger = yes
+				agot_portrait_low_armor_trigger = { CULTURE_INPUT = riverlander }
+				has_ep2_dlc_trigger = yes
+				is_lowborn = yes
+            }
+        }
+    }
+	
+    agot_clothing_riverman_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 210
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				has_pol_dlc_trigger = no
+				has_ep2_dlc_trigger = no
+				is_lowborn = no
+				OR = {
+				agot_portrait_low_armor_trigger = { CULTURE_INPUT = riverlander }
+				agot_portrait_high_armor_trigger = { CULTURE_INPUT = riverlander }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_riverman_armor_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 210
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				has_pol_dlc_trigger = no
+				has_ep2_dlc_trigger = yes
+				is_lowborn = no
+				OR = {
+				agot_portrait_low_armor_trigger = { CULTURE_INPUT = riverlander }
+				agot_portrait_high_armor_trigger = { CULTURE_INPUT = riverlander }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_riverman_armor_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = pol_war
+                accessory = m_headgear_sec_pol_era4_war_nob_01
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 210
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				has_pol_dlc_trigger = yes
+				is_lowborn = no
+				OR = {
+				agot_portrait_low_armor_trigger = { CULTURE_INPUT = riverlander }
+				agot_portrait_high_armor_trigger = { CULTURE_INPUT = riverlander }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_riverman_armor_4 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02_01
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 210
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				has_ep2_dlc_trigger = yes
+				is_lowborn = no
+				is_landed = yes
+				is_ruler = yes
+				OR = {
+				agot_portrait_low_armor_trigger = { CULTURE_INPUT = riverlander }
+				agot_portrait_high_armor_trigger = { CULTURE_INPUT = riverlander }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_riverman_armor_5 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Riverlands_Helm_3
+                range = { 0 1 }
+            }
+
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 215
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				OR = {
+					AND = {
+						prowess >= 20
+						is_agot_knight_trigger = yes
+					}
+					prowess >= 25
+				}
+                agot_portrait_high_armor_trigger = { CULTURE_INPUT = riverlander }
+            }
+        }
+    }
+	
+    agot_clothing_gallant_armor = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 270
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				is_agot_knight_trigger = yes
+				prowess >= 30
+				OR = {
+					has_trait = gallant
+					has_trait = just
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+				NOR = {
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = septon
+					has_trait = maester
+					has_trait = red_priest
+					has_trait = craven
+					has_trait = wroth
+					has_trait = sadistic
+					has_trait = rude
+					has_trait = uncouth
+					has_trait = arbitrary
+					has_trait = greedy
+					has_trait = deceitful
+					has_trait = callous
+					has_trait = gluttonous
+					has_trait = lustful
+					has_character_flag = canon_status_canon
+					has_culture = culture:high_valyrian
+					dynasty ?= dynasty:dynn_Rowan
+					dynasty ?= dynasty:dynn_Royce
+					dynasty ?= dynasty:dynn_Lannister
+				}
+            }
+        }
+    }
+	
+    agot_clothing_gallant_armor_stormlander = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Stormlands_Helm_3
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 275
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				is_agot_knight_trigger = yes
+				is_male = yes
+				prowess >= 30
+				OR = {
+					has_trait = gallant
+					has_trait = just
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+				NOR = {
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = septon
+					has_trait = maester
+					has_trait = red_priest
+					has_trait = craven
+					has_trait = wroth
+					has_trait = sadistic
+					has_trait = rude
+					has_trait = uncouth
+					has_trait = arbitrary
+					has_trait = greedy
+					has_trait = deceitful
+					has_trait = callous
+					has_trait = gluttonous
+					has_trait = lustful
+					has_character_flag = canon_status_canon
+					has_culture = culture:high_valyrian
+					dynasty ?= dynasty:dynn_Rowan
+					dynasty ?= dynasty:dynn_Royce
+					dynasty ?= dynasty:dynn_Lannister
+				}
+				OR = { 
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = stormlander }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = stormlander }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_gallant_armor_baratheon = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Stormlands_Helm_4
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 275
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				is_agot_knight_trigger = yes
+				is_male = yes
+				prowess >= 30
+				OR = {
+					has_trait = gallant
+					has_trait = just
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+				NOR = {
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = septon
+					has_trait = maester
+					has_trait = red_priest
+					has_trait = craven
+					has_trait = wroth
+					has_trait = sadistic
+					has_trait = rude
+					has_trait = uncouth
+					has_trait = arbitrary
+					has_trait = greedy
+					has_trait = deceitful
+					has_trait = callous
+					has_trait = gluttonous
+					has_trait = lustful
+					has_character_flag = canon_status_canon
+					has_culture = culture:high_valyrian
+					dynasty ?= dynasty:dynn_Rowan
+					dynasty ?= dynasty:dynn_Royce
+					dynasty ?= dynasty:dynn_Lannister
+				}
+				OR = { 
+					dynasty ?= dynasty:dynn_Baratheon
+					dynasty ?= dynasty:dynn_Durrandon
+				}
+            }
+        }
+    }
+	
+    agot_clothing_gallant_armor_dornish = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Dorne_Helm_3
+                accessory = male_headgear_secular_dorne_war_04
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 275
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				is_agot_knight_trigger = yes
+				prowess >= 30
+				OR = {
+					has_trait = gallant
+					has_trait = just
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+				NOR = {
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = septon
+					has_trait = maester
+					has_trait = red_priest
+					has_trait = craven
+					has_trait = wroth
+					has_trait = sadistic
+					has_trait = rude
+					has_trait = uncouth
+					has_trait = arbitrary
+					has_trait = greedy
+					has_trait = deceitful
+					has_trait = callous
+					has_trait = gluttonous
+					has_trait = lustful
+					has_character_flag = canon_status_canon
+					has_culture = culture:high_valyrian
+					dynasty ?= dynasty:dynn_Rowan
+					dynasty ?= dynasty:dynn_Royce
+					dynasty ?= dynasty:dynn_Lannister
+				}
+				OR = { 
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = stone_dornish }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = stone_dornish }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = stone_dornish }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = stone_dornish }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = stone_dornish }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = stone_dornish }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_gallant_armor_reachman = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Reach_Helm_3
+                accessory = male_headgear_secular_reach_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 275
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				is_agot_knight_trigger = yes
+				is_male = yes
+				prowess >= 30
+				OR = {
+					has_trait = gallant
+					has_trait = just
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+				NOR = {
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = septon
+					has_trait = maester
+					has_trait = red_priest
+					has_trait = craven
+					has_trait = wroth
+					has_trait = sadistic
+					has_trait = rude
+					has_trait = uncouth
+					has_trait = arbitrary
+					has_trait = greedy
+					has_trait = deceitful
+					has_trait = callous
+					has_trait = gluttonous
+					has_trait = lustful
+					has_character_flag = canon_status_canon
+					has_culture = culture:high_valyrian
+					dynasty ?= dynasty:dynn_Rowan
+					dynasty ?= dynasty:dynn_Royce
+					dynasty ?= dynasty:dynn_Lannister
+				}
+				OR = { 
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = reachman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = shieldman }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = honeywiner }
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = vineman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = reachman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = shieldman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = honeywiner }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = vineman }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_gallant_armor_westerlander = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = westerlands_war
+                accessory = male_headgear_secular_westerlands_war_03
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 275
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				is_agot_knight_trigger = yes
+				is_male = yes
+				prowess >= 30
+				OR = {
+					has_trait = gallant
+					has_trait = just
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+				NOR = {
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = septon
+					has_trait = maester
+					has_trait = red_priest
+					has_trait = craven
+					has_trait = wroth
+					has_trait = sadistic
+					has_trait = rude
+					has_trait = uncouth
+					has_trait = arbitrary
+					has_trait = greedy
+					has_trait = deceitful
+					has_trait = callous
+					has_trait = gluttonous
+					has_trait = lustful
+					has_character_flag = canon_status_canon
+					has_culture = culture:high_valyrian
+					dynasty ?= dynasty:dynn_Rowan
+					dynasty ?= dynasty:dynn_Royce
+					dynasty ?= dynasty:dynn_Lannister
+				}
+				OR = {
+					agot_portrait_low_armor_trigger = { CULTURE_INPUT = westerman }
+					agot_portrait_high_armor_trigger = { CULTURE_INPUT = westerman }
+				}
+            }
+        }
+    }
+	
+    agot_clothing_gallant_armor_winged = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_4
+                range = { 0 1 }
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 275
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				is_agot_knight_trigger = yes
+				is_male = yes
+				prowess >= 30
+				OR = {
+					has_trait = gallant
+					has_trait = just
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+				NOR = {
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = septon
+					has_trait = maester
+					has_trait = red_priest
+					has_trait = craven
+					has_trait = wroth
+					has_trait = sadistic
+					has_trait = rude
+					has_trait = uncouth
+					has_trait = arbitrary
+					has_trait = greedy
+					has_trait = deceitful
+					has_trait = callous
+					has_trait = gluttonous
+					has_trait = lustful
+					has_character_flag = canon_status_canon
+				}
+				OR = { 
+					dynasty ?= dynasty:dynn_Arryn
+					dynasty ?= dynasty:dynn_Mallister
+					dynasty ?= dynasty:dynn_Connington
+				}
+            }
+        }
+    }
+	
+    agot_clothing_gallant_armor_clegane = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = pol_war
+                accessory = m_headgear_sec_pol_era3_war_nob_01
+            }
+        }
+        outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 275
+                exists = this
+				portrait_wear_helmet_trigger = yes
+				is_agot_knight_trigger = yes
+				is_male = yes
+				prowess >= 30
+				OR = {
+					has_trait = gallant
+					has_trait = just
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+				NOR = {
+					has_trait = kingsguard
+					has_trait = nightswatch
+					has_trait = septon
+					has_trait = maester
+					has_trait = red_priest
+					has_trait = craven
+					has_trait = wroth
+					has_trait = sadistic
+					has_trait = rude
+					has_trait = uncouth
+					has_trait = arbitrary
+					has_trait = greedy
+					has_trait = deceitful
+					has_trait = callous
+					has_trait = gluttonous
+					has_trait = lustful
+					has_character_flag = canon_status_canon
+				}
+				dynasty ?= dynasty:dynn_Clegane
+				has_pol_dlc_trigger = yes
+            }
+        }
+    }
+	
+    agot_clothing_northman_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_ep2_dlc_trigger = no
+				has_character_modifier = northman_armor
+            }
+        }
+    }
+	
+    agot_clothing_northman_style_war_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_ep2_dlc_trigger = yes
+				has_character_modifier = northman_armor
+            }
+        }
+    }
+	
+    agot_clothing_northman_style_war_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_ep2_dlc_trigger = no
+				has_character_modifier = northman_armor
+            }
+        }
+    }
+	
+    agot_clothing_northman_style_war_high_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02_01
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 415
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_ep2_dlc_trigger = yes
+				has_character_modifier = northman_armor
+            }
+        }
+    }
+	
+    agot_clothing_ironborn_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp1_war
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = ironborn_armor
+            }
+        }
+    }
+	
+    agot_clothing_stormlander_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Stormlands_Helm_3
+                value = 1
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = stormlander_armor
+            }
+        }
+    }
+	
+    agot_clothing_stormlander_style_war_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				is_female = yes
+				has_character_modifier = stormlander_armor
+            }
+        }
+    }
+	
+    agot_clothing_stormlander_style_war_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Stormlands_Helm_3
+                value = 1
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_character_modifier = stormlander_armor
+            }
+        }
+    }
+	
+    agot_clothing_stormlander_style_war_high_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 415
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				is_female = yes
+				has_character_modifier = stormlander_armor
+            }
+        }
+    }
+	
+    agot_clothing_westerlander_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                value = 1
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = westerman_armor
+            }
+        }
+    }
+	
+    agot_clothing_westerlander_style_war_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				is_female = yes
+				has_character_modifier = westerman_armor
+            }
+        }
+    }
+	
+    agot_clothing_westerlander_style_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = westerlands_war
+                accessory = male_headgear_secular_westerlands_war_03
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_character_modifier = westerman_armor
+            }
+        }
+    }
+	
+    agot_clothing_westerlander_style_high_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 415
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				is_female = yes
+				has_character_modifier = westerman_armor
+            }
+        }
+    }
+	
+    agot_clothing_reachman_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                value = 1
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = reachman_armor
+            }
+        }
+    }
+	
+    agot_clothing_reachman_style_war_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				is_female = yes
+				has_character_modifier = reachman_armor
+            }
+        }
+    }
+	
+    agot_clothing_reachman_style_war_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Reach_Helm_3
+                accessory = male_headgear_secular_reach_war_03
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_character_modifier = reachman_armor
+            }
+        }
+    }
+	
+    agot_clothing_reachman_style_war_high_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 415
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				is_female = yes
+				has_character_modifier = reachman_armor
+            }
+        }
+    }
+	
+    agot_clothing_honeywiner_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                value = 1
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = honeywiner_armor
+            }
+        }
+    }
+	
+    agot_clothing_honeywiner_style_war_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				is_female = yes
+				has_character_modifier = honeywiner_armor
+            }
+        }
+    }
+	
+    agot_clothing_honeywiner_style_war_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Reach_Helm_3
+                accessory = male_headgear_secular_reach_war_03
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_character_modifier = honeywiner_armor
+            }
+        }
+    }
+	
+    agot_clothing_honeywiner_style_war_high_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 415
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				is_female = yes
+				has_character_modifier = honeywiner_armor
+            }
+        }
+    }
+	
+    agot_clothing_crownlander_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				has_ep2_dlc_trigger = no
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = crownlander_armor
+            }
+        }
+    }
+	
+    agot_clothing_crownlander_style_war_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				has_ep2_dlc_trigger = yes
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = crownlander_armor
+            }
+        }
+    }
+	
+    agot_clothing_crownlander_style_war_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				has_ep2_dlc_trigger = no
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_character_modifier = crownlander_armor
+            }
+        }
+    }
+	
+    agot_clothing_crownlander_style_war_high_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02_01
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 415
+				exists = this
+				has_ep2_dlc_trigger = yes
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_character_modifier = crownlander_armor
+            }
+        }
+    }
+	
+    agot_clothing_valeman_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                value = 1
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = valeman_armor
+            }
+        }
+    }
+	
+    agot_clothing_valeman_style_war_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				is_female = yes
+				has_character_modifier = valeman_armor
+            }
+        }
+    }
+	
+    agot_clothing_valeman_style_war_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Vale_Helm_3
+                value = 1
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_character_modifier = valeman_armor
+            }
+        }
+    }
+	
+    agot_clothing_valeman_style_war_high_f = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 415
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				is_female = yes
+				has_character_modifier = valeman_armor
+            }
+        }
+    }
+	
+    agot_clothing_riverlander_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_pol_dlc_trigger = no
+				has_ep2_dlc_trigger = no
+				has_character_modifier = riverman_armor
+            }
+        }
+    }
+	
+    agot_clothing_riverlander_style_war_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_pol_dlc_trigger = no
+				has_ep2_dlc_trigger = no
+				has_character_modifier = riverman_armor
+            }
+        }
+    }
+	
+    agot_clothing_riverlander_style_war_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 410
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_pol_dlc_trigger = no
+				has_ep2_dlc_trigger = yes
+				has_character_modifier = riverman_armor
+            }
+        }
+    }
+	
+    agot_clothing_riverlander_style_war_high_2 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era4_war_nobility
+                accessory = m_headgear_sec_ep2_western_era4_war_nob_02_01
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 415
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_pol_dlc_trigger = no
+				has_ep2_dlc_trigger = yes
+				has_character_modifier = riverman_armor
+            }
+        }
+    }
+	
+    agot_clothing_riverlander_style_war_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = pol_war
+                accessory = m_headgear_sec_pol_era4_war_nob_01
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 420
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_pol_dlc_trigger = yes
+				has_character_modifier = riverman_armor
+            }
+        }
+    }
+	
+    agot_clothing_riverlander_style_war_high_3 = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = pol_war
+                accessory = m_headgear_sec_pol_era4_war_nob_01
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 425
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				primary_title.tier >= tier_duchy
+				has_pol_dlc_trigger = yes
+				has_character_modifier = riverman_armor
+            }
+        }
+    }
+	
+    agot_clothing_essosi_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_high_03
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = essosi_armor
+            }
+        }
+    }
+	
+    agot_clothing_essosi_style_war_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = agot_most_headgears
+                accessory = braavosi_hat_03
+            }
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = essosi_armor
+            }
+        }
+    }
+	
+    agot_clothing_crannogman_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = no_headgear
+                range = { 0 1 }
+            }
+
+        }
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = crannogman_armor
+				has_cp4_dlc_trigger = yes
+            }
+        }
+    }
+	
+    agot_clothing_valyrian_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Valyrian_Helm_3
+                accessory = male_headgear_secular_valyrian_war_dynastic_03_high
+            }
+		}
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = valyrian_armor
+            }
+        }
+    }
+	
+    agot_clothing_stone_dornish_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Dorne_Helm_3_Dynamic
+				range = { 0 1 } # For the randomness to work correctly
+            }
+		}
+
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = stone_dornish_armor
+            }
+        }
+    }
+	
+    agot_clothing_sand_dornish_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Dorne_Helm_3_Copper_Dynamic
+                range = { 0 1 } # For the randomness to work correctly
+            }
+		}
+
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = sand_dornish_armor
+            }
+        }
+    }
+	
+    agot_clothing_salt_dornish_style_war = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = Dorne_Helm_3_Copper_Dynamic
+                range = { 0 1 } # For the randomness to work correctly
+            }
+		}
+
+		outfit_tags = { military_outfit }
+        weight = {
+            base = 0
+            modifier = {
+                add = 405
+				exists = this
+				portrait_wear_helmet_trigger = yes
+				has_character_modifier = salt_dornish_armor
+            }
+        }
+    }
+}

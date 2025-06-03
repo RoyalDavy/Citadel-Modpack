@@ -1,0 +1,103 @@
+﻿asoiaf_headgear_situational = {
+
+	usage = game
+	selection_behavior = weighted_random
+	priority = 5
+
+	asoiaf_headgear_kingsguard_default = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = asoiaf_kingsguard_default_helm
+				value = 1
+			}
+			accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = no_headgear
+                value = 1
+            }
+			accessory = {
+                mode = add
+                gene = additive_headgear
+                template = no_additive
+                value = 1
+            }
+			morph = {
+				mode = add
+				gene = gene_bs_ear_outward
+				template = ear_outward_neg
+				value = 1
+			}
+			morph = {
+				mode = add
+				gene = gene_bs_ear_bend
+				template = ear_both_bend_pos
+				value = 0
+			}
+			morph = { #to fix the ugly morphing
+				mode = modify
+				gene = gene_chin_forward
+				template = chin_forward_pos
+				value = 0.5
+			}
+			morph = { #to fix the ugly morphing
+				mode = modify
+				gene = gene_jaw_forward
+				template = jaw_forward_pos
+				value = 0.5
+			}
+		}
+		weight = {
+			base = -100
+			modifier = {
+				add = 1000
+				OR = {
+					AND = {
+						has_trait = kingsguard
+						portrait_wear_armor_trigger = yes
+						portrait_wear_helmet_trigger = yes
+					}
+					AND = {
+						any_equipped_character_artifact = { has_variable = kingsguard_armour }
+						portrait_wear_armor_trigger = yes
+						portrait_wear_helmet_trigger = yes
+					}
+				}
+				#has_game_rule = asoiaf_new_clothes_crownlands_rule_on
+				exists = global_var:app_enabled
+			}
+		}
+	}
+	asoiaf_dragonkeepers = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+                mode = add
+                gene = secondary_headgears
+                template = no_headgear
+                value = 1
+            }
+			accessory = {
+                mode = add
+                gene = additive_headgear
+                template = no_additive
+                value = 1
+            }
+		}
+		weight = {
+			base = 0
+			modifier = {
+                add = 250
+                has_court_position = head_dragonkeeper_court_position
+				has_game_rule = asoiaf_new_dnas_valyrian_rule_on
+            }
+		}
+	}
+}

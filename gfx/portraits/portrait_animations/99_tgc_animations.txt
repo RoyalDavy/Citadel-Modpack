@@ -1,0 +1,346 @@
+﻿tgc_banner_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_entry" torso = "throneRoom_twoHandedPassive1_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "throneRoom_twoHandedPassive1_entry" torso = "throneRoom_twoHandedPassive1_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+		
+			portrait_modifier = { # Equipped
+				animations_props = tgc_banner
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
+
+tgc_banner_dyn_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_entry" torso = "throneRoom_twoHandedPassive1_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "throneRoom_twoHandedPassive1_entry" torso = "throneRoom_twoHandedPassive1_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+		
+			portrait_modifier = { # Equipped
+				animations_props = tgc_banner_dyn
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
+
+tgc_skullPike_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_entry" torso = "throneRoom_twoHandedPassive1_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "throneRoom_twoHandedPassive1_entry" torso = "throneRoom_twoHandedPassive1_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+		
+			portrait_modifier = { # Equipped
+				animations_props = tgc_skullPike
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
+
+tgc_spearshield_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+			portrait_modifier = { # Equipped
+				trigger = {
+					any_equipped_character_artifact = { artifact_type = spear }
+				}
+				animations_props = artifact_spear_equipped_prop_left
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_shield_right
+			}
+
+			
+			portrait_modifier = { # Equipped
+				animations_props = artisan_spear_prop_left_hand
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_shield_right
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
+
+tgc_spearshield_blackfyre_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+			portrait_modifier = { # Equipped
+				trigger = {
+					any_equipped_character_artifact = { artifact_type = spear }
+				}
+				animations_props = artifact_spear_equipped_prop_left
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_blackfyre_shield_right
+			}
+
+			
+			portrait_modifier = { # Equipped
+				animations_props = artisan_spear_prop_left_hand
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_blackfyre_shield_right
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
+
+tgc_spearshield_targaryen_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+			portrait_modifier = { # Equipped
+				trigger = {
+					any_equipped_character_artifact = { artifact_type = spear }
+				}
+				animations_props = artifact_spear_equipped_prop_left
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_targ_shield_right
+			}
+
+			
+			portrait_modifier = { # Equipped
+				animations_props = artisan_spear_prop_left_hand
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_targ_shield_right
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
+
+###
+tgc_swordshield_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "marshal_shield" torso = "marshal_shield" }
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+			portrait_modifier = { # Equipped
+				trigger = {
+					any_equipped_character_artifact = { artifact_type = sword }
+				}
+				animations_props = artifact_sword_equipped_prop
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_shield_left
+			}
+
+
+			portrait_modifier = { # Equipped
+				animations_props = tgc_sword
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_shield_left
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
+
+###
+tgc_swordshield_blackfyre_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "marshal_shield" torso = "marshal_shield" }
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+			portrait_modifier = { # Equipped
+				trigger = {
+					any_equipped_character_artifact = { artifact_type = sword }
+				}
+				animations_props = artifact_sword_equipped_prop
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_blackfyre_shield_left
+			}
+
+
+			portrait_modifier = { # Equipped
+				animations_props = tgc_sword_blackfyre
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_blackfyre_shield_left
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
+
+tgc_swordshield_targ_idle = {
+	male = {
+		default = { head = "throneRoom_twoHandedPassive1_shield_entry" torso = "throneRoom_twoHandedPassive1_shield_entry" }
+
+		throneRoom_one_handed_passive_1= {
+			animation = { head = "marshal_shield" torso = "marshal_shield" }
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = yes				
+				}
+			}
+			portrait_modifier = { # Equipped
+				trigger = {
+					any_equipped_character_artifact = { artifact_type = sword }
+				}
+				animations_props = artifact_sword_equipped_prop
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_targ_shield_left
+			}
+
+
+			portrait_modifier = { # Equipped
+				animations_props = tgc_sword_blackfyre
+				animations = council_marshal_decal
+				animations = fat_additive
+				animations = dwarf_additive
+				animations = female_prop_fix_additive
+				animations_props = tgc_targ_shield_left
+			}
+		}
+	}
+	female = male
+	girl = male
+	boy = male
+}
