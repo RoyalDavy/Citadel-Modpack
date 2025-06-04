@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "horn_of_winter_01_mesh"
+	file = "horn_of_winter_01.mesh"
+
+	meshsettings = {
+		name = "HornShape"
+		index = 0
+		texture_diffuse = "ep1_generic_trophy_narwhal_01_diffuse.dds"
+		texture_normal = "ep1_generic_trophy_narwhal_01_normal.dds"
+		texture_specular = "ep1_generic_trophy_narwhal_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	meshsettings = {
+		name = "ep1_mena_spear_01_a_LOD0Shape"
+		index = 0
+		texture_diffuse = "ep1_mena_spear_01_a_diffuse.dds"
+		texture_normal = "ep1_mena_spear_01_a_normal.dds"
+		texture_specular = "ep1_mena_spear_01_a_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "horn_of_winter_01_entity"
+	pdxmesh = "horn_of_winter_01_mesh"
+}

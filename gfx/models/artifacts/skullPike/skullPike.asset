@@ -1,0 +1,102 @@
+pdxmesh = {
+	name = "skullPike_mesh"
+	file = "skullPike.mesh"
+
+	meshsettings = {
+		name = "bittersteel"
+		index = 0
+		texture_diffuse = "artifact_bittersteel_skull_diffuse.dds"
+		texture_normal = "artifact_bittersteel_skull_normal.dds"
+		texture_specular = "artifact_bittersteel_skull_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+
+	}
+	meshsettings = {
+		name = "daemon"
+		index = 0
+		texture_diffuse = "artifact_daemon_blackfyre_skull_diffuse.dds"
+		texture_normal = "artifact_daemon_blackfyre_skull_normal.dds"
+		texture_specular = "artifact_daemon_blackfyre_skull_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	meshsettings = {
+		name = "maelys"
+		index = 0
+		texture_diffuse = "artifact_maelys_blackfyre_skull_diffuse.dds"
+		texture_normal = "artifact_maelys_blackfyre_skull_normal.dds"
+		texture_specular = "artifact_maelys_blackfyre_skull_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+	meshsettings = {
+		name = "pike"
+		index = 0
+		texture_diffuse = "skullPike_diffuse.dds"
+		texture_normal = "skullPike_normal.dds"
+		texture_specular = "skullPike_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "skullPike_entity"
+	pdxmesh = "skullPike_mesh"
+}
+
+
+
+
+pdxmesh = {
+	name = "skullPike_court_mesh"
+	file = "skullPike_court.mesh"
+
+	meshsettings = {
+		name = "bittersteel"
+		index = 0
+		texture_diffuse = "artifact_bittersteel_skull_diffuse.dds"
+		texture_normal = "artifact_bittersteel_skull_normal.dds"
+		texture_specular = "artifact_bittersteel_skull_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+
+	}
+	meshsettings = {
+		name = "daemon"
+		index = 0
+		texture_diffuse = "artifact_daemon_blackfyre_skull_diffuse.dds"
+		texture_normal = "artifact_daemon_blackfyre_skull_normal.dds"
+		texture_specular = "artifact_daemon_blackfyre_skull_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	meshsettings = {
+		name = "maelys"
+		index = 0
+		texture_diffuse = "artifact_maelys_blackfyre_skull_diffuse.dds"
+		texture_normal = "artifact_maelys_blackfyre_skull_normal.dds"
+		texture_specular = "artifact_maelys_blackfyre_skull_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+	meshsettings = {
+		name = "pike"
+		index = 0
+		texture_diffuse = "skullPike_diffuse.dds"
+		texture_normal = "skullPike_normal.dds"
+		texture_specular = "skullPike_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+
+entity = {
+	name = "skullPike_court_entity"
+	pdxmesh = "skullPike_court_mesh"
+}
+

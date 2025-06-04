@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "severed_hand_mesh"
+	file = "severed_hand.mesh"
+
+	meshsettings = {
+		name = "severed_hand_handShape"
+		index = 0
+		texture_diffuse = "severed_hand_hand_diffuse.dds"
+		texture_normal = "severed_hand_hand_normal.dds"
+		texture_specular = "severed_hand_hand_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	
+	meshsettings = {
+		name = "severed_hand_jarShape"
+		index = 0
+		texture_diffuse = "severed_hand_jar_diffuse.dds"
+		texture_normal = "severed_hand_jar_normal.dds"
+		texture_specular = "severed_hand_jar_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "severed_hand_entity"
+	pdxmesh = "severed_hand_mesh"
+}

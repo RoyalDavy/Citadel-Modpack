@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "artifact_bittersteel_skull_mesh"
+	file = "artifact_bittersteel_skull.mesh"
+
+	meshsettings = {
+		name = "artifact_bittersteel_skullShape"
+		index = 0
+		texture_diffuse = "artifact_bittersteel_skull_diffuse.dds"
+		texture_normal = "artifact_bittersteel_skull_normal.dds"
+		texture_specular = "artifact_bittersteel_skull_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "artifact_bittersteel_skull_entity"
+	pdxmesh = "artifact_bittersteel_skull_mesh"
+}

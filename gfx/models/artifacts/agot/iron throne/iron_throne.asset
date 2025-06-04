@@ -1,0 +1,53 @@
+#################
+#	Meshes		#
+#################
+
+pdxmesh = {
+	name = "court_sevenkingdoms_ironthrone_mesh"
+	file = "court_sevenkingdoms_ironthrone.mesh"
+	scale = 40
+
+	meshsettings = {
+		name = "court_sevenkingdoms_ironthrone_mesh"
+		index = 0
+		texture_diffuse = "court_sevenkingdoms_ironthrone_diffuse.dds"
+		texture_normal = "court_sevenkingdoms_ironthrone_normal.dds"
+		texture_specular = "court_sevenkingdoms_ironthrone_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	meshsettings = {
+		name = "court_sevenkingdoms_ironthrone_swords_mesh"
+		index = 0
+		texture_diffuse = "court_sevenkingdoms_ironthrone_swords_diffuse.dds"
+		texture_normal = "court_sevenkingdoms_ironthrone_swords_normal.dds"
+		texture_specular = "court_sevenkingdoms_ironthrone_swords_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	meshsettings = {
+		name = "court_sevenkingdoms_ironthrone_swords001_mesh"
+		index = 0
+		texture_diffuse = "court_sevenkingdoms_ironthrone_swords_diffuse.dds"
+		texture_normal = "court_sevenkingdoms_ironthrone_swords_normal.dds"
+		texture_specular = "court_sevenkingdoms_ironthrone_swords_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+#################
+#	Entities	#
+#################
+
+entity = {
+	name = "court_sevenkingdoms_ironthrone_entity"
+	pdxmesh = "court_sevenkingdoms_ironthrone_mesh"
+	locator = { name = ruler_locator position = { 0 205 90 } }
+
+	game_data = {
+		throne_entity_user_data = {
+			animation = throne_room_ruler
+			use_throne_transform = no
+		}
+	}
+}

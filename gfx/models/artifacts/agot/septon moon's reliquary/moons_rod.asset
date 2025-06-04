@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "moons_rod_mesh"
+	file = "moons_rod.mesh"
+	
+	meshsettings = {
+		name = "moons_rodShape"
+		index = 0
+		texture_diffuse = "moons_rod_diffuse.dds"
+		texture_normal = "moons_rod_normal.dds"
+		texture_specular = "moons_rod_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "moons_rod_entity"
+	pdxmesh = "moons_rod_mesh"
+}

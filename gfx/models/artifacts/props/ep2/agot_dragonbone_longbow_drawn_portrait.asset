@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "agot_dragonbone_longbow_drawn_portrait_mesh"
+	file = "ep2_long_bow_01_a_drawn_portrait.mesh"
+
+	meshsettings = {
+		name = "ep2_long_bow_01_a_drawn_portraitShape"
+		index = 0
+		texture_diffuse = "agot_dragonbone_longbow_diffuse.dds"
+		texture_normal = "agot_dragonbone_longbow_normal.dds"
+		texture_specular = "agot_dragonbone_longbow_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "agot_dragonbone_longbow_drawn_portrait_entity"
+	pdxmesh = "agot_dragonbone_longbow_drawn_portrait_mesh"
+}

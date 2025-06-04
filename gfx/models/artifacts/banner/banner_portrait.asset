@@ -1,0 +1,45 @@
+pdxmesh = {
+	name = "banner_portrait_mesh"
+	file = "banner_portrait.mesh"
+
+	meshsettings = {
+		name = "banner"
+		index = 0
+		texture_diffuse = "tgc_banner_diffuse.dds"
+		texture_normal = "tgc_banner_normal.dds"
+		texture_specular = "tgc_banner_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "tgc_banner_entity"
+	pdxmesh = "banner_portrait_mesh"
+}
+
+pdxmesh = {
+	name = "banner_portrait_dyn_mesh"
+	file = "banner_portrait_dyn.mesh"
+
+	meshsettings = {
+		name = "banner"
+		index = 0
+		texture_diffuse = "tgc_banner_dyn_diffuse.dds"
+		texture_normal = "tgc_banner_normal.dds"
+		texture_specular = "tgc_banner_properties.dds"
+		shader = "portrait_attachment_with_coa"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "tgc_banner_dyn_entity"
+	pdxmesh = "banner_portrait_dyn_mesh"
+
+	game_data = {
+        portrait_entity_user_data = {
+			coa_mask = "gfx/models/tabletop/tgc_table/shared/tgc_banner_mask.dds"
+        }
+	}
+}

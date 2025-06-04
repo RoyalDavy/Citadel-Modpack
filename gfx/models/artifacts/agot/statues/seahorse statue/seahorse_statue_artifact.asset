@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "seahorse_statue_artifact_mesh"
+	file = "seahorse_statue_artifact.mesh"
+
+	meshsettings = {
+		name = "seahorse_statue_artifactShape"
+		index = 0
+		texture_diffuse = "seahorse_statue_artifact_diffuse.dds"
+		texture_normal = "seahorse_statue_artifact_normal.dds"
+		texture_specular = "seahorse_statue_artifact_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "seahorse_statue_artifact_entity"
+	pdxmesh = "seahorse_statue_artifact_mesh"
+}

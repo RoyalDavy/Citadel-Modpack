@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "artifact_viserra_mirror_mesh"
+	file = "artifact_viserra_mirror.mesh"
+
+	meshsettings = {
+		name = "artifact_viserra_mirrorShape"
+		index = 0
+		texture_diffuse = "artifact_viserra_mirror_diffuse.dds"
+		texture_normal = "artifact_viserra_mirror_normal.dds"
+		texture_specular = "artifact_viserra_mirror_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "artifact_viserra_mirror_entity"
+	pdxmesh = "artifact_viserra_mirror_mesh"
+}

@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "winebottle_03_mesh"
+	file = "winebottle_03.mesh"
+
+	meshsettings = {
+		name = "bottle"
+		index = 0
+		texture_diffuse = "wine_03_diffuse.dds"
+		texture_normal = "wine_03_normal.dds"
+		texture_specular = "wine_03_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	
+	meshsettings = {
+		name = "wine"
+		index = 0
+		texture_diffuse = "wine_diffuse.dds"
+		texture_normal = "wine_normal.dds"
+		texture_specular = "wine_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "winebottle_03_entity"
+	pdxmesh = "winebottle_03_mesh"
+}
