@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "letters_props_mesh"
+	file = "letters_props.mesh"
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "letter"
+		index = 0
+		texture_diffuse = "letter_diffuse.dds"
+		texture_normal = "letter_normal.dds"
+		texture_specular = "letter_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/court_scene.shader"
+	}	
+}
+
+entity = {
+	name = "letter_prop"
+	pdxmesh = "letters_props_mesh"
+}

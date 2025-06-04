@@ -1,0 +1,42 @@
+pdxmesh = {
+	name = "wallsShort_mapobject_mesh"
+	file = "wallsShort_mapobject.mesh"
+	scale = .3
+
+	meshsettings = {
+		name = "wallsShort_mapobjectShape"
+		index = 0
+		texture_diffuse = "walls_mapobject_diffuse.dds"
+		texture_normal = "walls_mapobject_normal.dds"
+		texture_specular = "walls_mapobject_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+pdxmesh = {
+	name = "wallsMossyShort_mapobject_mesh"
+	file = "wallsShort_mapobject.mesh"
+	scale = .3
+
+	meshsettings = {
+		name = "wallsShort_mapobjectShape"
+		index = 0
+		texture_diffuse = "wallsMossy_mapobject_diffuse.dds"
+		texture_normal = "wallsMossy_mapobject_normal.dds"
+		texture_specular = "wallsMossy_mapobject_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+}
+
+entity = {
+	name = "wallsShort_mapobject_entity"
+	pdxmesh = "wallsShort_mapobject_mesh"
+}
+
+entity = {
+	name = "wallsMossyShort_mapobject_entity"
+	pdxmesh = "wallsMossyShort_mapobject_mesh"
+}

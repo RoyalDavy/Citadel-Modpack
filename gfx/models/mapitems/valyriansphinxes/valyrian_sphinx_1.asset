@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "valyrian_sphinx_1_mesh"
+	file = "valyrian_sphinx_1.mesh"
+
+	meshsettings = {
+		name = "valyrian_sphinx_1Shape"
+		index = 0
+		texture_diffuse = "valyrian_sphinx_1_diffuse.dds"
+		texture_normal = "valyrian_sphinx_1_normal.dds"
+		texture_specular = "valyrian_sphinx_1_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "valyrian_sphinx_1_entity"
+	pdxmesh = "valyrian_sphinx_1_mesh"
+}

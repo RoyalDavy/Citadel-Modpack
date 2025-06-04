@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "mapitems_dragon_skeletons_mesh"
+	file = "mapitems_dragon_skeletons.mesh"
+	scale = .3
+
+	meshsettings = {
+		name = "mapitems_dragon_skeletonsShape"
+		index = 0
+		texture_diffuse = "mapitems_dragon_skeletons_diffuse.dds"
+		texture_normal = "mapitems_nagga_normal.dds"
+		texture_specular = "mapitems_nagga_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "mapitems_dragon_skeletons_entity"
+	pdxmesh = "mapitems_dragon_skeletons_mesh"
+}

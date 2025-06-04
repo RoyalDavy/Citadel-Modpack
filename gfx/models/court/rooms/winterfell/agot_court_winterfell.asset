@@ -1,0 +1,183 @@
+pdxmesh = {
+	name = "agot_court_winterfell_mesh"
+	file = "agot_court_winterfell.mesh"
+
+	meshsettings = {
+		name = "agot_court_winterfell_floorShape"
+		index = 0
+		texture_diffuse = "agot_materials_winterfell_floor_diffuse.dds"
+		texture_normal = "agot_materials_winterfell_floor_normal.dds"
+		texture_specular = "ep1_materials_floor_stone_01_a_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+	meshsettings = {
+		name = "agot_court_winterfell_roofShape"
+		index = 0
+		texture_diffuse = "agot_materials_winterfell_floor_diffuse.dds"
+		texture_normal = "agot_materials_winterfell_floor_normal.dds"
+		texture_specular = "ep1_materials_floor_stone_01_a_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+	meshsettings = {
+		name = "agot_court_winterfell_wallsShape"
+		index = 0
+		texture_diffuse = "agot_materials_winterfell_walls_diffuse.dds"
+		texture_normal = "ep1_materials_wall_stone_01_a_g1_normal.dds"
+		texture_specular = "ep1_materials_wall_stone_01_a_g1_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+	meshsettings = {
+		name = "agot_court_winterfell_decorationsShape"
+		index = 0
+		texture_diffuse = "agot_materials_winterfell_decorations_diffuse.dds"
+		texture_normal = "agot_materials_winterfell_decorations_normal.dds"
+		texture_specular = "agot_materials_winterfell_decorations_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+
+entity = {
+	name = "agot_court_winterfell_entity"
+	pdxmesh = "agot_court_winterfell_mesh"
+	default_state = "idle"
+	state = { 
+		 name = "idle" state_time = 5 looping = yes
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_01"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_02"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_03"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_04"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_05"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_06"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_07"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_08"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_09"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_10"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_11"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_12"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_13"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_14"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_15"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+		 event =
+		 {
+			 time = 0
+			 node = "wf_Candleflame_16"
+			 particle = "roco_candle"
+			 trigger_once = yes
+			 keep_particle = yes
+		 }
+	}
+}

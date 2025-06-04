@@ -1,0 +1,73 @@
+pdxmesh = {
+	name = "war_banner_velaryon_mesh"
+	file = "war_banner.mesh"
+
+	cull_distance = 50000
+
+	animation = { id = "war_banner_animation" type = "war_banner_idle.anim" }
+
+	meshsettings = {
+		name = "warbanner_shape"
+		index = 0
+		texture_diffuse = "velaryonBanner_diffuse.dds"
+		texture_normal = "warBanner_normal.dds"
+		texture_specular = "warBanner_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		
+		texture = { file = "detail_linen_02.dds" index = 6 }
+		additional_shader_defines = {
+			"DETAIL_TILING float4( 3.0f, 3.0f, 0.0f, 0.0f )"            
+			"DETAIL_ROUGHNESS_STRENGTH float(0.5f)"
+			"DETAIL_NORMAL_STRENGTH float(0.6f)"
+			}		
+	}
+}
+
+pdxmesh = {
+	name = "war_banner_targaryen_mesh"
+	file = "war_banner.mesh"
+
+	cull_distance = 50000
+
+	animation = { id = "war_banner_animation" type = "war_banner_idle.anim" }
+
+	meshsettings = {
+		name = "warbanner_shape"
+		index = 0
+		texture_diffuse = "targaryenBanner_diffuse.dds"
+		texture_normal = "warBanner_normal.dds"
+		texture_specular = "warBanner_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		
+		texture = { file = "detail_linen_02.dds" index = 6 }
+		additional_shader_defines = {
+			"DETAIL_TILING float4( 3.0f, 3.0f, 0.0f, 0.0f )"            
+			"DETAIL_ROUGHNESS_STRENGTH float(0.5f)"
+			"DETAIL_NORMAL_STRENGTH float(0.6f)"
+			}		
+	}
+}
+
+entity = {
+	name = "war_banner_targaryen_entity"
+	pdxmesh = "war_banner_targaryen_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "war_banner_animation"
+	}
+}
+
+entity = {
+	name = "war_banner_velaryon_entity"
+	pdxmesh = "war_banner_velaryon_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "war_banner_animation"
+	}
+}

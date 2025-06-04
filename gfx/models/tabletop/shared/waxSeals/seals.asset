@@ -1,0 +1,48 @@
+pdxmesh = {
+	name = "seals_mesh"
+	file = "seals.mesh"
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "seal1"
+		index = 0
+		texture_diffuse = "nw_seal_diffuse.dds"
+		texture_normal = "nw_seal_normal.dds"
+		texture_specular = "seal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+	meshsettings = {
+		name = "seal2"
+		index = 0
+		texture_diffuse = "lannister_seal_diffuse.dds"
+		texture_normal = "lannister_seal_normal.dds"
+		texture_specular = "seal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+	meshsettings = {
+		name = "seal3"
+		index = 0
+		texture_diffuse = "stark_seal_diffuse.dds"
+		texture_normal = "stark_seal_normal.dds"
+		texture_specular = "seal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+	meshsettings = {
+		name = "seal4"
+		index = 0
+		texture_diffuse = "tully_seal_diffuse.dds"
+		texture_normal = "tully_seal_normal.dds"
+		texture_specular = "seal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+}
+
+entity = {
+	name = "seals_prop"
+	pdxmesh = "seals_mesh"
+}

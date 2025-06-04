@@ -1,0 +1,118 @@
+pdxmesh = {
+	name = "agot_court_redkeep_1_mesh"
+	file = "agot_court_redkeep_1.mesh"
+
+	meshsettings = {
+		name = "RK_Flr_Mrbl"
+		index = 0
+		texture_diffuse = "RK_Flr_Mrbl_01_diffuse.dds"
+		texture_normal = "RK_Flr_Mrbl_01_normal.dds"
+		texture_specular = "RK_Flr_Mrbl_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+meshsettings = {
+		name = "RK_Lgt_Brk"
+		index = 0
+		texture_diffuse = "RK_Lgt_Brk_01_diffuse.dds"
+		texture_normal = "RK_Lgt_Brk_01_normal.dds"
+		texture_specular = "RK_Lgt_Brk_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+meshsettings = {
+		name = "RK_Misc"
+		index = 0
+		texture_diffuse = "RK_Misc_01_diffuse.dds"
+		texture_normal = "RK_Misc_01_normal.dds"
+		texture_specular = "RK_Misc_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+meshsettings = {
+		name = "RK_Pil"
+		index = 0
+		texture_diffuse = "RK_Pil_01_diffuse.dds"
+		texture_normal = "RK_Pil_01_normal.dds"
+		texture_specular = "RK_Pil_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+meshsettings = {
+		name = "RK_Pil_Brz_Rof_Dor"
+		index = 0
+		texture_diffuse = "RK_Pil_Brz_Rof_Dor_diffuse.dds"
+		texture_normal = "RK_Pil_Brz_Rof_Dor_normal.dds"
+		texture_specular = "RK_Pil_Brz_Rof_Dor_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+meshsettings = {
+		name = "RK_Wal_Brk"
+		index = 0
+		texture_diffuse = "RK_Wal_Brk_diffuse.dds"
+		texture_normal = "RK_Wal_Brk_normal.dds"
+		texture_specular = "RK_Wal_Brk_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+meshsettings = {
+		name = "RK_Wnd_Arch"
+		index = 0
+		texture_diffuse = "RK_Wnd_Arch_diffuse.dds"
+		texture_normal = "RK_Wnd_Arch_normal.dds"
+		texture_specular = "RK_Wnd_Arch_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+meshsettings = {
+		name = "RK_Wnd_Glas_Sky"
+		index = 0
+		texture_diffuse = "RK_Wnd_Glas_Sky_diffuse.dds"
+		texture_normal = "RK_Wnd_Glas_Sky_normal.dds"
+		texture_specular = "RK_Wnd_Glas_Sky_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	
+
+meshsettings = {
+		name = "RK_Wnd_Glas_Throne"
+		index = 0
+		texture_diffuse = "RK_Wnd_Glas_Throne_diffuse.dds"
+		texture_normal = "RK_Wnd_Glas_Throne_normal.dds"
+		texture_specular = "RK_Wnd_Glas_Throne_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+meshsettings = {
+		name = "RK_Wnd_Glas_Wal"
+		index = 0
+		texture_diffuse = "RK_Wnd_Glas_Wal_diffuse.dds"
+		texture_normal = "RK_Wnd_Glas_Wal_normal.dds"
+		texture_specular = "RK_Wnd_Glas_Wal_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	}
+
+
+entity = {
+	name = "agot_court_redkeep_1_entity"
+	pdxmesh = "agot_court_redkeep_1_mesh"
+}

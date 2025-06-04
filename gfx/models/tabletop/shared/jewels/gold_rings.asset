@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "gold_rings_mesh"
+	file = "gold_rings.mesh"
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "gold_rings"
+		index = 0
+		texture_diffuse = "gold_rings_diffuse.dds"
+		texture_normal = "gold_rings_normal.dds"
+		texture_specular = "gold_rings_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}		
+}
+
+entity = {
+	name = "gold_rings_prop"
+	pdxmesh = "gold_rings_mesh"
+}

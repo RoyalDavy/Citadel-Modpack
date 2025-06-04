@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "agot_court_casterlyrock_shadowmesh_mesh"
+	file = "agot_court_casterlyrock_shadowmesh.mesh"
+
+	meshsettings = {
+		name = "shadowmeshShape"
+		index = 0
+		texture_diffuse = "CR_caveleft_diffuse.dds"
+		texture_normal = "CR_caveleft_normal.dds"
+		texture_specular = "CR_caveleft_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	
+}
+
+
+entity = {
+	name = "agot_court_casterlyrock_shadowmesh_entity"
+	pdxmesh = "agot_court_casterlyrock_shadowmesh_mesh"
+}

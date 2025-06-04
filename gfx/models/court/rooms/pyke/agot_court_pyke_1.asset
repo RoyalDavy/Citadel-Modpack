@@ -1,0 +1,75 @@
+pdxmesh = {
+	name = "agot_court_pyke_1_mesh"
+	file = "agot_court_pyke_1.mesh"
+
+	meshsettings = {
+		name = "agot_court_pyke_floor_1Shape"
+		index = 0
+		texture_diffuse = "agot_materials_pyke_floor_diffuse_1.dds"
+		texture_normal = "agot_materials_pyke_floor_normal_1.dds"
+		texture_specular = "agot_materials_pyke_floor_properties_1.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+	meshsettings = {
+		name = "agot_court_pyke_ceiling_1Shape"
+		index = 0
+		texture_diffuse = "agot_materials_pyke_ceiling_diffuse_1.dds"
+		texture_normal = "agot_materials_pyke_ceiling_normal_1.dds"
+		texture_specular = "agot_materials_pyke_ceiling_properties_1.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+	meshsettings = {
+		name = "agot_court_pyke_decorations_1Shape"
+		index = 0
+		texture_diffuse = "agot_materials_pyke_decorations_diffuse.dds"
+		texture_normal = "agot_materials_pyke_decorations_normal.dds"
+		texture_specular = "agot_materials_pyke_decorations_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+	meshsettings = {
+		name = "agot_court_pyke_chestTorches_1Shape"
+		index = 0
+		texture_diffuse = "agot_materials_pyke_chestTorch_diffuse.dds"
+		texture_normal = "agot_materials_pyke_chestTorch_normal.dds"
+		texture_specular = "agot_materials_pyke_chestTorch_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+	meshsettings = {
+		name = "agot_court_pyke_walls_1Shape"
+		index = 0
+		texture_diffuse = "agot_materials_pyke_walls_diffuse_1.dds"
+		texture_normal = "agot_materials_pyke_walls_normal_1.dds"
+		texture_specular = "agot_materials_pyke_walls_properties_1.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+
+	meshsettings = {
+		name = "agot_court_pyke_windows_1Shape"
+		index = 0
+		texture_diffuse = "agot_materials_pyke_window_diffuse_12.dds"
+		texture_normal = "agot_materials_pyke_window_normal_12.dds"
+		texture_specular = "agot_materials_pyke_window_properties_12.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+
+entity = {
+	name = "agot_court_pyke_1_entity"
+	pdxmesh = "agot_court_pyke_1_mesh"
+}

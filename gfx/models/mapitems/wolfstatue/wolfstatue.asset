@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "wolfstatue_mesh"
+	file = "wolfstatue.mesh"
+
+	meshsettings = {
+		name = "wolfstatueShape"
+		index = 0
+		texture_diffuse = "wolfstatue_diffuse.dds"
+		texture_normal = "wolfstatue_normal.dds"
+		texture_specular = "wolfstatue_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "wolfstatue_entity"
+	pdxmesh = "wolfstatue_mesh"
+}

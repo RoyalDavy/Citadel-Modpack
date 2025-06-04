@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "mapitems_icebergs_03_mesh"
+	file = "mapitems_icebergs_03.mesh"
+	scale = 1
+
+	meshsettings = {
+		name = "mapitems_icebergs_03Shape"
+		index = 0
+		texture_diffuse = "mapitems_icebergs_diffuse.dds"
+		texture_normal = "mapitems_icebergs_normal.dds"
+		texture_specular = "mapitems_icebergs_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+
+entity = {
+	name = "mapitems_icebergs_03_entity"
+	pdxmesh = "mapitems_icebergs_03_mesh"
+}

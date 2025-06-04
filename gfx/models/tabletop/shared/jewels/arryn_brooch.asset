@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "arryn_brooch_mesh"
+	file = "arryn_brooch.mesh"
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "arryn_brooch"
+		index = 0
+		texture_diffuse = "arryn_brooch_diffuse.dds"
+		texture_normal = "arryn_brooch_normal.dds"
+		texture_specular = "arryn_brooch_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}		
+}
+
+entity = {
+	name = "arryn_brooch_prop"
+	pdxmesh = "arryn_brooch_mesh"
+}

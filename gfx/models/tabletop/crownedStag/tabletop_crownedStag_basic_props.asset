@@ -1,0 +1,295 @@
+pdxmesh = {
+	name = "tabletop_crowned_stag_basic_props_mesh"
+	file = "crowned_stag_table_props.mesh"
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "portrait_prop_BobbyBsBreastplateSquisherShape"
+		index = 0
+		texture_diffuse = "BobbyBsBreastplateSquisher_diffuse.dds"
+		texture_normal = "BobbyBsBreastplateSquisher_normal.dds"
+		texture_specular = "BobbyBsBreastplateSquisher_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+
+		texture = { file = "detail_metal_01.dds" index = 6 }
+		additional_shader_defines = {
+			"DETAIL_TILING float4( 1.0f, 1.0f, 0.0f, 0.0f )"            
+			"DETAIL_ROUGHNESS_STRENGTH float(0.0f)"
+			"DETAIL_NORMAL_STRENGTH float(0.10f)"
+			}
+	}
+
+	meshsettings = {
+		name = "western_basic_table_cup_wine_01Shape"
+		index = 0
+		texture_diffuse = "tabletop_wine_01_a_diffuse.dds"
+		texture_normal = "tabletop_wine_01_a_normal.dds"
+		texture_specular = "tabletop_wine_01_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "vs_dagger"
+		index = 0
+		texture_diffuse = "vs_dagger_diffuse.dds"
+		texture_normal = "vs_dagger_normal.dds"
+		texture_specular = "vs_dagger_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ep1_western_book_big_01_aShape"
+		index = 0
+		texture_diffuse = "ep1_western_book_big_01_a_diffuse.dds"
+		texture_normal = "ep1_western_book_big_01_a_normal.dds"
+		texture_specular = "ep1_western_book_big_01_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "coinsShape"
+		index = 0
+		texture_diffuse = "tabletop_western_coin_diffuse.dds"
+		texture_normal = "tabletop_western_coin_normal.dds"
+		texture_specular = "tabletop_western_coin_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ep1_western_pouch_basic_01Shape"
+		index = 0
+		texture_diffuse = "ep1_western_pouch_basic_01_a_diffuse.dds"
+		texture_normal = "ep1_western_pouch_basic_01_a_normal.dds"
+		texture_specular = "ep1_western_pouch_basic_01_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ep1_western_scroll_01_a_02Shape"
+		index = 0
+		texture_diffuse = "ep1_western_scroll_01_a_diffuse.dds"
+		texture_normal = "ep1_western_scroll_01_a_normal.dds"
+		texture_specular = "ep1_western_scroll_01_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ep1_western_box_medium_fancy_01_aShape"
+		index = 0
+		texture_diffuse = "ep1_western_box_medium_fancy_01_a_diffuse.dds"
+		texture_normal = "ep1_western_box_medium_fancy_01_a_normal.dds"
+		texture_specular = "ep1_western_box_medium_fancy_01_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+
+		texture = { file = "detail_metal_01.dds" index = 6 }
+		additional_shader_defines = {
+			"DETAIL_TILING float4( 1.0f, 1.0f, 0.0f, 0.0f )"            
+			"DETAIL_ROUGHNESS_STRENGTH float(0.0f)"
+			"DETAIL_NORMAL_STRENGTH float(0.5f)"
+			}
+	}
+
+	meshsettings = {
+		name = "quill"
+		index = 0
+		texture_diffuse = "ep1_tool_quill_diffuse.dds"
+		texture_normal = "ep1_tool_quill_normal.dds"
+		texture_specular = "ep1_tool_quill_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "writing_tools_meshShape"
+		index = 0
+		texture_diffuse = "tabletop_western_writing_tools_diffuse.dds"
+		texture_normal = "tabletop_western_writing_tools_normal.dds"
+		texture_specular = "tabletop_western_writing_tools_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "whiteBookCover"
+		index = 0
+		texture_diffuse = "white_book_diffuse.dds"
+		texture_normal = "white_book_normal.dds"
+		texture_specular = "white_book_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+	
+	meshsettings = {
+		name = "whiteBookPages"
+		index = 0
+		texture_diffuse = "bookOpenPages_diffuse.dds"
+		texture_normal = "bookOpenPages_normal.dds"
+		texture_specular = "bookOpenPages_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+	
+	meshsettings = {
+		name = "whiteBookLeftPage"
+		index = 0
+		texture_diffuse = "selmy_diffuse.dds"
+		texture_normal = "whitebook_page_normal.dds"
+		texture_specular = "whitebook_page_properties.dds"
+		shader = "standard_map_decoration_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+	
+	meshsettings = {
+		name = "whiteBookRightPage"
+		index = 0
+		texture_diffuse = "youngJamie_diffuse.dds"
+		texture_normal = "whitebook_page_normal.dds"
+		texture_specular = "whitebook_page_properties.dds"
+		shader = "standard_map_decoration_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "letters"
+		index = 0
+		texture_diffuse = "letter_diffuse.dds"
+		texture_normal = "letter_normal.dds"
+		texture_specular = "letter_properties.dds"
+		shader = "standard_map_decoration_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "seal1"
+		index = 0
+		texture_diffuse = "nw_seal_diffuse.dds"
+		texture_normal = "nw_seal_normal.dds"
+		texture_specular = "seal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+	
+	meshsettings = {
+		name = "seal2"
+		index = 0
+		texture_diffuse = "lannister_seal_diffuse.dds"
+		texture_normal = "lannister_seal_normal.dds"
+		texture_specular = "seal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+	
+	meshsettings = {
+		name = "seal3"
+		index = 0
+		texture_diffuse = "stark_seal_diffuse.dds"
+		texture_normal = "stark_seal_normal.dds"
+		texture_specular = "seal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "seal4"
+		index = 0
+		texture_diffuse = "tully_seal_diffuse.dds"
+		texture_normal = "tully_seal_normal.dds"
+		texture_specular = "seal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "box_shape"
+		index = 0
+		texture_diffuse = "eggbox_diffuse.dds"
+		texture_normal = "eggbox_normal.dds"
+		texture_specular = "eggbox_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "egg1_shape"
+		index = 0
+		texture_diffuse = "rhaegal_diffuse.dds"
+		texture_normal = "egg_normal.dds"
+		texture_specular = "rhaegal_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "egg2_shape"
+		index = 0
+		texture_diffuse = "drogon_diffuse.dds"
+		texture_normal = "egg_normal.dds"
+		texture_specular = "drogon_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "egg3_shape"
+		index = 0
+		texture_diffuse = "viserion_diffuse.dds"
+		texture_normal = "egg_normal.dds"
+		texture_specular = "viserion_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "rubies"
+		index = 0
+		texture_diffuse = "ruby_diffuse.dds"
+		texture_normal = "ruby_normal.dds"
+		texture_specular = "ruby_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "CrownOfRobertShape"
+		index = 0
+		texture_diffuse = "robertI_crown_diffuse.dds"
+		texture_normal = "robertI_crown_normal.dds"
+		texture_specular = "robertI_crown_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "handchainShape"
+		index = 0
+		texture_diffuse = "handchain_diffuse.dds"
+		texture_normal = "handchain_normal.dds"
+		texture_specular = "handchain_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}		
+
+	meshsettings = {
+		name = "stag"
+		index = 0
+		texture_diffuse = "stag_map_marker_diffuse.dds"
+		texture_normal = "stag_map_marker_normal.dds"
+		texture_specular = "stag_map_marker_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+}
+
+entity = {
+	name = "tabletop_crowned_stag_basic_props_entity"
+	pdxmesh = "tabletop_crowned_stag_basic_props_mesh"
+}

@@ -1,0 +1,118 @@
+pdxmesh = {
+	name = "tabletop_penny_kings_ground_props_mesh"
+	file = "penny_kings_table_ground_props.mesh"
+
+	cull_distance = 50000
+
+	meshsettings = {
+		name = "lava"
+		index = 0
+		texture_diffuse = "lava_diffuse.dds"
+		texture_normal = "lava_normal.dds"
+		texture_specular = "lava_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "pot1"
+		index = 0
+		texture_diffuse = "pot_bronze_diffuse.dds"
+		texture_normal = "pot_bronze_normal.dds"
+		texture_specular = "pot_bronze_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "pot2"
+		index = 0
+		texture_diffuse = "pot_bronze_diffuse.dds"
+		texture_normal = "pot_bronze_normal.dds"
+		texture_specular = "pot_bronze_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "pot3"
+		index = 0
+		texture_diffuse = "pot_bronze_diffuse.dds"
+		texture_normal = "pot_bronze_normal.dds"
+		texture_specular = "pot_bronze_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "pot4"
+		index = 0
+		texture_diffuse = "pot_bronze_diffuse.dds"
+		texture_normal = "pot_bronze_normal.dds"
+		texture_specular = "pot_bronze_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "pot5"
+		index = 0
+		texture_diffuse = "pot_bronze_diffuse.dds"
+		texture_normal = "pot_bronze_normal.dds"
+		texture_specular = "pot_bronze_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "egg1_shape"
+		index = 0
+		texture_diffuse = "dragon_egg_flame_diffuse.dds"
+		texture_normal = "dragon_egg_normal.dds"
+		texture_specular = "dragon_egg_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "egg2_shape"
+		index = 0
+		texture_diffuse = "dragon_egg_greengrey_diffuse.dds"
+		texture_normal = "dragon_egg_normal.dds"
+		texture_specular = "dragon_egg_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "egg3_shape"
+		index = 0
+		texture_diffuse = "dragon_egg_elaena_diffuse.dds"
+		texture_normal = "dragon_egg_normal.dds"
+		texture_specular = "dragon_egg_elaena_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "egg4_shape"
+		index = 0
+		texture_diffuse = "dragon_egg_pinkspot_diffuse.dds"
+		texture_normal = "dragon_egg_normal.dds"
+		texture_specular = "dragon_egg_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "egg5_shape"
+		index = 0
+		texture_diffuse = "dragon_egg_purplegold_diffuse.dds"
+		texture_normal = "dragon_egg_normal.dds"
+		texture_specular = "dragon_egg_properties.dds"
+		shader = "standard_map_decoration"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "tabletop_penny_kings_ground_props_entity"
+	pdxmesh = "tabletop_penny_kings_ground_props_mesh"
+}
