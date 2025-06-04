@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "robertI_crown_mesh"
+	file = "robertI_crown.mesh"
+
+	meshsettings = {
+		name = "CrownOfRobertShape" #Should be 'RobertICrownShape', but fixing the inconsistency breaks the headgear in-game.
+		index = 0
+		texture_diffuse = "robertI_crown_diffuse.dds"
+		texture_normal = "robertI_crown_normal.dds"
+		texture_specular = "robertI_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "robertI_crown_entity"
+	pdxmesh = "robertI_crown_mesh"
+}

@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "reach_crown_mesh"
+	file = "reach_crown.mesh"
+
+	meshsettings = {
+		name = "reach_crownShape"
+		index = 0
+		texture_diffuse = "reach_crown_diffuse.dds"
+		texture_normal = "reach_crown_normal.dds"
+		texture_specular = "reach_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "reach_crown_entity"
+	pdxmesh = "reach_crown_mesh"
+}

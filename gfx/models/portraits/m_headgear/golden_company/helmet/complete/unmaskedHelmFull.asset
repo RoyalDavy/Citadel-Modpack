@@ -1,0 +1,117 @@
+pdxmesh = {
+	name = "unmaskedHelmFull_mesh"
+	file = "unmaskedHelmFull.mesh"
+
+		
+	blend_shape = { id = "completeHelm_bs_fat"					type = "unmaskedHelmFull_bs_fat.mesh" }
+	blend_shape = { id = "completeHelm_bs_longBeard"				type = "unmaskedHelmFull_bs_longBeard.mesh" }
+
+	meshsettings = {
+		name = "helmet"
+		index = 0
+		texture_diffuse = "CaptainsHelm_diffuse.dds"
+		texture_normal = "CaptainsHelm_normal.dds"
+		texture_specular = "CaptainsHelm_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+	meshsettings = {
+		name = "cloth"
+		index = 0
+		texture_diffuse = "CaptainsHelm_diffuse.dds"
+		texture_normal = "CaptainsHelm_normal.dds"
+		texture_specular = "CaptainsHelm_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+	meshsettings = {
+		name = "top"
+		index = 0
+		texture_diffuse = "CaptainsHelm_diffuse.dds"
+		texture_normal = "CaptainsHelm_normal.dds"
+		texture_specular = "CaptainsHelm_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+}
+
+entity = {
+	name = "unmaskedHelmFull_entity"
+	pdxmesh = "unmaskedHelmFull_mesh"
+
+		
+	attribute = { name = "bs_fat_1"					blend_shape = "completeHelm_bs_fat" }
+	attribute = { name = "bs_long_beard"			blend_shape = "completeHelm_bs_longBeard" }
+
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_headgear/golden_company/CaptainsHelm_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "goldenCompany_standard_helm"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "unmaskedHelmFull_black_entity"
+	pdxmesh = "unmaskedHelmFull_mesh"
+
+		
+	attribute = { name = "bs_fat_1"					blend_shape = "completeHelm_bs_fat" }
+	attribute = { name = "bs_long_beard"			blend_shape = "completeHelm_bs_longBeard" }
+
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_headgear/golden_company/CaptainsHelm_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "goldenCompany_standard_helm_black"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "unmaskedHelmFull_blackfyre_entity"
+	pdxmesh = "unmaskedHelmFull_mesh"
+
+		
+	attribute = { name = "bs_fat_1"					blend_shape = "completeHelm_bs_fat" }
+	attribute = { name = "bs_long_beard"			blend_shape = "completeHelm_bs_longBeard" }
+
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_headgear/golden_company/CaptainsHelm_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "goldenCompany_standard_helm_blackfyre"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+
+entity = {
+	name = "unmaskedHelmFull_blackfyreAlt_entity"
+	pdxmesh = "unmaskedHelmFull_mesh"
+
+		
+	attribute = { name = "bs_fat_1"					blend_shape = "completeHelm_bs_fat" }
+	attribute = { name = "bs_long_beard"			blend_shape = "completeHelm_bs_longBeard" }
+
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_headgear/golden_company/CaptainsHelm_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "goldenCompany_standard_helm_blackfyreAlt"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+

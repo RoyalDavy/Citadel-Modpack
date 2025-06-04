@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "alysannecrown_mesh"
+	file = "alysannecrown.mesh"
+
+	meshsettings = {
+		name = "AlysanneCrownShape" 
+		index = 0
+		texture_diffuse = "alysannecrown_diffuse.dds"
+		texture_normal = "alysannecrown_normal.dds"
+		texture_specular = "alysannecrown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "alysannecrown_entity"
+	pdxmesh = "alysannecrown_mesh"
+}

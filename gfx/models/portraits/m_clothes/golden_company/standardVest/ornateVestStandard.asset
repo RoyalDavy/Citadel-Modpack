@@ -1,0 +1,128 @@
+pdxmesh = {
+	name = "standardVest_mesh"
+	file = "ornateVestStandardShoulders.mesh"
+
+
+	blend_shape = { id = "standardVest_bs_muscle"			type = "standardVest_bs_muscular.mesh" }
+	blend_shape = { id = "standardVest_bs_fat"			type = "standardVest_bs_fat.mesh" }
+	blend_shape = { id = "standardVest_bs_gaunt"			type = "standardVest_bs_gaunt.mesh" }
+	blend_shape = { id = "standardVest_bs_old"			type = "standardVest_bs_old.mesh" }
+	blend_shape = { id = "standardVest_bs_dwarf"			type = "standardVest_bs_dwarf.mesh" }
+	
+	meshsettings = {
+		name = "vest"
+		index = 0
+		texture_diffuse = "standardVest_diffuse.dds"
+		texture_normal = "standardVest_normal.dds"
+		texture_specular = "standardVest_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	
+	meshsettings = {
+		name = "straps"
+		index = 0
+		texture_diffuse = "standardVest_diffuse.dds"
+		texture_normal = "standardVest_normal.dds"
+		texture_specular = "standardVest_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	
+	meshsettings = {
+		name = "shoulders_standard"
+		index = 0
+		texture_diffuse = "standardVest_diffuse.dds"
+		texture_normal = "standardVest_normal.dds"
+		texture_specular = "standardVest_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+}
+
+entity = {
+	name = "standardVest_entity"
+	pdxmesh = "standardVest_mesh"
+
+	
+	attribute = { name = "bs_body_muscular_1"					blend_shape = "standardVest_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"					blend_shape = "standardVest_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "standardVest_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"					blend_shape = "standardVest_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "standardVest_bs_dwarf" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_clothes/golden_company/standardVest/standardVest_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "goldenCompany_standard"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+
+entity = {
+	name = "standardVest_black_entity"
+	pdxmesh = "standardVest_mesh"
+
+	
+	attribute = { name = "bs_body_muscular_1"					blend_shape = "standardVest_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"					blend_shape = "standardVest_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "standardVest_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"					blend_shape = "standardVest_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "standardVest_bs_dwarf" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_clothes/golden_company/standardVest/standardVest_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "goldenCompany_standard_black"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+
+entity = {
+	name = "standardVest_blackfyre_entity"
+	pdxmesh = "standardVest_mesh"
+
+	
+	attribute = { name = "bs_body_muscular_1"					blend_shape = "standardVest_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"					blend_shape = "standardVest_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "standardVest_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"					blend_shape = "standardVest_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "standardVest_bs_dwarf" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_clothes/golden_company/standardVest/standardVest_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "goldenCompany_standard_blackfyre"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "standardVest_blackfyreAlt_entity"
+	pdxmesh = "standardVest_mesh"
+
+	
+	attribute = { name = "bs_body_muscular_1"					blend_shape = "standardVest_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"					blend_shape = "standardVest_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "standardVest_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"					blend_shape = "standardVest_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "standardVest_bs_dwarf" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/m_clothes/golden_company/standardVest/standardVest_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "goldenCompany_standard_blackfyreAlt"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}

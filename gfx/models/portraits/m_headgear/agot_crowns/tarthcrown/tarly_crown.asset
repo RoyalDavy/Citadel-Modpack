@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "tarth_crown_mesh"
+	file = "tarth_crown.mesh"
+
+	meshsettings = {
+		name = "tarth_crownShape"
+		index = 0
+		texture_diffuse = "tarth_crown_diffuse.dds"
+		texture_normal = "tarth_crown_normal.dds"
+		texture_specular = "tarth_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "tarth_crown_entity"
+	pdxmesh = "tarth_crown_mesh"
+}

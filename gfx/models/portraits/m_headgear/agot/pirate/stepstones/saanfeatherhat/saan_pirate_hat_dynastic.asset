@@ -1,0 +1,39 @@
+pdxmesh = {
+	name = "saan_pirate_hat_dynastic_mesh"
+	file = "saan_pirate_hat.mesh"
+
+	meshsettings = {
+		name = "saan_pirate_hatShape"
+		index = 0
+		texture_diffuse = "saan_pirate_hat_diffuse.dds"
+		texture_normal = "saan_pirate_hat_normal.dds"
+		texture_specular = "saan_pirate_hat_properties.dds"
+		shader = "portrait_attachment_with_coa_and_variations"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+		meshsettings = {
+		name = "saan_pirate_hatShape"
+		index = 1
+		texture_diffuse = "m_headgear_secular_indian_hi_nob_01_diffuse.dds"
+		texture_normal = "m_headgear_secular_indian_hi_nob_01_normal.dds"
+		texture_specular = "m_headgear_secular_indian_hi_nob_01_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "saan_pirate_hat_dynastic_entity"
+	pdxmesh = "saan_pirate_hat_dynastic_mesh"
+
+	 game_data = {
+         portrait_entity_user_data = {
+		 	portrait_accessory = {
+		 		pattern_mask = "gfx/models/portraits/m_headgear/agot/pirate/stepstones/saanfeatherhat/saan_pirate_hat_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+		 		variation = "agot_pirate_feather_hat_01"	#A "variation" object in gfx/portraits/accessory_variations/
+		 	}
+			coa_mask = "gfx/models/portraits/m_headgear/agot/pirate/stepstones/saanfeatherhat/saan_pirate_hat_coa.dds"
+         }
+	 }
+}

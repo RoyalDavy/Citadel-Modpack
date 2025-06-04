@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "hightower_crown_mesh"
+	file = "hightower_crown.mesh"
+
+	meshsettings = {
+		name = "hightower_crownShape"
+		index = 0
+		texture_diffuse = "hightower_crown_diffuse.dds"
+		texture_normal = "hightower_crown_normal.dds"
+		texture_specular = "hightower_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "hightower_crown_entity"
+	pdxmesh = "hightower_crown_mesh"
+}

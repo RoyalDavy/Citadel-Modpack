@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "valyrian_crown1_mesh"
+	file = "valyrian_crown1.mesh"
+
+	meshsettings = {
+		name = "ValyrianCrownShape1"
+		index = 0
+		texture_diffuse = "valyrian_crown1_diffuse.dds"
+		texture_normal = "valyrian_crown1_normal.dds"
+		texture_specular = "valyrian_crown1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "valyrian_crown1_entity"
+	pdxmesh = "valyrian_crown1_mesh"
+}

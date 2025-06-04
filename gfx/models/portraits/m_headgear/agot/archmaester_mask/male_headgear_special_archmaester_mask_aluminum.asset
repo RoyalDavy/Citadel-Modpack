@@ -1,0 +1,26 @@
+pdxmesh = {
+	name = "male_headgear_special_archmaester_mask_aluminum_mesh"
+	file = "male_headgear_special_archmaester_mask_valyrian.mesh"
+
+		blend_shape = { id = "male_headgear_special_archmaester_mask_valyrian_bs_old"		type = "male_headgear_special_archmaester_mask_valyrian_bs_old.mesh" }
+		blend_shape = { id = "male_headgear_special_archmaester_mask_valyrian_bs_fat"		type = "male_headgear_special_archmaester_mask_valyrian_bs_fat.mesh" }
+
+	meshsettings = {
+		name = "male_headgear_special_archmaester_mask_valyrianShape"
+		index = 0
+		texture_diffuse = "archmaester_aluminum_diffuse.dds"
+		texture_normal = "archmaester_aluminum_normal.dds"
+		texture_specular = "archmaester_aluminum_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headgear_special_archmaester_mask_aluminum_entity"
+	pdxmesh = "male_headgear_special_archmaester_mask_aluminum_mesh"
+
+	attribute = { name = "bs_old"								blend_shape = "male_headgear_special_archmaester_mask_valyrian_bs_old" }
+	attribute = { name = "bs_fat_1"								blend_shape = "male_headgear_special_archmaester_mask_valyrian_bs_fat" }
+}
+

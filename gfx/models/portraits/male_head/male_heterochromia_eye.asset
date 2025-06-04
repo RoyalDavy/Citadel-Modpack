@@ -1,0 +1,240 @@
+pdxmesh = {
+	name = "male_heterochromia_eye_mesh"
+	file = "male_heterochromia_eye.mesh"
+
+	meshsettings = {
+		name = "male_heterochromia_eyeShape"
+		index = 0
+		texture_diffuse = "male_second_eye_diffuse.dds"
+		texture_normal = "male_eyes_heterochromia_normal.dds"
+		texture_specular = "male_eyes_heterochromia_properties.dds"
+		texture = { file = "male_eyes_ssao_color.dds" index = 3 }
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_green1_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_green_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_green2_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks2.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_green_02"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_blue1_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_blue_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_blue2_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks2.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_blue_02"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_grey_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_grey_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_brown1_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_brown_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_brown2_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks2.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_brown_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_brown3_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_brown_02"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_purple1_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_purple_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_purple2_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks2.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_purple_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_purple3_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_purple_02"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_purple4_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks2.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_purple_02"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_black1_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks2.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_black_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_black2_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_black_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+
+entity = {
+	name = "male_heterochromia_eye_red_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_red_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "male_heterochromia_eye_gold_entity"
+	pdxmesh = "male_heterochromia_eye_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/male_head/male_heterochromia_eye_masks.dds"    #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "eye_gold_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}

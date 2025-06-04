@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "greyjoy_crown_mesh"
+	file = "greyjoy_crown.mesh"
+
+	meshsettings = {
+		name = "greyjoy_crownShape"
+		index = 0
+		texture_diffuse = "greyjoy_crown_diffuse.dds"
+		texture_normal = "greyjoy_crown_normal.dds"
+		texture_specular = "greyjoy_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "greyjoy_crown_entity"
+	pdxmesh = "greyjoy_crown_mesh"
+}

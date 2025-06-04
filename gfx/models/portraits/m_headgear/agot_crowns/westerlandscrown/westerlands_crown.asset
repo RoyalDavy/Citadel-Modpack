@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "westerlands_crown_mesh"
+	file = "westerlands_crown.mesh"
+
+	meshsettings = {
+		name = "WesterlandCrownShape" #Should be 'WesterlandsCrownShape', but fixing the typo breaks the headgear in-game.
+		index = 0
+		texture_diffuse = "westerlands_crown_diffuse.dds"
+		texture_normal = "westerlands_crown_normal.dds"
+		texture_specular = "westerlands_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "westerlands_crown_entity"
+	pdxmesh = "westerlands_crown_mesh"
+}

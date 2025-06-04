@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "driftwood_crown_1_mesh"
+	file = "driftwood_crown_1.mesh"
+
+	meshsettings = {
+		name = "DriftwoodCrown1Shape"
+		index = 0
+		texture_diffuse = "driftwood_crown_1_diffuse.dds"
+		texture_normal = "driftwood_crown_1_normal.dds"
+		texture_specular = "driftwood_crown_1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "driftwood_crown_1_entity"
+	pdxmesh = "driftwood_crown_1_mesh"
+}

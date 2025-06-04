@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "crown_of_gardener_war_iron_mesh"
+	file = "crown_of_gardener_war_iron.mesh"
+
+	meshsettings = {
+		name = "crown_of_gardener_war_ironShape"
+		index = 0
+		texture_diffuse = "crown_of_gardener_war_iron_diffuse.dds"
+		texture_normal = "crown_of_gardener_war_iron_normal.dds"
+		texture_specular = "crown_of_gardener_war_iron_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "crown_of_gardener_war_iron_entity"
+	pdxmesh = "crown_of_gardener_war_iron_mesh"
+}
