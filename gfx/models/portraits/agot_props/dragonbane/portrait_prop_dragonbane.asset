@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "portrait_prop_dragonbane_mesh"
+	file = "portrait_prop_dragonbane.mesh"
+
+	meshsettings = {
+		name = "portrait_prop_dragonbaneShape"
+		index = 0
+		texture_diffuse = "portrait_prop_dragonbane_diffuse.dds"
+		texture_normal = "portrait_prop_dragonbane_normal.dds"
+		texture_specular = "portrait_prop_dragonbane_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_dragonbane_entity"
+	pdxmesh = "portrait_prop_dragonbane_mesh"
+}

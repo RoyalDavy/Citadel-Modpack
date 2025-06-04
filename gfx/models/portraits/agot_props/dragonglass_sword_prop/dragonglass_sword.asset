@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "dragonglass_sword_mesh"
+	file = "dragonglass_sword.mesh"
+	
+	meshsettings = {
+		name = "sword"
+		index = 0
+		texture_diffuse = "dragonglasssword_diffuse.dds"
+		texture_normal = "dragonglasssword_normal.dds"
+		texture_specular = "dragonglasssword_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+
+entity = {
+	name = "dragonglass_sword_01_entity"
+	pdxmesh = "dragonglass_sword_mesh"
+}

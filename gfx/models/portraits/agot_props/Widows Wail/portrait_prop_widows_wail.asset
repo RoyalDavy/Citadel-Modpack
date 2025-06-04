@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "portrait_prop_widows_wail_mesh"
+	file = "portrait_prop_widows_wail.mesh"
+
+	meshsettings = {
+		name = "portrait_prop_widows_wailShape"
+		index = 0
+		texture_diffuse = "widowswail_diffuse.dds"
+		texture_normal = "widowswail_normal.dds"
+		texture_specular = "widowswail_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_widows_wail_entity"
+	pdxmesh = "portrait_prop_widows_wail_mesh"
+}

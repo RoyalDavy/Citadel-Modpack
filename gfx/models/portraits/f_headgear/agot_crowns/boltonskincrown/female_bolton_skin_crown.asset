@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "female_bolton_skin_crown_mesh"
+	file = "female_bolton_skin_crown.mesh"
+
+	meshsettings = {
+		name = "female_BoltonSkinCrownShape"
+		index = 0
+		texture_diffuse = "bolton_skin_crown_diffuse.dds"
+		texture_normal = "bolton_skin_crown_normal.dds"
+		texture_specular = "bolton_skin_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_bolton_skin_crown_entity"
+	pdxmesh = "female_bolton_skin_crown_mesh"
+}

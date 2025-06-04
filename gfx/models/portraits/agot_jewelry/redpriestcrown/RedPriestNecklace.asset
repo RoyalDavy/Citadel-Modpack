@@ -1,0 +1,31 @@
+pdxmesh = {
+	name = "RedPriestNecklace_mesh"
+	file = "RedPriestNecklace.mesh"
+	blend_shape = { id = "RedPriestNecklace_bs_gaunt"				type = "RedPriestNecklace_bs_gaunt.mesh" }
+	blend_shape = { id = "RedPriestNecklace_bs_fat"				type = "RedPriestNecklace_bs_fat.mesh" }
+	blend_shape = { id = "RedPriestNecklace_bs_old"				type = "RedPriestNecklace_bs_old.mesh" }
+	blend_shape = { id = "RedPriestNecklace_bs_dwarf"				type = "RedPriestNecklace_bs_dwarf.mesh" }
+
+	meshsettings = {
+		name = "RedPriestNecklace_Shape"
+		index = 0
+		texture_diffuse = "RedPriestNecklace_diffuse.dds"
+		texture_normal = "RedPriestNecklace_normal.dds"
+		texture_specular = "RedPriestNecklace_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+
+
+
+entity = {
+	name = "red_priest_necklace_sphere_01"
+	pdxmesh = "RedPriestNecklace_mesh"
+
+	attribute = { name = "bs_gaunt_1"					blend_shape = "RedPriestNecklace_bs_gaunt" }
+	attribute = { name = "bs_fat_1"					blend_shape = "RedPriestNecklace_bs_fat" }
+	attribute = { name = "bs_old_1"					blend_shape = "RedPriestNecklace_bs_old" }
+	attribute = { name = "bs_dwarf_1"					blend_shape = "RedPriestNecklace_bs_dwarf" }
+}

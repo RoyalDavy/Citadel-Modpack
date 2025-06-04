@@ -1,0 +1,48 @@
+pdxmesh = {
+	name = "forrester_prop_mesh"
+	file = "forrester_prop.mesh"
+
+	meshsettings = {
+		name = "forrester_exporterShape"
+		index = 0
+		texture_diffuse = "forrester_diffuse.dds"
+		texture_normal = "forrester_normal.dds"
+		texture_specular = "forrester_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "forrester_entity"
+	pdxmesh = "forrester_prop_mesh"
+}
+
+pdxmesh = {
+	name = "forrester_prop_a_mesh"
+	file = "forrester_prop_a.mesh"
+
+	meshsettings = {
+		name = "forrester_exporterShape"
+		index = 0
+		texture_diffuse = "forrester_diffuse.dds"
+		texture_normal = "forrester_normal.dds"
+		texture_specular = "forrester_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	meshsettings = {
+		name = "rack"
+		index = 0
+		texture_diffuse = "ep1_western_weaponrack_01_diffuse.dds"
+		texture_normal = "ep1_western_weaponrack_01_normal.dds"
+		texture_specular = "ep1_western_weaponrack_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "forrester_a_entity"
+	pdxmesh = "forrester_prop_a_mesh"
+}

@@ -1,0 +1,26 @@
+pdxmesh = {
+	name = "quaithe_mask_mesh"
+	file = "quaithe_mask.mesh"
+
+		blend_shape = { id = "quaithe_mask_bs_old"		type = "quaithe_mask_bs_old.mesh" }
+		blend_shape = { id = "quaithe_mask_bs_fat"		type = "quaithe_mask_bs_fat.mesh" }
+
+	meshsettings = {
+		name = "quaithe_maskShape"
+		index = 0
+		texture_diffuse = "quaithe_mask_diffuse.dds"
+		texture_normal = "quaithe_mask_normal.dds"
+		texture_specular = "quaithe_mask_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "quaithe_mask_entity"
+	pdxmesh = "quaithe_mask_mesh"
+
+	attribute = { name = "bs_old"								blend_shape = "quaithe_mask_bs_old" }
+	attribute = { name = "bs_fat_1"								blend_shape = "quaithe_mask_bs_fat" }
+}
+

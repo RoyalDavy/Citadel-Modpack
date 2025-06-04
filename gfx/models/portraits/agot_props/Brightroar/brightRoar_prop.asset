@@ -1,0 +1,48 @@
+pdxmesh = {
+	name = "brightRoar_prop_mesh"
+	file = "brightRoar_prop.mesh"
+
+	meshsettings = {
+		name = "brightRoar_exporterShape"
+		index = 0
+		texture_diffuse = "brightRoar_diffuse.dds"
+		texture_normal = "brightRoar_normal.dds"
+		texture_specular = "brightRoar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "brightroar_entity"
+	pdxmesh = "brightRoar_prop_mesh"
+}
+
+pdxmesh = {
+	name = "brightRoar_prop_a_mesh"
+	file = "brightRoar_prop_a.mesh"
+
+	meshsettings = {
+		name = "brightRoar_exporterShape"
+		index = 0
+		texture_diffuse = "brightRoar_diffuse.dds"
+		texture_normal = "brightRoar_normal.dds"
+		texture_specular = "brightRoar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	meshsettings = {
+		name = "rack"
+		index = 0
+		texture_diffuse = "ep1_western_weaponrack_01_diffuse.dds"
+		texture_normal = "ep1_western_weaponrack_01_normal.dds"
+		texture_specular = "ep1_western_weaponrack_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "brightroar_a_entity"
+	pdxmesh = "brightRoar_prop_a_mesh"
+}

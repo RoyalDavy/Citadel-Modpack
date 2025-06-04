@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "female_aegonIII_crown_mesh"
+	file = "female_aegonIII_crown.mesh"
+
+	meshsettings = {
+		name = "female_AegonIIICrownShape"
+		index = 0
+		texture_diffuse = "aegonIII_crown_diffuse.dds"
+		texture_normal = "aegonIII_crown_normal.dds"
+		texture_specular = "aegonIII_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_aegonIII_crown_entity"
+	pdxmesh = "female_aegonIII_crown_mesh"
+}

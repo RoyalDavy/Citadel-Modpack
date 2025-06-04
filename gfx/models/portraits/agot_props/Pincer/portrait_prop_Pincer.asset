@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "portrait_prop_Pincer_mesh"
+	file = "portrait_prop_Pincer.mesh"
+
+	meshsettings = {
+		name = "portrait_prop_PincerShape"
+		index = 0
+		texture_diffuse = "Pincer_diffuse.dds"
+		texture_normal = "Pincer_normal.dds"
+		texture_specular = "Pincer_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_Pincer_entity"
+	pdxmesh = "portrait_prop_Pincer_mesh"
+}

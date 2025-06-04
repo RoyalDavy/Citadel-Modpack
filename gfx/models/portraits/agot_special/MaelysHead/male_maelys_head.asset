@@ -1,0 +1,31 @@
+pdxmesh = {
+	name = "maelys_head_mesh"
+	file = "male_maelys_head.mesh"
+
+	meshsettings = {
+		name = "maelys_headShape"
+		index = 0
+		texture_diffuse = "maelys_head_diffuse.dds"
+		texture_normal = "maelys_head_normal.dds"
+		texture_specular = "maelys_head_properties.dds"
+		shader = "portrait_skin_no_decal"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "maelys_head_entity"
+	pdxmesh = "maelys_head_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+            color_mask_remap_interval = {
+                interval = {0.0 1.0}
+            }
+			portrait_decal = {
+				body_part = head
+			}
+        }
+    }
+
+}

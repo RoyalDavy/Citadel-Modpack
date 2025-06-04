@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "portrait_prop_Defiance_mesh"
+	file = "portrait_prop_Defiance.mesh"
+
+	meshsettings = {
+		name = "portrait_prop_DefianceShape"
+		index = 0
+		texture_diffuse = "portrait_prop_Defiance_diffuse.dds"
+		texture_normal = "portrait_prop_Defiance_normal.dds"
+		texture_specular = "portrait_prop_Defiance_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_Defiance_entity"
+	pdxmesh = "portrait_prop_Defiance_mesh"
+}

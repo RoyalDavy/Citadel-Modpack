@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "ladyForlon_prop_mesh"
+	file = "ladyForlon_prop.mesh"
+
+	meshsettings = {
+		name = "ladyForlon_exporterShape"
+		index = 0
+		texture_diffuse = "lady_diffuse.dds"	
+		texture_normal = "lady_normal.dds"
+		texture_specular = "lady_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "ladyForlon_prop_entity"
+	pdxmesh = "ladyForlon_prop_mesh"
+}

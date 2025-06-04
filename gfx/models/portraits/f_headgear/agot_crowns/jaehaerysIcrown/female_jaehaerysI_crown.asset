@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "female_jaehaerysI_crown_mesh"
+	file = "female_jaehaerysI_crown.mesh"
+
+	meshsettings = {
+		name = "female_JaehaerysCrownShape" #Should be 'JaehaerysICrownShape', but fixing the inconsistency breaks the headgear in-game.
+		index = 0
+		texture_diffuse = "jaehaerysI_crown_diffuse.dds"
+		texture_normal = "jaehaerysI_crown_normal.dds"
+		texture_specular = "jaehaerysI_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_jaehaerysI_crown_entity"
+	pdxmesh = "female_jaehaerysI_crown_mesh"
+}

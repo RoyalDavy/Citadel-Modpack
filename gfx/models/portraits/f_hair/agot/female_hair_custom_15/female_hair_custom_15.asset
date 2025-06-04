@@ -1,0 +1,88 @@
+pdxmesh = {
+	name = "female_hair_custom_15_mesh"
+	file = "female_hair_custom_15.mesh"
+
+	meshsettings = {
+		name = "female_hair_custom_15Shape"
+		index = 0
+		texture_diffuse = "f_hair_western_03_diffuse.dds"
+		texture_normal = "f_hair_western_03_normal.dds"
+		texture_specular = "f_hair_western_03_properties.dds"
+		texture = { file = "black_ssao_color.dds" index = 3 }			
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	meshsettings = {
+		name = "female_hair_custom_15_1Shape"
+		index = 0
+		texture_diffuse = "f_hair_fp2_iberian_muslim_01_diffuse.dds"
+		texture_normal = "f_hair_fp2_iberian_muslim_01_normal.dds"
+		texture_specular = "f_hair_fp2_iberian_muslim_01_properties.dds"
+		texture = { file = "black_ssao_color.dds" index = 3 }			
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+		meshsettings = {
+		name = "female_hair_custom_15_2Shape"
+		index = 0
+		texture_diffuse = "f_hair_western_08_diffuse.dds"
+		texture_normal = "f_hair_western_08_normal.dds"
+		texture_specular = "f_hair_western_08_properties.dds"
+		texture = { file = "black_ssao_color.dds" index = 3 }			
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+		meshsettings = {
+		name = "female_hair_custom_15_3Shape"
+		index = 0
+		texture_diffuse = "f_hair_western_08_diffuse.dds"
+		texture_normal = "f_hair_western_08_normal.dds"
+		texture_specular = "f_hair_western_08_properties.dds"
+		texture = { file = "black_ssao_color.dds" index = 3 }			
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+		meshsettings = {
+		name = "female_hair_custom_15_4Shape"
+		index = 0
+		texture_diffuse = "f_hair_western_08_diffuse.dds"
+		texture_normal = "f_hair_western_08_normal.dds"
+		texture_specular = "f_hair_western_08_properties.dds"
+		texture = { file = "black_ssao_color.dds" index = 3 }			
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+		meshsettings = {
+		name = "female_hair_custom_15_5Shape"
+		index = 0
+		texture_diffuse = "f_hair_western_08_diffuse.dds"
+		texture_normal = "f_hair_western_08_normal.dds"
+		texture_specular = "f_hair_western_08_properties.dds"
+		texture = { file = "black_ssao_color.dds" index = 3 }			
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+		meshsettings = {
+		name = "female_hair_custom_15_6Shape"
+		index = 0
+		texture_diffuse = "f_hair_fp2_iberian_christian_01_diffuse.dds"
+		texture_normal = "f_hair_fp2_iberian_christian_01_normal.dds"
+		texture_specular = "f_hair_fp2_iberian_christian_01_properties.dds"
+		texture = { file = "black_ssao_color.dds" index = 3 }			
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_hair_custom_15_entity"
+	pdxmesh = "female_hair_custom_15_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			color_mask_remap_interval = {
+				interval = {0.0 1.0}
+			}
+		}
+	}		
+}

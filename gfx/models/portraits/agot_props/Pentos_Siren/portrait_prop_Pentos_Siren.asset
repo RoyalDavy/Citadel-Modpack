@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "portrait_prop_Pentos_Siren_mesh"
+	file = "portrait_prop_Pentos_Siren.mesh"
+
+	meshsettings = {
+		name = "portrait_prop_Pentos_SirenShape"
+		index = 0
+		texture_diffuse = "agot_VS_Pentos_Siren_diffuse.dds"
+		texture_normal = "agot_VS_Pentos_Siren_normal.dds"
+		texture_specular = "agot_VS_Pentos_Siren_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_Pentos_Siren_entity"
+	pdxmesh = "portrait_prop_Pentos_Siren_mesh"
+}

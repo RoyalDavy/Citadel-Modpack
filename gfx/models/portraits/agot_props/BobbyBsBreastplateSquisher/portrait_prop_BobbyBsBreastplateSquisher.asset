@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "portrait_prop_BobbyBsBreastplateSquisher_mesh"
+	file = "portrait_prop_BobbyBsBreastplateSquisher.mesh"
+
+	meshsettings = {
+		name = "portrait_prop_BobbyBsBreastplateSquisherShape"
+		index = 0
+		texture_diffuse = "BobbyBsBreastplateSquisher_diffuse.dds"
+		texture_normal = "BobbyBsBreastplateSquisher_normal.dds"
+		texture_specular = "BobbyBsBreastplateSquisher_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_BobbyBsBreastplateSquisher_entity"
+	pdxmesh = "portrait_prop_BobbyBsBreastplateSquisher_mesh"
+}
+ 

@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "sword_swordfish_mesh"
+	file = "sword_swordfish.mesh"
+
+	meshsettings = {
+		name = "sword_swordfishShape"
+		index = 0
+		texture_diffuse = "sword_swordfish_diffuse.dds"
+		texture_normal = "sword_swordfish_normal.dds"
+		texture_specular = "sword_swordfish_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "sword_swordfish_entity"
+	pdxmesh = "sword_swordfish_mesh"
+}

@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "portrait_prop_Wyrmfang_mesh"
+	file = "portrait_prop_Wyrmfang.mesh"
+
+	meshsettings = {
+		name = "portrait_prop_WyrmfangShape"
+		index = 0
+		texture_diffuse = "portrait_prop_Wyrmfang_diffuse.dds"
+		texture_normal = "portrait_prop_Wyrmfang_normal.dds"
+		texture_specular = "portrait_prop_Wyrmfang_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_Wyrmfang_entity"
+	pdxmesh = "portrait_prop_Wyrmfang_mesh"
+}

@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "female_umber_crown_mesh"
+	file = "female_umber_crown.mesh"
+
+	meshsettings = {
+		name = "female_umber_crownShape"
+		index = 0
+		texture_diffuse = "umber_crown_diffuse.dds"
+		texture_normal = "umber_crown_normal.dds"
+		texture_specular = "umber_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_umber_crown_entity"
+	pdxmesh = "female_umber_crown_mesh"
+}

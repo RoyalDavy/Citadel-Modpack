@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "male_beard_custom_31_mesh"
+	file = "male_beard_custom_31.mesh"
+
+	meshsettings = {
+		name = "male_beard_custom_31Shape"
+		index = 0
+		texture_diffuse = "male_beard_custom_31_diffuse.dds"
+		texture_normal = "male_beard_custom_31_normal.dds"
+		texture_specular = "male_beard_custom_31_properties.dds"
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	meshsettings = {
+		name = "male_beard_custom_31_1Shape"
+		index = 0
+		texture_diffuse = "male_beard_custom_31_1_diffuse.dds"
+		texture_normal = "male_beard_custom_31_1_normal.dds"
+		texture_specular = "male_beard_custom_31_1_properties.dds"
+		shader = "portrait_hair_opaque"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_beard_custom_31_entity"
+	pdxmesh = "male_beard_custom_31_mesh"
+}

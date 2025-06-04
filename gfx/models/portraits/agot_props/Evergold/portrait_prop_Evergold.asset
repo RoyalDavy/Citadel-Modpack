@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "portrait_prop_Evergold_mesh"
+	file = "portrait_prop_Evergold.mesh"
+
+	meshsettings = {
+		name = "portrait_prop_EvergoldShape"
+		index = 0
+		texture_diffuse = "portrait_prop_Evergold_diffuse.dds"
+		texture_normal = "portrait_prop_Evergold_normal.dds"
+		texture_specular = "portrait_prop_Evergold_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_Evergold_entity"
+	pdxmesh = "portrait_prop_Evergold_mesh"
+}

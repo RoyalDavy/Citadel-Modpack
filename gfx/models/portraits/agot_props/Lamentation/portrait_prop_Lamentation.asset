@@ -1,0 +1,20 @@
+
+pdxmesh = {
+	name = "portrait_prop_Lamentation_mesh"
+	file = "portrait_prop_Lamentation.mesh"
+
+	meshsettings = {
+		name = "vs_lamentation"
+		index = 0
+		texture_diffuse = "portrait_prop_Lamentation_diffuse.dds"
+		texture_normal = "portrait_prop_Lamentation_normal.dds"
+		texture_specular = "portrait_prop_Lamentation_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "portrait_prop_Lamentation_entity"
+	pdxmesh = "portrait_prop_Lamentation_mesh"
+}

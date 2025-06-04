@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "female_reed_crown_mesh"
+	file = "female_reed_crown.mesh"
+
+	meshsettings = {
+		name = "female_reed_crownShape"
+		index = 0
+		texture_diffuse = "reed_crown_diffuse.dds"
+		texture_normal = "reed_crown_normal.dds"
+		texture_specular = "reed_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_reed_crown_entity"
+	pdxmesh = "female_reed_crown_mesh"
+}

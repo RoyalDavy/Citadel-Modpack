@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "female_stormlands_crown_mesh"
+	file = "female_stormlands_crown.mesh"
+
+	meshsettings = {
+		name = "female_StormlandCrownShape" #Should be 'StormlandsCrownShape', but fixing the typo breaks the headgear in-game.
+		index = 0
+		texture_diffuse = "stormlands_crown_diffuse.dds"
+		texture_normal = "stormlands_crown_normal.dds"
+		texture_specular = "stormlands_crown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_stormlands_crown_entity"
+	pdxmesh = "female_stormlands_crown_mesh"
+}
