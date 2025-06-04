@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "building_special_eastwatch_mesh"
+	file = "building_special_eastwatch.mesh"
+
+	meshsettings = {
+		name = "building_special_eastwatchShape"
+		index = 0
+		texture_diffuse = "building_special_eastWatch_diffuse.dds"
+		texture_normal = "building_special_eastWatch_normal.dds"
+		texture_specular = "building_special_eastWatch_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_eastwatch_entity"
+	pdxmesh = "building_special_eastwatch_mesh"
+}

@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "building_special_the_wall_broken_middle_mesh"
+	file = "building_special_the_wall_broken_middle.mesh"
+
+	meshsettings = {
+		name = "building_special_the_wall_broken_middleShape"
+		index = 0
+		texture_diffuse = "PDXmat_building_special_the_wall_diffuse.dds"
+		texture_normal = "PDXmat_building_special_the_wall_normal.dds"
+		texture_specular = "PDXmat_building_special_the_wall_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_the_wall_decalShape"
+		index = 0
+		texture_diffuse = "decal_snow_diffuse.dds"
+		texture_normal = "decal_snow_normal.dds"
+		texture_specular = "decal_snow_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_the_wall_broken_middle_entity"
+	pdxmesh = "building_special_the_wall_broken_middle_mesh" 
+}

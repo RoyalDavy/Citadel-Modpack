@@ -1,0 +1,22 @@
+pdxmesh = {
+	name = "agot_holding_castle_crannog_01_mesh"
+	file = "agot_holding_castle_crannog_01.mesh"
+	scale = .4
+
+	meshsettings = {
+		name = "agot_holding_castle_crannog_01Shape"
+		index = 0
+		texture_diffuse = "agot_holding_castle_crannog_01_diffuse.dds"
+		texture_normal = "agot_holding_castle_crannog_01_normal.dds"
+		texture_specular = "agot_holding_castle_crannog_01_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+
+	}
+}
+
+entity = {
+	name = "agot_holding_castle_crannog_01_entity"
+	pdxmesh = "agot_holding_castle_crannog_01_mesh"
+}
+

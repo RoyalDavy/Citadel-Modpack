@@ -1,0 +1,35 @@
+pdxmesh = {
+	name = "agot_temple_rhllor_2_mesh"
+	file = "agot_temple_rhllor_2.mesh"
+
+	meshsettings = {
+		name = "agot_temple_rhllor_2Shape"
+		index = 0
+		texture_diffuse = "agot_temple_rhllor_diffuse.dds"
+		texture_normal = "agot_temple_rhllor_normal.dds"
+		texture_specular = "agot_temple_rhllor_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+
+	}
+}
+
+entity = {
+	name = "agot_temple_rhllor_2_entity"
+	pdxmesh = "agot_temple_rhllor_2_mesh"
+#	locator = { name = fire_locator_2 position = {0 0 0}}
+	attach = { fire_locator_2 = env_fire01 }
+#	locator = { name = fire_locator_3 position = {0 0 0}}
+	attach = { fire_locator_3 = env_fire01 }
+#	locator = { name = fire_locator_4 position = {0 0 0}}
+	attach = { fire_locator_4 = env_fire01 }
+#	locator = { name = fire_locator_5 position = {0 0 0}}
+	attach = { fire_locator_5 = env_fire01 }
+#	locator = { name = fire_locator_6 position = {0 0 0}}
+	attach = { fire_locator_6 = env_fire01 }
+#	locator = { name = fire_locator_7 position = {0 0 0}}
+	attach = { fire_locator_7 = env_fire01 }
+#	locator = { name = fire_locator_8 position = {0 0 0}}
+	attach = { fire_locator_8 = env_fire01 }
+}
+

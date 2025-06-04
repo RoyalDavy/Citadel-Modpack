@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "Hardhome_Stage_3_mesh"
+	file = "Hardhome_Stage_3.mesh"
+
+	meshsettings = {
+		name = "Hardhome_Stage_3"
+		index = 0
+		texture_diffuse = "Hardhome_Stage_3_diffuse.dds"
+		texture_normal = "Hardhome_Stage_3_normal.dds"
+		texture_specular = "Hardhome_Stage_3_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "Hardhome_Stage_3_entity"
+	pdxmesh = "Hardhome_Stage_3_mesh"
+}

@@ -1,0 +1,37 @@
+pdxmesh = {
+	name = "harrenhal_restored_tower_of_dread_mesh"
+	file = "harrenhal_restored_tower_of_dread.mesh"
+
+	meshsettings = {
+		name = "building_special_Harrenhal_keep_ruinedShape"
+		index = 0
+		texture_diffuse = "building_special_Harrenhal_keep_ruined_diffuse.dds"
+		texture_normal = "building_special_Harrenhal_keep_ruined_normal.dds"
+		texture_specular = "building_special_Harrenhal_keep_ruined_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_Harrenhal_wallsShape"
+		index = 0
+		texture_diffuse = "building_special_Harrenhal_walls_diffuse.dds"
+		texture_normal = "building_special_Harrenhal_walls_normal.dds"
+		texture_specular = "building_special_Harrenhal_walls_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_twinsShape"
+		index = 0
+		texture_diffuse = "atlas_riverlands_diffuse.dds"
+		texture_normal = "atlas_riverlands_normal.dds"
+		texture_specular = "atlas_riverlands_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "harrenhal_restored_tower_of_dread_entity"
+	pdxmesh = "harrenhal_restored_tower_of_dread_mesh"
+}

@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "agot_walls_desert_reach_03_mesh"
+	file = "agot_walls_reach_03.mesh"
+
+	meshsettings = {
+		name = "agot_walls_reach_03Shape"
+		index = 0
+		texture_diffuse = "agot_walls_reach_diffuse_yellowwalls.dds"
+		texture_normal = "agot_walls_reach_normal.dds"
+		texture_specular = "agot_walls_reach_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+
+	}
+}
+
+entity = {
+	name = "agot_walls_desert_reach_03_entity"
+	pdxmesh = "agot_walls_desert_reach_03_mesh"
+}
+

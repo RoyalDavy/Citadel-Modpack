@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "building_hardhome_stage_2_mesh"
+	file = "building_hardhome_stage_2.mesh"
+
+	meshsettings = {
+		name = "building_hardhome_stage_2_mesh"
+		index = 0
+		texture_diffuse = "building_hardhome_stage_2-diffuse.dds"
+		texture_normal = "building_hardhome_stage_2_normal.dds"
+		texture_specular = "building_hardhome_stage_2_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_hardhome_stage_2_entity"
+	pdxmesh = "building_hardhome_stage_2_mesh"
+}

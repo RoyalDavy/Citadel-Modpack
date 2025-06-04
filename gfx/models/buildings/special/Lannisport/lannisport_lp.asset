@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "lannisport_lp_mesh"
+	file = "lannisport_lp.mesh"
+
+	meshsettings = {
+		name = "lannisport_lpShape"
+		index = 0
+		texture_diffuse = "lannisport_lp_diffuse.dds"
+		texture_normal = "lannisport_lp_normal.dds"
+		texture_specular = "lannisport_lp_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "lannisport_lp_entity"
+	pdxmesh = "lannisport_lp_mesh"
+}

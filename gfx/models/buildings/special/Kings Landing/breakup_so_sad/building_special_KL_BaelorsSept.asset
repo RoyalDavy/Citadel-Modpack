@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "building_special_KL_BaelorsSept_mesh"
+	file = "building_special_KL_BaelorsSept.mesh"
+
+	
+	meshsettings = {
+		name = "building_special_KL_BaelorsSeptShape"
+		index = 0
+		texture_diffuse = "building_special_KL_BaelorsSept_diffuse.dds"
+		texture_normal = "building_special_KL_BaelorsSept_normal.dds"
+		texture_specular = "building_special_KL_BaelorsSept_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_KL_BaelorShape"
+		index = 0
+		texture_diffuse = "building_special_KL_Baelor_diffuse.dds"
+		texture_normal = "building_special_KL_Baelor_normal.dds"
+		texture_specular = "building_special_KL_Baelor_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_KL_BaelorsSept_entity"
+	pdxmesh = "building_special_KL_BaelorsSept_mesh"
+}

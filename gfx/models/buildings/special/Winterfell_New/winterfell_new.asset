@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "winterfell_new_mesh"
+	file = "winterfell_new.mesh"
+	
+	meshsettings = {
+		name = "winterfell_new_outerShape"
+		index = 0
+		texture_diffuse = "winterfell_new_outer_diffuse.dds"
+		texture_normal = "winterfell_new_outer_normal.dds"
+		texture_specular = "winterfell_new_outer_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "winterfell_new_innerShape"
+		index = 0
+		texture_diffuse = "winterfell_new_inner_diffuse.dds"
+		texture_normal = "winterfell_new_inner_normal.dds"
+		texture_specular = "winterfell_new_inner_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "winterfell_new_entity"
+	pdxmesh = "winterfell_new_mesh"
+}

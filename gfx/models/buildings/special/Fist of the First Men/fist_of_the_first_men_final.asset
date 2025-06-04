@@ -1,0 +1,38 @@
+pdxmesh = {
+	name = "fist_of_the_first_men_final_mesh"
+	file = "fist_of_the_first_men_final.mesh"
+	scale = 0.6
+
+	meshsettings = {
+		name = "fist_of_the_first_men_01Shape"
+		index = 0
+		texture_diffuse = "mountain_01_vertical_diffuse.dds"
+		texture_normal = "mountain_01_vertical_normal.dds"
+		texture_specular = "mountain_01_vertical_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "fist_of_the_first_men_wallsShape"
+		index = 0
+		texture_diffuse = "fist_of_the_first_men_wallsShape_diffuse.dds"
+		texture_normal = "fist_of_the_first_men_wallsShape_normal.dds"
+		texture_specular = "fist_of_the_first_men_wallsShape_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "fist_of_the_first_men_castleShape"
+		index = 0
+		texture_diffuse = "fist_of_the_first_men_castleShape_diffuse.dds"
+		texture_normal = "fist_of_the_first_men_castleShape_normal.dds"
+		texture_specular = "fist_of_the_first_men_castleShape_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "fist_of_the_first_men_final_entity"
+	pdxmesh = "fist_of_the_first_men_final_mesh"
+}

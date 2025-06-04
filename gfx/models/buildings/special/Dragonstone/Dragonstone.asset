@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "Dragonstone_mesh"
+	file = "Dragonstone.mesh"
+	#scale = 1.15
+
+	meshsettings = {
+		name = "Dragonstone"
+		index = 0
+		texture_diffuse = "Dragonstone_diffuse.dds"
+		texture_normal = "Dragonstone_normal.dds"
+		texture_specular = "Dragonstone_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "Dragonstone_entity"
+	pdxmesh = "Dragonstone_mesh"
+}

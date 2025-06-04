@@ -1,0 +1,49 @@
+pdxmesh = {
+	name = "warg_king_ruin_mesh"
+	file = "warg_king_ruin.mesh"
+
+	meshsettings = {
+		name = "wolfstatue2Shape"
+		index = 0
+		texture_diffuse = "wolfstatue2_diffuse.dds"
+		texture_normal = "wolfstatue2_normal.dds"
+		texture_specular = "wolfstatue2_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "g_bodyShape"
+		index = 0
+		texture_diffuse = "building_western_atlas_diffuse.dds"
+		texture_normal = "building_western_atlas_normal.dds"
+		texture_specular = "building_western_atlas_properties.dds"
+		texture = { file = "hadrians_wall_01_unique.dds" index = 5 }
+		shader = "snap_to_terrain_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "hadrians_wall_01_b_g_body_g_body9Shape"
+		index = 0
+		texture_diffuse = "building_western_atlas_diffuse.dds"
+		texture_normal = "building_western_atlas_normal.dds"
+		texture_specular = "building_western_atlas_properties.dds"
+		texture = { file = "hadrians_wall_01_unique.dds" index = 5 }		
+		shader = "snap_to_terrain_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "hadrians_wall_01_d_g_body_g_body9Shape"
+		index = 0
+		texture_diffuse = "building_western_atlas_diffuse.dds"
+		texture_normal = "building_western_atlas_normal.dds"
+		texture_specular = "building_western_atlas_properties.dds"
+		texture = { file = "hadrians_wall_01_unique.dds" index = 5 }
+		shader = "snap_to_terrain_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "warg_king_ruin_entity"
+	pdxmesh = "warg_king_ruin_mesh"
+}

@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "building_special_WH_SnowySept_mesh"
+	file = "building_special_WH_SnowySept.mesh"
+
+	meshsettings = {
+		name = "building_special_WH_SnowySeptShape"
+		index = 0
+		texture_diffuse = "building_special_WH_SnowySept_diffuse.dds"
+		texture_normal = "building_special_WH_SnowySept_normal.dds"
+		texture_specular = "building_special_WH_SnowySept_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_WH_SnowySept_entity"
+	pdxmesh = "building_special_WH_SnowySept_mesh"
+}

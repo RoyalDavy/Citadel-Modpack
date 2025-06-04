@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "casterlyrock_mesh"
+	file = "casterlyrock.mesh"
+
+	meshsettings = {
+		name = "casterlyrock_castleShape"
+		index = 0
+		texture_diffuse = "casterlyrock_castle_diffuse.dds"
+		texture_normal = "casterlyrock_castle_normal.dds"
+		texture_specular = "casterlyrock_castle_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+	meshsettings = {
+		name = "casterlyrock_rockShape"
+		index = 0
+		texture_diffuse = "casterlyrock_rock_diffuse.dds"
+		texture_normal = "casterlyrock_rock_normal.dds"
+		texture_specular = "casterlyrock_rock_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "casterlyrock_entity"
+	pdxmesh = "casterlyrock_mesh"
+}

@@ -1,0 +1,49 @@
+pdxmesh = {
+	name = "building_special_Pyke_mesh"
+	file = "building_special_Pyke.mesh"
+
+	meshsettings = {
+		name = "Pyke_building_special_Pyke1Shape"
+		index = 0
+		texture_diffuse = "building_special_pyke01_diffuse.dds"
+		texture_normal = "building_special_pyke01_normal.dds"
+		texture_specular = "building_special_pyke01_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "Pyke_building_special_Pyke2Shape"
+		index = 0
+		texture_diffuse = "building_special_pyke02_diffuse.dds"
+		texture_normal = "building_special_pyke02_normal.dds"
+		texture_specular = "building_special_pyke02_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "Pyke_building_special_Pyke3Shape"
+		index = 0
+		texture_diffuse = "building_special_pyke03_diffuse.dds"
+		texture_normal = "building_special_pyke03_normal.dds"
+		texture_specular = "building_special_pyke03_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "Pyke_building_special_Pyke4Shape"
+		index = 0
+		texture_diffuse = "building_special_pyke04_diffuse.dds"
+		texture_normal = "building_special_pyke04_normal.dds"
+		texture_specular = "building_special_pyke04_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_Pyke_entity"
+	pdxmesh = "building_special_Pyke_mesh"
+}

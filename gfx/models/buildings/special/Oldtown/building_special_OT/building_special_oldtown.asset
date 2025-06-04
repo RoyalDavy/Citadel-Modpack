@@ -1,0 +1,194 @@
+pdxmesh = {
+	name = "building_special_OT_west_mesh"
+	file = "building_special_oldtown_west.mesh"
+
+	meshsettings = {
+		name = "building_special_OT_houses_westShape"
+		index = 0
+		texture_diffuse = "building_special_OT_houses_diffuse.dds"
+		texture_normal = "building_special_OT_houses_normal.dds"
+		texture_specular = "building_special_OT_houses_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_OT_septs_westShape"
+		index = 0
+		texture_diffuse = "building_special_OT_septs_diffuse.dds"
+		texture_normal = "building_special_OT_septs_normal.dds"
+		texture_specular = "building_special_OT_septs_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_OT_guildhallsShape"
+		index = 0
+		texture_diffuse = "building_special_OT_guildhalls_diffuse.dds"
+		texture_normal = "building_special_OT_guildhalls_normal.dds"
+		texture_specular = "building_special_OT_guildhalls_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_OT_starry_septShape"
+		index = 0
+		texture_diffuse = "building_special_OT_starry_sept_diffuse.dds"
+		texture_normal = "building_special_OT_starry_sept_normal.dds"
+		texture_specular = "building_special_OT_starry_sept_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_special_OT_citadelShape"
+		index = 0
+		texture_diffuse = "building_special_OT_citadel_diffuse.dds"
+		texture_normal = "building_special_OT_citadel_normal.dds"
+		texture_specular = "building_special_OT_citadel_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_OT_west_entity"
+	pdxmesh = "building_special_OT_west_mesh"
+}
+
+pdxmesh = {
+	name = "building_special_OT_west_wall_mesh"
+	file = "building_special_oldtown_west_wall.mesh"
+
+	meshsettings = {
+		name = "building_special_OT_city_walls_westShape"
+		index = 0
+		texture_diffuse = "building_special_OT_city_walls_diffuse.dds"
+		texture_normal = "building_special_OT_city_walls_normal.dds"
+		texture_specular = "building_special_OT_city_walls_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_OT_west_wall_entity"
+	pdxmesh = "building_special_OT_west_wall_mesh"
+}
+
+pdxmesh = {
+	name = "building_special_OT_east_mesh"
+	file = "building_special_oldtown_east.mesh"
+
+	meshsettings = {
+		name = "building_special_OT_houses_eastShape"
+		index = 0
+		texture_diffuse = "building_special_OT_houses_diffuse.dds"
+		texture_normal = "building_special_OT_houses_normal.dds"
+		texture_specular = "building_special_OT_houses_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_OT_septs_eastShape"
+		index = 0
+		texture_diffuse = "building_special_OT_septs_diffuse.dds"
+		texture_normal = "building_special_OT_septs_normal.dds"
+		texture_specular = "building_special_OT_septs_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	meshsettings = {
+		name = "building_special_OT_quill_and_tankardShape"
+		index = 0
+		texture_diffuse = "building_special_OT_guildhalls_diffuse.dds"
+		texture_normal = "building_special_OT_guildhalls_normal.dds"
+		texture_specular = "building_special_OT_guildhalls_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_OT_east_entity"
+	pdxmesh = "building_special_OT_east_mesh"
+}
+
+pdxmesh = {
+	name = "building_special_OT_east_wall_mesh"
+	file = "building_special_oldtown_east_wall.mesh"
+
+	meshsettings = {
+		name = "building_special_OT_city_walls_eastShape"
+		index = 0
+		texture_diffuse = "building_special_OT_city_walls_diffuse.dds"
+		texture_normal = "building_special_OT_city_walls_normal.dds"
+		texture_specular = "building_special_OT_city_walls_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_OT_east_wall_entity"
+	pdxmesh = "building_special_OT_east_wall_mesh"
+}
+
+pdxmesh = {
+	name = "building_special_OT_island_1_mesh"
+	file = "building_special_oldtown_island_1.mesh"
+
+	meshsettings = {
+		name = "building_special_OT_island_1Shape"
+		index = 0
+		texture_diffuse = "building_special_OT_houses_diffuse.dds"
+		texture_normal = "building_special_OT_houses_normal.dds"
+		texture_specular = "building_special_OT_houses_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_OT_island_1_entity"
+	pdxmesh = "building_special_OT_island_1_mesh"
+}
+
+pdxmesh = {
+	name = "building_special_OT_island_2_mesh"
+	file = "building_special_oldtown_island_2.mesh"
+
+	meshsettings = {
+		name = "building_special_OT_island_2Shape"
+		index = 0
+		texture_diffuse = "building_special_OT_houses_diffuse.dds"
+		texture_normal = "building_special_OT_houses_normal.dds"
+		texture_specular = "building_special_OT_houses_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_OT_island_2_entity"
+	pdxmesh = "building_special_OT_island_2_mesh"
+}
+
+pdxmesh = {
+	name = "building_special_OT_citadel_mesh"
+	file = "building_special_oldtown_citadel.mesh"
+
+	meshsettings = {
+		name = "building_special_OT_citadelShape"
+		index = 0
+		texture_diffuse = "building_special_OT_citadel_diffuse.dds"
+		texture_normal = "building_special_OT_citadel_normal.dds"
+		texture_specular = "building_special_OT_citadel_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_OT_citadel_entity"
+	pdxmesh = "building_special_OT_citadel_mesh"
+}

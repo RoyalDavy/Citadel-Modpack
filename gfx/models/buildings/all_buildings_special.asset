@@ -1,0 +1,17 @@
+entity = {
+	name = "building_special_all"
+	
+	@gap = 12
+	
+	locator = { name = "pos_04_a" position = { @[gap * 3.5] 000 @[gap * -1.5 ] } }
+	locator = { name = "pos_04_b" position = { @[gap * 3.5] 000 @[gap * -0.5 ] } }
+	locator = { name = "pos_04_c" position = { @[gap * 3.5] 000 @[gap *  0.5 ] } }
+	locator = { name = "pos_04_d" position = { @[gap * 3.5] 000 @[gap *  1.5 ] } }
+	attach = {         "pos_04_a" = "building_special_the_wall_entity" }
+	attach = {         "pos_04_b" = "building_special_the_wall_broken_left_entity" }
+	attach = {         "pos_04_c" = "building_special_the_wall_broken_middle_entity" }
+	attach = {         "pos_04_d" = "building_special_the_wall_broken_right_entity" }
+	
+	locator = { name = "pos_05_a" position = { @[gap * 3.5] 000 @[gap * -1.5 ] } }
+	attach = {         "pos_05_a" = "building_special_CastleBlack_entity" }
+}

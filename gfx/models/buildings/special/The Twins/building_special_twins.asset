@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "building_special_twins_mesh"
+	file = "building_special_twins.mesh"
+
+	meshsettings = {
+		name = "building_special_twinsShape"
+		index = 0
+		texture_diffuse = "atlas_riverlands_diffuse.dds"
+		texture_normal = "atlas_riverlands_normal.dds"
+		texture_specular = "atlas_riverlands_properties.dds"
+		shader = "standard_winter"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_special_twins_entity"
+	pdxmesh = "building_special_twins_mesh"
+}
