@@ -140,19 +140,6 @@ NCharacter = {
 	MAX_PROVISIONS = 2500			# maximum provisions value a character can have
 	PROVISIONS_LOW_WARNING = 500		# when travel planner should warn about provisions running low
 
-	BASE_HERD_CONVERSION_RATE = 0.15 	# base herd conversion rate
-	BASE_HERD_CAPACITY = { 				# base herd capacity for different title tiers
-		0 		# Unlanded
-		500 	# Barony
-		3000 	# County
-		5000 	# Duchy
-		15000 	# Kingdom
-		20000 	# Empire
-	}
-	GOLD_FROM_HERD_FACTOR = 0.0005 		# The amount of herd that provides monthly gold income
-
-	BASE_HERDER_GAIN_PER_COUNTY = 1.0 		# Base monthly herd gain for herders | ( NCountyData::MAX_COUNTY_FERTILITY / CountyFertility) * BASE_HERDER_GAIN_PER_COUNTY
-
 	MAX_STRIFE_OPINION = 100				# maximum strife opinion value a character can have
 	STRIFE_OPINION_MONTHLY_CHANGE = -0.2	# strife opinion is changing by this value each month
 
@@ -330,7 +317,7 @@ NOldAge = {
 
 	#AGOT Modified, many older characters are renowned warriors
 	#LOWER_PROWESS_START_AGE = 45 # At this age characters start getting the chance to lose prowess each year
-	LOWER_PROWESS_START_AGE = 60 # At this age characters start getting the chance to lose prowess each year
+	LOWER_PROWESS_START_AGE = 45 # At this age characters start getting the chance to lose prowess each year
 	LOWER_PROWESS_BASE_CHANCE = 0.1 # This is the base chance of losing prowess at the START_AGE
 	LOWER_PROWESS_YEARLY_INCREASE = 0.015 # This is the yearly increase of the chance to lose prowess
 	LOWER_PROWESS_MAX_CHANCE = 0.75 # This is the maximum chance to lose prowess
@@ -341,9 +328,9 @@ NOldAge = {
 NChildbirth = {
 	MIN_REPRODUCTION_AGE_IN_HISTORY_DB = 12 # If a historical parent is younger than this when their child is born, we log an error
 	MIN_FEMALE_REPRODUCTION_AGE = 16
-	MAX_FEMALE_REPRODUCTION_AGE = 45
+	MAX_FEMALE_REPRODUCTION_AGE = 50
 	MIN_MALE_REPRODUCTION_AGE = 16
-	BASE_NR_OF_CHILDREN_PER_COUPLE = { 1 1 2 3 5 5 } # Based on tier of character or parents; whichever is higher Unlanded, Baron, Count, ..., Emperor
+	BASE_NR_OF_CHILDREN_PER_COUPLE = { 1 1 3 3 5 5 } # Based on tier of character or parents; whichever is higher Unlanded, Baron, Count, ..., Emperor
 	CHANCE_OF_LOWERED_CHILD_LIMIT = 0.5	# Chance that the child limit is lowered by 1
 	EXTRA_CHILDREN_FOR_RULERS = 2 # If either character is a ruler, they get extra children
 	CHARACTER_IN_POOL_CHILD_LIMIT = -1	# If in the pool, child limit is modified by this
@@ -409,7 +396,7 @@ NChildbirth = {
 	PUREBLOODED_INBRED_RELATEDNESS_MULT = 0.03				# Same as INBRED_RELATEDNESS_MULT, but for the "pure-blooded" trait.
 	TRAIT_REINFORCEMENT_CHANCE = 0.5						# The chance that a trait that gets inherited from both parents will get reinforced to a higher level.
 
-	EXTRA_CHILDREN_FOR_PLAYERS = 2 # Num of extra children players can have before reaching living child limit
+	EXTRA_CHILDREN_FOR_PLAYERS = 0 # Num of extra children players can have before reaching living child limit
 	EXTRA_CHILDREN_PER_EXTRA_SPOUSE = 2 # Num of extra children per spouse above one before reaching living child limit
 	EXTRA_CHILDREN_PER_EXTRA_CONCUBINE = 2 # Num of extra children per concubine above one before reaching living child limit
 	#AGOT Modified, dynastic stability
@@ -515,21 +502,17 @@ NCharacterOpinion = {
 	DE_JURE_DUCHY = -25
 	DE_JURE_KINGDOM = -30
 	EMPIRE_IS_VALID_DE_JURE_LIEGE_FOR_DUCHY = yes 		# Dukes won't be upset as the vassal of their dejure emperor
-	#AGOT Modified
+	# AGOT Modified
 	# PARTIALLY_NON_RIGHTFUL_LIEGE_TAX_MULT = 0.75 		# Tax mult when partially non-rightful liege (liege doesn't hold dejure liege title of the vassal's primary, or empire for a duke if EMPIRE_IS_VALID_DE_JURE_LIEGE_FOR_DUCHY)
 	# PARTIALLY_NON_RIGHTFUL_LIEGE_LEVY_MULT = 0.75 		# Tax mult when partially non-rightful liege
-	# PARTIALLY_NON_RIGHTFUL_LIEGE_HERD_MULT = 1 			# Herd mult when partially non-rightful liege
 	# NON_RIGHTFUL_LIEGE_TAX_MULT = 0.5 					# Tax mult when non-rightful liege (liege doesn't hold *any* dejure liege title)
 	# NON_RIGHTFUL_LIEGE_LEVY_MULT = 0.5 					# Tax mult when non-rightful liege
-	# NON_RIGHTFUL_LIEGE_HERD_MULT = 0.5 					# Herd mult when non-rightful liege
 	# PARTIALLY_NON_RIGHTFUL_LIEGE_OPINION = -5 			# Opinion penalty for being non-rightful liege
 	# NON_RIGHTFUL_LIEGE_OPINION = -5						# Opinion penalty for being partially non-rightful liege
 	PARTIALLY_NON_RIGHTFUL_LIEGE_TAX_MULT = 1 		# Tax mult when partially non-rightful liege (liege doesn't hold dejure liege title of the vassal's primary, or empire for a duke if EMPIRE_IS_VALID_DE_JURE_LIEGE_FOR_DUCHY)
 	PARTIALLY_NON_RIGHTFUL_LIEGE_LEVY_MULT = 1 		# Tax mult when partially non-rightful liege
-	PARTIALLY_NON_RIGHTFUL_LIEGE_HERD_MULT = 1 			# Herd mult when partially non-rightful liege
 	NON_RIGHTFUL_LIEGE_TAX_MULT = 1 					# Tax mult when non-rightful liege (liege doesn't hold *any* dejure liege title)
 	NON_RIGHTFUL_LIEGE_LEVY_MULT = 1 					# Tax mult when non-rightful liege
-	NON_RIGHTFUL_LIEGE_HERD_MULT = 1 					# Herd mult when non-rightful liege
 	PARTIALLY_NON_RIGHTFUL_LIEGE_OPINION = 0 			# Opinion penalty for being non-rightful liege
 	NON_RIGHTFUL_LIEGE_OPINION = 0						# Opinion penalty for being partially non-rightful liege
 	MAX_DUCHIES_BEFORE_PENALTY = 2						# How many duchies are vassals fine with you having? If you're a duke, they don't care; only if you're king or above
@@ -558,7 +541,7 @@ NActionPoints = {
 }
 
 NCombat = {
-	UNRAISED_LEVY_REGIMENTS_SPEED = 40.0			# How many distance units do unraised regiments travel per day when gathering
+	UNRAISED_LEVY_REGIMENTS_SPEED = 10.0			# How many distance units do unraised regiments travel per day when gathering #Hambone was 40
 	COMBAT_ROLL_DAYS = 3							# How many days are there between rolls?
 	COMBAT_EVENT_DAYS = 5							# How many days are there between knight events?
 
@@ -594,6 +577,8 @@ NCombat = {
 	BASE_TOUGHNESS_TO_PURSUIT = 0.05				# This many % of the toughness of the retreater's soft casualties will turn into pursuit (during the full pursuit, not per day). Essentially, this means if neither side has screen or pursuit, 5% of the soft casualties will become hard casualties. More if the pursuer has more pursuit than the defender has screen, and vice versa
 	MINIMUM_PURSUIT_DAMAGE = 0.01					# High screen can't bring casualties below 1% in the pursuit phase
 	DISEMBARK_PENALTY_DAYS = 30						# How long does an army have a penalty after disembarking?
+	#AGOT Modified, less OP knights
+	#KNIGHT_DAMAGE_PER_PROWESS = 100					# How much "Damage" stat does a knight get per prowess?
 	KNIGHT_DAMAGE_PER_PROWESS = 50					# How much "Damage" stat does a knight get per prowess?
 	KNIGHT_TOUGHNESS_PER_PROWESS = 10				# How much "Toughness" stat does a knight get per prowess?
 
@@ -619,17 +604,17 @@ NArmy = {
 	MOVEMENT_SPEED_RETREAT = 12					# Movement speed while retreating
 	MOVEMENT_SPEED = 8								# Normal movement speed
 	MOVEMENT_SPEED_BONUS_FRIENDLY_AREA = 0.2		# In friendly areas you get a 20% speed bonus
-	REGIMENT_MONTHLY_REINFORCE_SPEED = 0.03			# Monthly reinforcement percentage of unraised chunks [0-1]
-	REGIMENT_MONTHLY_MAA_REINFORCE_SPEED = 0.1		# Monthly reinforcement percentage of unraised MAA chunks [0-1]
+	REGIMENT_MONTHLY_REINFORCE_SPEED = 0.005			# Monthly reinforcement percentage of unraised chunks [0-1]
+	REGIMENT_MONTHLY_MAA_REINFORCE_SPEED = 0.05		# Monthly reinforcement percentage of unraised MAA chunks [0-1]
 	#AGOT Modified, increased levies to resemble canon numbers without increased income
 	#GOLD_COST_PER_SOLDIER = 0.003					# Gold maintenance cost per soldier
-	GOLD_COST_PER_SOLDIER = 0.001					# Gold maintenance cost per soldier
+	GOLD_COST_PER_SOLDIER = 0.005					# Gold maintenance cost per soldier
 	RAID_ARMY_COST_MULT = 0.5						# Maintenance of raid armies is multiplied by this
 	MOVEMENT_LOCKED = 0.5							# Percentage after which movement is locked
 	#AGOT Modified
 	#COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.05
-	COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.01
-	MINIMUM_COUNTY_MOVEMENT_ATTRITION = 100
+	COUNTY_MOVEMENT_ATTRITION_PERCENTAGE = 0.02
+	MINIMUM_COUNTY_MOVEMENT_ATTRITION = 10
 	REGIMENT_DEFAULT_STACK_SIZE = 100
 	REGIMENT_DEFAULT_MAX_SIZE = 3					# Number of regiment chunks
 	REGIMENT_MAA_CAP_BY_TIER = { 0 1 2 3 4 5 }
@@ -638,17 +623,17 @@ NArmy = {
 	REGIMENT_MAA_STARTING_COUNT = 5
 
 	FULL_SUPPLY = 100								# Fully supplied units' supply value
-	SUPPLY_LOSS_AT_SEA = 8							# This is the supply loss at sea after the ATTRITION_AFTER_DAYS grace period
-	SUPPLY_LOSS_PER_SOLDIER_ABOVE_LIMIT = 0.001		# Each check's supply loss per every soldier over the province's supply limit
+	SUPPLY_LOSS_AT_SEA = 10							# This is the supply loss at sea after the ATTRITION_AFTER_DAYS grace period
+	SUPPLY_LOSS_PER_SOLDIER_ABOVE_LIMIT = 0.0015	# Each check's supply loss per every soldier over the province's supply limit
 	SUPPLY_LOSS_MINIMUM = 5							# This is the minimum supply limit loss (before commander effects)
 	SUPPLY_LOSS_MAXIMUM = 10						# This is the maximum supply limit loss (after commander effects)
 	SUPPLY_GAIN_BELOW_LIMIT = 20					# Each check's supply gain under or at the province's supply limit
-	SUPPLY_OWN_REALM = 0.15							# Extra supply within top realm
-	SUPPLY_OWN_SUB_REALM = 0.3						# Extra supply within subrealm
+	SUPPLY_OWN_REALM = 0.2							# Extra supply within top realm
+	SUPPLY_OWN_SUB_REALM = 0.4						# Extra supply within subrealm
 	#AGOT Modified to allow for extremely low supply limits
 	#MINIMUM_SUPPLY_LIMIT = 1000						# Supply limit will never ever be lower than this
 	MINIMUM_SUPPLY_LIMIT = 4						# Supply limit will never ever be lower than this
-	NO_SUPPLY_LOSS_DAYS = 30						# After gathering, armies won't lose supplies for this number of days
+	NO_SUPPLY_LOSS_DAYS = 21						# After gathering, armies won't lose supplies for this number of days
 
 	SUPPLY_STATE_LEVELS = {
 		60
@@ -664,7 +649,7 @@ NArmy = {
 
 	SUPPLY_STATE_ATTRITION = {
 		0.0
-		0.0
+		0.01
 		0.05
 	}
 
@@ -676,15 +661,12 @@ NArmy = {
 	MINIMUM_HIRING_COST_MULTIPLIER = 0.1			# The cost of hiring after modifiers are applied can't go below this multiplier of the original value. To prevent negative costs, and therefore getting paid for hiring.
 	MIN_PERSONAL_MAA_MAINTENANCE_RATIO = 0.4 		# Relevant for characters with theme armies. Out of your total MaA maintenance, at least this much should go towards your personal MaA.
 	LANDLESS_RAISE_TROOPS_MAX_DISTANCE = 500		# Max diatance for landless rulers to raise their troops if their capital location is blocked by hostilities
-
-	NOMADIC_HORDE_CONVERSION_BASE_DISCOUNT = 0.5 	# Base discount rate applied to MaA cost when converting Horde regiments into permanent MaA as a Nomad
-	NOMADIC_RIDERS_MAX_SIZE = 500 					# Max size of Horde Riders when they are raised
 }
 
 NFleet = {
 	#AGOT Modified
 	# FLEET_SPEED = 15						# Fleet speed
-	FLEET_SPEED = 20						# Fleet speed
+	FLEET_SPEED = 15						# Fleet speed
 	#AGOT Modified, ships more expensive
 	# EMBARK_GOLD_COST_PER_HUNDRED = 1		# Embark cost for every hundred units
 	EMBARK_GOLD_COST_PER_HUNDRED = 5		# Embark cost for every hundred units
@@ -950,15 +932,6 @@ NCounty = {
 	COUNTY_CONTROL_LOSS_ON_HOSTILE_OWNER_CHANGE = 75	# County control is reduced by this amount when the county changes hands due to conquest
 	ABSOLUTE_COUNTRY_CONTROL = 110
 	CULTURAL_ACCEPTANCE_AUTO_GRANT_COUNTY_SCRIPT_VALUE = "auto_grant_county_cultural_acceptance_impact"
-	COUNTY_FERTILITY_GROWTH_HERDER = 0 # For clearer tooltips, moved to holdings
-	CAPITAL_COUNTY_FERTILITY_DECLINE_NOMAD = 0 # For clearer tooltips, moved to holdings
-	CAPITAL_COUNTY_FERTILITY_DECLINE_NOMAD_CAPITAL = 0 # For clearer tooltips, moved to holdings
-	COUNTY_FERTILITY_GROWTH_FACTOR = 0.125 # Makes all county fertility growth modifiers give out more adjusted growth. 1.1 = 10% stronger growth. Moves equilibriums
-	COUNTY_FERTILITY_DECLINE_FACTOR = 0.125 # Makes all county fertility decline modifiers give out more adjusted growth. 1.1 = 10% stronger decline. Moves equilibriums
-	COUNTY_FERTILITY_EQUILIBRIUM_FACTOR = 0.09 # 0.007 # Factor value for how sensitive the fertility equilibrium is towards small changes. Inverted in calculations: the lower the value the more sensitive the behavior. Set to 100 to have a clear curve.
-	COUNTY_FERTILITY_MONTHLY_CHANGE_LEVELS = { -20 -0.01 0.01 20 }
-	COUNTY_FERTILITY_NON_NOMAD_HOLDING_MALUS = -0.75 # Negative mult malus applied to the amount of Herd gained from the county fertility in a county that does not have a Nomad or Herder Holding
-	HERD_GAIN_FROM_COUNTY_MULTIPLIER = 0.5 # Direct multiplier on the base Herd gained from County ( Base Gain = CountyFertility * HERD_GAIN_FROM_COUNTY_MULTIPLIER )
 }
 
 NProvince = {
@@ -981,7 +954,6 @@ NProvince = {
 	WINTER_SEVERITY_DEFAULT_BIAS = 0.1			# Default bias used when determining winter on a province that doesn't have a bias set explicitely
 	WINTER_SEVERITY_RANDOM_MIN = 0.5			# Sets the lower bound of the random value that is used when determining the next winter severity
 	WINTER_SEVERITY_RANDOM_MAX = 1.0			# Sets the upper bound of the random value that is used when determining the next winter severity
-	RAZE_HOLDING_COOLDOWN_YEARS = 5 			# Sets the cooldown perid in years for nomads razing holdings that they completely control
 }
 
 NText = {
@@ -996,7 +968,7 @@ NCouncil = {
 NDynasty = {
 	MONTHLY_PRESTIGE_GAIN_PER_MEMBER = 0.02 # Was 0.2 per year, should be then 0.016 recurring but that is ugly so round to 0.015
 	MAX_MONTHLY_PRESTIGE_GAIN_FROM_ALIVE_MEMBERS = 2 # Cap the above number
-	MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER = { 0 0.125 0.25 0.5 1 2 } # When per year was { 0 2 4 6 8 10 }
+	MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER = { 0 0.5 1 2 4 8 } # When per year was { 0 2 4 6 8 10 } #Hambone
 	MONTHLY_PRESTIGE_GAIN_MULT_FOR_VASSALS_OF_SAME_DYNASTY = 0	# Dynasty members who are vassal of below of someone of the same dynasty have their prestige contribution multiplied with this. 0 disables their prestige contribution entirely
 	MONTHLY_PRESTIGE_GAIN_PER_TITLE_TIER_SPOUSE = { 0 0.1 0.2 0.4 0.8 1.6 } # When per year was { 0 2 4 6 8 10 }
 	MONTHLY_PRESTIGE_GAIN_MULT_FOR_VASSALS_OF_SAME_DYNASTY_SPOUSE = 0	# Dynasty members whose spouse are vassal of below of someone of the same dynasty have their prestige contribution multiplied with this. 0 disables their prestige contribution entirely
@@ -1040,16 +1012,14 @@ NDreadEffectOnBoldness = {
 }
 
 NDomain = {
-	ABOVE_LIMIT_LEVY_PENALTY = 0.2				# How much levies are reduced per holding over the limit
+	ABOVE_LIMIT_LEVY_PENALTY = 0.3				# How much levies are reduced per holding over the limit #Hambone
 	ABOVE_LIMIT_MAX_LEVY_PENALTY = 1			# How much levies can be reduced at most
-	ABOVE_LIMIT_TAX_INCOME_PENALTY = 0.2		# How much tax income from domain is reduced per holding over the limit
+	ABOVE_LIMIT_TAX_INCOME_PENALTY = 0.3		# How much tax income from domain is reduced per holding over the limit #Hambone
 	ABOVE_LIMIT_MAX_TAX_INCOME_PENALTY = 1		# How much tax income from domain can be reduced at most
-	ABOVE_LIMIT_HERD_INCOME_PENALTY = 0.5		# How much herd income from domain is reduced per holding over the limit
-	ABOVE_LIMIT_MAX_HERD_INCOME_PENALTY = 1		# How much herd income from domain can be reduced at most
 	HOLDING_GRACE_PERIOD = 365					# How many days do newly gained holdings not count towards the domain size for the purposes of penalties (but also not produce any levies)
 	#AGOT Modified, lower domain limits
 	# STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 6	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE )
-	STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 10	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE )
+	STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE = 100	# domain limit += floor( <stewardship skill> / STEWARDSHIP_SKILL_FOR_DOMAIN_LIMIT_INCREASE ) #Hambone
 	LEVIES_AT_ZERO_COUNTY_CONTROL = 0.5			# How many % levies do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
 	TAX_AT_ZERO_COUNTY_CONTROL = 0.0			# How much % tax do you get at 0 county control? Interpolated between this value and 100% when between 0 and 100
 	#AGOT Modified, nerf levies and taxes (no 900k megawars)
@@ -1076,11 +1046,11 @@ NFaction =
 	POTENTIAL_FORCE_JOIN_HOOK_TYPE = "strong" # The type of hook that means the UI will show a member as potentially joining
 }
 
-NPathFinding = {
+NPathFinding = { #Hambone lowered
 	#AGOT Modified, the time from clicking in the sea, to actually being at sea, idk ask Uber
 	#EMBARK_COST = 30								# This value will be set as pathfinding cost if it goes from land to sea
-	EMBARK_COST = 15								# This value will be set as pathfinding cost if it goes from land to sea
-	DISEMBARK_COST = 10								# This value will be set as pathfinding cost if it goes from sea to land
+	EMBARK_COST = 8								# This value will be set as pathfinding cost if it goes from land to sea
+	DISEMBARK_COST = 4							# This value will be set as pathfinding cost if it goes from sea to land
 }
 
 NCulture = {
@@ -1135,8 +1105,6 @@ NCulture = {
 	REFORMATION_PROGRESS_SLOWDOWN_PER_COUNTY_WITH_CULTURE = 0.2 # How much slower is the reformation per county with the culture. The final progress is calculated: (TotalGain) / (NrCounties * SlowdownFactor)
 	REFORMATION_PROGRESS_REPLACE_TRADITION_MULT = 0.75 # A multiplier to the total progress when replacing traditions.
 	REFORMATION_MAX_YEARS = 30 # The slowdown per county will be capped at a value that limits the max years a reformation can take to this value. Replacing traditions will go over this limit.
-
-	MILITARY_STRENGTH_IMPORTANCE_FOR_CULTURE_HEAD_FROM_HERD = 0.1 # A rulers max military strength is multiplied by this as a factor of the determination of the culture head from herd - to avoid scenarios where there is no culture head in herd cultures that no longer use herd for some reason
 }
 
 NMercenary = {
@@ -1152,9 +1120,7 @@ NMercenary = {
 	SIZE_INNOVATIONS_RATIO = 1.0			# How much are mercenary companies growing with the ratio of discovered to all cultural innovations of the culture. 1.0 means +100%
 											# if SIZE_INNOVATIONS_RATIO = 2, the mercenaries will be 3x their original size if all innovations are discovered
 
-	BASE_HIRE_MONTHS = 36					# The base length of the period mercenaries are hired for in months
-	MIN_HIRE_MONTHS = 11 					# Minimum length of time mercenaries can be hired for in months
-	MAX_HIRE_MONTHS = 108 					# Maximum length of time mercenaries can be hired for in months
+	HIRE_MONTHS = 36						# The length of the period mercenaries are hired for in months
 
 	LEVY_COST_PER_100_SOLDIERS = 12.0		# The cost of the levy regiment part of mercenary companies, per 100 soldiers for better precision
 	MAA_COST_RATIO = 0.5					# The cost of the MAA regiments of mercenary companies as a fraction of what those regiments cost when buying them
@@ -1213,16 +1179,12 @@ NCourt = {
 	GENERATED_SPOUSES_DUCHY = 0
 	GENERATED_SPOUSES_KINGDOM = 0
 	GENERATED_SPOUSES_EMPIRE = 0
-	
-	# Commanders multiplied by court_generate_commanders defined in 00_government_types.txt
 	GENERATED_COMMANDERS_BARONY_PER_HOLDING_KEYS = {}
 	GENERATED_COMMANDERS_BARONY_PER_HOLDING_VALUES = {}
 	GENERATED_COMMANDERS_COUNTY = 0
 	GENERATED_COMMANDERS_DUCHY = 0
 	GENERATED_COMMANDERS_KINGDOM = 0
 	GENERATED_COMMANDERS_EMPIRE = 0
-	GENERATED_COMMANDERS_MERCENARY_COMPANY = 1
-	GENERATED_COMMANDERS_HOLY_ORDER = 1
 
 	# When a courtier has decided to leave, they will stay this much longer to give the liege the opportunity to make them stay
 	COURTIER_MOVE_TO_POOL_DELAY_MONTHS = 2
@@ -1242,7 +1204,7 @@ NCourt = {
 	MAX_GUESTS_TO_GENERATE = 2
 }
 
-NSubjectContract = {
+NVassalContract = {
 	OPINION_OF_LIEGE_UPDATE_INTERVAL = 30 # Interval in days - how often should the vassal's opinion of liege update for vassal contracts which use it
 
 	CHECK_OBLIGATION_VALIDITY_INTERVAL = 30 # Interval in days - how often should the selected obligation levels be validated for contracts with obligation level
@@ -1252,12 +1214,6 @@ NSubjectContract = {
 	ABOVE_LIMIT_MAX_LEVY_PENALTY = 0.95			# How much levies can be reduced at most
 	ABOVE_LIMIT_TAX_INCOME_PENALTY = 0.05		# How much tax income from domain is reduced per vassal over the limit
 	ABOVE_LIMIT_MAX_TAX_INCOME_PENALTY = 0.95	# How much tax income from domain can be reduced at most
-	ABOVE_LIMIT_HERD_INCOME_PENALTY = 0.05		# How much herd income from domain is reduced per vassal over the limit
-	ABOVE_LIMIT_MAX_HERD_INCOME_PENALTY = 0.95	# How much herd income from domain can be reduced at most
-
-	CEASE_PAYING_TRIBUTE_LABEL_LEVELS = { 10 25 100 }
-
-	MEN_AT_ARMS_RECRUITMENT_COST_MULT = 0.5		# How much greater the cost is when recruiting MaAs from tributaries rather than directly
 }
 
 NGUI = {
@@ -1282,7 +1238,6 @@ NGUI = {
 	#DYNASTY_TREE_MAX_SIZE = 200  # Limit initial number of character in single dynasty tree
 	DYNASTY_TREE_MAX_SIZE = 20  # Limit initial number of character in single dynasty tree
 	PRISONER_MASS_ACTION_REASONS = 5 # maximum number of reasons why a mass prisoner action cannot be done that we want to show in tooltips
-	DECISION_LIST_UPDATE_TIME = 0.25 # Time between decision list window updates, in seconds
 }
 
 NSuggestions = {
@@ -1292,7 +1247,7 @@ NSuggestions = {
 }
 
 NModifier = {
-	HEALTH_VALUE_FORMAT_THRESHOLDS = { -6 -4.5 -3 -1 -0.75 -0.5 -0.25 0 0.09 0.25 0.5 0.75 1 2 }	# Thresholds to select the key in HEALTH_VALUE_FORMAT_KEYS
+	HEALTH_VALUE_FORMAT_THRESHOLDS = { -6 -4.5 -3 -1 -0.75 -0.5 -0.25 0 0.25 0.5 0.75 1 2 }	# Thresholds to select the key in HEALTH_VALUE_FORMAT_KEYS
 	HEALTH_VALUE_FORMAT_KEYS = {
 		"HEALTH_VALUE_FORMAT_ALREADY_DEAD"
 		"HEALTH_VALUE_FORMAT_CATASTROPHIC_PENALTY"
@@ -1311,10 +1266,9 @@ NModifier = {
 		"HEALTH_VALUE_FORMAT_GODLIKE_BOOST"
 	}
 	STANDARD_MINIMUM_VALUE = 0.1 # Some modifiers are not allowed to reduce whatever they're affecting to below 10%
-	AVERAGE_PROWESS_VALUE = 10   # Used by character_opinion_from_high_prowess_add and character_opinion_from_low_prowess_add modifiers to determine what's high and low
 }
 NPortrait = {
-	GENE_DATABASE_VERSION = 4	# If the version saved in a file does not match this number, the portrait DNAs will get regenerated. Increase this number when making gene database changed that would break old portraits.
+	GENE_DATABASE_VERSION = 3	# If the version saved in a file does not match this number, the portrait DNAs will get regenerated. Increase this number when making gene database changed that would break old portraits.
 	GRACEFUL_AGING_START = 25	# After this age, added life expectancy will make a character look younger than they are; the effect grows the further past this point one goes
 	GRACEFUL_AGING_END = 70		# This is the apparent age at which life expectancy stops slowing down visual aging (each year onwards ages you visually 1 year)
 	MAX_AGE = 100.0				# At this age portraits will use the special age gene at full strength
@@ -1369,7 +1323,6 @@ NRaid = {
 	DAYS_OF_IMMUNITY = 1825					# How long does raid immunity after defeating a raid army last?
 	RAID_REALM_AI_COOLDOWN = 1				# How many years the AI should wait before considering raiding again, after any AI raiders have been defeated previously
 	RAID_MINIMUM_ATTRITON = 0				# How low can the attrition go for raiders in particular?
-	RAID_NOMAD_FACTOR = 100					# How much to divide nomad raid loot value with ((herd/countycapitals)/RAID_NOMAD_FACTOR)
 }
 
 NCharacterGlow = {
@@ -1484,17 +1437,9 @@ NCourtPositions = {
 	COURT_POSITION_DEFAULT_ANIMATION = "idle"													# Default court portrait animation, used as a fallback if missing court_position_asset animation in Court Position or Court Task
 	COURT_POSITION_DEFAULT_BACKGROUND = "gfx/interface/illustrations/event_scenes/corridor.dds"	# Default court background, used as a fallback if missing court_position_asset background in Court Position or Court Task
 	COURT_POSITION_BACKGROUND_ALPHA = 0.1														# How much grayscale to use for the court position backgrounds. Value between 0 to 1
-
+	
 	MAX_NUMBER_IN_COURT_POSITION = 5 # Max number of positions that a court position can have.
 	DEFAULT_APTITUDE_LEVEL_BREAKPOINTS = { 20 40 60 80 } # Breakpoints to increase aptitude by 1.
-
-	# Stargazer
-	COURT_ASTRONOMER_SUCCESS_CHANCE = { 0.0 0.14 0.33 0.6 0.85 }		# Percent chance correctly predicting next Situation Phase based on level of Aptitude
-	COURT_ASTRONOMER_MAX_CERTAINTY = { 0.9 0.7 0.65 0.7 0.9 }			# Max certainty percent they are in their first pick being the correct one in their HOME region based on level of Aptitude
-	COURT_ASTRONOMER_MIN_CERTAINTY = { 0.6 0.5 0.55 0.6 0.7 }			# Min certainty percent they are in their first pick being the correct one in their HOME region based on level of Aptitude
-	COURT_ASTRONOMER_SUCCESS_CHANCE_HOME = { 0.1 0.22 0.46 0.8 0.99 }	# Percent chance correctly predicting next Situation Phase in their HOME region based on level of Aptitude
-	COURT_ASTRONOMER_MAX_CERTAINTY_HOME = { 0.9 0.7 0.81 0.9 1.0 }		# Max certainty percent they are in their first pick being the correct one in their HOME region based on level of Aptitude
-	COURT_ASTRONOMER_MIN_CERTAINTY_HOME = { 0.6 0.45 0.55 0.8 0.9 }		# Min certainty percent they are in their first pick being the correct one in their HOME region based on level of Aptitude
 }
 
 NStruggle = {
@@ -1692,31 +1637,4 @@ NAdministrative = {
 
 	BASE_REASSIGN_COST = 100 				# Base value used in the scripted cost for reassigning title troops
 	DISCOUNTED_THRESHOLD_FACTOR = 0.9 		# If the final reassign cost <= BASE_REASSIGN_COST * DISCOUNTED_THRESHOLD_FACTOR, we consider the title "discounted"
-}
-
-NCouncilTasks = {
-	# Which files are used as the default/backup assets when creating council task icons in the GUI
-	COUNCIL_TASK_DEFAULT_ICON_ASSET = "gfx/interface/_invalid_icon_debug.dds"
-	COUNCIL_TASK_DEFAULT_BACKGROUND_ASSET = "gfx/interface/buttons/button_round_bg.dds"
-	COUNCIL_TASK_DEFAULT_FRAME_ASSET = "gfx/interface/buttons/button_round_frame.dds"
-	COUNCIL_TASK_DEFAULT_GLOW_ASSET = "gfx/particles/halo.dds"
-}
-
-NKurultai = {
-	KURULTAI_SUCCESSION_CHILD_MINIMUM_AGE = 12			# Minimum age when a child gets to vote in the Kurultai Succession
-	KURULTAI_SUCCESSION_CHILD_ELECTORS_DOMINANCE_1 = 2	# 'has_realm_law = nomadic_authority_1' means total 4 Kurultai members + X children votes during succession
-	KURULTAI_SUCCESSION_CHILD_ELECTORS_DOMINANCE_2 = 2	# 'has_realm_law = nomadic_authority_2' means total 4 Kurultai members + X children votes during succession
-	KURULTAI_SUCCESSION_CHILD_ELECTORS_DOMINANCE_3 = 2	# 'has_realm_law = nomadic_authority_3' means total 4 Kurultai members + X children votes during succession
-	KURULTAI_SUCCESSION_CHILD_ELECTORS_DOMINANCE_4 = 4	# 'has_realm_law = nomadic_authority_4' means total 4 Kurultai members + X children votes during succession
-	KURULTAI_SUCCESSION_CHILD_ELECTORS_DOMINANCE_5 = 6	# 'has_realm_law = nomadic_authority_5' means total 4 Kurultai members + X children votes during succession
-}
-
-NBloodBrother = {
-	PRESTIGE_GAIN_PER_TIER = { 0.0 0.5 1 1.5 2 2 }	# Prestige gain per tier higher your blood brother is than you
-	PIETY_GAIN_PER_TIER = { 0.1 0.5 1 1.5 2 2.5 }		# Piety gain per tier of blood brother title
-	RENOWN_GAIN_PER_TIER = { 0.0 0.25 0.5 0.75 1 1.25 }	# Renown gain per tier of blood brother title
-}
-
-NMigration = {
-	MAX_MIGRATION_SQUARED_DISTANCE = 300000	# base suqared migration range before modifiers
 }

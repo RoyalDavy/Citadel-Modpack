@@ -1,4 +1,0 @@
-﻿voyage = {
-	texture = "gfx/interface/icons/traits/pilgrim.dds"
-	alias = { voyages }
-}

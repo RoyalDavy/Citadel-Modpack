@@ -1,8 +1,0 @@
-﻿cfp_disfigured = {
-	cfp_disfigured = {
-		traits = {
-			disfigured
-		}
-		base = disfigured_unmasked
-	}
-}

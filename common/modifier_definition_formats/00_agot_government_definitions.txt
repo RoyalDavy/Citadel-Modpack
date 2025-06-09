@@ -1,4 +1,0 @@
-﻿# Pirate Government
-pirate_government_opinion = {
-	decimals = 0
-}

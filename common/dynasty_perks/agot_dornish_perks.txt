@@ -1,7 +1,7 @@
 ﻿# GENERIC DORNISH LEGACIES
 
 dornish_legacy_1 = { # Shifting Sands
-	legacy = dornish_legacy_track
+	legacy =  dornish_legacy_track
 
 	can_be_picked = {
 		culture = {
@@ -44,7 +44,7 @@ dornish_legacy_1 = { # Shifting Sands
 }
 
 dornish_legacy_2 = { # Mirage
-	legacy = dornish_legacy_track
+	legacy =  dornish_legacy_track
 
 	effect = {
 		# less likely to be captured in sieges
@@ -57,7 +57,7 @@ dornish_legacy_2 = { # Mirage
 }
 
 dornish_legacy_3 = { # Unfaltering Spears
-	legacy = dornish_legacy_track
+	legacy =  dornish_legacy_track
 
 	effect = {
 	}
@@ -70,7 +70,7 @@ dornish_legacy_3 = { # Unfaltering Spears
 }
 
 dornish_legacy_4 = { # Dornishman's wife
-	legacy = dornish_legacy_track
+	legacy =  dornish_legacy_track
 
 	character_modifier = {
 		seduce_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
@@ -80,7 +80,7 @@ dornish_legacy_4 = { # Dornishman's wife
 }
 
 dornish_legacy_5 = { # Deadly Venoms
-	legacy = dornish_legacy_track
+	legacy =  dornish_legacy_track
 
 	character_modifier = {
 		intrigue_per_stress_level = 1

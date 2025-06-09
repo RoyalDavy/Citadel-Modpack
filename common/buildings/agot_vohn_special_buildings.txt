@@ -1195,11 +1195,6 @@ old_town_01 = { ##### really just a place holder
 
 sandstone_01 = { 
 
-	asset = {
-		type = pdxmesh
-		name = "building_special_brihadeeswarar_temple_mesh"
-	}
-
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_brihadeeswarar_temple.dds"
@@ -1234,10 +1229,7 @@ sandstone_01 = {
 }
 
 redmountains_01 = { #Kaali crater
-	asset = {
-		type = pdxmesh
-		name = "fp3_building_special_rainbow_mountains_01_a_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 	effect_desc = royal_reserves_desc
 	type_icon = "icon_structure_ala_daghlar_mountains.dds" 		
@@ -1361,10 +1353,7 @@ greenblood_01 = {
 	construction_time = very_slow_construction_time
 	
 	type_icon = "icon_building_silkroad.dds" 		
-	asset = {
-		type = pdxmesh
-		name = "meroe_pyramids_mesh"
-	}
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
@@ -1506,10 +1495,6 @@ mander_01 = {
 	
 }
 portarryan_01 = {
-	asset = {
-		type = pdxmesh
-		name = "mount_athos_mesh"
-	}
 			
 	construction_time = very_slow_construction_time
 
@@ -1727,10 +1712,7 @@ shieldisle_01 = {
 	construction_time = very_slow_construction_time
 	
 	type_icon = "hercules.dds"
-	asset = {
-		type = pdxmesh
-		name = "axum_stelae_spolia_mesh"
-	}
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
@@ -1936,10 +1918,7 @@ skirling_01 = {
 	flag = travel_point_of_interest_wonder
 }
 alton_01 = { 
-asset = {
-		type = pdxmesh
-		name = "building_special_cathedral_pagan_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 	effect_desc = outposts_desc
 	type_icon = "gibraltar.dds"
@@ -2270,10 +2249,6 @@ frostfang_01 = { #Kaali crater
 }
 # 1310 - b_greywater_watch - Greywater Watch
 greywater_watch_01 = { ### modifiers are my doing, another example of using lore to boost the game giving mechanics of their special unit
-asset = {
-		type = pdxmesh
-		name = "romuliana_mesh"
-	}
 	
 	construction_time = very_slow_construction_time
 
@@ -2319,10 +2294,7 @@ asset = {
 
 # Faircastle
 faircastle_01 = {
-	asset = {
-		type = pdxmesh
-		name = "sba_asen_fortress_01_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "toledo.dds"
@@ -2417,10 +2389,7 @@ turtle_01 = {
 
 #The Prince's Pass 
 princes_pass_01 = { #rework?
-asset = {
-		type = pdxmesh
-		name = "fp2_building_special_aljaferia_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_zhangye_danxia.dds" #TODO
@@ -2455,10 +2424,7 @@ asset = {
 
 #The Boneway
 boneway_01 = {
-asset = {
-		type = pdxmesh
-		name = "koutoubia_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_munzenberg.dds" #TODO
@@ -2594,10 +2560,7 @@ whispers_01 = { #ruined
 }
 
 whispers_02 = {
-	asset = {
-		type = pdxmesh
-		name = "building_special_cathedral_pagan_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_merca.dds" #TODO
@@ -2675,10 +2638,7 @@ massey_01 = { #ruined
 }
 
 massey_02 = {
-	asset = {
-		type = pdxmesh
-		name = "building_special_cathedral_pagan_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_building_hill_farms.dds" #TODO
@@ -2755,10 +2715,7 @@ amber_01 = { #ruined
 }
 
 amber_02 = {
-	asset = {
-		type = pdxmesh
-		name = "building_special_cathedral_pagan_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_building_peat_quarries.dds" #TODO
@@ -2799,10 +2756,6 @@ amber_02 = {
 
 }	
 crastersden_01 = { # destroyed about six centuries ago
-	asset = {
-		type = pdxmesh
-		name = "building_special_cathedral_pagan_mesh"
-	}
 
 	construction_time = very_slow_construction_time
 
@@ -2889,10 +2842,6 @@ eastwatch_01 = {
 
 } 
 tormund_01 = { # hehe
-	asset = {
-		type = pdxmesh
-		name = "building_special_cathedral_pagan_mesh"
-	}
 
 	construction_time = very_slow_construction_time
 
@@ -3082,10 +3031,6 @@ drumtower_01 = {
 	flag = travel_point_of_interest_martial
 }
 redfort_01 = {
-	asset = {
-		type = pdxmesh
-		name = "soltanieh_mesh"
-	}
 			
 	construction_time = very_slow_construction_time
 
@@ -3113,10 +3058,6 @@ redfort_01 = {
 	flag = travel_point_of_interest_martial
 }
 ashmark_01 = {
-	asset = {
-		type = pdxmesh
-		name = "st_donatus_mesh"
-	}
 			
 	construction_time = very_slow_construction_time
 
@@ -3170,10 +3111,6 @@ brightwater_01 = {
 	flag = travel_point_of_interest_martial
 }
 starpike_01 = {
-	asset = {
-		type = pdxmesh
-		name = "belfort_mesh"
-	}
 			
 	construction_time = very_slow_construction_time
 
@@ -3232,10 +3169,6 @@ greenstone_01 = {
 	flag = travel_point_of_interest_martial
 }
 pinkmaiden_01 = {
-	asset = {
-		type = pdxmesh
-		name = "jokhang_mesh"
-	}
 			
 	construction_time = very_slow_construction_time
 
@@ -3287,10 +3220,6 @@ sharppoint_01 = {
 	flag = travel_point_of_interest_martial
 }
 stokeworth_01 = {
-	asset = {
-		type = pdxmesh
-		name = "ephesus_basilica_mesh"
-	}
 			
 	construction_time = very_slow_construction_time
 
@@ -3653,10 +3582,7 @@ goldwatch_01 = { # destroyed about six centuries ago
 
 #old oak 
 old_oak_01 = {
-asset = {
-		type = pdxmesh
-		name = "rotunda_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_cesis_castle.dds" #TODO

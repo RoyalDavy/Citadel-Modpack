@@ -1,7 +1,7 @@
-﻿# GENERIC WESTERMAN LEGACIES # Law/Kin Hybrid
+﻿# GENERIC WESTERMAN LEGACIES  # Law/Kin Hybrid
 
 westerman_legacy_1 = { #Chamber Pot
-	legacy = westerman_legacy_track
+	legacy =  westerman_legacy_track
 
 	can_be_picked = {
 		culture = {
@@ -29,7 +29,7 @@ westerman_legacy_1 = { #Chamber Pot
 }
 
 westerman_legacy_2 = { #Crossbows
-	legacy = westerman_legacy_track
+	legacy =  westerman_legacy_track
 
 	character_modifier = {
 		defender_advantage = 5
@@ -41,7 +41,7 @@ westerman_legacy_2 = { #Crossbows
 }
 
 westerman_legacy_3 = { # Silver Tongue, Golden Pockets
-	legacy = westerman_legacy_track
+	legacy =  westerman_legacy_track
 
 	character_modifier = {
 		men_at_arms_recruitment_cost = -0.2
@@ -62,7 +62,7 @@ westerman_legacy_4 = { # Convergent Blood
 }
 
 westerman_legacy_5 = { # Convergent Blood
-	legacy = westerman_legacy_track
+	legacy =  westerman_legacy_track
 
 	character_modifier = {
 		siege_morale_loss = 0.25

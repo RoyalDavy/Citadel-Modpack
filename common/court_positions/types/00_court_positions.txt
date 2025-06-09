@@ -35,7 +35,6 @@
 # charioteer_court_position
 # bookmaker_court_position
 # akolouthos_court_position
-# court_astrologer_court_position
 
 ### Important Court Positions ### ( Sort order 399 - 300 )
 court_physician_court_position = {
@@ -221,50 +220,6 @@ court_physician_court_position = {
 				desc = court_position_herbalist_trait
 			}
 		}
-		# Nomad Yurt
-		if = {
-			limit = {
-				employer.domicile ?= {
-					has_domicile_building_or_higher = physician_yurt_01
-				}
-			}
-			add = {
-				value = 0
-				if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_increased_physician_aptitude_lvl_4
-						}
-					}
-					add = 32
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_increased_physician_aptitude_lvl_3
-						}
-					}
-					add = 16
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_increased_physician_aptitude_lvl_2
-						}
-					}
-					add = 8
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_increased_physician_aptitude_lvl_1
-						}
-					}
-					add = 4
-				}
-				desc = physician_yurt_01_domicile_building
-			}
-		}
 		# Education
 		if = {
 			limit = { has_trait = education_learning }
@@ -352,18 +307,6 @@ court_physician_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	#AGOT Modified
@@ -449,7 +392,7 @@ court_physician_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = court_physician } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = court_physician } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -1166,18 +1109,6 @@ travel_leader_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 		min = 0
 	}
 
@@ -1304,7 +1235,7 @@ travel_leader_court_position = {
 	}
 
 	# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints)
-	scaling_employer_modifiers = {
+	scaling_employer_modifiers = { #Hambone
 		terrible = {
 			monthly_wanderer_lifestyle_xp_gain_mult = 0.025
 		}
@@ -1315,10 +1246,10 @@ travel_leader_court_position = {
 			monthly_wanderer_lifestyle_xp_gain_mult = 0.075
 		}
 		good = {
-			monthly_wanderer_lifestyle_xp_gain_mult = 0.15
+			monthly_wanderer_lifestyle_xp_gain_mult = 0.12
 		}
 		excellent = {
-			monthly_wanderer_lifestyle_xp_gain_mult = 0.25
+			monthly_wanderer_lifestyle_xp_gain_mult = 0.15
 		}
 	}
 
@@ -1612,25 +1543,10 @@ antiquarian_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -1642,10 +1558,7 @@ antiquarian_court_position = {
 
 	# Is this an available position for this court? (root is court owner)
 	valid_position = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -1948,7 +1861,6 @@ seneschal_court_position = {
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -2187,7 +2099,7 @@ seneschal_court_position = {
 
 	modifier = {
 		general_opinion = 5
-		monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 	}
 
 	on_court_position_received = {
@@ -2349,7 +2261,7 @@ court_tutor_court_position = {
 				desc = court_position_reclusive_trait
 			}
 		}
-		#AGOT Added
+		# AGOT Added
 		if = {
 			limit = {
 				has_trait = inquisitive
@@ -2412,71 +2324,10 @@ court_tutor_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
-		# Nomad Yurt
-		if = {
-			limit = {
-				employer.domicile ?= {
-					has_domicile_building_or_higher = wet_nurse_yurt_01
-				}
-			}
-			add = {
-				value = 0
-				if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_court_tutor_aptitude_lvl_4
-						}
-					}
-					add = 32
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_court_tutor_aptitude_lvl_3
-						}
-					}
-					add = 16
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_court_tutor_aptitude_lvl_2
-						}
-					}
-					add = 8
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_court_tutor_aptitude_lvl_1
-						}
-					}
-					add = 4
-				}
-				desc = wet_nurse_yurt_01_domicile_building
-			}
-		}
 	}
 
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			domicile ?= {
-				has_domicile_parameter = nomad_unlock_court_tutor
-			}
-		}
+		is_landed_or_landless_administrative = yes
 		has_ep1_court_positions_dlc_trigger = yes
 		trigger_if = {
 			limit = {
@@ -2489,17 +2340,7 @@ court_tutor_court_position = {
 
 	# Is this an available position for this court? (root is court owner)
 	valid_position = {
-		trigger_if = {
-			limit = {
-				government_has_flag = government_is_nomadic
-			}
-			domicile ?= {
-				has_domicile_parameter = nomad_unlock_court_tutor
-			}
-		}
-		trigger_else = {
-			is_landed_or_landless_administrative = yes
-		}
+		is_landed_or_landless_administrative = yes
 	}
 
 	is_shown_character = {
@@ -2562,7 +2403,7 @@ court_tutor_court_position = {
 	salary = {
 		round = no
 		gold = {
-			value = medium_court_position_salary # Update X_salary_tooltip if script_value is changed
+			value = 1 # Update X_salary_tooltip if script_value is changed
 			# Set to 0 with Dynasty Perk Inner Circle
 			if = {
 				limit = { court_position_inner_circle_salary_trigger = { POS = court_tutor } }
@@ -2796,7 +2637,7 @@ court_tutor_court_position = {
 	}
 }
 
-wet_nurse_court_position = { # BP2
+wet_nurse_court_position = {
 	sort_order = 285
 	max_available_positions = 1
 	skill = learning
@@ -2896,50 +2737,6 @@ wet_nurse_court_position = { # BP2
 				desc = court_position_loyal_trait
 			}
 		}
-		# Nomad Yurt
-		if = {
-			limit = {
-				employer.domicile ?= {
-					has_domicile_building_or_higher = wet_nurse_yurt_01
-				}
-			}
-			add = {
-				value = 0
-				if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_wet_nurse_aptitude_lvl_4
-						}
-					}
-					add = 32
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_wet_nurse_aptitude_lvl_3
-						}
-					}
-					add = 16
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_wet_nurse_aptitude_lvl_2
-						}
-					}
-					add = 8
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_wet_nurse_aptitude_lvl_1
-						}
-					}
-					add = 4
-				}
-				desc = wet_nurse_yurt_01_domicile_building
-			}
-		}
 		add = court_position_aptitude_family_business_value
 		add = court_position_aptitude_traveling_friends_value
 		add = court_position_aptitude_high_penalty_value
@@ -2963,27 +2760,10 @@ wet_nurse_court_position = { # BP2
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			domicile ?= {
-				has_domicile_parameter = nomad_unlock_wet_nurse
-			}
-		}
+		is_landed_or_landless_administrative = yes
 		has_bp2_dlc_trigger = yes
 		trigger_if = {
 			limit = {
@@ -2997,29 +2777,7 @@ wet_nurse_court_position = { # BP2
 	}
 
 	valid_position = {
-		OR = {
-			any_child = {
-				is_adult = no
-			}
-			is_adult = no
-			any_warden_hostage = {
-				is_adult = no
-			}
-		}
-		trigger_if = {
-			limit = {
-				government_has_flag = government_is_nomadic
-			}
-			custom_tooltip = {
-				text = has_wet_nurse_domicile_building
-				domicile ?= {
-					has_domicile_parameter = nomad_unlock_wet_nurse
-				}
-			}
-		}
-		trigger_else = {
-			is_landed_or_landless_administrative = yes
-		}
+		is_landed_or_landless_administrative = yes
 	}
 
 	is_shown_character = {
@@ -3072,7 +2830,7 @@ wet_nurse_court_position = { # BP2
 	salary = {
 		round = no
 		gold = {
-			value = tiny_court_position_salary # Update X_salary_tooltip if script_value is changed
+			value = 0.25 # Update X_salary_tooltip if script_value is changed
 			# Set to 0 with Dynasty Perk Inner Circle
 			if = {
 				limit = { court_position_inner_circle_salary_trigger = { POS = wet_nurse } }
@@ -3347,7 +3105,13 @@ charioteer_court_position = {
 	is_shown = {
 		is_landed_or_landless_administrative = yes
 		has_ep3_dlc_trigger = yes
-		highest_held_title_tier > tier_county
+		trigger_if = {
+			limit = {
+				is_ai = yes
+				highest_held_title_tier <= tier_county
+			}
+			always = no
+		}
 	}
 
 	opinion = {
@@ -3548,21 +3312,8 @@ charioteer_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
-	# Is this an available position for this court? (root is court owner)
 	valid_position = {
 		is_landed_or_landless_administrative = yes
 		culture = { has_cultural_parameter = hosts_chariot_races }
@@ -3627,7 +3378,7 @@ charioteer_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = charioteer } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = charioteer } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -3897,7 +3648,7 @@ charioteer_court_position = {
 	}
 }
 
-bookmaker_court_position = { # EP3
+bookmaker_court_position = {
 	sort_order = 283
 	max_available_positions = 1
 	skill = stewardship
@@ -3996,18 +3747,6 @@ bookmaker_court_position = { # EP3
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	valid_position = {
@@ -4076,7 +3815,7 @@ bookmaker_court_position = { # EP3
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = bookmaker } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = bookmaker } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -4178,9 +3917,8 @@ bookmaker_court_position = { # EP3
 	}
 
 	custom_employer_modifier_description = bookmaker_employer_custom_effect_description
-	
+
 	on_court_position_received = {
-		scope:employee = { add_character_flag = was_bookmaker }
 		basic_gained_court_position_effect = yes
 	}
 	on_court_position_revoked = {
@@ -4234,7 +3972,7 @@ bookmaker_court_position = { # EP3
 	}
 }
 
-akolouthos_court_position = { # EP1 & EP3
+akolouthos_court_position = { # Captain of the Varangians
 	sort_order = 282
 	max_available_positions = 1
 
@@ -4458,33 +4196,19 @@ akolouthos_court_position = { # EP1 & EP3
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
-		#AGOT Modified
-		#is_landed_or_landless_administrative = yes
-		#has_ep1_court_positions_dlc_trigger = yes
-		#has_ep3_dlc_trigger = yes
-		#trigger_if = {
-		#	limit = {
-		#		is_ai = yes
-		#		highest_held_title_tier <= tier_county
-		#	}
-		#	always = no
-		#}
-		always = no
+		is_landed_or_landless_administrative = yes
+		has_ep1_court_positions_dlc_trigger = yes
+		has_ep3_dlc_trigger = yes
+		trigger_if = {
+			limit = {
+				is_ai = yes
+				highest_held_title_tier <= tier_county
+			}
+			always = no
+		}
 	}
 
 	is_shown_character = {
@@ -4494,14 +4218,15 @@ akolouthos_court_position = { # EP1 & EP3
 	}
 
 	valid_position = {
-		#AGOT Modified
-		#is_landed_or_landless_administrative = yes
-		#highest_held_title_tier >= tier_empire
-		#save_temporary_scope_as = root_scope
+		is_landed_or_landless_administrative = yes
+		highest_held_title_tier >= tier_empire
+		save_temporary_scope_as = root_scope
+		#AGOT Disabled
 		#custom_tooltip = {
 		#	text = akolouthos_founded_varangians_trigger_tt
 		#	primary_title = { has_variable = founded_varangian_guard }
 		#}
+		#AGOT Added
 		always = no
 	}
 
@@ -4555,7 +4280,7 @@ akolouthos_court_position = { # EP1 & EP3
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = akolouthos } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = akolouthos } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -4778,18 +4503,6 @@ chief_eunuch_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 		#AGOT Added Bonus from court.8311
 		if = {
 			limit = { var:bonus_aptitude_role ?= flag:chief_eunuch }
@@ -4802,10 +4515,7 @@ chief_eunuch_court_position = {
 
 	# Is this an available position for this court? (root is court owner)
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -4818,10 +4528,7 @@ chief_eunuch_court_position = {
 	}
 
 	valid_position = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		highest_held_title_tier >= tier_duchy
 		save_temporary_scope_as = root_scope
 		custom_tooltip = {
@@ -4889,7 +4596,7 @@ chief_eunuch_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = chief_eunuch } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = chief_eunuch } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -5197,23 +4904,10 @@ master_of_horse_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -5285,7 +4979,7 @@ master_of_horse_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = master_of_horse } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = master_of_horse } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -5516,28 +5210,10 @@ master_of_horse_court_position = {
 }
 
 master_of_hunt_court_position = {
-	sort_order = {
-		value = 275
-		if = {
-			limit = {
-				has_mpo_dlc_trigger = yes
-				government_has_flag = government_is_nomadic
-			}
-			add = 100
-		}
-	}
+	sort_order = 275
 	max_available_positions = 1
 	minimum_rank = county
 	skill = prowess
-
-	court_position_asset = {
-		trigger = {
-			government_has_flag = government_is_nomadic
-		}
-		animation = hunting_falcon
-		background = "gfx/interface/illustrations/event_scenes/ep2_hunt_poachers_camp.dds"
-		localization_key = master_of_hunt_court_position_nomadic
-	}
 
 	court_position_asset = {
 		animation = hunting_shortbow_aim_arrow_default
@@ -5661,25 +5337,10 @@ master_of_hunt_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -5693,10 +5354,7 @@ master_of_hunt_court_position = {
 
 	# Is this an available position for this court? (root is court owner)
 	valid_position = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 	}
 
 	is_shown_character = {
@@ -5755,7 +5413,7 @@ master_of_hunt_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = master_of_hunt } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = master_of_hunt } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -6155,25 +5813,11 @@ master_assassin_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
+
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -6186,10 +5830,7 @@ master_assassin_court_position = {
 	}
 
 	valid_position = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		faith = {
 			has_doctrine = tenet_fp3_fedayeen
 		}
@@ -6251,7 +5892,7 @@ master_assassin_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = master_assassin } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = master_assassin } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -6583,18 +6224,6 @@ cultural_emissary_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	# Is this an available position for this court? (root is court owner)
@@ -6672,7 +6301,7 @@ cultural_emissary_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = cultural_emissary } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = cultural_emissary } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -6992,23 +6621,10 @@ cave_hermit_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -7084,7 +6700,7 @@ cave_hermit_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = cave_hermit } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = cave_hermit } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -7391,25 +7007,12 @@ chief_qadi_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	# Is this an available position for this court? (root is court owner)
 	is_shown = {
 		#AGOT Modified
 		#is_landed_or_landless_administrative = yes
-		#NOT = { government_has_flag = government_is_nomadic }
 		#trigger_if = {
 		#	limit = {
 		#		is_ai = yes
@@ -7484,7 +7087,7 @@ chief_qadi_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = chief_qadi } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = chief_qadi } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -7797,18 +7400,6 @@ court_gardener_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 		#AGOT Added Bonus from court.8311
 		if = {
 			limit = { var:bonus_aptitude_role ?= flag:court_gardener }
@@ -8101,7 +7692,7 @@ court_gardener_court_position = {
 	}
 }
 
-court_scholar_court_position = { # FP3
+court_scholar_court_position = {
 	sort_order = 231
 	max_available_positions = 1
 	minimum_rank = kingdom
@@ -8224,18 +7815,7 @@ court_scholar_court_position = { # FP3
 				desc = court_position_shrewd_trait
 			}
 		}
-		if = {
-			limit = {
-				scope:liege.culture ?= {
-					has_innovation = fp3_innovation_mural_sextant
-				}
-			}
-			add = {
-				value = 10
-				desc = court_position_innovation_mural_sextant
-			}
-		}
-		#AGOT Added
+		# AGOT Added
 		if = {
 			limit = {
 				has_trait = inquisitive
@@ -8243,6 +7823,18 @@ court_scholar_court_position = { # FP3
 			add = {
 				value = 10
 				desc = court_position_inquistive_trait
+			}
+		}
+		if = {
+			limit = {
+				#AGOT Modified Check employer instead of scope:liege (Unop)
+				#scope:liege.culture ?= {
+				#	has_innovation = fp3_innovation_mural_sextant
+				#}
+			}
+			add = {
+				value = 10
+				desc = court_position_innovation_mural_sextant
 			}
 		}
 		add = court_position_aptitude_traveling_friends_value
@@ -8267,18 +7859,6 @@ court_scholar_court_position = { # FP3
 			add = {
 				value = liege.court_position:seneschal_court_position.seneschal_improve_court_value
 				desc = seneschal_improve_court_aptitude_desc
-			}
-		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
 			}
 		}
 	}
@@ -8583,22 +8163,10 @@ court_scholar_court_position = { # FP3
 	}
 }
 
-chronicler_court_position = { # CE1
+chronicler_court_position = {
 	sort_order = 230
 	max_available_positions = 1
 	skill = diplomacy
-
-	court_position_asset = {
-		trigger = {
-			OR = {
-				government_has_flag = government_is_nomadic
-				government_has_flag = government_is_tribal
-			}
-		}
-		animation = storyteller
-		background = "gfx/interface/illustrations/event_scenes/throneroom_west.dds"
-		localization_key = chronicler_court_position_nomadic_tribal
-	}
 
 	court_position_asset = {
 		animation = writing
@@ -8606,12 +8174,7 @@ chronicler_court_position = { # CE1
 	}
 
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			domicile ?= {
-				has_domicile_building_or_higher = court_yurt_01
-			}
-		}
+		is_landed_or_landless_administrative = yes
 		has_dlc_feature = legends
 		trigger_if = {
 			limit = {
@@ -8708,32 +8271,10 @@ chronicler_court_position = { # CE1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	valid_position = {
-		trigger_if = {
-			limit = {
-				government_has_flag = government_is_nomadic
-			}
-			domicile ?= {
-				has_domicile_building_or_higher = court_yurt_01
-			}
-		}
-		trigger_else = {
-			is_landed_or_landless_administrative = yes
-		}
+		is_landed_or_landless_administrative = yes
 	}
 
 	is_shown_character = {
@@ -8792,7 +8333,7 @@ chronicler_court_position = { # CE1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = chronicler } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = chronicler } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -9027,7 +8568,7 @@ chronicler_court_position = { # CE1
 	}
 }
 
-champion_court_position = { # EP1
+champion_court_position = {
 	sort_order = 215
 	max_available_positions = 1
 	skill = prowess
@@ -9202,18 +8743,6 @@ champion_court_position = { # EP1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 		#AGOT Added Bonus from court.8311
 		if = {
 			limit = { var:bonus_aptitude_role ?= flag:champion }
@@ -9227,7 +8756,6 @@ champion_court_position = { # EP1
 	is_shown = {
 		is_landed_or_landless_administrative = yes
 		has_ep1_court_positions_dlc_trigger = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -9239,14 +8767,10 @@ champion_court_position = { # EP1
 		NOT = {
 			primary_title = { has_variable = kingsguard }
 		}
-		#AGOT Added - Bloodriders have their own version of Champion
-		NOT = { faith = { has_doctrine_parameter = can_make_bloodriders } }
 	}
 
 	valid_position = {
 		is_landed_or_landless_administrative = yes
-		#AGOT Added - Bloodriders have their own version of Champion
-		NOT = { faith = { has_doctrine_parameter = can_make_bloodriders } }
 	}
 
 	is_shown_character = {
@@ -9305,7 +8829,7 @@ champion_court_position = { # EP1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = champion } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = champion } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -9578,25 +9102,10 @@ court_brewmaster_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -9608,10 +9117,7 @@ court_brewmaster_court_position = {
 
 	# Is this an available position for this court? (root is court owner)
 	valid_position = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		custom_tooltip = {
 			text = court_brewmaster_requirement_tt
 			any_sub_realm_barony = {
@@ -9678,7 +9184,7 @@ court_brewmaster_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = court_brewmaster } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = court_brewmaster } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -9875,7 +9381,7 @@ court_brewmaster_court_position = {
 	}
 }
 
-lady_in_waiting_court_position = { # EP1
+lady_in_waiting_court_position = {
 	sort_order = 205
 	max_available_positions = 2
 	minimum_rank = duchy # Should only be available for dukes or higher tiers
@@ -9954,24 +9460,11 @@ lady_in_waiting_court_position = { # EP1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
 		has_ep1_court_positions_dlc_trigger = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -10054,7 +9547,7 @@ lady_in_waiting_court_position = { # EP1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = lady_in_waiting } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = lady_in_waiting } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -10302,7 +9795,7 @@ lady_in_waiting_court_position = { # EP1
 }
 
 ### Kingdom Tier Court Positions ### ( Sort order 199 - 100 )
-royal_architect_court_position = { # EP1
+royal_architect_court_position = {
 	sort_order = 199
 	max_available_positions = 1
 	minimum_rank = kingdom # Should only be available for kings and emperors
@@ -10392,24 +9885,11 @@ royal_architect_court_position = { # EP1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
 		has_ep1_court_positions_dlc_trigger = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -10480,7 +9960,7 @@ royal_architect_court_position = { # EP1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = royal_architect } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = royal_architect } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -10644,35 +10124,35 @@ royal_architect_court_position = { # EP1
 	# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints)
 	scaling_employer_modifiers = {
 		terrible = {
-			build_speed = -0.05
-			domicile_build_speed = -0.05
+			build_speed = -0.02
+			domicile_build_speed = -0.02
 			holding_build_speed = -0.02
 		}
 		poor = {
-			build_speed = -0.1
-			domicile_build_speed = -0.1
+			build_speed = -0.04
+			domicile_build_speed = -0.04
 			holding_build_speed = -0.04
 		}
 		average = {
-			build_speed = -0.15
-			domicile_build_speed = -0.15
-			holding_build_speed = -0.08
+			build_speed = -0.06
+			domicile_build_speed = -0.06
+			holding_build_speed = -0.06
 		}
 		good = {
-			build_speed = -0.2
-			domicile_build_speed = -0.2
-			holding_build_speed = -0.12
+			build_speed = -0.08
+			domicile_build_speed = -0.08
+			holding_build_speed = -0.08
 		}
 		excellent = {
-			build_speed = -0.3
-			domicile_build_speed = -0.3
-			holding_build_speed = -0.2
+			build_speed = -0.1
+			domicile_build_speed = -0.1
+			holding_build_speed = -0.1
 		}
 	}
 
 	modifier = {
-		build_speed = -0.15
-		build_gold_cost = -0.15
+		build_speed = -0.05
+		build_gold_cost = -0.05
 		monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 	}
 
@@ -10850,23 +10330,10 @@ high_almoner_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -10938,7 +10405,7 @@ high_almoner_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = high_almoner } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = high_almoner } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -11021,16 +10488,16 @@ high_almoner_court_position = {
 			monthly_piety_gain_mult = 0.02
 		}
 		poor = {
-			monthly_piety_gain_mult = 0.05
+			monthly_piety_gain_mult = 0.04
 		}
 		average = {
-			monthly_piety_gain_mult = 0.10
+			monthly_piety_gain_mult = 0.06
 		}
 		good = {
-			monthly_piety_gain_mult = 0.15
+			monthly_piety_gain_mult = 0.08
 		}
 		excellent = {
-			monthly_piety_gain_mult = 0.2
+			monthly_piety_gain_mult = 0.1
 		}
 	}
 
@@ -11080,7 +10547,7 @@ high_almoner_court_position = {
 	}
 }
 
-court_poet_court_position = { # EP1
+court_poet_court_position = {
 	sort_order = 180
 	max_available_positions = 1
 	minimum_rank = duchy # Usually available only to kings++, but at times available to dukes
@@ -11207,25 +10674,10 @@ court_poet_court_position = { # EP1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		has_ep1_court_positions_dlc_trigger = yes
 		trigger_if = {
 			limit = {
@@ -11239,35 +10691,8 @@ court_poet_court_position = { # EP1
 	}
 
 	valid_position = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
-			limit = {
-				government_has_flag = government_is_nomadic
-				root.culture ?= {
-					has_cultural_parameter = better_court_poets
-				}
-			}
-			OR = {
-				has_realm_law = nomadic_authority_5
-				has_realm_law = nomadic_authority_4
-				has_realm_law = nomadic_authority_3
-				has_realm_law = nomadic_authority_2
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				government_has_flag = government_is_nomadic
-			}
-			OR = {
-				has_realm_law = nomadic_authority_5
-				has_realm_law = nomadic_authority_4
-				has_realm_law = nomadic_authority_3
-			}
-		}
-		trigger_else_if = {
 			limit = {
 				root.culture ?= {
 					has_cultural_parameter = better_court_poets
@@ -11336,7 +10761,7 @@ court_poet_court_position = { # EP1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = court_poet } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = court_poet } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -11706,25 +11131,10 @@ court_musician_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -11737,35 +11147,8 @@ court_musician_court_position = {
 	}
 
 	valid_position = {
-		OR = {
-			is_landed_or_landless_administrative = yes
-			government_has_flag = government_is_nomadic
-		}
+		is_landed_or_landless_administrative = yes
 		trigger_if = {
-			limit = {
-				government_has_flag = government_is_nomadic
-				root.culture ?= {
-					has_cultural_parameter = better_court_musicians
-				}
-			}
-			OR = {
-				has_realm_law = nomadic_authority_5
-				has_realm_law = nomadic_authority_4
-				has_realm_law = nomadic_authority_3
-				has_realm_law = nomadic_authority_2
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				government_has_flag = government_is_nomadic
-			}
-			OR = {
-				has_realm_law = nomadic_authority_5
-				has_realm_law = nomadic_authority_4
-				has_realm_law = nomadic_authority_3
-			}
-		}
-		trigger_else_if = {
 			limit = {
 				root.culture ?= {
 					has_cultural_parameter = better_court_musicians
@@ -11834,7 +11217,7 @@ court_musician_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = court_musician } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = court_musician } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -12167,23 +11550,10 @@ cupbearer_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -12320,7 +11690,7 @@ cupbearer_court_position = {
 	}
 }
 
-food_taster_court_position = { # EP1
+food_taster_court_position = {
 	sort_order = 165
 	max_available_positions = 1
 	minimum_rank = duchy # Usually available only to kings++, but at times available to dukes
@@ -12453,24 +11823,11 @@ food_taster_court_position = { # EP1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
 		has_ep1_court_positions_dlc_trigger = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -12554,7 +11911,7 @@ food_taster_court_position = { # EP1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = food_taster } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = food_taster } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -12865,23 +12222,10 @@ keeper_of_swans_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -12959,7 +12303,7 @@ keeper_of_swans_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = keeper_of_swans } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = keeper_of_swans } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -13266,23 +12610,10 @@ court_jester_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -13356,7 +12687,7 @@ court_jester_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = court_jester } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = court_jester } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -13640,7 +12971,7 @@ court_jester_court_position = {
 	}
 }
 
-executioner_court_position = { # EP1
+executioner_court_position = {
 	sort_order = 140
 	max_available_positions = 1
 	minimum_rank = kingdom # Should only be available for kings and emperors
@@ -13715,24 +13046,11 @@ executioner_court_position = { # EP1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
 		has_ep1_court_positions_dlc_trigger = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -13812,7 +13130,7 @@ executioner_court_position = { # EP1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = executioner } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = executioner } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -13821,8 +13139,8 @@ executioner_court_position = { # EP1
 
 	salary = {
 		round = no
-		prestige = {
-			value = minor_court_position_prestige_salary # Update X_salary_tooltip if script_value is changed
+		gold = {
+			value = 0.3 # Update X_salary_tooltip if script_value is changed
 			# Set to 0 with Dynasty Perk Inner Circle
 			if = {
 				limit = { court_position_inner_circle_salary_trigger = { POS = executioner } }
@@ -13983,7 +13301,7 @@ executioner_court_position = { # EP1
 	}
 }
 
-bodyguard_court_position = { # EP1
+bodyguard_court_position = {
 	sort_order = {
 		value = 131
 		if = { # Lower for landless
@@ -13996,16 +13314,6 @@ bodyguard_court_position = { # EP1
 	max_available_positions = 2
 
 	skill = prowess
-
-	#AGOT Disabled
-	#court_position_asset = {
-	#	trigger = {
-	#		culture = { has_cultural_pillar = heritage_mongolic }
-	#	}
-	#	animation = menacing
-	#	background = "gfx/interface/illustrations/event_scenes/corridor.dds"
-	#	localization_key = bodyguard_court_position_nomadic
-	#}
 
 	court_position_asset = {
 		animation = menacing
@@ -14056,42 +13364,6 @@ bodyguard_court_position = { # EP1
 			add = {
 				value = 5
 				desc = court_position_positions_of_power_perk_friend
-			}
-		}
-		# Nomad Yurt
-		if = {
-			limit = {
-				employer.domicile ?= {
-					has_domicile_building_or_higher = bodyguard_yurt_01
-				}
-			}
-			add = {
-				value = 0
-				if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_increased_bodyguard_aptitude_lvl_3
-						}
-					}
-					add = 30
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_increased_bodyguard_aptitude_lvl_2
-						}
-					}
-					add = 20
-				}
-				else_if = {
-					limit = {
-						employer.domicile ?= {
-							has_domicile_parameter = nomad_yurt_increased_bodyguard_aptitude_lvl_1
-						}
-					}
-					add = 10
-				}
-				desc = bodyguard_yurt_01_domicile_building
 			}
 		}
 		if = {
@@ -14347,44 +13619,6 @@ bodyguard_court_position = { # EP1
 			}
 		}
 		
-		if = { # Cherbi / Chief Bodyguard bonus
-			limit = {
-				exists = liege.court_position:cherbi_court_position
-			}
-			switch = {
-				trigger = "liege.court_position:cherbi_court_position.aptitude(cherbi_court_position)"
-				1 = { 
-					add = {
-						value = 1 
-						desc = court_position_bodyguard_cherbi_modifier
-					}
-				}
-				2 = {
-					add = {
-						value = 4
-						desc = court_position_bodyguard_cherbi_modifier
-					}
-				}
-				3 = { 
-					add = {
-						value = 7
-						desc = court_position_bodyguard_cherbi_modifier
-					}
-				}
-				4 = {
-					add = {
-						value = 10
-						desc = court_position_bodyguard_cherbi_modifier
-					}
-				}
-				5 = {
-					add = {
-						value = 15
-						desc = court_position_bodyguard_cherbi_modifier
-					}
-				}
-			}
-		}
 		add = court_position_aptitude_eunuch_tradition_value
 		add = court_position_aptitude_family_business_value
 		add = court_position_aptitude_high_penalty_value
@@ -14408,18 +13642,6 @@ bodyguard_court_position = { # EP1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
@@ -14435,32 +13657,13 @@ bodyguard_court_position = { # EP1
 		NOT = {
 			primary_title = { has_variable = kingsguard }
 		}
-		agot_is_landless_nw_character = no
-		NOT = { government_has_flag = government_is_custom_landless }
-		#AGOT Added - Bloodriders have their own version of Bodyguard
-		NOT = { faith = { has_doctrine_parameter = can_make_bloodriders } }
-	}
-
-	valid_position = {
-		trigger_if = {
-			limit = {
-				government_has_flag = government_is_nomadic
-			}
-			domicile ?= {
-				has_domicile_building_or_higher = character_warfare_yurt_01
-			}
-		}
 		#AGOT Added
-		agot_is_landless_nw_character = no
-		#Bloodriders have their own version of Bodyguard
-		NOT = { faith = { has_doctrine_parameter = can_make_bloodriders } }
+		NOT = { government_has_flag = government_is_custom_landless }
 	}
 
 	is_shown_character = {
 		scope:employee = {
 			is_imprisoned = no
-			#AGOT Added - Bloodriders have their own version of Bodyguard
-			NOT = { faith = { has_doctrine_parameter = can_make_bloodriders } }
 		}
 	}
 
@@ -14514,7 +13717,7 @@ bodyguard_court_position = { # EP1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = bodyguard } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = bodyguard } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -14779,7 +13982,7 @@ bodyguard_court_position = { # EP1
 	}
 }
 
-court_artificer_court_position = { # EP1
+court_artificer_court_position = {
 	sort_order = 130
 	max_available_positions = 3
 	minimum_rank = kingdom
@@ -14860,24 +14063,11 @@ court_artificer_court_position = { # EP1
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
 		has_ep1_court_positions_dlc_trigger = yes
-		NOT = { government_has_flag = government_is_nomadic }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -14957,7 +14147,7 @@ court_artificer_court_position = { # EP1
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = court_artificer } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = court_artificer } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}
@@ -15266,40 +14456,23 @@ garuda_court_position = {
 				desc = seneschal_improve_court_aptitude_desc
 			}
 		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
 	}
 
 	# Is this an available position for this court? (root is court owner)
 	is_shown = {
-		#AGOT Modified
-		#is_landed_or_landless_administrative = yes
-		#trigger_if = {
-		#	limit = {
-		#		is_ai = yes
-		#		highest_held_title_tier <= tier_county
-		#	}
-		#	always = no
-		#}
-		always = no
+		is_landed_or_landless_administrative = yes
+		trigger_if = {
+			limit = {
+				is_ai = yes
+				highest_held_title_tier <= tier_county
+			}
+			always = no
+		}
 	}
 
 	valid_position = {
 		#AGOT Modified
-		#OR = {
-		#	is_landed_or_landless_administrative = yes
-		#	government_has_flag = government_is_nomadic
-		#}
+		#is_landed_or_landless_administrative = yes
 		#highest_held_title_tier >= tier_kingdom
 		#culture = { has_cultural_tradition = tradition_garuda_warriors }
 		always = no
@@ -15361,7 +14534,7 @@ garuda_court_position = {
 			}
 			#AGOT Added Inner circle legacy allows revoking without cost
 			if = {
-				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root POS = garuda } }
+				limit = { agot_court_position_inner_circle_revoke_trigger = { LIEGE = root  POS = garuda } }
 				desc = inner_circle_salary_mod
 				multiply = 0
 			}

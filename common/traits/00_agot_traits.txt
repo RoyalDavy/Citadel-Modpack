@@ -930,23 +930,6 @@ house_customizer = {
 	}
 }
 
-vs_customizer = {
-	shown_in_ruler_designer = yes
-	ruler_designer_cost = 100
-
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_vs_customizer_desc
-			}
-			desc = trait_vs_customizer_character_desc
-		}
-	}
-}
-
 heterochromia_customizer = {
 	shown_in_ruler_designer = yes
 	ruler_designer_cost = 0
@@ -962,6 +945,8 @@ heterochromia_customizer = {
 			desc = trait_heterochromia_customizer_character_desc
 		}
 	}
+
+	icon = heterochromia_customizer.dds
 }
 
 ################ PERSONALITY ###############

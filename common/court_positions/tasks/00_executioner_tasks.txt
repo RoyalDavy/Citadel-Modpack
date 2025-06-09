@@ -1,7 +1,7 @@
 ﻿### Royal Architect Tasks ###
 
 executioner_terrify_court = {
-	#AGOT Modified
+	#AGOT MODIFIED
 	#court_position_types = { executioner_court_position bodyguard_court_position garuda_court_position akolouthos_court_position }
 	court_position_types = { executioner_court_position bodyguard_court_position garuda_court_position akolouthos_court_position first_sword_court_position }
 
@@ -32,15 +32,15 @@ executioner_terrify_court = {
 		}
 		average = {
 			courtier_and_guest_opinion = -4
-			dread_baseline_add = 4
+			dread_baseline_add = 3
 		}
 		good = {
 			courtier_and_guest_opinion = -7
-			dread_baseline_add = 7
+			dread_baseline_add = 4
 		}
 		excellent = {
 			courtier_and_guest_opinion = -10
-			dread_baseline_add = 10
+			dread_baseline_add = 5
 		}
 	}
 
@@ -48,12 +48,6 @@ executioner_terrify_court = {
 		value = {
 			add = ai_honor
 			multiply = -1
-			if = {
-				limit = {
-					government_has_flag = government_is_nomadic
-				}
-				add = 100
-			}
 		}
 	}
 }

@@ -9,29 +9,23 @@
 # }
 
 NWar = {
-	# CAPTURED_VASSAL_WAR_SCORE = 2 # miv: direct vassals grant 2% war score when captured
+	CAPTURED_VASSAL_WAR_SCORE = 2 # miv: direct vassals grant 2% war score when captured
 	ATTACKER_TICKING_WAR_SCORE = 0.0275				# Default ticking war score per day for attackers. Can be overwritten by CB. Set to 0 to disable
 	DEFENDER_TICKING_WAR_SCORE = 0.0275				# Default ticking war score per day for defenders. Can be overwritten by CB. Set to 0 to disable
-	ATTACKER_TICKING_WAR_SCORE_DELAY_DAYS = 365		# Default delay in days before applying ticking war score for attackers. Can be overwritten by CB
 	DEFENDER_TICKING_WAR_SCORE_DELAY_DAYS = 730		# Default delay in days before applying ticking war score for defenders. Can be overwritten by CB
 	CAPTURED_HEIR_WAR_SCORE = { 30 20 10 }			# War Score in order of succession
 	AI_USE_VASSAL_OF_VASSAL_CLAIMS = yes 			# If this is set to "no", the AI will never push the claims of vassals of vassals
 }
 
-NCombat = {
-	WAR_ATTACKER_COMBAT_MAX_SCORE = 20				# The maximum amount of warscore gained from a single battle by the war attacker
-	WAR_DEFENDER_COMBAT_MAX_SCORE = 20				# The maximum amount of warscore gained from a single battle by the war attacker
-}
-
 NMercenary = {
-	LEVIES = { 100 200 300 }				# The base numbers of levies for levels of mercenary bands
+	LEVIES = { 200 400 600 }				# The base numbers of levies for levels of mercenary bands
 }
 
 NHolyOrder = {
 	# In addition to the holding levies, a holy order has levies according to this formula:
 	# NUM_LEVIES_BASE + <num holdings> * NUM_LEVIES_PER_HOLDING
-	NUM_LEVIES_BASE = 100
-	NUM_LEVIES_PER_HOLDING = 50
+	NUM_LEVIES_BASE = 200
+	NUM_LEVIES_PER_HOLDING = 100
 }
 
 NSiege = {

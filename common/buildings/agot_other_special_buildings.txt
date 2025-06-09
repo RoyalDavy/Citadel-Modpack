@@ -81,10 +81,7 @@ duskendale_01 = {
 }
 
 duskendale_02 ={
-asset = {
-		type = pdxmesh
-		name = "fp2_building_special_toledo_city_walls_01_a_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_lubeck.dds" #TODO
@@ -118,10 +115,6 @@ asset = {
 
 duskendale_03 = {
 	
-asset = {
-		type = pdxmesh
-		name = "fp2_building_special_toledo_city_walls_01_a_mesh"
-	}
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_lubeck.dds" #TODO
@@ -200,10 +193,6 @@ asset = {
 
 #4124 b_wynegarde - Arbor Shipyards 
 arbor_shipyards_01 = {
-	asset = {
-		type = pdxmesh
-		name = "mount_athos_mesh"
-	}
 			
 	construction_time = very_slow_construction_time
 
@@ -243,11 +232,6 @@ arbor_shipyards_01 = {
 
 #4135 b_golden_vines - Arbor Vineyards 
 arbor_vineyards_01 = {
-	asset = {
-		type = pdxmesh
-		name = "sm_mont_saint_michel_01_mesh"
-	}
-
 			
 	construction_time = very_slow_construction_time
 
@@ -289,10 +273,6 @@ arbor_vineyards_01 = {
 
 #ID b_name - Tarth Marble Quarry, used to build the Eyrie
 quarry_of_tarth_01 = {
-asset = {
-		type = pdxmesh
-		name = "fp2_building_special_basilica_santiago_mesh"
-	}
 
 	construction_time = slow_construction_time
 
@@ -333,10 +313,6 @@ asset = {
 
 #Planky Town
 planky_town_01 = {
-	asset = {
-		type = pdxmesh
-		name = "fp2_building_special_alcazar_de_segovia_01_a_mesh"
-	}
 	
 	construction_time = very_slow_construction_time
 
@@ -372,10 +348,7 @@ planky_town_01 = {
 
 #2254 b_stone - Stone ## modifiers were adjusted to fit lore and make it unique ###
 stone_01 = {
-asset = {
-		type = pdxmesh
-		name = "building_special_tower_of_london_mesh"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_walls_of_genoa.dds" #TODO
@@ -461,10 +434,7 @@ sky_01 = {
 
 #2307 b_castle_wickenden - Wickenden Beeswax Candles
 wickenden_candles_01 = {
-	asset = {
-		type = pdxmesh
-		name = "pompeys_pillar_mesh"
-	}	
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_pillar_ashoka.dds" #TODO
@@ -499,10 +469,7 @@ wickenden_candles_01 = {
 
 #2718 b_sisterton - Smuggler Dens of Sisterton
 sisterton_dens_01 = {
-		asset = {
-		type = entity
-		name = "pharos_entity"
-	}
+
 	construction_time = very_slow_construction_time
 
 	type_icon = "gibraltar.dds" #TODO
@@ -1127,10 +1094,6 @@ pleasureden_05 = {
 #Hellholt
 hellholt_01 = {
 	
-	asset = {
-		type = pdxmesh
-		name = "karnak_mesh"
-	}
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_hanging_garden.dds" #TODO
@@ -1283,10 +1246,7 @@ raventree_hall_rookery_03 = {
 
 
 stone_hedge_stables_01 = {
-asset = {
-		type = pdxmesh
-		name = "san_vitale_mesh"
-	}
+
 	construction_time = slow_construction_time
 
 	type_icon = "icon_stone_hedge_stables.dds"
@@ -1325,10 +1285,7 @@ asset = {
 }
 
 stone_hedge_stables_02 = {
-asset = {
-		type = pdxmesh
-		name = "san_vitale_mesh"
-	}
+
 	construction_time = slow_construction_time
 
 	type_icon = "icon_stone_hedge_stables.dds"
@@ -1369,10 +1326,7 @@ asset = {
 }
 
 stone_hedge_stables_03 = {
-asset = {
-		type = pdxmesh
-		name = "san_vitale_mesh"
-	}
+
 	construction_time = slow_construction_time
 
 	type_icon = "icon_stone_hedge_stables.dds"
@@ -1524,10 +1478,7 @@ stillfen_lily_pad_pond_03 = {
 }
 
 wayfarers_rest_armisteads_tomb_01 = {
-asset = {
-		type = pdxmesh
-		name = "aula_palatina_mesh"
-	}
+
 	construction_time = slow_construction_time
 
 	type_icon = "icon_wayfarers_rest_armisteads_tomb.dds"
@@ -1795,10 +1746,7 @@ horn_hill_hunting_grounds_03 = {
 }
 
 coldmoat_outworks_01 = {
-asset = {
-		type = pdxmesh
-		name = "building_special_palace_of_aachen_mesh"
-	}
+
 	construction_time = slow_construction_time
 
 	type_icon = "icon_building_ramparts.dds"
@@ -1836,10 +1784,7 @@ asset = {
 }
 
 coldmoat_outworks_02 = {
-asset = {
-		type = pdxmesh
-		name = "building_special_palace_of_aachen_mesh"
-	}
+
 	construction_time = slow_construction_time
 
 	type_icon = "icon_building_ramparts.dds"
@@ -1876,10 +1821,7 @@ asset = {
 }
 
 coldmoat_outworks_03 = {
-asset = {
-		type = pdxmesh
-		name = "building_special_palace_of_aachen_mesh"
-	}
+
 	construction_time = slow_construction_time
 
 	type_icon = "icon_building_ramparts.dds"
@@ -1985,10 +1927,7 @@ runeport_docks_02 = {
 }
 
 runeport_docks_03 = {
-		asset = {
-		type = pdxmesh
-		name = "palace_palermo_mesh"
-	}
+
 	construction_time = slow_construction_time
 
 	type_icon = "icon_building_tradeport.dds"
@@ -2118,10 +2057,6 @@ runeport_docks_03 = {
 #}
 #
 gullview_osgoods_tomb_01 = {
-asset = {
-		type = pdxmesh
-		name = "fp2_building_special_roman_wall_of_lugo_01_a_mesh"
-	}
 
 	construction_time = slow_construction_time
 

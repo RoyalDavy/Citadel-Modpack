@@ -1,7 +1,0 @@
-﻿l_english: 
- rule_number_of_duchies:0 "#I Limit Duchies to One#!"  
- setting_more_than_two:0 "On"
- setting_more_than_two_desc:0 "#P Custom Setting:#! You will get the #S Too many held Duchies#! penalty if you hold #S more than one (1) Duchy#! if you are a King or Emperor"
- 
- setting_more_than_three:0 "Off"
- setting_more_than_three_desc:0 "#P Vanilla Setting:#! You will get the #S Too many held Duchies#! penalty if you hold #S more than two (2) Duchies#! if you are a King or Emperor"

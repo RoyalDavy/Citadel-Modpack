@@ -1,5 +1,0 @@
-﻿macro = {
-	description = "Is the character a NW Landless Adventurer?"
-	definition = "IsNWAdventurer(TargetCharacter)"
-	replace_with = "TargetCharacter.GetGovernment.IsType('first_ranger_government')"
-}

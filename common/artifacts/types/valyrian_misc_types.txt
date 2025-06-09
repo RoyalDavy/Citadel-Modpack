@@ -1,3 +1,0 @@
-﻿valyrian_book = {
-	slot = miscellaneous
-}

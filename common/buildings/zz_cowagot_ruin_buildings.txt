@@ -25,7 +25,15 @@ ruin_01 = {
 		name = "empty_mesh"		
 		illustration = @holding_illustration_ruin
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 0 } }
-		provinces = { 1737 6028 }
+		provinces = { 1737 }
+	}
+
+	asset = {
+		type = pdxmesh
+		name = "empty_mesh"		
+		illustration = @holding_illustration_ruin
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Castle/western_castle" soundparameter = { "Tier" = 0 } }
+		provinces = { 6028 }
 	}
 
 
@@ -77,7 +85,6 @@ small_ruin_04 = {
 	}
 
 	on_complete = {
-		save_scope_as = completed_ruin
 		county.holder = { trigger_event = agot_ruins.1000 }
 	}
 
@@ -131,7 +138,6 @@ medium_ruin_04 = {
 	garrison_reinforcement_factor = 0.09
 	type_icon = "icon_ruin.dds"
 	on_complete = {
-		save_scope_as = completed_ruin
 		county.holder = { trigger_event = agot_ruins.1000 }
 	}
 }
@@ -153,7 +159,6 @@ large_ruin_04 = {
 	
 	
 	on_complete = {
-		save_scope_as = completed_ruin
 		county.holder = { trigger_event = agot_ruins.1000 }
 	}
 	can_construct_showing_failures_only = {			

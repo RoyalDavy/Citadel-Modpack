@@ -1,9 +1,7 @@
 ﻿eparch_court_position = {
 	sort_order = 371
 	max_available_positions = 1
-	#AGOT Modified
-	#minimum_rank = empire
-	minimum_rank = kingdom
+	minimum_rank = empire
 	skill = stewardship
 
 	court_position_asset = {

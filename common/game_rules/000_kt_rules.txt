@@ -1,7 +1,0 @@
-﻿agot_kt_throttling = {
-	default = agot_kt_limited
-
-	agot_kt_very_limited = {}
-	agot_kt_limited = {}
-	agot_kt_unlimited = {}
-}

@@ -77,21 +77,23 @@ accolade_maa_archers = {
 	pursuit = 0
 	screen = 0
 	
-	terrain_bonus = {			   
+	terrain_bonus = {
+		#AGOT Modified
+		#hills = { damage = 20 toughness = 8 }
+		#forest = { toughness = 8 screen = 8 }
+		#taiga = { toughness = 8 screen = 8 }
+
 		hills = { damage = 20 toughness = 8 }
-		forest = { toughness = 8 screen = 8 }
-		taiga = { toughness = 8 screen = 8 }
-		#AGOT Added
 		majorroad_hills = { damage = 20 toughness = 8 }
 		minorroad_hills = { damage = 20 toughness = 8 }
-									   
+		forest = { toughness = 8 screen = 8 }
 		majorroad_forest = { toughness = 8 screen = 8 }
 		minorroad_forest = { toughness = 8 screen = 8 }
-									  
+		taiga = { toughness = 8 screen = 8 }
 		majorroad_taiga = { toughness = 8 screen = 8 }
 		minorroad_taiga = { toughness = 8 screen = 8 }
 	}
-	
+
 	counters = {
 		skirmishers = 2
 	}
@@ -166,20 +168,22 @@ accolade_maa_skirmishers = {
 	screen = 20
 	
 	terrain_bonus = {
+		#AGOT Modified
+		#forest = { damage = 8 toughness = 12 }
+		#taiga = { damage = 8 toughness = 12 }
+		#jungle = { damage = 8 toughness = 12 }
+
 		forest = { damage = 8 toughness = 12 }
-		taiga = { damage = 8 toughness = 12 }
-		jungle = { damage = 8 toughness = 12 }
-		#AGOT Added
 		majorroad_forest = { damage = 8 toughness = 12 }
 		minorroad_forest = { damage = 8 toughness = 12 }
-									   
+		taiga = { damage = 8 toughness = 12 }
 		majorroad_taiga = { damage = 8 toughness = 12 }
 		minorroad_taiga = { damage = 8 toughness = 12 }
-										
+		jungle = { damage = 8 toughness = 12 }
 		majorroad_jungle = { damage = 8 toughness = 12 }
 		minorroad_jungle = { damage = 8 toughness = 12 }
 	}
-	
+
 	counters = {
 		heavy_infantry = 2
 	}
@@ -255,20 +259,22 @@ accolade_maa_pikes = {
 	screen = 0
 	
 	terrain_bonus = {
+		#AGOT Modified
+		#mountains = { toughness = 24 }
+		#desert_mountains = { toughness = 24 }
+		#hills = { toughness = 16 }
+
 		mountains = { toughness = 24 }
-		desert_mountains = { toughness = 24 }
-		hills = { toughness = 16 }
-		#AGOT Added
 		majorroad_mountains = { toughness = 24 }
 		minorroad_mountains = { toughness = 24 }
-									   
+		desert_mountains = { toughness = 24 }
 		majorroad_desert_mountains = { toughness = 24 }
 		minorroad_desert_mountains = { toughness = 24 }
-							
+		hills = { toughness = 16 }
 		majorroad_hills = { toughness = 16 }
 		minorroad_hills = { toughness = 16 }
 	}
-	
+
 	counters = {
 		light_cavalry = 2
 		heavy_cavalry = 2
@@ -346,28 +352,30 @@ accolade_maa_outriders = {
 	screen = 40
 	
 	terrain_bonus = {
+		#AGOT Modified
+		#plains = { damage = 30 }
+		#drylands = { damage = 30 }
+		#hills = { damage = -3 }
+		#mountains = { damage = -5 pursuit = -10 }
+		#desert_mountains = { damage = -8 pursuit = -10 }
+		#wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
+
 		plains = { damage = 30 }
-		drylands = { damage = 30 }
-		hills = { damage = -3 }
-		mountains = { damage = -5 pursuit = -10 }
-		desert_mountains = { damage = -8 pursuit = -10 }
-		wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
-		#AGOT Added
 		majorroad_plains = { damage = 30 }
 		minorroad_plains = { damage = 30 }
-							
+		drylands = { damage = 30 }
 		majorroad_drylands = { damage = 30 }
 		minorroad_drylands = { damage = 30 }
-						 
+		hills = { damage = -3 }
 		majorroad_hills = { damage = -3 }
 		minorroad_hills = { damage = -3 }
-										   
+		mountains = { damage = -5 pursuit = -10 }
 		majorroad_mountains = { damage = -5 pursuit = -10 }
 		minorroad_mountains = { damage = -5 pursuit = -10 }
-												  
+		desert_mountains = { damage = -8 pursuit = -10 }
 		majorroad_desert_mountains = { damage = -8 pursuit = -10 }
 		minorroad_desert_mountains = { damage = -8 pursuit = -10 }
-																	  
+		wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
 		majorroad_wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
 		minorroad_wetlands = { damage = -8 toughness = -5 pursuit = -15 screen = -15 }
 	}
@@ -525,31 +533,34 @@ accolade_maa_lancers = {
 	screen = 0
 	
 	terrain_bonus = {
-		drylands = { damage = 60 }
-		hills = { damage = -10 }
-		mountains = { damage = -35 }
-		desert_mountains = { damage = -35 }
-		wetlands = { damage = -35 toughness = -5 pursuit = -5 }
-		#AGOT Added
+		#AGOT Modified
+		#plains = { damage = 60 }
+		#drylands = { damage = 60 }
+		#hills = { damage = -10 }
+		#mountains = { damage = -35 }
+		#desert_mountains = { damage = -35 }
+		#wetlands = { damage = -35 toughness = -5 pursuit = -5 }
+
+		plains = { damage = 60 }
 		majorroad_plains = { damage = 60 }
 		minorroad_plains = { damage = 60 }
-							
+		drylands = { damage = 60 }
 		majorroad_drylands = { damage = 60 }
 		minorroad_drylands = { damage = 60 }
-						  
+		hills = { damage = -10 }
 		majorroad_hills = { damage = -10 }
 		minorroad_hills = { damage = -10 }
-							  
+		mountains = { damage = -35 }
 		majorroad_mountains = { damage = -35 }
 		minorroad_mountains = { damage = -35 }
-									 
+		desert_mountains = { damage = -35 }
 		majorroad_desert_mountains = { damage = -35 }
 		minorroad_desert_mountains = { damage = -35 }
-														 
+		wetlands = { damage = -35 toughness = -5 pursuit = -5 }
 		majorroad_wetlands = { damage = -35 toughness = -5 pursuit = -5 }
 		minorroad_wetlands = { damage = -35 toughness = -5 pursuit = -5 }
 	}
-	
+
 	counters = {
 		archers = 2
 	}
@@ -628,24 +639,26 @@ accolade_maa_crossbowers = {
 	screen = 0
 	
 	terrain_bonus = {
+		#AGOT Modified
+		#hills = { damage = 20 }
+		#plains = { toughness = -4 }
+		#drylands = { toughness = -4 }
+		#desert = { toughness = -4 }
+
 		hills = { damage = 20 }
-		plains = { toughness = -4 }
-		drylands = { toughness = -4 }
-		desert = { toughness = -4 }
-		#AGOT Added
 		majorroad_hills = { damage = 20 }
 		minorroad_hills = { damage = 20 }
-							 
+		plains = { toughness = -4 }
 		majorroad_plains = { toughness = -4 }
 		minorroad_plains = { toughness = -4 }
-							   
+		drylands = { toughness = -4 }
 		majorroad_drylands = { toughness = -4 }
 		minorroad_drylands = { toughness = -4 }
-							 
+		desert = { toughness = -4 }
 		majorroad_desert = { toughness = -4 }
 		minorroad_desert = { toughness = -4 }
 	}
-	
+
 	counters = {
 		heavy_infantry = 2
 		heavy_cavalry = 2
@@ -722,36 +735,38 @@ accolade_maa_cameliers = {
 	screen = 30
 	
 	terrain_bonus = {
+		#AGOT Modified
+		#desert = { damage = 40 toughness = 16 }
+		#drylands = { damage = 30 toughness = 16 }
+		#oasis = { damage = 30 }
+		#floodplains = { damage = 10 }
+		#hills = { damage = -5 }
+		#desert_mountains = { damage = -5 pursuit = -5 }
+		#mountains = { damage = -8 pursuit = -10 }
+		#wetlands = { damage = -8 toughness = -5 pursuit = -10 screen = -10 }
+
 		desert = { damage = 40 toughness = 16 }
-		drylands = { damage = 30 toughness = 16 }
-		oasis = { damage = 30 }
-		floodplains = { damage = 10 }
-		hills = { damage = -5 }
-		desert_mountains = { damage = -5 pursuit = -5 }
-		mountains = { damage = -8 pursuit = -10 }
-		wetlands = { damage = -8 toughness = -5 pursuit = -10 screen = -10 }
-		#AGOT Added
 		majorroad_desert = { damage = 40 toughness = 16 }
 		minorroad_desert = { damage = 40 toughness = 16 }
-										   
+		drylands = { damage = 30 toughness = 16 }
 		majorroad_drylands = { damage = 30 toughness = 16 }
 		minorroad_drylands = { damage = 30 toughness = 16 }
-						 
+		oasis = { damage = 30 }
 		majorroad_oasis = { damage = 30 }
 		minorroad_oasis = { damage = 30 }
-							   
+		floodplains = { damage = 10 }
 		majorroad_floodplains = { damage = 10 }
 		minorroad_floodplains = { damage = 10 }
-						 
+		hills = { damage = -5 }
 		majorroad_hills = { damage = -5 }
 		minorroad_hills = { damage = -5 }
-												 
+		desert_mountains = { damage = -5 pursuit = -5 }
 		majorroad_desert_mountains = { damage = -5 pursuit = -5 }
 		minorroad_desert_mountains = { damage = -5 pursuit = -5 }
-										   
+		mountains = { damage = -8 pursuit = -10 }
 		majorroad_mountains = { damage = -8 pursuit = -10 }
 		minorroad_mountains = { damage = -8 pursuit = -10 }
-																	  
+		wetlands = { damage = -8 toughness = -5 pursuit = -10 screen = -10 }
 		majorroad_wetlands = { damage = -8 toughness = -5 pursuit = -10 screen = -10 }
 		minorroad_wetlands = { damage = -8 toughness = -5 pursuit = -10 screen = -10 }
 	}
@@ -837,20 +852,22 @@ accolade_maa_elephantiers = {
 	siege_value = 0.2
 	
 	terrain_bonus = {
+		#AGOT Modified
+		#jungle = { damage = 100 }
+		#mountains = { damage = -100 }
+		#desert_mountains = { damage = -100 }
+		#wetlands = { damage = -150 toughness = -20 }
+
 		jungle = { damage = 100 }
-		mountains = { damage = -100 }
-		desert_mountains = { damage = -100 }
-		wetlands = { damage = -150 toughness = -20 }
-		#AGOT Added
 		majorroad_jungle = { damage = 100 }
 		minorroad_jungle = { damage = 100 }
-							   
+		mountains = { damage = -100 }
 		majorroad_mountains = { damage = -100 }
 		minorroad_mountains = { damage = -100 }
-									  
+		desert_mountains = { damage = -100 }
 		majorroad_desert_mountains = { damage = -100 }
 		minorroad_desert_mountains = { damage = -100 }
-											  
+		wetlands = { damage = -150 toughness = -20 }
 		majorroad_wetlands = { damage = -150 toughness = -20 }
 		minorroad_wetlands = { damage = -150 toughness = -20 }
 	}
@@ -935,36 +952,38 @@ accolade_maa_horse_archers = {
 	screen = 30
 	
 	terrain_bonus = {
+		#AGOT Modified
+		#steppe = { damage = 45 }
+		#plains = { damage = 20 }
+		#drylands = { damage = 20 }
+		#jungle = { damage = -20 pursuit = -20 }
+		#wetlands = { damage = -30 pursuit = -30 }
+		#mountains = { damage = -30 pursuit = -30 }
+		#desert_mountains = { damage = -30 pursuit = -30 }
+
 		steppe = { damage = 45 }
-		plains = { damage = 20 }
-		drylands = { damage = 20 }
-		jungle = { damage = -20 pursuit = -20 }
-		wetlands = { damage = -30 pursuit = -30 }
-		mountains = { damage = -30 pursuit = -30 }
-		desert_mountains = { damage = -30 pursuit = -30 }
-		#AGOT Added
 		majorroad_steppe = { damage = 45 }
 		minorroad_steppe = { damage = 45 }
-						  
+		plains = { damage = 20 }
 		majorroad_plains = { damage = 20 }
 		minorroad_plains = { damage = 20 }
-							
+		drylands = { damage = 20 }
 		majorroad_drylands = { damage = 20 }
 		minorroad_drylands = { damage = 20 }
-										 
+		jungle = { damage = -20 pursuit = -20 }
 		majorroad_jungle = { damage = -20 pursuit = -20 }
 		minorroad_jungle = { damage = -20 pursuit = -20 }
-										   
+		wetlands = { damage = -30 pursuit = -30 }
 		majorroad_wetlands = { damage = -30 pursuit = -30 }
 		minorroad_wetlands = { damage = -30 pursuit = -30 }
-											
+		mountains = { damage = -30 pursuit = -30 }
 		majorroad_mountains = { damage = -30 pursuit = -30 }
 		minorroad_mountains = { damage = -30 pursuit = -30 }
-												   
+		desert_mountains = { damage = -30 pursuit = -30 }
 		majorroad_desert_mountains = { damage = -30 pursuit = -30 }
 		minorroad_desert_mountains = { damage = -30 pursuit = -30 }
 	}
-	
+
 	counters = {
 		skirmishers = 2
 		heavy_infantry = 2
@@ -1226,7 +1245,6 @@ accolade_maa_skirmishers_wild = {
 		normal_winter = { toughness = 5 }
 		harsh_winter = { toughness = 5 }
 	}
-	
 	counters = {
 		heavy_infantry = 2
 	}

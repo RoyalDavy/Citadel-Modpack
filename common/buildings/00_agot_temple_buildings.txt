@@ -3,14 +3,14 @@
 
 	can_construct_potential = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 		building_requirement_castle_city_church = { LEVEL = 01 }
 	}
 
 	can_construct = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 	}
 
@@ -36,7 +36,7 @@
 		modifier = {
 			factor = 100
 			scope:holder = {
-				has_religion = religion:the_pact_religion
+				has_religion = religion:old_gods_religion
 			}
 		}
 	}
@@ -47,14 +47,14 @@ godswood_02 = {
 
 	can_construct_potential = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 		building_requirement_castle_city_church = { LEVEL = 01 }
 	}
 
 	can_construct = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 	}
 
@@ -72,13 +72,13 @@ godswood_02 = {
 
 	next_building = godswood_03
 
-	ai_value = {
+	ai_value = { 
 		base = 3
 		ai_general_building_modifier = yes
 		modifier = {
 			factor = 2
 			scope:holder = {
-				has_religion = religion:the_pact_religion
+				has_religion = religion:old_gods_religion
 			}
 		}
 		modifier = { # Fill all building slots before going for upgrades
@@ -93,14 +93,14 @@ godswood_03 = {
 
 	can_construct_potential = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 		building_requirement_castle_city_church = { LEVEL = 02 }
 	}
 
 	can_construct = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 	}
 
@@ -124,7 +124,7 @@ godswood_03 = {
 		modifier = {
 			factor = 2
 			scope:holder = {
-				has_religion = religion:the_pact_religion
+				has_religion = religion:old_gods_religion
 			}
 		}
 		modifier = { # Fill all building slots before going for upgrades
@@ -139,14 +139,14 @@ godswood_04 = {
 
 	can_construct_potential = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 		building_requirement_castle_city_church = { LEVEL = 02 }
 	}
 
 	can_construct = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 	}
 
@@ -170,7 +170,7 @@ godswood_04 = {
 		modifier = {
 			factor = 2
 			scope:holder = {
-				has_religion = religion:the_pact_religion
+				has_religion = religion:old_gods_religion
 			}
 		}
 		modifier = { # Fill all building slots before going for upgrades
@@ -185,14 +185,14 @@ godswood_05 = {
 
 	can_construct_potential = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 		building_requirement_castle_city_church = { LEVEL = 03 }
 	}
 
 	can_construct = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 	}
 
@@ -216,7 +216,7 @@ godswood_05 = {
 		modifier = {
 			factor = 2
 			scope:holder = {
-				has_religion = religion:the_pact_religion
+				has_religion = religion:old_gods_religion
 			}
 		}
 		modifier = { # Fill all building slots before going for upgrades
@@ -231,14 +231,14 @@ godswood_06 = {
 
 	can_construct_potential = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 		building_requirement_castle_city_church = { LEVEL = 03 }
 	}
 
 	can_construct = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 	}
 
@@ -262,7 +262,7 @@ godswood_06 = {
 		modifier = {
 			factor = 2
 			scope:holder = {
-				has_religion = religion:the_pact_religion
+				has_religion = religion:old_gods_religion
 			}
 		}
 		modifier = { # Fill all building slots before going for upgrades
@@ -277,19 +277,15 @@ godswood_07 = {
 
 	can_construct_potential = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 		building_requirement_castle_city_church = { LEVEL = 04 }
 	}
 
 	can_construct = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
-		is_county_capital = yes
-	}
-
-	is_enabled = {
 		is_county_capital = yes
 	}
 
@@ -314,7 +310,7 @@ godswood_07 = {
 		modifier = {
 			factor = 2
 			scope:holder = {
-				has_religion = religion:the_pact_religion
+				has_religion = religion:old_gods_religion
 			}
 		}
 		modifier = { # Fill all building slots before going for upgrades
@@ -329,19 +325,15 @@ godswood_08 = {
 
 	can_construct_potential = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
 		building_requirement_castle_city_church = { LEVEL = 04 }
 	}
 
 	can_construct = {
 		faith = {
-			has_doctrine_parameter = can_build_weirwood_groves
+			has_doctrine = tenet_godswoods
 		}
-		is_county_capital = yes
-	}
-
-	is_enabled = {
 		is_county_capital = yes
 	}
 
@@ -364,7 +356,7 @@ godswood_08 = {
 		modifier = {
 			factor = 2
 			scope:holder = {
-				has_religion = religion:the_pact_religion
+				has_religion = religion:old_gods_religion
 			}
 		}
 		modifier = { # Fill all building slots before going for upgrades

@@ -31,55 +31,58 @@ goldcloaks = {
 	screen = 0.0
 
 	counters = {
+		heavy_infantry = 1
 		skirmishers = 1
 		pikemen = 1
 	}
 
 	terrain_bonus = {
 		urban = { toughness = 10 }
-		forest = { screen = 10 }
-		plains = { pursuit = 10 }
-		taiga = { screen = 5 }
-		cloudforest = { screen = 5 }
-		mountains = { pursuit = -5 }
-		the_bog = { toughness = -10 }
-		desert = { toughness = -10 }
-		desert_mountains = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-		steppe = { toughness = -10 }
-		taiga_bog = { toughness = -10 }
-		glacier = { toughness = -10 }
-		frozen_flats = { toughness = -10 }
-
 		majorroad_urban = { toughness = 10 }
 		minorroad_urban = { toughness = 10 }
+		forest = { screen = 10 }
 		majorroad_forest = { screen = 10 }
 		minorroad_forest = { screen = 10 }
+		plains = { pursuit = 10 }
 		majorroad_plains = { pursuit = 10 }
 		minorroad_plains = { pursuit = 10 }
+
+		taiga = { screen = 5 }
 		majorroad_taiga = { screen = 5 }
 		minorroad_taiga = { screen = 5 }
+		cloudforest = { screen = 5 }
 		majorroad_cloudforest = { screen = 5 }
 		minorroad_cloudforest = { screen = 5 }
+
+		mountains = { pursuit = -5 }
 		majorroad_mountains = { pursuit = -5 }
 		minorroad_mountains = { pursuit = -5 }
+
+		the_bog = { toughness = -10 }
 		majorroad_the_bog = { toughness = -10 }
 		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
 		majorroad_desert_mountains = { toughness = -10 }
 		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
+		steppe = { toughness = -10 }
 		majorroad_steppe = { toughness = -10 }
 		minorroad_steppe = { toughness = -10 }
+		taiga_bog = { toughness = -10 }
 		majorroad_taiga_bog = { toughness = -10 }
 		minorroad_taiga_bog = { toughness = -10 }
+		glacier = { toughness = -10 }
 		majorroad_glacier = { toughness = -10 }
 		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
 		majorroad_frozen_flats = { toughness = -10 }
 		minorroad_frozen_flats = { toughness = -10 }
 	}
@@ -112,46 +115,48 @@ sea_watch = {
 
 	terrain_bonus = {
 		hills = { screen = 10 }
-		plains = { screen = 10 }
-		forest = { screen = 5 }
-		highlands = { screen = 5 }
-		mountains = { screen = -5 }
-		taiga_bog = { screen = -10 }
-		glacier = { screen = -10 }
-		the_bog = { toughness = -10 }
-		desert = { screen = -10 }
-		desert_mountains = { screen = -10 }
-		drylands = { screen = -10 }
-		canyon = { screen = -10 }
-		steppe = { screen = -10 }
-		frozen_flats = { screen = -10 }
-
 		majorroad_hills = { screen = 10 }
 		minorroad_hills = { screen = 10 }
+		plains = { screen = 10 }
 		majorroad_plains = { screen = 10 }
 		minorroad_plains = { screen = 10 }
+
+		forest = { screen = 5 }
 		majorroad_forest = { screen = 5 }
 		minorroad_forest = { screen = 5 }
+		highlands = { screen = 5 }
 		majorroad_highlands = { screen = 5 }
 		minorroad_highlands = { screen = 5 }
+
+		mountains = { screen = -5 }
 		majorroad_mountains = { screen = -5 }
 		minorroad_mountains = { screen = -5 }
+
+		taiga_bog = { screen = -10 }
 		majorroad_taiga_bog = { screen = -10 }
 		minorroad_taiga_bog = { screen = -10 }
+		glacier = { screen = -10 }
 		majorroad_glacier = { screen = -10 }
 		minorroad_glacier = { screen = -10 }
+		the_bog = { toughness = -10 }
 		majorroad_the_bog = { toughness = -10 }
 		minorroad_the_bog = { toughness = -10 }
+		desert = { screen = -10 }
 		majorroad_desert = { screen = -10 }
 		minorroad_desert = { screen = -10 }
+		desert_mountains = { screen = -10 }
 		majorroad_desert_mountains = { screen = -10 }
 		minorroad_desert_mountains = { screen = -10 }
+		drylands = { screen = -10 }
 		majorroad_drylands = { screen = -10 }
 		minorroad_drylands = { screen = -10 }
+		canyon = { screen = -10 }
 		majorroad_canyon = { screen = -10 }
 		minorroad_canyon = { screen = -10 }
+		steppe = { screen = -10 }
 		majorroad_steppe = { screen = -10 }
 		minorroad_steppe = { screen = -10 }
+		frozen_flats = { screen = -10 }
 		majorroad_frozen_flats = { screen = -10 }
 		minorroad_frozen_flats = { screen = -10 }
 	}
@@ -186,58 +191,61 @@ redcloaks = {
 	screen = 0.0
 
 	counters = {
+		heavy_infantry = 1
 		skirmishers = 1
 		pikemen = 1
 	}
 
 	terrain_bonus = {
 		urban = { toughness = 10 }
-		hills = { toughness = 10 }
-		highlands = { toughness = 10 }
-		forest = { toughness = 10 }
-		mountains = { toughness = 5 }
-		cloudforest = { toughness = 5 }
-		steppe = { toughness = -5 }
-		taiga = { toughness = -5 }
-		taiga_bog = { toughness = -5 }
-		the_bog = { toughness = -10 }
-		desert = { toughness = -10 }
-		desert_mountains = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-		glacier = { toughness = -10 }
-		frozen_flats = { toughness = -10 }
-
 		majorroad_urban = { toughness = 10 }
 		minorroad_urban = { toughness = 10 }
+		hills = { toughness = 10 }
 		majorroad_hills = { toughness = 10 }
 		minorroad_hills = { toughness = 10 }
+		highlands = { toughness = 10 }
 		majorroad_highlands = { toughness = 10 }
 		minorroad_highlands = { toughness = 10 }
+		forest = { toughness = 10 }
 		majorroad_forest = { toughness = 10 }
 		minorroad_forest = { toughness = 10 }
+
+		mountains = { toughness = 5 }
 		majorroad_mountains = { toughness = 5 }
 		minorroad_mountains = { toughness = 5 }
+		cloudforest = { toughness = 5 }
 		majorroad_cloudforest = { toughness = 5 }
 		minorroad_cloudforest = { toughness = 5 }
+
+		steppe = { toughness = -5 }
 		majorroad_steppe = { toughness = -5 }
 		minorroad_steppe = { toughness = -5 }
+		taiga = { toughness = -5 }
 		majorroad_taiga = { toughness = -5 }
 		minorroad_taiga = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
 		majorroad_taiga_bog = { toughness = -5 }
 		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
 		majorroad_the_bog = { toughness = -10 }
 		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
 		majorroad_desert_mountains = { toughness = -10 }
 		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
+		glacier = { toughness = -10 }
 		majorroad_glacier = { toughness = -10 }
 		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
 		majorroad_frozen_flats = { toughness = -10 }
 		minorroad_frozen_flats = { toughness = -10 }
 	}
@@ -273,52 +281,54 @@ greycloaks = {
 
 	terrain_bonus = {
 		urban = { toughness = 10 }
-		hills = { toughness = 10 }
-		farmlands = { toughness = 10 }
-		plains = { toughness = 10 }
-		highlands = { toughness = 5 }
-		mountains = { toughness = -5 }
-		steppe = { toughness = -5 }
-		taiga = { toughness = -5 }
-		taiga_bog = { toughness = -5 }
-		the_bog = { toughness = -10 }
-		desert = { toughness = -10 }
-		desert_mountains = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-		glacier = { toughness = -10 }
-		frozen_flats = { toughness = -10 }
-
 		majorroad_urban = { toughness = 10 }
 		minorroad_urban = { toughness = 10 }
+		hills = { toughness = 10 }
 		majorroad_hills = { toughness = 10 }
 		minorroad_hills = { toughness = 10 }
+		farmlands = { toughness = 10 }
 		majorroad_farmlands = { toughness = 10 }
 		minorroad_farmlands = { toughness = 10 }
+		plains = { toughness = 10 }
 		majorroad_plains = { toughness = 10 }
 		minorroad_plains = { toughness = 10 }
+
+		highlands = { toughness = 5 }
 		majorroad_highlands = { toughness = 5 }
 		minorroad_highlands = { toughness = 5 }
+
+		mountains = { toughness = -5 }
 		majorroad_mountains = { toughness = -5 }
 		minorroad_mountains = { toughness = -5 }
+		steppe = { toughness = -5 }
 		majorroad_steppe = { toughness = -5 }
 		minorroad_steppe = { toughness = -5 }
+		taiga = { toughness = -5 }
 		majorroad_taiga = { toughness = -5 }
 		minorroad_taiga = { toughness = -5 }
+		taiga_bog = { toughness = -5 }
 		majorroad_taiga_bog = { toughness = -5 }
 		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -10 }
 		majorroad_the_bog = { toughness = -10 }
 		minorroad_the_bog = { toughness = -10 }
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
 		majorroad_desert_mountains = { toughness = -10 }
 		minorroad_desert_mountains = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
+		glacier = { toughness = -10 }
 		majorroad_glacier = { toughness = -10 }
 		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
 		majorroad_frozen_flats = { toughness = -10 }
 		minorroad_frozen_flats = { toughness = -10 }
 	}
@@ -348,49 +358,51 @@ cailin_archers = {
 
 	terrain_bonus = {
 		steppe = { toughness = 10 }
-		taiga = { toughness = 10 }
-		taiga_bog = { toughness = 10 }
-		hills = { toughness = 10 }
-		mountains = { toughness = 10 }
-		forest = { toughness = 5 }
-		wetlands = { toughness = 5 }
-		cloudforest = { toughness = 5 }
-		oasis = { toughness = -5 }
-		desert_mountains = { toughness = -5 }
-		glacier = { toughness = -5 }
-		frozen_flats = { toughness = -5 }
-		desert = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-
 		majorroad_steppe = { toughness = 10 }
 		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
 		majorroad_taiga = { toughness = 10 }
 		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
 		majorroad_taiga_bog = { toughness = 10 }
 		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
 		majorroad_hills = { toughness = 10 }
 		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
 		majorroad_mountains = { toughness = 10 }
 		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
 		majorroad_forest = { toughness = 5 }
 		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
 		majorroad_wetlands = { toughness = 5 }
 		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
 		majorroad_cloudforest = { toughness = 5 }
 		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
 		majorroad_oasis = { toughness = -5 }
 		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
 		majorroad_desert_mountains = { toughness = -5 }
 		minorroad_desert_mountains = { toughness = -5 }
+		glacier = { toughness = -5 }
 		majorroad_glacier = { toughness = -5 }
 		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
 		majorroad_frozen_flats = { toughness = -5 }
 		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
 	}

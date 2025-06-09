@@ -59,7 +59,7 @@ caravan_master_prepare_travels = {
 }
 
 caravan_master_prepare_armies = {
-	#AGOT Modified
+	#AGOT MODIFIED
 	#court_position_types = { travel_leader_court_position }
 	court_position_types = { travel_leader_court_position first_sword_court_position }
 
@@ -68,7 +68,7 @@ caravan_master_prepare_armies = {
 		round = no
 		gold = {
 			add = {
-				value = monthly_court_position_task_cost
+				value = 0.5
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
@@ -126,9 +126,9 @@ caravan_master_improve_self = {
 	# Monthly cost for the task
 	cost = {
 		round = no
-		prestige = {
+		gold = {
 			add = {
-				value = monthly_court_position_task_cost
+				value = 0.5
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
@@ -157,9 +157,9 @@ caravan_master_improve_self = {
 	}
 
 	on_monthly = {
-		random = {
+		random = { #Hambone
 			chance = {
-				value = 3
+				value = 1
 				add = {
 					value = "aptitude(travel_leader_court_position)"
 					multiply = 0.5
@@ -173,13 +173,13 @@ caravan_master_improve_self = {
 			}
 			else = {
 				random_list = {
-					15 = {
+					5 = {
 						add_stewardship_skill = 1
 					}
-					15 = {
+					5 = {
 						add_martial_skill = 1
 					}
-					70 = {
+					90 = {
 						trigger = {
 							has_trait_xp = {
 								trait = lifestyle_traveler

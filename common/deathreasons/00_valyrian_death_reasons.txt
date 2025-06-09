@@ -1,4 +1,0 @@
-﻿death_missing_valyria = {
-	public_knowledge = yes
-	icon = "death_murder.dds"
-}

@@ -1,4 +1,0 @@
-﻿masked_modifier = {
-	icon = dread_positive
-	dread_baseline_add = 5
-}

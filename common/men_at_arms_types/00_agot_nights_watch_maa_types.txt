@@ -22,7 +22,7 @@
 @cultural_maa_extra_ai_score = 80
 
 #Night's Watch
-nw_rangers = {
+rangers = {
 	type = archers
 
 	damage = 30.0
@@ -38,67 +38,69 @@ nw_rangers = {
 
 	terrain_bonus = {
 		steppe = { toughness = 10 }
-		taiga = { toughness = 10 }
-		taiga_bog = { toughness = 10 }
-		hills = { toughness = 10 }
-		mountains = { toughness = 10 }
-		forest = { toughness = 5 }
-		wetlands = { toughness = 5 }
-		cloudforest = { toughness = 5 }
-		oasis = { toughness = -5 }
-		desert_mountains = { toughness = -5 }
-		glacier = { toughness = -5 }
-		frozen_flats = { toughness = -5 }
-		desert = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-
 		majorroad_steppe = { toughness = 10 }
 		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
 		majorroad_taiga = { toughness = 10 }
 		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
 		majorroad_taiga_bog = { toughness = 10 }
 		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
 		majorroad_hills = { toughness = 10 }
 		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
 		majorroad_mountains = { toughness = 10 }
 		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
 		majorroad_forest = { toughness = 5 }
 		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
 		majorroad_wetlands = { toughness = 5 }
 		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
 		majorroad_cloudforest = { toughness = 5 }
 		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
 		majorroad_oasis = { toughness = -5 }
 		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
 		majorroad_desert_mountains = { toughness = -5 }
 		minorroad_desert_mountains = { toughness = -5 }
+		glacier = { toughness = -5 }
 		majorroad_glacier = { toughness = -5 }
 		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
 		majorroad_frozen_flats = { toughness = -5 }
 		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
 	}
 
 	can_recruit = {
-		government_has_flag = government_is_nw
+		has_government = nights_watch_government
 	}
 
-	buy_cost = { gold = nw_rangers_recruitment_cost }
-	low_maintenance_cost = { gold = nw_rangers_low_maint_cost }
-	high_maintenance_cost = { gold = nw_rangers_high_maint_cost }
+	buy_cost = { gold = rangers_recruitment_cost }
+	low_maintenance_cost = { gold = rangers_low_maint_cost }
+	high_maintenance_cost = { gold = rangers_high_maint_cost }
 	provision_cost = @provisions_cost_infantry_moderate
 
 	stack = 80.0
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = rangers
 }
-nw_trackers = {
+trackers = {
 	type = light_cavalry
 
 	damage = 25.0
@@ -108,49 +110,51 @@ nw_trackers = {
 
 	terrain_bonus = {
 		steppe = { toughness = 10 }
-		taiga = { toughness = 10 }
-		taiga_bog = { toughness = 10 }
-		hills = { toughness = 10 }
-		mountains = { toughness = 10 }
-		forest = { toughness = 5 }
-		wetlands = { toughness = 5 }
-		cloudforest = { toughness = 5 }
-		oasis = { toughness = -5 }
-		desert_mountains = { toughness = -5 }
-		glacier = { toughness = -5 }
-		frozen_flats = { toughness = -5 }
-		desert = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-
 		majorroad_steppe = { toughness = 10 }
 		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
 		majorroad_taiga = { toughness = 10 }
 		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
 		majorroad_taiga_bog = { toughness = 10 }
 		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
 		majorroad_hills = { toughness = 10 }
 		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
 		majorroad_mountains = { toughness = 10 }
 		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
 		majorroad_forest = { toughness = 5 }
 		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
 		majorroad_wetlands = { toughness = 5 }
 		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
 		majorroad_cloudforest = { toughness = 5 }
 		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
 		majorroad_oasis = { toughness = -5 }
 		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
 		majorroad_desert_mountains = { toughness = -5 }
 		minorroad_desert_mountains = { toughness = -5 }
+		glacier = { toughness = -5 }
 		majorroad_glacier = { toughness = -5 }
 		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
 		majorroad_frozen_flats = { toughness = -5 }
 		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
 	}
@@ -160,12 +164,12 @@ nw_trackers = {
 	}
 
 	can_recruit = {
-		government_has_flag = government_is_nw
+		has_government = nights_watch_government
 	}
 
-	buy_cost = { gold = nw_trackers_recruitment_cost }
-	low_maintenance_cost = { gold = nw_trackers_low_maint_cost }
-	high_maintenance_cost = { gold = nw_trackers_high_maint_cost }
+	buy_cost = { gold = trackers_recruitment_cost }
+	low_maintenance_cost = { gold = trackers_low_maint_cost }
+	high_maintenance_cost = { gold = trackers_high_maint_cost }
 	provision_cost = @provisions_cost_cavalry_cheap
 
 	stack = 40.0
@@ -188,55 +192,57 @@ sworn_brothers = {
 
 	terrain_bonus = {
 		steppe = { toughness = 10 }
-		taiga = { toughness = 10 }
-		taiga_bog = { toughness = 10 }
-		hills = { toughness = 10 }
-		mountains = { toughness = 10 }
-		forest = { toughness = 5 }
-		wetlands = { toughness = 5 }
-		cloudforest = { toughness = 5 }
-		oasis = { toughness = -5 }
-		desert_mountains = { toughness = -5 }
-		glacier = { toughness = -5 }
-		frozen_flats = { toughness = -5 }
-		desert = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-
 		majorroad_steppe = { toughness = 10 }
 		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
 		majorroad_taiga = { toughness = 10 }
 		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
 		majorroad_taiga_bog = { toughness = 10 }
 		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
 		majorroad_hills = { toughness = 10 }
 		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
 		majorroad_mountains = { toughness = 10 }
 		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
 		majorroad_forest = { toughness = 5 }
 		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
 		majorroad_wetlands = { toughness = 5 }
 		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
 		majorroad_cloudforest = { toughness = 5 }
 		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
 		majorroad_oasis = { toughness = -5 }
 		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
 		majorroad_desert_mountains = { toughness = -5 }
 		minorroad_desert_mountains = { toughness = -5 }
+		glacier = { toughness = -5 }
 		majorroad_glacier = { toughness = -5 }
 		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
 		majorroad_frozen_flats = { toughness = -5 }
 		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
 	}
 
 	can_recruit = {
-		government_has_flag = government_is_nw
+		has_government = nights_watch_government
 	}
 
 	buy_cost = { gold = sworn_brothers_recruitment_cost }
@@ -258,49 +264,51 @@ shadow_spears = {
 
 	terrain_bonus = {
 		steppe = { toughness = 10 }
-		taiga = { toughness = 10 }
-		taiga_bog = { toughness = 10 }
-		hills = { toughness = 10 }
-		mountains = { toughness = 10 }
-		forest = { toughness = 5 }
-		wetlands = { toughness = 5 }
-		cloudforest = { toughness = 5 }
-		oasis = { toughness = -5 }
-		desert_mountains = { toughness = -5 }
-		glacier = { toughness = -5 }
-		frozen_flats = { toughness = -5 }
-		desert = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-
 		majorroad_steppe = { toughness = 10 }
 		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
 		majorroad_taiga = { toughness = 10 }
 		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
 		majorroad_taiga_bog = { toughness = 10 }
 		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
 		majorroad_hills = { toughness = 10 }
 		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
 		majorroad_mountains = { toughness = 10 }
 		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
 		majorroad_forest = { toughness = 5 }
 		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
 		majorroad_wetlands = { toughness = 5 }
 		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
 		majorroad_cloudforest = { toughness = 5 }
 		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
 		majorroad_oasis = { toughness = -5 }
 		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
 		majorroad_desert_mountains = { toughness = -5 }
 		minorroad_desert_mountains = { toughness = -5 }
+		glacier = { toughness = -5 }
 		majorroad_glacier = { toughness = -5 }
 		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
 		majorroad_frozen_flats = { toughness = -5 }
 		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
 	}
@@ -313,7 +321,7 @@ shadow_spears = {
 	}
 
 	can_recruit = {
-		government_has_flag = government_is_nw
+		has_government = nights_watch_government
 	}
 
 	buy_cost = { gold = shadow_spears_recruitment_cost }
@@ -335,49 +343,51 @@ eastwatch_sailors = {
 
 	terrain_bonus = {
 		steppe = { toughness = 10 }
-		taiga = { toughness = 10 }
-		taiga_bog = { toughness = 10 }
-		hills = { toughness = 10 }
-		mountains = { toughness = 10 }
-		forest = { toughness = 5 }
-		wetlands = { toughness = 5 }
-		cloudforest = { toughness = 5 }
-		oasis = { toughness = -5 }
-		desert_mountains = { toughness = -5 }
-		glacier = { toughness = -5 }
-		frozen_flats = { toughness = -5 }
-		desert = { toughness = -10 }
-		drylands = { toughness = -10 }
-		canyon = { toughness = -10 }
-
 		majorroad_steppe = { toughness = 10 }
 		minorroad_steppe = { toughness = 10 }
+		taiga = { toughness = 10 }
 		majorroad_taiga = { toughness = 10 }
 		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
 		majorroad_taiga_bog = { toughness = 10 }
 		minorroad_taiga_bog = { toughness = 10 }
+		hills = { toughness = 10 }
 		majorroad_hills = { toughness = 10 }
 		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
 		majorroad_mountains = { toughness = 10 }
 		minorroad_mountains = { toughness = 10 }
+
+		forest = { toughness = 5 }
 		majorroad_forest = { toughness = 5 }
 		minorroad_forest = { toughness = 5 }
+		wetlands = { toughness = 5 }
 		majorroad_wetlands = { toughness = 5 }
 		minorroad_wetlands = { toughness = 5 }
+		cloudforest = { toughness = 5 }
 		majorroad_cloudforest = { toughness = 5 }
 		minorroad_cloudforest = { toughness = 5 }
+
+		oasis = { toughness = -5 }
 		majorroad_oasis = { toughness = -5 }
 		minorroad_oasis = { toughness = -5 }
+		desert_mountains = { toughness = -5 }
 		majorroad_desert_mountains = { toughness = -5 }
 		minorroad_desert_mountains = { toughness = -5 }
+		glacier = { toughness = -5 }
 		majorroad_glacier = { toughness = -5 }
 		minorroad_glacier = { toughness = -5 }
+		frozen_flats = { toughness = -5 }
 		majorroad_frozen_flats = { toughness = -5 }
 		minorroad_frozen_flats = { toughness = -5 }
+
+		desert = { toughness = -10 }
 		majorroad_desert = { toughness = -10 }
 		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
 		majorroad_drylands = { toughness = -10 }
 		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
 		majorroad_canyon = { toughness = -10 }
 		minorroad_canyon = { toughness = -10 }
 	}
@@ -387,7 +397,7 @@ eastwatch_sailors = {
 	}
 
 	can_recruit = {
-		government_has_flag = government_is_nw
+		has_government = nights_watch_government
 	}
 
 	buy_cost = { gold = eastwatch_sailors_recruitment_cost }

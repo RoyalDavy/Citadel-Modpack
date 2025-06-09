@@ -54,13 +54,13 @@ commander_wounded = {
 			trait = wounded
 			rank <= 3
 		}
-		#AGOT Added - no fighting dragonriders on foot (by default anyway)
+		# AGOT Added - no fighting dragonriders on foot (by default anyway)
 		is_current_dragonrider_warfare = no
 		has_character_flag = calculated_dragon_modifier # Run dragon calcs first
 	}
 
 	chance = {
-		base = 25
+		base = 10 #Hambone doubled
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
@@ -170,16 +170,16 @@ commander_maimed = {
 			has_trait = disfigured
 			has_trait = one_eyed
 			has_trait = maimed
-			#AGOT Added
+			# AGOT Added
 			has_trait = half_blind
 		}
-		#AGOT Added - no fighting dragonriders on foot (by default anyway)
+		# AGOT Added - no fighting dragonriders on foot (by default anyway)
 		is_current_dragonrider_warfare = no
 		has_character_flag = calculated_dragon_modifier # Run dragon calcs first
 	}
 
 	chance = {
-		base = 10
+		base = 2 #Hambone doubled
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
@@ -201,8 +201,8 @@ commander_maimed = {
 			}
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.side_strength
 		}
-		modifier = { # No deaths when vastly outnumbering the enemy
-			factor = 0
+		modifier = { # No deaths when vastly outnumbering the enemy #Hambone half chance
+			factor = 0.5
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.vastly_outnumbered_combat_side_threshold
 		}
 		modifier = {
@@ -288,34 +288,34 @@ commander_killed = {
 	type = commander
 
 	is_valid = {
-		exists = root
-		#Commanders cannot be killed outright unless...
-		OR = {
-			#...they are already wounded...
-			has_trait_rank = {
-				trait = wounded
-				rank >= 1
-			}
-			#...or they are absolutely terrible at battle to begin with!
-			AND = {
-				martial <= low_skill_rating
-				prowess <= low_skill_rating
-			}
-		}
-		NOR = {
-			AND = {
-				is_ai = no
-				has_game_rule = very_easy_difficulty
-			}
-			ai_should_get_extreme_conqueror_bonuses = yes
-		}
-		#AGOT Added - no fighting dragonriders on foot (by default anyway)
+		# exists = root #Hambone took out
+		# #Commanders cannot be killed outright unless...
+		# OR = {
+		# 	#...they are already wounded...
+		# 	has_trait_rank = {
+		# 		trait = wounded
+		# 		rank >= 1
+		# 	}
+		# 	#...or they are absolutely terrible at battle to begin with!
+		# 	AND = {
+		# 		martial <= low_skill_rating
+		# 		prowess <= low_skill_rating
+		# 	}
+		# }
+		# NOR = {
+		# 	AND = {
+		# 		is_ai = no
+		# 		has_game_rule = very_easy_difficulty
+		# 	}
+		# 	ai_should_get_extreme_conqueror_bonuses = yes
+		# }
+		# AGOT Added - no fighting dragonriders on foot (by default anyway)
 		is_current_dragonrider_warfare = no
 		has_character_flag = calculated_dragon_modifier # Run dragon calcs first
 	}
 
 	chance = {
-		base = 5
+		base = 1 #Hambone doubled
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
 				#AGOT Modified
@@ -338,7 +338,7 @@ commander_killed = {
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.side_strength
 		}
 		modifier = { # No deaths when vastly outnumbering the enemy
-			factor = 0
+			factor = 0.5 #Hambone
 			scope:combat_side.side_strength > scope:combat_side.enemy_side.vastly_outnumbered_combat_side_threshold
 		}
 		modifier = {
@@ -535,7 +535,7 @@ commander_duel = {
 	}
 }
 
-#AGOT Added - Dragon modifier calculations
+# AGOT Added - Dragon modifier calculations
 # Grabs the dragon army support modifier from any character to be used in the combat
 # by the leading commander
 commander_dragon_sum = {
@@ -571,22 +571,12 @@ commander_dragon_sum = {
 						DRAGON = scope:dragonrider_commander.var:current_dragon
 					}
 				}
-				# Calculate the counter effects
+				# Calculate the counter effect
 				prev.enemy_side = {
 					if = {
 						limit = { has_maa_of_type = scorpions }
 						side_commander = {
-							base_dragon_army_scorpions_counter_effect = {
-								DRAGON = scope:dragonrider_commander.var:current_dragon
-							}
-						}
-					}
-				}
-				prev.enemy_side = {
-					if = {
-						limit = { has_maa_of_type = water_wizards }
-						side_commander = {
-							base_dragon_army_water_wizards_counter_effect = {
+							base_dragon_army_counter_effect = {
 								DRAGON = scope:dragonrider_commander.var:current_dragon
 							}
 						}
@@ -613,18 +603,8 @@ commander_dragon_sum = {
 					if = {
 						limit = { has_maa_of_type = scorpions }
 						side_commander = {
-							base_dragon_army_scorpions_counter_effect = {
+							base_dragon_army_counter_effect = {
 								DRAGON = scope:dragonrider_knight.var:current_dragon
-							}
-						}
-					}
-				}
-				prev.enemy_side = {
-					if = {
-						limit = { has_maa_of_type = water_wizards }
-						side_commander = {
-							base_dragon_army_water_wizards_counter_effect = {
-								DRAGON = scope:dragonrider_commander.var:current_dragon
 							}
 						}
 					}
@@ -636,7 +616,7 @@ commander_dragon_sum = {
 	}
 }
 
-#AGOT Added - commander is dragonrider
+# AGOT Added - commander is dragonrider
 commander_dragon_joined_battle = {
 	type = commander
 
@@ -768,8 +748,6 @@ commander_wild_dragon_joined_battle = {
 
 	is_valid = {
 		exists = location.county
-
-		agot_dragon_population_alive = yes
 
 		scope:combat_side ?= {
 			NOR = { # For now, no dragons to mess it up

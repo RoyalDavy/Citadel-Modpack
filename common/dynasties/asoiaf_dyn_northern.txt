@@ -1,5 +1,0 @@
-﻿dynn_Dormund = {
-	name = "dynn_Dormand"
-	culture = "northman"
-	motto = "dynn_Dormand_motto"
-}

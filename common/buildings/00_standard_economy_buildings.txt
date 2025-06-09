@@ -152,12 +152,6 @@ caravanserai_01 = {
 		#development_growth = normal_building_development_growth_tier_1
 		travel_danger = -1
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_caravanserai_bonuses
-		development_growth = normal_building_development_growth_tier_1
-	}
 	
 	next_building = caravanserai_02
 
@@ -233,12 +227,6 @@ caravanserai_02 = {
 		men_at_arms_maintenance = normal_building_maa_maintenance_tier_2
 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_2
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_caravanserai_bonuses
-		development_growth = normal_building_development_growth_tier_2
-	}
 	
 	next_building = caravanserai_03
 	ai_value = {
@@ -289,12 +277,6 @@ caravanserai_03 = {
 		men_at_arms_maintenance = normal_building_maa_maintenance_tier_3
 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_3
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_caravanserai_bonuses
-		development_growth = normal_building_development_growth_tier_3
-	}
 	
 	next_building = caravanserai_04
 	ai_value = {
@@ -342,12 +324,6 @@ caravanserai_04 = {
 		men_at_arms_maintenance = normal_building_maa_maintenance_tier_4
 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_4
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_caravanserai_bonuses
-		development_growth = normal_building_development_growth_tier_4
-	}
 	
 	next_building = caravanserai_05
 	ai_value = {
@@ -394,12 +370,6 @@ caravanserai_05 = {
 	character_modifier = {
 		men_at_arms_maintenance = normal_building_maa_maintenance_tier_5
 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_5
-	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_caravanserai_bonuses
-		development_growth = normal_building_development_growth_tier_5
 	}
 	
 	next_building = caravanserai_06
@@ -449,12 +419,6 @@ caravanserai_06 = {
 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_6
 		#small artifact quality bonus if TIT-40761 gets implemented
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_caravanserai_bonuses
-		development_growth = normal_building_development_growth_tier_6
-	}
 	
 	next_building = caravanserai_07
 	ai_value = {
@@ -503,12 +467,6 @@ caravanserai_07 = {
 		men_at_arms_maintenance = normal_building_maa_maintenance_tier_7
 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_7
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_caravanserai_bonuses
-		development_growth = normal_building_development_growth_tier_7
-	}
 	
 	next_building = caravanserai_08
 	ai_value = {
@@ -556,12 +514,6 @@ caravanserai_08 = {
 	character_modifier = {
 		men_at_arms_maintenance = normal_building_maa_maintenance_tier_8
 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_8
-	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_caravanserai_bonuses
-		development_growth = normal_building_development_growth_tier_8
 	}
 	
 	ai_value = {
@@ -669,12 +621,6 @@ watermills_01 = {
 		#AGOT Disabled
 		#development_growth = good_building_development_growth_tier_1
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_watermill_bonuses
-		development_growth = good_building_development_growth_tier_1
-	}
 	
 	next_building = watermills_02
 
@@ -766,12 +712,6 @@ watermills_02 = {
 		#AGOT Disabled
 		#development_growth = good_building_development_growth_tier_2
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_watermill_bonuses
-		development_growth = good_building_development_growth_tier_2
-	}
 	
 	next_building = watermills_03
 	ai_value = {
@@ -855,12 +795,6 @@ watermills_03 = {
 		development_growth_factor = normal_building_development_growth_factor_tier_1
 		tax_mult = normal_building_tax_mult_tier_1
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_watermill_bonuses
-		development_growth = good_building_development_growth_tier_3
-	}
 	
 	next_building = watermills_04
 	ai_value = {
@@ -940,12 +874,6 @@ watermills_04 = {
 		#development_growth = good_building_development_growth_tier_4
 		tax_mult = normal_building_tax_mult_tier_2
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_watermill_bonuses
-		development_growth = good_building_development_growth_tier_4
-	}
 	
 	next_building = watermills_05
 	ai_value = {
@@ -1002,12 +930,6 @@ watermills_05 = {
 		#AGOT Disabled
 		#development_growth = good_building_development_growth_tier_5
 		tax_mult = normal_building_tax_mult_tier_3
-	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_watermill_bonuses
-		development_growth = good_building_development_growth_tier_5
 	}
 	
 	next_building = watermills_06
@@ -1069,12 +991,6 @@ watermills_06 = {
 		#development_growth = good_building_development_growth_tier_6
 		tax_mult = normal_building_tax_mult_tier_4
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_watermill_bonuses
-		development_growth = good_building_development_growth_tier_6
-	}
 	
 	next_building = watermills_07
 	ai_value = {
@@ -1135,12 +1051,6 @@ watermills_07 = {
 		#development_growth = good_building_development_growth_tier_7
 		tax_mult = normal_building_tax_mult_tier_5
 	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_watermill_bonuses
-		development_growth = good_building_development_growth_tier_7
-	}
 	
 	next_building = watermills_08
 	ai_value = {
@@ -1200,12 +1110,6 @@ watermills_08 = {
 		#AGOT Disabled
 		#development_growth = good_building_development_growth_tier_8
 		tax_mult = normal_building_tax_mult_tier_6
-	}
-
-	#AGOT Added
-	county_culture_modifier = {
-		parameter = better_watermill_bonuses
-		development_growth = good_building_development_growth_tier_8
 	}
 	
 	ai_value = {
@@ -3540,13 +3444,6 @@ orchards_01 = {
 		tax_mult = 0.01
 	}
 	
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_orchard_bonuses
-		tax_mult = 0.01
-		supply_limit_mult = 0.05
-	}
-
 	next_building = orchards_02
 
 	type_icon = "icon_building_orchards.dds"
@@ -3605,13 +3502,6 @@ orchards_02 = {
 		is_coastal = yes
 		tax_mult = 0.02
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_orchard_bonuses
-		tax_mult = 0.03
-		supply_limit_mult = 0.10
-	}
 	
 	next_building = orchards_03
 	
@@ -3663,13 +3553,6 @@ orchards_03 = {
 		tax_mult = 0.03
 		supply_limit_mult = 0.1
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_orchard_bonuses
-		tax_mult = 0.05
-		supply_limit_mult = 0.15
-	}
 	
 	next_building = orchards_04
 	
@@ -3716,13 +3599,6 @@ orchards_04 = {
 		is_coastal = yes
 		tax_mult = 0.04
 		supply_limit_mult = 0.1
-	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_orchard_bonuses
-		tax_mult = 0.07
-		supply_limit_mult = 0.2
 	}
 	
 	next_building = orchards_05
@@ -3772,13 +3648,6 @@ orchards_05 = {
 		tax_mult = 0.05
 		supply_limit_mult = 0.1
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_orchard_bonuses
-		tax_mult = 0.09
-		supply_limit_mult = 0.25
-	}
 	
 	next_building = orchards_06
 	
@@ -3827,13 +3696,6 @@ orchards_06 = {
 		is_coastal = yes
 		tax_mult = 0.06
 		supply_limit_mult = 0.1
-	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_orchard_bonuses
-		tax_mult = 0.11
-		supply_limit_mult = 0.30
 	}
 	
 	next_building = orchards_07
@@ -3887,13 +3749,6 @@ orchards_07 = {
 	character_modifier = {
 		monthly_prestige = 0.1
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_orchard_bonuses
-		tax_mult = 0.13
-		supply_limit_mult = 0.35
-	}
 	
 	next_building = orchards_08
 	
@@ -3946,13 +3801,6 @@ orchards_08 = {
 	character_modifier = {
 		monthly_prestige = 0.1
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_orchard_bonuses
-		tax_mult = 0.15
-		supply_limit_mult = 0.40
-	}
 	
 	ai_value = {
 		base = 3
@@ -4000,12 +3848,6 @@ farm_estates_01 = {
 	province_culture_modifier = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 2
-	}
-
-	#AGOT Added
-	character_culture_modifier = {
-		parameter = better_farm_estates_bonuses
-		knight_effectiveness_mult = 0.01
 	}
 	
 	next_building = farm_estates_02
@@ -4073,12 +3915,6 @@ farm_estates_02 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 4
 	}
-
-	#AGOT Added
-	character_culture_modifier = {
-		parameter = better_farm_estates_bonuses
-		knight_effectiveness_mult = 0.02
-	}
 	
 	next_building = farm_estates_03
 	
@@ -4142,12 +3978,6 @@ farm_estates_03 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 6
 	}
-
-	#AGOT Added
-	character_culture_modifier = {
-		parameter = better_farm_estates_bonuses
-		knight_effectiveness_mult = 0.03
-	}
 	
 	next_building = farm_estates_04
 	
@@ -4207,12 +4037,6 @@ farm_estates_04 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 8
 	}
-
-	#AGOT Added
-	character_culture_modifier = {
-		parameter = better_farm_estates_bonuses
-		knight_effectiveness_mult = 0.04
-	}
 	
 	next_building = farm_estates_05
 	
@@ -4271,12 +4095,6 @@ farm_estates_05 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 10
 	}
-
-	#AGOT Added
-	character_culture_modifier = {
-		parameter = better_farm_estates_bonuses
-		knight_effectiveness_mult = 0.05
-	}
 	
 	next_building = farm_estates_06
 	
@@ -4331,12 +4149,6 @@ farm_estates_06 = {
 	province_culture_modifier = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 12
-	}
-
-	#AGOT Added
-	character_culture_modifier = {
-		parameter = better_farm_estates_bonuses
-		knight_effectiveness_mult = 0.06
 	}
 	
 	next_building = farm_estates_07
@@ -4394,12 +4206,6 @@ farm_estates_07 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 14
 	}
-
-	#AGOT Added
-	character_culture_modifier = {
-		parameter = better_farm_estates_bonuses
-		knight_effectiveness_mult = 0.07
-	}
 	
 	next_building = farm_estates_08
 	
@@ -4455,12 +4261,6 @@ farm_estates_08 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 16
 	}
-
-	#AGOT Added
-	character_culture_modifier = {
-		parameter = better_farm_estates_bonuses
-		knight_effectiveness_mult = 0.08
-	}
 	
 	ai_value = {
 		base = 3
@@ -4503,11 +4303,6 @@ cereal_fields_01 = {
 	province_culture_modifier = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 2
-	}
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_farm_bonuses
-		county_opinion_add = 1
 	}
 	
 	next_building = cereal_fields_02
@@ -4606,12 +4401,6 @@ cereal_fields_02 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 4
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_farm_bonuses
-		county_opinion_add = 5
-	}
 	
 	next_building = cereal_fields_03
 	
@@ -4690,12 +4479,6 @@ cereal_fields_03 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 6
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_farm_bonuses
-		county_opinion_add = 9
-	}
 	
 	next_building = cereal_fields_04
 	
@@ -4770,12 +4553,6 @@ cereal_fields_04 = {
 	province_culture_modifier = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 8
-	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_farm_bonuses
-		county_opinion_add = 13
 	}
 	
 	next_building = cereal_fields_05
@@ -4853,12 +4630,6 @@ cereal_fields_05 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 10
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_farm_bonuses
-		county_opinion_add = 17
-	}
 	
 	next_building = cereal_fields_06
 	
@@ -4935,12 +4706,6 @@ cereal_fields_06 = {
 	province_culture_modifier = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 12
-	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_farm_bonuses
-		county_opinion_add = 21
 	}
 	
 	next_building = cereal_fields_07
@@ -5020,12 +4785,6 @@ cereal_fields_07 = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 14
 	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_farm_bonuses
-		county_opinion_add = 25
-	}
 	
 	next_building = cereal_fields_08
 	
@@ -5103,12 +4862,6 @@ cereal_fields_08 = {
 	province_culture_modifier = {
 		parameter = brewery_farming_bonus
 		county_opinion_add = 16
-	}
-
-	#AGOT Added
-	province_culture_modifier = {
-		parameter = better_farm_bonuses
-		county_opinion_add = 30
 	}
 	
 	ai_value = {

@@ -9,7 +9,7 @@
 ## 00_relations.txt
 ## 00_agot_court_position_triggers.txt
 
-#AGOT COURT POSITIONS
+# AGOT COURT POSITIONS
 #Maester
 #Captain of Household Guard
 #Septon
@@ -19,7 +19,6 @@
 #Warden of the South
 #Warden of the West
 #Warden of the East
-#Bloodrider
 
 # Maester
 maester_court_position = {
@@ -738,7 +737,7 @@ septon_court_position = {
 
 	is_shown = {
 		NOT = {
-			faith = { religion_tag = the_seven_religion }
+			faith = { religion_tag = faith_of_the_seven_religion }
 		}
 		NOT = { government_has_flag = government_is_landless_adventurer }
 		NOT = { government_has_flag = government_is_custom_landless }
@@ -747,10 +746,10 @@ septon_court_position = {
 	# Is this an available position for this court? (root is court owner)
 	valid_position = { # Septons for people who aren't FOTS, but have FOTS mfs at court
 		any_courtier_or_guest = {
-			faith = { religion_tag = the_seven_religion }
+			faith = { religion_tag = faith_of_the_seven_religion }
 		}
 		NOT = {
-			faith = { religion_tag = the_seven_religion }
+			faith = { religion_tag = faith_of_the_seven_religion }
 		}
 	}
 
@@ -853,7 +852,7 @@ septon_court_position = {
 
 	base_employer_modifier = {
 		court_grandeur_baseline_add = 1
-		the_seven_religion_opinion = 5
+		rf_faith_of_the_seven_opinion = 5
 	}
 
 	# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints)
@@ -1079,7 +1078,7 @@ septa_court_position = {
 	valid_position = { # Septas for all westerosi
 		NOT = { government_has_flag = government_is_nw }
 		OR = {
-			faith = { religion_tag = the_seven_religion }
+			faith = { religion_tag = faith_of_the_seven_religion }
 			capital_county ?= {
 				title_province = { geographical_region = world_westeros_seven_kingdoms }
 			}
@@ -1178,7 +1177,7 @@ septa_court_position = {
 
 	base_employer_modifier = {
 		court_grandeur_baseline_add = 1
-		the_seven_religion_opinion = 5
+		rf_faith_of_the_seven_opinion = 5
 	}
 
 	# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints)
@@ -1495,7 +1494,7 @@ gaoler_court_position = {
 ####	King's Landing / Iron Throne Positions 	####
 ####################################################
 
-#AGOT : Amanes
+# AGOT : Amanes
 harbormaster_court_position = {
 	sort_order = 971
 	max_available_positions = 1
@@ -1887,6 +1886,30 @@ warden_of_the_north_court_position = {
 
 	aptitude = {
 		value = 5
+		add = {
+			value = martial
+			multiply = 2.5
+			max = 50
+			desc = court_position_skill_martial
+		}
+		if = {
+			limit = {
+				has_trait = overseer
+			}
+			add = {
+				value = 25
+				desc = court_position_overseer_trait
+			}
+		}
+		if = {
+			limit = {
+				has_trait = just
+			}
+			add = {
+				value = 10
+				desc = court_position_just_trait
+			}
+		}
 		if = {
 			limit = {
 				liege ?= title:e_the_iron_throne.holder
@@ -1895,38 +1918,6 @@ warden_of_the_north_court_position = {
 			add = {
 				value = 60
 				desc = court_position_historic_title_holder
-			}
-			add = {
-				value = martial
-				multiply = 2.5
-				max = 50
-				desc = court_position_skill_martial
-			}
-			if = {
-				limit = {
-					has_trait = overseer
-				}
-				add = {
-					value = 25
-					desc = court_position_overseer_trait
-				}
-			}
-			if = {
-				limit = {
-					has_trait = just
-				}
-				add = {
-					value = 10
-					desc = court_position_just_trait
-				}
-			}
-		}
-		else = {
-			add = {
-				value = martial
-				multiply = 1.5
-				max = 40
-				desc = court_position_skill_martial
 			}
 		}
 	}
@@ -2102,6 +2093,30 @@ warden_of_the_east_court_position = {
 
 	aptitude = {
 		value = 5
+		add = {
+			value = martial
+			multiply = 2.5
+			max = 50
+			desc = court_position_skill_martial
+		}
+		if = {
+			limit = {
+				has_trait = overseer
+			}
+			add = {
+				value = 25
+				desc = court_position_overseer_trait
+			}
+		}
+		if = {
+			limit = {
+				has_trait = just
+			}
+			add = {
+				value = 10
+				desc = court_position_just_trait
+			}
+		}
 		if = {
 			limit = {
 				liege ?= title:e_the_iron_throne.holder
@@ -2110,38 +2125,6 @@ warden_of_the_east_court_position = {
 			add = {
 				value = 60
 				desc = court_position_historic_title_holder
-			}
-			add = {
-				value = martial
-				multiply = 2.5
-				max = 50
-				desc = court_position_skill_martial
-			}
-			if = {
-				limit = {
-					has_trait = overseer
-				}
-				add = {
-					value = 25
-					desc = court_position_overseer_trait
-				}
-			}
-			if = {
-				limit = {
-					has_trait = just
-				}
-				add = {
-					value = 10
-					desc = court_position_just_trait
-				}
-			}
-		}
-		else = {
-			add = {
-				value = martial
-				multiply = 1.5
-				max = 40
-				desc = court_position_skill_martial
 			}
 		}
 	}
@@ -2320,6 +2303,30 @@ warden_of_the_west_court_position = {
 
 	aptitude = {
 		value = 5
+		add = {
+			value = martial
+			multiply = 2.5
+			max = 50
+			desc = court_position_skill_martial
+		}
+		if = {
+			limit = {
+				has_trait = overseer
+			}
+			add = {
+				value = 25
+				desc = court_position_overseer_trait
+			}
+		}
+		if = {
+			limit = {
+				has_trait = just
+			}
+			add = {
+				value = 10
+				desc = court_position_just_trait
+			}
+		}
 		if = {
 			limit = {
 				liege ?= title:e_the_iron_throne.holder
@@ -2328,38 +2335,6 @@ warden_of_the_west_court_position = {
 			add = {
 				value = 60
 				desc = court_position_historic_title_holder
-			}
-			add = {
-				value = martial
-				multiply = 2.5
-				max = 50
-				desc = court_position_skill_martial
-			}
-			if = {
-				limit = {
-					has_trait = overseer
-				}
-				add = {
-					value = 25
-					desc = court_position_overseer_trait
-				}
-			}
-			if = {
-				limit = {
-					has_trait = just
-				}
-				add = {
-					value = 10
-					desc = court_position_just_trait
-				}
-			}
-		}
-		else = {
-			add = {
-				value = martial
-				multiply = 1.5
-				max = 40
-				desc = court_position_skill_martial
 			}
 		}
 	}
@@ -2537,6 +2512,30 @@ warden_of_the_south_court_position = {
 
 	aptitude = {
 		value = 5
+		add = {
+			value = martial
+			multiply = 2.5
+			max = 50
+			desc = court_position_skill_martial
+		}
+		if = {
+			limit = {
+				has_trait = overseer
+			}
+			add = {
+				value = 25
+				desc = court_position_overseer_trait
+			}
+		}
+		if = {
+			limit = {
+				has_trait = just
+			}
+			add = {
+				value = 10
+				desc = court_position_just_trait
+			}
+		}
 		if = {
 			limit = {
 				liege ?= title:e_the_iron_throne.holder
@@ -2545,38 +2544,6 @@ warden_of_the_south_court_position = {
 			add = {
 				value = 60
 				desc = court_position_historic_title_holder
-			}
-			add = {
-				value = martial
-				multiply = 2.5
-				max = 50
-				desc = court_position_skill_martial
-			}
-			if = {
-				limit = {
-					has_trait = overseer
-				}
-				add = {
-					value = 25
-					desc = court_position_overseer_trait
-				}
-			}
-			if = {
-				limit = {
-					has_trait = just
-				}
-				add = {
-					value = 10
-					desc = court_position_just_trait
-				}
-			}
-		}
-		else = {
-			add = {
-				value = martial
-				multiply = 1.5
-				max = 40
-				desc = court_position_skill_martial
 			}
 		}
 	}
@@ -2906,15 +2873,6 @@ court_smith_court_position = {
 			max = 60
 			desc = court_position_skill_prowess
 		}
-		if = { #Qohorik Blacksmith, auto 'Excellent' aptitude
-			limit = {
-				has_character_flag = can_reforge_valyrian_steel
-			}
-			add = {
-				value = 100
-				desc = court_position_reforge_vs
-			}
-		}
 		if = { # Characters with a completed inspiration are very good court smiths
 			limit = {
 				has_completed_inspiration = yes
@@ -2953,47 +2911,11 @@ court_smith_court_position = {
 		}
 		if = {
 			limit = {
-				has_trait = diligent
-			}
-			add = {
-				value = 15
-				desc = court_position_diligent_trait
-			}
-		}
-		if = {
-			limit = {
 				has_trait = administrator
 			}
 			add = {
 				value = 10
 				desc = court_position_administrator_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = physique_good_3
-			}
-			add = {
-				value = 20
-				desc = court_position_physique_good_3_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = physique_good_2
-			}
-			add = {
-				value = 20
-				desc = court_position_physique_good_2_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = physique_good_1
-			}
-			add = {
-				value = 10
-				desc = court_position_physique_good_1_trait
 			}
 		}
 		if = {
@@ -3510,687 +3432,5 @@ head_dragonkeeper_court_position = {
 			}
 			add = 200
 		}
-	}
-}
-
-# Bloodrider - Household/Champion/Bodyguard hybrid
-bloodrider_court_position = {
-	max_available_positions = 2
-	court_position_asset = {
-		animation = marshal_random_weapon
-		background = "gfx/interface/illustrations/event_scenes/armory.dds"
-	}
-	skill = prowess
-	opinion = {
-		value = regular_court_position_opinion
-	}
-
-	# How high the aptitude has to be to reach the 5 different modifier levels
-	aptitude_level_breakpoints = { 20 40 60 80 }
-
-	# How good is this character in this position? root scope is the holder of the court position
-	aptitude = {
-		value = 1
-		add = court_position_aptitude_boon_voyager_trait
-		add = {
-			value = prowess
-			multiply = 4
-			max = 50
-			desc = court_position_skill_prowess
-		}
-		if = {
-			limit = {
-				has_trait = lifestyle_blademaster
-				has_trait_xp = {
-					trait = lifestyle_blademaster
-					value >= 100
-				}
-			}
-			add = {
-				value = 15
-				desc = court_position_blademaster_3_trait
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = lifestyle_blademaster
-				has_trait_xp = {
-					trait = lifestyle_blademaster
-					value >= 50
-				}
-			}
-			add = {
-				value = 10
-				desc = court_position_blademaster_2_trait
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = lifestyle_blademaster
-			}
-			add = {
-				value = 5
-				desc = court_position_blademaster_1_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = gallant
-			}
-			add = {
-				value = 5
-				desc = court_position_gallant_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = brave
-			}
-			add = {
-				value = 20
-				desc = court_position_brave_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = paranoid
-			}
-			add = {
-				value = 10
-				desc = court_position_paranoid_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = craven
-			}
-			add = {
-				value = -100
-				desc = court_position_craven_trait
-			}
-		}
-		add = court_position_aptitude_traveling_friends_value
-		if = {
-			limit = {
-				employer ?= { has_relation_best_friend = prev } #The considered character
-			}
-			add = {
-				value = 30
-				desc = court_position_best_friend
-			}
-		}
-		else_if = {
-			limit = {
-				employer ?= { has_relation_friend = prev } #The considered character
-			}
-			add = {
-				value = 15
-				desc = court_position_friend
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = best_knight_position
-			}
-			add = {
-				value = 20
-				desc = best_knight_position_desc
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = competing_knight_position
-			}
-			add = 30
-			desc = competing_knight_position_desc
-		}
-		add = court_position_aptitude_eunuch_tradition_value
-		add = court_position_aptitude_family_business_value
-		add = court_position_aptitude_high_penalty_value
-		if = {
-			limit = {
-				has_trait = disloyal
-			}
-			add = {
-				value = -100
-				desc = court_position_disloyal_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = maimed
-			}
-			add = {
-				value = -50
-				desc = court_position_maimed_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = wounded_3
-			}
-			add = {
-				value = -50
-				desc = court_position_wounded_3_trait
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = wounded_2
-			}
-			add = {
-				value = -25
-				desc = court_position_wounded_2_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = blind
-			}
-			add = {
-				value = -100
-				desc = court_position_blind_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = infirm
-			}
-			add = {
-				value = -100
-				desc = court_position_infirm_trait
-			}
-		}
-		if = {
-			limit = { var:bonus_aptitude_role ?= flag:champion }
-			add = {
-				value = cp_bonus_aptitude_value
-				desc = cp_bonus_aptitude
-			}
-		}
-	}
-
-	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
-		faith = { has_doctrine_parameter = can_make_bloodriders }
-		NOT = {
-			primary_title = { has_variable = kingsguard }
-		}
-		has_ep1_court_positions_dlc_trigger = yes
-		agot_is_landless_nw_character = no
-	}
-	is_shown_character = {
-		scope:employee = {
-			can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:liege }
-			is_courtier_of = scope:liege
-			NOT = {
-				any_heir_title = {}
-				any_pretender_title = {
-					place_in_line_of_succession = {
-						target = prev
-						value <= 2
-					}
-				}
-			}
-		}
-	}
-	valid_character = {
-		scope:employee = {
-			bloodrider_validity_trigger = { EMPLOYER = scope:liege }
-			faith = { has_doctrine_parameter = can_make_bloodriders }
-		}
-	}
-	revoke_cost = {
-		# Bloodriders are for life!
-		prestige = {
-			#value = major_court_position_prestige_revoke_cost
-			value = 15000
-			if = {
-				limit = {
-					exists = this
-					is_ai = yes
-				}
-				multiply = 0
-			}
-		}
-	}
-	valid_position = {
-		faith = { has_doctrine_parameter = can_make_bloodriders }
-	}
-	salary = {
-		round = no
-		gold = {
-			value = minor_court_position_salary
-			# Set to 0 with Dynasty Perk Inner Circle
-			if = {
-				limit = {
-					scope:liege = {
-						exists = dynasty
-						dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
-						employs_court_position = bloodrider_court_position
-						any_court_position_holder = {
-							type = bloodrider_court_position
-							exists = dynasty
-							house = prev.house
-						}
-					}
-				}
-				multiply = {
-					value = 0.0
-					desc = inner_circle_salary_mod
-					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-				}
-			}
-		}
-		gold = {
-			value = minor_court_position_prestige_salary
-			# Set to 0 with Dynasty Perk Inner Circle
-			if = {
-				limit = {
-					scope:liege = {
-						exists = dynasty
-						dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
-						employs_court_position = bloodrider_court_position
-						any_court_position_holder = {
-							type = bloodrider_court_position
-							exists = dynasty
-							house = prev.house
-						}
-					}
-				}
-				multiply = {
-					value = 0.0
-					desc = inner_circle_salary_mod
-					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-				}
-			}
-		}
-	}
-	# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints)
-	scaling_employer_modifiers = {
-		terrible = {
-			enemy_hostile_scheme_success_chance_add = -5
-			enemy_hostile_scheme_phase_duration_add = 1
-		}
-		poor = {
-			enemy_hostile_scheme_success_chance_add = -10
-			enemy_hostile_scheme_phase_duration_add = 2
-		}
-		average = {
-			enemy_hostile_scheme_success_chance_add = -15
-			enemy_hostile_scheme_phase_duration_add = 5
-		}
-		good = {
-			enemy_hostile_scheme_success_chance_add = -20
-			enemy_hostile_scheme_phase_duration_add = 7
-		}
-		excellent = {
-			enemy_hostile_scheme_success_chance_add = -25
-			enemy_hostile_scheme_phase_duration_add = 10
-		}
-	}
-
-	custom_employer_modifier_description = bloodrider_employer_custom_effect_description
-
-	modifier = {
-		prowess = household_guard_prowess_svalue
-	}
-	on_court_position_received = {
-		agot_bloodrider_title_accepted_effect = yes
-	}
-	on_court_position_revoked = {
-		agot_bloodrider_title_revoked_effect = yes
-	}
-	on_court_position_invalidated = {
-		agot_bloodrider_title_invalidated_effect = yes
-	}
-	# Scripted value to determine whether an AI will hire/fire a position or not. Hires over 0, fires under -50. Look in _court_positions.info for more extensive documentation!
-	candidate_score = {
-		value = 100
-		add = scope:base_value
-		add = court_position_candidate_score_base_value
-		add = court_position_candidate_aptitude_value
-		add = court_position_debt_considerations_value
-	}
-}
-
-first_sword_court_position = {
-	sort_order = 989
-	skill = prowess
-	max_available_positions = 1
-	court_position_asset = {
-		animation = menacing
-		background = "gfx/interface/illustrations/event_scenes/corridor.dds"
-	}
-	opinion = {
-		value = regular_court_position_opinion
-	}
-	aptitude_level_breakpoints = { 20 40 60 80 }
-	aptitude = { # Taken and tweaked from guard court pos
-		value = 1
-		add = court_position_aptitude_boon_voyager_trait
-		add = {
-			value = prowess
-			multiply = 5
-			max = 50
-			desc = court_position_skill_prowess
-		}
-		if = {
-			limit = {
-				has_trait = shieldmaiden
-			}
-			add = {
-				value = 20
-				desc = court_position_shieldmaiden_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = lifestyle_blademaster
-				has_trait_xp = {
-					trait = lifestyle_blademaster
-					value >= 100
-				}
-			}
-			add = {
-				value = 15
-				desc = court_position_blademaster_3_trait
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = lifestyle_blademaster
-				has_trait_xp = {
-					trait = lifestyle_blademaster
-					value >= 50
-				}
-			}
-			add = {
-				value = 10
-				desc = court_position_blademaster_2_trait
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = lifestyle_blademaster
-			}
-			add = {
-				value = 5
-				desc = court_position_blademaster_1_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = brave
-			}
-			add = {
-				value = 20
-				desc = court_position_brave_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = paranoid
-			}
-			add = {
-				value = 10
-				desc = court_position_paranoid_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = craven
-			}
-			add = {
-				value = -15
-				desc = court_position_craven_trait
-			}
-		}
-		if = {
-			limit = {
-				employer ?= {
-					culture = {
-						has_cultural_parameter = reduced_bodyguard_aptitude
-					}
-				}
-			}
-			add = {
-				value = -10
-				desc = court_position_palace_politics
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = best_knight_position
-			}
-			add = {
-				value = 20
-				desc = best_knight_position_desc
-			}
-		}
-		# Estate bonus
-		if = {
-			limit = {
-				liege ?= {
-					domicile ?= { has_domicile_parameter = estate_increase_bodyguard_aptitude_1 }
-				}
-			}
-			add = {
-				value = estate_increase_bodyguard_aptitude_1_value
-				desc = estate_increase_bodyguard_aptitude_desc
-			}
-		}
-		if = {
-			limit = {
-				liege ?= {
-					domicile ?= { has_domicile_parameter = estate_increase_bodyguard_aptitude_2 }
-				}
-			}
-			add = {
-				value = estate_increase_bodyguard_aptitude_2_value
-				desc = estate_increase_bodyguard_aptitude_desc
-			}
-		}
-		if = {
-			limit = {
-				has_perk = praetorian_guard_perk
-			}
-			add = {
-				value = 15
-				desc = court_position_bodyguard_modifier
-			}
-		}
-		if = {
-			limit = {
-				liege ?= { has_perk = praetorian_guard_perk }
-			}
-			add = {
-				value = 15
-				desc = court_position_bodyguard_liege_modifier
-			}
-		}
-		add = court_position_aptitude_family_business_value
-		add = court_position_aptitude_high_penalty_value
-		# Bonus from court.8311
-		if = {
-			limit = { var:bonus_aptitude_role ?= flag:bodyguard }
-			add = {
-				value = cp_bonus_aptitude_value
-				desc = cp_bonus_aptitude
-			}
-		}
-		# Seneschal
-		if = {
-			limit = {
-				liege.court_position:seneschal_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:seneschal_court_position.seneschal_improve_court_value
-				desc = seneschal_improve_court_aptitude_desc
-			}
-		}
-	}
-	is_shown = {
-		OR = {
-			primary_title = title:k_braavos
-			primary_title = title:e_braavos
-		}
-	}
-	is_shown_character = {
-		scope:employee = {
-			can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:liege }
-			is_courtier_of = scope:liege
-		}
-	}
-	valid_character = {
-		scope:employee = {
-			base_court_position_validity_trigger = { EMPLOYER = scope:liege }
-			trigger_if = {
-				limit = { NOT = { has_court_position = first_sword_court_position } }
-				court_position_does_not_already_have_a_job_trigger = yes # This positions is considered a job, and cannot be held at the same time as another similar position
-			}
-			can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:liege }
-		}
-	}
-	revoke_cost = {
-		prestige =  {
-			value = major_court_position_prestige_revoke_cost
-			# Avoid AI prestige issues
-			if = {
-				limit = {
-					exists = this
-					is_ai = yes
-				}
-				multiply = 0
-			}
-			# Special case for events
-			if = {
-				limit = {
-					exists = this
-					has_character_flag = free_revoke_cost
-				}
-				multiply = 0
-			}
-		}
-	}
-	is_powerful_agent = yes
-	salary = {
-		round = no
-		gold = {
-			value = medium_court_position_salary
-			# Set to 0 with Dynasty Perk Inner Circle
-			if = {
-				limit = { court_position_inner_circle_salary_trigger = { POS = first_sword } }
-				multiply = {
-					value = 0
-					desc = inner_circle_salary_mod
-					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-				}
-			}
-			# Halved via obligation hook
-			else_if = {
-				limit = {
-					court_position_obligation_hook_salary_trigger = {
-						POS = first_sword
-						LIEGE = scope:liege
-					}
-				}
-				multiply = {
-					value = 0.5
-					desc = obligation_hook_salary
-					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-				}
-			}
-		}
-		prestige = {
-			value = medium_court_position_prestige_salary
-			# Set to 0 with Dynasty Perk Inner Circle
-			if = {
-				limit = { court_position_inner_circle_salary_trigger = { POS = first_sword } }
-				multiply = {
-					value = 0
-					desc = inner_circle_salary_mod
-					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-				}
-			}
-			# Halved via obligation hook
-			else_if = {
-				limit = {
-					court_position_obligation_hook_salary_trigger = {
-						POS = first_sword
-						LIEGE = scope:liege
-					}
-				}
-				multiply = {
-					value = 0.5
-					desc = obligation_hook_salary
-					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-				}
-			}
-			# Halved salary
-			if = {
-				limit = {
-					court_position_halved_salary_trigger = { POS = first_sword }
-				}
-				multiply = {
-					value = 0.5
-					desc = court_position_halved_salary
-					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-				}
-			}
-			# Increased salary
-			if = {
-				limit = {
-					court_position_increased_salary_trigger = { POS = first_sword }
-				}
-				multiply = {
-					value = 1.5
-					desc = court_position_increased_salary
-					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-				}
-			}
-		}
-	}
-	candidate_score = {
-		value = 50
-		add = scope:base_value
-		add = court_position_candidate_score_base_value
-		add = court_position_candidate_aptitude_value
-		add = court_position_debt_considerations_value
-	}
-
-	scaling_employer_modifiers = {
-		terrible = {
-			enemy_hostile_scheme_success_chance_max_add = -2
-		}
-		poor = {
-			enemy_hostile_scheme_success_chance_max_add = -4
-		}
-		average = {
-			enemy_hostile_scheme_success_chance_max_add = -7
-		}
-		good = {
-			enemy_hostile_scheme_success_chance_max_add = -9
-		}
-		excellent = {
-			enemy_hostile_scheme_success_chance_max_add = -12
-		}
-	}
-	modifier = {
-		dread_baseline_add = 5
-		intrigue = 1
-		monthly_prestige = 1.25
-	}
-	custom_employer_modifier_description = bodyguard_employer_custom_effect_description
-	on_court_position_received = {
-		first_sword_court_position_title_accepted_effect = yes
-	}
-	on_court_position_revoked = {
-		first_sword_court_position_title_revoked_effect = yes
-	}
-	on_court_position_invalidated = {
-		first_sword_court_position_title_invalidated_effect = yes
 	}
 }

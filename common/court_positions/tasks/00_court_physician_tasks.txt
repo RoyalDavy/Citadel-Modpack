@@ -116,7 +116,7 @@ physician_guard_family = {
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
-			#AGOT Added
+			#AGOT ADDED
 			if = {
 				limit = {
 					scope:liege = {
@@ -138,19 +138,19 @@ physician_guard_family = {
 
 	scaling_employer_modifiers = {
 		terrible = {
-		 	monthly_lifestyle_xp_gain_mult = 0.02
+		 	monthly_lifestyle_xp_gain_mult = 0.01
 		}
 		poor = {
-		 	monthly_lifestyle_xp_gain_mult = 0.04
+		 	monthly_lifestyle_xp_gain_mult = 0.02
 		}
 		average = {
-		 	monthly_lifestyle_xp_gain_mult = 0.06
+		 	monthly_lifestyle_xp_gain_mult = 0.03
 		}
 		good = {
-		 	monthly_lifestyle_xp_gain_mult = 0.08
+		 	monthly_lifestyle_xp_gain_mult = 0.04
 		}
 		excellent = {
-		 	monthly_lifestyle_xp_gain_mult = 0.1
+		 	monthly_lifestyle_xp_gain_mult = 0.05
 		}
 	}
 
@@ -179,13 +179,13 @@ physician_improve_self = {
 	# Monthly cost for the task
 	cost = {
 		round = no
-		prestige = {
+		gold = {
 			add = {
 				value = monthly_court_position_task_cost
 				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
 				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
 			}
-			#AGOT Added
+			#AGOT ADDED
 			if = {
 				limit = {
 					scope:liege = {
