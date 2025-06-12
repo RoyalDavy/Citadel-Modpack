@@ -1,0 +1,78 @@
+﻿coronation_ceremony_ongoing_event_pulse = {
+	trigger = {
+		NOT = { has_character_flag = busy_in_coronation_event }
+	}
+	random_events = {
+		chance_to_happen = 100
+		100 = 0
+
+		100 = coronation.1000 #Host: A relative arrives early and criticizes your chosen options
+		100 = coronation.1010 #Host: You have an occasion to kickstart your Diplomacy/Seduce targeting efforts
+		100 = coronation.1030 #Good/Bad Omen
+		140 = coronation.1120 #Bastard intent: Approaching the host leading up to the ceremony
+		200 = coronation.1130 #Sabotage intent: Deciding how to sabotage
+		500 = coronation.1135 #Only if crown was stolen
+		120 = coronation.1150
+		120 = coronation.1160 #Sabotage intent: Gatecrashers
+		100 = coronation.1190
+		100 = coronation.1210
+	}
+}
+
+coronation_banquet_ongoing_event_pulse = {
+	trigger = {
+		NOT = { has_character_flag = busy_in_banquet_event }
+	}
+	random_events = {
+		chance_to_happen = 100
+		250 = 0
+
+		25 = coronation_banquet.1040
+		100 = coronation_banquet.1050
+		100 = coronation_banquet.1070
+		100 = coronation_banquet.1310
+		100 = coronation_banquet.1320
+		220 = coronation_banquet.2030 #Bastard intent: Approaching the host during the banquet
+		220 = coronation_banquet.2000 #Diplomatic Intent: Befriend your target's friend
+		200 = coronation_banquet.5020 # Promote Rule time
+		220 = coronation_banquet.2010 # Host - Gain Renown Intent - Bring a cool animal to show off
+		200 = coronation_banquet.2020 # Spouse/Non-spouse - Someone's about to fall in a well of wine
+		100 = coronation_banquet.0001		# Quite the Spectacle - Connect with various types of characters over the entertainment.
+		100 = coronation_banquet.0011		# Food Fit for a... - Connect with various types of characters over the food.
+		100 = coronation_banquet.0021		# Shimmering, Shining - Connect with various types of characters over the venue & its decorations.
+		100 = coronation_banquet.0031		# A Sociable Supper - Meet one of your neighbouring rulers and form a fast friendship.
+		100 = coronation_banquet.0051		# And Another Thing - Someone is pitching questionable ideas at you, but they keep coming at you.
+		1 = coronation_banquet.0071		# Oath in Moment - Your liege offers you a favour for your support.
+		100 = legend_spread_events.8150 # How did you get those scars?
+		100 = coronation_banquet.6002 # Guest compliments you on your feast
+
+		# Transferred feast events
+		50 = coronation_banquet.0101		# Clear your Head - Ambush your target when they go out for a walk.
+		50 = coronation_banquet.0201		# Dinner and a Show - Position yourself opposite your intent_target, eat seductively.
+		50 = coronation_banquet.0401		# Stomach Rumbling - Bond with your intent_target over the terrible/excellent food.
+		50 = coronation_banquet.0601		# A Mere Jest - Stuff a gross item (e.g., dead rat) in a refined foodstuff (e.g., jug of wine).
+		50 = coronation_banquet.0801		# A Pleasing Atmosphere - Sit back and enjoy the vibes.
+		50 = coronation_banquet.6231 # There's no more wine!
+		50 = coronation_banquet.6251 # Chance to become friend or rival
+		10 = coronation_banquet.1004 		# Enjoying Magnificent Food
+		10 = coronation_banquet.2005			 #Drunk guest throws up
+		10 = coronation_banquet.5001 #Hosts dread freaks you out
+		10 = coronation_banquet.5002 #Host is a lunatic
+		10 = coronation_banquet.5003 #host is sadistic
+		10 = coronation_banquet.5004 #Host is a reveller
+		10 = coronation_banquet.1001
+		10 = coronation_banquet.1004 #The food is great
+		10 = coronation_banquet.1005 #I am shy and this is not fun
+		10 = coronation_banquet.1006 #Reveller likes to revel
+		5 = coronation_banquet.1007 #Two gluttons eat immensely
+		5 = coronation_banquet.1008 #Accidentaly spill secrets
+		5 = coronation_banquet.6111
+		5 = coronation_banquet.6003 #Guests Fighting
+		5 = coronation_banquet.6501 #Innuendo
+		5 = coronation_banquet.6101 #Shy guest
+		5 = coronation_banquet.1002 #Gluttonous
+		5 = coronation_banquet.1020 #Deface court artifact
+		3 = coronation_banquet.6111 #A guest rambles on and on
+		3 = coronation_banquet.6121 #Serve guest food you know they hate
+	}
+}

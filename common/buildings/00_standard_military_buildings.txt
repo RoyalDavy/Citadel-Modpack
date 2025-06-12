@@ -368,6 +368,12 @@ workshops_01 = {
 		skirmishers_maintenance_mult = good_building_maa_maintenance_tier_1
 		archers_maintenance_mult = good_building_maa_maintenance_tier_1
 	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_workshop_bonuses
+		development_growth_factor = normal_building_development_growth_factor_tier_1
+	}
 	
 	next_building = workshops_02
 
@@ -423,6 +429,12 @@ workshops_02 = {
 		skirmishers_maintenance_mult = good_building_maa_maintenance_tier_2
 		archers_maintenance_mult = good_building_maa_maintenance_tier_2
 	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_workshop_bonuses
+		development_growth_factor = normal_building_development_growth_factor_tier_2
+	}
 	
 	next_building = workshops_03
 	
@@ -472,6 +484,12 @@ workshops_03 = {
 		skirmishers_maintenance_mult = good_building_maa_maintenance_tier_3
 		archers_maintenance_mult = good_building_maa_maintenance_tier_3
 	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_workshop_bonuses
+		development_growth_factor = normal_building_development_growth_factor_tier_3
+	}
 	
 	next_building = workshops_04
 	
@@ -516,6 +534,12 @@ workshops_04 = {
 	character_modifier = {
 		skirmishers_maintenance_mult = good_building_maa_maintenance_tier_4
 		archers_maintenance_mult = good_building_maa_maintenance_tier_4
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_workshop_bonuses
+		development_growth_factor = normal_building_development_growth_factor_tier_4
 	}
 	
 	next_building = workshops_05
@@ -563,6 +587,12 @@ workshops_05 = {
 		archers_maintenance_mult = good_building_maa_maintenance_tier_5
 		cultural_head_fascination_mult = 0.05
 	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_workshop_bonuses
+		development_growth_factor = normal_building_development_growth_factor_tier_5
+	}
 	
 	next_building = workshops_06
 	
@@ -608,6 +638,12 @@ workshops_06 = {
 		skirmishers_maintenance_mult = good_building_maa_maintenance_tier_6
 		archers_maintenance_mult = good_building_maa_maintenance_tier_6
 		cultural_head_fascination_mult = 0.10
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_workshop_bonuses
+		development_growth_factor = normal_building_development_growth_factor_tier_6
 	}
 	
 	next_building = workshops_07
@@ -655,6 +691,12 @@ workshops_07 = {
 		archers_maintenance_mult = good_building_maa_maintenance_tier_7
 		cultural_head_fascination_mult = 0.15
 	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_workshop_bonuses
+		development_growth_factor = normal_building_development_growth_factor_tier_7
+	}
 	
 	next_building = workshops_08
 	
@@ -700,6 +742,12 @@ workshops_08 = {
 		skirmishers_maintenance_mult = good_building_maa_maintenance_tier_8
 		archers_maintenance_mult = good_building_maa_maintenance_tier_8
 		cultural_head_fascination_mult = 0.20
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_workshop_bonuses
+		development_growth_factor = normal_building_development_growth_factor_tier_8
 	}
 	
 	ai_value = {
@@ -2514,6 +2562,12 @@ regimental_grounds_01 = {
 	county_modifier = {
 		levy_reinforcement_rate = high_levy_reinforcement_rate_tier_1
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_regimental_bonuses
+		monthly_income = normal_building_tax_tier_1
+	}
 	
 	next_building = regimental_grounds_02
 
@@ -2581,6 +2635,12 @@ regimental_grounds_02 = {
 		levy_reinforcement_rate = high_levy_reinforcement_rate_tier_2
 		monthly_county_control_growth_factor = 0.05
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_regimental_bonuses
+		monthly_income = normal_building_tax_tier_2
+	}
 	
 	next_building = regimental_grounds_03
 	
@@ -2636,6 +2696,12 @@ regimental_grounds_03 = {
 		levy_reinforcement_rate = high_levy_reinforcement_rate_tier_3
 		monthly_county_control_growth_factor = 0.05
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_regimental_bonuses
+		monthly_income = normal_building_tax_tier_3
+	}
 	
 	next_building = regimental_grounds_04
 	
@@ -2687,6 +2753,12 @@ regimental_grounds_04 = {
 		levy_reinforcement_rate = high_levy_reinforcement_rate_tier_4
 		monthly_county_control_growth_factor = 0.05
 		levy_size = 0.02
+	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_regimental_bonuses
+		monthly_income = normal_building_tax_tier_4
 	}
 	
 	next_building = regimental_grounds_05
@@ -2741,6 +2813,12 @@ regimental_grounds_05 = {
 		monthly_county_control_growth_factor = 0.05
 		levy_size = 0.02
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_regimental_bonuses
+		monthly_income = normal_building_tax_tier_5
+	}
 	
 	next_building = regimental_grounds_06
 	
@@ -2793,6 +2871,12 @@ regimental_grounds_06 = {
 		levy_reinforcement_rate = high_levy_reinforcement_rate_tier_6
 		monthly_county_control_growth_factor = 0.05
 		levy_size = 0.02
+	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_regimental_bonuses
+		monthly_income = normal_building_tax_tier_6
 	}
 	
 	next_building = regimental_grounds_07
@@ -2848,6 +2932,12 @@ regimental_grounds_07 = {
 		monthly_county_control_growth_factor = 0.05
 		levy_size = 0.02
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_regimental_bonuses
+		monthly_income = normal_building_tax_tier_7
+	}
 	
 	next_building = regimental_grounds_08
 	
@@ -2902,6 +2992,12 @@ regimental_grounds_08 = {
 		levy_reinforcement_rate = high_levy_reinforcement_rate_tier_8
 		monthly_county_control_growth_factor = 0.05
 		levy_size = 0.02
+	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_regimental_bonuses
+		monthly_income = normal_building_tax_tier_8
 	}
 	
 	ai_value = {
@@ -3461,6 +3557,13 @@ barracks_01 = {
 		stationed_pikemen_damage_mult = -0.20
 		stationed_maa_damage_mult = low_maa_damage_tier_1
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_barracks_bonuses
+		fort_level = 1
+		defender_holding_advantage = 2
+	}
 	
 	next_building = barracks_02
 	
@@ -3552,6 +3655,13 @@ barracks_02 = {
 		stationed_pikemen_damage_mult = -0.30
 		stationed_maa_damage_mult = low_maa_damage_tier_2
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_barracks_bonuses
+		fort_level = 1
+		defender_holding_advantage = 4
+	}
 	
 	next_building = barracks_03
 	
@@ -3629,6 +3739,13 @@ barracks_03 = {
 		stationed_pikemen_toughness_mult = -0.20
 		stationed_maa_damage_mult = low_maa_damage_tier_3
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_barracks_bonuses
+		fort_level = 2
+		defender_holding_advantage = 6
+	}
 	
 	next_building = barracks_04
 	
@@ -3704,6 +3821,13 @@ barracks_04 = {
 		stationed_heavy_infantry_toughness_mult = -0.30
 		stationed_pikemen_toughness_mult = -0.30
 		stationed_maa_damage_mult = low_maa_damage_tier_4
+	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_barracks_bonuses
+		fort_level = 2
+		defender_holding_advantage = 8
 	}
 	
 	next_building = barracks_05
@@ -3786,6 +3910,13 @@ barracks_05 = {
 		stationed_pikemen_toughness_mult = -0.40
 		stationed_maa_damage_mult = low_maa_damage_tier_5
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_barracks_bonuses
+		fort_level = 3
+		defender_holding_advantage = 10
+	}
 	
 	next_building = barracks_06
 	
@@ -3866,6 +3997,13 @@ barracks_06 = {
 		stationed_heavy_infantry_toughness_mult = -0.50
 		stationed_pikemen_toughness_mult = -0.50
 		stationed_maa_damage_mult = low_maa_damage_tier_6
+	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_barracks_bonuses
+		fort_level = 3
+		defender_holding_advantage = 12
 	}
 	
 	next_building = barracks_07
@@ -3948,6 +4086,13 @@ barracks_07 = {
 		stationed_pikemen_toughness_mult = -0.60
 		stationed_maa_damage_mult = low_maa_damage_tier_7
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_barracks_bonuses
+		fort_level = 4
+		defender_holding_advantage = 14
+	}
 	
 	next_building = barracks_08
 	
@@ -4028,6 +4173,13 @@ barracks_08 = {
 		stationed_heavy_infantry_toughness_mult = -0.70
 		stationed_pikemen_toughness_mult = -0.70
 		stationed_maa_damage_mult = low_maa_damage_tier_7
+	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_barracks_bonuses
+		fort_level = 5
+		defender_holding_advantage = 16
 	}
 	
 	ai_value = {
@@ -5059,6 +5211,15 @@ smiths_01 = {
 		knight_limit = 1
 	}
 	
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_smith_buildings
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_1
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_1
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_1
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_1
+	}
+	
 	next_building = smiths_02
 
 	type_icon = "icon_building_smiths.dds"
@@ -5205,6 +5366,15 @@ smiths_02 = {
 		knight_limit = 1
 		men_at_arms_limit = 1
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_smith_buildings
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_2
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_2
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_2
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_2
+	}
 	
 	next_building = smiths_03
 	
@@ -5277,6 +5447,14 @@ smiths_03 = {
 		men_at_arms_limit = 1
 	}
 	
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_smith_buildings
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_3
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_3
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_3
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_3
+	}
 	
 	next_building = smiths_04
 	
@@ -5344,6 +5522,15 @@ smiths_04 = {
 		knight_limit = 2
 		men_at_arms_limit = 1
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_smith_buildings
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_4
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_4
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_4
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_4
+	}
 	
 	next_building = smiths_05
 	
@@ -5409,6 +5596,15 @@ smiths_05 = {
 		parameter = frugal_blacksmith_maa_size 
 		knight_limit = 3
 		men_at_arms_limit = 1
+	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_smith_buildings
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_5
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_5
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_5
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_5
 	}
 	
 	next_building = smiths_06
@@ -5476,6 +5672,15 @@ smiths_06 = {
 		knight_limit = 3
 		men_at_arms_limit = 2
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_smith_buildings
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_6
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_6
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_6
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_6
+	}
 	
 	next_building = smiths_07
 	
@@ -5542,6 +5747,15 @@ smiths_07 = {
 		knight_limit = 4
 		men_at_arms_limit = 2
 	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_smith_buildings
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_7
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_7
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_7
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_7
+	}
 	
 	next_building = smiths_08
 	
@@ -5607,6 +5821,15 @@ smiths_08 = {
 		parameter = frugal_blacksmith_maa_size 
 		knight_limit = 4
 		men_at_arms_limit = 3
+	}
+
+	#AGOT Added
+	province_culture_modifier = {
+		parameter = better_smith_buildings
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_8
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_8
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_8
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_8
 	}
 	
 	ai_value = {

@@ -1,31 +1,31 @@
 ﻿# GRAPHICAL BACKGROUNDS ARE SELECTED BY FIRST TRUE IN LOAD ORDER! DO NOT RENAME FILE!
 # GRAPHICAL BACKGROUNDS ARE ONLY REFRESHED WHEN A BUILDING IS CHANGED IN THE HOLDING
 
-# AGOT TODO Add new special buildings (obviously)
+#AGOT TODO Add new special buildings (obviously)
 
 # #PHYSICAL WALL
 special_the_wall = {
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_walls_of_genoa.dds"
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
-	
+
 	cost_gold = 100000
-	
+
 	county_modifier = {
 		defender_holding_advantage = 5
 		tax_mult = 0.1
 		hostile_raid_time = 0.5
 	}
-	
+
 	province_modifier = {
 		garrison_size = 0.25
 		fort_level = 2
 	}
-	
+
 	ai_value = {
 		base = 100
 		culture_likely_to_fortify_modifier = yes
@@ -36,24 +36,24 @@ special_the_wall_damaged = {
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_walls_of_genoa.dds"
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
-	
+
 	cost_gold = 100000
-	
+
 	county_modifier = {
 		defender_holding_advantage = -50
 		tax_mult = -0.1
 		hostile_raid_time = 0.1
 	}
-	
+
 	province_modifier = {
 		garrison_size = -0.25
 		fort_level = -2
 	}
-	
+
 	ai_value = {
 		base = 100
 	}
@@ -82,7 +82,7 @@ special_the_wall_graphical = {
 			agot_wall_has_fallen_right = yes
 		}
 	}
-	
+
 	#type = special
 }
 
@@ -102,7 +102,7 @@ special_the_wall_graphical = {
 # 			agot_wall_has_fallen_right = yes
 # 		}
 # 	}
-	
+
 # 	#type = special
 # }
 
@@ -113,7 +113,7 @@ special_the_wall_broken_middle_graphical = {
 		type = entity
 		name = "building_special_the_wall_broken_middle_entity"
 	}
-	
+
 	is_enabled = {
 		this = province:5
 		agot_wall_has_fallen_middle = yes
@@ -131,7 +131,7 @@ special_the_wall_broken_middle_graphical = {
 # 		type = pdxmesh
 # 		name = "building_special_the_wall_broken_right_mesh"
 # 	}
-	
+
 # 	is_enabled = {
 # 		this = province:5
 # 		agot_wall_has_fallen_right = yes
@@ -147,24 +147,24 @@ special_castle_black = {
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_walls_of_genoa.dds" #TODOAGOT
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
-	
+
 	cost_gold = 100000
-	
+
 	county_modifier = {
 		defender_holding_advantage = 5
 		tax_mult = 0.1
 		hostile_raid_time = 0.5
 	}
-	
+
 	province_modifier = {
 		garrison_size = 0.25
 		fort_level = 2
 	}
-	
+
 	ai_value = {
 		base = 100
 		culture_likely_to_fortify_modifier = yes
@@ -175,24 +175,24 @@ special_castle_black_damaged = {
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_walls_of_genoa.dds"
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
-	
+
 	cost_gold = 100000
-	
+
 	county_modifier = {
 		defender_holding_advantage = -50
 		tax_mult = -0.1
 		hostile_raid_time = 0.1
 	}
-	
+
 	province_modifier = {
 		garrison_size = -0.25
 		fort_level = -2
 	}
-	
+
 	ai_value = {
 		base = 100
 	}
@@ -202,24 +202,24 @@ special_kings_landing_hoodmarket = {
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_walls_of_genoa.dds" #TODOAGOT
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
-	
+
 	cost_gold = 100000
-	
+
 	county_modifier = {
 		defender_holding_advantage = 5
 		tax_mult = 0.1
 		hostile_raid_time = 0.5
 	}
-	
+
 	province_modifier = {
 		garrison_size = 0.25
 		fort_level = 2
 	}
-	
+
 	ai_value = {
 		base = 100
 		culture_likely_to_fortify_modifier = yes
@@ -230,23 +230,23 @@ special_kings_landing_hoodmarket_destroyed = {
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_walls_of_genoa.dds" #TODOAGOT
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
-	
+
 	cost_gold = 100000
-	
+
 	county_modifier = {
-		
+
 	}
-	
+
 	province_modifier = {
-		
+
 	}
-	
+
 	ai_value = {
-		
+
 	}
 }
 #VISUAL KINGS LANDING EXPLOSION
@@ -287,6 +287,6 @@ special_kings_landing_not_explosion_graphical = {
 # 	is_enabled = {
 # 		this = province:4154
 # 	}
-	
+
 # 	#type = special
 # }

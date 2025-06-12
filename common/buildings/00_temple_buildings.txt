@@ -7,14 +7,12 @@
 @illustration_northern_pagan = "gfx/interface/illustrations/holding_types/temple_northern_pagan.dds"
 @illustration_iberian_christian = "gfx/interface/illustrations/holding_types/fp2_temple_iberian_christian.dds"
 @illustration_iberian_islamic = "gfx/interface/illustrations/holding_types/fp2_temple_iberian_islamic.dds"
-@illustration_iranian_zoroastrian = "gfx/interface/illustrations/holding_types/fp3_temple_iranian_zoroastrian.dds" 
-@illustration_princlyarbiter = "gfx/interface/illustrations/holding_types/temple_princlyarbiter.dds"
-@illustration_trios = "gfx/interface/illustrations/holding_types/temple_trios.dds"
-@illustration_weepinglady = "gfx/interface/illustrations/holding_types/temple_weepinglady.dds"
+@illustration_iranian_zoroastrian = "gfx/interface/illustrations/holding_types/fp3_temple_iranian_zoroastrian.dds"
+@illustration_tengri = "gfx/interface/illustrations/holding_types/mpo_temple_steppe.dds"
 
 temple_01 = {
 	construction_time = slow_construction_time
-	
+
 	### GENERIC ###
 	asset = {
 		type = pdxmesh
@@ -224,103 +222,426 @@ temple_01 = {
 	# 	name = "fp3_building_persian_temple_01_a_01_entity"
 	# 	requires_dlc_flag = legacy_of_persia
 	# 	illustration = @illustration_iranian_zoroastrian
-	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 0 } } ##todo_cd_polish fix 
+	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 0 } } ##todo_cd_polish fix
 	# 	graphical_faiths = { "zoroastrian_gfx" }
 	# 	graphical_cultures = { iranian_building_gfx }
 	# 	graphical_regions = { graphical_mena }
 	# }
-	#AGOT Added, Rooloo
+
+	# MPO Tengri
 	asset = {
 		type = entity
-		name = "fp3_building_persian_temple_01_a_01_entity"
-		requires_dlc_flag = legacy_of_persia
-		illustration = @illustration_iranian_zoroastrian
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 0 } } ##todo_cd_polish fix 
-		graphical_faiths = { dawnbringer_gfx }
+		name = "mpo_mongol_temple_01_entity"
+		illustration = @illustration_tengri
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/pagan_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { "tengrism_gfx" }
 	}
-	#AGOT added, Pagan Temple
+
+	#AGOT Added, R'hllor
 	asset = {
 		type = pdxmesh
-		name = "building_western_temple_pagan_01_mesh"
-		illustration = @illustration_northern_pagan
+		name = "agot_temple_rhllor_1_mesh"
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { old_gods_gfx bearded_god_gfx }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Faith of the Seven
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_1_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_1_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_1_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_1_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Faith of the Seven
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_01_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_mena }
+	}
 	asset = {
 		type = pdxmesh
 		name = "building_andal_temple_the_seven_01_mesh"
 		illustration = @illustration_christian
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
 		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_india }
 	}
-	#AGOT added, Drowned God
 	asset = {
 		type = pdxmesh
-		name = "building_western_temple_generic_01_mesh"
-		illustration = @illustration_generic_grass
+		name = "building_andal_temple_the_seven_01_mesh"
+		illustration = @illustration_christian
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { drowned_god_gfx }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_steppe }
 	}
-	#AGOT added, Dharmic-Med
-	asset = {
-		type = pdxmesh
-		name = "building_mediterranean_temple_dharmic_01_mesh"
-		illustration = @illustration_weepinglady
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { western_essosi_gfx }
-	}
-	#AGOT added, Iberian-Mus
+	#AGOT Added, Free Cities
 	asset = {
 		type = pdxmesh
 		name = "fp2_building_iberian_mosque_01_mesh"
-		illustration = @illustration_trios
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { trios_gfx }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Iberian-Chris
 	asset = {
 		type = pdxmesh
-		name = "fp2_building_iberian_christian_01_mesh"
-		illustration = @illustration_princlyarbiter
+		name = "fp2_building_iberian_mosque_01_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { pentoshi_god_gfx }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_mediterranean }
 	}
-	
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_01_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_01_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_01_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Drowned God
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Old Gods
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Bearded God
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Summer Gods
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Yi Ti
+	asset = {
+		type = pdxmesh
+		name = "pagoda_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_01_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Ethiopian-Rock
+	#asset = {
+	#	type = pdxmesh
+	#	name = "ehtiopian_rock_church_01_mesh"
+	#	illustration = @illustration_generic_grass
+	#	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
+	#	graphical_faiths = { warlocks_god_gfx }
+	#}
+	#AGOT Added, Ethiopian-Orthodox
+	#asset = {
+	#	type = pdxmesh
+	#	name = "ehtiopian_orthodox_01_mesh"
+	#	illustration = @illustration_generic_grass
+	#	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
+	#	graphical_faiths = { memories_god_gfx }
+	#}
+
 	can_construct_potential = {
 		barony_cannot_construct_holding = no
 	}
-	
+
 	can_construct = {
-		culture = {
-			has_innovation = innovation_city_planning
-		}
-		#AGOT Added
-		county.holder = {
-			NOT = { government_has_flag = government_is_nw }
-			NOT = { government_has_flag = agot_government_is_pirate }
-			NOT = { 
-				scope:holder = {
-					OR = {
-						religion = religion:old_gods_religion
-						religion = religion:drowned_god_religion
+		trigger_if = {
+			limit = {
+				NOR = {
+					scope:holder.culture = {
+						has_cultural_parameter = tribals_can_into_temples
+						has_cultural_parameter = temple_next_level
 					}
 				}
 			}
+			scope:holder.culture = {
+				has_innovation = innovation_city_planning
+			}
 		}
-		custom_tooltip = {
-			text = GET_OUT_OF_MY_SWAMP
-			NOT = { agot_is_the_bog_terrain = yes }
+		trigger_else = {
+			scope:holder.culture = {
+				OR = {
+					has_cultural_parameter = tribals_can_into_temples
+					has_cultural_parameter = temple_next_level
+				}
+			}
 		}
+		#AGOT Added
+		agot_can_build_temple_holdings = yes
 	}
-	
+
 	can_construct_showing_failures_only = {
-		building_requirement_tribal = no
-		building_requirement_tribal_holding_in_county = yes
+		trigger_if = {
+			limit = {
+				NOT = {
+					scope:holder.culture = {
+						has_cultural_parameter = tribals_can_into_temples
+					}
+				}
+			}
+			building_requirement_tribal = no
+			building_requirement_tribal_holding_in_county = yes
+		}
+		trigger_else = {
+			scope:holder.culture = {
+				has_cultural_parameter = tribals_can_into_temples
+			}
+		}
+		building_requirement_nomad = no
+		building_requirement_nomad_holding_in_county = yes
+		building_requirement_herder = no
+		building_requirement_herder_holding_in_county = yes
 	}
 	cost_gold = main_building_tier_1_cost
 	next_building = temple_02
-	
+
 	levy = poor_building_levy_tier_1
 	max_garrison = normal_building_max_garrison_tier_1
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_1
@@ -404,10 +725,17 @@ temple_01 = {
 			}
 			county.holder = { add_prestige = massive_prestige_gain }
 		}
+
 		#Holy Legend Seed drop
 		if = {
 			limit = {
 				county.holder = { has_dlc_feature = legends }
+				county.holder = {
+					NOR = {
+						has_game_rule = historical_legends_only
+						has_personal_legend_seed = holy
+					}
+				}
 			}
 			random = {
 				chance = {
@@ -423,6 +751,7 @@ temple_01 = {
 				}
 				county.holder = {
 					send_interface_toast = {
+						type = msg_legend_seed_created
 						title = holy_seed_toast
 						left_icon = root.barony
 						create_legend_seed = {
@@ -448,7 +777,7 @@ temple_01 = {
 				}
 				province_owner = {
 					save_scope_as = owner_of_province
-					
+
 					scope:owner_of_province = {
 						if = { #Religious liege asked me to build a temple
 							limit = {
@@ -531,7 +860,7 @@ temple_01 = {
 			}
 		}
 	}
-	
+
 	ai_value = {
 		base = 100
 		modifier = {
@@ -555,7 +884,7 @@ temple_01 = {
 
 temple_02 = {
 	construction_time = slow_construction_time
-	
+
 	### GENERIC ###
 	asset = {
 		type = pdxmesh
@@ -766,81 +1095,397 @@ temple_02 = {
 	# 	name = "fp3_building_persian_temple_01_a_01_entity"
 	# 	requires_dlc_flag = legacy_of_persia
 	# 	illustration = @illustration_iranian_zoroastrian
-	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 0 } } ##todo_cd_polish fix 
+	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 0 } } ##todo_cd_polish fix
 	# 	graphical_faiths = { "zoroastrian_gfx" }
 	# 	graphical_cultures = { iranian_building_gfx }
 	# 	graphical_regions = { graphical_mena }
 	# }
 
-	#AGOT Added, Zoroastrian Fire Temple
+	# MPO Tengri
 	asset = {
 		type = entity
-		name = "fp3_building_persian_temple_01_a_01_entity"
-		requires_dlc_flag = legacy_of_persia
-		illustration = @illustration_iranian_zoroastrian
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 0 } } ##todo_cd_polish fix 
-		graphical_faiths = { dawnbringer_gfx }
+		name = "mpo_mongol_temple_01_entity"
+		illustration = @illustration_tengri
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/pagan_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { "tengrism_gfx" }
 	}
-	#AGOT added, Pagan Temple
+
+	#AGOT Added, R'hllor Temple
 	asset = {
 		type = pdxmesh
-		name = "building_western_temple_pagan_01_mesh"
-		illustration = @illustration_northern_pagan
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { old_gods_gfx bearded_god_gfx }
+		name = "agot_temple_rhllor_2_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Faith of the Seven
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_2_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_2_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_2_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_2_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Faith of the Seven
 	asset = {
 		type = pdxmesh
 		name = "building_andal_temple_the_seven_02_mesh"
-		illustration = @illustration_christian
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { faith_of_the_seven_gfx }
-	}
-	#AGOT added, Drowned God
-	asset = {
-		type = pdxmesh
-		name = "building_western_temple_generic_01_mesh"
 		illustration = @illustration_generic_grass
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { drowned_god_gfx }
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Dharmic-Med
 	asset = {
 		type = pdxmesh
-		name = "building_mediterranean_temple_dharmic_01_mesh"
-		illustration = @illustration_weepinglady
+		name = "building_andal_temple_the_seven_02_mesh"
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
-		graphical_faiths = { western_essosi_gfx }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_mediterranean }
 	}
-	#AGOT added, Iberian-Mus
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_02_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Free Cities
 	asset = {
 		type = pdxmesh
 		name = "fp2_building_iberian_mosque_01_mesh"
-		illustration = @illustration_trios
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
-		graphical_faiths = { trios_gfx }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Iberian-Chris
 	asset = {
 		type = pdxmesh
-		name = "fp2_building_iberian_christian_01_mesh"
-		illustration = @illustration_princlyarbiter
+		name = "fp2_building_iberian_mosque_01_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
-		graphical_faiths = { pentoshi_god_gfx }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_mediterranean }
 	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_01_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_01_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_01_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Drowned God
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Old Gods
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Bearded God
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Summer Gods
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_01_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Yi Ti
+	asset = {
+		type = pdxmesh
+		name = "pagoda_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_02_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 1 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Ethiopian-Rock
+	#asset = {
+	#	type = pdxmesh
+	#	name = "ehtiopian_rock_church_01_mesh"
+	#	illustration = @illustration_generic_grass
+	#	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+	#	graphical_faiths = { warlocks_god_gfx }
+	#}
+	#AGOT Added, Ethiopian-Orthodox
+	#asset = {
+	#	type = pdxmesh
+	#	name = "ehtiopian_orthodox_01_mesh"
+	#	illustration = @illustration_generic_grass
+	#	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 1 } }
+	#	graphical_faiths = { memories_god_gfx }
+	#}
 
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
 	can_construct = {
-		culture = {
-			has_innovation = innovation_manorialism
+		trigger_if = {
+			limit = {
+				NOT = {
+					scope:holder.culture = {
+						has_cultural_parameter = temple_next_level
+					}
+				}
+			}
+			scope:holder.culture = {
+				has_innovation = innovation_manorialism
+			}
+		}
+		trigger_else = {
+			scope:holder.culture = {
+				has_cultural_parameter = temple_next_level
+				has_innovation = innovation_city_planning
+			}
 		}
 	}
 	cost_gold = main_building_tier_2_cost
 	next_building = temple_03
-	
+
 	levy = poor_building_levy_tier_3
 	max_garrison = normal_building_max_garrison_tier_3
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_2
@@ -851,7 +1496,7 @@ temple_02 = {
 		stationed_siege_weapon_siege_value_mult = low_maa_siege_value_tier_2
 		travel_danger = -12
 	}
-	
+
 	province_terrain_modifier = {
 		parameter = coastal_holding_bonuses
 		is_coastal = yes
@@ -871,7 +1516,7 @@ temple_02 = {
 	}
 
 	flag = temple
-	
+
 	on_complete = {
 		if = {
 			limit = {
@@ -938,19 +1583,19 @@ temple_02 = {
 			}
 		}
 	}
-	
+
 	ai_value = {
-		base = 6		
+		base = 6
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			free_building_slots >= 1
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			combined_building_level <= 10
 			years_from_game_start >= 1
 		}
@@ -963,7 +1608,7 @@ temple_02 = {
 
 temple_03 = {
 	construction_time = slow_construction_time
-	
+
 	### GENERIC ###
 	asset = {
 		type = pdxmesh
@@ -1174,81 +1819,397 @@ temple_03 = {
 	# 	name = "fp3_building_persian_temple_02_a_01_entity"
 	# 	requires_dlc_flag = legacy_of_persia
 	# 	illustration = @illustration_iranian_zoroastrian
-	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } } ##todo_cd_polish fix 
+	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } } ##todo_cd_polish fix
 	# 	graphical_faiths = { "zoroastrian_gfx" }
 	# 	graphical_cultures = { iranian_building_gfx }
 	# 	graphical_regions = { graphical_mena }
 	# }
 
-	#AGOT Added, Rooloo
+	# MPO Tengri
 	asset = {
 		type = entity
-		name = "fp3_building_persian_temple_02_a_01_entity"
-		requires_dlc_flag = legacy_of_persia
-		illustration = @illustration_iranian_zoroastrian
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } } ##todo_cd_polish fix 
-		graphical_faiths = { dawnbringer_gfx }
+		name = "mpo_mongol_temple_01_entity"
+		illustration = @illustration_tengri
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/pagan_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { "tengrism_gfx" }
 	}
-	#AGOT added, Pagan Temple
+
+	#AGOT Added, R'hllor Temple
 	asset = {
 		type = pdxmesh
-		name = "building_western_temple_pagan_02_mesh"
-		illustration = @illustration_northern_pagan
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { old_gods_gfx bearded_god_gfx }
+		name = "agot_temple_rhllor_3_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Faith of the Seven
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_3_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_3_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_3_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_3_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Faith of the Seven
 	asset = {
 		type = pdxmesh
 		name = "building_andal_temple_the_seven_03_mesh"
-		illustration = @illustration_christian
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { faith_of_the_seven_gfx }
-	}
-	#AGOT added, Drowned God
-	asset = {
-		type = pdxmesh
-		name = "building_western_temple_generic_02_mesh"
 		illustration = @illustration_generic_grass
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { drowned_god_gfx }
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Dharmic-Med
 	asset = {
 		type = pdxmesh
-		name = "building_mediterranean_temple_dharmic_02_mesh"
-		illustration = @illustration_weepinglady
+		name = "building_andal_temple_the_seven_03_mesh"
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
-		graphical_faiths = { western_essosi_gfx }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_mediterranean }
 	}
-	#AGOT added, Iberian-Mus
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_03_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_03_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_03_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Free Cities
 	asset = {
 		type = pdxmesh
 		name = "fp2_building_iberian_mosque_02_mesh"
-		illustration = @illustration_trios
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
-		graphical_faiths = { trios_gfx }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Iberian-Chris
 	asset = {
 		type = pdxmesh
-		name = "fp2_building_iberian_christian_02_mesh"
-		illustration = @illustration_princlyarbiter
+		name = "fp2_building_iberian_mosque_02_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
-		graphical_faiths = { pentoshi_god_gfx }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_mediterranean }
 	}
-	
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_02_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_02_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_02_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Drowned God
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Old Gods
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Bearded God
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Summer Gods
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Yi Ti
+	asset = {
+		type = pdxmesh
+		name = "pagoda_03_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_03_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_03_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_03_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "pagoda_03_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 2 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Ethiopian-Rock
+	#asset = {
+	#	type = pdxmesh
+	#	name = "ehtiopian_rock_church_02_mesh"
+	#	illustration = @illustration_generic_grass
+	#	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+	#	graphical_faiths = { warlocks_god_gfx }
+	#}
+	#AGOT Added, Ethiopian-Orthodox
+	#asset = {
+	#	type = pdxmesh
+	#	name = "ehtiopian_orthodox_02_mesh"
+	#	illustration = @illustration_generic_grass
+	#	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 2 } }
+	#	graphical_faiths = { memories_god_gfx }
+	#}
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
 	can_construct = {
-		culture = {
-			has_innovation = innovation_windmills
+		trigger_if = {
+			limit = {
+				NOT = {
+					scope:holder.culture = {
+						has_cultural_parameter = temple_next_level
+					}
+				}
+			}
+			scope:holder.culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+		trigger_else = {
+			scope:holder.culture = {
+				has_cultural_parameter = temple_next_level
+				has_innovation = innovation_manorialism
+			}
 		}
 	}
 	cost_gold = main_building_tier_3_cost
 	next_building = temple_04
-	
+
 	levy = poor_building_levy_tier_5
 	max_garrison = normal_building_max_garrison_tier_5
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_3
@@ -1278,7 +2239,7 @@ temple_03 = {
 	}
 
 	flag = temple
-	
+
 	on_complete = {
 		if = {
 			limit = {
@@ -1345,9 +2306,9 @@ temple_03 = {
 			}
 		}
 	}
-	
+
 	ai_value = {
-		base = 5		
+		base = 5
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
@@ -1362,7 +2323,7 @@ temple_03 = {
 
 temple_04 = {
 	construction_time = slow_construction_time
-	
+
 	### GENERIC ###
 	asset = {
 		type = pdxmesh
@@ -1572,80 +2533,396 @@ temple_04 = {
 	# 	name = "fp3_building_persian_temple_02_a_01_entity"
 	# 	requires_dlc_flag = legacy_of_persia
 	# 	illustration = @illustration_iranian_zoroastrian
-	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } } ##todo_cd_polish fix 
+	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } } ##todo_cd_polish fix
 	# 	graphical_faiths = { "zoroastrian_gfx" }
 	# 	graphical_cultures = { iranian_building_gfx }
 	# 	graphical_regions = { graphical_mena }
 	# }
 
-	#AGOT Added, Rooloo
-	# asset = {
-	# 	type = entity
-	# 	name = "fp3_building_persian_temple_02_a_01_entity"
-	# 	requires_dlc_flag = legacy_of_persia
-	# 	illustration = @illustration_iranian_zoroastrian
-	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 1 } } ##todo_cd_polish fix 
-	# 	graphical_faiths = { dawnbringer_gfx }
-	# }
-	#AGOT added, Pagan Temples
+	# MPO Tengri
+	asset = {
+		type = entity
+		name = "mpo_mongol_temple_01_entity"
+		illustration = @illustration_tengri
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/pagan_temple" soundparameter = { "Tier" = 0 } }
+		graphical_faiths = { "tengrism_gfx" }
+	}
+
+	#AGOT Added, R'hllor Temple
 	asset = {
 		type = pdxmesh
-		name = "building_western_temple_pagan_02_mesh"
-		illustration = @illustration_northern_pagan
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { old_gods_gfx bearded_god_gfx }
+		name = "agot_temple_rhllor_4_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Faith of the Seven
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_4_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_4_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_4_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "agot_temple_rhllor_4_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/mosque_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { dawnbringer_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Faith of the Seven
 	asset = {
 		type = pdxmesh
 		name = "building_andal_temple_the_seven_03_mesh"
-		illustration = @illustration_christian
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { faith_of_the_seven_gfx }
-	}
-	#AGOT added, Drowned God
-	asset = {
-		type = pdxmesh
-		name = "building_western_temple_generic_02_mesh"
 		illustration = @illustration_generic_grass
-		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 0 } }
-		graphical_faiths = { drowned_god_gfx }
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Dharmic-Med
 	asset = {
 		type = pdxmesh
-		name = "building_mediterranean_temple_dharmic_02_mesh"
-		illustration = @illustration_weepinglady
+		name = "building_andal_temple_the_seven_03_mesh"
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
-		graphical_faiths = { western_essosi_gfx }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_mediterranean }
 	}
-	#AGOT added, Iberian-Mus
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_03_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_03_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_andal_temple_the_seven_03_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { faith_of_the_seven_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Free Cities
 	asset = {
 		type = pdxmesh
 		name = "fp2_building_iberian_mosque_02_mesh"
-		illustration = @illustration_trios
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
-		graphical_faiths = { trios_gfx }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_western }
 	}
-	#AGOT added, Iberian-Chris
 	asset = {
 		type = pdxmesh
-		name = "fp2_building_iberian_christian_02_mesh"
-		illustration = @illustration_princlyarbiter
+		name = "fp2_building_iberian_mosque_02_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
-		graphical_faiths = { pentoshi_god_gfx }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_mediterranean }
 	}
-	
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_02_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_02_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "fp2_building_iberian_mosque_02_mesh"
+		requires_dlc_flag = the_fate_of_iberia
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { free_cities_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Drowned God
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { drowned_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Old Gods
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_western_temple_pagan_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/generic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { old_gods_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Bearded God
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "slavic_temple_01_b_orthodox_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/orthodox_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { bearded_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Summer Gods
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "building_sea_temple_02_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { summer_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Yi Ti
+	asset = {
+		type = pdxmesh
+		name = "giant_wild_goose_pagoda_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_western }
+	}
+	asset = {
+		type = pdxmesh
+		name = "giant_wild_goose_pagoda_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_mediterranean }
+	}
+	asset = {
+		type = pdxmesh
+		name = "giant_wild_goose_pagoda_mesh"
+		illustration = @illustration_generic_arid
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_mena }
+	}
+	asset = {
+		type = pdxmesh
+		name = "giant_wild_goose_pagoda_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_india }
+	}
+	asset = {
+		type = pdxmesh
+		name = "giant_wild_goose_pagoda_mesh"
+		illustration = @illustration_generic_grass
+		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/dharmic_temple" soundparameter = { "Tier" = 3 } }
+		graphical_faiths = { yitish_god_gfx }
+		graphical_regions = { graphical_steppe }
+	}
+	#AGOT Added, Ethiopian-Rock
+	#asset = {
+	#	type = pdxmesh
+	#	name = "ehtiopian_rock_church_02_mesh"
+	#	illustration = @illustration_generic_grass
+	#	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+	#	graphical_faiths = { warlocks_god_gfx }
+	#}
+	#AGOT Added, Ethiopian-Orthodox
+	#asset = {
+	#	type = pdxmesh
+	#	name = "ehtiopian_orthodox_02_mesh"
+	#	illustration = @illustration_generic_grass
+	#	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/Temples/church_temple" soundparameter = { "Tier" = 3 } }
+	#	graphical_faiths = { memories_god_gfx }
+	#}
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
 	can_construct = {
-		culture = {
-			has_innovation = innovation_cranes
+		trigger_if = {
+			limit = {
+				NOT = {
+					scope:holder.culture = {
+						has_cultural_parameter = temple_next_level
+					}
+				}
+			}
+			scope:holder.culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+		trigger_else = {
+			scope:holder.culture = {
+				has_cultural_parameter = temple_next_level
+				has_innovation = innovation_windmills
+			}
 		}
 	}
 	cost_gold = main_building_tier_4_cost
-	
+
 	levy = poor_building_levy_tier_7
 	max_garrison = normal_building_max_garrison_tier_7
 	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_4
@@ -1675,7 +2952,7 @@ temple_04 = {
 	}
 
 	flag = temple
-	
+
 	on_complete = {
 		if = {
 			limit = {
@@ -1728,7 +3005,7 @@ temple_04 = {
 					save_temporary_scope_as = holder_scope
 				}
 				custom_tooltip = zealot_vassal_approves_holding_upgrade
-				
+
 				hidden_effect = {
 					every_vassal = {
 						limit = {
@@ -1743,9 +3020,9 @@ temple_04 = {
 			}
 		}
 	}
-	
+
 	ai_value = {
-		base = 4		
+		base = 4
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
@@ -1779,23 +3056,29 @@ scriptorium_01 = {
 	}
 
 	cost_gold = normal_building_tier_1_cost
-	
+
 	county_holder_character_modifier = {
 		owned_legend_spread_mult = 0.05
 		legitimacy_gain_mult = 0.01
 	}
-	
+
 	character_modifier = {
 		monthly_piety = 0.1
 	}
 	county_modifier = {
 		monthly_county_control_growth_add = 0.1
 	}
-	
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_scriptorium_bonuses
+		development_growth_factor = 0.01
+	}
+
 	next_building = scriptorium_02
 
 	type_icon = "icon_building_library.dds"
-	
+
 	ai_value = {
 		base = 10
 		ai_tier_1_building_modifier = yes
@@ -1852,19 +3135,25 @@ scriptorium_02 = {
 	}
 
 	cost_gold = normal_building_tier_2_cost
-	
+
 	county_holder_character_modifier = {
 		owned_legend_spread_mult = 0.1
 		legitimacy_gain_mult = 0.02
 	}
-	
+
 	character_modifier = {
 		monthly_piety = 0.2
 	}
 	county_modifier = {
 		monthly_county_control_growth_add = 0.2
 	}
-	
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_scriptorium_bonuses
+		development_growth_factor = 0.03
+	}
+
 	next_building = scriptorium_03
 	ai_value = {
 		base = 9
@@ -1893,19 +3182,25 @@ scriptorium_03 = {
 	}
 
 	cost_gold = normal_building_tier_3_cost
-	
+
 	county_holder_character_modifier = {
 		owned_legend_spread_mult = 0.15
 		legitimacy_gain_mult = 0.03
 	}
-	
+
 	character_modifier = {
 		monthly_piety = 0.3
 	}
 	county_modifier = {
 		monthly_county_control_growth_add = 0.3
 	}
-	
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_scriptorium_bonuses
+		development_growth_factor = 0.05
+	}
+
 	next_building = scriptorium_04
 	ai_value = {
 		base = 8
@@ -1934,17 +3229,23 @@ scriptorium_04 = {
 	}
 
 	cost_gold = normal_building_tier_4_cost
-	
+
 	county_holder_character_modifier = {
 		owned_legend_spread_mult = 0.2
 		legitimacy_gain_mult = 0.04
 	}
-	
+
 	character_modifier = {
 		monthly_piety = 0.4
 	}
 	county_modifier = {
 		monthly_county_control_growth_add = 0.4
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_scriptorium_bonuses
+		development_growth_factor = 0.07
 	}
 
 	next_building = scriptorium_05
@@ -1975,17 +3276,23 @@ scriptorium_05 = {
 	}
 
 	cost_gold = normal_building_tier_5_cost
-	
+
 	county_holder_character_modifier = {
 		owned_legend_spread_mult = 0.25
 		legitimacy_gain_mult = 0.05
 	}
-	
+
 	character_modifier = {
 		monthly_piety = 0.5
 	}
 	county_modifier = {
 		monthly_county_control_growth_add = 0.5
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_scriptorium_bonuses
+		development_growth_factor = 0.09
 	}
 
 	next_building = scriptorium_06
@@ -2016,17 +3323,23 @@ scriptorium_06 = {
 	}
 
 	cost_gold = normal_building_tier_6_cost
-	
+
 	county_holder_character_modifier = {
 		owned_legend_spread_mult = 0.3
 		legitimacy_gain_mult = 0.06
 	}
-	
+
 	character_modifier = {
 		monthly_piety = 0.6
 	}
 	county_modifier = {
 		monthly_county_control_growth_add = 0.6
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_scriptorium_bonuses
+		development_growth_factor = 0.11
 	}
 
 	next_building = scriptorium_07
@@ -2057,17 +3370,23 @@ scriptorium_07 = {
 	}
 
 	cost_gold = normal_building_tier_7_cost
-	
+
 	county_holder_character_modifier = {
 		owned_legend_spread_mult = 0.35
 		legitimacy_gain_mult = 0.07
 	}
-	
+
 	character_modifier = {
 		monthly_piety = 0.7
 	}
 	county_modifier = {
 		monthly_county_control_growth_add = 0.7
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_scriptorium_bonuses
+		development_growth_factor = 0.13
 	}
 
 	next_building = scriptorium_08
@@ -2098,17 +3417,23 @@ scriptorium_08 = {
 	}
 
 	cost_gold = normal_building_tier_8_cost
-	
+
 	county_holder_character_modifier = {
 		owned_legend_spread_mult = 0.4
 		legitimacy_gain_mult = 0.08
 	}
-	
+
 	character_modifier = {
 		monthly_piety = 0.8
 	}
 	county_modifier = {
 		monthly_county_control_growth_add = 0.8
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_scriptorium_bonuses
+		development_growth_factor = 0.15
 	}
 
 	ai_value = {
@@ -2134,31 +3459,48 @@ monastic_schools_01 = {
 	}
 
 	can_construct_showing_failures_only = {
-		building_requirement_tribal = no
+		#building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_1_cost
-	
+
 	character_modifier = {
 		monthly_piety = 0.1
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.1		
+		monthly_county_control_growth_add = 0.1
 	}
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_1
 		epidemic_resistance = 4
 	}
-	
+
+	character_culture_modifier = {
+		parameter = monastic_monastery_learning_bonus
+		monthly_learning_lifestyle_xp_gain_mult = 0.1
+	}
+
+	character_culture_modifier = {
+		parameter = monastery_prowess_martial_bonus
+		prowess = 1
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_monastic_school_bonuses
+		levy_size = 0.1
+	}
+
 	next_building = monastic_schools_02
 
 	type_icon = "icon_building_monastic_schools.dds"
-	
+
 	ai_value = {
 		#AGOT Modified, more likely to build monastic schools since they are restricted to specific holding type
 		# base = 10
 		base = 500
 		ai_tier_1_building_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = {
 			add = 500
 			scope:holder = {
@@ -2184,7 +3526,10 @@ monastic_schools_02 = {
 		#has_building_or_higher = temple_01
 		has_building_or_higher = monastery_01
 		culture = {
-			has_innovation = innovation_city_planning
+			OR = {
+				has_innovation = innovation_city_planning
+				has_cultural_parameter = next_level_monasteries
+			}
 		}
 	}
 
@@ -2193,23 +3538,42 @@ monastic_schools_02 = {
 	}
 
 	cost_gold = normal_building_tier_2_cost
-	
+
 	character_modifier = {
 		monthly_piety = 0.2
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.2	
+		monthly_county_control_growth_add = 0.2
 	}
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_2
 		epidemic_resistance = 6
 	}
-	
+
+	character_culture_modifier = {
+		parameter = monastic_monastery_learning_bonus
+		monthly_learning_lifestyle_xp_gain_mult = 0.1
+		learning = 1
+	}
+
+	character_culture_modifier = {
+		parameter = monastery_prowess_martial_bonus
+		prowess = 1
+		martial = 1
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_monastic_school_bonuses
+		levy_size = 0.3
+	}
+
 	next_building = monastic_schools_03
 	ai_value = {
 		base = 9
 		ai_general_building_modifier = yes
 		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = { # Fill all building slots before going for upgrades
 			factor = 0
 			free_building_slots > 0
@@ -2221,11 +3585,29 @@ monastic_schools_03 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		#AGOT Modified, moved to monastery holding
-		#has_building_or_higher = temple_02
-		has_building_or_higher = monastery_02
-		culture = {
-			has_innovation = innovation_manorialism
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_monasteries
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_02
+			has_building_or_higher = monastery_02
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_city_planning
+			}
+			culture = {
+				has_cultural_parameter = next_level_monasteries
+			}
+			has_building_or_higher = temple_01
 		}
 	}
 
@@ -2234,23 +3616,42 @@ monastic_schools_03 = {
 	}
 
 	cost_gold = normal_building_tier_3_cost
-	
+
 	character_modifier = {
 		monthly_piety = 0.3
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.3		
+		monthly_county_control_growth_add = 0.3
 	}
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_3
 		epidemic_resistance = 8
 	}
-	
+
+	character_culture_modifier = {
+		parameter = monastic_monastery_learning_bonus
+		monthly_learning_lifestyle_xp_gain_mult = 0.2
+		learning = 1
+	}
+
+	character_culture_modifier = {
+		parameter = monastery_prowess_martial_bonus
+		prowess = 2
+		martial = 1
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_monastic_school_bonuses
+		levy_size = 0.5
+	}
+
 	next_building = monastic_schools_04
 	ai_value = {
 		base = 8
 		ai_general_building_modifier = yes
 		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = { # Fill all building slots before going for upgrades
 			factor = 0
 			free_building_slots > 0
@@ -2262,11 +3663,31 @@ monastic_schools_04 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		#AGOT Modified, moved to monastery holding
-		#has_building_or_higher = temple_02
-		has_building_or_higher = monastery_02
-		culture = {
-			has_innovation = innovation_manorialism
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_monasteries
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_02
+			has_building_or_higher = monastery_02
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_city_planning
+			}
+			culture = {
+				has_cultural_parameter = next_level_monasteries
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_01
+			has_building_or_higher = monastery_01
 		}
 	}
 
@@ -2275,23 +3696,42 @@ monastic_schools_04 = {
 	}
 
 	cost_gold = normal_building_tier_4_cost
-	
+
 	character_modifier = {
 		monthly_piety = 0.4
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.4		
+		monthly_county_control_growth_add = 0.4
 	}
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_4
 		epidemic_resistance = 10
 	}
-	
+
+	character_culture_modifier = {
+		parameter = monastic_monastery_learning_bonus
+		monthly_learning_lifestyle_xp_gain_mult = 0.2
+		learning = 2
+	}
+
+	character_culture_modifier = {
+		parameter = monastery_prowess_martial_bonus
+		prowess = 2
+		martial = 2
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_monastic_school_bonuses
+		levy_size = 0.7
+	}
+
 	next_building = monastic_schools_05
 	ai_value = {
 		base = 7
 		ai_general_building_modifier = yes
 		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = { # Fill all building slots before going for upgrades
 			factor = 0
 			free_building_slots > 0
@@ -2303,11 +3743,31 @@ monastic_schools_05 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		#AGOT Modified, moved to monastery holding
-		#has_building_or_higher = temple_03
-		has_building_or_higher = monastery_03
-		culture = {
-			has_innovation = innovation_windmills
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_monasteries
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_windmills
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_03
+			has_building_or_higher = monastery_03
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_city_planning
+			}
+			culture = {
+				has_cultural_parameter = next_level_monasteries
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_02
+			has_building_or_higher = monastery_02
 		}
 	}
 
@@ -2316,23 +3776,42 @@ monastic_schools_05 = {
 	}
 
 	cost_gold = normal_building_tier_5_cost
-	
+
 	character_modifier = {
 		monthly_piety = 0.5
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.5	
+		monthly_county_control_growth_add = 0.5
 	}
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_5
 		epidemic_resistance = 12
 	}
-	
+
+	character_culture_modifier = {
+		parameter = monastic_monastery_learning_bonus
+		monthly_learning_lifestyle_xp_gain_mult = 0.3
+		learning = 2
+	}
+
+	character_culture_modifier = {
+		parameter = monastery_prowess_martial_bonus
+		prowess = 3
+		martial = 2
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_monastic_school_bonuses
+		levy_size = 0.9
+	}
+
 	next_building = monastic_schools_06
 	ai_value = {
 		base = 6
 		ai_general_building_modifier = yes
 		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = { # Fill all building slots before going for upgrades
 			factor = 0
 			free_building_slots > 0
@@ -2344,11 +3823,31 @@ monastic_schools_06 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		#AGOT Modified, moved to monastery holding
-		#has_building_or_higher = temple_03
-		has_building_or_higher = monastery_03
-		culture = {
-			has_innovation = innovation_windmills
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_monasteries
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_windmills
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_03
+			has_building_or_higher = monastery_03
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			culture = {
+				has_cultural_parameter = next_level_monasteries
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_02
+			has_building_or_higher = monastery_02
 		}
 	}
 
@@ -2357,23 +3856,42 @@ monastic_schools_06 = {
 	}
 
 	cost_gold = normal_building_tier_6_cost
-	
+
 	character_modifier = {
 		monthly_piety = 0.6
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.6		
+		monthly_county_control_growth_add = 0.6
 	}
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_6
 		epidemic_resistance = 14
 	}
-	
+
+	character_culture_modifier = {
+		parameter = monastic_monastery_learning_bonus
+		monthly_learning_lifestyle_xp_gain_mult = 0.3
+		learning = 3
+	}
+
+	character_culture_modifier = {
+		parameter = monastery_prowess_martial_bonus
+		prowess = 3
+		martial = 3
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_monastic_school_bonuses
+		levy_size = 0.11
+	}
+
 	next_building = monastic_schools_07
 	ai_value = {
 		base = 5
 		ai_general_building_modifier = yes
 		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = { # Fill all building slots before going for upgrades
 			factor = 0
 			free_building_slots > 0
@@ -2385,11 +3903,31 @@ monastic_schools_07 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		#AGOT Modified, moved to monastery holding
-		#has_building_or_higher = temple_04
-		has_building_or_higher = monastery_04
-		culture = {
-			has_innovation = innovation_cranes
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_monasteries
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_cranes
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_04
+			has_building_or_higher = monastery_04
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+			culture = {
+				has_cultural_parameter = next_level_monasteries
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_03
+			has_building_or_higher = monastery_03
 		}
 	}
 
@@ -2398,23 +3936,42 @@ monastic_schools_07 = {
 	}
 
 	cost_gold = normal_building_tier_7_cost
-	
+
 	character_modifier = {
 		monthly_piety = 0.7
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.7	
+		monthly_county_control_growth_add = 0.7
 	}
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_7
 		epidemic_resistance = 16
 	}
-	
+
+	character_culture_modifier = {
+		parameter = monastic_monastery_learning_bonus
+		monthly_learning_lifestyle_xp_gain_mult = 0.4
+		learning = 3
+	}
+
+	character_culture_modifier = {
+		parameter = monastery_prowess_martial_bonus
+		prowess = 4
+		martial = 3
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_monastic_school_bonuses
+		levy_size = 0.13
+	}
+
 	next_building = monastic_schools_08
 	ai_value = {
 		base = 4
 		ai_general_building_modifier = yes
 		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = { # Fill all building slots before going for upgrades
 			factor = 0
 			free_building_slots > 0
@@ -2426,35 +3983,74 @@ monastic_schools_08 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		#AGOT Modified, moved to monastery holding
-		#has_building_or_higher = temple_04
-		has_building_or_higher = monastery_04
-		culture = {
-			has_innovation = innovation_cranes
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_monasteries
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_cranes
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_04
+			has_building_or_higher = monastery_04
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+			culture = {
+				has_cultural_parameter = next_level_monasteries
+			}
+			#AGOT Modified, moved to monastery holding
+			#has_building_or_higher = temple_04
+			has_building_or_higher = monastery_03
 		}
 	}
 
 	can_construct_showing_failures_only = {
 		building_requirement_tribal = no
 	}
-	
+
 	cost_gold = normal_building_tier_8_cost
-	
+
 	character_modifier = {
 		monthly_piety = 0.8
 	}
 	county_modifier = {
-		monthly_county_control_growth_add = 0.8		
+		monthly_county_control_growth_add = 0.8
 	}
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_8
 		epidemic_resistance = 18
 	}
-	
+
+	character_culture_modifier = {
+		parameter = monastic_monastery_learning_bonus
+		monthly_learning_lifestyle_xp_gain_mult = 0.4
+		learning = 4
+	}
+
+	character_culture_modifier = {
+		parameter = monastery_prowess_martial_bonus
+		prowess = 4
+		martial = 4
+	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_monastic_school_bonuses
+		levy_size = 0.15
+	}
+
 	ai_value = {
 		base = 3
 		ai_general_building_modifier = yes
 		ai_economical_building_preference_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = { # Fill all building slots before going for upgrades
 			factor = 0
 			free_building_slots > 0
@@ -2488,7 +4084,7 @@ megalith_01 = {
 	show_disabled = yes
 
 	cost_gold = normal_building_tier_1_cost
-	
+
 	character_modifier = {
 		monthly_piety = poor_building_tax_tier_1
 	}
@@ -2498,14 +4094,15 @@ megalith_01 = {
 	}
 	province_modifier = {
 	}
-	
+
 	next_building = megalith_02
 
 	type_icon = "icon_megalith.dds"
-	
+
 	ai_value = {
 		base = 10
 		ai_tier_1_building_modifier = yes
+		directive_to_build_economy_modifier = yes
 		modifier = {
 			add = 500
 			scope:holder = {
@@ -2545,7 +4142,7 @@ megalith_02 = {
 	}
 
 	cost_gold = normal_building_tier_2_cost
-	
+
 	character_modifier = {
 		monthly_piety = poor_building_tax_tier_2
 	}
@@ -2555,10 +4152,11 @@ megalith_02 = {
 	}
 	province_modifier = {
 	}
-	
+
 	next_building = megalith_03
 	ai_value = {
 		base = 9
+		directive_to_build_economy_modifier = yes
 	}
 }
 
@@ -2587,7 +4185,7 @@ megalith_03 = {
 	}
 
 	cost_gold = normal_building_tier_3_cost
-	
+
 	character_modifier = {
 		monthly_piety = poor_building_tax_tier_3
 	}
@@ -2597,10 +4195,11 @@ megalith_03 = {
 	}
 	province_modifier = {
 	}
-	
+
 	next_building = megalith_04
 	ai_value = {
-		base = 9
+		base = 8
+		directive_to_build_economy_modifier = yes
 	}
 }
 
@@ -2629,7 +4228,7 @@ megalith_04 = {
 	}
 
 	cost_gold = normal_building_tier_4_cost
-	
+
 	character_modifier = {
 		monthly_piety = poor_building_tax_tier_4
 	}
@@ -2640,10 +4239,11 @@ megalith_04 = {
 	}
 	province_modifier = {
 	}
-	
+
 	next_building = megalith_05
 	ai_value = {
-		base = 9
+		base = 7
+		directive_to_build_economy_modifier = yes
 	}
 }
 
@@ -2672,7 +4272,7 @@ megalith_05 = {
 	}
 
 	cost_gold = normal_building_tier_5_cost
-	
+
 	character_modifier = {
 		monthly_piety = poor_building_tax_tier_5
 		monthly_prestige = poor_building_tax_tier_1
@@ -2684,10 +4284,11 @@ megalith_05 = {
 	}
 	province_modifier = {
 	}
-	
+
 	next_building = megalith_06
 	ai_value = {
-		base = 9
+		base = 6
+		directive_to_build_economy_modifier = yes
 	}
 }
 
@@ -2716,7 +4317,7 @@ megalith_06 = {
 	}
 
 	cost_gold = normal_building_tier_5_cost
-	
+
 	character_modifier = {
 		monthly_piety = poor_building_tax_tier_6
 		monthly_prestige = poor_building_tax_tier_2
@@ -2728,10 +4329,11 @@ megalith_06 = {
 	}
 	province_modifier = {
 	}
-	
+
 	next_building = megalith_07
 	ai_value = {
-		base = 9
+		base = 5
+		directive_to_build_economy_modifier = yes
 	}
 }
 
@@ -2760,7 +4362,7 @@ megalith_07 = {
 	}
 
 	cost_gold = normal_building_tier_5_cost
-	
+
 	character_modifier = {
 		monthly_piety = poor_building_tax_tier_7
 		monthly_prestige = poor_building_tax_tier_3
@@ -2772,10 +4374,11 @@ megalith_07 = {
 	}
 	province_modifier = {
 	}
-	
+
 	next_building = megalith_08
 	ai_value = {
-		base = 9
+		base = 4
+		directive_to_build_economy_modifier = yes
 	}
 }
 
@@ -2804,7 +4407,7 @@ megalith_08 = {
 	}
 
 	cost_gold = normal_building_tier_5_cost
-	
+
 	character_modifier = {
 		monthly_piety = poor_building_tax_tier_8
 		monthly_prestige = poor_building_tax_tier_4
@@ -2816,8 +4419,348 @@ megalith_08 = {
 	}
 	province_modifier = {
 	}
-	
+
+	ai_value = {
+		base = 3
+		directive_to_build_economy_modifier = yes
+	}
+}
+
+### Breweries (Monks)
+breweries_01 = {
+	construction_time = standard_construction_time
+
+	#AGOT Disabled
+	# can_construct_potential = {
+	# 	building_breweries_requirement = { NUMBER = 01 }
+	# }
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+
+	effect_desc = brewery_effect_desc
+
+	county_modifier = {
+		county_opinion_add = 5
+		monthly_county_control_growth_add = 0.05
+		development_growth_factor = 0.02
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_1
+	}
+
+	next_building = breweries_02
+
+	type_icon = "icon_building_breweries.dds"
+
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		#AGOT Disabled
+		#modifier = {
+		#	add = 500
+		#	scope:holder = {
+		#		OR = {
+		#			highest_held_title_tier = tier_barony
+		#			government_has_flag = government_is_theocracy
+		#			is_theocratic_lessee = yes
+		#		}
+		#	}
+		#}
+		#modifier = {
+		#	factor = 2
+		#	free_building_slots <= 1
+		#}
+	}
+}
+
+breweries_02 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		culture = { has_innovation = innovation_city_planning }
+		#AGOT Disabled
+		# building_breweries_requirement = { NUMBER = 01 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_2_cost
+
+	effect_desc = brewery_effect_desc
+
+	county_modifier = {
+		county_opinion_add = 10
+		monthly_county_control_growth_add = 0.1
+		development_growth_factor = 0.04
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_2
+	}
+
+	next_building = breweries_03
+
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		#AGOT Disabled
+		#modifier = {
+		#	add = 500
+		#	scope:holder = {
+		#		OR = {
+		#			highest_held_title_tier = tier_barony
+		#			government_has_flag = government_is_theocracy
+		#			is_theocratic_lessee = yes
+		#		}
+		#	}
+		#}
+		#modifier = {
+		#	factor = 2
+		#	free_building_slots <= 1
+		#}
+	}
+}
+
+breweries_03 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		culture = { has_innovation = innovation_manorialism }
+		#AGOT Disabled
+		# building_breweries_requirement = { NUMBER = 02 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_3_cost
+
+	effect_desc = brewery_effect_desc
+
+	county_modifier = {
+		county_opinion_add = 15
+		monthly_county_control_growth_add = 0.15
+		development_growth_factor = 0.06
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_3
+	}
+
+	next_building = breweries_04
+
 	ai_value = {
 		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}
+
+breweries_04 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		culture = { has_innovation = innovation_manorialism }
+		#AGOT Disabled
+		# building_breweries_requirement = { NUMBER = 02 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_4_cost
+
+	effect_desc = brewery_effect_desc
+
+	county_modifier = {
+		county_opinion_add = 20
+		monthly_county_control_growth_add = 0.20
+		development_growth_factor = 0.08
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_4
+	}
+
+	next_building = breweries_05
+
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}
+
+breweries_05 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		culture = { has_innovation = innovation_windmills }
+		#AGOT Disabled
+		# building_breweries_requirement = { NUMBER = 03 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_5_cost
+
+	effect_desc = brewery_effect_desc
+
+	county_modifier = {
+		county_opinion_add = 25
+		monthly_county_control_growth_add = 0.25
+		development_growth_factor = 0.10
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_5
+	}
+
+	next_building = breweries_06
+
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}
+
+breweries_06 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		culture = { has_innovation = innovation_windmills }
+		#AGOT Disabled
+		# building_breweries_requirement = { NUMBER = 03 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_6_cost
+
+	effect_desc = brewery_effect_desc
+
+	county_modifier = {
+		county_opinion_add = 30
+		monthly_county_control_growth_add = 0.30
+		development_growth_factor = 0.12
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_6
+	}
+
+	next_building = breweries_07
+
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}
+
+breweries_07 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		culture = { has_innovation = innovation_cranes }
+		#AGOT Disabled
+		# building_breweries_requirement = { NUMBER = 04 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_7_cost
+
+	effect_desc = brewery_effect_desc
+
+	county_modifier = {
+		county_opinion_add = 35
+		monthly_county_control_growth_add = 0.35
+		development_growth_factor = 0.14
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_7
+	}
+
+	next_building = breweries_08
+
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}
+
+breweries_08 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		culture = { has_innovation = innovation_cranes }
+		#AGOT Disabled
+		# building_breweries_requirement = { NUMBER = 04 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_8_cost
+
+	effect_desc = brewery_effect_desc
+
+	county_modifier = {
+		county_opinion_add = 40
+		monthly_county_control_growth_add = 0.40
+		development_growth_factor = 0.16
+	}
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_8
+	}
+
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
 	}
 }

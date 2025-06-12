@@ -1,0 +1,750 @@
+﻿##########
+# Beyond-the-Wall
+##########
+
+# Hardhome
+agot_hardhome_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_hardhome.dds"
+
+	can_construct_potential = {
+		barony = title:b_hardhome
+	}
+
+	cost_gold = 3000
+
+	next_building = agot_hardhome_02
+
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.1
+		diplomatic_range_mult = 0.2
+		monthly_prestige_gain_mult = 0.1
+		monthly_income = good_building_tax_tier_5
+	}
+
+	county_modifier = {
+		development_growth_factor = 0.2
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_economic
+}
+agot_hardhome_02 = {
+
+	construction_time = very_slow_construction_time
+
+	asset = {
+		type = pdxmesh
+		name = "building_hardhome_stage_2_mesh"
+	}
+
+	cost_gold = 3000
+
+	next_building = agot_hardhome_03
+
+	county_modifier = {
+		tax_mult = -0.35
+		levy_size = -0.1
+	}
+
+	province_modifier = {
+		levy_size = -1.00
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_economic
+}
+agot_hardhome_03 = {
+
+	construction_time = very_slow_construction_time
+
+	asset = {
+		type = pdxmesh
+		name = "Hardhome_Stage_3_mesh"
+	}
+
+	cost_gold = 3000
+
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.1
+		diplomatic_range_mult = 0.2
+		monthly_prestige_gain_mult = 0.1
+		monthly_income = good_building_tax_tier_7
+	}
+
+	county_modifier = {
+		development_growth_factor = 0.2
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_economic
+}
+
+# Fist of the First Men
+agot_ruins_fist_of_the_first_men_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_stonehenge.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "fist_of_the_first_men_ruin_mesh"
+	}
+
+	cost_gold = 500
+
+	province_modifier = {
+		defender_holding_advantage = 2
+	}
+
+	next_building = agot_ruins_fist_of_the_first_men_02
+
+	type = special
+
+	flag = travel_point_of_interest_martial
+}
+agot_ruins_fist_of_the_first_men_02 = {
+	construction_time = very_slow_construction_time
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_battlements
+		}
+	}
+
+	asset = {
+		type = pdxmesh
+		name = "fist_of_the_first_men_wooden_tower_mesh"
+	}
+
+	cost_gold = 500
+
+	province_modifier = {
+		defender_holding_advantage = 4
+		fort_level = 2
+	}
+
+	next_building = agot_ruins_fist_of_the_first_men_03
+
+	type = special
+
+	flag = travel_point_of_interest_martial
+}
+agot_ruins_fist_of_the_first_men_03 = {
+	construction_time = very_slow_construction_time
+
+	asset = {
+		type = pdxmesh
+		name = "fist_of_the_first_men_ringfort_mesh"
+	}
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_hoardings
+		}
+	}
+
+	cost_gold = 500
+
+	province_modifier = {
+		defender_holding_advantage = 6
+		fort_level = 4
+		hostile_raid_time = 0.5
+	}
+
+	next_building = agot_ruins_fist_of_the_first_men_04
+
+	type = special
+
+	flag = travel_point_of_interest_martial
+}
+agot_ruins_fist_of_the_first_men_04 = {
+	construction_time = very_slow_construction_time
+
+	asset = {
+		type = pdxmesh
+		name = "fist_of_the_first_men_final_mesh"
+	}
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_hoardings
+		}
+	}
+
+	cost_gold = 500
+
+	province_modifier = {
+		defender_holding_advantage = 8
+		fort_level = 6
+		hostile_raid_time = 0.5
+		stationed_archers_toughness_add = 10
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_martial
+}
+
+agot_btw_milkwater_cairns_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_graveyard.dds"
+
+	cost_gold = 500
+
+	asset = {
+		type = pdxmesh
+		name = "building_celtic_newgrange_mesh"
+	}
+
+	character_modifier = {
+		monthly_piety = 0.25
+		owned_legend_spread_mult = 0.1
+		prestige_level_impact_mult = 0.1
+		monthly_prestige_gain_mult = 0.1
+	}
+
+	ai_value = {
+		base = 100
+		culture_likely_to_fortify_modifier = yes
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+agot_btw_frostfang_crypts_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_btw_crypt.dds"
+
+	cost_gold = 500
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+	character_modifier = {
+		monthly_piety = 0.25
+		owned_legend_spread_mult = 0.1
+		prestige_level_impact_mult = 0.1
+		monthly_prestige_gain_mult = 0.1
+	}
+
+	ai_value = {
+		base = 100
+		culture_likely_to_fortify_modifier = yes
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+agot_haggons_tower_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_legendary_watchtower.dds"
+
+	cost_gold = 500
+
+	asset = {
+		type = pdxmesh
+		name = "building_celtic_druid_tower_mesh"
+	}
+
+	character_modifier = {
+		monthly_piety = 0.25
+		prowess_per_piety_level = 1
+	}
+
+	ai_value = {
+		base = 100
+		culture_likely_to_fortify_modifier = yes
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+agot_ruddy_hall_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_hill_farms.dds"
+
+	cost_gold = 500
+
+	asset = {
+		type = pdxmesh
+		name = "fp4_legendary_building_norse_meadhall_01_a_mesh"
+	}
+
+	character_modifier = {
+		diplomacy_per_prestige_level = 1
+	}
+
+	county_modifier = {
+		county_opinion_add = 25
+		monthly_county_control_growth_add = 0.25
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_5
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_diplomatic
+}
+
+agot_the_heated_pools_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_lake.dds"
+
+	cost_gold = 500
+
+	county_modifier = {
+		development_growth_factor = 0.1
+		supply_limit = 1000
+		epidemic_resistance = 25
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_economic
+}
+
+agot_cold_cradle_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_altar.dds"
+
+	cost_gold = 500
+
+	is_enabled = {
+		custom_description = {
+			text = agot_holy_site_fallback_trigger
+			scope:holder = {
+				religion = religion:the_others_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+	}
+
+	character_modifier = {
+		the_others_religion_opinion = 10
+		monthly_piety_gain_per_dread_mult = 0.1
+		child_opinion = -25
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+agot_others_arrival_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_skull.dds"
+
+	cost_gold = 500
+
+	is_enabled = {
+		custom_description = {
+			text = agot_holy_site_fallback_trigger
+			scope:holder = {
+				religion = religion:the_others_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+	}
+
+	character_modifier = {
+		movement_speed = 0.1
+		attacker_advantage = 5
+	}
+
+	county_modifier = {
+		supply_limit = 1000
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_martial
+}
+
+##########
+# Thenn
+##########
+# Tun Vunag (Thenn Capital/Great Kilns)
+agot_thenn_great_kilns_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_wind_furnaces.dds"
+
+	cost_gold = 500
+
+	province_modifier = {
+		stationed_maa_damage_mult = high_maa_damage_tier_8
+		stationed_maa_toughness_mult = high_maa_toughness_tier_8
+		monthly_income = good_building_tax_tier_8
+	}
+
+	county_modifier = {
+		levy_reinforcement_rate = normal_levy_reinforcement_rate_tier_8
+		development_growth_factor = 0.05
+	}
+
+	character_modifier = {
+		knight_effectiveness_mult = normal_knight_effectiveness_mult_tier_8
+		men_at_arms_maintenance = -0.15
+		domain_limit = 10
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_economic
+}
+
+# Kelksam (Great Circle)
+agot_thenn_great_circle_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_stonehenge.dds"
+
+	character_modifier = {
+		the_pact_religion_opinion = 10
+		monthly_learning_lifestyle_xp_gain_mult = 0.15
+		levy_reinforcement_rate_same_faith = 0.2
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+# Yaykdeas (Small Circke)
+agot_thenn_small_circle_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_stonehenge.dds"
+
+	character_modifier = {
+		the_pact_religion_opinion = 5
+		monthly_learning_lifestyle_xp_gain_mult = 0.8
+		levy_reinforcement_rate_same_faith = 0.1
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+# Srunmued (Copper Mine)
+agot_srunmued_copper_mines_01 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_structure_mines.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+	can_construct_potential = {
+		culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	cost_gold = expensive_building_tier_3_cost
+
+	province_modifier = {
+		monthly_income = copper_mine_building_tax_tier_1
+	}
+
+	county_modifier = {
+		tax_mult = 0.05
+		development_growth_factor = 0.01
+	}
+
+	next_building = agot_srunmued_copper_mines_02
+
+	ai_value = {
+		base = 100
+	}
+
+	type = special
+}
+
+agot_srunmued_copper_mines_02 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_structure_mines.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+
+	cost_gold = expensive_building_tier_4_cost
+
+	province_modifier = {
+		monthly_income = copper_mine_building_tax_tier_2
+	}
+
+	county_modifier = {
+		tax_mult = 0.1
+		development_growth_factor = 0.02
+	}
+
+	next_building = agot_srunmued_copper_mines_03
+
+	ai_value = {
+		base = 100
+	}
+
+	type = special
+}
+
+agot_srunmued_copper_mines_03 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_structure_mines.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_development_01
+		}
+	}
+
+	cost_gold = expensive_building_tier_5_cost
+
+	province_modifier = {
+		monthly_income = copper_mine_building_tax_tier_3
+	}
+
+	county_modifier = {
+		tax_mult = 0.15
+		development_growth_factor = 0.03
+	}
+
+	next_building = agot_srunmued_copper_mines_04
+
+	ai_value = {
+		base = 100
+	}
+
+	type = special
+}
+
+agot_srunmued_copper_mines_04 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_structure_mines.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+	cost_gold = 750
+
+	province_modifier = {
+		monthly_income = copper_mine_building_tax_tier_4
+	}
+
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.04
+	}
+
+	ai_value = {
+		base = 100
+	}
+
+	type = special
+}
+# Krih (Tin Mine)
+agot_krih_tin_mines_01 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_structure_mines.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+	can_construct_potential = {
+		culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	cost_gold = 100
+
+	province_modifier = {
+		monthly_income = copper_mine_building_tax_tier_1
+	}
+
+	county_modifier = {
+		tax_mult = 0.05
+		development_growth_factor = 0.01
+	}
+
+	next_building = agot_krih_tin_mines_02
+
+	ai_value = {
+		base = 100
+	}
+
+	type = special
+}
+
+agot_krih_tin_mines_02 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_structure_mines.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+	cost_gold = 250
+
+	province_modifier = {
+		monthly_income = copper_mine_building_tax_tier_2
+	}
+
+	county_modifier = {
+		tax_mult = 0.1
+		development_growth_factor = 0.02
+	}
+
+	next_building = agot_krih_tin_mines_03
+
+	ai_value = {
+		base = 100
+	}
+
+	type = special
+}
+
+agot_krih_tin_mines_03 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_structure_mines.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_development_01
+		}
+	}
+
+	cost_gold = 500
+
+	province_modifier = {
+		monthly_income = copper_mine_building_tax_tier_3
+	}
+
+	county_modifier = {
+		tax_mult = 0.15
+		development_growth_factor = 0.03
+	}
+
+	next_building = agot_krih_tin_mines_04
+
+	ai_value = {
+		base = 100
+	}
+
+	type = special
+}
+
+agot_krih_tin_mines_04 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_structure_mines.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_mines_mesh"
+	}
+
+	cost_gold = 750
+
+	province_modifier = {
+		monthly_income = copper_mine_building_tax_tier_4
+	}
+
+	county_modifier = {
+		tax_mult = 0.20
+		development_growth_factor = 0.04
+	}
+
+	ai_value = {
+		base = 100
+	}
+
+	type = special
+}

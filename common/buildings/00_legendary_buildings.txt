@@ -40,7 +40,9 @@ legendary_shrine = {
 	type_icon = "icon_building_legendary_shrine.dds"
 
 	is_enabled = {
-		always = yes
+		#AGOT Modified
+		#always = yes
+		is_county_capital = yes
 	}
 
 	cost = {
@@ -127,7 +129,9 @@ legendary_palace = {
 	type_icon = "icon_building_legendary_palace.dds"
 
 	is_enabled = {
-		always = yes
+		#AGOT Modified
+		#always = yes
+		is_county_capital = yes
 	}
 
 	cost = {
@@ -210,7 +214,9 @@ legendary_statue = {
 	type_icon = "icon_building_legendary_statue.dds"
 
 	is_enabled = {
-		always = yes
+		#AGOT Modified
+		#always = yes
+		is_county_capital = yes
 	}
 
 	cost = {
@@ -282,9 +288,11 @@ legendary_watchtower = {
 			}
 		}
 	}
-
+	
 	is_enabled = {
-		always = yes
+		#AGOT Modified
+		#always = yes
+		is_county_capital = yes
 	}
 
 	cost = {
@@ -376,7 +384,9 @@ legendary_hunting_lodge = {
 	type_icon = "icon_building_legendary_hunting_grounds.dds"
 
 	is_enabled = {
-		always = yes
+		#AGOT Modified
+		#always = yes
+		is_county_capital = yes
 	}
 
 	cost = {

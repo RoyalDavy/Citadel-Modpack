@@ -1,0 +1,22 @@
+﻿# By Robin
+
+on_game_start_after_lobby = {
+	on_actions = {
+		agot_shattered_world
+	}
+}
+
+agot_shattered_world = {
+	trigger = {
+		OR = {
+			has_game_rule = agot_shatter_duchies
+			has_game_rule = agot_shatter_duchies_even
+			has_game_rule = agot_shatter_petty_kingdoms
+			has_game_rule = agot_shatter_kingdoms
+			has_game_rule = agot_shatter_empires
+		}
+	}
+	events = {
+		agot_shattered_world.0001
+	}
+}

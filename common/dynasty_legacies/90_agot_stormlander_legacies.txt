@@ -1,6 +1,6 @@
 ﻿ stormlander_legacy_track = {
 	is_shown = {
-		OR = { 
+		OR = {
 			culture = {
 				OR = {
 					this = culture:stormlander

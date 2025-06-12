@@ -1,0 +1,76 @@
+﻿on_birthday_adulthood = { 
+	on_actions = { # "On_actions" inside on_action are appended
+		on_action_adjust_skills 
+	} 
+}
+
+quarterly_playable_pulse = { 
+	on_actions = { # "On_actions" inside on_action are appended
+		on_action_adjust_skills 
+	} 
+}
+
+random_yearly_everyone_pulse = { 
+	on_actions = { # "On_actions" inside on_action are appended
+		on_action_adjust_skills 
+	} 
+}
+
+### Skill adjustment
+on_action_adjust_skills = {
+	effect = {
+		force_character_skill_recalculation = yes #ensure we use up-to-date values
+		
+		#Something weird is happening with scopes here, so I am just hardcoding them
+		save_scope_as  = adjust_skills_scope
+		### Count number of taken perks for More Lifestyles (vanilla ones are tracked by default)
+		scope:adjust_skills_scope = { get_more_lifestyles_perk_count }
+		
+		### Get Education Level
+		scope:adjust_skills_scope = { get_education_level }
+		
+		### Skill thresholds
+		adjust_skill_threshold = {
+			SKILL = diplomacy
+		}
+		adjust_skill_threshold = {
+			SKILL = martial
+		}
+		adjust_skill_threshold = {
+			SKILL = stewardship
+		}
+		adjust_skill_threshold = {
+			SKILL = intrigue
+		}
+		adjust_skill_threshold = {
+			SKILL = learning
+		}
+		adjust_skill_threshold = {
+			SKILL = prowess
+		}
+		
+		### Adjust Skill Values
+		#force_character_skill_recalculation = yes
+		adjust_skill = {
+			SKILL = diplomacy
+		}
+		adjust_skill = {
+			SKILL = martial
+		}
+		adjust_skill = {
+			SKILL = stewardship
+		}
+		adjust_skill = {
+			SKILL = intrigue
+		}
+		adjust_skill = {
+			SKILL = learning
+		}
+		adjust_skill = {
+			SKILL = prowess
+		}
+		#Update shown values
+		force_character_skill_recalculation = yes
+	}
+} 
+

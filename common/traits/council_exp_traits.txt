@@ -1,0 +1,468 @@
+﻿lifestyle_councillor = {
+	icon = "councillor.dds"
+	
+	category = lifestyle
+	ruler_designer_cost = 20
+	same_opinion = 10
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = lifestyle_councillor }
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = spouse
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = castellan
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = chancellor
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = steward
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = marshal
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = spymaster
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = admiral
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = chaplain
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = kurultai
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = lifestyle_councillor }
+					}
+				}
+				desc = trait_councillor_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lifestyle_councillor
+					OR = {
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = spouse
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = castellan
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = chancellor
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = steward
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = marshal
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = spymaster
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = admiral
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = chaplain
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = kurultai
+							value < 100
+						}
+					}
+				}
+				desc = trait_councillor_3
+			}
+			desc = trait_councillor_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_councillor_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = lifestyle_councillor }
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = spouse
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = castellan
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = chancellor
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = steward
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = marshal
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = spymaster
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = admiral
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = chaplain
+							value < 50
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = kurultai
+							value < 50
+						}
+					}
+				}
+				desc = trait_councillor_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lifestyle_councillor
+					OR = {
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = spouse
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = castellan
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = chancellor
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = steward
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = marshal
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = spymaster
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = admiral
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = chaplain
+							value = 100
+						}
+						has_trait_xp = {
+							trait = lifestyle_councillor
+							track = kurultai
+							value < 100
+						}
+					}
+				}
+				desc = trait_councillor_3_character_desc
+			}
+			desc = trait_councillor_2_character_desc
+		}
+	}
+
+	tracks = {
+		spouse = {
+			25 = {
+				spouse_opinion = 5
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				intrigue = 1
+				learning = 1
+			}
+			50={
+				spouse_opinion = 10
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				intrigue = 1
+				learning = 1
+				monthly_diplomacy_lifestyle_xp_gain_mult = 0.02
+				monthly_martial_lifestyle_xp_gain_mult = 0.02
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.02
+				monthly_intrigue_lifestyle_xp_gain_mult = 0.02
+				monthly_learning_lifestyle_xp_gain_mult = 0.02
+			}
+			100={
+				spouse_opinion = 15
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				intrigue = 1
+				learning = 1
+				monthly_diplomacy_lifestyle_xp_gain_mult = 0.04
+				monthly_martial_lifestyle_xp_gain_mult = 0.04
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.04
+				monthly_intrigue_lifestyle_xp_gain_mult = 0.04
+				monthly_learning_lifestyle_xp_gain_mult = 0.04
+			}
+		}
+		castellan = {
+			25 = {
+				liege_opinion = 5
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				intrigue = 1
+				learning = 1
+			}
+			50={
+				liege_opinion = 5
+				monthly_prestige = 0.2
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				intrigue = 1
+				learning = 1
+				monthly_diplomacy_lifestyle_xp_gain_mult = 0.02
+				monthly_martial_lifestyle_xp_gain_mult = 0.02
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.02
+				monthly_intrigue_lifestyle_xp_gain_mult = 0.02
+				monthly_learning_lifestyle_xp_gain_mult = 0.02
+			}
+			100={
+				liege_opinion = 10
+				monthly_prestige = 0.3
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				intrigue = 1
+				learning = 1
+				monthly_diplomacy_lifestyle_xp_gain_mult = 0.04
+				monthly_martial_lifestyle_xp_gain_mult = 0.04
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.04
+				monthly_intrigue_lifestyle_xp_gain_mult = 0.04
+				monthly_learning_lifestyle_xp_gain_mult = 0.04
+			}
+		}
+		chancellor = {
+			20 = {
+				liege_opinion = 5
+				diplomacy = 2
+			}
+			50={
+				liege_opinion = 5
+				monthly_prestige = 0.2
+				diplomacy = 2
+				monthly_diplomacy_lifestyle_xp_gain_mult = 0.10
+			}
+			100={
+				liege_opinion = 10
+				monthly_prestige = 0.3
+				diplomacy = 4
+				monthly_diplomacy_lifestyle_xp_gain_mult = 0.20
+			}
+		}
+		steward = {
+			20 = {
+				liege_opinion = 5
+				stewardship = 2
+			}
+			50={
+				liege_opinion = 5
+				monthly_prestige = 0.2
+				stewardship = 2
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.10
+			}
+			100={
+				liege_opinion = 10
+				monthly_prestige = 0.3
+				stewardship = 4
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.20
+			}
+		}
+		marshal = {
+			20 = {
+				liege_opinion = 5
+				martial = 2
+			}
+			50={
+				liege_opinion = 5
+				monthly_prestige = 0.2
+				martial = 2
+				monthly_martial_lifestyle_xp_gain_mult = 0.10
+			}
+			100={
+				liege_opinion = 10
+				monthly_prestige = 0.3
+				martial = 4
+				monthly_martial_lifestyle_xp_gain_mult = 0.20
+			}
+		}
+		spymaster = {
+			20 = {
+				liege_opinion = 5
+				intrigue = 2
+			}
+			50={
+				liege_opinion = 5
+				monthly_prestige = 0.2
+				intrigue = 2
+				monthly_intrigue_lifestyle_xp_gain_mult = 0.10
+			}
+			100={
+				liege_opinion = 10
+				monthly_prestige = 0.3
+				intrigue = 4
+				monthly_intrigue_lifestyle_xp_gain_mult = 0.20
+			}
+		}
+		admiral = {
+			20 = {
+				liege_opinion = 5
+				martial = 1
+				stewardship = 1
+			}
+			50={
+				liege_opinion = 5
+				monthly_prestige = 0.2
+				martial = 1
+				stewardship = 1
+				monthly_martial_lifestyle_xp_gain_mult = 0.05
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.05
+			}
+			100={
+				liege_opinion = 10
+				monthly_prestige = 0.3
+				martial = 2
+				stewardship = 2
+				monthly_martial_lifestyle_xp_gain_mult = 0.10
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.10
+			}
+		}
+		chaplain = {
+			20 = {
+				liege_opinion = 5
+				learning = 2
+			}
+			50={
+				liege_opinion = 5
+				monthly_prestige = 0.2
+				learning = 2
+				monthly_learning_lifestyle_xp_gain_mult = 0.10
+			}
+			100={
+				liege_opinion = 10
+				monthly_prestige = 0.3
+				learning = 4
+				monthly_learning_lifestyle_xp_gain_mult = 0.20
+			}
+		}
+		kurultai = {
+			25 = {
+				liege_opinion = 5
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				learning = 1
+			}
+			50={
+				liege_opinion = 5
+				monthly_prestige = 0.2
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				learning = 1
+				monthly_diplomacy_lifestyle_xp_gain_mult = 0.02
+				monthly_martial_lifestyle_xp_gain_mult = 0.02
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.02
+				monthly_learning_lifestyle_xp_gain_mult = 0.02
+			}
+			100={
+				liege_opinion = 10
+				monthly_prestige = 0.3
+				diplomacy = 1
+				martial = 1
+				stewardship = 1
+				learning = 1
+				monthly_diplomacy_lifestyle_xp_gain_mult = 0.04
+				monthly_martial_lifestyle_xp_gain_mult = 0.04
+				monthly_stewardship_lifestyle_xp_gain_mult = 0.04
+				monthly_learning_lifestyle_xp_gain_mult = 0.04
+			}
+		}
+	}	
+}

@@ -1,0 +1,193 @@
+﻿# standard costs
+@maa_buy_cost = 150
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 5.0
+@cultural_maa_extra_ai_score = 80 # Equivalent to having 8 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+
+# Must be synced between files with the values located at "# Provisions Costs #".
+@provisions_cost_infantry_cheap = 3
+@provisions_cost_infantry_moderate = 7
+@provisions_cost_infantry_expensive = 12
+@provisions_cost_infantry_bankrupting = 15
+
+@provisions_cost_cavalry_cheap = 7
+@provisions_cost_cavalry_moderate = 15
+@provisions_cost_cavalry_expensive = 21
+@provisions_cost_cavalry_bankrupting = 30
+
+@provisions_cost_special_cheap = 6
+@provisions_cost_special_moderate = 12
+@provisions_cost_special_expensive = 18
+@provisions_cost_special_bankrupting = 24
+
+#Valyrian Tradition
+slave_legion = {
+	type = skirmishers
+
+	damage = 5
+	toughness = 5
+	pursuit = 5
+	screen = 5
+
+	counters = {
+		light_cavalry = 2
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_slave_legion }
+		NOT = { government_has_flag = government_is_nw }
+	}
+
+	buy_cost = { gold = 10 }
+	low_maintenance_cost = { gold = 0.05 }
+	high_maintenance_cost = { gold = 0.25 }
+	provision_cost = @provisions_cost_infantry_cheap
+
+	stack = 200
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = skirmishers
+
+	terrain_bonus = {
+
+	}
+}
+
+#Volantene Tradition
+tiger_cloaks = {
+	type = pikemen
+
+	damage = 20
+	toughness = 25
+	pursuit = 0
+	screen = 0
+
+	counters = {
+		light_cavalry = 1
+		camel_cavalry = 1
+		heavy_cavalry = 2
+		elephant_cavalry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_tiger_cloaks }
+		NOT = { government_has_flag = government_is_nw }
+	}
+
+	buy_cost = { gold = 70 }
+	low_maintenance_cost = { gold = 0.2 }
+	high_maintenance_cost = { gold = 0.75 }
+	provision_cost = @provisions_cost_infantry_expensive
+
+	stack = 120
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = pikemen
+
+	terrain_bonus = {
+
+	}
+}
+
+#Eastern Valyrian Tradition
+black_wall_chariots = {
+	type = chariot_cavalry
+
+	damage = 75
+	toughness = 30
+	pursuit = 40
+	screen = 30
+
+	counters = {
+		heavy_infantry = 2
+		heavy_cavalry = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_black_wall_chariots }
+		NOT = { government_has_flag = government_is_nw }
+	}
+
+	buy_cost = { gold = 375 }
+	low_maintenance_cost = { gold = 0.75 }
+	high_maintenance_cost = { gold = 2.2 }
+	provision_cost = @provisions_cost_cavalry_bankrupting
+
+	stack = 40
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = skirmishers
+
+	terrain_bonus = {
+
+	}
+}
+
+#Senrillian Tradition
+dragonsworn = {
+	type = heavy_infantry
+
+	damage = 30
+	toughness = 25
+	pursuit = 10
+	screen = 0
+
+	counters = {
+		skirmishers = 1
+		pikemen = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_dragonsworn }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = 90 }
+	low_maintenance_cost = { gold = 0.4 }
+	high_maintenance_cost = { gold = 1.2 }
+	provision_cost = @provisions_cost_infantry_cheap
+
+	stack = 80
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = heavy_infantry
+
+	terrain_bonus = {
+
+	}
+}
+
+#Mantaryan Tradition
+demon_guards = {
+	type = heavy_infantry
+
+	damage = 40
+	toughness = 20
+	pursuit = 0
+	screen = 0
+
+	counters = {
+		skirmishers = 1
+		pikemen = 1
+	}
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_demon_guards }
+		NOT = { government_has_flag = government_is_nw }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	buy_cost = { gold = 90 }
+	low_maintenance_cost = { gold = 0.4 }
+	high_maintenance_cost = { gold = 1.2 }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 80
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = heavy_infantry
+
+	terrain_bonus = {
+
+	}
+}

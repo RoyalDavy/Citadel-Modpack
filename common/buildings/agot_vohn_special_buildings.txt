@@ -1351,8 +1351,6 @@ ub_n_socotra_01 = { #### yes you can still see the skeleton of whose work I was 
 greenblood_01 = {
 	
 	construction_time = very_slow_construction_time
-	
-	type_icon = "icon_building_silkroad.dds" 		
 
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1495,7 +1493,7 @@ mander_01 = {
 	
 }
 portarryan_01 = {
-			
+		
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_building_great_harbor.dds" #TODO
@@ -3031,7 +3029,7 @@ drumtower_01 = {
 	flag = travel_point_of_interest_martial
 }
 redfort_01 = {
-			
+	
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_hermann_castle.dds" 
@@ -3058,7 +3056,7 @@ redfort_01 = {
 	flag = travel_point_of_interest_martial
 }
 ashmark_01 = {
-			
+	
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_marksburg.dds" 
@@ -3111,7 +3109,7 @@ brightwater_01 = {
 	flag = travel_point_of_interest_martial
 }
 starpike_01 = {
-			
+	
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_torre_del_oro.dds" 
@@ -3169,7 +3167,7 @@ greenstone_01 = {
 	flag = travel_point_of_interest_martial
 }
 pinkmaiden_01 = {
-			
+	
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_structure_ark_of_bukhara.dds" 
@@ -3220,7 +3218,7 @@ sharppoint_01 = {
 	flag = travel_point_of_interest_martial
 }
 stokeworth_01 = {
-			
+	
 	construction_time = very_slow_construction_time
 
 	type_icon = "MA_tibetan_secular.dds" 
@@ -3582,7 +3580,7 @@ goldwatch_01 = { # destroyed about six centuries ago
 
 #old oak 
 old_oak_01 = {
-
+	
 	construction_time = very_slow_construction_time
 
 	type_icon = "icon_ub_cesis_castle.dds" #TODO

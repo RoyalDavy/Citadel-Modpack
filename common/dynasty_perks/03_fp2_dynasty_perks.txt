@@ -59,7 +59,7 @@ fp2_urbanism_legacy_3 = { #Replace by > faster and cheaper city development
 		city_holding_build_gold_cost = -0.1
 		city_holding_holding_build_speed = -0.1
 		city_holding_holding_build_gold_cost = -0.1
-		# AGOT Added
+		#AGOT Added
 		republic_government_levy_contribution_add = 0.15 # Moved from republican vassal contract
 		republic_government_tax_contribution_add = 0.15 # Moved from republican vassal contract
 	}

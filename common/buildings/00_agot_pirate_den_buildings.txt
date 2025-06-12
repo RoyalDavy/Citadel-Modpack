@@ -1,5 +1,5 @@
-﻿@holding_illustration_arid = "gfx/interface/illustrations/holding_types/pirate_stepstones.dds"
-@holding_illustration_grass = "gfx/interface/illustrations/holding_types/pirate_stepstones.dds"
+﻿@holding_illustration_arid = "gfx/interface/illustrations/holding_types/tribe_arid.dds"
+@holding_illustration_grass = "gfx/interface/illustrations/holding_types/tribe_grass.dds"
 
 pirate_den_01 = {
 	construction_time = 1095
@@ -18,7 +18,7 @@ pirate_den_01 = {
 		building_requirement_tribal = no
 		barony_cannot_construct_holding = no
 		county.holder = {
-			government_has_flag = agot_government_is_pirate
+			government_has_flag = government_is_pirate
 		}
 	}
 
@@ -33,7 +33,7 @@ pirate_den_01 = {
 		}
 	}
 
-	
+
 	next_building = pirate_den_02
 
 	cost_gold = main_building_tier_1_cost
@@ -111,7 +111,7 @@ pirate_den_02 = {
 		custom_tooltip = {
 			text = "REQUIRES_PIRATE_GOVT"
 			county.holder = {
-				government_has_flag = agot_government_is_pirate
+				government_has_flag = government_is_pirate
 			}
 		}
 	}
@@ -156,7 +156,7 @@ pirate_den_02 = {
 		is_coastal = yes
 		defender_holding_advantage = 2
 	}
-	
+
 	type_icon = "icon_building_military_camps.dds"
 
 	ai_value = {
@@ -202,7 +202,7 @@ pirate_den_03 = {
 		custom_tooltip = {
 			text = "REQUIRES_PIRATE_GOVT"
 			county.holder = {
-				government_has_flag = agot_government_is_pirate
+				government_has_flag = government_is_pirate
 			}
 		}
 	}

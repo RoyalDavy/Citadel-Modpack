@@ -1,0 +1,189 @@
+on_war_started = {
+	on_actions = {
+		fow_on_war_started
+	}
+}
+
+fow_on_war_started = {
+	trigger = {
+	}
+	effect = {
+		scope:attacker = {
+			if = {
+				limit = {
+					any_vassal_or_below = { has_trait = bannerlord }
+				}
+				every_vassal_or_below = {
+					if = {
+						limit = {
+							has_trait_xp = {
+								trait = bannerlord
+								value >= 100
+							}
+						}
+						add_character_modifier = {
+							modifier = bannerlord_modifier_3
+							days = 120
+						}
+						
+					}
+					else_if = {
+						limit = {
+							has_trait_xp = {
+								trait = bannerlord
+								value >= 66
+							}
+						}
+						add_character_modifier = {
+							modifier = bannerlord_modifier_2
+							days = 120
+						}
+					}
+					else_if = {
+						limit = {
+							has_trait_xp = {
+								trait = bannerlord
+								value >= 33
+							}
+						}
+						add_character_modifier = {
+							modifier = bannerlord_modifier_1
+							days = 120
+						}
+					}
+					else_if = {
+						limit = {
+							has_trait_xp = {
+								trait = bannerlord
+								value >= 0
+							}
+						}
+						add_character_modifier = {
+							modifier = bannerlord_modifier
+							days = 120
+						}
+					}
+				}
+				if = { 
+					limit = { has_trait = bannerlord }
+					if = {
+						limit = {
+							has_trait_xp = {
+								trait = bannerlord
+								value >= 100
+							}
+						}
+						add_character_modifier = {
+							modifier = bannerlord_modifier_3
+							days = 120
+						}
+						
+					}
+					else_if = {
+						limit = {
+							has_trait_xp = {
+								trait = bannerlord
+								value >= 66
+							}
+						}
+						add_character_modifier = {
+							modifier = bannerlord_modifier_2
+							days = 120
+						}
+					}
+					else_if = {
+						limit = {
+							has_trait_xp = {
+								trait = bannerlord
+								value >= 33
+							}
+						}
+						add_character_modifier = {
+							modifier = bannerlord_modifier_1
+							days = 120
+						}
+					}
+					else_if = {
+						limit = {
+							has_trait_xp = {
+								trait = bannerlord
+								value >= 0
+							}
+						}
+						add_character_modifier = {
+							modifier = bannerlord_modifier
+							days = 120
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+on_combat_unit_join_side = {
+	on_actions = {
+		fow_savior
+	}
+}
+
+fow_savior = {
+    trigger = {
+    }
+
+    effect = {
+        scope:army.army_commander = {
+	        if = {
+	        	limit = { has_trait = military_savior }
+	        	if = {
+	                limit = {
+	                    has_trait_xp = {
+	                        trait = military_savior
+	                        value >= 100
+	                    }
+	                }
+	                add_character_modifier = {
+	                    modifier = fow_savior_modifier_3
+	                    days = 10
+	                }  
+            	}
+	            else_if = {
+	                limit = {
+	                    has_trait_xp = {
+	                        trait = military_savior
+	                        value >= 66
+	                    }
+	                }
+	                add_character_modifier = {
+	                    modifier = fow_savior_modifier_2
+	                    days = 10
+	                }
+	            }
+	            else_if = {
+	                limit = {
+	                    has_trait_xp = {
+	                        trait = military_savior
+	                        value >= 33
+	                    }
+	                }
+	                add_character_modifier = {
+	                    modifier = fow_savior_modifier_1
+	                    days = 10
+	                }
+	            }
+	            else_if = {
+	                limit = {
+	                    has_trait_xp = {
+	                        trait = military_savior
+	                        value >= 0
+	                    }
+	                }
+	                add_character_modifier = {
+	                    modifier = fow_savior_modifier
+	                    days = 10
+	                }
+	            }
+	        }
+        }
+    }
+}

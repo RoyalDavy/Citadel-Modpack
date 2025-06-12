@@ -1,0 +1,98 @@
+﻿# An artifact has changed ownership
+# root = the artifact
+# scope:owner = the person who now holds the artifact
+# scope:old_owner = the person who used to hold the artifact
+on_artifact_changed_owner = {
+	on_actions = {
+		agot_blackfyre_bastard_formation_on_action
+	}
+}
+
+agot_blackfyre_bastard_formation_on_action = {
+	trigger = {
+		NOT = {
+			exists = house:house_Blackfyre.house_founder
+		}
+		has_artifact_modifier = vs_blackfyre_modifier
+		scope:owner = {
+			house ?= dynasty:dynn_Targaryen.dynasty_founder.house
+			has_trait = bastard
+			age >= 12
+		}
+	}
+	effect = {
+		scope:owner = {
+			trigger_event = { id = agot_birth_events.0101 days = 1 }
+		}
+	}
+}
+
+agot_visit_house_of_baw = {
+	effect = {
+		save_scope_as = face_to_add
+		if = {
+			limit = {
+				any_owned_story = {
+					story_type = story_wear_face
+					has_variable = old_face
+					save_temporary_scope_as = story
+				}
+			}
+
+			global_var:hall_of_faces = {
+				title_province = {
+					add_to_variable_list = {
+						name = faces
+						target = scope:story.var:old_face
+					}
+				}
+			}
+
+			death = {
+				death_reason = death_house_of_baw
+			}
+			#only a player can take a new face, we made them unprunable already
+		}
+		else = { # We have not taken a new face, we can add this one easy
+			global_var:hall_of_faces = {
+				title_province = {
+					add_to_variable_list = {
+						name = faces
+						target = scope:face_to_add
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						is_ai = no
+
+						global_var:hall_of_faces = {
+							title_province = {
+								any_in_list = {
+									variable = faces
+									count < 30
+								}
+							}
+						}
+					}
+				}
+
+				death = {
+					death_reason = death_house_of_baw
+				}
+				trigger_event = {
+					id = agot_faceless_decision.9001
+					days = 1
+				}
+			}
+			else = {
+				death = {
+					death_reason = death_house_of_baw
+				}
+			}
+		}
+
+	}
+}

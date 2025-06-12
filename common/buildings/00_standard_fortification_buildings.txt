@@ -1117,6 +1117,13 @@ watchtowers_01 = {
 		stationed_light_cavalry_toughness_mult = low_maa_toughness_tier_1
 		travel_danger = -1
 	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_watchtower_bonuses
+		owned_legend_spread_mult = 0.05
+		legitimacy_gain_mult = 0.01
+	}
 	
 	next_building = watchtowers_02
 
@@ -1197,6 +1204,13 @@ watchtowers_02 = {
 	county_modifier = {
 		hostile_raid_time = 0.1
 	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_watchtower_bonuses
+		owned_legend_spread_mult = 0.1
+		legitimacy_gain_mult = 0.02
+	}
 	
 	next_building = watchtowers_03
 	
@@ -1272,6 +1286,13 @@ watchtowers_03 = {
 	county_modifier = {
 		hostile_raid_time = 0.1
 	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_watchtower_bonuses
+		owned_legend_spread_mult = 0.15
+		legitimacy_gain_mult = 0.03
+	}
 	
 	next_building = watchtowers_04
 	
@@ -1343,6 +1364,13 @@ watchtowers_04 = {
 	
 	county_modifier = {
 		hostile_raid_time = 0.1
+	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_watchtower_bonuses
+		owned_legend_spread_mult = 0.2
+		legitimacy_gain_mult = 0.04
 	}
 	
 	next_building = watchtowers_05
@@ -1416,6 +1444,13 @@ watchtowers_05 = {
 	
 	county_modifier = {
 		hostile_raid_time = 0.15	
+	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_watchtower_bonuses
+		owned_legend_spread_mult = 0.25
+		legitimacy_gain_mult = 0.05
 	}
 	
 	next_building = watchtowers_06
@@ -1491,6 +1526,13 @@ watchtowers_06 = {
 		hostile_raid_time = 0.15
 		supply_limit_mult = 0.05		
 	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_watchtower_bonuses
+		owned_legend_spread_mult = 0.30
+		legitimacy_gain_mult = 0.06
+	}
 	
 	next_building = watchtowers_07
 	
@@ -1565,6 +1607,13 @@ watchtowers_07 = {
 		hostile_raid_time = 0.15
 		supply_limit_mult = 0.05		
 	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_watchtower_bonuses
+		owned_legend_spread_mult = 0.35
+		legitimacy_gain_mult = 0.07
+	}
 	
 	next_building = watchtowers_08
 	
@@ -1638,6 +1687,13 @@ watchtowers_08 = {
 	county_modifier = {
 		hostile_raid_time = 0.2
 		supply_limit_mult = 0.05	
+	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_watchtower_bonuses
+		owned_legend_spread_mult = 0.40
+		legitimacy_gain_mult = 0.08
 	}
 	
 	ai_value = {

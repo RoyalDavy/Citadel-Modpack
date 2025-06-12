@@ -42,12 +42,25 @@ agot_triarchy_council_01 = {
 
 	can_construct_potential = {
 		building_requirement_tribal = no
-		scope:holder = { has_primary_title = title:e_three_daughters }
+		scope:holder = { capital_province.barony = title:b_adahurys }
+		OR = {
+			scope:holder = { has_primary_title = title:e_three_daughters }
+			AND = {
+				exists = global_var:three_daughters_confederation
+				scope:holder = { is_member_of_confederation = global_var:three_daughters_confederation }
+			}
+		}
 	}
 
 	is_enabled = {
-		scope:holder = { has_primary_title = title:e_three_daughters }
 		scope:holder = { capital_province.barony = title:b_adahurys }
+		OR = {
+			scope:holder = { has_primary_title = title:e_three_daughters }
+			AND = {
+				exists = global_var:three_daughters_confederation
+				scope:holder = { is_member_of_confederation = global_var:three_daughters_confederation }
+			}
+		}
 	}
 	asset = {
 		type = pdxmesh
@@ -126,12 +139,25 @@ agot_ruins_triarchy_council_02 = {
 
 	can_construct_potential = {
 		building_requirement_tribal = no
-		scope:holder = { has_primary_title = title:e_three_daughters }
+		scope:holder = { capital_province.barony = title:b_adahurys }
+		OR = {
+			scope:holder = { has_primary_title = title:e_three_daughters }
+			AND = {
+				exists = global_var:three_daughters_confederation
+				scope:holder = { is_member_of_confederation = global_var:three_daughters_confederation }
+			}
+		}
 	}
 
 	is_enabled = {
-		scope:holder = { has_primary_title = title:e_three_daughters }
-		scope:holder = { capital_province.barony ?= title:b_adahurys }
+		scope:holder = { capital_province.barony = title:b_adahurys }
+		OR = {
+			scope:holder = { has_primary_title = title:e_three_daughters }
+			AND = {
+				exists = global_var:three_daughters_confederation
+				scope:holder = { is_member_of_confederation = global_var:three_daughters_confederation }
+			}
+		}
 	}
 
 	asset = {
@@ -169,7 +195,14 @@ agot_monument_of_borderland_01 = {
 
 	can_construct_potential = {
 		building_requirement_tribal = no
-		scope:holder = { has_primary_title = title:e_three_daughters }
+		scope:holder = { capital_province.barony = title:b_adahurys }
+		OR = {
+			scope:holder = { has_primary_title = title:e_three_daughters }
+			AND = {
+				exists = global_var:three_daughters_confederation
+				scope:holder = { is_member_of_confederation = global_var:three_daughters_confederation }
+			}
+		}
 	}
 
 	is_enabled = {
@@ -1046,7 +1079,9 @@ agot_magister_harbor_01 = {
 	}
 
 	is_enabled = {
-		scope:holder = { has_primary_title = title:c_artisanal_way }
+		NOT = {
+			scope:holder = { has_primary_title = title:k_pentos }
+		}
 	}
 
 	show_disabled = yes
@@ -1167,7 +1202,7 @@ agot_hugor_hill_01 = {
 			text = holy_site_faith_of_the_seven_trigger
 			OR = {
 				scope:holder = {
-					religion = religion:faith_of_the_seven_religion
+					religion = religion:the_seven_religion
 				}
 				custom_description = {
 					text = holy_site_building_trigger
@@ -1181,7 +1216,7 @@ agot_hugor_hill_01 = {
 
 	character_modifier = {
 		monthly_piety = 0.5
-		faith_of_the_seven_religion_opinion = 10
+		the_seven_religion_opinion = 10
 		monthly_piety_gain_per_knight_mult = 0.03
 		martial_per_piety_level = 2
 		legitimacy_gain_mult = 0.05
@@ -1198,4 +1233,429 @@ agot_hugor_hill_01 = {
 	type = special
 
 	flag = travel_point_of_interest_religious
+}
+
+##########
+# Braavos
+##########
+
+# Sealord's Palace
+agot_sealords_palace_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_doges_palace.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		scope:holder = { has_title =  title:k_braavos }
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = agot_braavos_trigger
+			scope:holder = {
+				OR = {
+					has_title = title:k_braavos
+					any_liege_or_above = {
+						has_title = title:k_braavos
+					}
+				}
+			}
+		}
+	}
+
+	cost_gold = 500
+
+	character_modifier = {
+		court_grandeur_baseline_add = 10
+		legitimacy_gain_mult = 0.15
+		monthly_prestige_gain_mult = 0.1
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_economic
+}
+
+# Iron Bank
+agot_iron_bank_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_tower_of_london.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		scope:holder = { has_title =  title:k_braavos }
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = agot_braavos_trigger
+			scope:holder = {
+				OR = {
+					has_title = title:k_braavos
+					any_liege_or_above = {
+						has_title = title:k_braavos
+					}
+				}
+			}
+		}
+	}
+
+	cost_gold = 1000
+
+	county_holder_character_modifier = {
+		independent_ruler_opinion = -10
+		monthly_income_mult = 0.15
+	}
+
+	county_modifier = {
+		development_growth_factor = 0.25
+	}
+
+	province_modifier = {
+		tax_mult = 0.25
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_economic
+}
+
+# Isle of the Gods
+agot_isle_of_the_gods_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_soltaniyeh.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		scope:holder = { has_title =  title:k_braavos }
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = agot_braavos_trigger
+			scope:holder = {
+				OR = {
+					has_title = title:k_braavos
+					any_liege_or_above = {
+						has_title = title:k_braavos
+					}
+				}
+			}
+		}
+	}
+
+	cost_gold = 500
+
+	county_holder_character_modifier = {
+		different_faith_opinion = 5
+		faith_conversion_piety_cost_mult = -0.25
+	}
+
+	character_modifier = {
+		different_faith_opinion = 5
+		faith_conversion_piety_cost_mult = -0.25
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+# The Arsenal
+agot_arsenal_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_watermills.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		scope:holder = { has_title =  title:k_braavos }
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = agot_braavos_trigger
+			scope:holder = {
+				OR = {
+					has_title = title:k_braavos
+					any_liege_or_above = {
+						has_title = title:k_braavos
+					}
+				}
+			}
+		}
+	}
+
+	cost_gold = 750
+
+	county_holder_character_modifier = {
+		embarkation_cost_mult = -0.5
+		naval_movement_speed_mult = 0.5
+	}
+
+	character_modifier = {
+		embarkation_cost_mult = -0.5
+		naval_movement_speed_mult = 0.5
+	}
+
+	province_modifier = {
+		stationed_maa_siege_value_add = 5
+		stationed_maa_damage_mult = 1.50
+		stationed_maa_pursuit_mult = 1.50
+		stationed_maa_screen_mult = 1.50
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_martial
+}
+
+# The Titan of Braavos
+agot_titan_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_lighthouse.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		scope:holder = { has_title =  title:k_braavos }
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = agot_braavos_trigger
+			scope:holder = {
+				OR = {
+					has_title = title:k_braavos
+					any_liege_or_above = {
+						has_title = title:k_braavos
+					}
+				}
+			}
+		}
+	}
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_titan_of_braavos_mesh"
+	}
+
+	cost_gold = 1500
+
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+		diplomatic_range_mult = 0.25
+	}
+
+	province_modifier = {
+		fort_level = 5
+		defender_holding_advantage = 10
+		stationed_archers_damage_mult = 0.15
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_martial
+}
+
+#Palace of Truth
+agot_palace_of_truth_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_grand_library_of_baghdad.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		scope:holder = { has_title =  title:k_braavos }
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = agot_braavos_trigger
+			scope:holder = {
+				OR = {
+					has_title = title:k_braavos
+					any_liege_or_above = {
+						has_title = title:k_braavos
+					}
+				}
+			}
+		}
+	}
+
+	character_modifier = {
+		legitimacy_loss_mult = -0.1
+		stewardship_per_stress_level = 1
+		vassal_tax_mult = 0.1
+	}
+
+	cost_gold = 500
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_diplomatic
+}
+
+#Drowned Town
+agot_drowned_town_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_grand_library_of_baghdad.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		scope:holder = { has_title =  title:k_braavos }
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = agot_braavos_trigger
+			scope:holder = {
+				OR = {
+					has_title = title:k_braavos
+					any_liege_or_above = {
+						has_title = title:k_braavos
+					}
+				}
+			}
+		}
+	}
+
+	province_modifier = {
+		hostile_raid_time = 0.5
+	}
+
+	county_modifier = {
+		monthly_county_control_decline_factor = 0.1
+	}
+
+	character_modifier = {
+		max_personal_schemes_add = 2
+	}
+
+	county_holder_character_modifier = {
+		county_opinion_add = -10
+	}
+
+	cost_gold = 500
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_economic
+}
+
+#Sweetwater Font
+agot_sweetwater_font_01 = {
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_grand_library_of_baghdad.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		scope:holder = { has_title =  title:k_braavos }
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = agot_braavos_trigger
+			scope:holder = {
+				OR = {
+					has_title = title:k_braavos
+					any_liege_or_above = {
+						has_title = title:k_braavos
+					}
+				}
+			}
+		}
+	}
+
+	province_modifier = {
+		supply_limit_mult = 0.5
+		stationed_maa_toughness_add = 10
+	}
+
+	character_modifier = {
+		supply_capacity_mult = 0.5
+	}
+
+	cost_gold = 500
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_martial
 }

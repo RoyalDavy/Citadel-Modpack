@@ -1,8 +1,5 @@
 ﻿@holding_illustration_arid = "gfx/interface/illustrations/holding_types/tribe_arid.dds"
 @holding_illustration_grass = "gfx/interface/illustrations/holding_types/tribe_grass.dds"
-@holding_illustration_igloo = "gfx/interface/illustrations/holding_types/tribe_frozen.dds"
-@holding_illustration_mountain = "gfx/interface/illustrations/holding_types/tribe_mountain.dds"
-@holding_illustration_thenn = "gfx/interface/illustrations/holding_types/tribe_thenn.dds"
 
 # Tribal Hold
 tribe_01 = {
@@ -23,7 +20,7 @@ tribe_01 = {
 			northern_tribal_igloos_mesh
 		}
 		graphical_cultures = { igloos_building_gfx }
-		illustration = @holding_illustration_igloo
+		illustration = @holding_illustration_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/tribal_city" soundparameter = { "Tier" = 0 } }
 	}
 	#AGOT Added, Forest Wildlings
@@ -43,7 +40,7 @@ tribe_01 = {
 			thule_tribal_mesh
 		}
 		graphical_cultures = { rough_building_gfx }
-		illustration = @holding_illustration_mountain
+		illustration = @holding_illustration_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/tribal_city" soundparameter = { "Tier" = 0 } }
 	}
 	#AGOT Added, Thenn
@@ -54,7 +51,7 @@ tribe_01 = {
 		}
 		requires_dlc_flag = the_northern_lords
 		graphical_cultures = { thenn_building_gfx }
-		illustration = @holding_illustration_thenn
+		illustration = @holding_illustration_grass
 	 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/tribal_city" soundparameter = { "Tier" = 0 } }
 	}
 	#AGOT Disabled
@@ -114,7 +111,7 @@ tribe_01 = {
 	
 	cost_prestige = expensive_building_tier_3_cost
 	cost_gold = expensive_building_tier_1_cost
-	# AGOT Disabled - Vanilla bug -> Duplicate
+	#AGOT Disabled - Vanilla bug -> Duplicate
 	# next_building = tribe_02
 	
 	levy = normal_building_levy_tier_3
@@ -139,7 +136,18 @@ tribe_01 = {
 		is_coastal = yes
 		defender_holding_advantage = 2
 	}
-	#AGOT ADDED - Vanilla bug
+
+	province_culture_modifier = {
+		parameter = tribal_holding_stationed_bonus
+		stationed_maa_damage_mult = normal_maa_damage_tier_1
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
+	}
+	
+	character_modifier = {
+		county_fertility_growth_mult = 0.35
+	}
+	
+	#AGOT Added - Vanilla bug
 	flag = tribe
 	
 	next_building = tribe_02
@@ -170,7 +178,7 @@ tribe_02 = {
 			northern_tribal_igloos_mesh
 		}
 		graphical_cultures = { igloos_building_gfx }
-		illustration = @holding_illustration_igloo
+		illustration = @holding_illustration_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/tribal_city" soundparameter = { "Tier" = 0 } }
 	}
 	#AGOT Added, Forest Wildlings
@@ -190,7 +198,7 @@ tribe_02 = {
 			thule_tribal_mesh
 		}
 		graphical_cultures = { rough_building_gfx }
-		illustration = @holding_illustration_mountain
+		illustration = @holding_illustration_grass
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/tribal_city" soundparameter = { "Tier" = 0 } }
 	}
 
@@ -202,7 +210,7 @@ tribe_02 = {
 		}
 		requires_dlc_flag = the_northern_lords
 		graphical_cultures = { thenn_building_gfx }
-		illustration = @holding_illustration_thenn
+		illustration = @holding_illustration_grass
 	 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/tribal_city" soundparameter = { "Tier" = 0 } }
 	}
 
@@ -253,7 +261,7 @@ tribe_02 = {
 	# 	illustration = @holding_illustration_grass
 	# 	soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/tribal_city" soundparameter = { "Tier" = 0 } }
 	# }
-	#AGOT ADDED - Vanilla bug
+	#AGOT Added - Vanilla bug
 	flag = tribe	
 
 	is_enabled = {
@@ -262,8 +270,11 @@ tribe_02 = {
 	can_construct_potential = {
 	}
 	can_construct_showing_failures_only = {
-		scope:holder = {
-			culture = { has_innovation = innovation_plenary_assemblies }
+		OR = {
+			scope:holder = {
+				culture = { has_innovation = innovation_plenary_assemblies }
+			}
+			mpo_permafrost_building_trigger = yes
 		}
 	}
 	
@@ -291,6 +302,16 @@ tribe_02 = {
 		parameter = coastal_holdings_give_defensive_bonus
 		is_coastal = yes
 		defender_holding_advantage = 3
+	}
+
+	province_culture_modifier = {
+		parameter = tribal_holding_stationed_bonus
+		stationed_maa_damage_mult = normal_maa_damage_tier_2
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
+	}
+	
+	character_modifier = {
+		county_fertility_growth_mult = 0.35
 	}
 	
 	ai_value = {
@@ -320,6 +341,12 @@ longhouses_01 = {
 	county_modifier = {
 		monthly_county_control_growth_add = 0.2
 	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_gathering_hall_bonuses
+		development_growth = normal_building_development_growth_tier_1
+	}
 	
 	next_building = longhouses_02
 
@@ -328,6 +355,7 @@ longhouses_01 = {
 	ai_value = {
 		base = 1
 		ai_tier_1_building_modifier = yes
+		directive_to_build_military_modifier = yes
 	}
 }
 
@@ -342,9 +370,12 @@ longhouses_02 = {
 		has_building_or_higher = tribe_01
 	}
 	can_construct_showing_failures_only = {
-		scope:holder = {
-			culture = { has_innovation = innovation_barracks }
-		}
+		OR = {
+			mpo_permafrost_building_trigger = yes
+			scope:holder = {
+				culture = { has_innovation = innovation_barracks }
+			}
+		}		
 	}
 	
 	cost_prestige = expensive_building_tier_2_cost
@@ -358,9 +389,16 @@ longhouses_02 = {
 	county_modifier = {
 		monthly_county_control_growth_add = 0.4
 	}
+
+	#AGOT Added
+	county_culture_modifier = {
+		parameter = better_gathering_hall_bonuses
+		development_growth = normal_building_development_growth_tier_2
+	}
 	
 	ai_value = {
 		base = 1
+		directive_to_build_military_modifier = yes
 	}
 }
 
@@ -395,6 +433,12 @@ war_camps_01 = {
 		stationed_archer_cavalry_damage_mult = high_maa_damage_tier_1
 		stationed_archer_cavalry_toughness_mult = normal_maa_toughness_tier_1
 	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_war_camp_bonuses
+		army_maintenance_mult = -0.05
+	}
 	
 	next_building = war_camps_02
 
@@ -403,6 +447,7 @@ war_camps_01 = {
 	ai_value = {
 		base = 1
 		ai_tier_1_building_modifier = yes
+		directive_to_build_military_modifier = yes
 	}
 }
 
@@ -417,8 +462,11 @@ war_camps_02 = {
 		has_building_or_higher = tribe_01
 	}
 	can_construct_showing_failures_only = {
-		scope:holder = {
-			culture = { has_innovation = innovation_barracks }
+		OR = {
+			mpo_permafrost_building_trigger = yes
+			scope:holder = {
+				culture = { has_innovation = innovation_barracks }
+			}
 		}
 	}	
 	
@@ -440,9 +488,21 @@ war_camps_02 = {
 		stationed_archer_cavalry_damage_mult = high_maa_damage_tier_2
 		stationed_archer_cavalry_toughness_mult = normal_maa_toughness_tier_2
 	}
+
+	character_culture_modifier = {
+		parameter = strength_in_numbers_maa_limit_bonus 
+		men_at_arms_limit = 1
+	}
+
+	#AGOT Added
+	character_culture_modifier = {
+		parameter = better_war_camp_bonuses
+		army_maintenance_mult = -0.1
+	}
 	
 	ai_value = {
 		base = 1
+		directive_to_build_military_modifier = yes
 	}
 }
 
@@ -452,12 +512,12 @@ palisades_01 = {
 	construction_time = standard_construction_time
 
 	is_enabled = {
-		# AGOT Modified
+		#AGOT Modified
 		# building_requirement_tribal = yes
 		OR = {
 			building_requirement_tribal = yes
 			scope:holder = {
-				government_has_flag = agot_government_is_pirate
+				government_has_flag = government_is_pirate
 			}
 		}
 	}
@@ -494,6 +554,7 @@ palisades_01 = {
 	ai_value = {
 		base = 1
 		ai_tier_1_building_modifier = yes
+		directive_to_build_military_modifier = yes
 	}
 }
 
@@ -501,17 +562,17 @@ palisades_02 = {
 	construction_time = standard_construction_time
 
 	is_enabled = {
-		# AGOT Modified
+		#AGOT Modified
 		# building_requirement_tribal = yes
 		OR = {
 			building_requirement_tribal = yes
 			scope:holder = {
-				government_has_flag = agot_government_is_pirate
+				government_has_flag = government_is_pirate
 			}
 		}
 	}
 	can_construct_potential = {
-		# AGOT Modified
+		#AGOT Modified
 		# has_building_or_higher = tribe_01
 		OR = {
 			has_building_or_higher = tribe_01
@@ -519,8 +580,11 @@ palisades_02 = {
 		}
 	}
 	can_construct_showing_failures_only = {
-		scope:holder = {
-			culture = { has_innovation = innovation_motte }
+		OR = {
+			mpo_permafrost_building_trigger = yes
+			scope:holder = {
+				culture = { has_innovation = innovation_barracks }
+			}
 		}
 	}	
 	
@@ -543,6 +607,7 @@ palisades_02 = {
 	
 	ai_value = {
 		base = 1
+		directive_to_build_military_modifier = yes
 	}
 }
 
@@ -552,17 +617,17 @@ market_villages_01 = {
 	construction_time = quick_construction_time
 
 	is_enabled = {
-		# AGOT Modified
+		#AGOT Modified
 		# building_requirement_tribal = yes
 		OR = {
 			building_requirement_tribal = yes
 			scope:holder = {
-				government_has_flag = agot_government_is_pirate
+				government_has_flag = government_is_pirate
 			}
 		}
 	}
 	can_construct_potential = {
-		# AGOT Modified
+		#AGOT Modified
 		# has_building_or_higher = tribe_01
 		OR = {
 			has_building_or_higher = tribe_01
@@ -585,6 +650,7 @@ market_villages_01 = {
 	ai_value = {
 		base = 1
 		ai_tier_1_building_modifier = yes
+		directive_to_build_economy_modifier = yes
 	}
 }
 
@@ -592,17 +658,17 @@ market_villages_02 = {
 	construction_time = quick_construction_time
 
 	is_enabled = {
-		# AGOT Modified
+		#AGOT Modified
 		# building_requirement_tribal = yes
 		OR = {
 			building_requirement_tribal = yes
 			scope:holder = {
-				government_has_flag = agot_government_is_pirate
+				government_has_flag = government_is_pirate
 			}
 		}
 	}
 	can_construct_potential = {
-		# AGOT Modified
+		#AGOT Modified
 		# has_building_or_higher = tribe_01
 		OR = {
 			has_building_or_higher = tribe_01
@@ -610,8 +676,11 @@ market_villages_02 = {
 		}
 	}
 	can_construct_showing_failures_only = {
-		scope:holder = {
-			culture = { has_innovation = innovation_city_planning }
+		OR = {
+			mpo_permafrost_building_trigger = yes
+			scope:holder = {
+				culture = { has_innovation = innovation_barracks }
+			}
 		}
 	}	
 	
@@ -625,5 +694,6 @@ market_villages_02 = {
 	
 	ai_value = {
 		base = 1
+		directive_to_build_economy_modifier = yes
 	}
 }

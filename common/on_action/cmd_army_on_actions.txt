@@ -1,0 +1,23 @@
+﻿# On actions for army events, triggered automatically by the game
+
+# called for armies whenever they enter a province
+# root is the owner of the army
+# scope:army is the army
+
+on_army_enter_province = {
+	events = {
+		fow_trait.0001
+		fow_trait.0002
+		fow_trait.0004
+		fow_trait.0005
+		fow_trait.0006
+		fow_trait.0007
+		fow_trait.00071
+	}
+}
+
+on_combat_end_winner = {
+	events = {
+		fow_trait.0003
+	}
+}

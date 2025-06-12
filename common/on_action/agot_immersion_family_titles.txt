@@ -1,0 +1,66 @@
+﻿five_year_playable_pulse = {
+	on_actions = {
+		agot_immersion_family_titles
+	
+	
+	}
+}
+agot_immersion_family_titles = {
+	effect = {
+			if = { limit = { 
+				has_game_rule = agot_immersion_family_titles_on
+				government_has_flag = government_is_feudal
+				OR = { any_held_title = { limit = { tier <= tier_county
+													NOT = { this = title:c_dragonstone }
+				} count >= 3 }
+						any_held_title = { limit = { tier = tier_duchy
+													NOT = { this = title:d_dragonstone }
+						} count >= 2 }
+						any_held_title = { limit = { tier = tier_kingdom
+													NOT = { this = title:k_dragonstone }
+						} count >= 2 }
+						any_held_title = { limit = { tier = tier_empire } count >= 2 }
+						
+					}
+				
+						any_close_family_member = { 
+											is_landed = no
+											is_male = yes
+											is_adult = yes
+											NOT = { is_primary_heir_of = root }
+											is_courtier_of = root
+											agot_can_be_ruler = yes
+											}
+											
+											
+				
+					}
+				
+				random_courtier = { limit = { AND = {
+											is_close_family_of = root
+											is_male = yes
+											is_adult = yes
+											NOT = { is_primary_heir_of = root }
+											is_courtier_of = root
+											agot_can_be_ruler = yes
+
+													}
+													}
+													save_scope_as = familymember }
+					root = { save_scope_as = titlegiver
+								trigger_event = {
+								id = agot_immersion_family.0001
+								days = { 1 3 }
+							}
+
+
+					}
+					
+						
+				 
+				
+		
+		}
+	
+	}
+}

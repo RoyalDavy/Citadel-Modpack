@@ -1,0 +1,17 @@
+﻿agot_mhf_house_dna = {
+	effect = {
+		######################
+		### MHF House DNA  ###
+		######################
+		dynasty:dynn_Bricker = {
+			every_dynasty_member = {
+				limit = {
+					NOT = { has_character_flag = do_not_assign_strong_seed }
+				}
+				agot_assign_strong_seed_traits_effect = yes
+			}
+		}
+	}
+	events = {}
+	on_actions = {}
+}

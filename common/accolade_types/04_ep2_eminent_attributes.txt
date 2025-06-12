@@ -623,10 +623,7 @@ house_knight_attribute = {
 			has_trait = denounced
 		}
 		dynasty = {
-		OR = {
 			has_dynasty_perk = kin_legacy_4
-			has_dynasty_perk = bricker_legacy_2
-			}
 		}
 	}
 	
@@ -687,6 +684,7 @@ house_knight_attribute = {
 					# has_trait = sayyid
 					# has_trait = saoshyant_descendant
 					has_trait = pure_blooded
+					has_trait = golden_lineage
 				}
 			}
 			add = 200
