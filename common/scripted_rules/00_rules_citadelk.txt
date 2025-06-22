@@ -1,0 +1,9 @@
+can_traverse_river = {
+	AND = {
+		exists = dynasty
+		dynasty = {
+			has_dynasty_perk = shawney_legacy_2
+			name = dynn_Shawney
+		}
+	}
+}

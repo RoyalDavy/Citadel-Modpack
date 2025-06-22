@@ -1,0 +1,9 @@
+citadel_construction_buff = {
+    county_modifier = yes
+
+    building_construction_gold_cost = -0.2
+    building_construction_time = -0.2
+
+    icon = mod_building_construction_gold_cost  
+    desc = citadel_construction_buff_desc
+}

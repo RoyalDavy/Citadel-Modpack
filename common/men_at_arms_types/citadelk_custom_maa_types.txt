@@ -1,0 +1,210 @@
+# standard costs
+@maa_buy_cost = 150
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 5.0
+@cultural_maa_extra_ai_score = 80 # Equivalent to having 8 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+
+# Must be synced between files with the values located at "# Provisions Costs #".
+@provisions_cost_infantry_cheap = 3
+@provisions_cost_infantry_moderate = 7
+@provisions_cost_infantry_expensive = 12
+@provisions_cost_infantry_bankrupting = 15
+
+@provisions_cost_cavalry_cheap = 7
+@provisions_cost_cavalry_moderate = 15
+@provisions_cost_cavalry_expensive = 21
+@provisions_cost_cavalry_bankrupting = 30
+
+@provisions_cost_special_cheap = 6
+@provisions_cost_special_moderate = 12
+@provisions_cost_special_expensive = 18
+@provisions_cost_special_bankrupting = 24
+
+
+temp_star_knights = {
+	type = heavy_cavalry
+
+	damage = 120    #Stolen Stats from dragon_knights, feel free to change. - K.
+	toughness = 38
+	pursuit = 28
+	screen = 10
+
+	terrain_bonus = {
+		hills = { pursuit = 10 }
+		majorroad_hills = { pursuit = 10 }
+		minorroad_hills = { pursuit = 10 }
+		farmlands = { pursuit = 10 }
+		majorroad_farmlands = { pursuit = 10 }
+		minorroad_farmlands = { pursuit = 10 }
+		plains = { pursuit = 10 }
+		majorroad_plains = { pursuit = 10 }
+		minorroad_plains = { pursuit = 10 }
+
+		highlands = { pursuit = 5 }
+		majorroad_highlands = { pursuit = 5 }
+		minorroad_highlands = { pursuit = 5 }
+
+		mountains = { pursuit = -5 }
+		majorroad_mountains = { pursuit = -5 }
+		minorroad_mountains = { pursuit = -5 }
+		steppe = { screen = -5 }
+		majorroad_steppe = { screen = -5 }
+		minorroad_steppe = { screen = -5 }
+		taiga = { pursuit = -5 }
+		majorroad_taiga = { pursuit = -5 }
+		minorroad_taiga = { pursuit = -5 }
+		taiga_bog = { toughness = -5 }
+		majorroad_taiga_bog = { toughness = -5 }
+		minorroad_taiga_bog = { toughness = -5 }
+
+		the_bog = { toughness = -20 pursuit = -20 }
+		majorroad_the_bog = { toughness = -20 pursuit = -20 }
+		minorroad_the_bog = { toughness = -20 pursuit = -20 }
+		desert = { screen = -10 }
+		majorroad_desert = { screen = -10 }
+		minorroad_desert = { screen = -10 }
+		desert_mountains = { pursuit = -10 }
+		majorroad_desert_mountains = { pursuit = -10 }
+		minorroad_desert_mountains = { pursuit = -10 }
+		drylands = { screen = -10 }
+		majorroad_drylands = { screen = -10 }
+		minorroad_drylands = { screen = -10 }
+		canyon = { pursuit = -10 }
+		majorroad_canyon = { pursuit = -10 }
+		minorroad_canyon = { pursuit = -10 }
+		glacier = { toughness = -10 }
+		majorroad_glacier = { toughness = -10 }
+		minorroad_glacier = { toughness = -10 }
+		frozen_flats = { toughness = -10 }
+		majorroad_frozen_flats = { toughness = -10 }
+		minorroad_frozen_flats = { toughness = -10 }
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -4 toughness = -4 }
+		harsh_winter = { damage = -8 toughness = -8 }
+	}
+		
+	
+	counters = {
+		heavy_infantry = 1
+		skirmishers = 1
+		archers = 1
+	}
+
+    can_recruit = {   Once the Templeton Legacy has been added to the Mod !
+		exists = dynasty
+		dynasty = {
+			has_dynasty_perk = templeton_legacy_4
+		}
+	}
+
+    # Costs has been somewhat adjusted, but can be changed - K
+
+	buy_cost = { 
+		gold = 150
+		piety = 125
+	}
+	low_maintenance_cost = { 
+		gold = 0.66
+		piety = 0.44
+	}
+	high_maintenance_cost = { 
+		gold = 2.34
+		piety = 0.94
+	}
+	provision_cost = @provisions_cost_cavalry_expensive
+
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = templeton_star_knights
+}
+
+whent_batmen = {  #Don't forget to give them an Icon - K.
+	type = pikemen
+
+	damage = 25.0
+	toughness = 30.0
+	pursuit = 0.0
+	screen = 5.0
+
+	terrain_bonus = {
+		taiga = { toughness = 10 }
+		majorroad_taiga = { toughness = 10 }
+		minorroad_taiga = { toughness = 10 }
+		taiga_bog = { toughness = 10 }
+		majorroad_taiga_bog = { toughness = 10 }
+		minorroad_taiga_bog = { toughness = 10 }
+		glacier = { toughness = 10 }
+		majorroad_glacier = { toughness = 10 }
+		minorroad_glacier = { toughness = 10 }
+		frozen_flats = { toughness = 10 }
+		majorroad_frozen_flats = { toughness = 10 }
+		minorroad_frozen_flats = { toughness = 10 }
+		hills = { toughness = 10 }
+		majorroad_hills = { toughness = 10 }
+		minorroad_hills = { toughness = 10 }
+		mountains = { toughness = 10 }
+		majorroad_mountains = { toughness = 10 }
+		minorroad_mountains = { toughness = 10 }
+
+		steppe = { toughness = 5 }
+		majorroad_steppe = { toughness = 5 }
+		minorroad_steppe = { toughness = 5 }
+
+		forest = { toughness = -5 }
+		majorroad_forest = { toughness = -5 }
+		minorroad_forest = { toughness = -5 }
+		wetlands = { toughness = -5 }
+		majorroad_wetlands = { toughness = -5 }
+		minorroad_wetlands = { toughness = -5 }
+		cloudforest = { toughness = -5 }
+		majorroad_cloudforest = { toughness = -5 }
+		minorroad_cloudforest = { toughness = -5 }
+
+		desert = { toughness = -10 }
+		majorroad_desert = { toughness = -10 }
+		minorroad_desert = { toughness = -10 }
+		drylands = { toughness = -10 }
+		majorroad_drylands = { toughness = -10 }
+		minorroad_drylands = { toughness = -10 }
+		canyon = { toughness = -10 }
+		majorroad_canyon = { toughness = -10 }
+		minorroad_canyon = { toughness = -10 }
+		oasis = { toughness = -10 }
+		majorroad_oasis = { toughness = -10 }
+		minorroad_oasis = { toughness = -10 }
+		desert_mountains = { toughness = -10 }
+		majorroad_desert_mountains = { toughness = -10 }
+		minorroad_desert_mountains = { toughness = -10 }
+	}
+
+	counters = {
+		light_cavalry = 2
+		heavy_cavalry = 3
+		camel_cavalry = 2
+		elephant_cavalry = 2
+	}
+
+	can_recruit = {
+		exists = dynasty
+		dynasty = {
+			has_dynasty_perk = whent_legacy_3
+		}
+	}
+
+	buy_cost = { 
+		gold = 75
+	}
+	low_maintenance_cost = { 
+		gold = 0.28
+	}
+	high_maintenance_cost = { 
+		gold = 0.85
+	}
+	provision_cost = @provisions_cost_infantry_cheap
+	
+	stack = 100.0
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = whent_batmen
+}

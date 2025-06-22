@@ -1,0 +1,76 @@
+citadel_fairmarket_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = major
+	desc = citadel_fairgate_tower_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+		has_character_flag = SHAWNEY_CITADEL
+		NOT = { has_character_flag = used_citadel_fairmarket_decision }
+
+		title:b_fairgate_tower.title_province = {
+			NOT = { has_building = citadel_fairmarket3 }
+		}
+		is_ai = no
+    }
+
+	is_valid = {
+		title:b_fairgate_tower.title_province = {
+			NOT = { has_building = citadel_fairmarket3 }
+		}
+
+		title:b_fairgate_tower = {
+			holder = { is_same_character = root }
+		}
+
+		title:c_fairmarket = {
+			holder = { is_same_character = root }
+		}
+
+		has_trait = architect
+	}
+
+	cost = {
+		gold = 4000
+        stress = 100
+	}
+
+	effect = {
+		custom_tooltip = citadel_fairmarket_effect_tt
+		add_prestige = 500
+		add_character_flag = used_citadel_fairmarket_decision
+
+		#title:b_fairmarket.title_province = {
+		#	remove_building = agot_fairmarket_01
+		#}
+
+		title:b_fairgate_tower.title_province = {
+			remove_building = trident_01
+			add_special_building_slot = citadel_fairmarket3
+			add_special_building = citadel_fairmarket3
+		}
+
+		#title:b_fairgate_tower.title_province = {
+		#    add_special_building_slot = agot_fairmarket_01
+		#}
+
+		#title:c_fairmarket = { Taking a look at it later.
+		#	add_modifier = {
+		#		name = citadel_construction_buff
+		#		duration = 5y
+		#	}
+		#}
+		#}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

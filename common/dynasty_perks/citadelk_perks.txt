@@ -1,0 +1,519 @@
+﻿whent_legacy_1 = { # Test
+	legacy = whent_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Whent
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		# Effect is applied in the on action 'on_birth_child'
+		custom_description_no_bullet = {
+			text = whent_legacy_1_effect
+		}
+	}
+
+	character_modifier = {
+		health = -0.1
+		fertility = -0.15
+		prowess = -2
+	}
+}
+
+whent_legacy_2 = { # Test
+	legacy = whent_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Whent
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		# Effect is applied in the on action 'on_birth_child'
+		custom_description_no_bullet = {
+			text = whent_legacy_2_effect
+		}
+	}
+
+	character_modifier = {
+		attraction_opinion = -20
+		dread_gain_mult = 0.2
+	}
+
+}
+
+whent_legacy_3 = { # Test
+	legacy = whent_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Whent
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = whent_legacy_3_effect
+		}
+	}
+
+	character_modifier = {
+		pikemen_damage_mult = 0.15
+		pikemen_toughness_mult = 0.3
+		pikemen_max_size_add = 2
+	}
+}
+
+whent_legacy_4 = { # Test
+	legacy = whent_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Whent
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = whent_legacy_4_effect
+		}
+	}
+
+	character_modifier = {
+		high_valyrian_opinion = 30
+		 = 2
+		monthly_prestige = 0.05
+		martial = 2
+	}
+
+}
+
+whent_legacy_5 = { # Test
+	legacy = whent_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Whent
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		# Effect is applied in the on action 'on_birth_child'
+		custom_description_no_bullet = {
+			text = whent_legacy_5_effect
+		}
+	}
+
+	character_modifier = {
+		health = 0.4
+		fertility = 0.15
+		attraction_opinion = 35
+		prowess = 5
+		build_speed = -0.2
+		build_gold_cost = -0.2
+	}
+}
+
+# Shawney --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+shawney_legacy_1 = { # Test
+	legacy = shawney_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Shawney
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = shawney_legacy_1_effect
+		}
+	}
+	
+	character_modifier = {
+		high_valyrian_opinion = 30
+		 = 2
+		monthly_prestige = 0.05
+	}
+}
+
+shawney_legacy_2 = {
+	legacy = shawney_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Shawney
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	character_modifier = {
+		development_growth = 0.05
+		development_growth_factor = 0.1
+		character_capital_county_monthly_development_growth_add = 0.1
+		embarkation_cost_mult = -0.25     
+    	supply_capacity_mult = 0.10
+		monthly_income = -0.3
+	}
+
+	effect = {
+	custom_description_no_bullet = {
+		text = shawney_legacy_2_effect
+	}
+	}
+
+	# Correct scope: apply modifier to the actual dynasty
+	if = {
+		limit = {
+			exists = this.dynasty
+		}
+		scope:dynasty = this.dynasty
+		scope:dynasty = {
+			add_dynasty_modifier = {
+				name = shawney_river_traders
+				duration = -1
+			}
+		}
+	}
+}
+
+	
+
+shawney_legacy_3 = { # Test
+	legacy = shawney_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Shawney
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = shawney_legacy_3_effect
+		}
+	}
+
+	character_modifier = {
+		stewardship = 1
+		republic_government_opinion = -15
+		republic_government_tax_contribution_mult = 0.10
+	}
+}
+
+shawney_legacy_4 = { # Test
+	legacy = shawney_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Shawney
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = shawney_legacy_4_effect
+		}
+	}
+
+	character_modifier = {
+		monthly_income = 0.1
+		stewardship = 2
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+	}
+}
+
+shawney_legacy_5 = { # Test
+	legacy = shawney_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Shawney
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+	custom_description_no_bullet = {
+		text = shawney_legacy_5_effect
+	}
+	add_character_flag = SHAWNEY_CITADEL
+	}
+
+	character_modifier = {
+		monthly_income = 0.3
+		stewardship = 2
+		stewardship_per_prestige_level = 1
+		build_speed = -0.05
+		build_gold_cost = -0.05
+	}
+}
+
+# Selmy --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+selmy_legacy_1 = { 
+	legacy = selmy_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = selmy_legacy_1_effect
+		}
+	}
+	
+	character_modifier = {
+		martial = 1
+	}
+}
+
+selmy_legacy_2 = { 
+	legacy = selmy_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = selmy_legacy_2_effect
+		}
+	}
+	
+	character_modifier = {
+		skirmishers_damage_mult = 0.10
+		skirmishers_toughness_mult = 0.10
+		skirmishers_max_size_add = 1
+	}
+}
+
+selmy_legacy_3 = { 
+	legacy = selmy_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = selmy_legacy_3_effect
+		}
+	}
+	
+	character_modifier = {
+    	development_growth_factor = 0.1
+    	character_capital_county_monthly_development_growth_add = 0.1
+		supply_capacity_mult = 0.15
+	}
+}
+
+selmy_legacy_4 = { 
+	legacy = selmy_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = selmy_legacy_4_effect
+		}
+	}
+	
+	character_modifier = {
+		prowess = 2
+		monthly_prestige = 0.15
+		trait_track_lifestyle_blademaster_xp_gain_mult = 0.15
+	}
+}
+
+selmy_legacy_5 = { 
+	legacy = selmy_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = selmy_legacy_5_effect
+		}
+	}
+	
+	character_modifier = {
+		prowess = 3
+		no_prowess_loss_from_age = yes
+		knight_effectiveness_mult = 0.15
+	}
+}
+
+clawman_legacy_1 = { 
+	legacy = clawman_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = clawman_legacy_1_effect
+		}
+	}
+	
+	character_modifier = {
+		hills_advantage = 10
+		mountains_advantage = 10
+		prowess = 1
+	}
+}
+
+clawman_legacy_2 = { 
+	legacy = clawman_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = clawman_legacy_2_effect
+		}
+	}
+	
+	character_modifier = {
+		defender_advantage = 10
+		skirmishers_toughness_mult = 0.10
+		skirmishers_screen_mult = 0.10
+		skirmishers_max_size_add = 2
+		skirmishers_maintenance_mult = -0.15
+	}
+}
+
+clawman_legacy_3 = { 
+	legacy = clawman_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = clawman_legacy_3_effect
+		}
+	}
+	
+	character_modifier = {
+		martial = 2
+	}
+}
+
+clawman_legacy_4 = { 
+	legacy = clawman_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = clawman_legacy_4_effect
+		}
+	}
+	
+	character_modifier = {
+		general_opinion = -20
+
+	}
+}
+
+clawman_legacy_5 = { 
+	legacy = clawman_legacy_track
+
+	can_be_picked = { 
+		dynasty = dynasty:dynn_Selmy
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		custom_description_no_bullet = {
+			text = clawman_legacy_5_effect
+		}
+	}
+	
+	character_modifier = {
+		martial = 2
+		mountains_attrition_mult = -0.5
+    	majorroad_mountains_attrition_mult = -0.5
+    	minorroad_mountains_attrition_mult = -0.5
+    	mountains_levy_size = 0.3
+    	majorroad_mountains_levy_size = 0.3
+    	minorroad_mountains_levy_size = 0.3
+    	majorroad_mountains_advantage = 5
+    	minorroad_mountains_advantage = 5
+		garrison_size = 0.05
+	}
+}
+
+

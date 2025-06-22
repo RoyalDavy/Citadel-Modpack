@@ -1,0 +1,126 @@
+
+whent_legacy_1_effect = {
+	global =  WHENT_BATMEN
+	first =  WHENT_BATMEN
+	third =  WHENT_BATMEN
+}
+
+whent_legacy_2_effect = {
+	global =  WHENT_CRAZY
+	first =  WHENT_CRAZY
+	third =  WHENT_CRAZY
+}
+
+whent_legacy_3_effect = {
+	global =  WHENT_MAA
+	first =  WHENT_MAA
+	third =  WHENT_MAA
+}
+
+whent_legacy_4_effect = {
+	global =  WHENT_LIEGE
+	first =  WHENT_LIEGE
+	third =  WHENT_LIEGE
+}
+
+whent_legacy_5_effect = {
+	global =  WHENT_CURSEBREAKER
+	first =  WHENT_CURSEBREAKER
+	third =  WHENT_CURSEBREAKER
+}
+
+#Shawney
+
+shawney_legacy_1_effect = {
+	global =  SHAWNEY_OATH
+	first =  SHAWNEY_OATH
+	third =  SHAWNEY_OATH
+}
+
+shawney_legacy_2_effect = {
+	global =  SHAWNEY_TRADE
+	first =  SHAWNEY_TRADE 
+	third =  SHAWNEY_TRADE
+}
+
+shawney_legacy_3_effect = {
+	global =  SHAWNEY_GOLD
+	first =  SHAWNEY_GOLD 
+	third =  SHAWNEY_GOLD
+}
+
+shawney_legacy_4_effect = {
+	global =  SHAWNEY_OTRADE
+	first =  SHAWNEY_OTRADE  
+	third =  SHAWNEY_OTRADE
+}
+
+shawney_legacy_5_effect = {
+	global = SHAWNEY_CITADEL
+	first =  SHAWNEY_CITADEL 
+	third =  SHAWNEY_CITADEL
+}
+
+#Selmy
+
+selmy_legacy_1_effect = {
+	global =  SELMY_BRAVE
+	first =  SELMY_BRAVE
+	third =  SELMY_BRAVE
+}
+
+selmy_legacy_2_effect = {
+	global =  SELMY_MARCHES
+	first =  SELMY_MARCHES
+	third =  SELMY_MARCHES
+}
+
+selmy_legacy_3_effect = {
+	global =  SELMY_FARMER
+	first =  SELMY_FARMER
+	third =  SELMY_FARMER
+}
+
+selmy_legacy_4_effect = {
+	global =  SELMY_ATHLETIC
+	first =  SELMY_ATHLETIC
+	third =  SELMY_ATHLETIC
+}
+
+selmy_legacy_5_effect = {
+	global =  SELMY_BOLD
+	first =  SELMY_BOLD
+	third =  SELMY_BOLD
+}
+
+# Crackclaw
+
+clawman_legacy_1_effect = {
+	global =  CRACKCLAW_FIRSTMEN
+	first =  CRACKCLAW_FIRSTMEN
+	third =  CRACKCLAW_FIRSTMEN
+}
+
+clawman_legacy_2_effect = {
+	global =  CRACKCLAW_DEFENDER
+	first =  CRACKCLAW_DEFENDER
+	third =  CRACKCLAW_DEFENDER
+}
+
+clawman_legacy_3_effect = {
+	global =  CRACKCLAW_STUBBORN
+	first =  CRACKCLAW_STUBBORN
+	third =  CRACKCLAW_STUBBORN
+}
+
+clawman_legacy_4_effect = {
+	global =  CRACKCLAW_ISOLATE
+	first =  CRACKCLAW_ISOLATE
+	third =  CRACKCLAW_ISOLATE
+}
+
+clawman_legacy_5_effect = {
+	global =  CRACKCLAW_EVERYMAN
+	first =  CRACKCLAW_EVERYMAN
+	third =  CRACKCLAW_EVERYMAN
+}

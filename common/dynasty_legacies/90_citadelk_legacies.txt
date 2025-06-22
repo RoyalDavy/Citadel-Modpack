@@ -1,0 +1,43 @@
+﻿clawman_legacy_track = {
+	is_shown = {
+		OR = { 
+			culture = {
+				OR = {
+					this = culture:clawman
+					any_parent_culture_or_above = {
+						this = culture:clawman
+					}
+				}
+			}
+			dynasty = { has_dynasty_perk = clawman_legacy_1 }
+		}
+	}
+}
+
+
+whent_legacy_track = {
+	is_shown = {
+		OR = {
+			dynasty = dynasty:dynn_Whent
+			dynasty = { has_dynasty_perk = whent_legacy_1 }
+		}
+	}
+}
+
+shawney_legacy_track = {
+	is_shown = {
+		OR = {
+			dynasty = dynasty:dynn_Shawney
+			dynasty = { has_dynasty_perk = shawney_legacy_1 }
+		}
+	}
+}
+
+selmy_legacy_track = {
+	is_shown = {
+		OR = {
+			dynasty = dynasty:dynn_Selmy
+			dynasty = { has_dynasty_perk = selmy_legacy_1 }
+		}
+	}
+}

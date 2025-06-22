@@ -1,0 +1,5 @@
+shawney_legacy_5_effect = {
+	global = SHAWNEY_CITADEL
+	first = SHAWNEY_CITADEL
+	third = SHAWNEY_CITADEL
+}

@@ -1,0 +1,38 @@
+﻿l_english:
+ 
+ building_type_test_building_01:1 "Caerphilly Castle"
+ building_test_building_01:1 "Caerphilly Castle"
+ building_test_building_01_desc:1 "The largest castle in Wales, the second largest in Britain."
+  building_type_test_building_02:1 "Trade City of Halmstad"
+ building_test_building_02:1 "Halmstad"
+ building_test_building_02_desc:1 "Nestled along the fertile coastline, Halmstad is the perfect crossroads of commerce, where land and sea routes converge. Merchants from across the world are drawn to its bustling markets, safe harbors, and strategic location, making it a natural center for trade. Over time, a vast and prosperous city has flourished here, its wealth built on the endless flow of goods and coin."
+ building_type_citadel_ten_towers_noport:1 "Ten Towers"
+ building_citadel_ten_towers_noport:1 "Ten Towers"
+ building_citadel_ten_towers_noport_desc:1 "Ten Towers is a fortress unlike any other in the Iron Islands. Composed of ten massive towers linked by high stone walls and sea-slicked causeways, the fortress stands as both a stronghold of power and a monument to the might of House Harlaw. Despite the Ironborn tradition of salt and steel, the Ten Towers also houses rare tomes, ancient records, and chronicles of conquest, a hidden trove of knowledge among a sea of raiders."
+ building_type_citadel_ten_towers:1 "Ten Towers"
+ building_citadel_ten_towers:1 "Port of the Ten Towers"
+ building_citadel_ten_towers_desc:1 "With the addition of a port carved into the rocky coast below, Ten Towers evolves from an insular fortress into a hub of Ironborn seafaring might. Warships now rest beneath its shadow, their black sails catching the winds of reaving and trade alike."
+ citadel_fairmarket_decision:0 "Begin Construction of the Pearl of the Riverlands"
+ citadel_fairgate_tower_desc:0 "With the Shawney legacy fulfilled, the once-humble fishing village of Fairmarket is ready to grow into a proper city, a beacon of trade, craft, and learning."
+ citadel_fairmarket_effect_tt:0 "Establishes a special building slot in Fairgate Tower and begins construction of the City of Fairgate."
+ 
+ building_type_citadel_fairmarket3:1 "Fairmarket"
+ building_citadel_fairmarket1:1 "Grand City of Fairmarket"
+ building_citadel_fairmarket1_desc:1 "After centuries of construction and tireless investment, Fairmarket has truly surpassed both Maidenpool and Seagard, earning its place as the Pearl of the Riverlands. What was once a humble fishing village now stands as a shining testament to ambition, wealth, and resilience."
+
+ building_citadel_fairmarket2:1 "City of Fairmarket"
+ building_citadel_fairmarket2_desc:1 "Great walls have been erected around the city, and a formal city watch has been introduced alongside newly appointed tax collectors. The security of Fairmarket is quickly becoming a sensation throughout the Riverlands, attracting even more people to migrate and settle within its growing bounds.
+
+ building_citadel_fairmarket3:1 "Fishervillage of Fairmarket"
+ building_citadel_fairmarket3_desc:1 "Once a humble small village along the Trident, the first foundations have been laid to expand and build upon it. The holder of this county has promised opportunity across the Riverlands, therefore, a lot more people have come to settle in the newly gifted lands."
+
+
+ citadel_construction_buff:0 "City-Building Momentum"
+ citadel_construction_buff_desc:0 "The development of Fairgate Tower into a city has energized local builders and merchants, accelerating all construction efforts in the region."
+
+ selmy_0002_title:0 "A Blade-Bound Legacy"
+ selmy_0002_desc:0 "[event_target:child.GetName] has come of age, and as foretold by destiny, they now bear the marks of legend. Their speed and precision rival the greatest warriors in history."
+ selmy_0002_option:0 "Their legend begins... [GetTrait('education_martial_prowess_5').GetName]"
+ selmy_0004_title:0 "A Child Destined for Greatness"
+ selmy_0004_desc:0 "[event_target:proud_parent.GetFirstName] beams with pride as [event_target:quicksilver_child.GetFirstName] is born, destined for Quicksilver."
+ selmy_0004_option:0 "What an extraordinary child!"
